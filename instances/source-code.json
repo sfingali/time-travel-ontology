@@ -446,6 +446,95 @@
       "kind": "causal",
       "from": "e_defy",
       "to": "e_freeze"
+    },
+    {
+      "id": "pol_t_0",
+      "kind": "temporal",
+      "from": "e_wake",
+      "to": "e_brief"
+    },
+    {
+      "id": "pol_t_2",
+      "kind": "temporal",
+      "from": "e_brief",
+      "to": "e_real_stop"
+    },
+    {
+      "id": "pol_t_4",
+      "kind": "temporal",
+      "from": "e_real_stop",
+      "to": "e_fork_alt"
+    },
+    {
+      "id": "pol_t_6",
+      "kind": "temporal",
+      "from": "e_fork_alt",
+      "to": "e_shell"
+    },
+    {
+      "id": "pol_t_8",
+      "kind": "temporal",
+      "from": "e_shell",
+      "to": "ev_bomber"
+    },
+    {
+      "id": "pol_t_10",
+      "kind": "temporal",
+      "from": "ev_bomber",
+      "to": "e_awake"
+    },
+    {
+      "id": "pol_t_12",
+      "kind": "temporal",
+      "from": "e_awake",
+      "to": "e_rules"
+    },
+    {
+      "id": "pol_t_14",
+      "kind": "temporal",
+      "from": "e_rules",
+      "to": "e_second_bomb"
+    },
+    {
+      "id": "pol_t_16",
+      "kind": "temporal",
+      "from": "e_second_bomb",
+      "to": "e_freeze"
+    },
+    {
+      "id": "pol_i_1",
+      "kind": "intervention",
+      "from": "e_bomb",
+      "to": "e_brief",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_2",
+      "kind": "intervention",
+      "from": "e_brief",
+      "to": "e_id_bomber",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_3",
+      "kind": "intervention",
+      "from": "e_id_bomber",
+      "to": "e_real_stop",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_4",
+      "kind": "intervention",
+      "from": "e_real_stop",
+      "to": "e_last_run",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_5",
+      "kind": "intervention",
+      "from": "e_last_run",
+      "to": "e_fork_alt",
+      "label": "pressure"
     }
   ],
   "interventions": [

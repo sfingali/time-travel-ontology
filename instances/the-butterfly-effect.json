@@ -451,6 +451,95 @@
       "kind": "causal",
       "from": "e_cost",
       "to": "e_travel"
+    },
+    {
+      "id": "pol_t_0",
+      "kind": "temporal",
+      "from": "e_blackouts",
+      "to": "e_fix1"
+    },
+    {
+      "id": "pol_t_2",
+      "kind": "temporal",
+      "from": "e_fix1",
+      "to": "e_fix2"
+    },
+    {
+      "id": "pol_t_4",
+      "kind": "temporal",
+      "from": "e_fix2",
+      "to": "e_final"
+    },
+    {
+      "id": "pol_t_6",
+      "kind": "temporal",
+      "from": "e_final",
+      "to": "e_street"
+    },
+    {
+      "id": "pol_t_8",
+      "kind": "temporal",
+      "from": "e_street",
+      "to": "ev_journal"
+    },
+    {
+      "id": "pol_t_10",
+      "kind": "temporal",
+      "from": "ev_journal",
+      "to": "ev_terminal"
+    },
+    {
+      "id": "pol_t_12",
+      "kind": "temporal",
+      "from": "ev_terminal",
+      "to": "e_travel"
+    },
+    {
+      "id": "pol_t_14",
+      "kind": "temporal",
+      "from": "e_travel",
+      "to": "e_worse"
+    },
+    {
+      "id": "pol_t_16",
+      "kind": "temporal",
+      "from": "e_worse",
+      "to": "e_kill_self"
+    },
+    {
+      "id": "pol_i_1",
+      "kind": "intervention",
+      "from": "e_read",
+      "to": "e_fix1",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_2",
+      "kind": "intervention",
+      "from": "e_fix1",
+      "to": "e_wake_prison",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_3",
+      "kind": "intervention",
+      "from": "e_wake_prison",
+      "to": "e_fix2",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_4",
+      "kind": "intervention",
+      "from": "e_fix2",
+      "to": "e_wake_amp",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_5",
+      "kind": "intervention",
+      "from": "e_wake_amp",
+      "to": "e_final",
+      "label": "pressure"
     }
   ],
   "interventions": [

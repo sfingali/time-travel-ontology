@@ -451,6 +451,95 @@
       "kind": "causal",
       "from": "e_radio_physics",
       "to": "e_aurora"
+    },
+    {
+      "id": "pol_t_0",
+      "kind": "temporal",
+      "from": "e_aurora",
+      "to": "e_frank_lives"
+    },
+    {
+      "id": "pol_t_2",
+      "kind": "temporal",
+      "from": "e_frank_lives",
+      "to": "e_catch_killer"
+    },
+    {
+      "id": "pol_t_4",
+      "kind": "temporal",
+      "from": "e_catch_killer",
+      "to": "e_final_present"
+    },
+    {
+      "id": "pol_t_6",
+      "kind": "temporal",
+      "from": "e_final_present",
+      "to": "ev_radio"
+    },
+    {
+      "id": "pol_t_8",
+      "kind": "temporal",
+      "from": "ev_radio",
+      "to": "ev_killer"
+    },
+    {
+      "id": "pol_t_10",
+      "kind": "temporal",
+      "from": "ev_killer",
+      "to": "e_father_talk"
+    },
+    {
+      "id": "pol_t_12",
+      "kind": "temporal",
+      "from": "e_father_talk",
+      "to": "e_julia"
+    },
+    {
+      "id": "pol_t_14",
+      "kind": "temporal",
+      "from": "e_julia",
+      "to": "e_confront"
+    },
+    {
+      "id": "pol_t_16",
+      "kind": "temporal",
+      "from": "e_confront",
+      "to": "e_catch"
+    },
+    {
+      "id": "pol_i_1",
+      "kind": "intervention",
+      "from": "e_warn_fire",
+      "to": "e_frank_lives",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_2",
+      "kind": "intervention",
+      "from": "e_frank_lives",
+      "to": "e_mother_risk",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_3",
+      "kind": "intervention",
+      "from": "e_mother_risk",
+      "to": "e_catch_killer",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_4",
+      "kind": "intervention",
+      "from": "e_catch_killer",
+      "to": "e_share_life",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_5",
+      "kind": "intervention",
+      "from": "e_share_life",
+      "to": "e_final_present",
+      "label": "pressure"
     }
   ],
   "interventions": [

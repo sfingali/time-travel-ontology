@@ -479,6 +479,95 @@
       "kind": "causal",
       "from": "e_station",
       "to": "e_observe"
+    },
+    {
+      "id": "pol_t_0",
+      "kind": "temporal",
+      "from": "e_frame",
+      "to": "e_mom_path"
+    },
+    {
+      "id": "pol_t_2",
+      "kind": "temporal",
+      "from": "e_mom_path",
+      "to": "e_anna_life"
+    },
+    {
+      "id": "pol_t_4",
+      "kind": "temporal",
+      "from": "e_anna_life",
+      "to": "e_jean_life"
+    },
+    {
+      "id": "pol_t_6",
+      "kind": "temporal",
+      "from": "e_jean_life",
+      "to": "e_observer"
+    },
+    {
+      "id": "pol_t_8",
+      "kind": "temporal",
+      "from": "e_observer",
+      "to": "e_rebirth"
+    },
+    {
+      "id": "pol_t_10",
+      "kind": "temporal",
+      "from": "e_rebirth",
+      "to": "ev_lives"
+    },
+    {
+      "id": "pol_t_12",
+      "kind": "temporal",
+      "from": "ev_lives",
+      "to": "e_nemo_old"
+    },
+    {
+      "id": "pol_t_14",
+      "kind": "temporal",
+      "from": "e_nemo_old",
+      "to": "e_elise"
+    },
+    {
+      "id": "pol_t_16",
+      "kind": "temporal",
+      "from": "e_elise",
+      "to": "e_observe"
+    },
+    {
+      "id": "pol_i_1",
+      "kind": "intervention",
+      "from": "e_station",
+      "to": "e_mom_path",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_2",
+      "kind": "intervention",
+      "from": "e_mom_path",
+      "to": "e_dad_path",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_3",
+      "kind": "intervention",
+      "from": "e_dad_path",
+      "to": "e_anna_life",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_4",
+      "kind": "intervention",
+      "from": "e_anna_life",
+      "to": "e_elise_life",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_5",
+      "kind": "intervention",
+      "from": "e_elise_life",
+      "to": "e_jean_life",
+      "label": "pressure"
     }
   ],
   "interventions": [

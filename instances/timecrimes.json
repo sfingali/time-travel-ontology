@@ -465,6 +465,95 @@
       "kind": "intervention",
       "from": "e_force",
       "to": "e_closed"
+    },
+    {
+      "id": "pol_t_0",
+      "kind": "temporal",
+      "from": "e_glimpse",
+      "to": "e_lab"
+    },
+    {
+      "id": "pol_t_2",
+      "kind": "temporal",
+      "from": "e_lab",
+      "to": "e_become_bandage"
+    },
+    {
+      "id": "pol_t_4",
+      "kind": "temporal",
+      "from": "e_become_bandage",
+      "to": "e_jump2"
+    },
+    {
+      "id": "pol_t_6",
+      "kind": "temporal",
+      "from": "e_jump2",
+      "to": "e_clara_threat"
+    },
+    {
+      "id": "pol_t_8",
+      "kind": "temporal",
+      "from": "e_clara_threat",
+      "to": "ev_h1"
+    },
+    {
+      "id": "pol_t_10",
+      "kind": "temporal",
+      "from": "ev_h1",
+      "to": "ev_h3"
+    },
+    {
+      "id": "pol_t_12",
+      "kind": "temporal",
+      "from": "ev_h3",
+      "to": "e_hector2"
+    },
+    {
+      "id": "pol_t_14",
+      "kind": "temporal",
+      "from": "e_hector2",
+      "to": "e_force"
+    },
+    {
+      "id": "pol_t_16",
+      "kind": "temporal",
+      "from": "e_force",
+      "to": "e_closed"
+    },
+    {
+      "id": "pol_i_1",
+      "kind": "intervention",
+      "from": "e_chase",
+      "to": "e_lab",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_2",
+      "kind": "intervention",
+      "from": "e_lab",
+      "to": "e_jump1",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_3",
+      "kind": "intervention",
+      "from": "e_jump1",
+      "to": "e_become_bandage",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_4",
+      "kind": "intervention",
+      "from": "e_become_bandage",
+      "to": "e_preserve",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_5",
+      "kind": "intervention",
+      "from": "e_preserve",
+      "to": "e_jump2",
+      "label": "pressure"
     }
   ],
   "interventions": [

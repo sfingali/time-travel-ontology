@@ -486,6 +486,95 @@
       "from": "w_house_a",
       "to": "w_house_a",
       "relation": "mirrors"
+    },
+    {
+      "id": "pol_t_0",
+      "kind": "temporal",
+      "from": "e_dinner",
+      "to": "e_other_house"
+    },
+    {
+      "id": "pol_t_2",
+      "kind": "temporal",
+      "from": "e_other_house",
+      "to": "e_glowsticks"
+    },
+    {
+      "id": "pol_t_4",
+      "kind": "temporal",
+      "from": "e_glowsticks",
+      "to": "e_box_note"
+    },
+    {
+      "id": "pol_t_6",
+      "kind": "temporal",
+      "from": "e_box_note",
+      "to": "e_emily_attack"
+    },
+    {
+      "id": "pol_t_8",
+      "kind": "temporal",
+      "from": "e_emily_attack",
+      "to": "ev_comet"
+    },
+    {
+      "id": "pol_t_10",
+      "kind": "temporal",
+      "from": "ev_comet",
+      "to": "ev_emily_replace"
+    },
+    {
+      "id": "pol_t_12",
+      "kind": "temporal",
+      "from": "ev_emily_replace",
+      "to": "e_dark"
+    },
+    {
+      "id": "pol_t_14",
+      "kind": "temporal",
+      "from": "e_dark",
+      "to": "e_doubles"
+    },
+    {
+      "id": "pol_t_16",
+      "kind": "temporal",
+      "from": "e_doubles",
+      "to": "e_car"
+    },
+    {
+      "id": "pol_i_1",
+      "kind": "intervention",
+      "from": "e_blackout",
+      "to": "e_other_house",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_2",
+      "kind": "intervention",
+      "from": "e_other_house",
+      "to": "e_schrodinger",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_3",
+      "kind": "intervention",
+      "from": "e_schrodinger",
+      "to": "e_glowsticks",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_4",
+      "kind": "intervention",
+      "from": "e_glowsticks",
+      "to": "e_split_groups",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_5",
+      "kind": "intervention",
+      "from": "e_split_groups",
+      "to": "e_box_note",
+      "label": "pressure"
     }
   ],
   "interventions": [

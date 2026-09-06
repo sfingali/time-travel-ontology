@@ -438,6 +438,95 @@
       "kind": "temporal",
       "from": "e_lose_power",
       "to": "e_omega"
+    },
+    {
+      "id": "pol_t_0",
+      "kind": "temporal",
+      "from": "e_beach",
+      "to": "e_reset"
+    },
+    {
+      "id": "pol_t_2",
+      "kind": "temporal",
+      "from": "e_reset",
+      "to": "e_lose_power"
+    },
+    {
+      "id": "pol_t_4",
+      "kind": "temporal",
+      "from": "e_lose_power",
+      "to": "e_kill_omega"
+    },
+    {
+      "id": "pol_t_6",
+      "kind": "temporal",
+      "from": "e_kill_omega",
+      "to": "e_smile"
+    },
+    {
+      "id": "pol_t_8",
+      "kind": "temporal",
+      "from": "e_smile",
+      "to": "ev_train_rita"
+    },
+    {
+      "id": "pol_t_10",
+      "kind": "temporal",
+      "from": "ev_train_rita",
+      "to": "e_drop"
+    },
+    {
+      "id": "pol_t_12",
+      "kind": "temporal",
+      "from": "e_drop",
+      "to": "e_meet_rita"
+    },
+    {
+      "id": "pol_t_14",
+      "kind": "temporal",
+      "from": "e_meet_rita",
+      "to": "e_omega"
+    },
+    {
+      "id": "pol_t_16",
+      "kind": "temporal",
+      "from": "e_omega",
+      "to": "e_new_morning"
+    },
+    {
+      "id": "pol_i_1",
+      "kind": "intervention",
+      "from": "e_blood",
+      "to": "e_reset",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_2",
+      "kind": "intervention",
+      "from": "e_reset",
+      "to": "e_train",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_3",
+      "kind": "intervention",
+      "from": "e_train",
+      "to": "e_lose_power",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_4",
+      "kind": "intervention",
+      "from": "e_lose_power",
+      "to": "e_find_omega",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_5",
+      "kind": "intervention",
+      "from": "e_find_omega",
+      "to": "e_kill_omega",
+      "label": "pressure"
     }
   ],
   "interventions": [

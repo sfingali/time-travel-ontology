@@ -469,6 +469,95 @@
       "kind": "causal",
       "from": "e_pad_therapy",
       "to": "e_exit_s1"
+    },
+    {
+      "id": "pol_t_0",
+      "kind": "temporal",
+      "from": "e_party",
+      "to": "e_reset1"
+    },
+    {
+      "id": "pol_t_2",
+      "kind": "temporal",
+      "from": "e_reset1",
+      "to": "e_meet_alan"
+    },
+    {
+      "id": "pol_t_4",
+      "kind": "temporal",
+      "from": "e_meet_alan",
+      "to": "e_exit_s1"
+    },
+    {
+      "id": "pol_t_6",
+      "kind": "temporal",
+      "from": "e_exit_s1",
+      "to": "e_s2_mother"
+    },
+    {
+      "id": "pol_t_8",
+      "kind": "temporal",
+      "from": "e_s2_mother",
+      "to": "ev_s1_loop"
+    },
+    {
+      "id": "pol_t_10",
+      "kind": "temporal",
+      "from": "ev_s1_loop",
+      "to": "ev_s2_subway"
+    },
+    {
+      "id": "pol_t_12",
+      "kind": "temporal",
+      "from": "ev_s2_subway",
+      "to": "e_alan"
+    },
+    {
+      "id": "pol_t_14",
+      "kind": "temporal",
+      "from": "e_alan",
+      "to": "e_other_loopers"
+    },
+    {
+      "id": "pol_t_16",
+      "kind": "temporal",
+      "from": "e_other_loopers",
+      "to": "e_s2_travel"
+    },
+    {
+      "id": "pol_i_1",
+      "kind": "intervention",
+      "from": "e_death1",
+      "to": "e_reset1",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_2",
+      "kind": "intervention",
+      "from": "e_reset1",
+      "to": "e_many_deaths",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_3",
+      "kind": "intervention",
+      "from": "e_many_deaths",
+      "to": "e_meet_alan",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_4",
+      "kind": "intervention",
+      "from": "e_meet_alan",
+      "to": "e_trauma",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_5",
+      "kind": "intervention",
+      "from": "e_trauma",
+      "to": "e_exit_s1",
+      "label": "pressure"
     }
   ],
   "interventions": [

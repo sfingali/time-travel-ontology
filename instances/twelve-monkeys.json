@@ -469,6 +469,101 @@
       "kind": "temporal",
       "from": "e_pad_future",
       "to": "e_sent"
+    },
+    {
+      "id": "pol_t_0",
+      "kind": "temporal",
+      "from": "e_plague",
+      "to": "e_wrong_1990"
+    },
+    {
+      "id": "pol_t_2",
+      "kind": "temporal",
+      "from": "e_wrong_1990",
+      "to": "e_army_red_herring"
+    },
+    {
+      "id": "pol_t_4",
+      "kind": "temporal",
+      "from": "e_army_red_herring",
+      "to": "e_death"
+    },
+    {
+      "id": "pol_t_6",
+      "kind": "temporal",
+      "from": "e_death",
+      "to": "e_jose"
+    },
+    {
+      "id": "pol_t_8",
+      "kind": "temporal",
+      "from": "e_jose",
+      "to": "ev_misjump"
+    },
+    {
+      "id": "pol_t_10",
+      "kind": "temporal",
+      "from": "ev_misjump",
+      "to": "ev_airport"
+    },
+    {
+      "id": "pol_t_12",
+      "kind": "temporal",
+      "from": "ev_airport",
+      "to": "e_asylum"
+    },
+    {
+      "id": "pol_t_14",
+      "kind": "temporal",
+      "from": "e_asylum",
+      "to": "e_bootstrap"
+    },
+    {
+      "id": "pol_t_16",
+      "kind": "temporal",
+      "from": "e_bootstrap",
+      "to": "e_pad_future"
+    },
+    {
+      "id": "pol_t_18",
+      "kind": "temporal",
+      "from": "e_pad_future",
+      "to": "e_pad_goines"
+    },
+    {
+      "id": "pol_i_1",
+      "kind": "intervention",
+      "from": "e_send_cole",
+      "to": "e_wrong_1990",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_2",
+      "kind": "intervention",
+      "from": "e_wrong_1990",
+      "to": "e_1996",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_3",
+      "kind": "intervention",
+      "from": "e_1996",
+      "to": "e_army_red_herring",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_4",
+      "kind": "intervention",
+      "from": "e_army_red_herring",
+      "to": "e_airport",
+      "label": "pressure"
+    },
+    {
+      "id": "pol_i_5",
+      "kind": "intervention",
+      "from": "e_airport",
+      "to": "e_death",
+      "label": "pressure"
     }
   ],
   "interventions": [
