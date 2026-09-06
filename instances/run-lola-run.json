@@ -6,12 +6,13 @@
     "medium": "film",
     "sources": [
       "Tom Tykwer (1998)",
-      "time-travel-archive/films/run-lola-run.md"
+      "time-travel-archive/films/run-lola-run.md",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "branch_on_intervention",
-    "temporal_loop_exit"
+    "temporal_loop_exit",
+    "branch_on_intervention"
   ],
   "primaryRuleSetId": "branch_on_intervention",
   "mixinRuleSetIds": [
@@ -64,12 +65,22 @@
     },
     {
       "id": "father",
-      "label": "Lola's father (bank manager)",
+      "label": "Lola's father",
       "homeWorldRef": "w_call"
     },
     {
       "id": "ronnie",
       "label": "Ronnie (boss)",
+      "homeWorldRef": "w_call"
+    },
+    {
+      "id": "mailman",
+      "label": "Mailman",
+      "homeWorldRef": "w_call"
+    },
+    {
+      "id": "nurse",
+      "label": "Nurse / passerby continuum",
       "homeWorldRef": "w_call"
     }
   ],
@@ -77,68 +88,103 @@
     {
       "id": "e_call",
       "type": "ordinary",
-      "label": "Manni calls: lost 100k DM; Ronnie kills at noon",
+      "label": "Manni calls: lost 100k bag; 20 minutes to deliver",
       "at": {
         "worldRef": "w_call",
-        "timeLabel": "t-20min"
+        "timeLabel": "phone"
       },
       "agents": [
         "lola",
-        "manni",
-        "ronnie"
+        "manni"
       ]
     },
     {
       "id": "e_run1_start",
-      "type": "branch_fork",
-      "label": "Run 1 starts; stair/dog stumble",
+      "type": "departure",
+      "label": "Run 1 begins",
       "at": {
-        "worldRef": "w_run1",
-        "timeLabel": "run1"
+        "worldRef": "w_call",
+        "timeLabel": "t0"
       },
       "agents": [
         "lola"
+      ]
+    },
+    {
+      "id": "e_run1_father",
+      "type": "ordinary",
+      "label": "Father refuses / bank confrontation run1",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "mid1"
+      },
+      "agents": [
+        "lola",
+        "father"
+      ]
+    },
+    {
+      "id": "e_run1_market",
+      "type": "ordinary",
+      "label": "Butterfly collisions (mailman etc.)",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "street1"
+      },
+      "agents": [
+        "lola",
+        "mailman"
       ]
     },
     {
       "id": "e_run1_fail",
       "type": "death",
-      "label": "Father refuses; supermarket robbery; Lola shot by police",
-      "at": {
-        "worldRef": "w_run1",
-        "timeLabel": "noon1"
-      },
-      "agents": [
-        "lola",
-        "manni",
-        "father"
-      ]
-    },
-    {
-      "id": "e_bed1",
-      "type": "loop_reset",
-      "label": "Red-tinted bed talk; cinematic restart",
+      "label": "Run 1 ends in death (Lola or Manni shot)",
       "at": {
         "worldRef": "w_call",
-        "timeLabel": "between1-2"
+        "timeLabel": "end1"
+      },
+      "agents": [
+        "lola",
+        "manni"
+      ]
+    },
+    {
+      "id": "e_reset2",
+      "type": "loop_reset",
+      "label": "Flash reset to run 2",
+      "at": {
+        "worldRef": "w_run1",
+        "timeLabel": "t0'"
       },
       "agents": [
         "lola",
         "manni"
       ],
       "payload": {
-        "iteration": 2,
-        "memoryRetained": false,
-        "note": "audience sees alternate worldlines; not clear memory-loop"
+        "memoryRetained": true,
+        "iteration": 2
       }
     },
     {
-      "id": "e_run2",
-      "type": "branch_fork",
-      "label": "Run 2: different timing; Lola robs bank with gun",
+      "id": "e_run2_start",
+      "type": "departure",
+      "label": "Run 2 altered micro-choices",
       "at": {
-        "worldRef": "w_run2",
-        "timeLabel": "run2"
+        "worldRef": "w_run1",
+        "timeLabel": "t0"
+      },
+      "agents": [
+        "lola"
+      ]
+    },
+    {
+      "id": "e_run2_robbery",
+      "type": "intervention",
+      "label": "Lola robs father's bank",
+      "at": {
+        "worldRef": "w_run1",
+        "timeLabel": "bank"
       },
       "agents": [
         "lola",
@@ -146,12 +192,12 @@
       ]
     },
     {
-      "id": "e_run2_fail",
+      "id": "e_run2_manni",
       "type": "death",
-      "label": "Manni hit by ambulance",
+      "label": "Manni hit by ambulance; Lola screams",
       "at": {
-        "worldRef": "w_run2",
-        "timeLabel": "noon2"
+        "worldRef": "w_run1",
+        "timeLabel": "end2"
       },
       "agents": [
         "manni",
@@ -159,61 +205,179 @@
       ]
     },
     {
-      "id": "e_flashforwards",
-      "type": "observation",
-      "label": "Passerby flash-forward polaroids alter each run",
+      "id": "e_reset3",
+      "type": "loop_reset",
+      "label": "Reset to run 3",
       "at": {
         "worldRef": "w_run2",
-        "timeLabel": "butterflies"
-      },
-      "agents": [
-        "lola"
-      ],
-      "payload": {
-        "tags": [
-          "butterfly_vignettes"
-        ]
-      }
-    },
-    {
-      "id": "e_run3",
-      "type": "branch_fork",
-      "label": "Run 3: leaps dog; casino scream luck",
-      "at": {
-        "worldRef": "w_run3",
-        "timeLabel": "run3"
-      },
-      "agents": [
-        "lola"
-      ]
-    },
-    {
-      "id": "e_manni_fix",
-      "type": "intervention",
-      "label": "Manni recovers money from homeless man",
-      "at": {
-        "worldRef": "w_run3",
-        "timeLabel": "noon3"
-      },
-      "agents": [
-        "manni"
-      ]
-    },
-    {
-      "id": "e_win",
-      "type": "ordinary",
-      "label": "Both survive with surplus; walk off",
-      "at": {
-        "worldRef": "w_run3",
-        "timeLabel": "exit"
+        "timeLabel": "t0''"
       },
       "agents": [
         "lola",
         "manni"
       ],
       "payload": {
-        "exitCondition": "run3 success"
+        "memoryRetained": true,
+        "iteration": 3
       }
+    },
+    {
+      "id": "e_run3_casino",
+      "type": "intervention",
+      "label": "Lola casino / chance wins money",
+      "at": {
+        "worldRef": "w_run2",
+        "timeLabel": "casino"
+      },
+      "agents": [
+        "lola"
+      ]
+    },
+    {
+      "id": "e_run3_manni_bag",
+      "type": "ordinary",
+      "label": "Manni recovers bag from homeless man",
+      "at": {
+        "worldRef": "w_run2",
+        "timeLabel": "parallel"
+      },
+      "agents": [
+        "manni"
+      ]
+    },
+    {
+      "id": "e_run3_success",
+      "type": "ordinary",
+      "label": "Money delivered; both survive",
+      "at": {
+        "worldRef": "w_run2",
+        "timeLabel": "end3"
+      },
+      "agents": [
+        "lola",
+        "manni"
+      ]
+    },
+    {
+      "id": "e_flash",
+      "type": "observation",
+      "label": "Red-hair flash / bed talk interstitial memory",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "between runs"
+      },
+      "agents": [
+        "lola",
+        "manni"
+      ],
+      "payload": {
+        "perceptionMode": "flash"
+      }
+    },
+    {
+      "id": "e_snapshots",
+      "type": "observation",
+      "label": "Passerby future snapshots change per run",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "montage"
+      },
+      "agents": [
+        "mailman",
+        "nurse"
+      ]
+    },
+    {
+      "id": "e_time_pressure",
+      "type": "ordinary",
+      "label": "Twenty-minute clock as hard constraint",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "rules"
+      },
+      "agents": [
+        "lola",
+        "manni"
+      ]
+    },
+    {
+      "id": "e_father_arc",
+      "type": "ordinary",
+      "label": "Father's affair/exit varies by run",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "father variants"
+      },
+      "agents": [
+        "father",
+        "lola"
+      ]
+    },
+    {
+      "id": "e_spiral",
+      "type": "ordinary",
+      "label": "Spiral staircase motif / agency theme",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "motif"
+      },
+      "agents": [
+        "lola"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "checkpoint",
+      "label": "Run 3 exits need for further resets",
+      "at": {
+        "worldRef": "w_run2",
+        "timeLabel": "resolution"
+      },
+      "agents": [
+        "lola",
+        "manni"
+      ],
+      "payload": {
+        "exitCondition": "survive with money"
+      }
+    },
+    {
+      "id": "e_theme",
+      "type": "observation",
+      "label": "Tiny timing deltas rewrite fates",
+      "at": {
+        "worldRef": "w_run2",
+        "timeLabel": "theme"
+      },
+      "agents": [
+        "lola",
+        "manni"
+      ]
+    },
+    {
+      "id": "e_love",
+      "type": "ordinary",
+      "label": "Love as persistence across runs",
+      "at": {
+        "worldRef": "w_run2",
+        "timeLabel": "close"
+      },
+      "agents": [
+        "lola",
+        "manni"
+      ]
+    },
+    {
+      "id": "e_no_machine",
+      "type": "ordinary",
+      "label": "No device\u2014narrational replay / quantum vibe",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "meta"
+      },
+      "agents": [
+        "lola"
+      ]
     }
   ],
   "edges": [
@@ -227,88 +391,206 @@
       "id": "c2",
       "kind": "causal",
       "from": "e_run1_start",
-      "to": "e_run1_fail"
+      "to": "e_run1_father"
     },
     {
       "id": "c3",
       "kind": "causal",
-      "from": "e_run1_fail",
-      "to": "e_bed1"
+      "from": "e_run1_father",
+      "to": "e_run1_market"
     },
     {
       "id": "c4",
-      "kind": "world_relation",
-      "from": "w_call",
-      "to": "w_run1",
-      "relation": "forksFrom"
+      "kind": "causal",
+      "from": "e_run1_market",
+      "to": "e_run1_fail"
     },
     {
       "id": "c5",
-      "kind": "world_relation",
-      "from": "w_call",
-      "to": "w_run2",
-      "relation": "forksFrom"
+      "kind": "causal",
+      "from": "e_run1_fail",
+      "to": "e_reset2"
     },
     {
       "id": "c6",
-      "kind": "world_relation",
-      "from": "w_call",
-      "to": "w_run3",
-      "relation": "forksFrom"
+      "kind": "causal",
+      "from": "e_reset2",
+      "to": "e_run2_start"
     },
     {
       "id": "c7",
       "kind": "causal",
-      "from": "e_bed1",
-      "to": "e_run2"
+      "from": "e_run2_start",
+      "to": "e_run2_robbery"
     },
     {
       "id": "c8",
       "kind": "causal",
-      "from": "e_run2",
-      "to": "e_run2_fail"
+      "from": "e_run2_robbery",
+      "to": "e_run2_manni"
     },
     {
       "id": "c9",
       "kind": "causal",
-      "from": "e_run2_fail",
-      "to": "e_run3"
+      "from": "e_run2_manni",
+      "to": "e_reset3"
     },
     {
       "id": "c10",
       "kind": "causal",
-      "from": "e_run3",
-      "to": "e_manni_fix"
+      "from": "e_reset3",
+      "to": "e_run3_casino"
     },
     {
       "id": "c11",
       "kind": "causal",
-      "from": "e_manni_fix",
-      "to": "e_win"
+      "from": "e_run3_casino",
+      "to": "e_run3_manni_bag"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_run3_manni_bag",
+      "to": "e_run3_success"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_run3_success",
+      "to": "e_flash"
+    },
+    {
+      "id": "c14",
+      "kind": "causal",
+      "from": "e_flash",
+      "to": "e_snapshots"
+    },
+    {
+      "id": "c15",
+      "kind": "causal",
+      "from": "e_snapshots",
+      "to": "e_time_pressure"
+    },
+    {
+      "id": "c16",
+      "kind": "causal",
+      "from": "e_time_pressure",
+      "to": "e_father_arc"
+    },
+    {
+      "id": "c17",
+      "kind": "causal",
+      "from": "e_father_arc",
+      "to": "e_spiral"
+    },
+    {
+      "id": "c18",
+      "kind": "causal",
+      "from": "e_spiral",
+      "to": "e_exit"
+    },
+    {
+      "id": "c19",
+      "kind": "causal",
+      "from": "e_exit",
+      "to": "e_theme"
+    },
+    {
+      "id": "c20",
+      "kind": "causal",
+      "from": "e_theme",
+      "to": "e_love"
+    },
+    {
+      "id": "c21",
+      "kind": "causal",
+      "from": "e_love",
+      "to": "e_no_machine"
+    },
+    {
+      "id": "x1",
+      "kind": "temporal",
+      "from": "e_run1_fail",
+      "to": "e_reset2"
+    },
+    {
+      "id": "x2",
+      "kind": "temporal",
+      "from": "e_run2_manni",
+      "to": "e_reset3"
+    },
+    {
+      "id": "x3",
+      "kind": "world_relation",
+      "from": "w_call",
+      "to": "w_run1",
+      "label": "run fork",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "x4",
+      "kind": "world_relation",
+      "from": "w_call",
+      "to": "w_run2",
+      "label": "run fork",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "x5",
+      "kind": "causal",
+      "from": "e_run3_casino",
+      "to": "e_run3_success"
+    },
+    {
+      "id": "x6",
+      "kind": "causal",
+      "from": "e_run3_manni_bag",
+      "to": "e_run3_success"
+    },
+    {
+      "id": "x7",
+      "kind": "temporal",
+      "from": "e_flash",
+      "to": "e_reset2",
+      "label": "bed talk bridge"
+    },
+    {
+      "id": "x8",
+      "kind": "intervention",
+      "from": "e_call",
+      "to": "e_run1_start"
     }
   ],
   "interventions": [
     {
-      "id": "iv_runs",
-      "eventId": "e_run3",
+      "id": "iv_r1",
+      "eventId": "e_run1_fail",
       "ruleEffects": [
         {
           "ruleSetId": "branch_on_intervention",
-          "effect": "Micro-timing forks three mutually exclusive noon outcomes"
-        },
+          "effect": "Failure triggers narrated alternate twenty minutes"
+        }
+      ]
+    },
+    {
+      "id": "iv_r3",
+      "eventId": "e_run3_success",
+      "ruleEffects": [
         {
           "ruleSetId": "temporal_loop_exit",
-          "effect": "Triptych plays like game continues until a winning run"
+          "effect": "Successful combination exits replay"
+        },
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Micro-choice branches yield different passerby fates"
         }
-      ],
-      "notes": "Form is the theory; no ontology lecture"
+      ]
     }
   ],
   "outcome": {
-    "summary": "Three cinematic runs from the same call fork butterfly-different endings; run 3's casino luck plus Manni's recovery yields survival.",
+    "summary": "Three twenty-minute runs; micro-timing branches rewrite Lola/Manni outcomes until joint survival.",
     "endWorldRefs": [
-      "w_run3",
-      "w_call"
+      "w_run2"
     ]
   }
 }

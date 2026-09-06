@@ -13,13 +13,26 @@ export const WorldRelationKindSchema = z.enum([
   "collapsesInto",
   "mirrors",
   "supersedes",
+  "originatesFrom",
 ]);
+
+/** Correspondence entry linking entities/keys across parallel worlds */
+export const CorrespondenceEntrySchema = z
+  .object({
+    localKey: z.string().min(1),
+    remoteWorldRef: IdSchema,
+    remoteKey: z.string().min(1),
+    notes: z.string().optional(),
+  })
+  .strict();
 
 /** Base fields shared by all world descriptors */
 const WorldBase = {
   id: IdSchema,
   label: z.string().min(1),
   description: z.string().optional(),
+  /** Optional attractor / convergence field this world participates in */
+  attractorFieldId: z.string().min(1).optional(),
 };
 
 export const TimelineSchema = z
@@ -28,6 +41,10 @@ export const TimelineSchema = z
     kind: z.literal("timeline"),
     /** Optional era / span label for visual engines */
     spanLabel: z.string().optional(),
+    /** Link to origin world that this derived timeline stems from (Dark) */
+    originWorldRef: IdSchema.optional(),
+    /** True when this timeline is the pre-knot / origin continuum */
+    isOriginWorld: z.boolean().optional(),
   })
   .strict();
 
@@ -40,6 +57,16 @@ export const BranchSchema = z
     /** Divergence point label */
     forkLabel: z.string().optional(),
     pruned: z.boolean().optional(),
+    /** Nesting parent for tangent bubbles (distinct from fork parentRef) */
+    nestsWithinRef: IdSchema.optional(),
+    /** Deadline / condition label for tangent collapse */
+    collapseDeadline: z.string().optional(),
+    /** Authority that may prune this branch (TVA, etc.) */
+    pruneAuthority: z.string().optional(),
+    /** Steins;Gate-style worldline identifier */
+    worldlineId: z.string().optional(),
+    /** True when this branch is a temporary tangent universe */
+    tangent: z.boolean().optional(),
   })
   .strict();
 
@@ -49,6 +76,12 @@ export const ParallelWorldSchema = z
     kind: z.literal("parallel_world"),
     /** Correspondence key linking twin/counterpart worlds */
     correspondenceKey: z.string().optional(),
+    /** Structured correspondence map for visual engines */
+    correspondenceMap: z.array(CorrespondenceEntrySchema).optional(),
+    /** Optional origin continuum this parallel overlay derives from */
+    originWorldRef: IdSchema.optional(),
+    /** Convenience: primary mirror twin world ref */
+    mirrorOf: IdSchema.optional(),
   })
   .strict();
 
@@ -77,3 +110,4 @@ export type ParallelWorld = z.infer<typeof ParallelWorldSchema>;
 export type WorldDescriptor = z.infer<typeof WorldDescriptorSchema>;
 export type TopologyPattern = z.infer<typeof TopologyPatternSchema>;
 export type WorldRelationKind = z.infer<typeof WorldRelationKindSchema>;
+export type CorrespondenceEntry = z.infer<typeof CorrespondenceEntrySchema>;

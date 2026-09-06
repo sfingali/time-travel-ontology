@@ -7,7 +7,8 @@
     "sources": [
       "Toshikazu Kawaguchi (2015)",
       "time-travel-archive/novels/before-the-coffee-gets-cold.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -219,6 +220,87 @@
       "agents": [
         "kazu"
       ]
+    },
+    {
+      "id": "e_x_cafe",
+      "type": "ordinary",
+      "label": "Cafe rules explained",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_seat",
+      "type": "departure",
+      "label": "Sit in ghost seat; travel",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "inciting"
+      }
+    },
+    {
+      "id": "e_x_coffee",
+      "type": "observation",
+      "label": "Must return before coffee cools",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "rules"
+      }
+    },
+    {
+      "id": "e_x_letter",
+      "type": "ordinary",
+      "label": "Woman seeks letter from lover",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story1"
+      }
+    },
+    {
+      "id": "e_x_nurse",
+      "type": "ordinary",
+      "label": "Nurse visits sister",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story2"
+      }
+    },
+    {
+      "id": "e_x_couple",
+      "type": "ordinary",
+      "label": "Couple reconciliation visit",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story3"
+      }
+    },
+    {
+      "id": "e_x_mother",
+      "type": "ordinary",
+      "label": "Mother-daughter visit",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story4"
+      }
+    },
+    {
+      "id": "e_x_limit",
+      "type": "observation",
+      "label": "Cannot change present; only feelings",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "rules2"
+      }
+    },
+    {
+      "id": "e_x_close",
+      "type": "ordinary",
+      "label": "Cafe continues receiving seekers",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "close"
+      }
     }
   ],
   "edges": [
@@ -287,6 +369,72 @@
       "kind": "causal",
       "from": "e_ghost_risk",
       "to": "e_theme"
+    },
+    {
+      "id": "nbef1",
+      "kind": "causal",
+      "from": "e_x_cafe",
+      "to": "e_x_seat"
+    },
+    {
+      "id": "nbef2",
+      "kind": "causal",
+      "from": "e_x_seat",
+      "to": "e_x_coffee"
+    },
+    {
+      "id": "nbef3",
+      "kind": "causal",
+      "from": "e_x_coffee",
+      "to": "e_x_letter"
+    },
+    {
+      "id": "nbef4",
+      "kind": "causal",
+      "from": "e_x_letter",
+      "to": "e_x_nurse"
+    },
+    {
+      "id": "nbef5",
+      "kind": "causal",
+      "from": "e_x_nurse",
+      "to": "e_x_couple"
+    },
+    {
+      "id": "nbef6",
+      "kind": "causal",
+      "from": "e_x_couple",
+      "to": "e_x_mother"
+    },
+    {
+      "id": "nbef7",
+      "kind": "causal",
+      "from": "e_x_mother",
+      "to": "e_x_limit"
+    },
+    {
+      "id": "nbef8",
+      "kind": "causal",
+      "from": "e_x_limit",
+      "to": "e_x_close"
+    },
+    {
+      "id": "bridge_before-t",
+      "kind": "causal",
+      "from": "e_theme",
+      "to": "e_x_cafe"
+    },
+    {
+      "id": "x_befo_1",
+      "kind": "causal",
+      "from": "e_x_cafe",
+      "to": "e_x_close"
+    },
+    {
+      "id": "x_befo_2",
+      "kind": "temporal",
+      "from": "e_x_seat",
+      "to": "e_x_coffee"
     }
   ],
   "interventions": [

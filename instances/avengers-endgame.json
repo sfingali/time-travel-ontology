@@ -7,7 +7,8 @@
     "sources": [
       "Russo brothers; Markus & McFeely (2019)",
       "time-travel-archive/films/avengers-endgame.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -334,6 +335,78 @@
       "payload": {
         "variantId": "loki-2012"
       }
+    },
+    {
+      "id": "e_x_plan",
+      "type": "ordinary",
+      "label": "Time heist plan at Avengers compound",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_quantum",
+      "type": "departure",
+      "label": "Quantum realm time travel",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "heist"
+      }
+    },
+    {
+      "id": "e_x_2012",
+      "type": "arrival",
+      "label": "2012 New York retrieval",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "2012"
+      }
+    },
+    {
+      "id": "e_x_2013",
+      "type": "arrival",
+      "label": "2013 Asgard / Reality Stone",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "2013"
+      }
+    },
+    {
+      "id": "e_x_2014",
+      "type": "arrival",
+      "label": "2014 Morag/Vormir; Thanos learns",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "2014"
+      }
+    },
+    {
+      "id": "e_x_2019",
+      "type": "ordinary",
+      "label": "Return stones; Tony sacrifice",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_cap",
+      "type": "ordinary",
+      "label": "Cap returns stones; stays in past",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "epilogue"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Changing past branches rather than overwrites",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "rules"
+      }
     }
   ],
   "edges": [
@@ -451,6 +524,66 @@
       "to": "w_cap_life",
       "relation": "forksFrom",
       "label": "Cap chooses past"
+    },
+    {
+      "id": "nave1",
+      "kind": "causal",
+      "from": "e_x_plan",
+      "to": "e_x_quantum"
+    },
+    {
+      "id": "nave2",
+      "kind": "causal",
+      "from": "e_x_quantum",
+      "to": "e_x_2012"
+    },
+    {
+      "id": "nave3",
+      "kind": "causal",
+      "from": "e_x_2012",
+      "to": "e_x_2013"
+    },
+    {
+      "id": "nave4",
+      "kind": "causal",
+      "from": "e_x_2013",
+      "to": "e_x_2014"
+    },
+    {
+      "id": "nave5",
+      "kind": "causal",
+      "from": "e_x_2014",
+      "to": "e_x_2019"
+    },
+    {
+      "id": "nave6",
+      "kind": "causal",
+      "from": "e_x_2019",
+      "to": "e_x_cap"
+    },
+    {
+      "id": "nave7",
+      "kind": "causal",
+      "from": "e_x_cap",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "bridge_avengers",
+      "kind": "causal",
+      "from": "e_loki_escape",
+      "to": "e_x_plan"
+    },
+    {
+      "id": "x_aven_1",
+      "kind": "causal",
+      "from": "e_x_plan",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "x_aven_2",
+      "kind": "temporal",
+      "from": "e_x_quantum",
+      "to": "e_x_2012"
     }
   ],
   "interventions": [

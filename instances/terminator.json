@@ -7,13 +7,14 @@
     "sources": [
       "James Cameron & Gale Anne Hurd (1984)",
       "time-travel-archive/films/terminator.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "bootstrap_ontological",
+    "fixed_novikov",
     "predestination_closed_loop",
-    "fixed_novikov"
+    "bootstrap_ontological"
   ],
   "primaryRuleSetId": "bootstrap_ontological",
   "mixinRuleSetIds": [
@@ -25,7 +26,7 @@
     {
       "kind": "timeline",
       "id": "w_t1",
-      "label": "1984↔2029 closed war timeline",
+      "label": "1984\u21942029 closed war timeline",
       "spanLabel": "1984 / 2029",
       "description": "John's existence bootstrapped; Judgment Day tone inevitable"
     }
@@ -218,18 +219,141 @@
     },
     {
       "id": "ev_arrive",
+      "type": "ordinary",
       "label": "T-800 and Reese arrive 1984",
-      "timeLabel": "1984"
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "1984"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_conceive",
-      "label": "John conceived — paternal bootstrap",
-      "timeLabel": "motel"
+      "type": "ordinary",
+      "label": "John conceived \u2014 paternal bootstrap",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "motel"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_factory",
+      "type": "ordinary",
       "label": "Factory destruction; Reese dies",
-      "timeLabel": "climax"
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "climax"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_t800_1984",
+      "type": "arrival",
+      "label": "T-800 arrives 1984 to kill Sarah",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "1984"
+      },
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_kyle",
+      "type": "arrival",
+      "label": "Kyle Reese sent to protect Sarah",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "1984"
+      },
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_chase",
+      "type": "ordinary",
+      "label": "Police station massacre / chase",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_motel",
+      "type": "ordinary",
+      "label": "Kyle tells Sarah of future war",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_conceive",
+      "type": "birth",
+      "label": "John Connor conceived (bootstrap)",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "night"
+      },
+      "payload": {
+        "bootstrapEntity": "john"
+      }
+    },
+    {
+      "id": "e_kyle_die",
+      "type": "death",
+      "label": "Kyle dies fighting T-800",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_crush",
+      "type": "death",
+      "label": "Sarah crushes T-800 in press",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_photo",
+      "type": "bootstrap_origin",
+      "label": "Polaroid photo Kyle carried \u2014 origin loop",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "coda"
+      },
+      "payload": {
+        "bootstrapEntity": "photo"
+      }
+    },
+    {
+      "id": "e_drive",
+      "type": "ordinary",
+      "label": "Sarah drives toward storm / future",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "ending"
+      }
     }
   ],
   "edges": [
@@ -293,22 +417,95 @@
       "kind": "identity",
       "from": "reese",
       "to": "john",
-      "label": "father→son bootstrap"
+      "label": "father\u2192son bootstrap"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_arrive",
       "to": "ev_conceive",
-      "type": "enables"
+      "label": "enables"
     },
     {
+      "id": "rep_2",
+      "kind": "temporal",
       "from": "ev_conceive",
       "to": "ev_factory",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_3",
+      "kind": "identity",
       "from": "ev_factory",
       "to": "ev_arrive",
-      "type": "bootstrap_causes"
+      "label": "bootstrap_causes"
+    },
+    {
+      "id": "nter1",
+      "kind": "causal",
+      "from": "e_t800_1984",
+      "to": "e_kyle"
+    },
+    {
+      "id": "nter2",
+      "kind": "causal",
+      "from": "e_kyle",
+      "to": "e_chase"
+    },
+    {
+      "id": "nter3",
+      "kind": "causal",
+      "from": "e_chase",
+      "to": "e_motel"
+    },
+    {
+      "id": "nter4",
+      "kind": "causal",
+      "from": "e_motel",
+      "to": "e_conceive"
+    },
+    {
+      "id": "nter5",
+      "kind": "causal",
+      "from": "e_conceive",
+      "to": "e_kyle_die"
+    },
+    {
+      "id": "nter6",
+      "kind": "causal",
+      "from": "e_kyle_die",
+      "to": "e_crush"
+    },
+    {
+      "id": "nter7",
+      "kind": "causal",
+      "from": "e_crush",
+      "to": "e_photo"
+    },
+    {
+      "id": "nter8",
+      "kind": "causal",
+      "from": "e_photo",
+      "to": "e_drive"
+    },
+    {
+      "id": "bridge_terminat",
+      "kind": "causal",
+      "from": "ev_factory",
+      "to": "e_t800_1984"
+    },
+    {
+      "id": "tx1",
+      "kind": "identity",
+      "from": "e_conceive",
+      "to": "e_kyle",
+      "label": "John bootstrap"
+    },
+    {
+      "id": "tx2",
+      "kind": "identity",
+      "from": "e_photo",
+      "to": "e_motel"
     }
   ],
   "interventions": [

@@ -131,7 +131,7 @@
       "label": "Kyiv opera siege / CIA extraction",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th — Kyiv opera"
+        "timeLabel": "14th \u2014 Kyiv opera"
       },
       "agents": [
         "protagonist",
@@ -256,7 +256,7 @@
     {
       "id": "e_oslo_freeport_fwd",
       "type": "arrival",
-      "label": "Oslo Freeport — forward team enters",
+      "label": "Oslo Freeport \u2014 forward team enters",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Oslo Freeport (forward)"
@@ -312,7 +312,7 @@
     {
       "id": "e_tallinn_heist",
       "type": "intervention",
-      "label": "Tallinn highway — plutonium/Algorithm piece heist",
+      "label": "Tallinn highway \u2014 plutonium/Algorithm piece heist",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Tallinn"
@@ -450,7 +450,7 @@
       "label": "Kat poses as past self on yacht (Vietnam) to hold Sator",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th — yacht Vietnam"
+        "timeLabel": "14th \u2014 yacht Vietnam"
       },
       "agents": [
         "kat",
@@ -469,7 +469,7 @@
       "label": "Red team (forward) assaults Stalsk-12 hypocenter",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th — Stalsk-12 forward"
+        "timeLabel": "14th \u2014 Stalsk-12 forward"
       },
       "agents": [
         "protagonist",
@@ -488,7 +488,7 @@
       "label": "Blue team (inverted) assaults from after",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th — Stalsk-12 inverted"
+        "timeLabel": "14th \u2014 Stalsk-12 inverted"
       },
       "agents": [
         "wheeler",
@@ -506,7 +506,7 @@
       "label": "Inverted Neil unlocks gate; dies (orange cord)",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th — hypocenter gate"
+        "timeLabel": "14th \u2014 hypocenter gate"
       },
       "agents": [
         "neil_inverted",
@@ -523,7 +523,7 @@
       "label": "Algorithm pieces recovered / separated",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th — hypocenter"
+        "timeLabel": "14th \u2014 hypocenter"
       },
       "agents": [
         "protagonist",
@@ -540,7 +540,7 @@
       "label": "Kat kills Sator on yacht; dead-man switch race ends",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th — yacht sync"
+        "timeLabel": "14th \u2014 yacht sync"
       },
       "agents": [
         "kat",
@@ -603,28 +603,78 @@
     },
     {
       "id": "ev_opera",
+      "type": "ordinary",
       "label": "Kiev opera extraction / orange trinket",
-      "timeLabel": "the 14th"
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "the 14th"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_turnstile_oslo",
+      "type": "ordinary",
       "label": "Oslo Freeport turnstile fight",
-      "timeLabel": "Oslo"
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Oslo"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_tallinn_pincer",
+      "type": "ordinary",
       "label": "Tallinn highway temporal pincer",
-      "timeLabel": "Tallinn"
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Tallinn"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_stalsk",
+      "type": "ordinary",
       "label": "Stalsk-12 red/blue war pincer",
-      "timeLabel": "the 14th"
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "the 14th"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_neil_reveal",
+      "type": "ordinary",
       "label": "Neil bootstrap friendship reveal",
-      "timeLabel": "aftermath"
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "aftermath"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     }
   ],
   "edges": [
@@ -878,29 +928,39 @@
       "label": "death was always in the friendship"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_opera",
       "to": "ev_turnstile_oslo",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "temporal",
       "from": "ev_turnstile_oslo",
       "to": "ev_tallinn_pincer",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_3",
+      "kind": "temporal",
       "from": "ev_tallinn_pincer",
       "to": "ev_stalsk",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_4",
+      "kind": "causal",
       "from": "ev_stalsk",
       "to": "ev_neil_reveal",
-      "type": "reveals"
+      "label": "reveals"
     },
     {
+      "id": "rep_5",
+      "kind": "identity",
       "from": "ev_neil_reveal",
       "to": "ev_opera",
-      "type": "bootstrap_causes"
+      "label": "bootstrap_causes"
     }
   ],
   "interventions": [

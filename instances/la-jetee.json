@@ -7,7 +7,8 @@
     "sources": [
       "Chris Marker (1962)",
       "time-travel-archive/films/la-jetee.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -236,6 +237,78 @@
       "payload": {
         "bootstrapEntity": "pier memory"
       }
+    },
+    {
+      "id": "e_x_pier",
+      "type": "ordinary",
+      "label": "Child sees woman and death at Orly",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "memory"
+      }
+    },
+    {
+      "id": "e_x_war",
+      "type": "ordinary",
+      "label": "WWIII underground experiments",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "future"
+      }
+    },
+    {
+      "id": "e_x_send",
+      "type": "departure",
+      "label": "Prisoner sent to past via memory",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_woman",
+      "type": "ordinary",
+      "label": "Meets woman in past",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_future",
+      "type": "arrival",
+      "label": "Visit future beings",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_return",
+      "type": "ordinary",
+      "label": "Return to pier moment",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_death",
+      "type": "death",
+      "label": "He is the dying man he saw",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_loop",
+      "type": "bootstrap_origin",
+      "label": "Memory was own death",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "reveal"
+      }
     }
   ],
   "edges": [
@@ -325,6 +398,66 @@
       "from": "w_future",
       "to": "w_past",
       "relation": "originatesFrom"
+    },
+    {
+      "id": "nla-1",
+      "kind": "causal",
+      "from": "e_x_pier",
+      "to": "e_x_war"
+    },
+    {
+      "id": "nla-2",
+      "kind": "causal",
+      "from": "e_x_war",
+      "to": "e_x_send"
+    },
+    {
+      "id": "nla-3",
+      "kind": "causal",
+      "from": "e_x_send",
+      "to": "e_x_woman"
+    },
+    {
+      "id": "nla-4",
+      "kind": "causal",
+      "from": "e_x_woman",
+      "to": "e_x_future"
+    },
+    {
+      "id": "nla-5",
+      "kind": "causal",
+      "from": "e_x_future",
+      "to": "e_x_return"
+    },
+    {
+      "id": "nla-6",
+      "kind": "causal",
+      "from": "e_x_return",
+      "to": "e_x_death"
+    },
+    {
+      "id": "nla-7",
+      "kind": "causal",
+      "from": "e_x_death",
+      "to": "e_x_loop"
+    },
+    {
+      "id": "bridge_la-jetee",
+      "kind": "causal",
+      "from": "e_loop_close",
+      "to": "e_x_pier"
+    },
+    {
+      "id": "x_la-j_1",
+      "kind": "causal",
+      "from": "e_x_pier",
+      "to": "e_x_loop"
+    },
+    {
+      "id": "x_la-j_2",
+      "kind": "temporal",
+      "from": "e_x_war",
+      "to": "e_x_send"
     }
   ],
   "interventions": [

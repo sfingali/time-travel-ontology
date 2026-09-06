@@ -7,7 +7,8 @@
     "sources": [
       "Steve Blackman; Way & B\u00e1 (2019\u20132024)",
       "time-travel-archive/tv/umbrella-academy.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -281,6 +282,78 @@
       "agents": [
         "reginald"
       ]
+    },
+    {
+      "id": "e_x_apocalypse",
+      "type": "ordinary",
+      "label": "Apocalypse countdown",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_five",
+      "type": "arrival",
+      "label": "Number Five time jumps",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "early"
+      }
+    },
+    {
+      "id": "e_x_commission",
+      "type": "ordinary",
+      "label": "Temps Commission bureaucracy",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_1960s",
+      "type": "departure",
+      "label": "S2 1960s timeline",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "S2"
+      }
+    },
+    {
+      "id": "e_x_kugel",
+      "type": "ordinary",
+      "label": "Kugelblitz / S3 reset",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "S3"
+      }
+    },
+    {
+      "id": "e_x_sparrow",
+      "type": "ordinary",
+      "label": "Sparrow Academy variant family",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "S3"
+      }
+    },
+    {
+      "id": "e_x_reset",
+      "type": "collapse",
+      "label": "Timeline resets / endings",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_family",
+      "type": "ordinary",
+      "label": "Sibling bonds across resets",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "theme"
+      }
     }
   ],
   "edges": [
@@ -399,6 +472,66 @@
       "from": "five",
       "to": "five",
       "label": "Founder Five = bootstrap"
+    },
+    {
+      "id": "numb1",
+      "kind": "causal",
+      "from": "e_x_apocalypse",
+      "to": "e_x_five"
+    },
+    {
+      "id": "numb2",
+      "kind": "causal",
+      "from": "e_x_five",
+      "to": "e_x_commission"
+    },
+    {
+      "id": "numb3",
+      "kind": "causal",
+      "from": "e_x_commission",
+      "to": "e_x_1960s"
+    },
+    {
+      "id": "numb4",
+      "kind": "causal",
+      "from": "e_x_1960s",
+      "to": "e_x_kugel"
+    },
+    {
+      "id": "numb5",
+      "kind": "causal",
+      "from": "e_x_kugel",
+      "to": "e_x_sparrow"
+    },
+    {
+      "id": "numb6",
+      "kind": "causal",
+      "from": "e_x_sparrow",
+      "to": "e_x_reset"
+    },
+    {
+      "id": "numb7",
+      "kind": "causal",
+      "from": "e_x_reset",
+      "to": "e_x_family"
+    },
+    {
+      "id": "bridge_umbrella",
+      "kind": "causal",
+      "from": "e_peaceful",
+      "to": "e_x_apocalypse"
+    },
+    {
+      "id": "x_umbr_1",
+      "kind": "causal",
+      "from": "e_x_apocalypse",
+      "to": "e_x_family"
+    },
+    {
+      "id": "x_umbr_2",
+      "kind": "temporal",
+      "from": "e_x_five",
+      "to": "e_x_commission"
     }
   ],
   "interventions": [

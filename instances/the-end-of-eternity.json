@@ -7,7 +7,8 @@
     "sources": [
       "Isaac Asimov (1955)",
       "time-travel-archive/novels/the-end-of-eternity.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -266,6 +267,78 @@
       "payload": {
         "pruneAuthority": "Hidden Centuries"
       }
+    },
+    {
+      "id": "e_x_eternity",
+      "type": "ordinary",
+      "label": "Eternity organization across centuries",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_tech",
+      "type": "ordinary",
+      "label": "Reality Changes as policy",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_harlan",
+      "type": "ordinary",
+      "label": "Harlan forbidden love No\u00ffs",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_hidden",
+      "type": "reveal",
+      "label": "Hidden centuries / plot against Eternity",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_choice",
+      "type": "intervention",
+      "label": "Choose infinity of open history",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_end",
+      "type": "collapse",
+      "label": "Eternity undone",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Change vs tradeoff morality",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "theme"
+      }
+    },
+    {
+      "id": "e_x_bootstrap",
+      "type": "bootstrap_origin",
+      "label": "No\u00ffs from future guides",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "reveal"
+      }
     }
   ],
   "edges": [
@@ -369,6 +442,66 @@
       "from": "e_mallansohn",
       "to": "e_send_cooper",
       "label": "bootstrap founding"
+    },
+    {
+      "id": "nthe1",
+      "kind": "causal",
+      "from": "e_x_eternity",
+      "to": "e_x_tech"
+    },
+    {
+      "id": "nthe2",
+      "kind": "causal",
+      "from": "e_x_tech",
+      "to": "e_x_harlan"
+    },
+    {
+      "id": "nthe3",
+      "kind": "causal",
+      "from": "e_x_harlan",
+      "to": "e_x_hidden"
+    },
+    {
+      "id": "nthe4",
+      "kind": "causal",
+      "from": "e_x_hidden",
+      "to": "e_x_choice"
+    },
+    {
+      "id": "nthe5",
+      "kind": "causal",
+      "from": "e_x_choice",
+      "to": "e_x_end"
+    },
+    {
+      "id": "nthe6",
+      "kind": "causal",
+      "from": "e_x_end",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "nthe7",
+      "kind": "causal",
+      "from": "e_x_rules",
+      "to": "e_x_bootstrap"
+    },
+    {
+      "id": "bridge_the-end-",
+      "kind": "causal",
+      "from": "e_mnc",
+      "to": "e_x_eternity"
+    },
+    {
+      "id": "x_the-_1",
+      "kind": "causal",
+      "from": "e_x_eternity",
+      "to": "e_x_bootstrap"
+    },
+    {
+      "id": "x_the-_2",
+      "kind": "temporal",
+      "from": "e_x_tech",
+      "to": "e_x_harlan"
     }
   ],
   "interventions": [

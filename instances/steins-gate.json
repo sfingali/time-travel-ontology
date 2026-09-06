@@ -7,13 +7,14 @@
     "sources": [
       "5pb./Nitroplus; Steins;Gate anime (2011)",
       "time-travel-archive",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
+    "bootstrap_ontological",
     "worldline_attractor",
-    "branch_on_intervention",
-    "bootstrap_ontological"
+    "branch_on_intervention"
   ],
   "primaryRuleSetId": "worldline_attractor",
   "mixinRuleSetIds": [
@@ -335,18 +336,111 @@
     },
     {
       "id": "ev_dmail",
+      "type": "ordinary",
       "label": "D-Mail world-line shifts begin",
-      "timeLabel": "lab"
+      "at": {
+        "worldRef": "w_alpha_root",
+        "timeLabel": "lab"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_mayuri",
+      "type": "ordinary",
       "label": "Mayuri attractor deaths on alpha",
-      "timeLabel": "alpha"
+      "at": {
+        "worldRef": "w_alpha_root",
+        "timeLabel": "alpha"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_steins",
+      "type": "ordinary",
       "label": "Reach Steins Gate world line",
-      "timeLabel": "true end"
+      "at": {
+        "worldRef": "w_alpha_root",
+        "timeLabel": "true end"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_pad_phone",
+      "type": "ordinary",
+      "label": "Phone microwave D-mails",
+      "at": {
+        "worldRef": "w_alpha_root",
+        "timeLabel": "early"
+      },
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_pad_mayuri",
+      "type": "death",
+      "label": "Mayuri deaths across worldlines",
+      "at": {
+        "worldRef": "w_alpha_root",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_pad_steiner",
+      "type": "observation",
+      "label": "Okabe Reading Steiner retains memory",
+      "at": {
+        "worldRef": "w_alpha_root",
+        "timeLabel": "rules"
+      },
+      "payload": {
+        "readingSteiner": true
+      }
+    },
+    {
+      "id": "e_pad_sern",
+      "type": "ordinary",
+      "label": "SERN dystopia worldline",
+      "at": {
+        "worldRef": "w_alpha_root",
+        "timeLabel": "alpha"
+      }
+    },
+    {
+      "id": "e_pad_beta",
+      "type": "ordinary",
+      "label": "World War III beta attractor",
+      "at": {
+        "worldRef": "w_alpha_root",
+        "timeLabel": "beta"
+      }
+    },
+    {
+      "id": "e_pad_sg",
+      "type": "checkpoint",
+      "label": "Steins Gate worldline reached",
+      "at": {
+        "worldRef": "w_alpha_root",
+        "timeLabel": "end"
+      },
+      "payload": {
+        "worldlineId": "steins_gate"
+      }
     }
   ],
   "edges": [
@@ -486,14 +580,66 @@
       "to": "e_steins"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_dmail",
       "to": "ev_mayuri",
-      "type": "leads_to"
+      "label": "leads_to"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_mayuri",
       "to": "ev_steins",
-      "type": "escaped_by"
+      "label": "escaped_by"
+    },
+    {
+      "id": "nste1",
+      "kind": "causal",
+      "from": "e_pad_phone",
+      "to": "e_pad_mayuri"
+    },
+    {
+      "id": "nste2",
+      "kind": "causal",
+      "from": "e_pad_mayuri",
+      "to": "e_pad_steiner"
+    },
+    {
+      "id": "nste3",
+      "kind": "causal",
+      "from": "e_pad_steiner",
+      "to": "e_pad_sern"
+    },
+    {
+      "id": "nste4",
+      "kind": "causal",
+      "from": "e_pad_sern",
+      "to": "e_pad_beta"
+    },
+    {
+      "id": "nste5",
+      "kind": "causal",
+      "from": "e_pad_beta",
+      "to": "e_pad_sg"
+    },
+    {
+      "id": "bridge_steins-g",
+      "kind": "causal",
+      "from": "ev_steins",
+      "to": "e_pad_phone"
+    },
+    {
+      "id": "sgx1",
+      "kind": "causal",
+      "from": "e_pad_steiner",
+      "to": "e_pad_sg"
+    },
+    {
+      "id": "sgx2",
+      "kind": "temporal",
+      "from": "e_pad_mayuri",
+      "to": "e_pad_phone"
     }
   ],
   "interventions": [

@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml/badge.svg)](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml)
 
-**13** rule sets · **8** topology patterns · **21** validated instances · **461** archive works · **71** diagram images (LFS)
+**13** rule sets · **8** topology patterns · **59** validated instances · **461** archive works · **71** diagram images (LFS)
 
 Encode a plotline as typed JSON: which **laws** apply, how **worlds** relate, and a **narrative graph** (agents, events, edges). Comparable across the corpus; consumable by a later visual engine. Zod is the source of truth; `schema/ontology.schema.json` is exported for everyone else.
 
@@ -29,8 +29,8 @@ npm run build       # tsc + export JSON Schema
 npm run validate    # instances/*.json must pass
 npm test
 
-# Optional: draft stubs from archive YAML (writes instances/generated/ only)
-ARCHIVE_ROOT=./reference-archive npm run import
+# Optional: draft stubs from archive YAML (instances/generated/ only; never touches instances/*.json). Defaults to ./reference-archive when present.
+npm run import
 ```
 
 CI runs `build` / `test` / `validate` on every push.
@@ -69,7 +69,7 @@ New story → [docs/ENCODING-GUIDE.md](docs/ENCODING-GUIDE.md).
 src/schema/   src/catalog/   schema/ontology.schema.json
 instances/              # hand-crafted (CI)
 instances/generated/    # importer drafts only
-docs/                   # OVERVIEW RULES TOPOLOGY NARRATIVE ENCODING-GUIDE COMPATIBILITY
+docs/                   # OVERVIEW RULES TOPOLOGY NARRATIVE ENCODING-GUIDE COMPATIBILITY IMPORT
 reference-archive/      # narrative corpus + diagram assets
 .github/workflows/ci.yml
 ```
@@ -80,7 +80,7 @@ reference-archive/      # narrative corpus + diagram assets
 
 Public spoilers, **no original media**: **203** films · **119** TV · **139** novels (**461** total) · **71** LFS images under `reference-archive/diagrams/assets/`.
 
-YAML `mechanism` / `paradox_type` tags are the bridge into this ontology (`npm run import` → stubs; deepen by hand into `instances/`). Details: [reference-archive/README.md](reference-archive/README.md).
+YAML `mechanism` / `paradox_type` tags are the bridge into this ontology (`npm run import` → stubs; deepen by hand into `instances/`). Mapping + skip policy: [docs/IMPORT.md](docs/IMPORT.md). Corpus notes: [reference-archive/README.md](reference-archive/README.md).
 
 ---
 
@@ -89,7 +89,7 @@ YAML `mechanism` / `paradox_type` tags are the bridge into this ontology (`npm r
 | Doc | |
 |-----|--|
 | [OVERVIEW](docs/OVERVIEW.md) · [RULES](docs/RULES.md) · [TOPOLOGY](docs/TOPOLOGY.md) | Model |
-| [NARRATIVE](docs/NARRATIVE.md) · [ENCODING-GUIDE](docs/ENCODING-GUIDE.md) · [COMPATIBILITY](docs/COMPATIBILITY.md) | Practice |
+| [NARRATIVE](docs/NARRATIVE.md) · [ENCODING-GUIDE](docs/ENCODING-GUIDE.md) · [COMPATIBILITY](docs/COMPATIBILITY.md) · [IMPORT](docs/IMPORT.md) | Practice |
 
 A future renderer should read `worlds[]`, `agents[]`, `events[]`, and `edges[]` (`causal` · `temporal` · `identity` · `world_relation` · `intervention`) plus `interventions[]` / `outcome`. **No layout or graphics are prescribed here.**
 

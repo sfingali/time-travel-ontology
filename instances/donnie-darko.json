@@ -7,13 +7,14 @@
     "sources": [
       "Richard Kelly (2001)",
       "time-travel-archive/films/donnie-darko.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "tangent_universe",
     "fixed_novikov",
-    "bootstrap_ontological"
+    "bootstrap_ontological",
+    "tangent_universe"
   ],
   "primaryRuleSetId": "tangent_universe",
   "mixinRuleSetIds": [
@@ -230,18 +231,111 @@
     },
     {
       "id": "ev_jet",
+      "type": "ordinary",
       "label": "Jet engine destroys bedroom; Donnie outside",
-      "timeLabel": "Oct 2"
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "Oct 2"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_countdown",
+      "type": "ordinary",
       "label": "Frank 28-day countdown",
-      "timeLabel": "Oct"
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "Oct"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_artifact_return",
+      "type": "ordinary",
       "label": "Engine returned; Donnie dies in bed",
-      "timeLabel": "loop close"
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "loop close"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_jet",
+      "type": "ordinary",
+      "label": "Jet engine falls; Donnie not in bed",
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "Oct 2"
+      }
+    },
+    {
+      "id": "e_frank",
+      "type": "reveal",
+      "label": "Frank rabbit guides Donnie",
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "tangent nights"
+      }
+    },
+    {
+      "id": "e_tangent",
+      "type": "branch_fork",
+      "label": "Tangent universe opens",
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "Oct"
+      }
+    },
+    {
+      "id": "e_living",
+      "type": "observation",
+      "label": "Living Receiver role",
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_arthritis",
+      "type": "ordinary",
+      "label": "Manipulated people (Grandma Death etc.)",
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_choose_die",
+      "type": "intervention",
+      "label": "Donnie returns to die in bed; close tangent",
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "Oct 2 end"
+      }
+    },
+    {
+      "id": "e_primary",
+      "type": "collapse",
+      "label": "Primary universe restored; engine unexplained",
+      "at": {
+        "worldRef": "w_primary",
+        "timeLabel": "close"
+      }
     }
   ],
   "edges": [
@@ -333,14 +427,78 @@
       "to": "e_collapse"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_jet",
       "to": "ev_countdown",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_countdown",
       "to": "ev_artifact_return",
-      "type": "leads_to"
+      "label": "leads_to"
+    },
+    {
+      "id": "ndon1",
+      "kind": "causal",
+      "from": "e_jet",
+      "to": "e_frank"
+    },
+    {
+      "id": "ndon2",
+      "kind": "causal",
+      "from": "e_frank",
+      "to": "e_tangent"
+    },
+    {
+      "id": "ndon3",
+      "kind": "causal",
+      "from": "e_tangent",
+      "to": "e_living"
+    },
+    {
+      "id": "ndon4",
+      "kind": "causal",
+      "from": "e_living",
+      "to": "e_arthritis"
+    },
+    {
+      "id": "ndon5",
+      "kind": "causal",
+      "from": "e_arthritis",
+      "to": "e_choose_die"
+    },
+    {
+      "id": "ndon6",
+      "kind": "causal",
+      "from": "e_choose_die",
+      "to": "e_primary"
+    },
+    {
+      "id": "bridge_donnie-d",
+      "kind": "causal",
+      "from": "ev_artifact_return",
+      "to": "e_jet"
+    },
+    {
+      "id": "dx1",
+      "kind": "causal",
+      "from": "e_tangent",
+      "to": "e_living"
+    },
+    {
+      "id": "dx2",
+      "kind": "intervention",
+      "from": "e_choose_die",
+      "to": "e_primary"
+    },
+    {
+      "id": "dx3",
+      "kind": "identity",
+      "from": "e_frank",
+      "to": "e_choose_die"
     }
   ],
   "interventions": [

@@ -7,7 +7,8 @@
     "sources": [
       "Daniels (2022)",
       "time-travel-archive/films/everything-everywhere-all-at-once.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -194,7 +195,7 @@
     {
       "id": "e_jobu",
       "type": "reveal",
-      "label": "Jobu Tupaki — Joy who verse-jumped too far",
+      "label": "Jobu Tupaki \u2014 Joy who verse-jumped too far",
       "at": {
         "worldRef": "w_bagel",
         "timeLabel": "confrontation"
@@ -211,7 +212,7 @@
     {
       "id": "e_bagel",
       "type": "collapse",
-      "label": "Everything Bagel — nihilist attractor",
+      "label": "Everything Bagel \u2014 nihilist attractor",
       "at": {
         "worldRef": "w_bagel",
         "timeLabel": "climax"
@@ -230,7 +231,7 @@
       "label": "Evelyn chooses kindness across verses",
       "at": {
         "worldRef": "w_irs",
-        "timeLabel": "fight→hug"
+        "timeLabel": "fight\u2192hug"
       },
       "agents": [
         "evelyn",
@@ -269,18 +270,171 @@
     },
     {
       "id": "ev_alpha",
+      "type": "ordinary",
       "label": "Alpha Waymond recruits Evelyn",
-      "timeLabel": "IRS"
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "IRS"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_jobu",
+      "type": "ordinary",
       "label": "Jobu/bagel nihilism confrontation",
-      "timeLabel": "multiverse"
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "multiverse"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_kindness",
+      "type": "ordinary",
       "label": "Kindness wins; Joy reached",
-      "timeLabel": "climax"
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "climax"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_versejump",
+      "type": "contact",
+      "label": "Waymond verse-jump bags",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "inciting"
+      },
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_alpha_waymond",
+      "type": "ordinary",
+      "label": "Alpha Waymond recruits Evelyn",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "early"
+      }
+    },
+    {
+      "id": "e_family",
+      "type": "ordinary",
+      "label": "Family reconciling across verses",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_pad_irs",
+      "type": "ordinary",
+      "label": "IRS audit pressure cooker",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_pad_jump",
+      "type": "contact",
+      "label": "Verse-jump technology explained",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "inciting"
+      },
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_pad_jobu",
+      "type": "reveal",
+      "label": "Jobu and everything bagel nihilism",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_pad_alpha",
+      "type": "ordinary",
+      "label": "Alpha-verse Waymond mission",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "early"
+      }
+    },
+    {
+      "id": "e_pad_rock",
+      "type": "ordinary",
+      "label": "Rocks with googly eyes verse",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_pad_kungfu",
+      "type": "ordinary",
+      "label": "Martial skills stacked via jumps",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_pad_kind",
+      "type": "intervention",
+      "label": "Kindness as multiversal glue",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_pad_bagel",
+      "type": "collapse",
+      "label": "Bagel confrontation",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_pad_family",
+      "type": "ordinary",
+      "label": "Family chooses each other",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_pad_laundry",
+      "type": "ordinary",
+      "label": "Return to mundane laundry joy",
+      "at": {
+        "worldRef": "w_alpha",
+        "timeLabel": "epilogue"
+      }
     }
   ],
   "edges": [
@@ -386,14 +540,102 @@
       "to": "e_stay"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_alpha",
       "to": "ev_jobu",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_jobu",
       "to": "ev_kindness",
-      "type": "resolved_by"
+      "label": "resolved_by"
+    },
+    {
+      "id": "neea1",
+      "kind": "causal",
+      "from": "e_versejump",
+      "to": "e_alpha_waymond"
+    },
+    {
+      "id": "neea2",
+      "kind": "causal",
+      "from": "e_alpha_waymond",
+      "to": "e_family"
+    },
+    {
+      "id": "bridge_eeaao",
+      "kind": "causal",
+      "from": "ev_kindness",
+      "to": "e_versejump"
+    },
+    {
+      "id": "ex1",
+      "kind": "causal",
+      "from": "e_versejump",
+      "to": "e_jobu"
+    },
+    {
+      "id": "ex2",
+      "kind": "intervention",
+      "from": "e_kindness",
+      "to": "e_family"
+    },
+    {
+      "id": "neea3",
+      "kind": "causal",
+      "from": "e_pad_jobu",
+      "to": "e_pad_alpha"
+    },
+    {
+      "id": "neea4",
+      "kind": "causal",
+      "from": "e_pad_alpha",
+      "to": "e_pad_rock"
+    },
+    {
+      "id": "neea5",
+      "kind": "causal",
+      "from": "e_pad_rock",
+      "to": "e_pad_kungfu"
+    },
+    {
+      "id": "neea6",
+      "kind": "causal",
+      "from": "e_pad_kungfu",
+      "to": "e_pad_kind"
+    },
+    {
+      "id": "neea7",
+      "kind": "causal",
+      "from": "e_pad_kind",
+      "to": "e_pad_bagel"
+    },
+    {
+      "id": "neea8",
+      "kind": "causal",
+      "from": "e_pad_bagel",
+      "to": "e_pad_family"
+    },
+    {
+      "id": "neea9",
+      "kind": "causal",
+      "from": "e_pad_family",
+      "to": "e_pad_laundry"
+    },
+    {
+      "id": "ee1",
+      "kind": "causal",
+      "from": "e_pad_jump",
+      "to": "e_pad_jobu"
+    },
+    {
+      "id": "ee2",
+      "kind": "intervention",
+      "from": "e_pad_kind",
+      "to": "e_pad_family"
     }
   ],
   "interventions": [

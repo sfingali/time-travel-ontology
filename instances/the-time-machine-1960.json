@@ -6,7 +6,8 @@
     "medium": "film",
     "sources": [
       "George Pal adapting H.G. Wells (1960)",
-      "time-travel-archive/films/the-time-machine-1960.md"
+      "time-travel-archive/films/the-time-machine-1960.md",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -51,162 +52,324 @@
       "id": "morlocks",
       "label": "Morlocks (collective)",
       "homeWorldRef": "w_wells"
+    },
+    {
+      "id": "hillyer",
+      "label": "H. George Wells / Hillyer",
+      "identityGroup": "traveler",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_wells"
+    },
+    {
+      "id": "friends",
+      "label": "Dinner friends",
+      "homeWorldRef": "w_wells"
     }
   ],
   "events": [
     {
       "id": "e_dinner",
       "type": "ordinary",
-      "label": "New Year's Eve 1899 dinner; machine unveiled",
+      "label": "Victorian dinner; inventor claims time travel",
       "at": {
         "worldRef": "w_wells",
-        "timeLabel": "1899-12-31"
+        "timeLabel": "1899"
       },
       "agents": [
-        "george",
+        "hillyer",
+        "friends",
         "filby"
       ]
     },
     {
       "id": "e_demo",
+      "type": "reveal",
+      "label": "Model machine demo vanishes",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "dinner"
+      },
+      "agents": [
+        "hillyer",
+        "friends"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_depart",
       "type": "departure",
-      "label": "Short demo then full embarkation",
+      "label": "Full-size machine departure",
       "at": {
         "worldRef": "w_wells",
-        "timeLabel": "1900"
+        "timeLabel": "lab"
       },
       "agents": [
-        "george"
+        "hillyer"
       ],
       "payload": {
         "travelMode": "machine"
       }
     },
     {
-      "id": "e_wars",
+      "id": "e_war",
       "type": "observation",
-      "label": "Time-lapse through WWI, WWII Blitz, 1966 atomic war",
+      "label": "War montage tourism through 20th c.",
       "at": {
         "worldRef": "w_wells",
-        "timeLabel": "war montage"
+        "timeLabel": "1914-1966"
       },
       "agents": [
-        "george"
-      ],
-      "payload": {
-        "note": "spectator only; no intervention in wars"
-      }
-    },
-    {
-      "id": "e_arrive_802701",
-      "type": "arrival",
-      "label": "Arrives 802,701 among Eloi",
-      "at": {
-        "worldRef": "w_wells",
-        "timeLabel": "802701"
-      },
-      "agents": [
-        "george",
-        "eloi",
-        "weena"
+        "hillyer"
       ],
       "payload": {
         "travelMode": "machine"
       }
     },
     {
-      "id": "e_save_weena",
-      "type": "intervention",
-      "label": "Saves Weena from drowning",
-      "at": {
-        "worldRef": "w_wells",
-        "timeLabel": "802701"
-      },
-      "agents": [
-        "george",
-        "weena"
-      ]
-    },
-    {
-      "id": "e_sirens",
+      "id": "e_nuke",
       "type": "ordinary",
-      "label": "Sirens call Eloi underground; Morlock farming revealed",
+      "label": "Nuclear / war devastation stop",
       "at": {
         "worldRef": "w_wells",
-        "timeLabel": "802701 night"
+        "timeLabel": "1966"
       },
       "agents": [
-        "george",
-        "eloi",
-        "morlocks"
+        "hillyer"
       ]
     },
     {
-      "id": "e_descend",
-      "type": "intervention",
-      "label": "Descends; fights Morlocks; recovers stolen machine",
-      "at": {
-        "worldRef": "w_wells",
-        "timeLabel": "Morlock caves"
-      },
-      "agents": [
-        "george",
-        "morlocks",
-        "weena"
-      ]
-    },
-    {
-      "id": "e_burn",
-      "type": "ordinary",
-      "label": "Morlock caves burn; escape to surface",
-      "at": {
-        "worldRef": "w_wells",
-        "timeLabel": "802701"
-      },
-      "agents": [
-        "george",
-        "morlocks"
-      ]
-    },
-    {
-      "id": "e_return_1900",
+      "id": "e_far",
       "type": "arrival",
-      "label": "Returns to 1900; tells Filby the tale",
+      "label": "Arrival 802,701",
       "at": {
         "worldRef": "w_wells",
-        "timeLabel": "1900"
+        "timeLabel": "802701"
       },
       "agents": [
-        "george",
-        "filby"
+        "hillyer"
       ],
       "payload": {
         "travelMode": "machine"
       }
+    },
+    {
+      "id": "e_eloi",
+      "type": "ordinary",
+      "label": "Eloi idyll; Weena",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "802701 day"
+      },
+      "agents": [
+        "hillyer",
+        "weena"
+      ]
     },
     {
       "id": "e_books",
-      "type": "departure",
-      "label": "Departs again with three books to teach the Eloi",
+      "type": "observation",
+      "label": "Ruined libraries; knowledge decay",
       "at": {
         "worldRef": "w_wells",
-        "timeLabel": "1900 coda"
+        "timeLabel": "802701"
       },
       "agents": [
-        "george",
-        "filby"
+        "hillyer"
+      ]
+    },
+    {
+      "id": "e_morlock",
+      "type": "reveal",
+      "label": "Morlocks as subterranean predators/farmers",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "night"
+      },
+      "agents": [
+        "hillyer",
+        "weena"
+      ]
+    },
+    {
+      "id": "e_weena_threat",
+      "type": "ordinary",
+      "label": "Weena endangered",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "night raid"
+      },
+      "agents": [
+        "weena",
+        "hillyer"
+      ]
+    },
+    {
+      "id": "e_sphinx",
+      "type": "ordinary",
+      "label": "Sphinx panels / machine trapped",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "sphinx"
+      },
+      "agents": [
+        "hillyer"
+      ]
+    },
+    {
+      "id": "e_fight",
+      "type": "intervention",
+      "label": "Fights Morlocks; rescues Weena/Eloi",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "underground"
+      },
+      "agents": [
+        "hillyer",
+        "weena"
       ],
       "payload": {
-        "travelMode": "machine",
-        "artifactKind": "book",
-        "note": "Filby notes missing books"
+        "travelMode": "other"
       }
+    },
+    {
+      "id": "e_fire",
+      "type": "ordinary",
+      "label": "Morlock caves fired",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "hillyer"
+      ]
+    },
+    {
+      "id": "e_return",
+      "type": "departure",
+      "label": "Returns briefly to Victorian era",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "return"
+      },
+      "agents": [
+        "hillyer"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_filby_talk",
+      "type": "ordinary",
+      "label": "Filby finds wilted flower; understands",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "1899 coda"
+      },
+      "agents": [
+        "filby",
+        "hillyer"
+      ]
+    },
+    {
+      "id": "e_books_take",
+      "type": "ordinary",
+      "label": "Takes three books back for Eloi",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "prep"
+      },
+      "agents": [
+        "hillyer",
+        "filby"
+      ]
+    },
+    {
+      "id": "e_second",
+      "type": "departure",
+      "label": "Second departure to rebuild Eloi future",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "final"
+      },
+      "agents": [
+        "hillyer"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_open_end",
+      "type": "ordinary",
+      "label": "Open civilizing mission ending",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "802701 future"
+      },
+      "agents": [
+        "hillyer",
+        "weena"
+      ]
+    },
+    {
+      "id": "e_fixed",
+      "type": "observation",
+      "label": "Past wars observed not prevented\u2014tourism",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "theme"
+      },
+      "agents": [
+        "hillyer"
+      ]
+    },
+    {
+      "id": "e_class",
+      "type": "observation",
+      "label": "Eloi/Morlock as class/evolution allegory",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "theme2"
+      },
+      "agents": [
+        "hillyer"
+      ]
+    },
+    {
+      "id": "e_machine_rules",
+      "type": "reveal",
+      "label": "Machine as stage-magic time vehicle",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "rules"
+      },
+      "agents": [
+        "hillyer"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_novikov",
+      "type": "ordinary",
+      "label": "No grandfather change attempted; future exploration",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "rules2"
+      },
+      "agents": [
+        "hillyer"
+      ]
     }
   ],
   "edges": [
     {
       "id": "c1",
-      "kind": "temporal",
+      "kind": "causal",
       "from": "e_dinner",
       "to": "e_demo"
     },
@@ -214,71 +377,173 @@
       "id": "c2",
       "kind": "causal",
       "from": "e_demo",
-      "to": "e_wars"
+      "to": "e_depart"
     },
     {
       "id": "c3",
       "kind": "causal",
-      "from": "e_wars",
-      "to": "e_arrive_802701"
+      "from": "e_depart",
+      "to": "e_war"
     },
     {
       "id": "c4",
       "kind": "causal",
-      "from": "e_arrive_802701",
-      "to": "e_save_weena"
+      "from": "e_war",
+      "to": "e_nuke"
     },
     {
       "id": "c5",
-      "kind": "temporal",
-      "from": "e_save_weena",
-      "to": "e_sirens"
+      "kind": "causal",
+      "from": "e_nuke",
+      "to": "e_far"
     },
     {
       "id": "c6",
       "kind": "causal",
-      "from": "e_sirens",
-      "to": "e_descend"
+      "from": "e_far",
+      "to": "e_eloi"
     },
     {
       "id": "c7",
       "kind": "causal",
-      "from": "e_descend",
-      "to": "e_burn"
+      "from": "e_eloi",
+      "to": "e_books"
     },
     {
       "id": "c8",
       "kind": "causal",
-      "from": "e_burn",
-      "to": "e_return_1900"
+      "from": "e_books",
+      "to": "e_morlock"
     },
     {
       "id": "c9",
-      "kind": "temporal",
-      "from": "e_return_1900",
-      "to": "e_books"
+      "kind": "causal",
+      "from": "e_morlock",
+      "to": "e_weena_threat"
     },
     {
       "id": "c10",
       "kind": "causal",
-      "from": "e_demo",
-      "to": "e_return_1900"
+      "from": "e_weena_threat",
+      "to": "e_sphinx"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_sphinx",
+      "to": "e_fight"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_fight",
+      "to": "e_fire"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_fire",
+      "to": "e_return"
+    },
+    {
+      "id": "c14",
+      "kind": "causal",
+      "from": "e_return",
+      "to": "e_filby_talk"
+    },
+    {
+      "id": "c15",
+      "kind": "causal",
+      "from": "e_filby_talk",
+      "to": "e_books_take"
+    },
+    {
+      "id": "c16",
+      "kind": "causal",
+      "from": "e_books_take",
+      "to": "e_second"
+    },
+    {
+      "id": "c17",
+      "kind": "causal",
+      "from": "e_second",
+      "to": "e_open_end"
+    },
+    {
+      "id": "c18",
+      "kind": "causal",
+      "from": "e_open_end",
+      "to": "e_fixed"
+    },
+    {
+      "id": "c19",
+      "kind": "causal",
+      "from": "e_fixed",
+      "to": "e_class"
+    },
+    {
+      "id": "c20",
+      "kind": "causal",
+      "from": "e_class",
+      "to": "e_machine_rules"
+    },
+    {
+      "id": "c21",
+      "kind": "causal",
+      "from": "e_machine_rules",
+      "to": "e_novikov"
+    },
+    {
+      "id": "x1",
+      "kind": "temporal",
+      "from": "e_depart",
+      "to": "e_far"
+    },
+    {
+      "id": "x2",
+      "kind": "causal",
+      "from": "e_morlock",
+      "to": "e_fight"
+    },
+    {
+      "id": "x3",
+      "kind": "intervention",
+      "from": "e_return",
+      "to": "e_second"
+    },
+    {
+      "id": "x4",
+      "kind": "causal",
+      "from": "e_books_take",
+      "to": "e_second"
+    },
+    {
+      "id": "x5",
+      "kind": "temporal",
+      "from": "e_war",
+      "to": "e_nuke"
+    },
+    {
+      "id": "x6",
+      "kind": "causal",
+      "from": "e_weena_threat",
+      "to": "e_fight"
     }
   ],
   "interventions": [
     {
-      "id": "iv_local",
-      "eventId": "e_descend",
+      "id": "iv_second",
+      "eventId": "e_second",
       "ruleEffects": [
         {
           "ruleSetId": "fixed_novikov",
-          "effect": "Local Morlock fight does not rewrite the war montage past; history of 20th century remains as observed"
+          "effect": "Observer-tourist past; intervention reserved for far future Eloi"
         }
       ]
     }
   ],
   "outcome": {
-    "summary": "Victorian machine tourism through wars to 802,701; Eloi/Morlock allegory; brief return then second departure with books\u2014no branching of observed history.",
+    "summary": "Victorian traveler tours wars to 802,701; battles Morlocks; returns briefly then goes back with books to help Eloi.",
     "endWorldRefs": [
       "w_wells"
     ]

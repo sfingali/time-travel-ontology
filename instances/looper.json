@@ -7,13 +7,14 @@
     "sources": [
       "Rian Johnson (2012)",
       "time-travel-archive/films/looper.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "mutable_ripple",
     "predestination_closed_loop",
-    "branch_on_intervention"
+    "branch_on_intervention",
+    "mutable_ripple"
   ],
   "primaryRuleSetId": "mutable_ripple",
   "mixinRuleSetIds": [
@@ -87,7 +88,7 @@
     {
       "id": "e_loop_job",
       "type": "ordinary",
-      "label": "Joe works as looper — executes men from future",
+      "label": "Joe works as looper \u2014 executes men from future",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "2044 cane field"
@@ -175,7 +176,7 @@
     {
       "id": "e_cid_power",
       "type": "reveal",
-      "label": "Cid's TK — future Rainmaker",
+      "label": "Cid's TK \u2014 future Rainmaker",
       "at": {
         "worldRef": "w_farm",
         "timeLabel": "barn"
@@ -204,7 +205,7 @@
     {
       "id": "e_suicide",
       "type": "death",
-      "label": "Young Joe kills himself — erases Old Joe",
+      "label": "Young Joe kills himself \u2014 erases Old Joe",
       "at": {
         "worldRef": "w_farm",
         "timeLabel": "sacrifice"
@@ -233,18 +234,114 @@
     },
     {
       "id": "ev_old_joe",
+      "type": "ordinary",
       "label": "Old Joe arrives / escapes",
-      "timeLabel": "2044"
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "2044"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_cid",
+      "type": "ordinary",
       "label": "Cid TK revealed as Rainmaker seed",
-      "timeLabel": "farm"
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "farm"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_suicide_cut",
+      "type": "ordinary",
       "label": "Young Joe suicide erases Old Joe threat",
-      "timeLabel": "climax"
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "climax"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_job",
+      "type": "ordinary",
+      "label": "Joe as looper in 2044",
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "2044"
+      }
+    },
+    {
+      "id": "e_close",
+      "type": "ordinary",
+      "label": "Closing loop: future self sent",
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_old_joe",
+      "type": "arrival",
+      "label": "Old Joe escapes execution",
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "inciting"
+      },
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_rainmaker",
+      "type": "ordinary",
+      "label": "Hunt for Rainmaker child",
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_sara",
+      "type": "ordinary",
+      "label": "Sara and Cid farm",
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_sacrifice",
+      "type": "death",
+      "label": "Young Joe kills self to stop Old Joe path",
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_future_unmake",
+      "type": "collapse",
+      "label": "Old Joe path unmade",
+      "at": {
+        "worldRef": "w_2044",
+        "timeLabel": "end"
+      }
     }
   ],
   "edges": [
@@ -337,14 +434,72 @@
       "to": "e_future_open"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_old_joe",
       "to": "ev_cid",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_cid",
       "to": "ev_suicide_cut",
-      "type": "leads_to"
+      "label": "leads_to"
+    },
+    {
+      "id": "nloo1",
+      "kind": "causal",
+      "from": "e_job",
+      "to": "e_close"
+    },
+    {
+      "id": "nloo2",
+      "kind": "causal",
+      "from": "e_close",
+      "to": "e_old_joe"
+    },
+    {
+      "id": "nloo3",
+      "kind": "causal",
+      "from": "e_old_joe",
+      "to": "e_rainmaker"
+    },
+    {
+      "id": "nloo4",
+      "kind": "causal",
+      "from": "e_rainmaker",
+      "to": "e_sara"
+    },
+    {
+      "id": "nloo5",
+      "kind": "causal",
+      "from": "e_sara",
+      "to": "e_sacrifice"
+    },
+    {
+      "id": "nloo6",
+      "kind": "causal",
+      "from": "e_sacrifice",
+      "to": "e_future_unmake"
+    },
+    {
+      "id": "bridge_looper",
+      "kind": "causal",
+      "from": "ev_suicide_cut",
+      "to": "e_job"
+    },
+    {
+      "id": "lox1",
+      "kind": "identity",
+      "from": "e_job",
+      "to": "e_old_joe"
+    },
+    {
+      "id": "lox2",
+      "kind": "intervention",
+      "from": "e_sacrifice",
+      "to": "e_future_unmake"
     }
   ],
   "interventions": [

@@ -1,18 +1,19 @@
 {
   "meta": {
     "id": "timecrimes",
-    "title": "Timecrimes (Los Cronocrímenes)",
+    "title": "Timecrimes (Los Cronocr\u00edmenes)",
     "year": 2007,
     "medium": "film",
     "sources": [
       "Nacho Vigalondo (2007)",
       "time-travel-archive/films/timecrimes.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "predestination_closed_loop",
     "fixed_novikov",
+    "predestination_closed_loop",
     "bootstrap_ontological"
   ],
   "primaryRuleSetId": "predestination_closed_loop",
@@ -27,13 +28,13 @@
       "id": "w_afternoon",
       "label": "Single afternoon causal knot",
       "spanLabel": "one evening",
-      "description": "Triple Héctor overlap; forced self-consistency"
+      "description": "Triple H\u00e9ctor overlap; forced self-consistency"
     }
   ],
   "agents": [
     {
       "id": "hector1",
-      "label": "Héctor-1 (first)",
+      "label": "H\u00e9ctor-1 (first)",
       "identityGroup": "hector",
       "continuityRole": "younger_self",
       "homeWorldRef": "w_afternoon",
@@ -41,7 +42,7 @@
     },
     {
       "id": "hector2",
-      "label": "Héctor-2 (bandaged)",
+      "label": "H\u00e9ctor-2 (bandaged)",
       "identityGroup": "hector",
       "continuityRole": "iteration",
       "homeWorldRef": "w_afternoon",
@@ -49,7 +50,7 @@
     },
     {
       "id": "hector3",
-      "label": "Héctor-3 (third)",
+      "label": "H\u00e9ctor-3 (third)",
       "identityGroup": "hector",
       "continuityRole": "older_self",
       "homeWorldRef": "w_afternoon",
@@ -75,7 +76,7 @@
     {
       "id": "e_glimpse",
       "type": "observation",
-      "label": "Héctor-1 glimpses nude woman in woods",
+      "label": "H\u00e9ctor-1 glimpses nude woman in woods",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "afternoon"
@@ -88,7 +89,7 @@
     {
       "id": "e_chase",
       "type": "ordinary",
-      "label": "Bandaged figure stabs/chases Héctor-1",
+      "label": "Bandaged figure stabs/chases H\u00e9ctor-1",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "afternoon"
@@ -101,7 +102,7 @@
     {
       "id": "e_lab",
       "type": "arrival",
-      "label": "Héctor-1 flees to lab with time machine",
+      "label": "H\u00e9ctor-1 flees to lab with time machine",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "lab"
@@ -117,7 +118,7 @@
     {
       "id": "e_jump1",
       "type": "departure",
-      "label": "Héctor-1 enters machine; emerges ~1 hour earlier as Héctor-2",
+      "label": "H\u00e9ctor-1 enters machine; emerges ~1 hour earlier as H\u00e9ctor-2",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "machine"
@@ -133,7 +134,7 @@
     {
       "id": "e_become_bandage",
       "type": "intervention",
-      "label": "Héctor-2 recreates bandage attacker from own wound",
+      "label": "H\u00e9ctor-2 recreates bandage attacker from own wound",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "woods"
@@ -149,7 +150,7 @@
     {
       "id": "e_preserve",
       "type": "intervention",
-      "label": "Héctor-2 forces events to preserve the loop",
+      "label": "H\u00e9ctor-2 forces events to preserve the loop",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "overlap"
@@ -163,7 +164,7 @@
     {
       "id": "e_jump2",
       "type": "departure",
-      "label": "Second jump produces Héctor-3",
+      "label": "Second jump produces H\u00e9ctor-3",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "machine again"
@@ -178,7 +179,7 @@
     {
       "id": "e_van",
       "type": "intervention",
-      "label": "Héctor-3 corrections involving deadly van crash",
+      "label": "H\u00e9ctor-3 corrections involving deadly van crash",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "road"
@@ -205,7 +206,7 @@
     {
       "id": "e_close",
       "type": "reveal",
-      "label": "Afternoon closes: each Héctor role was always filled by himself",
+      "label": "Afternoon closes: each H\u00e9ctor role was always filled by himself",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "night"
@@ -221,18 +222,111 @@
     },
     {
       "id": "ev_h1",
-      "label": "Héctor 1 enters machine",
-      "timeLabel": "T0"
+      "type": "ordinary",
+      "label": "H\u00e9ctor 1 enters machine",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "T0"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_h2",
-      "label": "Héctor 2 becomes bandaged man",
-      "timeLabel": "T-1h"
+      "type": "ordinary",
+      "label": "H\u00e9ctor 2 becomes bandaged man",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "T-1h"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_h3",
-      "label": "Héctor 3 closes loop / body swap",
-      "timeLabel": "T-1h-"
+      "type": "ordinary",
+      "label": "H\u00e9ctor 3 closes loop / body swap",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "T-1h-"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_binoculars",
+      "type": "ordinary",
+      "label": "Hector sees woods incident",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "afternoon"
+      }
+    },
+    {
+      "id": "e_hector2",
+      "type": "ordinary",
+      "label": "Becomes Hector2 interfering",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "loop"
+      }
+    },
+    {
+      "id": "e_bandage",
+      "type": "ordinary",
+      "label": "Bandaged Hector3 terror",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_force",
+      "type": "intervention",
+      "label": "Events forced to match what he saw",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "closing"
+      }
+    },
+    {
+      "id": "e_wife",
+      "type": "ordinary",
+      "label": "Wife stakes / roof fall setup",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_closed",
+      "type": "collapse",
+      "label": "Closed causal loop completed",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_scientist",
+      "type": "ordinary",
+      "label": "Scientist facilitates loops",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "lab"
+      }
     }
   ],
   "edges": [
@@ -298,19 +392,79 @@
       "to": "e_close"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_h1",
       "to": "ev_h2",
-      "type": "becomes"
+      "label": "becomes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_h2",
       "to": "ev_h3",
-      "type": "becomes"
+      "label": "becomes"
     },
     {
+      "id": "rep_3",
+      "kind": "identity",
       "from": "ev_h3",
       "to": "ev_h1",
-      "type": "bootstrap_causes"
+      "label": "bootstrap_causes"
+    },
+    {
+      "id": "ntim1",
+      "kind": "causal",
+      "from": "e_binoculars",
+      "to": "e_hector2"
+    },
+    {
+      "id": "ntim2",
+      "kind": "causal",
+      "from": "e_hector2",
+      "to": "e_bandage"
+    },
+    {
+      "id": "ntim3",
+      "kind": "causal",
+      "from": "e_bandage",
+      "to": "e_force"
+    },
+    {
+      "id": "ntim4",
+      "kind": "causal",
+      "from": "e_force",
+      "to": "e_wife"
+    },
+    {
+      "id": "ntim5",
+      "kind": "causal",
+      "from": "e_wife",
+      "to": "e_closed"
+    },
+    {
+      "id": "ntim6",
+      "kind": "causal",
+      "from": "e_closed",
+      "to": "e_scientist"
+    },
+    {
+      "id": "bridge_timecrim",
+      "kind": "causal",
+      "from": "ev_h3",
+      "to": "e_binoculars"
+    },
+    {
+      "id": "tcx1",
+      "kind": "identity",
+      "from": "e_hector2",
+      "to": "e_bandage"
+    },
+    {
+      "id": "tcx2",
+      "kind": "intervention",
+      "from": "e_force",
+      "to": "e_closed"
     }
   ],
   "interventions": [
@@ -324,17 +478,17 @@
         },
         {
           "ruleSetId": "bootstrap_ontological",
-          "effect": "Bandaged pursuer has no origin outside Héctor's own wound"
+          "effect": "Bandaged pursuer has no origin outside H\u00e9ctor's own wound"
         },
         {
           "ruleSetId": "fixed_novikov",
-          "effect": "Events self-consistently fill all three Héctor slots"
+          "effect": "Events self-consistently fill all three H\u00e9ctor slots"
         }
       ]
     }
   ],
   "outcome": {
-    "summary": "Compact causal knot: Héctor becomes each role in a single afternoon—glimpse, pursuer, corrector—forced into self-consistency.",
+    "summary": "Compact causal knot: H\u00e9ctor becomes each role in a single afternoon\u2014glimpse, pursuer, corrector\u2014forced into self-consistency.",
     "endWorldRefs": [
       "w_afternoon"
     ]

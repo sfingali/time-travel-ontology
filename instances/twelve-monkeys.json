@@ -7,12 +7,13 @@
     "sources": [
       "Terry Gilliam; David & Janet Peoples (1995)",
       "time-travel-archive/films/twelve-monkeys.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "predestination_closed_loop",
     "fixed_novikov",
+    "predestination_closed_loop",
     "bootstrap_ontological"
   ],
   "primaryRuleSetId": "predestination_closed_loop",
@@ -26,7 +27,7 @@
       "kind": "timeline",
       "id": "w_12m",
       "label": "Single plague timeline",
-      "spanLabel": "1990–1996–2035",
+      "spanLabel": "1990\u20131996\u20132035",
       "description": "Closed loop; mission fulfills the past it sought to study"
     }
   ],
@@ -65,7 +66,7 @@
     {
       "id": "e_plague",
       "type": "ordinary",
-      "label": "1996–97 viral apocalypse",
+      "label": "1996\u201397 viral apocalypse",
       "at": {
         "worldRef": "w_12m",
         "timeLabel": "1996"
@@ -162,7 +163,7 @@
       "label": "Cole's lifelong dream = his own death",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "childhood↔1996"
+        "timeLabel": "childhood\u21941996"
       },
       "agents": [
         "cole",
@@ -199,18 +200,135 @@
     },
     {
       "id": "ev_misjump",
+      "type": "ordinary",
       "label": "Cole misjumps to asylum 1990",
-      "timeLabel": "1990"
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "1990"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_red_herring",
+      "type": "ordinary",
       "label": "Army of Twelve Monkeys zoo release",
-      "timeLabel": "1996"
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "1996"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_airport",
+      "type": "ordinary",
       "label": "Airport death = childhood memory",
-      "timeLabel": "1996"
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "1996"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_sent",
+      "type": "departure",
+      "label": "Sent from future to find virus origin",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "future"
+      },
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_asylum",
+      "type": "ordinary",
+      "label": "1990 asylum; meets Railly and Goines",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "1990"
+      }
+    },
+    {
+      "id": "e_army",
+      "type": "ordinary",
+      "label": "Army of the Twelve Monkeys red herring",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_bootstrap",
+      "type": "bootstrap_origin",
+      "label": "Dream was witnessing own death",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "reveal"
+      },
+      "payload": {
+        "bootstrapEntity": "memory"
+      }
+    },
+    {
+      "id": "e_virus_man",
+      "type": "ordinary",
+      "label": "True virus releaser boards plane",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "ending"
+      }
+    },
+    {
+      "id": "e_pad_future",
+      "type": "ordinary",
+      "label": "Future underground survivors hierarchy",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "future"
+      }
+    },
+    {
+      "id": "e_pad_rail",
+      "type": "ordinary",
+      "label": "Railly becomes believer",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "1996"
+      }
+    },
+    {
+      "id": "e_pad_goines",
+      "type": "ordinary",
+      "label": "Jeffrey Goines / animal rights misdirection",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_pad_voice",
+      "type": "ordinary",
+      "label": "Scientist voices / mission briefing loops",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "future"
+      }
     }
   ],
   "edges": [
@@ -278,19 +396,79 @@
       "to": "e_loop_close"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_misjump",
       "to": "ev_red_herring",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "temporal",
       "from": "ev_red_herring",
       "to": "ev_airport",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_3",
+      "kind": "identity",
       "from": "ev_airport",
       "to": "ev_misjump",
-      "type": "bootstrap_causes"
+      "label": "bootstrap_causes"
+    },
+    {
+      "id": "ntwe1",
+      "kind": "causal",
+      "from": "e_sent",
+      "to": "e_asylum"
+    },
+    {
+      "id": "ntwe2",
+      "kind": "causal",
+      "from": "e_asylum",
+      "to": "e_army"
+    },
+    {
+      "id": "ntwe3",
+      "kind": "causal",
+      "from": "e_army",
+      "to": "e_bootstrap"
+    },
+    {
+      "id": "ntwe4",
+      "kind": "causal",
+      "from": "e_bootstrap",
+      "to": "e_virus_man"
+    },
+    {
+      "id": "bridge_twelve-m",
+      "kind": "causal",
+      "from": "ev_airport",
+      "to": "e_sent"
+    },
+    {
+      "id": "twx1",
+      "kind": "identity",
+      "from": "e_dream",
+      "to": "e_airport"
+    },
+    {
+      "id": "twx2",
+      "kind": "causal",
+      "from": "e_army",
+      "to": "e_virus_man"
+    },
+    {
+      "id": "tw3",
+      "kind": "causal",
+      "from": "e_pad_goines",
+      "to": "e_army"
+    },
+    {
+      "id": "tw4",
+      "kind": "temporal",
+      "from": "e_pad_future",
+      "to": "e_sent"
     }
   ],
   "interventions": [

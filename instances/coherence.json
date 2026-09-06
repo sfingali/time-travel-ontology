@@ -7,12 +7,13 @@
     "sources": [
       "James Ward Byrkit (2013)",
       "time-travel-archive/films/coherence.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "multiverse_contact",
-    "branch_on_intervention"
+    "branch_on_intervention",
+    "multiverse_contact"
   ],
   "primaryRuleSetId": "multiverse_contact",
   "mixinRuleSetIds": [
@@ -136,7 +137,7 @@
     {
       "id": "e_schrodinger",
       "type": "observation",
-      "label": "Schrödinger / decoherence framing becomes literal",
+      "label": "Schr\u00f6dinger / decoherence framing becomes literal",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "discussion"
@@ -236,18 +237,114 @@
     },
     {
       "id": "ev_comet",
+      "type": "ordinary",
       "label": "Miller's Comet dinner blackout",
-      "timeLabel": "night"
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "night"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_split",
+      "type": "ordinary",
       "label": "Dark-path house multiples / glow sticks",
-      "timeLabel": "night"
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "night"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_emily_replace",
+      "type": "ordinary",
       "label": "Emily replaces other-self",
-      "timeLabel": "climax"
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "climax"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_comet",
+      "type": "ordinary",
+      "label": "Dinner party during comet",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "night"
+      }
+    },
+    {
+      "id": "e_dark",
+      "type": "ordinary",
+      "label": "Power dark; houses multiply",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "early"
+      }
+    },
+    {
+      "id": "e_box",
+      "type": "observation",
+      "label": "Glowstick/numbered photos mark realities",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_doubles",
+      "type": "contact",
+      "label": "Duplicates from decohered houses",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_em",
+      "type": "intervention",
+      "label": "Emily tries to replace another Emily",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_car",
+      "type": "ordinary",
+      "label": "Morning: another Em already in car",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "ending"
+      }
+    },
+    {
+      "id": "e_decohere",
+      "type": "observation",
+      "label": "Comet-induced quantum decoherence premise",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "rules"
+      },
+      "payload": {
+        "travelMode": "quantum"
+      }
     }
   ],
   "edges": [
@@ -316,14 +413,79 @@
       "relation": "correspondsTo"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_comet",
       "to": "ev_split",
-      "type": "causes"
+      "label": "causes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_split",
       "to": "ev_emily_replace",
-      "type": "enables"
+      "label": "enables"
+    },
+    {
+      "id": "ncoh1",
+      "kind": "causal",
+      "from": "e_comet",
+      "to": "e_dark"
+    },
+    {
+      "id": "ncoh2",
+      "kind": "causal",
+      "from": "e_dark",
+      "to": "e_box"
+    },
+    {
+      "id": "ncoh3",
+      "kind": "causal",
+      "from": "e_box",
+      "to": "e_doubles"
+    },
+    {
+      "id": "ncoh4",
+      "kind": "causal",
+      "from": "e_doubles",
+      "to": "e_em"
+    },
+    {
+      "id": "ncoh5",
+      "kind": "causal",
+      "from": "e_em",
+      "to": "e_car"
+    },
+    {
+      "id": "ncoh6",
+      "kind": "causal",
+      "from": "e_car",
+      "to": "e_decohere"
+    },
+    {
+      "id": "bridge_coherenc",
+      "kind": "causal",
+      "from": "ev_emily_replace",
+      "to": "e_comet"
+    },
+    {
+      "id": "cx1",
+      "kind": "causal",
+      "from": "e_comet",
+      "to": "e_doubles"
+    },
+    {
+      "id": "cx2",
+      "kind": "intervention",
+      "from": "e_em",
+      "to": "e_car"
+    },
+    {
+      "id": "cx3",
+      "kind": "world_relation",
+      "from": "w_house_a",
+      "to": "w_house_a",
+      "relation": "mirrors"
     }
   ],
   "interventions": [

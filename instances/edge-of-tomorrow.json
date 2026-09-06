@@ -7,12 +7,13 @@
     "sources": [
       "Doug Liman; adapted from All You Need Is Kill (2014)",
       "time-travel-archive/films/edge-of-tomorrow.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "temporal_loop_exit",
-    "death_checkpoint_rewrite"
+    "death_checkpoint_rewrite",
+    "temporal_loop_exit"
   ],
   "primaryRuleSetId": "temporal_loop_exit",
   "mixinRuleSetIds": [
@@ -86,7 +87,7 @@
     {
       "id": "e_reset",
       "type": "loop_reset",
-      "label": "Wake at previous morning — loop",
+      "label": "Wake at previous morning \u2014 loop",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "Day 0 morning"
@@ -157,7 +158,7 @@
     {
       "id": "e_exit",
       "type": "arrival",
-      "label": "General reset to pre-invasion briefing — victory state",
+      "label": "General reset to pre-invasion briefing \u2014 victory state",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "new Day 0"
@@ -186,18 +187,127 @@
     },
     {
       "id": "ev_first_death",
+      "type": "ordinary",
       "label": "Cage killed by Alpha; loop starts",
-      "timeLabel": "Day 1"
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "Day 1"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_train_rita",
+      "type": "ordinary",
       "label": "Training loops with Rita",
-      "timeLabel": "many days"
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "many days"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_omega",
+      "type": "ordinary",
       "label": "Omega destroyed; early wake victory",
-      "timeLabel": "finale"
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "finale"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_drop",
+      "type": "ordinary",
+      "label": "Invasion drop on French beach",
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "Day 1"
+      }
+    },
+    {
+      "id": "e_alpha_blood",
+      "type": "death",
+      "label": "Cage killed; alpha blood grants loop",
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "Day 1 death"
+      },
+      "payload": {
+        "travelMode": "blood_reset",
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_meet_rita",
+      "type": "ordinary",
+      "label": "Finds Rita who previously had power",
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "early loops"
+      }
+    },
+    {
+      "id": "e_vision",
+      "type": "observation",
+      "label": "Visions toward Omega",
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_omega",
+      "type": "intervention",
+      "label": "Final push to destroy Omega",
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_reset_final",
+      "type": "loop_reset",
+      "label": "Omega death resets to helicopter earlier with power shifted",
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "ending"
+      },
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_new_morning",
+      "type": "checkpoint",
+      "label": "Cage awake on prior morning; Mira alive",
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "epilogue dawn"
+      }
+    },
+    {
+      "id": "e_know",
+      "type": "ordinary",
+      "label": "Approaches Rita with hard-won knowledge",
+      "at": {
+        "worldRef": "w_eot",
+        "timeLabel": "close"
+      }
     }
   ],
   "edges": [
@@ -250,14 +360,84 @@
       "to": "e_smile"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_first_death",
       "to": "ev_train_rita",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_train_rita",
       "to": "ev_omega",
-      "type": "enables"
+      "label": "enables"
+    },
+    {
+      "id": "nedg1",
+      "kind": "causal",
+      "from": "e_drop",
+      "to": "e_alpha_blood"
+    },
+    {
+      "id": "nedg2",
+      "kind": "causal",
+      "from": "e_alpha_blood",
+      "to": "e_meet_rita"
+    },
+    {
+      "id": "nedg3",
+      "kind": "causal",
+      "from": "e_meet_rita",
+      "to": "e_vision"
+    },
+    {
+      "id": "nedg4",
+      "kind": "causal",
+      "from": "e_vision",
+      "to": "e_omega"
+    },
+    {
+      "id": "nedg5",
+      "kind": "causal",
+      "from": "e_omega",
+      "to": "e_reset_final"
+    },
+    {
+      "id": "nedg6",
+      "kind": "causal",
+      "from": "e_reset_final",
+      "to": "e_new_morning"
+    },
+    {
+      "id": "nedg7",
+      "kind": "causal",
+      "from": "e_new_morning",
+      "to": "e_know"
+    },
+    {
+      "id": "bridge_edge-of-",
+      "kind": "causal",
+      "from": "ev_omega",
+      "to": "e_drop"
+    },
+    {
+      "id": "ex1",
+      "kind": "causal",
+      "from": "e_alpha_blood",
+      "to": "e_train"
+    },
+    {
+      "id": "ex2",
+      "kind": "intervention",
+      "from": "e_omega",
+      "to": "e_reset_final"
+    },
+    {
+      "id": "ex3",
+      "kind": "temporal",
+      "from": "e_lose_power",
+      "to": "e_omega"
     }
   ],
   "interventions": [

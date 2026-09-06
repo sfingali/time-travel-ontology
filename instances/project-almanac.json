@@ -7,7 +7,8 @@
     "sources": [
       "Dean Israelite (2015)",
       "time-travel-archive/films/project-almanac.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -271,6 +272,78 @@
       "payload": {
         "memoryRetained": true
       }
+    },
+    {
+      "id": "e_x_find",
+      "type": "ordinary",
+      "label": "Teens find Almanac device",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_party",
+      "type": "intervention",
+      "label": "Fix parties / lottery / romance",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_ripple",
+      "type": "branch_fork",
+      "label": "Present photographs/reality glitch",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_fight",
+      "type": "ordinary",
+      "label": "Friendship collapse",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_undo",
+      "type": "intervention",
+      "label": "Attempt to destroy Almanac",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_end",
+      "type": "collapse",
+      "label": "Timeline fracture ending",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Youtube-era butterfly cascade",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "rules"
+      }
+    },
+    {
+      "id": "e_x_love",
+      "type": "ordinary",
+      "label": "Jessie romance thread",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      }
     }
   ],
   "edges": [
@@ -375,6 +448,66 @@
       "from": "e_dual_cam",
       "to": "e_tape",
       "label": "residual chronicle / lure"
+    },
+    {
+      "id": "npro1",
+      "kind": "causal",
+      "from": "e_x_find",
+      "to": "e_x_party"
+    },
+    {
+      "id": "npro2",
+      "kind": "causal",
+      "from": "e_x_party",
+      "to": "e_x_ripple"
+    },
+    {
+      "id": "npro3",
+      "kind": "causal",
+      "from": "e_x_ripple",
+      "to": "e_x_fight"
+    },
+    {
+      "id": "npro4",
+      "kind": "causal",
+      "from": "e_x_fight",
+      "to": "e_x_undo"
+    },
+    {
+      "id": "npro5",
+      "kind": "causal",
+      "from": "e_x_undo",
+      "to": "e_x_end"
+    },
+    {
+      "id": "npro6",
+      "kind": "causal",
+      "from": "e_x_end",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "npro7",
+      "kind": "causal",
+      "from": "e_x_rules",
+      "to": "e_x_love"
+    },
+    {
+      "id": "bridge_project-",
+      "kind": "causal",
+      "from": "e_remeet",
+      "to": "e_x_find"
+    },
+    {
+      "id": "x_proj_1",
+      "kind": "causal",
+      "from": "e_x_find",
+      "to": "e_x_love"
+    },
+    {
+      "id": "x_proj_2",
+      "kind": "temporal",
+      "from": "e_x_party",
+      "to": "e_x_ripple"
     }
   ],
   "interventions": [

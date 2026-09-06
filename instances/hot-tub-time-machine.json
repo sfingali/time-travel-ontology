@@ -7,7 +7,8 @@
     "sources": [
       "Steve Pink (2010)",
       "time-travel-archive/films/hot-tub-time-machine.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -236,6 +237,78 @@
       "agents": [
         "adam"
       ]
+    },
+    {
+      "id": "e_x_tub",
+      "type": "departure",
+      "label": "Hot tub becomes time machine",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "inciting"
+      }
+    },
+    {
+      "id": "e_x_1986",
+      "type": "arrival",
+      "label": "Arrive 1986 ski weekend",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "1986"
+      }
+    },
+    {
+      "id": "e_x_fix",
+      "type": "intervention",
+      "label": "Avoid/reproduce past mistakes",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_lou",
+      "type": "ordinary",
+      "label": "Lou suicide threat alters",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_present",
+      "type": "arrival",
+      "label": "Return to altered present",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_sequel",
+      "type": "ordinary",
+      "label": "Jacob existence ripple",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Actions rewrite personal futures",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "rules"
+      }
+    },
+    {
+      "id": "e_x_party",
+      "type": "ordinary",
+      "label": "Party night setpieces",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "mid"
+      }
     }
   ],
   "edges": [
@@ -319,6 +392,66 @@
       "from": "w_1986",
       "to": "w_2010",
       "relation": "originatesFrom"
+    },
+    {
+      "id": "nhot1",
+      "kind": "causal",
+      "from": "e_x_tub",
+      "to": "e_x_1986"
+    },
+    {
+      "id": "nhot2",
+      "kind": "causal",
+      "from": "e_x_1986",
+      "to": "e_x_fix"
+    },
+    {
+      "id": "nhot3",
+      "kind": "causal",
+      "from": "e_x_fix",
+      "to": "e_x_lou"
+    },
+    {
+      "id": "nhot4",
+      "kind": "causal",
+      "from": "e_x_lou",
+      "to": "e_x_present"
+    },
+    {
+      "id": "nhot5",
+      "kind": "causal",
+      "from": "e_x_present",
+      "to": "e_x_sequel"
+    },
+    {
+      "id": "nhot6",
+      "kind": "causal",
+      "from": "e_x_sequel",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "nhot7",
+      "kind": "causal",
+      "from": "e_x_rules",
+      "to": "e_x_party"
+    },
+    {
+      "id": "bridge_hot-tub-",
+      "kind": "causal",
+      "from": "e_sequel_hook",
+      "to": "e_x_tub"
+    },
+    {
+      "id": "x_hot-_1",
+      "kind": "causal",
+      "from": "e_x_tub",
+      "to": "e_x_party"
+    },
+    {
+      "id": "x_hot-_2",
+      "kind": "temporal",
+      "from": "e_x_1986",
+      "to": "e_x_fix"
     }
   ],
   "interventions": [

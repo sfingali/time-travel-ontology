@@ -7,7 +7,8 @@
     "sources": [
       "Brad Wright (2016\u20132018)",
       "time-travel-archive/tv/travelers.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -252,6 +253,78 @@
       "agents": [
         "director"
       ]
+    },
+    {
+      "id": "e_x_transfer",
+      "type": "arrival",
+      "label": "Traveler consciousness into host",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_director",
+      "type": "ordinary",
+      "label": "Director AI missions",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "ongoing"
+      }
+    },
+    {
+      "id": "e_x_team",
+      "type": "ordinary",
+      "label": "Team macros in present",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_faction",
+      "type": "ordinary",
+      "label": "Faction conflict",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_host",
+      "type": "observation",
+      "label": "Host consciousness ethics",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "theme"
+      }
+    },
+    {
+      "id": "e_x_hist",
+      "type": "intervention",
+      "label": "Missions rewrite future disasters",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "ongoing"
+      }
+    },
+    {
+      "id": "e_x_grand",
+      "type": "branch_fork",
+      "label": "Grand plan revisions",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_end",
+      "type": "ordinary",
+      "label": "Series end stakes",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "end"
+      }
     }
   ],
   "edges": [
@@ -334,6 +407,66 @@
       "to": "w_present",
       "relation": "originatesFrom",
       "label": "consciousness transfer"
+    },
+    {
+      "id": "ntra1",
+      "kind": "causal",
+      "from": "e_x_transfer",
+      "to": "e_x_director"
+    },
+    {
+      "id": "ntra2",
+      "kind": "causal",
+      "from": "e_x_director",
+      "to": "e_x_team"
+    },
+    {
+      "id": "ntra3",
+      "kind": "causal",
+      "from": "e_x_team",
+      "to": "e_x_faction"
+    },
+    {
+      "id": "ntra4",
+      "kind": "causal",
+      "from": "e_x_faction",
+      "to": "e_x_host"
+    },
+    {
+      "id": "ntra5",
+      "kind": "causal",
+      "from": "e_x_host",
+      "to": "e_x_hist"
+    },
+    {
+      "id": "ntra6",
+      "kind": "causal",
+      "from": "e_x_hist",
+      "to": "e_x_grand"
+    },
+    {
+      "id": "ntra7",
+      "kind": "causal",
+      "from": "e_x_grand",
+      "to": "e_x_end"
+    },
+    {
+      "id": "bridge_traveler",
+      "kind": "causal",
+      "from": "e_historians",
+      "to": "e_x_transfer"
+    },
+    {
+      "id": "x_trav_1",
+      "kind": "causal",
+      "from": "e_x_transfer",
+      "to": "e_x_end"
+    },
+    {
+      "id": "x_trav_2",
+      "kind": "temporal",
+      "from": "e_x_director",
+      "to": "e_x_team"
     }
   ],
   "interventions": [

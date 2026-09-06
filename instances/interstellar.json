@@ -7,7 +7,8 @@
     "sources": [
       "Christopher Nolan & Jonathan Nolan (2014)",
       "time-travel-archive/films/interstellar.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -25,8 +26,8 @@
     {
       "kind": "timeline",
       "id": "w_earth",
-      "label": "Blight Earth → Cooper Station continuum",
-      "spanLabel": "near future → decades later",
+      "label": "Blight Earth \u2192 Cooper Station continuum",
+      "spanLabel": "near future \u2192 decades later",
       "description": "One history; anomalies always included Cooper's messages"
     }
   ],
@@ -96,7 +97,7 @@
     {
       "id": "e_coords",
       "type": "bootstrap_origin",
-      "label": "Dust/binary coordinates lead to NASA — Cooper was the ghost",
+      "label": "Dust/binary coordinates lead to NASA \u2014 Cooper was the ghost",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "bookshelf"
@@ -131,7 +132,7 @@
     {
       "id": "e_miller",
       "type": "ordinary",
-      "label": "Miller's planet: 1 hour ≈ 7 years; Doyle dies; +23 years Earth",
+      "label": "Miller's planet: 1 hour \u2248 7 years; Doyle dies; +23 years Earth",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "Miller"
@@ -193,7 +194,7 @@
       "label": "Cooper pushes gravity messages into past (books, dust, watch)",
       "at": {
         "worldRef": "w_earth",
-        "timeLabel": "Murph childhood↔adult"
+        "timeLabel": "Murph childhood\u2194adult"
       },
       "agents": [
         "cooper",
@@ -264,18 +265,108 @@
     },
     {
       "id": "ev_miller",
+      "type": "ordinary",
       "label": "Miller planet dilation loss",
-      "timeLabel": "Gargantua"
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "Gargantua"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_tesseract",
+      "type": "ordinary",
       "label": "Tesseract bookshelf messages",
-      "timeLabel": "inside BH"
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "inside BH"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_plan_a",
+      "type": "ordinary",
       "label": "Murph solves gravity with watch data",
-      "timeLabel": "Earth"
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "Earth"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_farm",
+      "type": "ordinary",
+      "label": "Cooper farm; dust bowl Earth",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "near future"
+      }
+    },
+    {
+      "id": "e_nasa",
+      "type": "ordinary",
+      "label": "Secret NASA mission",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "early"
+      }
+    },
+    {
+      "id": "e_wormhole",
+      "type": "departure",
+      "label": "Enter wormhole near Saturn",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "transit"
+      },
+      "payload": {
+        "travelMode": "wormhole"
+      }
+    },
+    {
+      "id": "e_blackhole",
+      "type": "arrival",
+      "label": "Cooper falls into Gargantua",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "climax"
+      },
+      "payload": {
+        "travelMode": "wormhole"
+      }
+    },
+    {
+      "id": "e_murph_solve",
+      "type": "ordinary",
+      "label": "Murph solves gravity with data",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "Earth"
+      }
+    },
+    {
+      "id": "e_cooper_station",
+      "type": "ordinary",
+      "label": "Wake on Cooper Station",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "far future"
+      }
     }
   ],
   "edges": [
@@ -354,19 +445,74 @@
       "label": "future humans enable tesseract that enables data"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_miller",
       "to": "ev_tesseract",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_tesseract",
       "to": "ev_plan_a",
-      "type": "enables"
+      "label": "enables"
     },
     {
+      "id": "rep_3",
+      "kind": "identity",
       "from": "ev_plan_a",
       "to": "ev_tesseract",
-      "type": "bootstrap_causes"
+      "label": "bootstrap_causes"
+    },
+    {
+      "id": "nint1",
+      "kind": "causal",
+      "from": "e_farm",
+      "to": "e_nasa"
+    },
+    {
+      "id": "nint2",
+      "kind": "causal",
+      "from": "e_nasa",
+      "to": "e_wormhole"
+    },
+    {
+      "id": "nint3",
+      "kind": "causal",
+      "from": "e_wormhole",
+      "to": "e_blackhole"
+    },
+    {
+      "id": "nint4",
+      "kind": "causal",
+      "from": "e_blackhole",
+      "to": "e_murph_solve"
+    },
+    {
+      "id": "nint5",
+      "kind": "causal",
+      "from": "e_murph_solve",
+      "to": "e_cooper_station"
+    },
+    {
+      "id": "bridge_interste",
+      "kind": "causal",
+      "from": "ev_plan_a",
+      "to": "e_farm"
+    },
+    {
+      "id": "ix1",
+      "kind": "identity",
+      "from": "e_tesseract",
+      "to": "e_murph_solve",
+      "label": "bootstrap data"
+    },
+    {
+      "id": "ix2",
+      "kind": "temporal",
+      "from": "e_wormhole",
+      "to": "e_blackhole"
     }
   ],
   "interventions": [

@@ -7,7 +7,8 @@
     "sources": [
       "Persichetti, Ramsey, Rothman (2018)",
       "time-travel-archive/films/spider-man-into-the-spider-verse.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -262,6 +263,78 @@
       "payload": {
         "note": "canon events foreshadowed"
       }
+    },
+    {
+      "id": "e_x_collider",
+      "type": "ordinary",
+      "label": "Kingpin collider experiment",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_miles",
+      "type": "ordinary",
+      "label": "Miles bitten; spider powers",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "early"
+      }
+    },
+    {
+      "id": "e_x_variants",
+      "type": "contact",
+      "label": "Spider-people from other dimensions",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_gw",
+      "type": "ordinary",
+      "label": "Peter B. mentors Miles",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_gwen",
+      "type": "ordinary",
+      "label": "Gwen band / alliance",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_stop",
+      "type": "intervention",
+      "label": "Stop collider destroying city",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_leap",
+      "type": "ordinary",
+      "label": "Miles leap of faith",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_home",
+      "type": "ordinary",
+      "label": "Variants return; Miles remains",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "end"
+      }
     }
   ],
   "edges": [
@@ -346,6 +419,66 @@
       "to": "w_1610",
       "relation": "correspondsTo",
       "label": "Peter B world"
+    },
+    {
+      "id": "nspi1",
+      "kind": "causal",
+      "from": "e_x_collider",
+      "to": "e_x_miles"
+    },
+    {
+      "id": "nspi2",
+      "kind": "causal",
+      "from": "e_x_miles",
+      "to": "e_x_variants"
+    },
+    {
+      "id": "nspi3",
+      "kind": "causal",
+      "from": "e_x_variants",
+      "to": "e_x_gw"
+    },
+    {
+      "id": "nspi4",
+      "kind": "causal",
+      "from": "e_x_gw",
+      "to": "e_x_gwen"
+    },
+    {
+      "id": "nspi5",
+      "kind": "causal",
+      "from": "e_x_gwen",
+      "to": "e_x_stop"
+    },
+    {
+      "id": "nspi6",
+      "kind": "causal",
+      "from": "e_x_stop",
+      "to": "e_x_leap"
+    },
+    {
+      "id": "nspi7",
+      "kind": "causal",
+      "from": "e_x_leap",
+      "to": "e_x_home"
+    },
+    {
+      "id": "bridge_spider-m",
+      "kind": "causal",
+      "from": "e_multiverse",
+      "to": "e_x_collider"
+    },
+    {
+      "id": "x_spid_1",
+      "kind": "causal",
+      "from": "e_x_collider",
+      "to": "e_x_home"
+    },
+    {
+      "id": "x_spid_2",
+      "kind": "temporal",
+      "from": "e_x_miles",
+      "to": "e_x_variants"
     }
   ],
   "interventions": [

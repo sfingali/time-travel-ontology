@@ -1,110 +1,6438 @@
 {
-  "generatedAt": "2026-09-06T15:21:18.338Z",
-  "archiveRoot": "/workspace/time-travel-archive",
-  "counts": {
-    "written": 441,
-    "skippedHandCrafted": 20,
-    "totalIndexed": 441
+  "generatedAt": "2026-09-06T18:38:17.680Z",
+  "archiveRoot": "/workspace/time-travel-ontology/reference-archive",
+  "forceGenerated": false,
+  "policy": {
+    "neverClobberHandCrafted": true,
+    "writeDir": "instances/generated/",
+    "forceGeneratedFlag": "--force-generated"
   },
-  "committedSampleIds": [
-    "timecrimes",
-    "interstellar",
-    "outlander",
-    "bill-and-ted",
-    "the-time-machine",
-    "russian-doll",
-    "terminator",
-    "11-22-63"
-  ],
+  "counts": {
+    "scanned": 461,
+    "written": 0,
+    "skippedExistingGenerated": 383,
+    "skippedHandCrafted": 78,
+    "totalIndexed": 383,
+    "exhaustiveGaps": 102,
+    "diagramGaps": 202,
+    "unmappedTagTypes": 923
+  },
+  "confidenceCounts": {
+    "high": 22,
+    "medium": 295,
+    "low": 66
+  },
   "stubs": [
     {
-      "id": "timecrimes",
-      "title": "Timecrimes (Los Cronocrímenes)",
-      "year": 2007,
+      "id": "13b",
+      "title": "13B: Fear Has a New Address",
+      "year": 2009,
       "medium": "film",
-      "primaryRuleSetId": "predestination_closed_loop",
-      "mixinRuleSetIds": ["bootstrap_ontological"],
+      "primaryRuleSetId": "perception_nonlinear",
+      "mixinRuleSetIds": [],
       "topologyPatternId": "single_fixed_timeline",
-      "archivePath": "time-travel-archive/films/timecrimes.md",
-      "confidence": "medium"
+      "archivePath": "reference-archive/films/13b.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "haunted_apartment_echo",
+        "information_from_past_crime",
+        "borderline_supernatural_not_TT"
+      ],
+      "writtenThisRun": false
     },
     {
-      "id": "interstellar",
-      "title": "Interstellar",
-      "year": 2014,
+      "id": "2009-lost-memories",
+      "title": "2009: Lost Memories",
+      "year": 2002,
       "medium": "film",
-      "primaryRuleSetId": "predestination_closed_loop",
-      "mixinRuleSetIds": ["bootstrap_ontological"],
-      "topologyPatternId": "single_fixed_timeline",
-      "archivePath": "time-travel-archive/films/interstellar.md",
-      "confidence": "medium"
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "fixed_novikov"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/2009-lost-memories.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "lunar_soul_key"
+      ],
+      "writtenThisRun": false
     },
     {
-      "id": "outlander",
-      "title": "Outlander",
-      "year": 1991,
-      "medium": "novel",
+      "id": "24-tamil",
+      "title": "24 (Tamil)",
+      "year": 2016,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop",
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/24-tamil.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_watch_project_24",
+        "30_second_freeze",
+        "24_hour_limit"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "a-chinese-odyssey-1",
+      "title": "A Chinese Odyssey Part One: Pandora's Box",
+      "year": 1995,
+      "medium": "film",
       "primaryRuleSetId": "predestination_closed_loop",
       "mixinRuleSetIds": [],
       "topologyPatternId": "single_fixed_timeline",
-      "archivePath": "time-travel-archive/novels/outlander.md",
-      "confidence": "medium"
+      "archivePath": "reference-archive/films/a-chinese-odyssey-1.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "pandora_time_box",
+        "reincarnation",
+        "failed_rescue_loops",
+        "karmic_reset"
+      ],
+      "writtenThisRun": false
     },
     {
-      "id": "bill-and-ted",
-      "title": "Bill & Ted's Excellent Adventure",
-      "year": 1989,
+      "id": "a-chinese-odyssey-2",
+      "title": "A Chinese Odyssey Part Two: Cinderella",
+      "year": 1995,
       "medium": "film",
       "primaryRuleSetId": "predestination_closed_loop",
-      "mixinRuleSetIds": ["bootstrap_ontological"],
+      "mixinRuleSetIds": [],
       "topologyPatternId": "single_fixed_timeline",
-      "archivePath": "time-travel-archive/films/bill-and-ted.md",
-      "confidence": "medium"
+      "archivePath": "reference-archive/films/a-chinese-odyssey-2.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "pandora_time_box",
+        "destiny_acceptance",
+        "possession_kiss",
+        "karmic_sacrifice"
+      ],
+      "writtenThisRun": false
     },
     {
-      "id": "the-time-machine",
-      "title": "The Time Machine",
-      "year": 1895,
+      "id": "a-day",
+      "title": "A Day",
+      "year": 2017,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/a-day.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "revenge_anchored_reset",
+        "moral_reckoning_exit"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "a-spasso-nel-tempo-2",
+      "title": "A spasso nel tempo – L'avventura continua",
+      "year": 1997,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/a-spasso-nel-tempo-2.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "historical_tourist_jumps",
+        "sequel_anthology_eras"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "a-spasso-nel-tempo",
+      "title": "A spasso nel tempo",
+      "year": 1996,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/a-spasso-nel-tempo.md",
+      "confidence": "medium",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "abracadabra-2017",
+      "title": "Abracadabra",
+      "year": 2017,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/abracadabra-2017.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "hypnosis_triggered_possession",
+        "mediumship",
+        "borderline_possession_not_TT"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "action-replayy",
+      "title": "Action Replayy",
+      "year": 2010,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/action-replayy.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "1975_parents_fix"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "aditya-369",
+      "title": "Aditya 369",
+      "year": 1991,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/aditya-369.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "museum_diamond_macguffin",
+        "post_apocalyptic_future"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "am-1100",
+      "title": "11 A.M. (AM 11:00)",
+      "year": 2013,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/am-1100.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_device_bomb_countdown",
+        "past_warning_attempts"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "another-earth",
+      "title": "Another Earth",
+      "year": 2011,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/another-earth.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "mirror_planet",
+        "duplicate_earth"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "army-of-darkness",
+      "title": "Army of Darkness",
+      "year": 1992,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/army-of-darkness.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "necronomicon",
+        "medieval_trap"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "austin-powers-spy-who-shagged-me",
+      "title": "Austin Powers: The Spy Who Shagged Me",
+      "year": 1999,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/austin-powers-spy-who-shagged-me.md",
+      "confidence": "medium",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "before-i-fall",
+      "title": "Before I Fall",
+      "year": 2017,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/before-i-fall.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "car_crash_reset",
+        "moral_growth"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "berkeley-square",
+      "title": "Berkeley Square",
+      "year": 1933,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/berkeley-square.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "ancestral_identification"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "beyond-the-infinite-two-minutes",
+      "title": "Beyond the Infinite Two Minutes",
+      "year": 2020,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/beyond-the-infinite-two-minutes.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "two_minute_monitor",
+        "droste_effect_cascade"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "bubble-fiction",
+      "title": "Bubble Fiction: Boom or Bust",
+      "year": 2007,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/bubble-fiction.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "bubble_economy_mission"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "cafe-funiculi-funicula",
+      "title": "Cafe Funiculi Funicula (Before the Coffee Gets Cold)",
+      "year": 2018,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/cafe-funiculi-funicula.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "cafe_chair_rules",
+        "coffee_timer",
+        "cannot_change_present"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "calla-1999",
+      "title": "Calla",
+      "year": 1999,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/calla-1999.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "second_chance_past",
+        "romance_rewrite",
+        "destiny_second_chance"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "camille-redouble",
+      "title": "Camille redouble",
+      "year": 2012,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/camille-redouble.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "teen_body_return",
+        "second_chance"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "click",
+      "title": "Click",
+      "year": 2006,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/click.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "universal_remote",
+        "life_fast_forward"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "cyborg-she",
+      "title": "Cyborg She",
+      "year": 2008,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/cyborg-she.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "future_cyborg_sent_back",
+        "overlapping_timelines"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "deadpool-2",
+      "title": "Deadpool 2",
+      "year": 2018,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/deadpool-2.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "cable_soldier"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "deadpool-and-wolverine",
+      "title": "Deadpool & Wolverine",
+      "year": 2024,
+      "medium": "film",
+      "primaryRuleSetId": "branch_bureaucracy_prune",
+      "mixinRuleSetIds": [
+        "multiverse_contact",
+        "branch_on_intervention",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/deadpool-and-wolverine.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "void",
+        "pruning"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "ditto-2000",
+      "title": "Ditto",
+      "year": 2000,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/ditto-2000.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "amateur_radio_link",
+        "campus_clock_tower"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "ditto-2022",
+      "title": "Ditto (2022)",
+      "year": 2022,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/ditto-2022.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "ham_radio_cross_era",
+        "1999_2022_link",
+        "cross_time_friendship"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "doctor-strange-multiverse-of-madness",
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "year": 2022,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "mutable_ripple",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/doctor-strange-multiverse-of-madness.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "dreamwalking",
+        "america_chavez_doors"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "doctor-strange",
+      "title": "Doctor Strange",
+      "year": 2016,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/doctor-strange.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_stone",
+        "eye_of_agamotto"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "duckweed",
+      "title": "Duckweed",
+      "year": 2017,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/duckweed.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "accident_triggered_leap",
+        "past_reunion",
+        "personal_history",
+        "reconciliation"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "enoshima-prism",
+      "title": "Enoshima Prism",
+      "year": 2013,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/enoshima-prism.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "classmate_returns_from_past",
+        "visitation_from_past",
+        "bittersweet_closed_feel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "faq-about-time-travel",
+      "title": "Frequently Asked Questions About Time Travel",
+      "year": 2009,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/faq-about-time-travel.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "future_editors",
+        "tropes_as_physics"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "flight-of-the-navigator",
+      "title": "Flight of the Navigator",
+      "year": 1986,
+      "medium": "film",
+      "primaryRuleSetId": "perception_nonlinear",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/flight-of-the-navigator.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "alien_craft",
+        "mind_map_transfer",
+        "deliberate_return_jump",
+        "one_way_skip",
+        "missing_years",
+        "optional_closed_return"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "freejack",
+      "title": "Freejack",
+      "year": 1992,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/freejack.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "body_snatch_from_past"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "future-cops",
+      "title": "Future Cops",
+      "year": 1993,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/future-cops.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "future_cops_to_past",
+        "street_fighter_pastiche",
+        "timeline_police_comedy"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "gi-samurai",
+      "title": "G.I. Samurai (Sengoku Jieitai)",
+      "year": 1979,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/gi-samurai.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "jdsf_platoon_to_sengoku",
+        "warlord_alliance"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "girl-who-leapt-through-time",
+      "title": "The Girl Who Leapt Through Time (2006)",
+      "year": 2006,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/girl-who-leapt-through-time.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_leaping",
+        "accidental_power"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "god-of-gamblers-iii",
+      "title": "God of Gamblers III: Back to Shanghai",
+      "year": 1991,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/god-of-gamblers-iii.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "accidental_1937_shanghai_dump",
+        "historical_fish_out_of_water",
+        "ancestor_meeting",
+        "return_to_1991"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "good-luck-have-fun-dont-die",
+      "title": "Good Luck, Have Fun, Don’t Die",
+      "year": 2025,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/good-luck-have-fun-dont-die.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "future_recruitment"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "happy-accidents",
+      "title": "Happy Accidents",
+      "year": 2000,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/happy-accidents.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "traveler_from_2470",
+        "claimed_murder_prevention",
+        "therapy_ambiguity"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "haunter",
+      "title": "Haunter",
+      "year": 2013,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/haunter.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "ghost_day",
+        "nested_victims"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "heavens-soldiers",
+      "title": "Heaven's Soldiers",
+      "year": 2005,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/heavens-soldiers.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "comet_time_rift",
+        "433_year_cycle"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "hi-mom",
+      "title": "Hi, Mom",
+      "year": 2021,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/hi-mom.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "1981_factory_town",
+        "emotional_rewrite_attempt"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "how-long-will-i-love-u",
+      "title": "How Long Will I Love U",
+      "year": 2018,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/how-long-will-i-love-u.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "apartment_spacetime_merge",
+        "1999_2018_overlap",
+        "parallel_cohabitation"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "idiocracy",
+      "title": "Idiocracy",
+      "year": 2006,
+      "medium": "film",
+      "primaryRuleSetId": "fixed_novikov",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/idiocracy.md",
+      "confidence": "medium",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "il-mare",
+      "title": "Il Mare",
+      "year": 2000,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop",
+        "bootstrap_ontological",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/il-mare.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "two_year_offset"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "in-the-shadow-of-the-moon",
+      "title": "In the Shadow of the Moon",
+      "year": 2019,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/in-the-shadow-of-the-moon.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "periodic_appearance"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "indiana-jones-dial-of-destiny",
+      "title": "Indiana Jones and the Dial of Destiny",
+      "year": 2023,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/indiana-jones-dial-of-destiny.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "antikythera_dial"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "indru-netru-naalai",
+      "title": "Indru Netru Naalai",
+      "year": 2015,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/indru-netru-naalai.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "comedy_abuse_of_travel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "its-a-wonderful-life",
+      "title": "It's a Wonderful Life",
+      "year": 1946,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/its-a-wonderful-life.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "angel_vision",
+        "unlived_life",
+        "moral_timeline"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "jango",
+      "title": "Jango",
+      "year": 2021,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/jango.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "neurosurgeon_trap",
+        "assassin_identification",
+        "wife_murder_prevention",
+        "information_retention"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "je-taime-je-taime",
+      "title": "Je t'aime, je t'aime",
+      "year": 1968,
+      "medium": "film",
+      "primaryRuleSetId": "perception_nonlinear",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/je-taime-je-taime.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "experimental_time_capsule",
+        "mouse_protocol_failure",
+        "fragmented_replay"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "just-visiting",
+      "title": "Just Visiting",
+      "year": 2001,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/just-visiting.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "wizard_mishap"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "kate-and-leopold",
+      "title": "Kate & Leopold",
+      "year": 2001,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/kate-and-leopold.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "monday_window",
+        "elevator_occlusion",
+        "incest_cut_controversy"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "kung-fury",
+      "title": "Kung Fury",
+      "year": 2015,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/kung-fury.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "viking_nazi_chase",
+        "parody"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "la-belle-epoque",
+      "title": "La Belle Époque",
+      "year": 2019,
+      "medium": "film",
+      "primaryRuleSetId": "perception_nonlinear",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/la-belle-epoque.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "theatrical_historical_reenactment",
+        "memory_stage",
+        "simulated_time_travel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "last-night-in-soho",
+      "title": "Last Night in Soho",
+      "year": 2021,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/last-night-in-soho.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "dream_possession"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "les-visiteurs-2",
+      "title": "The Visitors II: The Corridors of Time",
+      "year": 1998,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/les-visiteurs-2.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "magic_potion",
+        "corridors_of_time",
+        "relic_keeps_corridors_open"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "les-visiteurs-3",
+      "title": "The Visitors: Bastille Day",
+      "year": 2016,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/les-visiteurs-3.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "time_potion_corridor",
+        "wrong_era_landing",
+        "descendant_comedy"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "les-visiteurs",
+      "title": "Les Visiteurs",
+      "year": 1993,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/les-visiteurs.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "magic_potion",
+        "enchanter_error",
+        "identity_swap_complication"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "maanaadu",
+      "title": "Maanaadu",
+      "year": 2021,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/maanaadu.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "death_reset_loop",
+        "political_assassination_day",
+        "shared_loop_antagonist"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "mark-antony",
+      "title": "Mark Antony",
+      "year": 2023,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/mark-antony.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "telephone_to_past",
+        "one_call_per_date",
+        "identity_swap_present"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "meet-cute",
+      "title": "Meet Cute",
+      "year": 2022,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/meet-cute.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "nail_salon",
+        "relationship_loop"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "meet-the-robinsons",
+      "title": "Meet the Robinsons",
+      "year": 2007,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/meet-the-robinsons.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "bowler_hat_guy",
+        "memory_scanner",
+        "keep_moving_forward",
+        "dystopia_vs_utopia"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "men-in-black-3",
+      "title": "Men in Black 3",
+      "year": 2012,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/men-in-black-3.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_jump_device",
+        "1969"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "midnight-in-paris",
+      "title": "Midnight in Paris",
+      "year": 2011,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/midnight-in-paris.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "nostalgia_epochs",
+        "time_tourism",
+        "golden_age_fallacy",
+        "nested_nostalgia",
+        "no_paradox_whimsy"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "millennium-1989",
+      "title": "Millennium",
+      "year": 1989,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/millennium-1989.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "crash_snatch",
+        "replica_corpses",
+        "far_future_stasis",
+        "timequakes",
+        "force_infinity_paradox"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "minchagi-nee-baralu",
+      "title": "Minchagi Nee Baralu",
+      "year": 2015,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/minchagi-nee-baralu.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "mailbox_cross_time",
+        "house_by_the_sea",
+        "cross_time_letters",
+        "romance_closed_feel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "minutemen",
+      "title": "Minutemen",
+      "year": 2008,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/minutemen.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "school_invention",
+        "black_hole_risk"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "mirage-durante-la-tormenta",
+      "title": "Mirage (Durante la tormenta)",
+      "year": 2018,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/mirage-durante-la-tormenta.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "storm_tv_link",
+        "1989_2014_crossover"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "mirai",
+      "title": "Mirai",
+      "year": 2018,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/mirai.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "familial_past_future_visits",
+        "memory_tourism"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "miss-peregrine",
+      "title": "Miss Peregrine's Home for Peculiar Children",
+      "year": 2016,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/miss-peregrine.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "pocket_history"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "my-tomorrow-your-yesterday",
+      "title": "My Tomorrow, Your Yesterday",
+      "year": 2016,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/my-tomorrow-your-yesterday.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "reverse_aging_partner",
+        "five_year_meeting_windows",
+        "opposing_timelines",
+        "closed_emotional_loop"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "oke-oka-jeevitham",
+      "title": "Oke Oka Jeevitham",
+      "year": 2022,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/oke-oka-jeevitham.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "1998_rescue_mission",
+        "cannot_save_fixed_death",
+        "emotional_acceptance"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "omni-loop",
+      "title": "Omni Loop",
+      "year": 2024,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/omni-loop.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "black_hole_lab",
+        "scientific_escape"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "orange-2015",
+      "title": "Orange (live-action film)",
+      "year": 2015,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological",
+        "multiverse_contact"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/orange-2015.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "paprika",
+      "title": "Paprika",
+      "year": 2006,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/paprika.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "dc_mini_dreamshare",
+        "dream_detective_alterego",
+        "reality_dream_merge",
+        "interacting_parallel_minds",
+        "false_awakening"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "peggy-sue-got-married",
+      "title": "Peggy Sue Got Married",
+      "year": 1986,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/peggy-sue-got-married.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "unexplained_faint",
+        "acceptance_ending"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "petite-maman",
+      "title": "Petite Maman",
+      "year": 2021,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/petite-maman.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "childhood_woods",
+        "parallel_coexistence"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "peut-etre",
+      "title": "Peut-être",
+      "year": 1999,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/peut-etre.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "new_years_party",
+        "destiny_persuasion"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "place-promised-early-days",
+      "title": "The Place Promised in Our Early Days",
+      "year": 2004,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/place-promised-early-days.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "union_tower_matter_swap",
+        "parallel_universe_projection",
+        "dream_coma_link",
+        "interacting_parallel_universes",
+        "memory_of_dreams_erased"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "planet-of-the-apes-1968",
+      "title": "Planet of the Apes",
+      "year": 1968,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/planet-of-the-apes-1968.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "cryosleep_relativistic_voyage",
+        "crash_on_future_earth",
+        "twist_future",
+        "one_way_revelation",
+        "sequel_reverse_travel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "premonition",
+      "title": "Premonition",
+      "year": 2007,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/premonition.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "non_linear_days"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "quantumania",
+      "title": "Ant-Man and the Wasp: Quantumania",
+      "year": 2023,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "branch_on_intervention",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/quantumania.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "quantum_realm",
+        "kang"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "repeaters",
+      "title": "Repeaters",
+      "year": 2010,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/repeaters.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "rehab_day_reset",
+        "moral_decay"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "reset-2017",
+      "title": "Reset",
+      "year": 2017,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/reset-2017.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "particle_accelerator",
+        "doppelganger_conflict",
+        "cell_decay"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "retroactive",
+      "title": "Retroactive",
+      "year": 1997,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/retroactive.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "short_rewind_windows",
+        "worsening_rewrites",
+        "escalation_loop"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "returner",
+      "title": "Returner",
+      "year": 2002,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/returner.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "second_pass_armor_plate"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "river-2023",
+      "title": "River",
+      "year": 2023,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/river-2023.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "two_minute_loop",
+        "ryokan_reset",
+        "cooperative_escape"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "safety-not-guaranteed",
+      "title": "Safety Not Guaranteed",
+      "year": 2012,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/safety-not-guaranteed.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "classified_ad_machine",
+        "boat_rig",
+        "ambiguous_real_travel",
+        "emotional_mission_shift"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "sagrada-reset",
+      "title": "Sagrada Reset",
+      "year": 2017,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/sagrada-reset.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "town_reset_ability",
+        "photographic_memory_anchor",
+        "bureau_witch",
+        "information_persistence",
+        "ability_ecology"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "samurai-commando-mission-1549",
+      "title": "Samurai Commando: Mission 1549",
+      "year": 2005,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/samurai-commando-mission-1549.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "emp_shield_experiment",
+        "reverse_recovery_jump",
+        "past_alteration_destroys_present",
+        "historical_identity_theft"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "secret-2007",
+      "title": "Secret",
+      "year": 2007,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/secret-2007.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "secret_score_on_antique_piano",
+        "tempo_direction",
+        "limited_visibility_rule",
+        "closed_rescue"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "see-you-yesterday",
+      "title": "See You Yesterday",
+      "year": 2019,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/see-you-yesterday.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "backpack_rigs",
+        "tragedy_resistance"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "sexmission",
+      "title": "Sexmission",
+      "year": 1984,
+      "medium": "film",
+      "primaryRuleSetId": "fixed_novikov",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/sexmission.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "post_nuclear_matriarchy",
+        "satirical_false_apocalypse"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "slaughterhouse-five",
+      "title": "Slaughterhouse-Five",
+      "year": 1972,
+      "medium": "film",
+      "primaryRuleSetId": "perception_nonlinear",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/slaughterhouse-five.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "tralfamadorian_abduction",
+        "all_moments_eternal",
+        "trauma_as_tt"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "someday-or-one-day-film",
+      "title": "Someday or One Day (film)",
+      "year": 2022,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/someday-or-one-day-film.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "1998_2019_link",
+        "identity_swap_across_years"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "somewhere-in-time",
+      "title": "Somewhere in Time",
+      "year": 1980,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/somewhere-in-time.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "self_hypnosis",
+        "costume_immersion",
+        "hotel_room_focus",
+        "object_paradox_watch"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "sound-of-thunder",
+      "title": "A Sound of Thunder",
+      "year": 2005,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/sound-of-thunder.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "safari_to_cretaceous"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "spider-man-across-the-spider-verse",
+      "title": "Spider-Man: Across the Spider-Verse",
+      "year": 2023,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "branch_on_intervention",
+        "mutable_ripple",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/spider-man-across-the-spider-verse.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "canon_events",
+        "go_home_machine"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "spider-man-no-way-home",
+      "title": "Spider-Man: No Way Home",
+      "year": 2021,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "mutable_ripple",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/spider-man-no-way-home.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "spell_gone_wrong",
+        "memory_rewrite"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "star-trek-2009",
+      "title": "Star Trek (2009)",
+      "year": 2009,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/star-trek-2009.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "red_matter",
+        "black_hole",
+        "kelvin_timeline"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "star-trek-first-contact",
+      "title": "Star Trek: First Contact",
+      "year": 1996,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple",
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/star-trek-first-contact.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "borg_sphere_temporal_vortex",
+        "warp_history_assassination",
+        "enterprise_pursuit"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "star-trek-iv",
+      "title": "Star Trek IV: The Voyage Home",
+      "year": 1986,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/star-trek-iv.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "slingshot_around_sun",
+        "whale_probe",
+        "cloaked_klingon_bird_of_prey",
+        "time_tourism_comedy"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "suddenly-seventeen",
+      "title": "Suddenly Seventeen",
+      "year": 2016,
+      "medium": "film",
+      "primaryRuleSetId": "perception_nonlinear",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/suddenly-seventeen.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "magic_chocolate_age_swap",
+        "five_hour_persona_toggle",
+        "body_shared_timeline"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "summer-time-machine-blues",
+      "title": "Summer Time Machine Blues",
+      "year": 2005,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/summer-time-machine-blues.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "summer-wars",
+      "title": "Summer Wars",
+      "year": 2009,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/summer-wars.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "virtual_world_oz",
+        "ai_love_machine",
+        "interacting_digital_reality"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "suzume",
+      "title": "Suzume",
+      "year": 2022,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/suzume.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "door_sealing",
+        "ever_after",
+        "keystones",
+        "earthquake_worm",
+        "interacting_afterlife_realm"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "synchronic",
+      "title": "Synchronic",
+      "year": 2019,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/synchronic.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "designer_drug",
+        "single_body_slip"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "synchronicity",
+      "title": "Synchronicity",
+      "year": 2015,
+      "medium": "film",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/synchronicity.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "radioactive_mrd",
+        "parallel_week_offset",
+        "decaying_double",
+        "ownership_conspiracy"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-100th-love-with-you",
+      "title": "The 100th Love with You",
+      "year": 2017,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/the-100th-love-with-you.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "record_of_life",
+        "groove_rewind"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-adam-project",
+      "title": "The Adam Project",
+      "year": 2022,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop",
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/the-adam-project.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_jet",
+        "chrono_tech",
+        "inverted_recovery"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-call-2020",
+      "title": "The Call",
+      "year": 2020,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/the-call-2020.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "cordless_phone_time_link",
+        "antagonistic_time_duel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-final-countdown",
+      "title": "The Final Countdown",
+      "year": 1980,
+      "medium": "film",
+      "primaryRuleSetId": "fixed_novikov",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/the-final-countdown.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "history_nonintervention"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-five-devils",
+      "title": "The Five Devils",
+      "year": 2022,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/the-five-devils.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "magical_realism_memory",
+        "past_revelation",
+        "queer_family_secret"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-flash-2023",
+      "title": "The Flash",
+      "year": 2023,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "multiverse_contact",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/films/the-flash-2023.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "chronobowl"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-infinite-man",
+      "title": "The Infinite Man",
+      "year": 2014,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/the-infinite-man.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "inventor_loop",
+        "nested_rewrites"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-jacket",
+      "title": "The Jacket",
+      "year": 2005,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/the-jacket.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "drawer_experiment"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-lake-house",
+      "title": "The Lake House",
+      "year": 2006,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/the-lake-house.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "two_year_offset",
+        "warning_letter_rescue"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-map-of-tiny-perfect-things",
+      "title": "The Map of Tiny Perfect Things",
+      "year": 2021,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/the-map-of-tiny-perfect-things.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "unexplained_day_reset",
+        "shared_loop"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-myth",
+      "title": "The Myth",
+      "year": 2005,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/the-myth.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "reincarnation_dreams",
+        "immortal_mausoleum",
+        "meteorite_zero_g",
+        "reincarnation",
+        "immortal_stasis",
+        "borderline_fantasy"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-philadelphia-experiment",
+      "title": "The Philadelphia Experiment",
+      "year": 1984,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/the-philadelphia-experiment.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "radar_invisibility_experiment",
+        "cascading_rift",
+        "government_coverup"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-phone-2015",
+      "title": "The Phone",
+      "year": 2015,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/the-phone-2015.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "phone_call_to_past",
+        "surveillance_swap"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-time-machine-2002",
+      "title": "The Time Machine (2002)",
+      "year": 2002,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/the-time-machine-2002.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "victorian_invention",
+        "inability_to_change_personal_past",
+        "far_future"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-time-travelers-wife",
+      "title": "The Time Traveler's Wife",
+      "year": 2009,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/the-time-travelers-wife.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-tomorrow-war",
+      "title": "The Tomorrow War",
+      "year": 2021,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "branch_on_intervention",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/the-tomorrow-war.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "draft_to_future"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "thermae-romae-2012",
+      "title": "Thermae Romae (live-action film)",
+      "year": 2012,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/thermae-romae-2012.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "rome_japan_slip"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "thermae-romae-ii",
+      "title": "Thermae Romae II",
+      "year": 2014,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/thermae-romae-ii.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "rome_japan_slip"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "thirteen-going-on-thirty",
+      "title": "13 Going on 30",
+      "year": 2004,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/thirteen-going-on-thirty.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "birthday_wish"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-after-time",
+      "title": "Time After Time",
+      "year": 1979,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/time-after-time.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "non_return_key",
+        "vaporizing_equalizer",
+        "pursuit_across_eras",
+        "romance_closed_exit"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-bandits",
+      "title": "Time Bandits",
+      "year": 1981,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/time-bandits.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "map_of_creation_holes",
+        "dwarf_thieves",
+        "supreme_being",
+        "creation_defect"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-freak",
+      "title": "Time Freak",
+      "year": 2018,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/time-freak.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "garage_invention",
+        "relationship_debug"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-lapse",
+      "title": "Time Lapse",
+      "year": 2014,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/time-lapse.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "future_camera"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-renegades",
+      "title": "Time Renegades",
+      "year": 2016,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/time-renegades.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "dream_link",
+        "near_death_bridge",
+        "cross_era_collaboration",
+        "serial_killer"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-trap",
+      "title": "Time Trap",
+      "year": 2017,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/time-trap.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "time_dilation",
+        "cave_gravity",
+        "nested_time_rates",
+        "rescue_loop"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "timecop",
+      "title": "Timecop",
+      "year": 1994,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "branch_on_intervention",
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/timecop.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "tec_enforcement",
+        "past_only_travel",
+        "same_matter_annihilation"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "timeline-2003",
+      "title": "Timeline",
+      "year": 2003,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/timeline-2003.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "quantum_fax",
+        "medieval_france"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "timerider",
+      "title": "Timerider: The Adventure of Lyle Swann",
+      "year": 1982,
+      "medium": "film",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/timerider.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_cannons"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "tokyo-revengers-2021",
+      "title": "Tokyo Revengers (live-action film)",
+      "year": 2021,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/tokyo-revengers-2021.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "handshake_time_leap",
+        "twelve_year_jump"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "tomorrow-scald-tea",
+      "title": "Tomorrow I'll Wake Up and Scald Myself with Tea",
+      "year": 1977,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "origin_plus_twins",
+      "archivePath": "reference-archive/films/tomorrow-scald-tea.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "commercial_time_rocket",
+        "twin_impersonation",
+        "historical_intervention_thwarted"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "trancers",
+      "title": "Trancers",
+      "year": 1985,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/trancers.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "drug_mind_send",
+        "ancestor_body"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "twelve-oh-one",
+      "title": "12:01",
+      "year": 1993,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/twelve-oh-one.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "scientific_accident"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "two-distant-strangers",
+      "title": "Two Distant Strangers",
+      "year": 2020,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/two-distant-strangers.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "police_shooting_reset",
+        "social_allegory"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "voices-of-a-distant-star",
+      "title": "Voices of a Distant Star",
+      "year": 2002,
+      "medium": "film",
+      "primaryRuleSetId": "perception_nonlinear",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/voices-of-a-distant-star.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "light_lag_texts",
+        "one_way_subjective_time"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "warlock",
+      "title": "Warlock",
+      "year": 1989,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/warlock.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "witchcraft",
+        "chase_across_centuries"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "we-are-from-the-future-2",
+      "title": "We Are from the Future 2",
+      "year": 2010,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/we-are-from-the-future-2.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "wwii_ukraine_front",
+        "war_education"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "we-are-from-the-future",
+      "title": "We Are from the Future",
+      "year": 2008,
+      "medium": "film",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/we-are-from-the-future.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "modern_youth_to_wwii"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "when-we-first-met",
+      "title": "When We First Met",
+      "year": 2018,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/films/when-we-first-met.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "photo_booth"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "who-2018",
+      "title": "Who (2018)",
+      "year": 2018,
+      "medium": "film",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/films/who-2018.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "identity_loop_thriller",
+        "recursive_who_dunnit_time",
+        "identity_uncertainty"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "will-you-be-there",
+      "title": "Will You Be There?",
+      "year": 2016,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/will-you-be-there.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "ten_pills",
+        "thirty_year_jumps",
+        "meet_past_self",
+        "attempt_to_save_lover"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "winds-of-god",
+      "title": "The Winds of God",
+      "year": 1995,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/winds-of-god.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "present_comics_to_kamikaze_past",
+        "war_comedy_tragedy"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "yesterday-2019",
+      "title": "Yesterday",
+      "year": 2019,
+      "medium": "film",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/films/yesterday-2019.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "global_blackout"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "1899",
+      "title": "1899",
+      "year": 2022,
+      "medium": "tv",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/1899.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "simulation_ship",
+        "pyramid",
+        "nested_realities"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "365-repeat-the-year",
+      "title": "365: Repeat the Year",
+      "year": 2020,
+      "medium": "tv",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/365-repeat-the-year.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "a-step-into-the-past",
+      "title": "A Step into the Past",
+      "year": 2001,
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/a-step-into-the-past.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "history_purge"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "a-time-called-you",
+      "title": "A Time Called You",
+      "year": 2023,
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/a-time-called-you.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "identity_possession",
+        "lookalike_romance"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "agents-of-shield-time-arcs",
+      "title": "Agents of S.H.I.E.L.D. (time arcs)",
+      "year": "2013-2020",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "branch_on_intervention",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/agents-of-shield-time-arcs.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "monoliths",
+        "chronicoms",
+        "framework"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "ahsoka-wbw",
+      "title": "Ahsoka (World Between Worlds threads)",
+      "year": 2023,
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/ahsoka-wbw.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "pathway_to_peridea"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "alice-kr",
+      "title": "Alice (South Korea)",
+      "year": 2020,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/alice-kr.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "agency_time_travel",
+        "book_of_prophecy",
+        "causal_loops",
+        "parallel_lookalikes",
+        "mother_son"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "archive-81",
+      "title": "Archive 81",
+      "year": 2022,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/archive-81.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "videotape_ritual",
+        "analog_horror_time",
+        "sacrifice_broadcast"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "ashes-to-ashes",
+      "title": "Ashes to Ashes",
+      "year": "2008-2010",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/ashes-to-ashes.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "limbo_police_afterlife",
+        "psychological_tethers",
+        "purgatory_reveal",
+        "overlapping_era_loops",
+        "psychopomp_hunt"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "babylon-5-temporal",
+      "title": "Babylon 5 (temporal arcs)",
+      "year": "1993-1998",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/babylon-5-temporal.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "great_machine_epsilon3",
+        "tachyon_beams",
+        "valen_identity"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "beforeigners",
+      "title": "Beforeigners",
+      "year": "2019-",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/beforeigners.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_migrants",
+        "chronopathy",
+        "migration_metaphor"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "being-erica",
+      "title": "Being Erica",
+      "year": "2009-2011",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/being-erica.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "therapy_sessions",
+        "dr_tom"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "black-mirror-bandersnatch",
+      "title": "Black Mirror: Bandersnatch",
+      "year": 2018,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/black-mirror-bandersnatch.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "pac_demon",
+        "meta_loop"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "buddy-complex",
+      "title": "Buddy Complex",
+      "year": 2014,
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/buddy-complex.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "coupling_system"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "crime-traveller",
+      "title": "Crime Traveller",
+      "year": 1997,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/crime-traveller.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "limited_rewind_to_crime_scene"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "day-break",
+      "title": "Day Break",
+      "year": 2006,
+      "medium": "tv",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/day-break.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "framed_cop_day"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "devs",
+      "title": "Devs",
+      "year": 2020,
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "fixed_novikov"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/devs.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "deterministic_universe_simulation",
+        "quantum_computer"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "dirk-gently",
+      "title": "Dirk Gently's Holistic Detective Agency (TV)",
+      "year": "2016-2017",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "multiverse_contact"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/dirk-gently.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "holistic_interconnectedness",
+        "time_travel_arcs",
+        "everything_is_connected"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "doctor-who-time-arcs",
+      "title": "Doctor Who (selected time-travel arcs)",
+      "year": "1963-",
+      "medium": "tv",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "branch_on_intervention",
+        "multiverse_contact",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/doctor-who-time-arcs.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "tardis",
+        "time_vortex",
+        "fixed_points",
+        "timey_wimey"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "doraemon-time-machine",
+      "title": "Doraemon — Time Machine & notable TT movie arcs",
+      "year": "1979-",
+      "medium": "tv",
+      "primaryRuleSetId": "fixed_novikov",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/doraemon-time-machine.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "anywhere_door",
+        "time_cloth",
+        "historical_movie_arcs",
+        "timeline_patching"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "ds9-temporal",
+      "title": "Star Trek: Deep Space Nine (temporal arcs)",
+      "year": "1993-1999",
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "branch_on_intervention",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/ds9-temporal.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "orb",
+        "chroniton",
+        "mirror_universe"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "early-edition",
+      "title": "Early Edition",
+      "year": "1996-2000",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/early-edition.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "tomorrow_newspaper",
+        "mysterious_cat_delivery",
+        "occasional_era_wake",
+        "destiny_ethics",
+        "gift_inheritance"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "el-ministerio-del-tiempo",
+      "title": "El ministerio del tiempo",
+      "year": "2015-2020",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/el-ministerio-del-tiempo.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "doors_of_time",
+        "ministry_patrols",
+        "historical_repair"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "faith-the-great-doctor",
+      "title": "Faith (The Great Doctor)",
+      "year": 2012,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/faith-the-great-doctor.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "goryeo_modern_kidnap_slip",
+        "one_way_risk",
+        "heaven_doctor_macguffin"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "futurama-time-eps",
+      "title": "Futurama (time-travel episodes)",
+      "year": "1999-",
+      "medium": "tv",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/futurama-time-eps.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "forward_universe_button",
+        "paradox_free_tattoo_code",
+        "doom_field",
+        "doomed_duplicate",
+        "causality_violation_explosion"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "go-back-couple",
+      "title": "Go Back Couple",
+      "year": 2017,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/go-back-couple.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "university_age_reset",
+        "relationship_rewrite"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "goodnight-sweetheart",
+      "title": "Goodnight Sweetheart",
+      "year": "1993-1999",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/goodnight-sweetheart.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "later_edwardian_extension",
+        "double_life",
+        "historical_interference_comedy"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "haruhi-endless-eight",
+      "title": "The Melancholy of Haruhi Suzumiya — Endless Eight",
+      "year": 2009,
+      "medium": "tv",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/haruhi-endless-eight.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "memory_leak_deja_vu",
+        "~15532_iterations"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "heroes",
+      "title": "Heroes",
+      "year": "2006-2010",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/heroes.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "hiro_stop_time",
+        "future_messages"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "higurashi",
+      "title": "Higurashi When They Cry",
+      "year": "2006-",
+      "medium": "tv",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/higurashi.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "fragment_loops",
+        "june_1983_reset",
+        "hanyuu_aid",
+        "memory_carryover"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "his-dark-materials",
+      "title": "His Dark Materials",
+      "year": "2019-2022",
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/his-dark-materials.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "windows"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "inuyasha",
+      "title": "Inuyasha",
+      "year": "2000-2010",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/inuyasha.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "bone_eaters_well",
+        "reincarnation_cross_era",
+        "jewel_shard_quest",
+        "well_seal_return"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "journeyman",
+      "title": "Journeyman",
+      "year": 2007,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/journeyman.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "unexplained_jumps"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "kairos",
+      "title": "Kairos",
+      "year": 2020,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop",
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/kairos.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "phone_across_one_month_offset",
+        "time_crossing_calls"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "kindred-tv",
+      "title": "Kindred",
+      "year": 2022,
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/kindred-tv.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "involuntary_pull",
+        "ancestry_trap"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "legends-of-tomorrow",
+      "title": "DC's Legends of Tomorrow",
+      "year": "2016-2022",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/legends-of-tomorrow.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "timeship_waverider",
+        "temporal_aberrations",
+        "loom_of_fate",
+        "fixed_points_soft",
+        "time_bureau",
+        "anachronism_of_week"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "life-on-mars-kr",
+      "title": "Life on Mars (South Korea)",
+      "year": 2018,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/life-on-mars-kr.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "1988_police_station"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "life-on-mars",
+      "title": "Life on Mars (UK)",
+      "year": "2006-2007",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/life-on-mars.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "coma_or_purgatory_ambiguity",
+        "radio_messages",
+        "maybe_dead"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "link-click",
+      "title": "Link Click",
+      "year": "2021–",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/link-click.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "photo_dive",
+        "twelve_hour_possession",
+        "change_vs_preserve"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "live-up-to-your-name",
+      "title": "Live Up to Your Name",
+      "year": 2017,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/live-up-to-your-name.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "joseon_doctor_to_seoul",
+        "bidirectional_era_link",
+        "medical_fish_out_of_water",
+        "cross_time_romance",
+        "dual_identity_echoes"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "lost-time-arcs",
+      "title": "Lost (time-travel arcs)",
+      "year": "2004-2010",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/lost-time-arcs.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "wheel_of_the_island",
+        "orchid_station",
+        "consciousness_flashes",
+        "jughead",
+        "whatever_happened_happened"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "love-weaves-through-a-millennium",
+      "title": "Love Weaves Through a Millennium",
+      "year": 2015,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/love-weaves-through-a-millennium.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "western_han_to_2015",
+        "duty_vs_love_return"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "lovely-runner",
+      "title": "Lovely Runner",
+      "year": 2024,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/lovely-runner.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "fifteen_year_jump",
+        "freeze_on_spoilers"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "man-in-the-high-castle",
+      "title": "The Man in the High Castle",
+      "year": "2015-2019",
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/man-in-the-high-castle.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "films_from_alt_worlds",
+        "traveler",
+        "reality_films"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "manifest",
+      "title": "Manifest",
+      "year": "2018-2023",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/manifest.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "flight_828",
+        "callings"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "melting-me-softly",
+      "title": "Melting Me Softly",
+      "year": 2019,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/melting-me-softly.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "cryogenic_20_year_skip",
+        "thaw_into_changed_present",
+        "one_way_future_skip"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "midnight-pera-palace",
+      "title": "Midnight at the Pera Palace",
+      "year": "2022-2024",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/midnight-pera-palace.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "1919_istanbul"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "mr-queen",
+      "title": "Mr. Queen",
+      "year": "2020-2021",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "perception_nonlinear"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/mr-queen.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "lake_return_attempts"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "nine-nine-time-travels",
+      "title": "Nine: Nine Time Travels",
+      "year": 2013,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/nine-nine-time-travels.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "nine_incense_sticks",
+        "twenty_year_jumps",
+        "limited_travels",
+        "open_ending"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "nobunaga-concerto",
+      "title": "Nobunaga Concerto",
+      "year": 2014,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/nobunaga-concerto.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "textbook_guided_impersonation",
+        "identity_swap",
+        "multiple_travelers"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "occult-academy",
+      "title": "Occult Academy",
+      "year": 2010,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/occult-academy.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_agent_from_2012",
+        "nostradamus_key",
+        "1999_intervention",
+        "alien_invasion_prevent"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "oda-nobuna-no-yabou",
+      "title": "The Ambition of Oda Nobuna",
+      "year": 2012,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/oda-nobuna-no-yabou.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "unexplained_isekai_to_sengoku",
+        "genderflip_history",
+        "destiny_of_nobunaga_path"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "orange",
+      "title": "Orange",
+      "year": 2016,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological",
+        "multiverse_contact",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/orange.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "ten_year_advice"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "outer-range",
+      "title": "Outer Range",
+      "year": "2022-2024",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/outer-range.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "western_void_hole"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "paper-girls",
+      "title": "Paper Girls",
+      "year": 2022,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/paper-girls.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "faction_war"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "puella-magi-madoka-magica",
+      "title": "Puella Magi Madoka Magica",
+      "year": 2011,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "worldline_attractor",
+        "temporal_loop_exit"
+      ],
+      "topologyPatternId": "worldline_bundle",
+      "archivePath": "reference-archive/tv/puella-magi-madoka-magica.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "magical_girl_contract",
+        "law_of_cycles",
+        "repeated_month_loops"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "queen-in-hyuns-man",
+      "title": "Queen In-hyun's Man (Queen and I)",
+      "year": 2012,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/queen-in-hyuns-man.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "joseon_scholar_to_2012",
+        "drama_within_drama_echo"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "rebels-world-between-worlds",
+      "title": "Star Wars Rebels (World Between Worlds)",
+      "year": "2014-2018",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "multiverse_contact"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/rebels-world-between-worlds.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "reborn-rich",
+      "title": "Reborn Rich",
+      "year": 2022,
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/reborn-rich.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "rebirth_into_past",
+        "chaebol_grandson_body",
+        "revenge_rewrite"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "remake-our-life",
+      "title": "Remake Our Life!",
+      "year": 2021,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/remake-our-life.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "ten_year_leap_back",
+        "career_reset",
+        "mentor_timekeeper"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "rooftop-prince",
+      "title": "Rooftop Prince",
+      "year": 2012,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/rooftop-prince.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "joseon_to_2012",
+        "reincarnation_doubles",
+        "historical_murder_echo"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "sapphire-and-steel",
+      "title": "Sapphire & Steel",
+      "year": "1979-1982",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/sapphire-and-steel.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "elemental_operators",
+        "time_corridor_breaches",
+        "antique_triggers",
+        "malignant_time",
+        "containment_trap"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "sarah-connor-chronicles",
+      "title": "Terminator: The Sarah Connor Chronicles",
+      "year": "2008-2009",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/sarah-connor-chronicles.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "terminator_protectors",
+        "liquid_metal_and_others",
+        "judgment_day_delay"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "scarlet-heart",
+      "title": "Scarlet Heart (Palace / Bu Bu Jing Xin)",
+      "year": 2011,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/scarlet-heart.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "modern_woman_to_qing",
+        "romance_vs_history",
+        "princes_succession_trap",
+        "return_cost"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "seven-days",
+      "title": "Seven Days",
+      "year": "1998-2001",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/seven-days.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "chronosphere",
+        "element_115",
+        "seven_day_backstep_limit",
+        "malfunction_anthology"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "signal",
+      "title": "Signal",
+      "year": 2016,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/signal.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "walkie_talkie_time_link"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "sisyphus-the-myth",
+      "title": "Sisyphus: The Myth",
+      "year": 2021,
+      "medium": "tv",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/sisyphus-the-myth.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "future_warrior_to_present",
+        "nuclear_war_prevention"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "sliders",
+      "title": "Sliders",
+      "year": "1995-2000",
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/sliders.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "timer",
+        "vortex"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "someday-or-one-day",
+      "title": "Someday or One Day",
+      "year": "2019-2020",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/someday-or-one-day.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "1998_2019_crossover"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "splash-splash-love",
+      "title": "Splash Splash Love",
+      "year": 2015,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/splash-splash-love.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "csat_flee_to_joseon",
+        "science_anachronism_comedy",
+        "bittersweet_return"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "stargate-sg1-temporal",
+      "title": "Stargate SG-1 (temporal episodes)",
+      "year": "1997-2007",
+      "medium": "tv",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [
+        "branch_on_intervention",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/stargate-sg1-temporal.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "solar_flare_gate_anomaly",
+        "aschen_warning_note",
+        "baal_timeline_wipe",
+        "continuum_erase"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "stranger-things",
+      "title": "Stranger Things",
+      "year": "2016-",
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/stranger-things.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "upside_down",
+        "gates"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "summertime-rendering",
+      "title": "Summertime Rendering",
+      "year": 2022,
+      "medium": "tv",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/summertime-rendering.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "death_triggered_loop",
+        "shadow_doppelgangers",
+        "eye_mark",
+        "information_carryover"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "tatami-time-machine-blues",
+      "title": "The Tatami Time Machine Blues",
+      "year": 2022,
+      "medium": "tv",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/tatami-time-machine-blues.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "one_day_jumps",
+        "timeline_corruption"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "terra-nova",
+      "title": "Terra Nova",
+      "year": 2011,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/terra-nova.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "cretaceous_colony",
+        "one_way_colony",
+        "future_salvage"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-4400",
+      "title": "The 4400",
+      "year": "2004-2007",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/the-4400.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "future_abduction_return"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-flash-cw",
+      "title": "The Flash (CW)",
+      "year": "2014-2023",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/the-flash-cw.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "tachyon",
+        "chronal_wolf",
+        "run_into_past",
+        "time_remnants",
+        "fixed_points_soft"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-king-eternal-monarch",
+      "title": "The King: Eternal Monarch",
+      "year": 2020,
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/the-king-eternal-monarch.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "parallel_kingdoms",
+        "limited_time_travel",
+        "doppelganger_cast"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-lazarus-project",
+      "title": "The Lazarus Project",
+      "year": "2022-2023",
+      "medium": "tv",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [
+        "branch_on_intervention",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/the-lazarus-project.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "global_reset",
+        "lazarus_checkpoint"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-oa",
+      "title": "The OA",
+      "year": "2016-2019",
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/the-oa.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "near_death_dimensions",
+        "movements",
+        "dreamscape"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-peripheral",
+      "title": "The Peripheral",
+      "year": "2022-2023",
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/the-peripheral.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "haptic_peripheral",
+        "stub"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-shining-girls",
+      "title": "The Shining Girls",
+      "year": 2022,
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/the-shining-girls.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-time-tunnel",
+      "title": "The Time Tunnel",
+      "year": "1966-1967",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/the-time-tunnel.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "tic_toc_tunnel",
+        "massive_underground_complex",
+        "retrieval_attempts",
+        "cliffhanger_slides"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "thermae-romae",
+      "title": "Thermae Romae",
+      "year": 2012,
+      "medium": "tv",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/thermae-romae.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "rome_japan_slip"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "tidsrejsen",
+      "title": "Tidsrejsen",
+      "year": "2014-",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/tidsrejsen.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "agent_pursuit"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-trax",
+      "title": "Time Trax",
+      "year": "1993-1994",
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/tv/time-trax.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "fugitive_pursuit"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "timeless",
+      "title": "Timeless",
+      "year": "2016-2018",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple",
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/timeless.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_ship",
+        "lifeboat",
+        "motherhood_rift",
+        "rittenhouse"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "tokyo-revengers",
+      "title": "Tokyo Revengers",
+      "year": "2021-",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "mutable_ripple",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/tokyo-revengers.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "handshake_time_leap",
+        "twelve_year_jump"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "tomorrow-with-you",
+      "title": "Tomorrow With You",
+      "year": 2017,
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/tomorrow-with-you.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "subway_time_travel",
+        "foresight_of_own_death"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "torchwood",
+      "title": "Torchwood",
+      "year": "2006-2011",
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/torchwood.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_rift",
+        "cardiff_rift",
+        "immortal_jack"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "tunnel-kr",
+      "title": "Tunnel (South Korea)",
+      "year": 2017,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/tunnel-kr.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "1986_to_2016",
+        "identity_across_eras"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "twinkling-watermelon",
+      "title": "Twinkling Watermelon",
+      "year": 2023,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/twinkling-watermelon.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "1995_jump",
+        "dual_travelers",
+        "family_rewrite"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "undone",
+      "title": "Undone",
+      "year": "2019-2022",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop",
+        "perception_nonlinear"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/undone.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "rotoscope"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "vivy-fluorite-eyes-song",
+      "title": "Vivy: Fluorite Eye's Song",
+      "year": 2021,
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop",
+        "bootstrap_ontological"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/vivy-fluorite-eyes-song.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "future_ai_sent_back",
+        "singularity_point_edits",
+        "archive_rogue"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "voyagers",
+      "title": "Voyagers!",
+      "year": "1982-1983",
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/voyagers.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "omni_pocket_guide",
+        "green_red_history_light",
+        "educational_tourism"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "w-two-worlds",
+      "title": "W: Two Worlds",
+      "year": 2016,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/w-two-worlds.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "author_tablet_control",
+        "to_be_continued_gate",
+        "metafiction",
+        "character_agency_vs_author"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "wandavision",
+      "title": "WandaVision",
+      "year": 2021,
+      "medium": "tv",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/wandavision.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "hex",
+        "chaos_magic",
+        "grief_construct"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "watchmen-2019",
+      "title": "Watchmen (2019)",
+      "year": 2019,
+      "medium": "tv",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [
+        "mutable_ripple",
+        "perception_nonlinear"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/tv/watchmen-2019.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "teleport"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "westworld-loops",
+      "title": "Westworld (loops & timelines)",
+      "year": "2016-2022",
+      "medium": "tv",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [
+        "mutable_ripple",
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/westworld-loops.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "host_narratives",
+        "sublime"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "what-if",
+      "title": "What If...?",
+      "year": "2021-",
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "branch_bureaucracy_prune",
+        "branch_on_intervention",
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/tv/what-if.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "watcher"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "zipang",
+      "title": "Zipang",
+      "year": "2004-2005",
+      "medium": "tv",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "fixed_novikov",
+        "mutable_ripple"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/tv/zipang.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "modern_destroyer_to_1942"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "42-lehr",
+      "title": "42",
+      "year": 2005,
       "medium": "novel",
       "primaryRuleSetId": "mutable_ripple",
       "mixinRuleSetIds": [],
       "topologyPatternId": "mutable_single_with_ripples",
-      "archivePath": "time-travel-archive/novels/the-time-machine.md",
-      "confidence": "medium"
+      "archivePath": "reference-archive/novels/42-lehr.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "cern_time_stasis",
+        "temporal_bubble"
+      ],
+      "writtenThisRun": false
     },
     {
-      "id": "russian-doll",
-      "title": "Russian Doll",
-      "year": 2019,
-      "medium": "tv",
+      "id": "a-bridge-of-years",
+      "title": "A Bridge of Years",
+      "year": 1991,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/a-bridge-of-years.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "decades_link"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "a-connecticut-yankee-in-king-arthurs-court",
+      "title": "A Connecticut Yankee in King Arthur's Court",
+      "year": 1889,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/a-connecticut-yankee-in-king-arthurs-court.md",
+      "confidence": "medium",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "a-darker-shade-of-magic",
+      "title": "A Darker Shade of Magic",
+      "year": 2015,
+      "medium": "novel",
       "primaryRuleSetId": "multiverse_contact",
-      "mixinRuleSetIds": ["death_checkpoint_rewrite", "temporal_loop_exit"],
+      "mixinRuleSetIds": [],
       "topologyPatternId": "dual_parallel_pair",
-      "archivePath": "time-travel-archive/tv/russian-doll.md",
-      "confidence": "medium"
+      "archivePath": "reference-archive/novels/a-darker-shade-of-magic.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "antari_doors"
+      ],
+      "writtenThisRun": false
     },
     {
-      "id": "terminator",
-      "title": "The Terminator",
-      "year": 1984,
-      "medium": "film",
-      "primaryRuleSetId": "predestination_closed_loop",
-      "mixinRuleSetIds": ["bootstrap_ontological"],
-      "topologyPatternId": "single_fixed_timeline",
-      "archivePath": "time-travel-archive/films/terminator.md",
-      "confidence": "medium"
-    },
-    {
-      "id": "11-22-63",
-      "title": "11/22/63",
-      "year": 2011,
+      "id": "a-god-in-ruins",
+      "title": "A God in Ruins",
+      "year": 2015,
       "medium": "novel",
       "primaryRuleSetId": "branch_on_intervention",
       "mixinRuleSetIds": [],
       "topologyPatternId": "branching_tree",
-      "archivePath": "time-travel-archive/novels/11-22-63.md",
-      "confidence": "medium"
+      "archivePath": "reference-archive/novels/a-god-in-ruins.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "companion_life_review"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "a-sound-of-thunder",
+      "title": "A Sound of Thunder",
+      "year": 1952,
+      "medium": "short_story",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/a-sound-of-thunder.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "machine_safari"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "all-our-wrong-todays",
+      "title": "All Our Wrong Todays",
+      "year": 2017,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/all-our-wrong-todays.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "machine_to_utopia_past"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "all-you-need-is-kill",
+      "title": "All You Need Is Kill",
+      "year": 2004,
+      "medium": "novel",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/all-you-need-is-kill.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "mimic_death_signal",
+        "antenna_server_ecology"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "all-you-zombies",
+      "title": "'—All You Zombies—'",
+      "year": 1959,
+      "medium": "short_story",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/all-you-zombies.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "machine_temporal_bureau"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "anathem",
+      "title": "Anathem",
+      "year": 2008,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/anathem.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "parallel_cosmos_contact"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "before-we-say-goodbye",
+      "title": "Before We Say Goodbye",
+      "year": 2021,
+      "medium": "novel",
+      "primaryRuleSetId": "fixed_novikov",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/before-we-say-goodbye.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "cafe_seat_rules"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "before-your-memory-fades",
+      "title": "Before Your Memory Fades",
+      "year": 2018,
+      "medium": "novel",
+      "primaryRuleSetId": "fixed_novikov",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/before-your-memory-fades.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "cafe_seat_rules"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "behold-the-man",
+      "title": "Behold the Man",
+      "year": 1969,
+      "medium": "novel",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/behold-the-man.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "bid-time-return",
+      "title": "Bid Time Return",
+      "year": 1975,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/bid-time-return.md",
+      "confidence": "medium",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "blackout-all-clear",
+      "title": "Blackout / All Clear",
+      "year": 2010,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/blackout-all-clear.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "historians_become_history"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "briefe-in-die-chinesische-vergangenheit",
+      "title": "Briefe in die chinesische Vergangenheit",
+      "year": 1983,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/briefe-in-die-chinesische-vergangenheit.md",
+      "confidence": "medium",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "bring-the-jubilee",
+      "title": "Bring the Jubilee",
+      "year": 1953,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/bring-the-jubilee.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "by-his-bootstraps",
+      "title": "By His Bootstraps",
+      "year": 1941,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/by-his-bootstraps.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "caballo-de-troya",
+      "title": "Caballo de Troya",
+      "year": 1984,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/caballo-de-troya.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "machine_to_jesus_era",
+        "religious_thriller"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "chronopolis-ballard",
+      "title": "Chronopolis",
+      "year": 1960,
+      "medium": "short_story",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/chronopolis-ballard.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "forbidden_timekeeping",
+        "time_police_society"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "cloud-atlas",
+      "title": "Cloud Atlas",
+      "year": 2004,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/cloud-atlas.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "reincarnating_souls",
+        "nested_eras"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "cowl",
+      "title": "Cowl",
+      "year": 2004,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/cowl.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "biological_tor_time_travel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "das-jesus-video",
+      "title": "Das Jesus-Video (The Jesus Video)",
+      "year": 1998,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/das-jesus-video.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "camcorder_in_past"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "das-konigsprojekt",
+      "title": "Das Königsprojekt",
+      "year": 1973,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/das-konigsprojekt.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "vatican_time_ops"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "der-letzte-tag-der-schopfung",
+      "title": "Der letzte Tag der Schöpfung (The Last Day of Creation)",
+      "year": 1981,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/der-letzte-tag-der-schopfung.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "military_time_gate"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "die-rueckkehr-der-zeitmaschine",
+      "title": "Die Rückkehr der Zeitmaschine (The Return of the Time Machine)",
+      "year": 1946,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/die-rueckkehr-der-zeitmaschine.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "wells_machine_sequel",
+        "satirical_paradox"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "doomsday-book",
+      "title": "Doomsday Book",
+      "year": 1992,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/doomsday-book.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "slippage_prevention"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "echo-of-worlds",
+      "title": "Echo of Worlds",
+      "year": 2024,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/echo-of-worlds.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "el-anacronopete",
+      "title": "El Anacronópete",
+      "year": 1887,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/el-anacronopete.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "machine_anacronopete"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "el-mapa-del-caos",
+      "title": "El mapa del caos (The Map of Chaos)",
+      "year": 2014,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/el-mapa-del-caos.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "el-mapa-del-cielo",
+      "title": "El mapa del cielo (The Map of the Sky)",
+      "year": 2012,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/el-mapa-del-cielo.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "victorian_hoax_made_real",
+        "nested_hoax_real"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "el-mapa-del-tiempo",
+      "title": "El mapa del tiempo (The Map of Time)",
+      "year": 2008,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/el-mapa-del-tiempo.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "victorian_time_theater",
+        "nested_hoax_real"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "fire-watch",
+      "title": "Fire Watch",
+      "year": 1982,
+      "medium": "short_story",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/fire-watch.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "historians_in_blitz"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "flashforward",
+      "title": "Flashforward",
+      "year": 1999,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/flashforward.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "collider_consciousness_shift",
+        "foreseen_future"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "from-time-to-time",
+      "title": "From Time to Time",
+      "year": 1995,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/from-time-to-time.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "self_hypnosis"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "great-work-of-time",
+      "title": "Great Work of Time",
+      "year": 1989,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/great-work-of-time.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "empire_rewrite"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "hawksbill-station",
+      "title": "Hawksbill Station",
+      "year": 1968,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/hawksbill-station.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "one_way_exile"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "his-dark-materials-northern-lights",
+      "title": "Northern Lights / The Golden Compass (His Dark Materials #1)",
+      "year": 1995,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/his-dark-materials-northern-lights.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "how-to-live-safely-in-a-science-fictional-universe",
+      "title": "How to Live Safely in a Science Fictional Universe",
+      "year": 2010,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/how-to-live-safely-in-a-science-fictional-universe.md",
+      "confidence": "medium",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "hyperion-simmons",
+      "title": "Hyperion",
+      "year": 1989,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/hyperion-simmons.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "time_tombs_backward",
+        "reverse_aging_shrike"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "in-the-garden-of-iden",
+      "title": "In the Garden of Iden",
+      "year": 1997,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/in-the-garden-of-iden.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "company_immortals",
+        "organizational_time"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "in-universes",
+      "title": "In Universes",
+      "year": 2024,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [
+        "branch_on_intervention"
+      ],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/in-universes.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "infinity-gate",
+      "title": "Infinity Gate",
+      "year": 2023,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/infinity-gate.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "island-in-the-sea-of-time",
+      "title": "Island in the Sea of Time",
+      "year": 1998,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/island-in-the-sea-of-time.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "bronze_age_colony"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "just-one-damned-thing-after-another",
+      "title": "Just One Damned Thing After Another",
+      "year": 2013,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/just-one-damned-thing-after-another.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "st_marys_pod",
+        "historians_chaos"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "kindred",
+      "title": "Kindred",
+      "year": 1979,
+      "medium": "novel",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/kindred.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "involuntary_summons"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "last-year-wilson",
+      "title": "Last Year",
+      "year": 2016,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/last-year-wilson.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "parallel_contact"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "le-temps-incertain",
+      "title": "Le Temps incertain",
+      "year": 1973,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/le-temps-incertain.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "chronolysis",
+        "experimental_time"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "le-voyageur-imprudent",
+      "title": "Le Voyageur imprudent (Future Times Three)",
+      "year": 1944,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [
+        "bootstrap_ontological",
+        "fixed_novikov"
+      ],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/le-voyageur-imprudent.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_substance_scaphandre",
+        "noel_essaillon"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "les-fleurs-bleues",
+      "title": "Les Fleurs bleues (The Blue Flowers)",
+      "year": 1965,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/les-fleurs-bleues.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "dream_dual_time"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "lest-darkness-fall",
+      "title": "Lest Darkness Fall",
+      "year": 1939,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/lest-darkness-fall.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "life-after-life",
+      "title": "Life After Life",
+      "year": 2013,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/life-after-life.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "rebirth_on_death"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "lingao-qiming",
+      "title": "Illumine Lingao / 临高启明",
+      "year": 2009,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/lingao-qiming.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "lord-kalvan-of-otherwhen",
+      "title": "Lord Kalvan of Otherwhen",
+      "year": 1965,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/lord-kalvan-of-otherwhen.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "paratime_police"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "making-history",
+      "title": "Making History",
+      "year": 1997,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/making-history.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "temporal_intervention"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "millennium-varley",
+      "title": "Millennium",
+      "year": 1983,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/millennium-varley.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "future_snatch_teams"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "morlock-night",
+      "title": "Morlock Night",
+      "year": 1979,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/morlock-night.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "morlock_invasion",
+        "wells_sequel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "moscow-2042",
+      "title": "Moscow 2042",
+      "year": 1986,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/moscow-2042.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "literary_future_travel",
+        "satire"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "my-real-children",
+      "title": "My Real Children",
+      "year": 2014,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/my-real-children.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "memory_of_two_lives"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "nine-princes-in-amber",
+      "title": "Nine Princes in Amber",
+      "year": 1970,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/nine-princes-in-amber.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "shadow_walking"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "now-wait-for-last-year",
+      "title": "Now Wait for Last Year",
+      "year": 1966,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/now-wait-for-last-year.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "drug_jj-180"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "palimpsest-stross",
+      "title": "Palimpsest",
+      "year": 2009,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/palimpsest-stross.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "stasis_time_jump"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "pastwatch-the-redemption-of-christopher-columbus",
+      "title": "Pastwatch: The Redemption of Christopher Columbus",
+      "year": 1996,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/pastwatch-the-redemption-of-christopher-columbus.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "pastwatch_viewers_then_travel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "pebble-in-the-sky",
+      "title": "Pebble in the Sky",
+      "year": 1950,
+      "medium": "novel",
+      "primaryRuleSetId": "fixed_novikov",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/pebble-in-the-sky.md",
+      "confidence": "medium",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "piranesi",
+      "title": "Piranesi",
+      "year": 2020,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/piranesi.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "otherworld_house",
+        "parallel_contact"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "recursion",
+      "title": "Recursion",
+      "year": 2019,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/recursion.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "memory_chair_dead_memory"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "return-from-the-stars",
+      "title": "Return from the Stars (Powrót z gwiazd)",
+      "year": 1961,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/return-from-the-stars.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "relativistic_dilation",
+        "culture_shock_future"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "ripples-in-the-dirac-sea",
+      "title": "Ripples in the Dirac Sea",
+      "year": 1988,
+      "medium": "short_story",
+      "primaryRuleSetId": "death_checkpoint_rewrite",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/ripples-in-the-dirac-sea.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "dirac_sea_time_travel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "roadmarks",
+      "title": "Roadmarks",
+      "year": 1979,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/roadmarks.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "road_between_times"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "rubinrot",
+      "title": "Rubinrot (Ruby Red)",
+      "year": 2009,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/rubinrot.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "genetic_chronograph",
+        "controlled_jumps"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "sea-of-tranquility",
+      "title": "Sea of Tranquility",
+      "year": 2022,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/sea-of-tranquility.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_institute"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "slaughterhouse-five",
+      "title": "Slaughterhouse-Five",
+      "year": 1969,
+      "medium": "novel",
+      "primaryRuleSetId": "perception_nonlinear",
+      "mixinRuleSetIds": [
+        "fixed_novikov"
+      ],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/slaughterhouse-five.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "spin-wilson",
+      "title": "Spin",
+      "year": 2005,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/spin-wilson.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "time_dilation_envelope",
+        "one_way_fast_forward"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "story-of-your-life",
+      "title": "Story of Your Life",
+      "year": 1998,
+      "medium": "short_story",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/story-of-your-life.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "heptapod_language_block_time",
+        "fatalism_foreknowledge"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "tales-from-the-cafe",
+      "title": "Tales from the Cafe",
+      "year": 2017,
+      "medium": "novel",
+      "primaryRuleSetId": "fixed_novikov",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/tales-from-the-cafe.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "cafe_seat_rules"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-accidental-time-machine",
+      "title": "The Accidental Time Machine",
+      "year": 2007,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-accidental-time-machine.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "forward_only_device",
+        "one_way_jumps"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-amber-spyglass",
+      "title": "The Amber Spyglass",
+      "year": 2000,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-amber-spyglass.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "windows_and_dust"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-anomaly",
+      "title": "L'Anomalie (The Anomaly)",
+      "year": 2020,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-anomaly.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "duplicate_event",
+        "parallel_selves"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-anubis-gates",
+      "title": "The Anubis Gates",
+      "year": 1983,
+      "medium": "novel",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/the-anubis-gates.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "egyptian_magic_gates"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-bone-clocks",
+      "title": "The Bone Clocks",
+      "year": 2014,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-bone-clocks.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "atemporal_war",
+        "secret_immortals"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-book-of-doors",
+      "title": "The Book of Doors",
+      "year": 2024,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-book-of-doors.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "books_as_doors"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-chronoliths",
+      "title": "The Chronoliths",
+      "year": 2001,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/the-chronoliths.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "future_monuments"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-door-into-summer",
+      "title": "The Door into Summer",
+      "year": 1957,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/the-door-into-summer.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "cold_sleep_plus_machine"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-first-fifteen-lives-of-harry-august",
+      "title": "The First Fifteen Lives of Harry August",
+      "year": 2014,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-first-fifteen-lives-of-harry-august.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "kalachakra_rebirth",
+        "generational_message"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-future-of-another-timeline",
+      "title": "The Future of Another Timeline",
+      "year": 2019,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/the-future-of-another-timeline.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "geotemporal_machines"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-girl-who-leapt-through-time",
+      "title": "The Girl Who Leapt Through Time",
+      "year": 1967,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-girl-who-leapt-through-time.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "accidental_time_leap_drug",
+        "short_loop_adolescence"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-gone-world",
+      "title": "The Gone World",
+      "year": 2018,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/the-gone-world.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "naval_term_travel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-guns-of-the-south",
+      "title": "The Guns of the South",
+      "year": 1992,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/the-guns-of-the-south.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_imported_weapons"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-house-on-the-strand",
+      "title": "The House on the Strand",
+      "year": 1969,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-house-on-the-strand.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "drug"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-invisible-life-of-addie-larue",
+      "title": "The Invisible Life of Addie LaRue",
+      "year": 2020,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-invisible-life-of-addie-larue.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "faustian_curse",
+        "none_classical"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-lathe-of-heaven",
+      "title": "The Lathe of Heaven",
+      "year": 1971,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-lathe-of-heaven.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "effective_dreaming"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-light-of-other-days",
+      "title": "The Light of Other Days",
+      "year": 2000,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-light-of-other-days.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "wormcam",
+        "panopticon_past"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-long-earth",
+      "title": "The Long Earth",
+      "year": 2012,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-long-earth.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "stepper"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-man-in-the-high-castle",
+      "title": "The Man in the High Castle",
+      "year": 1962,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-man-in-the-high-castle.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-many-colored-land",
+      "title": "The Many-Colored Land",
+      "year": 1981,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-many-colored-land.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "one_way_pliocene_gate",
+        "exile_colony"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-melancholy-of-haruhi-suzumiya",
+      "title": "The Melancholy of Haruhi Suzumiya",
+      "year": 2003,
+      "medium": "novel",
+      "primaryRuleSetId": "temporal_loop_exit",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/the-melancholy-of-haruhi-suzumiya.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "godlike_reality_warping"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-men-who-murdered-mohammed",
+      "title": "The Men Who Murdered Mohammed",
+      "year": 1958,
+      "medium": "short_story",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-men-who-murdered-mohammed.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "subjective_timeline"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-merchant-and-the-alchemists-gate",
+      "title": "The Merchant and the Alchemist's Gate",
+      "year": 2007,
+      "medium": "short_story",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/the-merchant-and-the-alchemists-gate.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "gate_baghdad_cairo"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-midnight-library",
+      "title": "The Midnight Library",
+      "year": 2020,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-midnight-library.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "parallel_lives_sampling"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-ministry-of-time",
+      "title": "The Ministry of Time",
+      "year": 2024,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/the-ministry-of-time.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "government_expat_program"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-paradox-hotel",
+      "title": "The Paradox Hotel",
+      "year": 2022,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-paradox-hotel.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "hotel_for_travellers",
+        "murder_mystery"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-peripheral",
+      "title": "The Peripheral",
+      "year": 2014,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/the-peripheral.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "server_stub_future"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-psychology-of-time-travel",
+      "title": "The Psychology of Time Travel",
+      "year": 2018,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-psychology-of-time-travel.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "inventor_consortium",
+        "murder_across_time"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-rise-and-fall-of-dodo",
+      "title": "The Rise and Fall of D.O.D.O.",
+      "year": 2017,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/the-rise-and-fall-of-dodo.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "magic_diachronic_ops"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-shining-girls",
+      "title": "The Shining Girls",
+      "year": 2013,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/the-shining-girls.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "house_out_of_time"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-space-between-worlds",
+      "title": "The Space Between Worlds",
+      "year": 2020,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-space-between-worlds.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-subtle-knife",
+      "title": "The Subtle Knife",
+      "year": 1997,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-subtle-knife.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-tatami-galaxy",
+      "title": "The Tatami Galaxy (四畳半神話大系)",
+      "year": 2004,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-tatami-galaxy.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "parallel_campus_timelines"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-ten-thousand-doors-of-january",
+      "title": "The Ten Thousand Doors of January",
+      "year": 2019,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-ten-thousand-doors-of-january.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "doors_between_worlds"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-time-ships",
+      "title": "The Time Ships",
+      "year": 1995,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/the-time-ships.md",
+      "confidence": "medium",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-time-travelers-wife",
+      "title": "The Time Traveler's Wife",
+      "year": 2003,
+      "medium": "novel",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/the-time-travelers-wife.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "genetic_chrono_impairment"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "the-year-of-the-quiet-sun",
+      "title": "The Year of the Quiet Sun",
+      "year": 1970,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/the-year-of-the-quiet-sun.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "chrononaut_capsule",
+        "bleak_future"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "there-will-be-time",
+      "title": "There Will Be Time",
+      "year": 1972,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/there-will-be-time.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "genetic_time_mutation"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "this-is-how-you-lose-the-time-war",
+      "title": "This Is How You Lose the Time War",
+      "year": 2019,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/this-is-how-you-lose-the-time-war.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "agency_braid_ops"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "those-beyond-the-wall",
+      "title": "Those Beyond the Wall",
+      "year": 2024,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/those-beyond-the-wall.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "three-days-to-never",
+      "title": "Three Days to Never",
+      "year": 2006,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/three-days-to-never.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "occult_einstein_device",
+        "secret_history"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "thrice-upon-a-time",
+      "title": "Thrice Upon a Time",
+      "year": 1980,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/thrice-upon-a-time.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "tachyon_mail",
+        "message_causality"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-and-again",
+      "title": "Time and Again",
+      "year": 1970,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/time-and-again.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "self_hypnosis_immersive"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-enough-for-love",
+      "title": "Time Enough for Love",
+      "year": 1973,
+      "medium": "novel",
+      "primaryRuleSetId": "bootstrap_ontological",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "reference-archive/novels/time-enough-for-love.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "long_life_plus_time_travel"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "time-patrol-guardians-of-time",
+      "title": "Time Patrol / Guardians of Time",
+      "year": 1960,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/time-patrol-guardians-of-time.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "time_patrol_agency"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "timeline",
+      "title": "Timeline",
+      "year": 1999,
+      "medium": "novel",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "reference-archive/novels/timeline.md",
+      "confidence": "high",
+      "unmappedTags": [],
+      "writtenThisRun": false
+    },
+    {
+      "id": "timequake",
+      "title": "Timequake",
+      "year": 1997,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/timequake.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "universe_rerun",
+        "fatalism"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "timescape",
+      "title": "Timescape",
+      "year": 1980,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/timescape.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "tachyon_messages"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "to-say-nothing-of-the-dog",
+      "title": "To Say Nothing of the Dog",
+      "year": 1997,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/to-say-nothing-of-the-dog.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "slippage_comedy_of_errors"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "up-the-line",
+      "title": "Up the Line",
+      "year": 1969,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/up-the-line.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "time_courier",
+        "tourism_paradoxes"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "version-control",
+      "title": "Version Control",
+      "year": 2016,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/version-control.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "causality_violation_device"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "vintage-season",
+      "title": "Vintage Season",
+      "year": 1946,
+      "medium": "short_story",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "reference-archive/novels/vintage-season.md",
+      "confidence": "low",
+      "unmappedTags": [
+        "tourist_futures",
+        "spectator_disaster"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "woman-on-the-edge-of-time",
+      "title": "Woman on the Edge of Time",
+      "year": 1976,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/woman-on-the-edge-of-time.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "psychic_contact"
+      ],
+      "writtenThisRun": false
+    },
+    {
+      "id": "wrong-place-wrong-time",
+      "title": "Wrong Place Wrong Time",
+      "year": 2022,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [
+        "predestination_closed_loop"
+      ],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "reference-archive/novels/wrong-place-wrong-time.md",
+      "confidence": "medium",
+      "unmappedTags": [
+        "reverse_day_travel",
+        "sleep_triggered_regression",
+        "closed_timelike_curve"
+      ],
+      "writtenThisRun": false
     }
-  ],
-  "note": "Full import wrote counts.written stubs; repo keeps sample JSON files + this index. Re-run import locally for the full generated set."
+  ]
 }

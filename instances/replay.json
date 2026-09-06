@@ -7,7 +7,8 @@
     "sources": [
       "Ken Grimwood (1986)",
       "time-travel-archive/novels/replay.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -245,6 +246,81 @@
       "payload": {
         "note": "phenomenon continues for others"
       }
+    },
+    {
+      "id": "e_x_die",
+      "type": "death",
+      "label": "Jeff dies 43; wakes 18",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "inciting"
+      }
+    },
+    {
+      "id": "e_x_replay",
+      "type": "loop_reset",
+      "label": "Life replay with memory",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "rules"
+      },
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_x_wealth",
+      "type": "ordinary",
+      "label": "Different life strategies",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_pamela",
+      "type": "contact",
+      "label": "Meets other replayers",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_abuse",
+      "type": "ordinary",
+      "label": "Power abuse temptations",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_exit",
+      "type": "observation",
+      "label": "Replays end at death age",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "rules2"
+      }
+    },
+    {
+      "id": "e_x_choice",
+      "type": "intervention",
+      "label": "How to live a replay well",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "theme"
+      }
+    },
+    {
+      "id": "e_x_close",
+      "type": "ordinary",
+      "label": "Final acceptance",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "end"
+      }
     }
   ],
   "edges": [
@@ -342,6 +418,66 @@
       "from": "e_die_again",
       "to": "e_wake63",
       "label": "replay cycle"
+    },
+    {
+      "id": "nrep1",
+      "kind": "causal",
+      "from": "e_x_die",
+      "to": "e_x_replay"
+    },
+    {
+      "id": "nrep2",
+      "kind": "causal",
+      "from": "e_x_replay",
+      "to": "e_x_wealth"
+    },
+    {
+      "id": "nrep3",
+      "kind": "causal",
+      "from": "e_x_wealth",
+      "to": "e_x_pamela"
+    },
+    {
+      "id": "nrep4",
+      "kind": "causal",
+      "from": "e_x_pamela",
+      "to": "e_x_abuse"
+    },
+    {
+      "id": "nrep5",
+      "kind": "causal",
+      "from": "e_x_abuse",
+      "to": "e_x_exit"
+    },
+    {
+      "id": "nrep6",
+      "kind": "causal",
+      "from": "e_x_exit",
+      "to": "e_x_choice"
+    },
+    {
+      "id": "nrep7",
+      "kind": "causal",
+      "from": "e_x_choice",
+      "to": "e_x_close"
+    },
+    {
+      "id": "bridge_replay",
+      "kind": "causal",
+      "from": "e_epilogue",
+      "to": "e_x_die"
+    },
+    {
+      "id": "x_repl_1",
+      "kind": "causal",
+      "from": "e_x_die",
+      "to": "e_x_close"
+    },
+    {
+      "id": "x_repl_2",
+      "kind": "temporal",
+      "from": "e_x_replay",
+      "to": "e_x_wealth"
     }
   ],
   "interventions": [

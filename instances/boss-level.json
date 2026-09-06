@@ -7,7 +7,8 @@
     "sources": [
       "Joe Carnahan (2020)",
       "time-travel-archive/films/boss-level.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -261,6 +262,78 @@
       "payload": {
         "iteration": 141
       }
+    },
+    {
+      "id": "e_x_wake",
+      "type": "loop_reset",
+      "label": "Roy wakes to assassination day",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "loop"
+      }
+    },
+    {
+      "id": "e_x_wife",
+      "type": "ordinary",
+      "label": "Jemma / Guanite weapon plot",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_child",
+      "type": "ordinary",
+      "label": "Son stakes",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_skills",
+      "type": "intervention",
+      "label": "Attributes gains across deaths",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "growth"
+      }
+    },
+    {
+      "id": "e_x_final",
+      "type": "checkpoint",
+      "label": "Escape loop confrontation",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Death resets day",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "rules"
+      }
+    },
+    {
+      "id": "e_x_army",
+      "type": "ordinary",
+      "label": "Private army assaults",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_close",
+      "type": "ordinary",
+      "label": "Family aftermath",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "close"
+      }
     }
   ],
   "edges": [
@@ -348,6 +421,66 @@
       "from": "e_reset",
       "to": "e_wake",
       "label": "death loop"
+    },
+    {
+      "id": "nbos1",
+      "kind": "causal",
+      "from": "e_x_wake",
+      "to": "e_x_wife"
+    },
+    {
+      "id": "nbos2",
+      "kind": "causal",
+      "from": "e_x_wife",
+      "to": "e_x_child"
+    },
+    {
+      "id": "nbos3",
+      "kind": "causal",
+      "from": "e_x_child",
+      "to": "e_x_skills"
+    },
+    {
+      "id": "nbos4",
+      "kind": "causal",
+      "from": "e_x_skills",
+      "to": "e_x_final"
+    },
+    {
+      "id": "nbos5",
+      "kind": "causal",
+      "from": "e_x_final",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "nbos6",
+      "kind": "causal",
+      "from": "e_x_rules",
+      "to": "e_x_army"
+    },
+    {
+      "id": "nbos7",
+      "kind": "causal",
+      "from": "e_x_army",
+      "to": "e_x_close"
+    },
+    {
+      "id": "bridge_boss-lev",
+      "kind": "causal",
+      "from": "e_cake",
+      "to": "e_x_wake"
+    },
+    {
+      "id": "x_boss_1",
+      "kind": "causal",
+      "from": "e_x_wake",
+      "to": "e_x_close"
+    },
+    {
+      "id": "x_boss_2",
+      "kind": "temporal",
+      "from": "e_x_wife",
+      "to": "e_x_child"
     }
   ],
   "interventions": [

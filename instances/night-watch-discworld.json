@@ -7,7 +7,8 @@
     "sources": [
       "Terry Pratchett (2002)",
       "time-travel-archive/novels/night-watch-discworld.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -228,6 +229,78 @@
       "agents": [
         "vimes"
       ]
+    },
+    {
+      "id": "e_x_storm",
+      "type": "departure",
+      "label": "Vimes thrown back to past Watch days",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "inciting"
+      }
+    },
+    {
+      "id": "e_x_young",
+      "type": "ordinary",
+      "label": "Meets young Vetinari / young Vimes path",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_history",
+      "type": "intervention",
+      "label": "Must preserve Revolution history",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_keel",
+      "type": "ordinary",
+      "label": "Assumes John Keel identity",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_teach",
+      "type": "ordinary",
+      "label": "Trains young Vimes",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_close_loop",
+      "type": "bootstrap_origin",
+      "label": "Becomes the mentor he remembered",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "reveal"
+      }
+    },
+    {
+      "id": "e_x_return",
+      "type": "arrival",
+      "label": "Returns to present altered slightly",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "History has inertia; personal bootstrap",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "rules"
+      }
     }
   ],
   "edges": [
@@ -317,6 +390,66 @@
       "from": "w_present",
       "to": "w_past",
       "relation": "originatesFrom"
+    },
+    {
+      "id": "nnig1",
+      "kind": "causal",
+      "from": "e_x_storm",
+      "to": "e_x_young"
+    },
+    {
+      "id": "nnig2",
+      "kind": "causal",
+      "from": "e_x_young",
+      "to": "e_x_history"
+    },
+    {
+      "id": "nnig3",
+      "kind": "causal",
+      "from": "e_x_history",
+      "to": "e_x_keel"
+    },
+    {
+      "id": "nnig4",
+      "kind": "causal",
+      "from": "e_x_keel",
+      "to": "e_x_teach"
+    },
+    {
+      "id": "nnig5",
+      "kind": "causal",
+      "from": "e_x_teach",
+      "to": "e_x_close_loop"
+    },
+    {
+      "id": "nnig6",
+      "kind": "causal",
+      "from": "e_x_close_loop",
+      "to": "e_x_return"
+    },
+    {
+      "id": "nnig7",
+      "kind": "causal",
+      "from": "e_x_return",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "bridge_night-wa",
+      "kind": "causal",
+      "from": "e_son",
+      "to": "e_x_storm"
+    },
+    {
+      "id": "x_nigh_1",
+      "kind": "causal",
+      "from": "e_x_storm",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "x_nigh_2",
+      "kind": "temporal",
+      "from": "e_x_young",
+      "to": "e_x_history"
     }
   ],
   "interventions": [

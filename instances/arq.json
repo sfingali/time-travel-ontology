@@ -7,7 +7,8 @@
     "sources": [
       "Tony Elliott, ARQ (2016)",
       "time-travel-archive/films/arq.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -292,6 +293,78 @@
         "memoryRetained": true,
         "exitCondition": "deliver ARQ before Torus"
       }
+    },
+    {
+      "id": "e_x_loop",
+      "type": "loop_reset",
+      "label": "Rentos wakes again in hijacked van",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "loop"
+      }
+    },
+    {
+      "id": "e_x_wife",
+      "type": "ordinary",
+      "label": "Wife/hostage dynamics across iterations",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_rent",
+      "type": "ordinary",
+      "label": "Corporate Renton antagonism",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_escape",
+      "type": "intervention",
+      "label": "Attempted escapes rewrite",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_choice",
+      "type": "checkpoint",
+      "label": "Final choice about looping tech",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Blocking tech causes death-loop",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "rules"
+      }
+    },
+    {
+      "id": "e_x_gas",
+      "type": "ordinary",
+      "label": "Gas/ventilation tactics",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_end",
+      "type": "ordinary",
+      "label": "Ambiguous exit",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "close"
+      }
     }
   ],
   "edges": [
@@ -387,6 +460,66 @@
       "from": "e_message",
       "to": "e_outer_reset",
       "label": "informational hope across wipe"
+    },
+    {
+      "id": "narq1",
+      "kind": "causal",
+      "from": "e_x_loop",
+      "to": "e_x_wife"
+    },
+    {
+      "id": "narq2",
+      "kind": "causal",
+      "from": "e_x_wife",
+      "to": "e_x_rent"
+    },
+    {
+      "id": "narq3",
+      "kind": "causal",
+      "from": "e_x_rent",
+      "to": "e_x_escape"
+    },
+    {
+      "id": "narq4",
+      "kind": "causal",
+      "from": "e_x_escape",
+      "to": "e_x_choice"
+    },
+    {
+      "id": "narq5",
+      "kind": "causal",
+      "from": "e_x_choice",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "narq6",
+      "kind": "causal",
+      "from": "e_x_rules",
+      "to": "e_x_gas"
+    },
+    {
+      "id": "narq7",
+      "kind": "causal",
+      "from": "e_x_gas",
+      "to": "e_x_end"
+    },
+    {
+      "id": "bridge_arq",
+      "kind": "causal",
+      "from": "e_outer_reset",
+      "to": "e_x_loop"
+    },
+    {
+      "id": "x_arq_1",
+      "kind": "causal",
+      "from": "e_x_loop",
+      "to": "e_x_end"
+    },
+    {
+      "id": "x_arq_2",
+      "kind": "temporal",
+      "from": "e_x_wife",
+      "to": "e_x_rent"
     }
   ],
   "interventions": [

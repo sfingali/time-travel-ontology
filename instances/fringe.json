@@ -6,13 +6,14 @@
     "medium": "tv",
     "sources": [
       "J.J. Abrams, Alex Kurtzman, Roberto Orci (2008\u20132013)",
-      "time-travel-archive/tv/fringe.md"
+      "time-travel-archive/tv/fringe.md",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
     "multiverse_contact",
-    "branch_on_intervention",
-    "mutable_ripple"
+    "mutable_ripple",
+    "branch_on_intervention"
   ],
   "primaryRuleSetId": "multiverse_contact",
   "mixinRuleSetIds": [
@@ -88,11 +89,11 @@
       "label": "Peter Bishop",
       "identityGroup": "peter",
       "continuityRole": "primary",
-      "homeWorldRef": "w_over_here"
+      "homeWorldRef": "w_over_there"
     },
     {
       "id": "astrid",
-      "label": "Astrid Farnsworth",
+      "label": "Astrid",
       "homeWorldRef": "w_over_here"
     },
     {
@@ -104,13 +105,25 @@
       "id": "september",
       "label": "September (Observer)",
       "homeWorldRef": "w_observer"
+    },
+    {
+      "id": "bolivia",
+      "label": "Alternate Olivia (Fauxlivia)",
+      "identityGroup": "olivia",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_over_there"
+    },
+    {
+      "id": "nina",
+      "label": "Nina Sharp",
+      "homeWorldRef": "w_over_here"
     }
   ],
   "events": [
     {
       "id": "e_pattern",
       "type": "ordinary",
-      "label": "Fringe Division investigates Pattern cases",
+      "label": "Fringe Pattern cases begin",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S1"
@@ -123,209 +136,456 @@
       ]
     },
     {
+      "id": "e_cortexiphan",
+      "type": "reveal",
+      "label": "Cortexiphan trials / Olivia abilities",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "backstory"
+      },
+      "agents": [
+        "olivia",
+        "walter"
+      ]
+    },
+    {
       "id": "e_kidnap",
       "type": "intervention",
-      "label": "Walter crosses Over There; takes dying Peter as child",
+      "label": "Walter stole Peter from Over There as child",
       "at": {
         "worldRef": "w_over_there",
-        "timeLabel": "1985 backstory"
+        "timeLabel": "1985"
       },
       "agents": [
         "walter",
-        "peter",
-        "walternate"
+        "walternate",
+        "peter"
       ],
       "payload": {
         "travelMode": "other"
       }
     },
     {
-      "id": "e_cortexiphan",
-      "type": "ordinary",
-      "label": "Olivia's cortexiphan link enables crossings",
+      "id": "e_bridge_cost",
+      "type": "observation",
+      "label": "Crossing damaged both universes",
       "at": {
         "worldRef": "w_over_here",
-        "timeLabel": "childhood/S2"
-      },
-      "agents": [
-        "olivia",
-        "walter"
-      ]
-    },
-    {
-      "id": "e_war",
-      "type": "contact",
-      "label": "Parallel war escalates; Doomsday Machine / Bridge",
-      "at": {
-        "worldRef": "w_over_here",
-        "timeLabel": "S3-S4"
-      },
-      "agents": [
-        "olivia",
-        "peter",
-        "walternate",
-        "bell"
-      ]
-    },
-    {
-      "id": "e_bridge",
-      "type": "contact",
-      "label": "Bridge links worlds; soft amber / healing attempts",
-      "at": {
-        "worldRef": "w_over_here",
-        "timeLabel": "S4"
+        "timeLabel": "mythology"
       },
       "agents": [
         "walter",
-        "walternate",
+        "nina"
+      ]
+    },
+    {
+      "id": "e_shapeshifters",
+      "type": "contact",
+      "label": "Shapeshifter incursions",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "S2"
+      },
+      "agents": [
         "olivia"
+      ]
+    },
+    {
+      "id": "e_over_there",
+      "type": "arrival",
+      "label": "Team contacts Over There",
+      "at": {
+        "worldRef": "w_over_there",
+        "timeLabel": "S2-S3"
+      },
+      "agents": [
+        "olivia",
+        "peter"
       ],
       "payload": {
-        "tags": [
-          "bridge"
-        ]
+        "travelMode": "other"
       }
     },
     {
-      "id": "e_erase_peter",
-      "type": "branch_fork",
-      "label": "Peter erased then restored across continuum shift",
+      "id": "e_swap_olivia",
+      "type": "intervention",
+      "label": "Olivia replaced by Fauxlivia",
       "at": {
         "worldRef": "w_over_here",
-        "timeLabel": "S4"
-      },
-      "agents": [
-        "peter",
-        "olivia",
-        "walter"
-      ],
-      "payload": {
-        "observerContinuity": true
-      }
-    },
-    {
-      "id": "e_2036",
-      "type": "ordinary",
-      "label": "Observer dystopia 2036 occupation",
-      "at": {
-        "worldRef": "w_observer",
-        "timeLabel": "2036"
+        "timeLabel": "S3"
       },
       "agents": [
         "olivia",
-        "walter",
-        "peter",
-        "september"
+        "bolivia"
       ]
     },
     {
-      "id": "e_invasion",
-      "type": "branch_fork",
-      "label": "Observer invasion forks dystopian future",
+      "id": "e_peter_erase",
+      "type": "collapse",
+      "label": "Peter erased from timeline briefly",
       "at": {
-        "worldRef": "w_observer",
-        "timeLabel": "invasion"
+        "worldRef": "w_over_here",
+        "timeLabel": "S3 end"
       },
       "agents": [
-        "september"
-      ]
-    },
-    {
-      "id": "e_sacrifice",
-      "type": "intervention",
-      "label": "Final reset sacrifice to stop Observer timeline",
-      "at": {
-        "worldRef": "w_reset",
-        "timeLabel": "finale"
-      },
-      "agents": [
-        "walter",
-        "september",
         "peter"
       ]
     },
     {
-      "id": "e_reset",
-      "type": "collapse",
-      "label": "Timeline reset; white tulip coda",
+      "id": "e_return_peter",
+      "type": "arrival",
+      "label": "Peter returns; memories uneven",
       "at": {
-        "worldRef": "w_reset",
-        "timeLabel": "new continuum"
+        "worldRef": "w_over_here",
+        "timeLabel": "S4"
+      },
+      "agents": [
+        "peter",
+        "olivia",
+        "walter"
+      ]
+    },
+    {
+      "id": "e_observers",
+      "type": "reveal",
+      "label": "Observers / invasion future",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "S4-S5"
       },
       "agents": [
         "walter",
+        "olivia",
+        "peter"
+      ]
+    },
+    {
+      "id": "e_amber",
+      "type": "intervention",
+      "label": "Amber protocol vs Observer occupation",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "S5"
+      },
+      "agents": [
+        "walter",
+        "astrid"
+      ]
+    },
+    {
+      "id": "e_invasion",
+      "type": "ordinary",
+      "label": "2036 Observer dystopia arc",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "S5"
+      },
+      "agents": [
+        "olivia",
+        "peter"
+      ]
+    },
+    {
+      "id": "e_plan",
+      "type": "intervention",
+      "label": "Walter's plan to reset Observer future",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "S5 climax"
+      },
+      "agents": [
+        "walter",
+        "peter"
+      ]
+    },
+    {
+      "id": "e_sacrifice",
+      "type": "ordinary",
+      "label": "Walter/Michael sacrifice to remove Observers",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "finale"
+      },
+      "agents": [
+        "walter"
+      ]
+    },
+    {
+      "id": "e_boy",
+      "type": "ordinary",
+      "label": "Michael anomaly child as key",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "S5"
+      },
+      "agents": [
+        "walter"
+      ]
+    },
+    {
+      "id": "e_letter",
+      "type": "ordinary",
+      "label": "White tulip / letters theme reprise",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "motif"
+      },
+      "agents": [
+        "walter",
+        "peter"
+      ]
+    },
+    {
+      "id": "e_two_worlds",
+      "type": "observation",
+      "label": "Dual world war over resources/tech",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "S3"
+      },
+      "agents": [
+        "walternate",
+        "walter"
+      ]
+    },
+    {
+      "id": "e_dof",
+      "type": "branch_fork",
+      "label": "Soft reboot after Peter erase",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "S4"
+      },
+      "agents": [
+        "olivia",
+        "peter"
+      ]
+    },
+    {
+      "id": "e_harmony",
+      "type": "ordinary",
+      "label": "Bridge cooperation attempt",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "olivia",
+        "bolivia"
+      ]
+    },
+    {
+      "id": "e_end",
+      "type": "ordinary",
+      "label": "Family restored; Observer timeline undone",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "series end"
+      },
+      "agents": [
+        "olivia",
         "peter",
-        "olivia"
-      ],
-      "payload": {
-        "signal": "white_tulip"
-      }
+        "walter"
+      ]
+    },
+    {
+      "id": "e_tech",
+      "type": "ordinary",
+      "label": "Massive Dynamic / cortex tech dual-use",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "ongoing"
+      },
+      "agents": [
+        "nina",
+        "walter"
+      ]
+    },
+    {
+      "id": "e_love",
+      "type": "ordinary",
+      "label": "Olivia-Peter emotional continuity across rewrites",
+      "at": {
+        "worldRef": "w_over_here",
+        "timeLabel": "arc"
+      },
+      "agents": [
+        "olivia",
+        "peter"
+      ]
     }
   ],
   "edges": [
     {
       "id": "c1",
-      "kind": "world_relation",
-      "from": "w_over_here",
-      "to": "w_over_there",
-      "relation": "correspondsTo",
-      "label": "Over Here / Over There"
+      "kind": "causal",
+      "from": "e_pattern",
+      "to": "e_cortexiphan"
     },
     {
       "id": "c2",
       "kind": "causal",
-      "from": "e_kidnap",
-      "to": "e_pattern"
+      "from": "e_cortexiphan",
+      "to": "e_kidnap"
     },
     {
       "id": "c3",
       "kind": "causal",
-      "from": "e_cortexiphan",
-      "to": "e_war"
+      "from": "e_kidnap",
+      "to": "e_bridge_cost"
     },
     {
       "id": "c4",
       "kind": "causal",
-      "from": "e_war",
-      "to": "e_bridge"
+      "from": "e_bridge_cost",
+      "to": "e_shapeshifters"
     },
     {
       "id": "c5",
-      "kind": "world_relation",
-      "from": "w_over_here",
-      "to": "w_observer",
-      "relation": "forksFrom"
+      "kind": "causal",
+      "from": "e_shapeshifters",
+      "to": "e_over_there"
     },
     {
       "id": "c6",
       "kind": "causal",
-      "from": "e_invasion",
-      "to": "e_2036"
+      "from": "e_over_there",
+      "to": "e_swap_olivia"
     },
     {
       "id": "c7",
-      "kind": "intervention",
-      "from": "e_sacrifice",
-      "to": "e_reset"
+      "kind": "causal",
+      "from": "e_swap_olivia",
+      "to": "e_peter_erase"
     },
     {
       "id": "c8",
-      "kind": "world_relation",
-      "from": "w_observer",
-      "to": "w_reset",
-      "relation": "supersedes"
+      "kind": "causal",
+      "from": "e_peter_erase",
+      "to": "e_return_peter"
     },
     {
       "id": "c9",
-      "kind": "identity",
-      "from": "walter",
-      "to": "walternate"
+      "kind": "causal",
+      "from": "e_return_peter",
+      "to": "e_observers"
     },
     {
       "id": "c10",
-      "kind": "temporal",
-      "from": "e_erase_peter",
+      "kind": "causal",
+      "from": "e_observers",
+      "to": "e_amber"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_amber",
       "to": "e_invasion"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_invasion",
+      "to": "e_plan"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_plan",
+      "to": "e_sacrifice"
+    },
+    {
+      "id": "c14",
+      "kind": "causal",
+      "from": "e_sacrifice",
+      "to": "e_boy"
+    },
+    {
+      "id": "c15",
+      "kind": "causal",
+      "from": "e_boy",
+      "to": "e_letter"
+    },
+    {
+      "id": "c16",
+      "kind": "causal",
+      "from": "e_letter",
+      "to": "e_two_worlds"
+    },
+    {
+      "id": "c17",
+      "kind": "causal",
+      "from": "e_two_worlds",
+      "to": "e_dof"
+    },
+    {
+      "id": "c18",
+      "kind": "causal",
+      "from": "e_dof",
+      "to": "e_harmony"
+    },
+    {
+      "id": "c19",
+      "kind": "causal",
+      "from": "e_harmony",
+      "to": "e_end"
+    },
+    {
+      "id": "c20",
+      "kind": "causal",
+      "from": "e_end",
+      "to": "e_tech"
+    },
+    {
+      "id": "c21",
+      "kind": "causal",
+      "from": "e_tech",
+      "to": "e_love"
+    },
+    {
+      "id": "x1",
+      "kind": "world_relation",
+      "from": "w_over_here",
+      "to": "w_over_there",
+      "relation": "mirrors"
+    },
+    {
+      "id": "x2",
+      "kind": "identity",
+      "from": "olivia",
+      "to": "bolivia",
+      "relation": "correspondsTo"
+    },
+    {
+      "id": "x3",
+      "kind": "identity",
+      "from": "walter",
+      "to": "walternate",
+      "relation": "correspondsTo"
+    },
+    {
+      "id": "x4",
+      "kind": "intervention",
+      "from": "e_kidnap",
+      "to": "e_bridge_cost"
+    },
+    {
+      "id": "x5",
+      "kind": "causal",
+      "from": "e_peter_erase",
+      "to": "e_return_peter"
+    },
+    {
+      "id": "x6",
+      "kind": "causal",
+      "from": "e_observers",
+      "to": "e_plan"
+    },
+    {
+      "id": "x7",
+      "kind": "temporal",
+      "from": "e_cortexiphan",
+      "to": "e_swap_olivia"
     }
   ],
   "interventions": [
@@ -335,35 +595,29 @@
       "ruleEffects": [
         {
           "ruleSetId": "multiverse_contact",
-          "effect": "Walter's crossing to save Peter initiates lasting parallel contact and war"
+          "effect": "Cross-universe abduction damages both worlds"
         },
         {
-          "ruleSetId": "branch_on_intervention",
-          "effect": "Later Observer invasion and finale reset fork/overwrite continua"
+          "ruleSetId": "mutable_ripple",
+          "effect": "Peter's presence rewrites personal histories"
         }
       ]
     },
     {
-      "id": "iv_reset",
+      "id": "iv_obs",
       "eventId": "e_sacrifice",
       "ruleEffects": [
         {
-          "ruleSetId": "mutable_ripple",
-          "effect": "Finale sacrifice attempts to overwrite Observer-occupied future"
-        },
-        {
-          "ruleSetId": "multiverse_contact",
-          "effect": "Reset still presupposes dual-Earth history that produced the team"
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Removing Observer genesis prunes dystopian future"
         }
       ]
     }
   ],
   "outcome": {
-    "summary": "Parallel Earths Over Here/Over There wage a soft-SF war; Observer dystopia is reset by sacrifice, leaving a healed continuum with white-tulip closure.",
+    "summary": "Parallel universes in contact; Walter's theft of Peter drives war, soft reboot, and Observer endgame reset.",
     "endWorldRefs": [
-      "w_reset",
-      "w_over_here",
-      "w_over_there"
+      "w_over_here"
     ]
   }
 }

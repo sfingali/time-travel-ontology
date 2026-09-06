@@ -7,7 +7,8 @@
     "sources": [
       "Gregory Hoblit; Toby Emmerich (2000)",
       "time-travel-archive/films/frequency.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -72,7 +73,7 @@
     {
       "id": "e_aurora",
       "type": "contact",
-      "label": "Aurora + ham radio links 1969↔1999",
+      "label": "Aurora + ham radio links 1969\u21941999",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "1999 night"
@@ -121,7 +122,7 @@
       "label": "Ripple endangers Julia via serial killer path",
       "at": {
         "worldRef": "w_saved",
-        "timeLabel": "1969–99"
+        "timeLabel": "1969\u201399"
       },
       "agents": [
         "julia",
@@ -172,7 +173,7 @@
     {
       "id": "e_tension",
       "type": "reveal",
-      "label": "Saving father creates new threats — ripple tension",
+      "label": "Saving father creates new threats \u2014 ripple tension",
       "at": {
         "worldRef": "w_saved",
         "timeLabel": "mid"
@@ -183,23 +184,135 @@
     },
     {
       "id": "ev_radio",
-      "label": "HAM radio link 1969↔1999",
-      "timeLabel": "solar max"
+      "type": "ordinary",
+      "label": "HAM radio link 1969\u21941999",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "solar max"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_save_frank",
+      "type": "ordinary",
       "label": "Frank survives fire",
-      "timeLabel": "1969"
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "1969"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_killer",
+      "type": "ordinary",
       "label": "Nightingale case butterfly",
-      "timeLabel": "both eras"
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "both eras"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_stable",
+      "type": "ordinary",
       "label": "Stabilized happier 1999",
-      "timeLabel": "1999"
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "1999"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_father_talk",
+      "type": "ordinary",
+      "label": "John talks to young Frank",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "first contact"
+      }
+    },
+    {
+      "id": "e_nightingale",
+      "type": "ordinary",
+      "label": "Nightingale killer thread activates",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_julia",
+      "type": "ordinary",
+      "label": "Mother Julia timeline shifts",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "ripples"
+      }
+    },
+    {
+      "id": "e_share_clues",
+      "type": "intervention",
+      "label": "Father-son share clues across time",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "investigation"
+      }
+    },
+    {
+      "id": "e_confront",
+      "type": "intervention",
+      "label": "Stop Nightingale",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_stable",
+      "type": "checkpoint",
+      "label": "Present stabilizes with Frank alive",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_catch",
+      "type": "ordinary",
+      "label": "Baseball catch coda across years",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "epilogue"
+      }
+    },
+    {
+      "id": "e_radio_physics",
+      "type": "observation",
+      "label": "Sunspot/aurora physics enables crosstime radio",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "rules"
+      }
     }
   ],
   "edges": [
@@ -253,19 +366,91 @@
       "to": "e_tension"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_radio",
       "to": "ev_save_frank",
-      "type": "enables"
+      "label": "enables"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_save_frank",
       "to": "ev_killer",
-      "type": "causes"
+      "label": "causes"
     },
     {
+      "id": "rep_3",
+      "kind": "causal",
       "from": "ev_killer",
       "to": "ev_stable",
-      "type": "resolved_to"
+      "label": "resolved_to"
+    },
+    {
+      "id": "nfre1",
+      "kind": "causal",
+      "from": "e_father_talk",
+      "to": "e_nightingale"
+    },
+    {
+      "id": "nfre2",
+      "kind": "causal",
+      "from": "e_nightingale",
+      "to": "e_julia"
+    },
+    {
+      "id": "nfre3",
+      "kind": "causal",
+      "from": "e_julia",
+      "to": "e_share_clues"
+    },
+    {
+      "id": "nfre4",
+      "kind": "causal",
+      "from": "e_share_clues",
+      "to": "e_confront"
+    },
+    {
+      "id": "nfre5",
+      "kind": "causal",
+      "from": "e_confront",
+      "to": "e_stable"
+    },
+    {
+      "id": "nfre6",
+      "kind": "causal",
+      "from": "e_stable",
+      "to": "e_catch"
+    },
+    {
+      "id": "bridge_frequenc",
+      "kind": "causal",
+      "from": "ev_stable",
+      "to": "e_father_talk"
+    },
+    {
+      "id": "fx1",
+      "kind": "intervention",
+      "from": "e_warn_fire",
+      "to": "e_frank_lives"
+    },
+    {
+      "id": "fx2",
+      "kind": "causal",
+      "from": "e_frank_lives",
+      "to": "e_nightingale"
+    },
+    {
+      "id": "fx3",
+      "kind": "temporal",
+      "from": "e_aurora",
+      "to": "e_father_talk"
+    },
+    {
+      "id": "fxx",
+      "kind": "causal",
+      "from": "e_radio_physics",
+      "to": "e_aurora"
     }
   ],
   "interventions": [

@@ -6,12 +6,13 @@
     "medium": "film",
     "sources": [
       "Stephen Herek; Chris Matheson & Ed Solomon (1989)",
-      "time-travel-archive/films/bill-and-ted.md"
+      "time-travel-archive/films/bill-and-ted.md",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "predestination_closed_loop",
     "bootstrap_ontological",
+    "predestination_closed_loop",
     "fixed_novikov"
   ],
   "primaryRuleSetId": "predestination_closed_loop",
@@ -32,14 +33,14 @@
   "agents": [
     {
       "id": "bill",
-      "label": "Bill Preston",
+      "label": "Bill S. Preston Esq.",
       "identityGroup": "bill",
       "continuityRole": "primary",
       "homeWorldRef": "w_san_dimas"
     },
     {
       "id": "ted",
-      "label": "Ted Logan",
+      "label": "Ted Theodore Logan",
       "identityGroup": "ted",
       "continuityRole": "primary",
       "homeWorldRef": "w_san_dimas"
@@ -47,7 +48,7 @@
     {
       "id": "rufus",
       "label": "Rufus",
-      "continuityRole": "bootstrap_source",
+      "continuityRole": "older_self",
       "homeWorldRef": "w_san_dimas"
     },
     {
@@ -69,16 +70,36 @@
       "id": "joan",
       "label": "Joan of Arc",
       "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "billy_the_kid",
+      "label": "Billy the Kid",
+      "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "sigmund_freud",
+      "label": "Freud",
+      "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "genghis",
+      "label": "Genghis Khan",
+      "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "beethoven",
+      "label": "Beethoven",
+      "homeWorldRef": "w_san_dimas"
     }
   ],
   "events": [
     {
-      "id": "e_stake",
+      "id": "e_failing",
       "type": "ordinary",
-      "label": "History oratory or military school; utopia stake",
+      "label": "Bill and Ted failing history; band dream",
       "at": {
         "worldRef": "w_san_dimas",
-        "timeLabel": "1988"
+        "timeLabel": "San Dimas"
       },
       "agents": [
         "bill",
@@ -88,10 +109,10 @@
     {
       "id": "e_rufus",
       "type": "arrival",
-      "label": "Rufus arrives with phone-booth time machine",
+      "label": "Rufus arrives from future utopia with phone booth",
       "at": {
         "worldRef": "w_san_dimas",
-        "timeLabel": "1988"
+        "timeLabel": "present"
       },
       "agents": [
         "rufus",
@@ -99,17 +120,30 @@
         "ted"
       ],
       "payload": {
-        "travelMode": "machine",
-        "bootstrapEntity": "rufus_mission"
+        "travelMode": "machine"
       }
     },
     {
-      "id": "e_tour",
-      "type": "departure",
-      "label": "Historical kidnapping tour begins",
+      "id": "e_mission",
+      "type": "reveal",
+      "label": "Must pass history report or future Wyld Stallyns utopia fails",
       "at": {
         "worldRef": "w_san_dimas",
-        "timeLabel": "travel"
+        "timeLabel": "briefing"
+      },
+      "agents": [
+        "rufus",
+        "bill",
+        "ted"
+      ]
+    },
+    {
+      "id": "e_booth",
+      "type": "departure",
+      "label": "First phone-booth departure",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "present"
       },
       "agents": [
         "bill",
@@ -122,179 +156,453 @@
     },
     {
       "id": "e_napoleon",
-      "type": "arrival",
-      "label": "Collect Napoleon and other figures",
+      "type": "intervention",
+      "label": "Retrieve Napoleon from exile era",
       "at": {
         "worldRef": "w_san_dimas",
-        "timeLabel": "past stops"
+        "timeLabel": "past Europe"
+      },
+      "agents": [
+        "bill",
+        "ted",
+        "napoleon"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_water_park",
+      "type": "ordinary",
+      "label": "Napoleon at water park chaos in present",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "San Dimas"
+      },
+      "agents": [
+        "napoleon",
+        "bill",
+        "ted"
+      ]
+    },
+    {
+      "id": "e_tour",
+      "type": "departure",
+      "label": "Historical figure collecting circuit",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "various eras"
+      },
+      "agents": [
+        "bill",
+        "ted"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_socrates",
+      "type": "arrival",
+      "label": "Socrates joins the party",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "ancient Greece"
+      },
+      "agents": [
+        "bill",
+        "ted",
+        "socrates"
+      ]
+    },
+    {
+      "id": "e_babysit",
+      "type": "ordinary",
+      "label": "Babysitting historical figures overnight",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "present night"
       },
       "agents": [
         "bill",
         "ted",
         "napoleon",
-        "socrates",
-        "joan",
-        "lincoln"
+        "socrates"
       ]
     },
     {
-      "id": "e_stash",
-      "type": "ordinary",
-      "label": "Stash figures in present; mall/park chaos",
+      "id": "e_keys",
+      "type": "bootstrap_origin",
+      "label": "Future selves leave keys / tips (most excellent bootstrap)",
       "at": {
         "worldRef": "w_san_dimas",
-        "timeLabel": "1988 babysitting"
-      },
-      "agents": [
-        "bill",
-        "ted",
-        "napoleon"
-      ]
-    },
-    {
-      "id": "e_prank",
-      "type": "intervention",
-      "label": "Predestination pranks: 'Has it been done to you?'",
-      "at": {
-        "worldRef": "w_san_dimas",
-        "timeLabel": "mid"
+        "timeLabel": "present"
       },
       "agents": [
         "bill",
         "ted"
       ],
       "payload": {
-        "tags": [
-          "san_dimas_time"
-        ]
+        "bootstrapEntity": "keys"
+      }
+    },
+    {
+      "id": "e_jail",
+      "type": "ordinary",
+      "label": "Figures arrested; need rescue",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "police station"
+      },
+      "agents": [
+        "bill",
+        "ted"
+      ]
+    },
+    {
+      "id": "e_rescue_plan",
+      "type": "intervention",
+      "label": "Use booth to stage own jailbreak via timed arrivals",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "time circuit"
+      },
+      "agents": [
+        "bill",
+        "ted"
+      ],
+      "payload": {
+        "travelMode": "machine"
       }
     },
     {
       "id": "e_report",
-      "type": "intervention",
-      "label": "Historical figures assemble for report; ace presentation",
+      "type": "ordinary",
+      "label": "History report with live figures succeeds",
       "at": {
         "worldRef": "w_san_dimas",
-        "timeLabel": "report"
+        "timeLabel": "school"
       },
       "agents": [
         "bill",
         "ted",
-        "lincoln",
-        "socrates",
-        "joan",
-        "napoleon"
+        "rufus",
+        "lincoln"
       ]
     },
     {
-      "id": "e_future_ok",
-      "type": "bootstrap_origin",
-      "label": "Rufus confirms Wyld Stallyns utopia secured",
+      "id": "e_guitar",
+      "type": "ordinary",
+      "label": "Good luck / guitar gift from Rufus",
       "at": {
         "worldRef": "w_san_dimas",
-        "timeLabel": "coda"
+        "timeLabel": "after report"
+      },
+      "agents": [
+        "bill",
+        "ted",
+        "rufus"
+      ]
+    },
+    {
+      "id": "e_princesses",
+      "type": "departure",
+      "label": "Travel to fetch medieval princesses (setup)",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "medieval"
+      },
+      "agents": [
+        "bill",
+        "ted"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_future_ok",
+      "type": "observation",
+      "label": "Future utopia secured by report success",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "future implication"
       },
       "agents": [
         "rufus",
         "bill",
         "ted"
-      ],
-      "payload": {
-        "bootstrapEntity": "wyld_stallyns_utopia"
-      }
+      ]
     },
     {
-      "id": "e_clock",
-      "type": "observation",
-      "label": "San Dimas present clock kept ticking during travel",
+      "id": "e_death",
+      "type": "ordinary",
+      "label": "Ted's dad threat subplot resolved without murder plan",
       "at": {
         "worldRef": "w_san_dimas",
-        "timeLabel": "deadline"
+        "timeLabel": "present"
+      },
+      "agents": [
+        "ted",
+        "bill"
+      ]
+    },
+    {
+      "id": "e_circle",
+      "type": "reveal",
+      "label": "Realize they will become the helpers they met",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "bootstrap beat"
       },
       "agents": [
         "bill",
         "ted"
-      ],
-      "payload": {
-        "note": "deadline comedy physics"
-      }
+      ]
     },
     {
-      "id": "e_return_figures",
+      "id": "e_credits_band",
       "type": "ordinary",
-      "label": "Historical figures returned (mostly unharmed)",
+      "label": "Band path toward destiny begins",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "epilogue"
+      },
+      "agents": [
+        "bill",
+        "ted"
+      ]
+    },
+    {
+      "id": "e_booth_return",
+      "type": "arrival",
+      "label": "Booth returns figures toward homes / containment",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "wrap"
       },
       "agents": [
         "rufus",
-        "napoleon",
-        "lincoln"
+        "bill",
+        "ted"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_excellent",
+      "type": "ordinary",
+      "label": "Most excellent farewell; destiny affirmed",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "close"
+      },
+      "agents": [
+        "bill",
+        "ted",
+        "rufus"
       ]
+    },
+    {
+      "id": "e_loop_close",
+      "type": "bootstrap_origin",
+      "label": "Closed helpful loop: future them already intervened",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "meta close"
+      },
+      "agents": [
+        "bill",
+        "ted"
+      ],
+      "payload": {
+        "bootstrapEntity": "advice"
+      }
     }
   ],
   "edges": [
     {
       "id": "c1",
       "kind": "causal",
-      "from": "e_stake",
+      "from": "e_failing",
       "to": "e_rufus"
     },
     {
       "id": "c2",
       "kind": "causal",
       "from": "e_rufus",
-      "to": "e_tour"
+      "to": "e_mission"
     },
     {
       "id": "c3",
       "kind": "causal",
-      "from": "e_tour",
-      "to": "e_napoleon"
+      "from": "e_mission",
+      "to": "e_booth"
     },
     {
       "id": "c4",
-      "kind": "temporal",
-      "from": "e_napoleon",
-      "to": "e_stash"
+      "kind": "causal",
+      "from": "e_booth",
+      "to": "e_napoleon"
     },
     {
       "id": "c5",
-      "kind": "intervention",
-      "from": "e_prank",
-      "to": "e_report"
+      "kind": "causal",
+      "from": "e_napoleon",
+      "to": "e_water_park"
     },
     {
       "id": "c6",
+      "kind": "causal",
+      "from": "e_water_park",
+      "to": "e_tour"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_tour",
+      "to": "e_socrates"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_socrates",
+      "to": "e_babysit"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_babysit",
+      "to": "e_keys"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_keys",
+      "to": "e_jail"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_jail",
+      "to": "e_rescue_plan"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_rescue_plan",
+      "to": "e_report"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_report",
+      "to": "e_guitar"
+    },
+    {
+      "id": "c14",
+      "kind": "causal",
+      "from": "e_guitar",
+      "to": "e_princesses"
+    },
+    {
+      "id": "c15",
+      "kind": "causal",
+      "from": "e_princesses",
+      "to": "e_future_ok"
+    },
+    {
+      "id": "c16",
+      "kind": "causal",
+      "from": "e_future_ok",
+      "to": "e_death"
+    },
+    {
+      "id": "c17",
+      "kind": "causal",
+      "from": "e_death",
+      "to": "e_circle"
+    },
+    {
+      "id": "c18",
+      "kind": "causal",
+      "from": "e_circle",
+      "to": "e_credits_band"
+    },
+    {
+      "id": "c19",
+      "kind": "causal",
+      "from": "e_credits_band",
+      "to": "e_booth_return"
+    },
+    {
+      "id": "c20",
+      "kind": "causal",
+      "from": "e_booth_return",
+      "to": "e_excellent"
+    },
+    {
+      "id": "c21",
+      "kind": "causal",
+      "from": "e_excellent",
+      "to": "e_loop_close"
+    },
+    {
+      "id": "x1",
+      "kind": "identity",
+      "from": "e_keys",
+      "to": "e_circle",
+      "label": "bootstrap self-help"
+    },
+    {
+      "id": "x2",
+      "kind": "temporal",
+      "from": "e_booth",
+      "to": "e_tour"
+    },
+    {
+      "id": "x3",
+      "kind": "intervention",
+      "from": "e_rescue_plan",
+      "to": "e_report"
+    },
+    {
+      "id": "x4",
+      "kind": "causal",
+      "from": "e_mission",
+      "to": "e_future_ok"
+    },
+    {
+      "id": "x5",
+      "kind": "identity",
+      "from": "bill",
+      "to": "ted"
+    },
+    {
+      "id": "x6",
+      "kind": "identity",
+      "from": "e_keys",
+      "to": "e_rescue_plan",
+      "label": "future tip enables plan"
+    },
+    {
+      "id": "x7",
       "kind": "causal",
       "from": "e_report",
       "to": "e_future_ok"
     },
     {
-      "id": "c7",
-      "kind": "causal",
-      "from": "e_future_ok",
-      "to": "e_rufus",
-      "label": "utopia sends Rufus because report succeeds"
-    },
-    {
-      "id": "c8",
+      "id": "x8",
       "kind": "temporal",
-      "from": "e_clock",
-      "to": "e_report"
+      "from": "e_napoleon",
+      "to": "e_water_park"
     },
     {
-      "id": "c9",
-      "kind": "temporal",
-      "from": "e_report",
-      "to": "e_return_figures"
-    },
-    {
-      "id": "c10",
-      "kind": "causal",
-      "from": "e_stash",
-      "to": "e_report"
+      "id": "x9",
+      "kind": "intervention",
+      "from": "e_rufus",
+      "to": "e_booth"
     }
   ],
   "interventions": [
@@ -304,21 +612,27 @@
       "ruleEffects": [
         {
           "ruleSetId": "predestination_closed_loop",
-          "effect": "Passing the report fulfills the utopia that sent help"
+          "effect": "Report success was always required for utopia"
         },
         {
           "ruleSetId": "bootstrap_ontological",
-          "effect": "Rufus and booth arrive because the future they enable already exists"
-        },
+          "effect": "Keys and tips arrive from their future selves"
+        }
+      ]
+    },
+    {
+      "id": "iv_keys",
+      "eventId": "e_keys",
+      "ruleEffects": [
         {
-          "ruleSetId": "fixed_novikov",
-          "effect": "Predestination gags close without branching San Dimas"
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Information/objects with no origin outside the loop"
         }
       ]
     }
   ],
   "outcome": {
-    "summary": "Phone-booth circuit: future utopia sends Rufus so Bill & Ted pass history, securing the Wyld Stallyns future that sent him.",
+    "summary": "Phone-booth history heist closes bootstrap: report saves utopia that sends Rufus; future selves already helped.",
     "endWorldRefs": [
       "w_san_dimas"
     ]

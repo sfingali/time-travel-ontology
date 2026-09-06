@@ -7,13 +7,14 @@
     "sources": [
       "Shane Carruth, Primer (2004)",
       "time-travel-archive/films/primer.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "branch_on_intervention",
+    "fixed_novikov",
     "bootstrap_ontological",
-    "fixed_novikov"
+    "branch_on_intervention"
   ],
   "primaryRuleSetId": "branch_on_intervention",
   "mixinRuleSetIds": [
@@ -336,32 +337,119 @@
     },
     {
       "id": "ev_granger",
+      "type": "ordinary",
       "label": "Granger appears / collapses",
-      "worldRef": "w_overlap",
+      "at": {
+        "worldRef": "w_overlap",
+        "timeLabel": "mid-week anomaly"
+      },
       "agents": [
         "granger",
         "aaron"
       ],
-      "timeLabel": "mid-week anomaly"
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_party_iter",
+      "type": "ordinary",
       "label": "Aaron iterative party rewrite",
-      "worldRef": "w_failsafe",
+      "at": {
+        "worldRef": "w_failsafe",
+        "timeLabel": "Robert party night"
+      },
       "agents": [
         "aaron_failsafe"
       ],
-      "timeLabel": "Robert party night"
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_stock_protocol",
+      "type": "ordinary",
       "label": "Shared stock-loop protocol",
-      "worldRef": "w_ab1",
+      "at": {
+        "worldRef": "w_ab1",
+        "timeLabel": "early box days"
+      },
       "agents": [
         "abe_box",
         "aaron"
       ],
-      "timeLabel": "early box days"
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_pad_box",
+      "type": "ordinary",
+      "label": "Box discovered as time machine",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "garage"
+      },
+      "payload": {
+        "travelMode": "box"
+      }
+    },
+    {
+      "id": "e_pad_hotel",
+      "type": "departure",
+      "label": "Abe hotel failsafe plan",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "early"
+      },
+      "payload": {
+        "travelMode": "box"
+      }
+    },
+    {
+      "id": "e_pad_stocks",
+      "type": "ordinary",
+      "label": "Stock loop protocol",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_pad_trust",
+      "type": "ordinary",
+      "label": "Trust collapse Aaron/Abe",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_pad_exit",
+      "type": "ordinary",
+      "label": "Aaron leaves to build larger boxes",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_pad_contain",
+      "type": "intervention",
+      "label": "Abe tries to contain proliferation",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "end"
+      }
     }
   ],
   "edges": [
@@ -486,19 +574,73 @@
       "to": "e_confront"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_stock_protocol",
       "to": "ev_granger",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_granger",
       "to": "ev_party_iter",
-      "type": "causes"
+      "label": "causes"
     },
     {
+      "id": "rep_3",
+      "kind": "causal",
       "from": "ev_party_iter",
       "to": "ev_party_iter",
-      "type": "enables"
+      "label": "enables"
+    },
+    {
+      "id": "npri1",
+      "kind": "causal",
+      "from": "e_pad_box",
+      "to": "e_pad_hotel"
+    },
+    {
+      "id": "npri2",
+      "kind": "causal",
+      "from": "e_pad_hotel",
+      "to": "e_pad_stocks"
+    },
+    {
+      "id": "npri3",
+      "kind": "causal",
+      "from": "e_pad_stocks",
+      "to": "e_pad_trust"
+    },
+    {
+      "id": "npri4",
+      "kind": "causal",
+      "from": "e_pad_trust",
+      "to": "e_pad_exit"
+    },
+    {
+      "id": "npri5",
+      "kind": "causal",
+      "from": "e_pad_exit",
+      "to": "e_pad_contain"
+    },
+    {
+      "id": "bridge_primer",
+      "kind": "causal",
+      "from": "ev_stock_protocol",
+      "to": "e_pad_box"
+    },
+    {
+      "id": "prx1",
+      "kind": "causal",
+      "from": "e_pad_box",
+      "to": "e_pad_hotel"
+    },
+    {
+      "id": "prx2",
+      "kind": "intervention",
+      "from": "e_pad_trust",
+      "to": "e_pad_exit"
     }
   ],
   "interventions": [

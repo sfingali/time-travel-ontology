@@ -7,7 +7,8 @@
     "sources": [
       "Alfonso Cuar\u00f3n; J.K. Rowling (2004)",
       "time-travel-archive/films/harry-potter-prisoner-of-azkaban.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -270,6 +271,78 @@
       "agents": [
         "hermione"
       ]
+    },
+    {
+      "id": "e_x_dementor",
+      "type": "ordinary",
+      "label": "Dementor attacks",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_buckbeak",
+      "type": "ordinary",
+      "label": "Buckbeak execution threat",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_potter",
+      "type": "ordinary",
+      "label": "Sirius revealed innocent",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_hermione",
+      "type": "departure",
+      "label": "Time-Turner hours with Hermione",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_save_buck",
+      "type": "intervention",
+      "label": "Save Buckbeak",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_patronus",
+      "type": "intervention",
+      "label": "Harry's Patronus saves self",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_sirius",
+      "type": "ordinary",
+      "label": "Sirius escapes",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Must not be seen; closed evening loop",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "rules"
+      }
     }
   ],
   "edges": [
@@ -371,6 +444,66 @@
       "from": "harry",
       "to": "harry",
       "label": "same Harry both passes"
+    },
+    {
+      "id": "nhar1",
+      "kind": "causal",
+      "from": "e_x_dementor",
+      "to": "e_x_buckbeak"
+    },
+    {
+      "id": "nhar2",
+      "kind": "causal",
+      "from": "e_x_buckbeak",
+      "to": "e_x_potter"
+    },
+    {
+      "id": "nhar3",
+      "kind": "causal",
+      "from": "e_x_potter",
+      "to": "e_x_hermione"
+    },
+    {
+      "id": "nhar4",
+      "kind": "causal",
+      "from": "e_x_hermione",
+      "to": "e_x_save_buck"
+    },
+    {
+      "id": "nhar5",
+      "kind": "causal",
+      "from": "e_x_save_buck",
+      "to": "e_x_patronus"
+    },
+    {
+      "id": "nhar6",
+      "kind": "causal",
+      "from": "e_x_patronus",
+      "to": "e_x_sirius"
+    },
+    {
+      "id": "nhar7",
+      "kind": "causal",
+      "from": "e_x_sirius",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "bridge_harry-po",
+      "kind": "causal",
+      "from": "e_surrender",
+      "to": "e_x_dementor"
+    },
+    {
+      "id": "x_harr_1",
+      "kind": "causal",
+      "from": "e_x_dementor",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "x_harr_2",
+      "kind": "temporal",
+      "from": "e_x_buckbeak",
+      "to": "e_x_potter"
     }
   ],
   "interventions": [

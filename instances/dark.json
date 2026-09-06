@@ -5,9 +5,10 @@
     "year": 2017,
     "medium": "tv",
     "sources": [
-      "Baran bo Odar & Jantje Friese, Dark (2017–2020)",
+      "Baran bo Odar & Jantje Friese, Dark (2017\u20132020)",
       "time-travel-archive/tv/dark.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -33,7 +34,7 @@
       "kind": "timeline",
       "id": "w_adam",
       "label": "Adam's world (Winden knot)",
-      "spanLabel": "1953–2053",
+      "spanLabel": "1953\u20132053",
       "originWorldRef": "w_origin"
     },
     {
@@ -150,7 +151,7 @@
     {
       "id": "e_machine",
       "type": "bootstrap_origin",
-      "label": "Tannhaus builds time machine → creates knot worlds",
+      "label": "Tannhaus builds time machine \u2192 creates knot worlds",
       "at": {
         "worldRef": "w_origin",
         "timeLabel": "grief machine"
@@ -176,13 +177,13 @@
       ],
       "payload": {
         "travelMode": "cave_portal",
-        "travelDelta": "±33y"
+        "travelDelta": "\u00b133y"
       }
     },
     {
       "id": "e_mikkel",
       "type": "arrival",
-      "label": "Mikkel stranded 1986 → Michael",
+      "label": "Mikkel stranded 1986 \u2192 Michael",
       "at": {
         "worldRef": "w_adam",
         "timeLabel": "1986"
@@ -233,7 +234,7 @@
       "label": "Chair experiments / God particle apparatus",
       "at": {
         "worldRef": "w_adam",
-        "timeLabel": "1953–1986–2019"
+        "timeLabel": "1953\u20131986\u20132019"
       },
       "agents": [
         "helge",
@@ -275,7 +276,7 @@
     {
       "id": "e_unknown_born",
       "type": "birth",
-      "label": "The Unknown born of Jonas×Martha (cross-world)",
+      "label": "The Unknown born of Jonas\u00d7Martha (cross-world)",
       "at": {
         "worldRef": "w_eva",
         "timeLabel": "cross conception"
@@ -374,28 +375,105 @@
     },
     {
       "id": "ev_mikkel",
+      "type": "ordinary",
       "label": "Mikkel becomes Michael Kahnwald",
-      "timeLabel": "1986"
+      "at": {
+        "worldRef": "w_origin",
+        "timeLabel": "1986"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_apocalypse",
+      "type": "ordinary",
       "label": "2020 apocalypse",
-      "timeLabel": "2020"
+      "at": {
+        "worldRef": "w_origin",
+        "timeLabel": "2020"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_eva_world",
+      "type": "ordinary",
       "label": "Eva world war with Adam world",
-      "timeLabel": "S3"
+      "at": {
+        "worldRef": "w_origin",
+        "timeLabel": "S3"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_origin_fix",
+      "type": "ordinary",
       "label": "Jonas/Martha prevent Tannhaus crash",
-      "timeLabel": "1971 origin"
+      "at": {
+        "worldRef": "w_origin",
+        "timeLabel": "1971 origin"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_unknot",
+      "type": "ordinary",
       "label": "Knot worlds uncreated; origin toast",
-      "timeLabel": "origin dinner"
+      "at": {
+        "worldRef": "w_origin",
+        "timeLabel": "origin dinner"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_pad_adam",
+      "type": "reveal",
+      "label": "Adam is future Jonas",
+      "at": {
+        "worldRef": "w_origin",
+        "timeLabel": "mythology"
+      }
+    },
+    {
+      "id": "e_pad_martha",
+      "type": "ordinary",
+      "label": "Martha / Eva world mirror",
+      "at": {
+        "worldRef": "w_origin",
+        "timeLabel": "S3"
+      }
+    },
+    {
+      "id": "e_pad_origin_world",
+      "type": "collapse",
+      "label": "Origin world without knot",
+      "at": {
+        "worldRef": "w_origin",
+        "timeLabel": "finale"
+      }
     }
   ],
   "edges": [
@@ -560,24 +638,62 @@
       "to": "e_dissolve"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_mikkel",
       "to": "ev_apocalypse",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_apocalypse",
       "to": "ev_eva_world",
-      "type": "leads_to"
+      "label": "leads_to"
     },
     {
+      "id": "rep_3",
+      "kind": "causal",
       "from": "ev_eva_world",
       "to": "ev_origin_fix",
-      "type": "enables"
+      "label": "enables"
     },
     {
+      "id": "rep_4",
+      "kind": "causal",
       "from": "ev_origin_fix",
       "to": "ev_unknot",
-      "type": "causes"
+      "label": "causes"
+    },
+    {
+      "id": "ndar1",
+      "kind": "causal",
+      "from": "e_pad_adam",
+      "to": "e_pad_martha"
+    },
+    {
+      "id": "ndar2",
+      "kind": "causal",
+      "from": "e_pad_martha",
+      "to": "e_pad_origin_world"
+    },
+    {
+      "id": "bridge_dark",
+      "kind": "causal",
+      "from": "ev_unknot",
+      "to": "e_pad_adam"
+    },
+    {
+      "id": "dkx1",
+      "kind": "identity",
+      "from": "e_pad_adam",
+      "to": "e_pad_martha"
+    },
+    {
+      "id": "dkx2",
+      "kind": "causal",
+      "from": "e_pad_martha",
+      "to": "e_pad_origin_world"
     }
   ],
   "interventions": [

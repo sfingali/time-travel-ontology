@@ -7,7 +7,8 @@
     "sources": [
       "Sanaimura; anime 2016",
       "time-travel-archive/tv/erased.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -263,6 +264,78 @@
       "payload": {
         "signal": "butterfly"
       }
+    },
+    {
+      "id": "e_x_jump",
+      "type": "arrival",
+      "label": "Satoru leaps to child body 1988",
+      "at": {
+        "worldRef": "w_2006",
+        "timeLabel": "inciting"
+      }
+    },
+    {
+      "id": "e_x_killer",
+      "type": "ordinary",
+      "label": "Serial killer threatens mother/classmates",
+      "at": {
+        "worldRef": "w_2006",
+        "timeLabel": "stakes"
+      }
+    },
+    {
+      "id": "e_x_friends",
+      "type": "intervention",
+      "label": "Save friends across investigations",
+      "at": {
+        "worldRef": "w_2006",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_mother",
+      "type": "ordinary",
+      "label": "Mother death/prevention arc",
+      "at": {
+        "worldRef": "w_2006",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_adult",
+      "type": "arrival",
+      "label": "Return toward present",
+      "at": {
+        "worldRef": "w_2006",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_truth",
+      "type": "reveal",
+      "label": "Culprit identity",
+      "at": {
+        "worldRef": "w_2006",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_save",
+      "type": "checkpoint",
+      "label": "Rewritten present",
+      "at": {
+        "worldRef": "w_2006",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Revival-leap style return",
+      "at": {
+        "worldRef": "w_2006",
+        "timeLabel": "rules"
+      }
     }
   ],
   "edges": [
@@ -366,6 +439,66 @@
       "from": "w_2003",
       "to": "w_2010",
       "relation": "forksFrom"
+    },
+    {
+      "id": "nera1",
+      "kind": "causal",
+      "from": "e_x_jump",
+      "to": "e_x_killer"
+    },
+    {
+      "id": "nera2",
+      "kind": "causal",
+      "from": "e_x_killer",
+      "to": "e_x_friends"
+    },
+    {
+      "id": "nera3",
+      "kind": "causal",
+      "from": "e_x_friends",
+      "to": "e_x_mother"
+    },
+    {
+      "id": "nera4",
+      "kind": "causal",
+      "from": "e_x_mother",
+      "to": "e_x_adult"
+    },
+    {
+      "id": "nera5",
+      "kind": "causal",
+      "from": "e_x_adult",
+      "to": "e_x_truth"
+    },
+    {
+      "id": "nera6",
+      "kind": "causal",
+      "from": "e_x_truth",
+      "to": "e_x_save"
+    },
+    {
+      "id": "nera7",
+      "kind": "causal",
+      "from": "e_x_save",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "bridge_erased",
+      "kind": "causal",
+      "from": "e_2010",
+      "to": "e_x_jump"
+    },
+    {
+      "id": "x_eras_1",
+      "kind": "causal",
+      "from": "e_x_jump",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "x_eras_2",
+      "kind": "temporal",
+      "from": "e_x_killer",
+      "to": "e_x_friends"
     }
   ],
   "interventions": [

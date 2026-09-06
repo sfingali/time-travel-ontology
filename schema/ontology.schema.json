@@ -118,7 +118,8 @@
               "attractsToward",
               "collapsesInto",
               "mirrors",
-              "supersedes"
+              "supersedes",
+              "originatesFrom"
             ]
           },
           "default": []
@@ -189,6 +190,19 @@
           },
           "minItems": 1
         },
+        "primaryRuleSetId": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+        },
+        "mixinRuleSetIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+          }
+        },
         "topologyPatternId": {
           "type": "string",
           "minLength": 1,
@@ -213,49 +227,23 @@
                   "description": {
                     "type": "string"
                   },
+                  "attractorFieldId": {
+                    "type": "string",
+                    "minLength": 1
+                  },
                   "kind": {
                     "type": "string",
                     "const": "timeline"
                   },
                   "spanLabel": {
                     "type": "string"
-                  }
-                },
-                "required": [
-                  "id",
-                  "label",
-                  "kind"
-                ],
-                "additionalProperties": false
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "id": {
+                  },
+                  "originWorldRef": {
                     "type": "string",
                     "minLength": 1,
                     "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
                   },
-                  "label": {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "kind": {
-                    "type": "string",
-                    "const": "branch"
-                  },
-                  "parentRef": {
-                    "type": "string",
-                    "minLength": 1,
-                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
-                  },
-                  "forkLabel": {
-                    "type": "string"
-                  },
-                  "pruned": {
+                  "isOriginWorld": {
                     "type": "boolean"
                   }
                 },
@@ -281,12 +269,115 @@
                   "description": {
                     "type": "string"
                   },
+                  "attractorFieldId": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "kind": {
+                    "type": "string",
+                    "const": "branch"
+                  },
+                  "parentRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "forkLabel": {
+                    "type": "string"
+                  },
+                  "pruned": {
+                    "type": "boolean"
+                  },
+                  "nestsWithinRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "collapseDeadline": {
+                    "type": "string"
+                  },
+                  "pruneAuthority": {
+                    "type": "string"
+                  },
+                  "worldlineId": {
+                    "type": "string"
+                  },
+                  "tangent": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "label",
+                  "kind"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "attractorFieldId": {
+                    "type": "string",
+                    "minLength": 1
+                  },
                   "kind": {
                     "type": "string",
                     "const": "parallel_world"
                   },
                   "correspondenceKey": {
                     "type": "string"
+                  },
+                  "correspondenceMap": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "localKey": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "remoteWorldRef": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                        },
+                        "remoteKey": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "notes": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "localKey",
+                        "remoteWorldRef",
+                        "remoteKey"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "originWorldRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "mirrorOf": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
                   }
                 },
                 "required": [
@@ -317,6 +408,41 @@
               "identityGroup": {
                 "type": "string",
                 "minLength": 1
+              },
+              "continuityRole": {
+                "type": "string",
+                "enum": [
+                  "primary",
+                  "older_self",
+                  "younger_self",
+                  "bootstrap_source",
+                  "bootstrap_sink",
+                  "counterpart",
+                  "variant",
+                  "iteration",
+                  "inverted_self",
+                  "observer_persistent",
+                  "other"
+                ]
+              },
+              "homeWorldRef": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "continuedFrom": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "continuesAs": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "iterationIndex": {
+                "type": "integer",
+                "minimum": 0
               },
               "notes": {
                 "type": "string"
@@ -357,6 +483,8 @@
                   "contact",
                   "bootstrap_origin",
                   "reveal",
+                  "inversion",
+                  "checkpoint",
                   "other"
                 ]
               },
@@ -391,7 +519,157 @@
               },
               "payload": {
                 "type": "object",
-                "additionalProperties": {}
+                "properties": {
+                  "travelMode": {
+                    "type": "string",
+                    "enum": [
+                      "machine",
+                      "turnstile",
+                      "wormhole",
+                      "quantum",
+                      "perception",
+                      "body_swap",
+                      "blood_reset",
+                      "cave_portal",
+                      "box",
+                      "other"
+                    ]
+                  },
+                  "travelDelta": {
+                    "type": "string"
+                  },
+                  "originTimeLabel": {
+                    "type": "string"
+                  },
+                  "destinationTimeLabel": {
+                    "type": "string"
+                  },
+                  "entropy": {
+                    "type": "string",
+                    "enum": [
+                      "forward",
+                      "inverted",
+                      "mixed"
+                    ]
+                  },
+                  "inverted": {
+                    "type": "boolean"
+                  },
+                  "turnstileId": {
+                    "type": "string"
+                  },
+                  "pincerRole": {
+                    "type": "string",
+                    "enum": [
+                      "red_forward",
+                      "blue_inverted",
+                      "teaching",
+                      "war",
+                      "solo"
+                    ]
+                  },
+                  "freeportId": {
+                    "type": "string"
+                  },
+                  "boxId": {
+                    "type": "string"
+                  },
+                  "failsafeId": {
+                    "type": "string"
+                  },
+                  "boxDuration": {
+                    "type": "string"
+                  },
+                  "worldlineId": {
+                    "type": "string"
+                  },
+                  "attractorFieldId": {
+                    "type": "string"
+                  },
+                  "divergenceMagnitude": {
+                    "type": "number"
+                  },
+                  "readingSteiner": {
+                    "type": "boolean"
+                  },
+                  "artifactId": {
+                    "type": "string"
+                  },
+                  "artifactKind": {
+                    "type": "string",
+                    "enum": [
+                      "algorithm",
+                      "jet_engine",
+                      "book",
+                      "device",
+                      "stone",
+                      "cpu",
+                      "other"
+                    ]
+                  },
+                  "algorithmPiece": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9
+                  },
+                  "pruneAuthority": {
+                    "type": "string"
+                  },
+                  "nexusEvent": {
+                    "type": "boolean"
+                  },
+                  "sacredTimeline": {
+                    "type": "boolean"
+                  },
+                  "variantId": {
+                    "type": "string"
+                  },
+                  "checkpointId": {
+                    "type": "string"
+                  },
+                  "checkpointEventId": {
+                    "type": "string"
+                  },
+                  "iteration": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "memoryRetained": {
+                    "type": "boolean"
+                  },
+                  "exitCondition": {
+                    "type": "string"
+                  },
+                  "bootstrapEntity": {
+                    "type": "string"
+                  },
+                  "identityNote": {
+                    "type": "string"
+                  },
+                  "signal": {
+                    "type": "string"
+                  },
+                  "perceptionMode": {
+                    "type": "string"
+                  },
+                  "exitFailed": {
+                    "type": "boolean"
+                  },
+                  "observerContinuity": {
+                    "type": "boolean"
+                  },
+                  "note": {
+                    "type": "string"
+                  },
+                  "tags": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "additionalProperties": false
               }
             },
             "required": [
@@ -448,7 +726,8 @@
                   "attractsToward",
                   "collapsesInto",
                   "mirrors",
-                  "supersedes"
+                  "supersedes",
+                  "originatesFrom"
                 ]
               }
             },
@@ -540,6 +819,7 @@
       "required": [
         "meta",
         "ruleSetIds",
+        "primaryRuleSetId",
         "topologyPatternId",
         "worlds",
         "events",

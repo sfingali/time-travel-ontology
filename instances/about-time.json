@@ -6,55 +6,631 @@
     "medium": "film",
     "sources": [
       "Richard Curtis (2013)",
-      "time-travel-archive/films/about-time.md"
+      "time-travel-archive/films/about-time.md",
+      "tenet-class deepen 2026-09-06"
     ]
   },
-  "ruleSetIds": ["mutable_ripple", "fixed_novikov"],
+  "ruleSetIds": [
+    "mutable_ripple",
+    "fixed_novikov"
+  ],
   "primaryRuleSetId": "mutable_ripple",
-  "mixinRuleSetIds": ["fixed_novikov"],
+  "mixinRuleSetIds": [
+    "fixed_novikov"
+  ],
   "topologyPatternId": "mutable_single_with_ripples",
-  "worlds": [{
-    "kind": "timeline",
-    "id": "w_about",
-    "label": "Tim's personal timeline",
-    "spanLabel": "adulthood",
-    "description": "Men in family can return to personal past; ripples personal events"
-  }],
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_about",
+      "label": "Tim's personal timeline",
+      "spanLabel": "adulthood",
+      "description": "Men in family can return to personal past; ripples personal events"
+    }
+  ],
   "agents": [
-    {"id": "tim", "label": "Tim Lake", "identityGroup": "tim", "continuityRole": "observer_persistent", "homeWorldRef": "w_about"},
-    {"id": "dad", "label": "Dad (James)", "identityGroup": "dad", "continuityRole": "older_self", "homeWorldRef": "w_about"},
-    {"id": "mary", "label": "Mary", "homeWorldRef": "w_about"},
-    {"id": "kitkat", "label": "Kit Kat", "homeWorldRef": "w_about"}
+    {
+      "id": "tim",
+      "label": "Tim Lake",
+      "identityGroup": "tim",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_about"
+    },
+    {
+      "id": "dad",
+      "label": "Dad (James)",
+      "identityGroup": "dad",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_about"
+    },
+    {
+      "id": "mary",
+      "label": "Mary",
+      "homeWorldRef": "w_about",
+      "identityGroup": "mary",
+      "continuityRole": "primary"
+    },
+    {
+      "id": "kitkat",
+      "label": "Kit Kat",
+      "homeWorldRef": "w_about",
+      "identityGroup": "kitkat",
+      "continuityRole": "primary"
+    },
+    {
+      "id": "harry",
+      "label": "Harry",
+      "homeWorldRef": "w_about"
+    },
+    {
+      "id": "charlotte",
+      "label": "Charlotte",
+      "homeWorldRef": "w_about"
+    },
+    {
+      "id": "posy",
+      "label": "Posy",
+      "identityGroup": "child",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_about"
+    },
+    {
+      "id": "posy_alt",
+      "label": "Son (Posy-replaced)",
+      "identityGroup": "child",
+      "continuityRole": "variant",
+      "homeWorldRef": "w_about",
+      "continuedFrom": "posy"
+    }
   ],
   "events": [
-    {"id": "e_reveal", "type": "reveal", "label": "Dad reveals hereditary time travel", "at": {"worldRef": "w_about", "timeLabel": "21st birthday"}, "agents": ["tim", "dad"], "payload": {"travelMode": "other"}},
-    {"id": "e_meet_mary", "type": "ordinary", "label": "Meets Mary (after rewrites)", "at": {"worldRef": "w_about", "timeLabel": "London"}, "agents": ["tim", "mary"]},
-    {"id": "e_fix_dates", "type": "intervention", "label": "Replay dates / career / sister outcomes", "at": {"worldRef": "w_about", "timeLabel": "various"}, "agents": ["tim", "mary", "kitkat"]},
-    {"id": "e_child_rule", "type": "observation", "label": "Cannot travel before a child's birth without losing them", "at": {"worldRef": "w_about", "timeLabel": "parenthood"}, "agents": ["tim", "dad"], "payload": {"note": "soft immutability constraint"}},
-    {"id": "e_dad_last", "type": "ordinary", "label": "Last travels with Dad before his death", "at": {"worldRef": "w_about", "timeLabel": "Dad's end"}, "agents": ["tim", "dad"]},
-    {"id": "e_dad_death", "type": "death", "label": "Dad dies; Tim stops rewinding grief", "at": {"worldRef": "w_about", "timeLabel": "later"}, "agents": ["tim", "dad"]},
-    {"id": "e_live_forward", "type": "intervention", "label": "Chooses to live each day once", "at": {"worldRef": "w_about", "timeLabel": "resolution"}, "agents": ["tim", "mary"], "payload": {"exitCondition": "stop replaying ordinary days"}},
-    {"id": "e_ordinary", "type": "ordinary", "label": "Ordinary happiness without constant reset", "at": {"worldRef": "w_about", "timeLabel": "epilogue"}, "agents": ["tim", "mary"]}
+    {
+      "id": "e_nye",
+      "type": "ordinary",
+      "label": "Disappointing New Year party",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "Cornwall NYE"
+      },
+      "agents": [
+        "tim",
+        "kitkat",
+        "charlotte"
+      ]
+    },
+    {
+      "id": "e_reveal",
+      "type": "reveal",
+      "label": "Dad reveals hereditary male-line travel",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "21st birthday morning"
+      },
+      "agents": [
+        "tim",
+        "dad"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_charlotte",
+      "type": "intervention",
+      "label": "Charlotte confessions still fail",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "summer loops"
+      },
+      "agents": [
+        "tim",
+        "charlotte"
+      ],
+      "payload": {
+        "note": "cannot rewrite others feelings"
+      }
+    },
+    {
+      "id": "e_london",
+      "type": "ordinary",
+      "label": "Tim moves to London; rooms with Harry",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "London"
+      },
+      "agents": [
+        "tim",
+        "harry"
+      ]
+    },
+    {
+      "id": "e_dans_noir",
+      "type": "ordinary",
+      "label": "Meets Mary at Dans le Noir",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "first meet"
+      },
+      "agents": [
+        "tim",
+        "mary"
+      ]
+    },
+    {
+      "id": "e_harry_play",
+      "type": "intervention",
+      "label": "Rewinds to save Harry play; Mary night erased",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "play night"
+      },
+      "agents": [
+        "tim",
+        "harry",
+        "mary"
+      ]
+    },
+    {
+      "id": "e_exhibition",
+      "type": "intervention",
+      "label": "Re-meets Mary at Kate Moss exhibition",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "exhibition"
+      },
+      "agents": [
+        "tim",
+        "mary"
+      ]
+    },
+    {
+      "id": "e_boyfriend",
+      "type": "intervention",
+      "label": "Arrives before rival boyfriend",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "preemption"
+      },
+      "agents": [
+        "tim",
+        "mary"
+      ]
+    },
+    {
+      "id": "e_wedding",
+      "type": "ordinary",
+      "label": "Marries Mary; declines later Charlotte",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "wedding"
+      },
+      "agents": [
+        "tim",
+        "mary",
+        "charlotte"
+      ]
+    },
+    {
+      "id": "e_posy",
+      "type": "birth",
+      "label": "Daughter Posy born",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "parenthood"
+      },
+      "agents": [
+        "tim",
+        "mary",
+        "posy"
+      ]
+    },
+    {
+      "id": "e_kitkat_crash",
+      "type": "intervention",
+      "label": "Prevents Kit Kat crash on Posy birthday",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "Posy birthday"
+      },
+      "agents": [
+        "tim",
+        "kitkat",
+        "posy"
+      ]
+    },
+    {
+      "id": "e_posy_erased",
+      "type": "branch_fork",
+      "label": "Pre-conception edit replaces Posy with a son",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "after rewrite"
+      },
+      "agents": [
+        "tim",
+        "posy_alt",
+        "kitkat"
+      ],
+      "payload": {
+        "note": "conception butterfly"
+      }
+    },
+    {
+      "id": "e_restore_crash",
+      "type": "intervention",
+      "label": "Restores crash timeline so Posy exists",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "restore"
+      },
+      "agents": [
+        "tim",
+        "kitkat",
+        "posy",
+        "dad"
+      ]
+    },
+    {
+      "id": "e_kitkat_present",
+      "type": "ordinary",
+      "label": "Helps Kit Kat in present",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "present tense"
+      },
+      "agents": [
+        "tim",
+        "kitkat"
+      ]
+    },
+    {
+      "id": "e_son",
+      "type": "birth",
+      "label": "Second child (son) born",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "later"
+      },
+      "agents": [
+        "tim",
+        "mary"
+      ]
+    },
+    {
+      "id": "e_cancer",
+      "type": "observation",
+      "label": "James terminal; cannot undo smoking without erasing kids",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "illness"
+      },
+      "agents": [
+        "tim",
+        "dad"
+      ]
+    },
+    {
+      "id": "e_day_double",
+      "type": "ordinary",
+      "label": "James teaches live-each-day-twice ethic",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "advice"
+      },
+      "agents": [
+        "tim",
+        "dad"
+      ]
+    },
+    {
+      "id": "e_dad_last",
+      "type": "ordinary",
+      "label": "Last shared memory travels with Dad",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "Dad end"
+      },
+      "agents": [
+        "tim",
+        "dad"
+      ]
+    },
+    {
+      "id": "e_dad_death",
+      "type": "death",
+      "label": "Dad dies; Tim stops rewinding grief",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "later"
+      },
+      "agents": [
+        "tim",
+        "dad"
+      ]
+    },
+    {
+      "id": "e_third_cutoff",
+      "type": "observation",
+      "label": "Third child conception cuts off Dad visits",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "third child"
+      },
+      "agents": [
+        "tim",
+        "mary",
+        "dad"
+      ]
+    },
+    {
+      "id": "e_live_forward",
+      "type": "intervention",
+      "label": "Chooses to live each day once",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "resolution"
+      },
+      "agents": [
+        "tim",
+        "mary"
+      ],
+      "payload": {
+        "exitCondition": "stop replaying"
+      }
+    },
+    {
+      "id": "e_ordinary",
+      "type": "ordinary",
+      "label": "Ordinary happiness without constant reset",
+      "at": {
+        "worldRef": "w_about",
+        "timeLabel": "epilogue"
+      },
+      "agents": [
+        "tim",
+        "mary"
+      ]
+    }
   ],
   "edges": [
-    {"id": "c1", "kind": "causal", "from": "e_reveal", "to": "e_meet_mary"},
-    {"id": "c2", "kind": "intervention", "from": "e_meet_mary", "to": "e_fix_dates"},
-    {"id": "c3", "kind": "causal", "from": "e_fix_dates", "to": "e_child_rule"},
-    {"id": "c4", "kind": "temporal", "from": "e_child_rule", "to": "e_dad_last"},
-    {"id": "c5", "kind": "causal", "from": "e_dad_last", "to": "e_dad_death"},
-    {"id": "c6", "kind": "causal", "from": "e_dad_death", "to": "e_live_forward"},
-    {"id": "c7", "kind": "temporal", "from": "e_live_forward", "to": "e_ordinary"}
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_nye",
+      "to": "e_reveal"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_reveal",
+      "to": "e_charlotte"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_charlotte",
+      "to": "e_london"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_london",
+      "to": "e_dans_noir"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_dans_noir",
+      "to": "e_harry_play"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_harry_play",
+      "to": "e_exhibition"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_exhibition",
+      "to": "e_boyfriend"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_boyfriend",
+      "to": "e_wedding"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_wedding",
+      "to": "e_posy"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_posy",
+      "to": "e_kitkat_crash"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_kitkat_crash",
+      "to": "e_posy_erased"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_posy_erased",
+      "to": "e_restore_crash"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_restore_crash",
+      "to": "e_kitkat_present"
+    },
+    {
+      "id": "c14",
+      "kind": "causal",
+      "from": "e_kitkat_present",
+      "to": "e_son"
+    },
+    {
+      "id": "c15",
+      "kind": "causal",
+      "from": "e_son",
+      "to": "e_cancer"
+    },
+    {
+      "id": "c16",
+      "kind": "causal",
+      "from": "e_cancer",
+      "to": "e_day_double"
+    },
+    {
+      "id": "c17",
+      "kind": "causal",
+      "from": "e_day_double",
+      "to": "e_dad_last"
+    },
+    {
+      "id": "c18",
+      "kind": "causal",
+      "from": "e_dad_last",
+      "to": "e_dad_death"
+    },
+    {
+      "id": "c19",
+      "kind": "causal",
+      "from": "e_dad_death",
+      "to": "e_third_cutoff"
+    },
+    {
+      "id": "c20",
+      "kind": "causal",
+      "from": "e_third_cutoff",
+      "to": "e_live_forward"
+    },
+    {
+      "id": "c21",
+      "kind": "causal",
+      "from": "e_live_forward",
+      "to": "e_ordinary"
+    },
+    {
+      "id": "x1",
+      "kind": "intervention",
+      "from": "e_harry_play",
+      "to": "e_exhibition",
+      "label": "must re-meet after wipe"
+    },
+    {
+      "id": "x2",
+      "kind": "intervention",
+      "from": "e_kitkat_crash",
+      "to": "e_posy_erased",
+      "label": "pre-conception butterfly"
+    },
+    {
+      "id": "x3",
+      "kind": "identity",
+      "from": "posy",
+      "to": "posy_alt",
+      "label": "birth-slot alternate",
+      "relation": "supersedes"
+    },
+    {
+      "id": "x4",
+      "kind": "causal",
+      "from": "e_posy_erased",
+      "to": "e_restore_crash"
+    },
+    {
+      "id": "x5",
+      "kind": "temporal",
+      "from": "e_cancer",
+      "to": "e_dad_last"
+    },
+    {
+      "id": "x6",
+      "kind": "intervention",
+      "from": "e_dad_death",
+      "to": "e_live_forward",
+      "label": "grief refusal"
+    },
+    {
+      "id": "x7",
+      "kind": "causal",
+      "from": "e_charlotte",
+      "to": "e_london"
+    },
+    {
+      "id": "x8",
+      "kind": "identity",
+      "from": "tim",
+      "to": "dad",
+      "label": "shared traveler lineage"
+    },
+    {
+      "id": "x9",
+      "kind": "temporal",
+      "from": "e_third_cutoff",
+      "to": "e_live_forward"
+    },
+    {
+      "id": "x10",
+      "kind": "causal",
+      "from": "e_day_double",
+      "to": "e_ordinary",
+      "label": "ethic becomes practice"
+    }
   ],
-  "interventions": [{
-    "id": "iv_stop",
-    "eventId": "e_live_forward",
-    "ruleEffects": [
-      {"ruleSetId": "mutable_ripple", "effect": "Stops using personal overwrite as coping mechanism"},
-      {"ruleSetId": "fixed_novikov", "effect": "Child-birth rule acts as soft self-consistency lock"}
-    ]
-  }],
+  "interventions": [
+    {
+      "id": "iv_play",
+      "eventId": "e_harry_play",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Rewind erases Mary meeting"
+        }
+      ]
+    },
+    {
+      "id": "iv_posy",
+      "eventId": "e_posy_erased",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Pre-birth edit changes which child is conceived"
+        },
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Conception acts as soft consistency lock"
+        }
+      ]
+    },
+    {
+      "id": "iv_stop",
+      "eventId": "e_live_forward",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Stops personal overwrite as coping"
+        },
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Child-birth rule final lock"
+        }
+      ]
+    }
+  ],
   "outcome": {
-    "summary": "Personal mutable past used then renounced; Tim lives forward after Dad's death.",
-    "endWorldRefs": ["w_about"]
+    "summary": "Personal mutable past used then renounced after conception butterfly and Dad death; Tim lives forward.",
+    "endWorldRefs": [
+      "w_about"
+    ]
   }
 }

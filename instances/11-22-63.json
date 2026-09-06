@@ -7,12 +7,13 @@
     "sources": [
       "Bridget Carpenter adapting Stephen King (Hulu 2016)",
       "time-travel-archive/tv/11-22-63.md",
-      "time-travel-archive/novels/11-22-63.md"
+      "time-travel-archive/novels/11-22-63.md",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "branch_on_intervention",
     "mutable_ripple",
+    "branch_on_intervention",
     "worldline_attractor"
   ],
   "primaryRuleSetId": "branch_on_intervention",
@@ -53,9 +54,9 @@
   "agents": [
     {
       "id": "jake",
-      "label": "Jake Epping / James Amberson",
+      "label": "Jake Epping",
       "identityGroup": "jake",
-      "continuityRole": "primary",
+      "continuityRole": "observer_persistent",
       "homeWorldRef": "w_2015"
     },
     {
@@ -77,33 +78,92 @@
       "id": "yellow",
       "label": "Yellow-card stranger / steward",
       "homeWorldRef": "w_1960s"
+    },
+    {
+      "id": "harry",
+      "label": "Harry Dunning (test case)",
+      "homeWorldRef": "w_2015"
     }
   ],
   "events": [
     {
-      "id": "e_portal",
-      "type": "ordinary",
-      "label": "Al shows Jake diner pantry portal (fixed landing night)",
+      "id": "e_diner",
+      "type": "reveal",
+      "label": "Al shows Jake the diner portal to 1960",
       "at": {
         "worldRef": "w_2015",
-        "timeLabel": "2015"
+        "timeLabel": "2011"
       },
       "agents": [
         "jake",
         "al"
       ],
       "payload": {
-        "travelMode": "other",
-        "note": "re-entry resets past"
+        "travelMode": "other"
       }
     },
     {
-      "id": "e_enter",
-      "type": "departure",
-      "label": "Jake enters portal to 1960 evening",
+      "id": "e_rules",
+      "type": "observation",
+      "label": "Land always Sep 1960; minutes present vs years past; reset on re-entry",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "rules"
+      },
+      "agents": [
+        "jake",
+        "al"
+      ]
+    },
+    {
+      "id": "e_test",
+      "type": "intervention",
+      "label": "Test change: save Harry's family",
       "at": {
         "worldRef": "w_1960s",
-        "timeLabel": "1960-10-21"
+        "timeLabel": "1960 test"
+      },
+      "agents": [
+        "jake",
+        "harry"
+      ]
+    },
+    {
+      "id": "e_test_cost",
+      "type": "observation",
+      "label": "Present ripples show cost/objections of past",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "after test"
+      },
+      "agents": [
+        "jake",
+        "al"
+      ]
+    },
+    {
+      "id": "e_commit",
+      "type": "departure",
+      "label": "Jake commits to stop JFK assassination",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "mission"
+      },
+      "agents": [
+        "jake",
+        "al"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_land",
+      "type": "arrival",
+      "label": "Lands 1960; builds identity",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "1960"
       },
       "agents": [
         "jake"
@@ -113,26 +173,22 @@
       }
     },
     {
-      "id": "e_test",
-      "type": "intervention",
-      "label": "Test change: save family from domestic horror (costly)",
+      "id": "e_teach",
+      "type": "ordinary",
+      "label": "Teaching job; meets Sadie",
       "at": {
         "worldRef": "w_1960s",
-        "timeLabel": "training"
+        "timeLabel": "1960-61"
       },
       "agents": [
-        "jake"
-      ],
-      "payload": {
-        "tags": [
-          "past_pushes_back"
-        ]
-      }
+        "jake",
+        "sadie"
+      ]
     },
     {
-      "id": "e_jodie",
+      "id": "e_romance",
       "type": "ordinary",
-      "label": "Settles in Jodie as teacher; romance with Sadie",
+      "label": "Romance with Sadie deepens",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "1961-63"
@@ -143,27 +199,24 @@
       ]
     },
     {
-      "id": "e_resist",
-      "type": "ordinary",
-      "label": "Past pushes back: fires, accidents, destroyed notes",
+      "id": "e_immune",
+      "type": "observation",
+      "label": "Past pushes back as Jake nears Oswald",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "escalation"
       },
       "agents": [
-        "jake",
-        "sadie",
-        "yellow"
+        "jake"
       ],
       "payload": {
-        "attractorFieldId": "history_immune",
-        "divergenceMagnitude": 0.2
+        "note": "past immune response"
       }
     },
     {
-      "id": "e_oswald",
-      "type": "observation",
-      "label": "Infiltrate Oswald's orbit; lone gunman confirmation arc",
+      "id": "e_oswald_watch",
+      "type": "ordinary",
+      "label": "Surveillance of Oswald",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "1963"
@@ -174,43 +227,91 @@
       ]
     },
     {
-      "id": "e_dealey",
+      "id": "e_book_depository",
       "type": "intervention",
-      "label": "Dealey Plaza: Jake stops the assassination",
+      "label": "Dealey Plaza intervention attempt",
       "at": {
         "worldRef": "w_1960s",
-        "timeLabel": "1963-11-22"
+        "timeLabel": "22 Nov 1963"
       },
       "agents": [
         "jake",
-        "oswald",
-        "sadie"
+        "oswald"
       ]
     },
     {
-      "id": "e_dystopia",
-      "type": "branch_fork",
-      "label": "Return: dystopian present (war, ruin, frayed time)",
+      "id": "e_success",
+      "type": "ordinary",
+      "label": "JFK survives in this run",
       "at": {
-        "worldRef": "w_jfk_saved",
-        "timeLabel": "2015+"
+        "worldRef": "w_1960s",
+        "timeLabel": "22 Nov 1963"
+      },
+      "agents": [
+        "jake"
+      ]
+    },
+    {
+      "id": "e_return",
+      "type": "arrival",
+      "label": "Return to present",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "present"
       },
       "agents": [
         "jake"
       ],
       "payload": {
-        "tags": [
-          "butterfly_catastrophe"
-        ]
+        "travelMode": "other"
       }
+    },
+    {
+      "id": "e_dystopia",
+      "type": "collapse",
+      "label": "Present dystopia from butterfly cascades",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "altered present"
+      },
+      "agents": [
+        "jake"
+      ]
     },
     {
       "id": "e_undo",
       "type": "intervention",
-      "label": "Re-enter portal; do not save Kennedy; accept imperfect timeline",
+      "label": "Re-enter to reset past / undo assassination stop",
       "at": {
-        "worldRef": "w_accepted",
+        "worldRef": "w_1960s",
         "timeLabel": "reset"
+      },
+      "agents": [
+        "jake"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_accept",
+      "type": "ordinary",
+      "label": "Accept imperfect history; leave JFK fate",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "resolution"
+      },
+      "agents": [
+        "jake"
+      ]
+    },
+    {
+      "id": "e_sadie_loss",
+      "type": "ordinary",
+      "label": "Cost to Sadie relationship across resets",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "emotional"
       },
       "agents": [
         "jake",
@@ -218,12 +319,62 @@
       ]
     },
     {
-      "id": "e_coda",
+      "id": "e_final_dance",
       "type": "ordinary",
-      "label": "Finale: seek present-day connection / accept history",
+      "label": "Final bittersweet Sadie coda (adaptations vary)",
       "at": {
-        "worldRef": "w_accepted",
-        "timeLabel": "coda"
+        "worldRef": "w_2015",
+        "timeLabel": "epilogue"
+      },
+      "agents": [
+        "jake",
+        "sadie"
+      ]
+    },
+    {
+      "id": "e_al_die",
+      "type": "death",
+      "label": "Al's cancer frames urgency",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "framing"
+      },
+      "agents": [
+        "al",
+        "jake"
+      ]
+    },
+    {
+      "id": "e_beacon",
+      "type": "ordinary",
+      "label": "Yellow card / anomalies as warning signs",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "warnings"
+      },
+      "agents": [
+        "jake"
+      ]
+    },
+    {
+      "id": "e_theme",
+      "type": "observation",
+      "label": "Big history resists; personal love vs mission",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "theme"
+      },
+      "agents": [
+        "jake"
+      ]
+    },
+    {
+      "id": "e_close",
+      "type": "ordinary",
+      "label": "Leaves past; lives with consequences",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "close"
       },
       "agents": [
         "jake"
@@ -234,99 +385,208 @@
     {
       "id": "c1",
       "kind": "causal",
-      "from": "e_portal",
-      "to": "e_enter"
+      "from": "e_diner",
+      "to": "e_rules"
     },
     {
       "id": "c2",
       "kind": "causal",
-      "from": "e_enter",
+      "from": "e_rules",
       "to": "e_test"
     },
     {
       "id": "c3",
-      "kind": "temporal",
+      "kind": "causal",
       "from": "e_test",
-      "to": "e_jodie"
+      "to": "e_test_cost"
     },
     {
       "id": "c4",
       "kind": "causal",
-      "from": "e_jodie",
-      "to": "e_resist"
+      "from": "e_test_cost",
+      "to": "e_commit"
     },
     {
       "id": "c5",
       "kind": "causal",
-      "from": "e_oswald",
-      "to": "e_dealey"
+      "from": "e_commit",
+      "to": "e_land"
     },
     {
       "id": "c6",
-      "kind": "intervention",
-      "from": "e_dealey",
-      "to": "e_dystopia"
+      "kind": "causal",
+      "from": "e_land",
+      "to": "e_teach"
     },
     {
       "id": "c7",
-      "kind": "world_relation",
-      "from": "w_2015",
-      "to": "w_jfk_saved",
-      "relation": "forksFrom",
-      "label": "JFK saved"
+      "kind": "causal",
+      "from": "e_teach",
+      "to": "e_romance"
     },
     {
       "id": "c8",
-      "kind": "world_relation",
-      "from": "w_jfk_saved",
-      "to": "w_accepted",
-      "relation": "supersedes",
-      "label": "undo"
+      "kind": "causal",
+      "from": "e_romance",
+      "to": "e_immune"
     },
     {
       "id": "c9",
+      "kind": "causal",
+      "from": "e_immune",
+      "to": "e_oswald_watch"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_oswald_watch",
+      "to": "e_book_depository"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_book_depository",
+      "to": "e_success"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_success",
+      "to": "e_return"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_return",
+      "to": "e_dystopia"
+    },
+    {
+      "id": "c14",
       "kind": "causal",
       "from": "e_dystopia",
       "to": "e_undo"
     },
     {
-      "id": "c10",
-      "kind": "temporal",
+      "id": "c15",
+      "kind": "causal",
       "from": "e_undo",
-      "to": "e_coda"
+      "to": "e_accept"
     },
     {
-      "id": "c11",
+      "id": "c16",
+      "kind": "causal",
+      "from": "e_accept",
+      "to": "e_sadie_loss"
+    },
+    {
+      "id": "c17",
+      "kind": "causal",
+      "from": "e_sadie_loss",
+      "to": "e_final_dance"
+    },
+    {
+      "id": "c18",
+      "kind": "causal",
+      "from": "e_final_dance",
+      "to": "e_al_die"
+    },
+    {
+      "id": "c19",
+      "kind": "causal",
+      "from": "e_al_die",
+      "to": "e_beacon"
+    },
+    {
+      "id": "c20",
+      "kind": "causal",
+      "from": "e_beacon",
+      "to": "e_theme"
+    },
+    {
+      "id": "c21",
+      "kind": "causal",
+      "from": "e_theme",
+      "to": "e_close"
+    },
+    {
+      "id": "x1",
+      "kind": "temporal",
+      "from": "e_diner",
+      "to": "e_land"
+    },
+    {
+      "id": "x2",
+      "kind": "intervention",
+      "from": "e_book_depository",
+      "to": "e_dystopia"
+    },
+    {
+      "id": "x3",
+      "kind": "causal",
+      "from": "e_dystopia",
+      "to": "e_undo"
+    },
+    {
+      "id": "x4",
       "kind": "world_relation",
-      "from": "w_1960s",
-      "to": "w_2015",
-      "relation": "originatesFrom"
+      "from": "w_2015",
+      "to": "w_1960s",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "x5",
+      "kind": "causal",
+      "from": "e_immune",
+      "to": "e_beacon"
+    },
+    {
+      "id": "x6",
+      "kind": "intervention",
+      "from": "e_test",
+      "to": "e_test_cost"
+    },
+    {
+      "id": "x7",
+      "kind": "temporal",
+      "from": "e_undo",
+      "to": "e_accept"
+    },
+    {
+      "id": "x8",
+      "kind": "causal",
+      "from": "e_romance",
+      "to": "e_sadie_loss"
     }
   ],
   "interventions": [
     {
-      "id": "iv_dealey",
-      "eventId": "e_dealey",
+      "id": "iv_jfk",
+      "eventId": "e_book_depository",
       "ruleEffects": [
         {
           "ruleSetId": "branch_on_intervention",
-          "effect": "Saving JFK forks a catastrophic present rather than healing history"
+          "effect": "Saving JFK branches a dystopian present"
         },
         {
           "ruleSetId": "worldline_attractor",
-          "effect": "Past resistance (accidents, stewards) pulls toward unaltered assassination worldline"
-        },
+          "effect": "Past immune response resists the change"
+        }
+      ]
+    },
+    {
+      "id": "iv_undo",
+      "eventId": "e_undo",
+      "ruleEffects": [
         {
           "ruleSetId": "mutable_ripple",
-          "effect": "Portal re-entry wipes prior sojourn changes \u2014 high-stakes overwrite of the wrought past"
+          "effect": "Re-entry resets prior past alterations"
         }
       ]
     }
   ],
   "outcome": {
-    "summary": "Diner portal mission stops JFK and births dystopia; Jake undoes the save, accepting an imperfect timeline over forced utopia.",
+    "summary": "Diner portal to 1960; stopping JFK yields dystopia; Jake undoes change and accepts history's weight.",
     "endWorldRefs": [
-      "w_accepted",
       "w_2015"
     ]
   }

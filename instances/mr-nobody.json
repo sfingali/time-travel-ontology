@@ -7,12 +7,13 @@
     "sources": [
       "Jaco Van Dormael (2009)",
       "time-travel-archive/films/mr-nobody.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "branch_on_intervention",
-    "perception_nonlinear"
+    "perception_nonlinear",
+    "branch_on_intervention"
   ],
   "primaryRuleSetId": "branch_on_intervention",
   "mixinRuleSetIds": [
@@ -249,18 +250,105 @@
     },
     {
       "id": "ev_station",
+      "type": "ordinary",
       "label": "Child Nemo train-station fork",
-      "timeLabel": "childhood"
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "childhood"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_lives",
+      "type": "ordinary",
       "label": "Parallel adult lives with Anna/Elise/Jean",
-      "timeLabel": "adulthood"
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "adulthood"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_2092",
+      "type": "ordinary",
       "label": "2092 last-mortal interview frame",
-      "timeLabel": "2092"
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "2092"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_nemo_old",
+      "type": "ordinary",
+      "label": "118-year-old Nemo interviewed",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "2092"
+      }
+    },
+    {
+      "id": "e_anna",
+      "type": "ordinary",
+      "label": "Life path with Anna",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "branch A"
+      }
+    },
+    {
+      "id": "e_elise",
+      "type": "ordinary",
+      "label": "Life path with Elise",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "branch B"
+      }
+    },
+    {
+      "id": "e_jean",
+      "type": "ordinary",
+      "label": "Life path with Jean",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "branch C"
+      }
+    },
+    {
+      "id": "e_observe",
+      "type": "observation",
+      "label": "All lives experienced in superposition",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "meta"
+      },
+      "payload": {
+        "perceptionMode": "observer"
+      }
+    },
+    {
+      "id": "e_choose",
+      "type": "intervention",
+      "label": "Child chooses / unchooses",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "crux"
+      }
     }
   ],
   "edges": [
@@ -330,14 +418,67 @@
       "to": "e_rebirth"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_station",
       "to": "ev_lives",
-      "type": "branches_to"
+      "label": "branches_to"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_lives",
       "to": "ev_2092",
-      "type": "framed_by"
+      "label": "framed_by"
+    },
+    {
+      "id": "nmr-1",
+      "kind": "causal",
+      "from": "e_nemo_old",
+      "to": "e_anna"
+    },
+    {
+      "id": "nmr-2",
+      "kind": "causal",
+      "from": "e_anna",
+      "to": "e_elise"
+    },
+    {
+      "id": "nmr-3",
+      "kind": "causal",
+      "from": "e_elise",
+      "to": "e_jean"
+    },
+    {
+      "id": "nmr-4",
+      "kind": "causal",
+      "from": "e_jean",
+      "to": "e_observe"
+    },
+    {
+      "id": "nmr-5",
+      "kind": "causal",
+      "from": "e_observe",
+      "to": "e_choose"
+    },
+    {
+      "id": "bridge_mr-nobod",
+      "kind": "causal",
+      "from": "ev_2092",
+      "to": "e_nemo_old"
+    },
+    {
+      "id": "mx1",
+      "kind": "world_relation",
+      "from": "w_frame",
+      "to": "w_frame",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "mx2",
+      "kind": "causal",
+      "from": "e_station",
+      "to": "e_observe"
     }
   ],
   "interventions": [

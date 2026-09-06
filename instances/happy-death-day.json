@@ -6,12 +6,13 @@
     "medium": "film",
     "sources": [
       "Christopher Landon (2017)",
-      "time-travel-archive/films/happy-death-day.md"
+      "time-travel-archive/films/happy-death-day.md",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "temporal_loop_exit",
-    "death_checkpoint_rewrite"
+    "death_checkpoint_rewrite",
+    "temporal_loop_exit"
   ],
   "primaryRuleSetId": "temporal_loop_exit",
   "mixinRuleSetIds": [
@@ -32,7 +33,8 @@
       "label": "Tree Gelbman",
       "identityGroup": "tree",
       "continuityRole": "observer_persistent",
-      "homeWorldRef": "w_birthday"
+      "homeWorldRef": "w_birthday",
+      "iterationIndex": 0
     },
     {
       "id": "carter",
@@ -53,58 +55,87 @@
       "id": "tombs",
       "label": "John Tombs",
       "homeWorldRef": "w_birthday"
+    },
+    {
+      "id": "Danielle",
+      "label": "Danielle",
+      "homeWorldRef": "w_birthday"
     }
   ],
   "events": [
     {
-      "id": "e_wake",
-      "type": "checkpoint",
-      "label": "Wake in Carter's dorm on birthday",
+      "id": "e_birthday",
+      "type": "ordinary",
+      "label": "Tree wakes on birthday in Carter's dorm",
       "at": {
         "worldRef": "w_birthday",
-        "timeLabel": "morning"
+        "timeLabel": "Day 1 morning"
       },
       "agents": [
         "tree",
         "carter"
-      ],
-      "payload": {
-        "checkpointId": "carter_bed"
-      }
+      ]
     },
     {
-      "id": "e_tunnel",
-      "type": "death",
-      "label": "Baby-masked killer stabs Tree in tunnel",
+      "id": "e_party",
+      "type": "ordinary",
+      "label": "Campus party; Tree cruel to peers",
       "at": {
         "worldRef": "w_birthday",
-        "timeLabel": "night1"
+        "timeLabel": "night"
       },
       "agents": [
         "tree"
       ]
     },
     {
-      "id": "e_reset1",
-      "type": "loop_reset",
-      "label": "Wake again \u2014 loop begins",
+      "id": "e_tunnel_kill",
+      "type": "death",
+      "label": "Masked killer murders Tree in tunnel",
       "at": {
         "worldRef": "w_birthday",
-        "timeLabel": "morning#2"
+        "timeLabel": "night 1"
       },
       "agents": [
         "tree"
       ],
       "payload": {
-        "iteration": 2,
-        "memoryRetained": true,
-        "checkpointEventId": "e_wake"
+        "memoryRetained": true
       }
     },
     {
+      "id": "e_reset1",
+      "type": "loop_reset",
+      "label": "Wake reset to birthday morning",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "Day 2"
+      },
+      "agents": [
+        "tree"
+      ],
+      "payload": {
+        "checkpointId": "birthday",
+        "iteration": 1,
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_room_kill",
+      "type": "death",
+      "label": "Killed again in dorm path",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "night 2"
+      },
+      "agents": [
+        "tree"
+      ]
+    },
+    {
       "id": "e_investigate",
-      "type": "ordinary",
-      "label": "Investigation loops; suspect trail (Tombs, Butler, Lori)",
+      "type": "intervention",
+      "label": "Uses loops to map killer pattern / suspects",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "mid loops"
@@ -114,28 +145,68 @@
         "carter"
       ],
       "payload": {
-        "iteration": 8,
         "memoryRetained": true
       }
     },
     {
-      "id": "e_carter_dies",
-      "type": "death",
-      "label": "False solution: Tombs kills Carter",
+      "id": "e_hospital",
+      "type": "ordinary",
+      "label": "Hospital chase / Tombs escape subplot",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "hospital loop"
       },
       "agents": [
-        "carter",
+        "tree",
         "tombs",
-        "tree"
+        "carter"
       ]
     },
     {
-      "id": "e_suicide_reset",
-      "type": "loop_reset",
-      "label": "Tree hangs herself to restore Carter",
+      "id": "e_suspect_trail",
+      "type": "observation",
+      "label": "Suspect trail through peers and exes",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "investigation"
+      },
+      "agents": [
+        "tree",
+        "carter"
+      ]
+    },
+    {
+      "id": "e_tombs_frame",
+      "type": "intervention",
+      "label": "False solution: stop Tombs",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "Tombs night"
+      },
+      "agents": [
+        "tree",
+        "tombs",
+        "carter"
+      ]
+    },
+    {
+      "id": "e_carter_dies",
+      "type": "death",
+      "label": "Carter dies in Tombs confrontation",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "failed solution"
+      },
+      "agents": [
+        "carter",
+        "tree",
+        "tombs"
+      ]
+    },
+    {
+      "id": "e_tree_suicide",
+      "type": "death",
+      "label": "Tree suicides to reset and save Carter",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "moral reset"
@@ -144,74 +215,165 @@
         "tree"
       ],
       "payload": {
-        "iteration": 12,
-        "memoryRetained": true,
-        "exitFailed": true,
-        "checkpointEventId": "e_wake",
-        "note": "will not accept win with Carter dead"
+        "note": "death to restore loop"
       }
     },
     {
-      "id": "e_kill_tombs",
-      "type": "intervention",
-      "label": "Perfect day: ends affair, reconciles with father, kills Tombs, eats cupcake",
-      "at": {
-        "worldRef": "w_birthday",
-        "timeLabel": "false exit"
-      },
-      "agents": [
-        "tree",
-        "carter",
-        "tombs",
-        "lori"
-      ]
-    },
-    {
-      "id": "e_poison",
+      "id": "e_reset_carter",
       "type": "loop_reset",
-      "label": "Still loops \u2014 cupcake poisoned; Lori is true killer",
+      "label": "Loop restores Carter",
       "at": {
         "worldRef": "w_birthday",
-        "timeLabel": "reveal morning"
-      },
-      "agents": [
-        "tree",
-        "lori"
-      ],
-      "payload": {
-        "iteration": 13,
-        "memoryRetained": true,
-        "checkpointEventId": "e_wake"
-      }
-    },
-    {
-      "id": "e_final",
-      "type": "death",
-      "label": "Tree force-feeds Lori the cupcake; Lori falls from window",
-      "at": {
-        "worldRef": "w_birthday",
-        "timeLabel": "final night"
-      },
-      "agents": [
-        "tree",
-        "lori"
-      ]
-    },
-    {
-      "id": "e_exit",
-      "type": "ordinary",
-      "label": "Next calendar day confirmed (Carter prank); loop exit",
-      "at": {
-        "worldRef": "w_birthday",
-        "timeLabel": "true next day"
+        "timeLabel": "after suicide"
       },
       "agents": [
         "tree",
         "carter"
       ],
       "payload": {
-        "exitCondition": "true killer stopped and survive the night",
         "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_perfect_day",
+      "type": "intervention",
+      "label": "Kill Tombs and eat cupcake 'perfect day'",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "false exit"
+      },
+      "agents": [
+        "tree",
+        "tombs",
+        "carter"
+      ],
+      "payload": {
+        "exitFailed": true
+      }
+    },
+    {
+      "id": "e_still_loops",
+      "type": "loop_reset",
+      "label": "Still resets \u2014 killer not solved",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "after perfect day"
+      },
+      "agents": [
+        "tree"
+      ],
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_lori_reveal",
+      "type": "reveal",
+      "label": "Lori is true killer via poison cupcake",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "reveal"
+      },
+      "agents": [
+        "tree",
+        "lori"
+      ]
+    },
+    {
+      "id": "e_final_fight",
+      "type": "intervention",
+      "label": "Final confrontation with Lori",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "tree",
+        "lori",
+        "carter"
+      ]
+    },
+    {
+      "id": "e_lori_death",
+      "type": "death",
+      "label": "Lori defeated/killed",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "lori",
+        "tree"
+      ]
+    },
+    {
+      "id": "e_survive_night",
+      "type": "ordinary",
+      "label": "Tree survives the night with Carter",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "exit night"
+      },
+      "agents": [
+        "tree",
+        "carter"
+      ]
+    },
+    {
+      "id": "e_next_day",
+      "type": "checkpoint",
+      "label": "Next calendar morning confirms exit",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "Day after"
+      },
+      "agents": [
+        "tree",
+        "carter"
+      ],
+      "payload": {
+        "exitCondition": "true killer stopped"
+      }
+    },
+    {
+      "id": "e_prank",
+      "type": "ordinary",
+      "label": "Prank beat proves date rolled forward",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "epilogue"
+      },
+      "agents": [
+        "tree",
+        "carter"
+      ]
+    },
+    {
+      "id": "e_growth",
+      "type": "ordinary",
+      "label": "Tree kinder; loop trauma remains",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "close"
+      },
+      "agents": [
+        "tree",
+        "carter"
+      ]
+    },
+    {
+      "id": "e_rules",
+      "type": "observation",
+      "label": "Death-triggered birthday loop; memory retained",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "rules"
+      },
+      "agents": [
+        "tree"
+      ],
+      "payload": {
+        "travelMode": "other"
       }
     }
   ],
@@ -219,92 +381,202 @@
     {
       "id": "c1",
       "kind": "causal",
-      "from": "e_wake",
-      "to": "e_tunnel"
+      "from": "e_birthday",
+      "to": "e_party"
     },
     {
       "id": "c2",
       "kind": "causal",
-      "from": "e_tunnel",
-      "to": "e_reset1"
+      "from": "e_party",
+      "to": "e_tunnel_kill"
     },
     {
       "id": "c3",
-      "kind": "temporal",
-      "from": "e_reset1",
-      "to": "e_investigate"
+      "kind": "causal",
+      "from": "e_tunnel_kill",
+      "to": "e_reset1"
     },
     {
       "id": "c4",
       "kind": "causal",
-      "from": "e_investigate",
-      "to": "e_carter_dies"
+      "from": "e_reset1",
+      "to": "e_room_kill"
     },
     {
       "id": "c5",
       "kind": "causal",
-      "from": "e_carter_dies",
-      "to": "e_suicide_reset"
+      "from": "e_room_kill",
+      "to": "e_investigate"
     },
     {
       "id": "c6",
       "kind": "causal",
-      "from": "e_suicide_reset",
-      "to": "e_kill_tombs"
+      "from": "e_investigate",
+      "to": "e_hospital"
     },
     {
       "id": "c7",
       "kind": "causal",
-      "from": "e_kill_tombs",
-      "to": "e_poison"
+      "from": "e_hospital",
+      "to": "e_suspect_trail"
     },
     {
       "id": "c8",
       "kind": "causal",
-      "from": "e_poison",
-      "to": "e_final"
+      "from": "e_suspect_trail",
+      "to": "e_tombs_frame"
     },
     {
       "id": "c9",
       "kind": "causal",
-      "from": "e_final",
-      "to": "e_exit"
+      "from": "e_tombs_frame",
+      "to": "e_carter_dies"
     },
     {
       "id": "c10",
+      "kind": "causal",
+      "from": "e_carter_dies",
+      "to": "e_tree_suicide"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_tree_suicide",
+      "to": "e_reset_carter"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_reset_carter",
+      "to": "e_perfect_day"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_perfect_day",
+      "to": "e_still_loops"
+    },
+    {
+      "id": "c14",
+      "kind": "causal",
+      "from": "e_still_loops",
+      "to": "e_lori_reveal"
+    },
+    {
+      "id": "c15",
+      "kind": "causal",
+      "from": "e_lori_reveal",
+      "to": "e_final_fight"
+    },
+    {
+      "id": "c16",
+      "kind": "causal",
+      "from": "e_final_fight",
+      "to": "e_lori_death"
+    },
+    {
+      "id": "c17",
+      "kind": "causal",
+      "from": "e_lori_death",
+      "to": "e_survive_night"
+    },
+    {
+      "id": "c18",
+      "kind": "causal",
+      "from": "e_survive_night",
+      "to": "e_next_day"
+    },
+    {
+      "id": "c19",
+      "kind": "causal",
+      "from": "e_next_day",
+      "to": "e_prank"
+    },
+    {
+      "id": "c20",
+      "kind": "causal",
+      "from": "e_prank",
+      "to": "e_growth"
+    },
+    {
+      "id": "c21",
+      "kind": "causal",
+      "from": "e_growth",
+      "to": "e_rules"
+    },
+    {
+      "id": "x1",
+      "kind": "temporal",
+      "from": "e_tunnel_kill",
+      "to": "e_reset1"
+    },
+    {
+      "id": "x2",
+      "kind": "causal",
+      "from": "e_carter_dies",
+      "to": "e_tree_suicide"
+    },
+    {
+      "id": "x3",
       "kind": "intervention",
-      "from": "e_investigate",
-      "to": "e_final"
+      "from": "e_perfect_day",
+      "to": "e_still_loops",
+      "label": "false exit"
+    },
+    {
+      "id": "x4",
+      "kind": "causal",
+      "from": "e_lori_reveal",
+      "to": "e_final_fight"
+    },
+    {
+      "id": "x5",
+      "kind": "causal",
+      "from": "e_rules",
+      "to": "e_investigate",
+      "label": "rules enable sleuthing"
+    },
+    {
+      "id": "x6",
+      "kind": "temporal",
+      "from": "e_survive_night",
+      "to": "e_next_day"
+    },
+    {
+      "id": "x7",
+      "kind": "causal",
+      "from": "e_tombs_frame",
+      "to": "e_carter_dies"
     }
   ],
   "interventions": [
     {
-      "id": "iv_moral",
-      "eventId": "e_suicide_reset",
+      "id": "iv_false",
+      "eventId": "e_perfect_day",
       "ruleEffects": [
         {
           "ruleSetId": "temporal_loop_exit",
-          "effect": "Tree refuses exit conditions that leave Carter dead"
-        },
-        {
-          "ruleSetId": "death_checkpoint_rewrite",
-          "effect": "Suicide returns to dorm checkpoint with knowledge retained"
+          "effect": "Killing wrong culprit fails exit condition"
         }
       ]
     },
     {
-      "id": "iv_lori",
-      "eventId": "e_final",
+      "id": "iv_true",
+      "eventId": "e_lori_death",
       "ruleEffects": [
         {
           "ruleSetId": "temporal_loop_exit",
-          "effect": "Killing true murderer and surviving ends the birthday loop"
+          "effect": "Stopping true killer allows calendar to advance"
+        },
+        {
+          "ruleSetId": "death_checkpoint_rewrite",
+          "effect": "Deaths rewind to birthday checkpoint until exit"
         }
       ]
     }
   ],
   "outcome": {
-    "summary": "Death-triggered birthday loop ends when Tree stops roommate Lori (not serial-killer red herring Tombs) and wakes on a true next day.",
+    "summary": "Birthday death-loop exits only when Tree stops Lori; Tombs false solution fails; memory persists across resets.",
     "endWorldRefs": [
       "w_birthday"
     ]

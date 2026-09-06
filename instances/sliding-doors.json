@@ -6,7 +6,8 @@
     "medium": "film",
     "sources": [
       "Peter Howitt (1998)",
-      "time-travel-archive/films/sliding-doors.md"
+      "time-travel-archive/films/sliding-doors.md",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -55,152 +56,320 @@
     {
       "id": "gerry",
       "label": "Gerry",
-      "homeWorldRef": "w_root"
+      "homeWorldRef": "w_root",
+      "identityGroup": "gerry",
+      "continuityRole": "primary"
     },
     {
       "id": "lydia",
       "label": "Lydia",
-      "homeWorldRef": "w_miss"
+      "homeWorldRef": "w_catch"
     },
     {
       "id": "james",
       "label": "James",
-      "homeWorldRef": "w_catch"
+      "homeWorldRef": "w_root"
+    },
+    {
+      "id": "helen",
+      "label": "Helen",
+      "identityGroup": "helen",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_root"
+    },
+    {
+      "id": "helen_b",
+      "label": "Helen (missed train)",
+      "identityGroup": "helen",
+      "continuityRole": "variant",
+      "homeWorldRef": "w_catch",
+      "continuedFrom": "helen"
     }
   ],
   "events": [
     {
       "id": "e_fired",
       "type": "ordinary",
-      "label": "Helen fired from PR job; rushes home",
+      "label": "Helen loses PR job",
       "at": {
         "worldRef": "w_root",
-        "timeLabel": "day 0"
+        "timeLabel": "morning"
       },
       "agents": [
-        "helen_catch"
+        "helen"
       ]
     },
     {
       "id": "e_split",
       "type": "branch_fork",
-      "label": "Tube doors: catch vs miss",
+      "label": "Catches vs misses Tube train",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "station"
       },
       "agents": [
-        "helen_catch",
-        "helen_miss"
+        "helen"
+      ],
+      "payload": {
+        "note": "inciting split"
+      }
+    },
+    {
+      "id": "e_a_catch",
+      "type": "arrival",
+      "label": "A: catches train; arrives home early",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "A path"
+      },
+      "agents": [
+        "helen"
       ]
     },
     {
-      "id": "e_affair",
+      "id": "e_a_affair",
       "type": "observation",
-      "label": "Catch-Helen finds Gerry with Lydia",
+      "label": "A: discovers Gerry's affair with Lydia",
       "at": {
-        "worldRef": "w_catch",
-        "timeLabel": "afternoon"
+        "worldRef": "w_root",
+        "timeLabel": "A home"
       },
       "agents": [
-        "helen_catch",
-        "gerry",
-        "lydia"
-      ]
-    },
-    {
-      "id": "e_leave",
-      "type": "intervention",
-      "label": "Catch-Helen leaves Gerry; cuts hair; meets James",
-      "at": {
-        "worldRef": "w_catch",
-        "timeLabel": "rebuild"
-      },
-      "agents": [
-        "helen_catch",
-        "james"
-      ]
-    },
-    {
-      "id": "e_career",
-      "type": "ordinary",
-      "label": "Catch-Helen builds new career",
-      "at": {
-        "worldRef": "w_catch",
-        "timeLabel": "mid"
-      },
-      "agents": [
-        "helen_catch",
-        "james"
-      ]
-    },
-    {
-      "id": "e_stay",
-      "type": "ordinary",
-      "label": "Miss-Helen delayed; remains with cheating Gerry",
-      "at": {
-        "worldRef": "w_miss",
-        "timeLabel": "afternoon"
-      },
-      "agents": [
-        "helen_miss",
-        "gerry",
-        "lydia"
-      ]
-    },
-    {
-      "id": "e_humiliate",
-      "type": "ordinary",
-      "label": "Miss-Helen suffers humiliations and pregnancy complication",
-      "at": {
-        "worldRef": "w_miss",
-        "timeLabel": "late"
-      },
-      "agents": [
-        "helen_miss",
+        "helen",
         "gerry"
       ]
     },
     {
-      "id": "e_hospital_c",
-      "type": "ordinary",
-      "label": "Catch path hospital crisis",
+      "id": "e_a_leave",
+      "type": "intervention",
+      "label": "A: leaves Gerry",
       "at": {
-        "worldRef": "w_catch",
-        "timeLabel": "climax"
+        "worldRef": "w_root",
+        "timeLabel": "A"
       },
       "agents": [
-        "helen_catch",
+        "helen",
+        "gerry"
+      ]
+    },
+    {
+      "id": "e_a_james",
+      "type": "ordinary",
+      "label": "A: relationship with James develops",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "A"
+      },
+      "agents": [
+        "helen",
         "james"
       ]
     },
     {
-      "id": "e_hospital_m",
+      "id": "e_a_newlife",
       "type": "ordinary",
-      "label": "Miss path hospital crisis",
+      "label": "A: new work / confidence arc",
       "at": {
-        "worldRef": "w_miss",
-        "timeLabel": "climax"
+        "worldRef": "w_root",
+        "timeLabel": "A mid"
       },
       "agents": [
-        "helen_miss"
+        "helen",
+        "james"
       ]
     },
     {
-      "id": "e_rhyme",
-      "type": "reveal",
-      "label": "Timelines rhyme; ambiguous memory flash / second chance with James",
+      "id": "e_b_miss",
+      "type": "ordinary",
+      "label": "B: misses train; delayed home",
       "at": {
         "worldRef": "w_catch",
-        "timeLabel": "coda"
+        "timeLabel": "B path"
       },
       "agents": [
-        "helen_catch",
+        "helen_b"
+      ]
+    },
+    {
+      "id": "e_b_unaware",
+      "type": "ordinary",
+      "label": "B: remains with Gerry unaware longer",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "B"
+      },
+      "agents": [
+        "helen_b",
+        "gerry"
+      ]
+    },
+    {
+      "id": "e_b_lydia",
+      "type": "ordinary",
+      "label": "B: Lydia affair continues covertly",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "B"
+      },
+      "agents": [
+        "gerry",
+        "lydia"
+      ]
+    },
+    {
+      "id": "e_b_trap",
+      "type": "ordinary",
+      "label": "B: Helen stuck enabling Gerry's lies",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "B mid"
+      },
+      "agents": [
+        "helen_b",
+        "gerry"
+      ]
+    },
+    {
+      "id": "e_mirror",
+      "type": "observation",
+      "label": "Mirrored motifs: elevators, drinks, timing",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "montage"
+      },
+      "agents": [
+        "helen",
+        "helen_b"
+      ]
+    },
+    {
+      "id": "e_a_pregnant",
+      "type": "ordinary",
+      "label": "A: pregnancy / life stakes with James",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "A late"
+      },
+      "agents": [
+        "helen",
         "james"
-      ],
-      "payload": {
-        "note": "soft convergence; character persists across forks"
-      }
+      ]
+    },
+    {
+      "id": "e_a_fall",
+      "type": "death",
+      "label": "A: stairs fall / hemorrhage crisis",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "A climax"
+      },
+      "agents": [
+        "helen",
+        "james"
+      ]
+    },
+    {
+      "id": "e_b_confront",
+      "type": "intervention",
+      "label": "B: finally confronts betrayal",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "B late"
+      },
+      "agents": [
+        "helen_b",
+        "gerry",
+        "lydia"
+      ]
+    },
+    {
+      "id": "e_b_hospital",
+      "type": "ordinary",
+      "label": "B: hospital rhyme after violence/accident beat",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "B climax"
+      },
+      "agents": [
+        "helen_b"
+      ]
+    },
+    {
+      "id": "e_a_survive",
+      "type": "ordinary",
+      "label": "A: survives; wake toward James",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "A end"
+      },
+      "agents": [
+        "helen",
+        "james"
+      ]
+    },
+    {
+      "id": "e_b_ambig",
+      "type": "ordinary",
+      "label": "B: aftermath with Gerry path unresolved/bitter",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "B end"
+      },
+      "agents": [
+        "helen_b",
+        "gerry"
+      ]
+    },
+    {
+      "id": "e_elevator",
+      "type": "contact",
+      "label": "Final elevator / James meet rhyme across worlds",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "epilogue rhyme"
+      },
+      "agents": [
+        "helen",
+        "james"
+      ]
+    },
+    {
+      "id": "e_theme",
+      "type": "observation",
+      "label": "Chance bifurcation without travel machine",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "theme"
+      },
+      "agents": [
+        "helen",
+        "helen_b"
+      ]
+    },
+    {
+      "id": "e_merge_hint",
+      "type": "collapse",
+      "label": "Ambiguous merge suggestion in closing rhyme",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "close"
+      },
+      "agents": [
+        "helen",
+        "james"
+      ]
+    },
+    {
+      "id": "e_no_travel",
+      "type": "ordinary",
+      "label": "No literal time travel\u2014counterfactual branch film",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "meta"
+      },
+      "agents": [
+        "helen"
+      ]
     }
   ],
   "edges": [
@@ -212,59 +381,176 @@
     },
     {
       "id": "c2",
-      "kind": "world_relation",
-      "from": "w_root",
-      "to": "w_catch",
-      "relation": "forksFrom"
+      "kind": "causal",
+      "from": "e_split",
+      "to": "e_a_catch"
     },
     {
       "id": "c3",
-      "kind": "world_relation",
-      "from": "w_root",
-      "to": "w_miss",
-      "relation": "forksFrom"
+      "kind": "causal",
+      "from": "e_a_catch",
+      "to": "e_a_affair"
     },
     {
       "id": "c4",
       "kind": "causal",
-      "from": "e_split",
-      "to": "e_affair"
+      "from": "e_a_affair",
+      "to": "e_a_leave"
     },
     {
       "id": "c5",
       "kind": "causal",
-      "from": "e_split",
-      "to": "e_stay"
+      "from": "e_a_leave",
+      "to": "e_a_james"
     },
     {
       "id": "c6",
       "kind": "causal",
-      "from": "e_affair",
-      "to": "e_leave"
+      "from": "e_a_james",
+      "to": "e_a_newlife"
     },
     {
       "id": "c7",
-      "kind": "temporal",
-      "from": "e_leave",
-      "to": "e_career"
+      "kind": "causal",
+      "from": "e_a_newlife",
+      "to": "e_b_miss"
     },
     {
       "id": "c8",
-      "kind": "temporal",
-      "from": "e_stay",
-      "to": "e_humiliate"
+      "kind": "causal",
+      "from": "e_b_miss",
+      "to": "e_b_unaware"
     },
     {
       "id": "c9",
-      "kind": "identity",
-      "from": "helen_catch",
-      "to": "helen_miss"
+      "kind": "causal",
+      "from": "e_b_unaware",
+      "to": "e_b_lydia"
     },
     {
       "id": "c10",
+      "kind": "causal",
+      "from": "e_b_lydia",
+      "to": "e_b_trap"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_b_trap",
+      "to": "e_mirror"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_mirror",
+      "to": "e_a_pregnant"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_a_pregnant",
+      "to": "e_a_fall"
+    },
+    {
+      "id": "c14",
+      "kind": "causal",
+      "from": "e_a_fall",
+      "to": "e_b_confront"
+    },
+    {
+      "id": "c15",
+      "kind": "causal",
+      "from": "e_b_confront",
+      "to": "e_b_hospital"
+    },
+    {
+      "id": "c16",
+      "kind": "causal",
+      "from": "e_b_hospital",
+      "to": "e_a_survive"
+    },
+    {
+      "id": "c17",
+      "kind": "causal",
+      "from": "e_a_survive",
+      "to": "e_b_ambig"
+    },
+    {
+      "id": "c18",
+      "kind": "causal",
+      "from": "e_b_ambig",
+      "to": "e_elevator"
+    },
+    {
+      "id": "c19",
+      "kind": "causal",
+      "from": "e_elevator",
+      "to": "e_theme"
+    },
+    {
+      "id": "c20",
+      "kind": "causal",
+      "from": "e_theme",
+      "to": "e_merge_hint"
+    },
+    {
+      "id": "c21",
+      "kind": "causal",
+      "from": "e_merge_hint",
+      "to": "e_no_travel"
+    },
+    {
+      "id": "x1",
+      "kind": "world_relation",
+      "from": "w_root",
+      "to": "w_catch",
+      "label": "train catch fork",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "x2",
+      "kind": "identity",
+      "from": "helen",
+      "to": "helen_b",
+      "label": "same woman split",
+      "relation": "mirrors"
+    },
+    {
+      "id": "x3",
       "kind": "temporal",
-      "from": "e_hospital_c",
-      "to": "e_rhyme"
+      "from": "e_a_catch",
+      "to": "e_b_miss"
+    },
+    {
+      "id": "x4",
+      "kind": "causal",
+      "from": "e_a_affair",
+      "to": "e_a_leave"
+    },
+    {
+      "id": "x5",
+      "kind": "causal",
+      "from": "e_b_lydia",
+      "to": "e_b_confront"
+    },
+    {
+      "id": "x6",
+      "kind": "temporal",
+      "from": "e_a_fall",
+      "to": "e_b_hospital",
+      "label": "hospital rhyme"
+    },
+    {
+      "id": "x7",
+      "kind": "intervention",
+      "from": "e_split",
+      "to": "e_a_catch"
+    },
+    {
+      "id": "x8",
+      "kind": "intervention",
+      "from": "e_split",
+      "to": "e_b_miss"
     }
   ],
   "interventions": [
@@ -274,16 +560,16 @@
       "ruleEffects": [
         {
           "ruleSetId": "branch_on_intervention",
-          "effect": "Catching vs missing the train forks two co-presented lives without a portal device"
+          "effect": "Train timing forks two lived counterfactuals"
         }
       ]
     }
   ],
   "outcome": {
-    "summary": "Pure counterfactual branching at Tube doors: knowledge of the affair vs continued deception; hospital rhyme suggests character persists across forks.",
+    "summary": "Catching vs missing a train forks Helen's life; mirrored crises rhyme without a time machine.",
     "endWorldRefs": [
-      "w_catch",
-      "w_miss"
+      "w_root",
+      "w_catch"
     ]
   }
 }

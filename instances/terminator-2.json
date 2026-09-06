@@ -1,1 +1,521 @@
-{"meta":{"id":"terminator-2","title":"Terminator 2: Judgment Day","year":1991,"medium":"film","sources":["James Cameron & William Wisher (1991)","time-travel-archive/films/terminator-2.md"]},"ruleSetIds":["mutable_ripple","predestination_closed_loop","branch_on_intervention"],"primaryRuleSetId":"mutable_ripple","mixinRuleSetIds":["predestination_closed_loop","branch_on_intervention"],"topologyPatternId":"mutable_single_with_ripples","worlds":[{"kind":"timeline","id":"w_1991","label":"1991 present (pre-JD rewrite attempt)","spanLabel":"1991–1997"},{"kind":"branch","id":"w_2029_skynet","label":"2029 Skynet war future (sending origin)","parentRef":"w_1991","forkLabel":"Judgment Day happened"},{"kind":"branch","id":"w_no_jd","label":"Post-T2 hoped timeline (JD averted)","parentRef":"w_1991","forkLabel":"chip/arm destroyed"}],"agents":[{"id":"sarah","label":"Sarah Connor","identityGroup":"sarah","continuityRole":"primary","homeWorldRef":"w_1991"},{"id":"john","label":"John Connor","identityGroup":"john","continuityRole":"younger_self","homeWorldRef":"w_1991"},{"id":"t800","label":"T-800 (protector)","identityGroup":"t800","continuityRole":"primary","homeWorldRef":"w_2029_skynet"},{"id":"t1000","label":"T-1000","identityGroup":"t1000","continuityRole":"primary","homeWorldRef":"w_2029_skynet"},{"id":"dyson","label":"Miles Dyson","homeWorldRef":"w_1991"}],"events":[{"id":"e_send_t1000","type":"departure","label":"Skynet sends T-1000 to 1991","at":{"worldRef":"w_2029_skynet","timeLabel":"2029"},"agents":["t1000"],"payload":{"travelMode":"machine"}},{"id":"e_send_t800","type":"departure","label":"Resistance sends reprogrammed T-800","at":{"worldRef":"w_2029_skynet","timeLabel":"2029"},"agents":["t800"],"payload":{"travelMode":"machine"}},{"id":"e_arrive_t1000","type":"arrival","label":"T-1000 arrives 1991","at":{"worldRef":"w_1991","timeLabel":"1991"},"agents":["t1000"]},{"id":"e_arrive_t800","type":"arrival","label":"T-800 arrives 1991","at":{"worldRef":"w_1991","timeLabel":"1991"},"agents":["t800"]},{"id":"e_rescue_john","type":"intervention","label":"T-800 rescues John from T-1000","at":{"worldRef":"w_1991","timeLabel":"1991 mall"},"agents":["t800","john","t1000"]},{"id":"e_break_sarah","type":"ordinary","label":"Sarah broken out of Pescadero","at":{"worldRef":"w_1991","timeLabel":"1991"},"agents":["sarah","john","t800"]},{"id":"e_dyson","type":"intervention","label":"Dyson allies; Cyberdyne raid planned","at":{"worldRef":"w_1991","timeLabel":"1991"},"agents":["sarah","john","t800","dyson"]},{"id":"e_destroy_lab","type":"intervention","label":"Cyberdyne destroyed; chip/arm melted","at":{"worldRef":"w_1991","timeLabel":"1991 night"},"agents":["sarah","john","t800","dyson"]},{"id":"e_fork_no_jd","type":"branch_fork","label":"Hoped fork: Judgment Day averted","at":{"worldRef":"w_no_jd","timeLabel":"post-raid"},"agents":["john","sarah"]},{"id":"e_steel_mill","type":"death","label":"T-1000 destroyed; T-800 self-terminates","at":{"worldRef":"w_1991","timeLabel":"steel mill"},"agents":["t800","t1000","john","sarah"]},{"id":"e_road","type":"ordinary","label":"Open road — uncertain future","at":{"worldRef":"w_no_jd","timeLabel":"dawn"},"agents":["sarah","john"]}],"edges":[{"id":"c1","kind":"causal","from":"e_send_t1000","to":"e_arrive_t1000"},{"id":"c2","kind":"causal","from":"e_send_t800","to":"e_arrive_t800"},{"id":"c3","kind":"causal","from":"e_arrive_t800","to":"e_rescue_john"},{"id":"c4","kind":"causal","from":"e_rescue_john","to":"e_break_sarah"},{"id":"c5","kind":"causal","from":"e_break_sarah","to":"e_dyson"},{"id":"c6","kind":"intervention","from":"e_dyson","to":"e_destroy_lab"},{"id":"c7","kind":"world_relation","from":"w_1991","to":"w_no_jd","relation":"forksFrom","label":"JD averted attempt"},{"id":"c8","kind":"causal","from":"e_destroy_lab","to":"e_fork_no_jd"},{"id":"c9","kind":"causal","from":"e_destroy_lab","to":"e_steel_mill"},{"id":"c10","kind":"temporal","from":"e_steel_mill","to":"e_road"},{"id":"w1","kind":"world_relation","from":"w_2029_skynet","to":"w_1991","relation":"originatesFrom","label":"war future sends hunters"}],"interventions":[{"id":"iv_destroy","eventId":"e_destroy_lab","ruleEffects":[{"ruleSetId":"mutable_ripple","effect":"Destroying origin tech attempts overwrite of Judgment Day"},{"ruleSetId":"branch_on_intervention","effect":"Creates hoped no-JD branch rather than guaranteed single rewrite"}],"notes":"Franchise later re-forks; T2 ending is hopeful overwrite/branch tension"}],"outcome":{"summary":"Present-day destruction of Skynet seed tech; T-800 sacrifice; Judgment Day postponed/uncertain rather than sealed closed loop.","endWorldRefs":["w_no_jd","w_1991"]}}
+{
+  "meta": {
+    "id": "terminator-2",
+    "title": "Terminator 2: Judgment Day",
+    "year": 1991,
+    "medium": "film",
+    "sources": [
+      "James Cameron & William Wisher (1991)",
+      "time-travel-archive/films/terminator-2.md",
+      "tenet-class deepen 2026-09-06"
+    ]
+  },
+  "ruleSetIds": [
+    "mutable_ripple",
+    "predestination_closed_loop",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "mutable_ripple",
+  "mixinRuleSetIds": [
+    "predestination_closed_loop",
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_1991",
+      "label": "1991 present (pre-JD rewrite attempt)",
+      "spanLabel": "1991\u20131997"
+    },
+    {
+      "kind": "branch",
+      "id": "w_2029_skynet",
+      "label": "2029 Skynet war future (sending origin)",
+      "parentRef": "w_1991",
+      "forkLabel": "Judgment Day happened"
+    },
+    {
+      "kind": "branch",
+      "id": "w_no_jd",
+      "label": "Post-T2 hoped timeline (JD averted)",
+      "parentRef": "w_1991",
+      "forkLabel": "chip/arm destroyed"
+    }
+  ],
+  "agents": [
+    {
+      "id": "sarah",
+      "label": "Sarah Connor",
+      "identityGroup": "sarah",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_1991"
+    },
+    {
+      "id": "john",
+      "label": "John Connor",
+      "identityGroup": "john",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_1991"
+    },
+    {
+      "id": "t800",
+      "label": "T-800 (protector)",
+      "identityGroup": "t800",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_2029_skynet"
+    },
+    {
+      "id": "t1000",
+      "label": "T-1000",
+      "identityGroup": "t1000",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_2029_skynet"
+    },
+    {
+      "id": "dyson",
+      "label": "Miles Dyson",
+      "homeWorldRef": "w_1991"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_send_t1000",
+      "type": "departure",
+      "label": "Skynet sends T-1000 to 1991",
+      "at": {
+        "worldRef": "w_2029_skynet",
+        "timeLabel": "2029"
+      },
+      "agents": [
+        "t1000"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_send_t800",
+      "type": "departure",
+      "label": "Resistance sends reprogrammed T-800",
+      "at": {
+        "worldRef": "w_2029_skynet",
+        "timeLabel": "2029"
+      },
+      "agents": [
+        "t800"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_arrive_t1000",
+      "type": "arrival",
+      "label": "T-1000 arrives 1991",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "1991"
+      },
+      "agents": [
+        "t1000"
+      ]
+    },
+    {
+      "id": "e_arrive_t800",
+      "type": "arrival",
+      "label": "T-800 arrives 1991",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "1991"
+      },
+      "agents": [
+        "t800"
+      ]
+    },
+    {
+      "id": "e_rescue_john",
+      "type": "intervention",
+      "label": "T-800 rescues John from T-1000",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "1991 mall"
+      },
+      "agents": [
+        "t800",
+        "john",
+        "t1000"
+      ]
+    },
+    {
+      "id": "e_break_sarah",
+      "type": "ordinary",
+      "label": "Sarah broken out of Pescadero",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "1991"
+      },
+      "agents": [
+        "sarah",
+        "john",
+        "t800"
+      ]
+    },
+    {
+      "id": "e_dyson",
+      "type": "intervention",
+      "label": "Dyson allies; Cyberdyne raid planned",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "1991"
+      },
+      "agents": [
+        "sarah",
+        "john",
+        "t800",
+        "dyson"
+      ]
+    },
+    {
+      "id": "e_destroy_lab",
+      "type": "intervention",
+      "label": "Cyberdyne destroyed; chip/arm melted",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "1991 night"
+      },
+      "agents": [
+        "sarah",
+        "john",
+        "t800",
+        "dyson"
+      ]
+    },
+    {
+      "id": "e_fork_no_jd",
+      "type": "branch_fork",
+      "label": "Hoped fork: Judgment Day averted",
+      "at": {
+        "worldRef": "w_no_jd",
+        "timeLabel": "post-raid"
+      },
+      "agents": [
+        "john",
+        "sarah"
+      ]
+    },
+    {
+      "id": "e_steel_mill",
+      "type": "death",
+      "label": "T-1000 destroyed; T-800 self-terminates",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "steel mill"
+      },
+      "agents": [
+        "t800",
+        "t1000",
+        "john",
+        "sarah"
+      ]
+    },
+    {
+      "id": "e_road",
+      "type": "ordinary",
+      "label": "Open road \u2014 uncertain future",
+      "at": {
+        "worldRef": "w_no_jd",
+        "timeLabel": "dawn"
+      },
+      "agents": [
+        "sarah",
+        "john"
+      ]
+    },
+    {
+      "id": "e_t800_arrive",
+      "type": "arrival",
+      "label": "T-800 sent to protect John",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "1995"
+      },
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_t1000",
+      "type": "arrival",
+      "label": "T-1000 sent to kill John",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "1995"
+      },
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_psych",
+      "type": "ordinary",
+      "label": "Sarah in Pescadero",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "early"
+      }
+    },
+    {
+      "id": "e_rescue",
+      "type": "intervention",
+      "label": "Rescue Sarah; escape",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_miles",
+      "type": "ordinary",
+      "label": "Find Miles Dyson",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_cyberdyne",
+      "type": "intervention",
+      "label": "Destroy Cyberdyne lab",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_highway",
+      "type": "ordinary",
+      "label": "Highway / steel mill chase",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_t1000_end",
+      "type": "death",
+      "label": "T-1000 destroyed in molten steel",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "finale"
+      }
+    },
+    {
+      "id": "e_t800_sacrifice",
+      "type": "death",
+      "label": "T-800 lowers into steel to remove chip/arm future",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "finale"
+      }
+    },
+    {
+      "id": "e_hope",
+      "type": "ordinary",
+      "label": "Sarah hope for future without Judgment Day",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "epilogue"
+      }
+    },
+    {
+      "id": "e_alt",
+      "type": "observation",
+      "label": "Future war still threatened but deferred",
+      "at": {
+        "worldRef": "w_1991",
+        "timeLabel": "theme"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_send_t1000",
+      "to": "e_arrive_t1000"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_send_t800",
+      "to": "e_arrive_t800"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_arrive_t800",
+      "to": "e_rescue_john"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_rescue_john",
+      "to": "e_break_sarah"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_break_sarah",
+      "to": "e_dyson"
+    },
+    {
+      "id": "c6",
+      "kind": "intervention",
+      "from": "e_dyson",
+      "to": "e_destroy_lab"
+    },
+    {
+      "id": "c7",
+      "kind": "world_relation",
+      "from": "w_1991",
+      "to": "w_no_jd",
+      "relation": "forksFrom",
+      "label": "JD averted attempt"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_destroy_lab",
+      "to": "e_fork_no_jd"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_destroy_lab",
+      "to": "e_steel_mill"
+    },
+    {
+      "id": "c10",
+      "kind": "temporal",
+      "from": "e_steel_mill",
+      "to": "e_road"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_2029_skynet",
+      "to": "w_1991",
+      "relation": "originatesFrom",
+      "label": "war future sends hunters"
+    },
+    {
+      "id": "nter1",
+      "kind": "causal",
+      "from": "e_t800_arrive",
+      "to": "e_t1000"
+    },
+    {
+      "id": "nter2",
+      "kind": "causal",
+      "from": "e_t1000",
+      "to": "e_psych"
+    },
+    {
+      "id": "nter3",
+      "kind": "causal",
+      "from": "e_psych",
+      "to": "e_rescue"
+    },
+    {
+      "id": "nter4",
+      "kind": "causal",
+      "from": "e_rescue",
+      "to": "e_miles"
+    },
+    {
+      "id": "nter5",
+      "kind": "causal",
+      "from": "e_miles",
+      "to": "e_cyberdyne"
+    },
+    {
+      "id": "nter6",
+      "kind": "causal",
+      "from": "e_cyberdyne",
+      "to": "e_highway"
+    },
+    {
+      "id": "nter7",
+      "kind": "causal",
+      "from": "e_highway",
+      "to": "e_t1000_end"
+    },
+    {
+      "id": "nter8",
+      "kind": "causal",
+      "from": "e_t1000_end",
+      "to": "e_t800_sacrifice"
+    },
+    {
+      "id": "nter9",
+      "kind": "causal",
+      "from": "e_t800_sacrifice",
+      "to": "e_hope"
+    },
+    {
+      "id": "nter10",
+      "kind": "causal",
+      "from": "e_hope",
+      "to": "e_alt"
+    },
+    {
+      "id": "bridge_terminat",
+      "kind": "causal",
+      "from": "e_road",
+      "to": "e_t800_arrive"
+    },
+    {
+      "id": "t2x1",
+      "kind": "causal",
+      "from": "e_cyberdyne",
+      "to": "e_t1000_end"
+    },
+    {
+      "id": "t2x2",
+      "kind": "intervention",
+      "from": "e_t800_sacrifice",
+      "to": "e_hope"
+    },
+    {
+      "id": "t2x3",
+      "kind": "identity",
+      "from": "e_t800_arrive",
+      "to": "e_t800_sacrifice"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_destroy",
+      "eventId": "e_destroy_lab",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Destroying origin tech attempts overwrite of Judgment Day"
+        },
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Creates hoped no-JD branch rather than guaranteed single rewrite"
+        }
+      ],
+      "notes": "Franchise later re-forks; T2 ending is hopeful overwrite/branch tension"
+    }
+  ],
+  "outcome": {
+    "summary": "Present-day destruction of Skynet seed tech; T-800 sacrifice; Judgment Day postponed/uncertain rather than sealed closed loop.",
+    "endWorldRefs": [
+      "w_no_jd",
+      "w_1991"
+    ]
+  }
+}

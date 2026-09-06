@@ -1,18 +1,19 @@
 {
   "meta": {
     "id": "re-zero",
-    "title": "Re:Zero − Starting Life in Another World",
+    "title": "Re:Zero \u2212 Starting Life in Another World",
     "year": 2016,
     "medium": "tv",
     "sources": [
       "Tappei Nagatsuki; Re:Zero anime",
       "time-travel-archive",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "death_checkpoint_rewrite",
-    "mutable_ripple"
+    "mutable_ripple",
+    "death_checkpoint_rewrite"
   ],
   "primaryRuleSetId": "death_checkpoint_rewrite",
   "mixinRuleSetIds": [
@@ -24,7 +25,7 @@
       "kind": "timeline",
       "id": "w_lugunica",
       "label": "Lugunica continuum (rewritten from checkpoints)",
-      "spanLabel": "arc 1–2 abstraction"
+      "spanLabel": "arc 1\u20132 abstraction"
     },
     {
       "kind": "branch",
@@ -96,7 +97,7 @@
     {
       "id": "e_cp1",
       "type": "checkpoint",
-      "label": "Checkpoint set — alley / loot house approach",
+      "label": "Checkpoint set \u2014 alley / loot house approach",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "CP1"
@@ -175,7 +176,7 @@
     {
       "id": "e_cp2",
       "type": "checkpoint",
-      "label": "Checkpoint moves — mansion arc",
+      "label": "Checkpoint moves \u2014 mansion arc",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "CP2"
@@ -268,18 +269,121 @@
     },
     {
       "id": "ev_rbd",
+      "type": "ordinary",
       "label": "Return by Death discovered",
-      "timeLabel": "early"
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "early"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_failed",
+      "type": "ordinary",
       "label": "Failed loops / trauma accumulation",
-      "timeLabel": "ongoing"
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "ongoing"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_checkpoint",
+      "type": "ordinary",
       "label": "Checkpoint advances after major arcs",
-      "timeLabel": "arc ends"
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "arc ends"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_rbd",
+      "type": "death",
+      "label": "Return by Death first trigger",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "loop1"
+      },
+      "payload": {
+        "travelMode": "blood_reset",
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_checkpoint",
+      "type": "checkpoint",
+      "label": "Checkpoint advances unpredictably",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "rules"
+      },
+      "payload": {
+        "checkpointId": "rbd"
+      }
+    },
+    {
+      "id": "e_emilia",
+      "type": "ordinary",
+      "label": "Bond with Emilia",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "arc1"
+      }
+    },
+    {
+      "id": "e_witch",
+      "type": "reveal",
+      "label": "Satella / witch of envy link to RBD",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "mythology"
+      }
+    },
+    {
+      "id": "e_forbid",
+      "type": "observation",
+      "label": "Cannot tell others about RBD",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "rules"
+      }
+    },
+    {
+      "id": "e_arcs",
+      "type": "intervention",
+      "label": "Multiple arc resets (mansion, cult, etc.)",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "ongoing"
+      },
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_growth",
+      "type": "ordinary",
+      "label": "Psychological cost and growth",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "theme"
+      }
     }
   ],
   "edges": [
@@ -384,19 +488,79 @@
       "label": "memory-bearing continuum"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_rbd",
       "to": "ev_failed",
-      "type": "produces"
+      "label": "produces"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_failed",
       "to": "ev_checkpoint",
-      "type": "eventually"
+      "label": "eventually"
     },
     {
+      "id": "rep_3",
+      "kind": "causal",
       "from": "ev_checkpoint",
       "to": "ev_failed",
-      "type": "resets_into"
+      "label": "resets_into"
+    },
+    {
+      "id": "nre-1",
+      "kind": "causal",
+      "from": "e_rbd",
+      "to": "e_checkpoint"
+    },
+    {
+      "id": "nre-2",
+      "kind": "causal",
+      "from": "e_checkpoint",
+      "to": "e_emilia"
+    },
+    {
+      "id": "nre-3",
+      "kind": "causal",
+      "from": "e_emilia",
+      "to": "e_witch"
+    },
+    {
+      "id": "nre-4",
+      "kind": "causal",
+      "from": "e_witch",
+      "to": "e_forbid"
+    },
+    {
+      "id": "nre-5",
+      "kind": "causal",
+      "from": "e_forbid",
+      "to": "e_arcs"
+    },
+    {
+      "id": "nre-6",
+      "kind": "causal",
+      "from": "e_arcs",
+      "to": "e_growth"
+    },
+    {
+      "id": "bridge_re-zero",
+      "kind": "causal",
+      "from": "ev_checkpoint",
+      "to": "e_rbd"
+    },
+    {
+      "id": "rzx1",
+      "kind": "temporal",
+      "from": "e_rbd",
+      "to": "e_checkpoint"
+    },
+    {
+      "id": "rzx2",
+      "kind": "causal",
+      "from": "e_witch",
+      "to": "e_forbid"
     }
   ],
   "interventions": [

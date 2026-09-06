@@ -7,7 +7,8 @@
     "sources": [
       "Bryan Singer (2014); Claremont/Byrne comics",
       "time-travel-archive/films/x-men-days-of-future-past.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -246,6 +247,78 @@
         "xavier_young",
         "logan"
       ]
+    },
+    {
+      "id": "e_x_future",
+      "type": "ordinary",
+      "label": "Sentinel future war",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "future"
+      }
+    },
+    {
+      "id": "e_x_send",
+      "type": "departure",
+      "label": "Wolverine mind sent to 1973",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "inciting"
+      }
+    },
+    {
+      "id": "e_x_1973",
+      "type": "arrival",
+      "label": "Wake in young Logan",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "1973"
+      }
+    },
+    {
+      "id": "e_x_paris",
+      "type": "intervention",
+      "label": "Prevent Trask/Mystique assassination path",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_xavier",
+      "type": "ordinary",
+      "label": "Young Xavier growth",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_stadium",
+      "type": "ordinary",
+      "label": "RFK stadium climax",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_future_fix",
+      "type": "checkpoint",
+      "label": "Future war erased",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Mind-travel alters history ripples",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "rules"
+      }
     }
   ],
   "edges": [
@@ -336,6 +409,66 @@
       "from": "w_future_bad",
       "to": "w_future_good",
       "relation": "supersedes"
+    },
+    {
+      "id": "nx-m1",
+      "kind": "causal",
+      "from": "e_x_future",
+      "to": "e_x_send"
+    },
+    {
+      "id": "nx-m2",
+      "kind": "causal",
+      "from": "e_x_send",
+      "to": "e_x_1973"
+    },
+    {
+      "id": "nx-m3",
+      "kind": "causal",
+      "from": "e_x_1973",
+      "to": "e_x_paris"
+    },
+    {
+      "id": "nx-m4",
+      "kind": "causal",
+      "from": "e_x_paris",
+      "to": "e_x_xavier"
+    },
+    {
+      "id": "nx-m5",
+      "kind": "causal",
+      "from": "e_x_xavier",
+      "to": "e_x_stadium"
+    },
+    {
+      "id": "nx-m6",
+      "kind": "causal",
+      "from": "e_x_stadium",
+      "to": "e_x_future_fix"
+    },
+    {
+      "id": "nx-m7",
+      "kind": "causal",
+      "from": "e_x_future_fix",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "bridge_x-men-da",
+      "kind": "causal",
+      "from": "e_hope",
+      "to": "e_x_future"
+    },
+    {
+      "id": "x_x-me_1",
+      "kind": "causal",
+      "from": "e_x_future",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "x_x-me_2",
+      "kind": "temporal",
+      "from": "e_x_send",
+      "to": "e_x_1973"
     }
   ],
   "interventions": [

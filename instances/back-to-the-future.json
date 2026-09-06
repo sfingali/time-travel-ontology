@@ -7,7 +7,8 @@
     "sources": [
       "Robert Zemeckis & Bob Gale (1985)",
       "time-travel-archive/films/back-to-the-future.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -184,7 +185,7 @@
     {
       "id": "e_dance",
       "type": "intervention",
-      "label": "Enchantment Under the Sea — George punches Biff, kisses Lorraine",
+      "label": "Enchantment Under the Sea \u2014 George punches Biff, kisses Lorraine",
       "at": {
         "worldRef": "w_1955",
         "timeLabel": "dance night"
@@ -244,7 +245,7 @@
     {
       "id": "e_future_tease",
       "type": "departure",
-      "label": "Doc arrives from 2015 — to be continued",
+      "label": "Doc arrives from 2015 \u2014 to be continued",
       "at": {
         "worldRef": "w_1985B",
         "timeLabel": "1985 end"
@@ -260,23 +261,123 @@
     },
     {
       "id": "ev_1955",
+      "type": "ordinary",
       "label": "Marty arrives 1955",
-      "timeLabel": "1955"
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "1955"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_enchantment",
-      "label": "Enchantment Under the Sea — parents unite",
-      "timeLabel": "1955 dance"
+      "type": "ordinary",
+      "label": "Enchantment Under the Sea \u2014 parents unite",
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "1955 dance"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_lightning",
+      "type": "ordinary",
       "label": "Clock tower lightning return",
-      "timeLabel": "Sat night"
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "Sat night"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_1985b",
+      "type": "ordinary",
       "label": "Rewritten affluent 1985",
-      "timeLabel": "1985"
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "1985"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_libyans",
+      "type": "ordinary",
+      "label": "Libyan attack; Doc shot",
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "1985"
+      }
+    },
+    {
+      "id": "e_1955",
+      "type": "arrival",
+      "label": "Marty arrives 1955",
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "1955"
+      },
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_parents",
+      "type": "intervention",
+      "label": "Interferes with George/Lorraine meet-cute",
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "1955"
+      }
+    },
+    {
+      "id": "e_enchantment",
+      "type": "intervention",
+      "label": "Enchantment Under the Sea dance fix",
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "1955"
+      }
+    },
+    {
+      "id": "e_1985b",
+      "type": "arrival",
+      "label": "Improved 1985; Doc lives",
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "1985"
+      },
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_photo",
+      "type": "observation",
+      "label": "Family photo fades then restores",
+      "at": {
+        "worldRef": "w_1985",
+        "timeLabel": "1955 stakes"
+      }
     }
   ],
   "edges": [
@@ -385,19 +486,79 @@
       "label": "rewrite present"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_1955",
       "to": "ev_enchantment",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_enchantment",
       "to": "ev_lightning",
-      "type": "enables"
+      "label": "enables"
     },
     {
+      "id": "rep_3",
+      "kind": "causal",
       "from": "ev_lightning",
       "to": "ev_1985b",
-      "type": "causes"
+      "label": "causes"
+    },
+    {
+      "id": "nbac1",
+      "kind": "causal",
+      "from": "e_libyans",
+      "to": "e_1955"
+    },
+    {
+      "id": "nbac2",
+      "kind": "causal",
+      "from": "e_1955",
+      "to": "e_parents"
+    },
+    {
+      "id": "nbac3",
+      "kind": "causal",
+      "from": "e_parents",
+      "to": "e_enchantment"
+    },
+    {
+      "id": "nbac4",
+      "kind": "causal",
+      "from": "e_enchantment",
+      "to": "e_1985b"
+    },
+    {
+      "id": "nbac5",
+      "kind": "causal",
+      "from": "e_1985b",
+      "to": "e_photo"
+    },
+    {
+      "id": "bridge_back-to-",
+      "kind": "causal",
+      "from": "ev_1985b",
+      "to": "e_libyans"
+    },
+    {
+      "id": "bx1",
+      "kind": "causal",
+      "from": "e_parents",
+      "to": "e_photo"
+    },
+    {
+      "id": "bx2",
+      "kind": "intervention",
+      "from": "e_enchantment",
+      "to": "e_lightning"
+    },
+    {
+      "id": "bx3",
+      "kind": "temporal",
+      "from": "e_1955",
+      "to": "e_1985b"
     }
   ],
   "interventions": [

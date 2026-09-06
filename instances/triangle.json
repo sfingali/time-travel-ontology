@@ -7,7 +7,8 @@
     "sources": [
       "Christopher Smith (2009)",
       "time-travel-archive/films/triangle.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -225,6 +226,78 @@
         "exitFailed": true,
         "iteration": 99
       }
+    },
+    {
+      "id": "e_x_boat",
+      "type": "ordinary",
+      "label": "Yachtsmen find deserted liner",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_loop",
+      "type": "loop_reset",
+      "label": "Aeolus loop of murders",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_jess",
+      "type": "ordinary",
+      "label": "Jess iterations try to break",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_kill",
+      "type": "death",
+      "label": "Forced killings to 'save' son",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_shore",
+      "type": "ordinary",
+      "label": "Shore / taxi returns to start",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_crash",
+      "type": "ordinary",
+      "label": "Car crash resets emotional loop",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Closed narrative loop",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "rules"
+      }
+    },
+    {
+      "id": "e_x_guilt",
+      "type": "observation",
+      "label": "Guilt as engine",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "theme"
+      }
     }
   ],
   "edges": [
@@ -314,6 +387,66 @@
       "from": "jess",
       "to": "masked",
       "label": "Jess becomes masked"
+    },
+    {
+      "id": "ntri1",
+      "kind": "causal",
+      "from": "e_x_boat",
+      "to": "e_x_loop"
+    },
+    {
+      "id": "ntri2",
+      "kind": "causal",
+      "from": "e_x_loop",
+      "to": "e_x_jess"
+    },
+    {
+      "id": "ntri3",
+      "kind": "causal",
+      "from": "e_x_jess",
+      "to": "e_x_kill"
+    },
+    {
+      "id": "ntri4",
+      "kind": "causal",
+      "from": "e_x_kill",
+      "to": "e_x_shore"
+    },
+    {
+      "id": "ntri5",
+      "kind": "causal",
+      "from": "e_x_shore",
+      "to": "e_x_crash"
+    },
+    {
+      "id": "ntri6",
+      "kind": "causal",
+      "from": "e_x_crash",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "ntri7",
+      "kind": "causal",
+      "from": "e_x_rules",
+      "to": "e_x_guilt"
+    },
+    {
+      "id": "bridge_triangle",
+      "kind": "causal",
+      "from": "e_no_exit",
+      "to": "e_x_boat"
+    },
+    {
+      "id": "x_tria_1",
+      "kind": "causal",
+      "from": "e_x_boat",
+      "to": "e_x_guilt"
+    },
+    {
+      "id": "x_tria_2",
+      "kind": "temporal",
+      "from": "e_x_loop",
+      "to": "e_x_jess"
     }
   ],
   "interventions": [

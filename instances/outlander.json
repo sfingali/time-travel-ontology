@@ -6,12 +6,13 @@
     "medium": "tv",
     "sources": [
       "Ronald D. Moore adapting Diana Gabaldon (2014\u2013)",
-      "time-travel-archive/tv/outlander.md"
+      "time-travel-archive/tv/outlander.md",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "fixed_novikov",
-    "predestination_closed_loop"
+    "predestination_closed_loop",
+    "fixed_novikov"
   ],
   "primaryRuleSetId": "fixed_novikov",
   "mixinRuleSetIds": [
@@ -25,14 +26,20 @@
       "label": "Claire/Jamie continuum via standing stones",
       "spanLabel": "1743\u21941945\u21941968\u21941770s",
       "description": "Soft Novikov: big history resists; personal lives contingent"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_1743",
+      "label": "1743 Scotland",
+      "spanLabel": "Jacobite era"
     }
   ],
   "agents": [
     {
       "id": "claire",
-      "label": "Claire Randall/Fraser",
+      "label": "Claire Randall Fraser",
       "identityGroup": "claire",
-      "continuityRole": "primary",
+      "continuityRole": "observer_persistent",
       "homeWorldRef": "w_stones"
     },
     {
@@ -40,7 +47,7 @@
       "label": "Jamie Fraser",
       "identityGroup": "jamie",
       "continuityRole": "primary",
-      "homeWorldRef": "w_stones"
+      "homeWorldRef": "w_1743"
     },
     {
       "id": "frank",
@@ -49,14 +56,14 @@
     },
     {
       "id": "brianna",
-      "label": "Brianna Fraser",
+      "label": "Brianna",
       "identityGroup": "brianna",
       "continuityRole": "primary",
       "homeWorldRef": "w_stones"
     },
     {
       "id": "roger",
-      "label": "Roger Wakefield Mackenzie",
+      "label": "Roger",
       "homeWorldRef": "w_stones"
     },
     {
@@ -68,30 +75,54 @@
   ],
   "events": [
     {
-      "id": "e_craigh",
-      "type": "departure",
-      "label": "Claire touches Craigh na Dun stones; slips 1945\u21921743",
+      "id": "e_honeymoon",
+      "type": "ordinary",
+      "label": "Claire and Frank honeymoon in Highlands",
       "at": {
         "worldRef": "w_stones",
-        "timeLabel": "1945 Beltane"
+        "timeLabel": "1945"
+      },
+      "agents": [
+        "claire",
+        "frank"
+      ]
+    },
+    {
+      "id": "e_stones",
+      "type": "departure",
+      "label": "Craigh na Dun stones displace Claire to 1743",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1945"
       },
       "agents": [
         "claire"
       ],
       "payload": {
-        "travelMode": "other",
-        "artifactKind": "stone",
-        "tags": [
-          "standing_stones"
-        ]
+        "travelMode": "other"
       }
     },
     {
-      "id": "e_arrive_1743",
+      "id": "e_arrive1743",
       "type": "arrival",
-      "label": "Taken for spy; forced marriage to Jamie for protection",
+      "label": "Arrives 1743 Scotland",
       "at": {
-        "worldRef": "w_stones",
+        "worldRef": "w_1743",
+        "timeLabel": "1743"
+      },
+      "agents": [
+        "claire"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_jamie_meet",
+      "type": "ordinary",
+      "label": "Meets Jamie Fraser",
+      "at": {
+        "worldRef": "w_1743",
         "timeLabel": "1743"
       },
       "agents": [
@@ -100,93 +131,165 @@
       ]
     },
     {
-      "id": "e_culloden_know",
-      "type": "observation",
-      "label": "Claire knows Culloden doom; attempts to steer largely fail/fulfill",
+      "id": "e_marry",
+      "type": "ordinary",
+      "label": "Marries Jamie for protection",
+      "at": {
+        "worldRef": "w_1743",
+        "timeLabel": "1743"
+      },
+      "agents": [
+        "claire",
+        "jamie"
+      ]
+    },
+    {
+      "id": "e_frank_search",
+      "type": "ordinary",
+      "label": "Frank searches in 1940s",
       "at": {
         "worldRef": "w_stones",
-        "timeLabel": "1745-46"
+        "timeLabel": "1945+"
+      },
+      "agents": [
+        "frank"
+      ]
+    },
+    {
+      "id": "e_culloden_foreknowledge",
+      "type": "observation",
+      "label": "Claire's history knowledge of Culloden",
+      "at": {
+        "worldRef": "w_1743",
+        "timeLabel": "pre-1746"
+      },
+      "agents": [
+        "claire"
+      ]
+    },
+    {
+      "id": "e_try_change",
+      "type": "intervention",
+      "label": "Attempts to alter Jacobite outcomes",
+      "at": {
+        "worldRef": "w_1743",
+        "timeLabel": "politics"
       },
       "agents": [
         "claire",
         "jamie"
       ],
       "payload": {
-        "note": "soft Novikov on big history"
+        "note": "limited success"
       }
     },
     {
-      "id": "e_send_back",
-      "type": "departure",
-      "label": "Pregnant Claire sent through stones to save child in 20th century",
+      "id": "e_sep",
+      "type": "ordinary",
+      "label": "Separations / return stones temptation",
       "at": {
-        "worldRef": "w_stones",
-        "timeLabel": "post-Rising"
+        "worldRef": "w_1743",
+        "timeLabel": "mid"
       },
       "agents": [
         "claire",
-        "jamie",
-        "brianna"
+        "jamie"
+      ]
+    },
+    {
+      "id": "e_return20",
+      "type": "arrival",
+      "label": "Claire returns to 20th century pregnant",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1948"
+      },
+      "agents": [
+        "claire",
+        "frank"
       ],
       "payload": {
-        "travelMode": "other",
-        "artifactKind": "stone"
+        "travelMode": "other"
       }
     },
     {
-      "id": "e_1968_return",
+      "id": "e_brianna_born",
+      "type": "birth",
+      "label": "Brianna born; raised with Frank",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1948+"
+      },
+      "agents": [
+        "claire",
+        "frank",
+        "brianna"
+      ]
+    },
+    {
+      "id": "e_research",
+      "type": "ordinary",
+      "label": "Years later research Jamie survival",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1960s+"
+      },
+      "agents": [
+        "claire",
+        "brianna"
+      ]
+    },
+    {
+      "id": "e_return18",
       "type": "departure",
-      "label": "1968 Claire returns through stones (gem consumed) to Jamie",
+      "label": "Claire returns to 18th c. to Jamie",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "1968"
       },
       "agents": [
-        "claire",
-        "jamie"
+        "claire"
       ],
       "payload": {
-        "travelMode": "other",
-        "artifactId": "gemstone_ring"
+        "travelMode": "other"
       }
     },
     {
-      "id": "e_brianna_travel",
+      "id": "e_reunion",
+      "type": "ordinary",
+      "label": "Reunion with Jamie",
+      "at": {
+        "worldRef": "w_1743",
+        "timeLabel": "1760s"
+      },
+      "agents": [
+        "claire",
+        "jamie"
+      ]
+    },
+    {
+      "id": "e_brianna_roger",
       "type": "departure",
-      "label": "Brianna and Roger travel fearing 1770s fire deaths",
+      "label": "Brianna and Roger also travel via stones",
       "at": {
         "worldRef": "w_stones",
-        "timeLabel": "1970s\u21921770s"
+        "timeLabel": "1970s"
       },
       "agents": [
         "brianna",
         "roger"
       ],
       "payload": {
-        "travelMode": "other",
-        "artifactKind": "stone"
+        "travelMode": "other"
       }
     },
     {
-      "id": "e_geillis",
-      "type": "intervention",
-      "label": "Geillis tries to alter Jacobite success \u2014 foil",
-      "at": {
-        "worldRef": "w_stones",
-        "timeLabel": "1740s/1960s"
-      },
-      "agents": [
-        "geillis",
-        "claire"
-      ]
-    },
-    {
-      "id": "e_ridge",
+      "id": "e_family",
       "type": "ordinary",
-      "label": "Fraser's Ridge / Revolution-era America arcs",
+      "label": "Multi-generational Fraser timeline entanglement",
       "at": {
-        "worldRef": "w_stones",
-        "timeLabel": "1770s"
+        "worldRef": "w_1743",
+        "timeLabel": "later books/show"
       },
       "agents": [
         "claire",
@@ -196,132 +299,274 @@
       ]
     },
     {
-      "id": "e_abandawe",
-      "type": "ordinary",
-      "label": "Other stone sites (Abandawe, Carolina circles)",
+      "id": "e_fixedish",
+      "type": "observation",
+      "label": "History resists large changes; personal mutable",
       "at": {
-        "worldRef": "w_stones",
-        "timeLabel": "later seasons"
+        "worldRef": "w_1743",
+        "timeLabel": "rules"
       },
       "agents": [
-        "claire",
-        "brianna"
-      ],
-      "payload": {
-        "travelMode": "other",
-        "artifactKind": "stone"
-      }
+        "claire"
+      ]
     },
     {
-      "id": "e_rules",
-      "type": "reveal",
-      "label": "Gene + festival timing + gems as travel constraints",
+      "id": "e_geillis",
+      "type": "ordinary",
+      "label": "Other travelers (Geillis) confirm mechanism",
       "at": {
-        "worldRef": "w_stones",
-        "timeLabel": "series lore"
+        "worldRef": "w_1743",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "claire"
+      ]
+    },
+    {
+      "id": "e_voyage",
+      "type": "ordinary",
+      "label": "New World arcs continue displacement theme",
+      "at": {
+        "worldRef": "w_1743",
+        "timeLabel": "later"
       },
       "agents": [
         "claire",
+        "jamie"
+      ]
+    },
+    {
+      "id": "e_letters",
+      "type": "ordinary",
+      "label": "Cross-time letters / evidence bridges eras",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "research"
+      },
+      "agents": [
         "brianna",
-        "roger",
-        "geillis"
-      ],
-      "payload": {
-        "note": "hereditary ability; ~200y spans; history resists"
-      }
+        "claire"
+      ]
+    },
+    {
+      "id": "e_destiny",
+      "type": "ordinary",
+      "label": "Love as reason to stay despite paradox risk",
+      "at": {
+        "worldRef": "w_1743",
+        "timeLabel": "theme"
+      },
+      "agents": [
+        "claire",
+        "jamie"
+      ]
+    },
+    {
+      "id": "e_close",
+      "type": "ordinary",
+      "label": "Ongoing stone-travel family saga",
+      "at": {
+        "worldRef": "w_1743",
+        "timeLabel": "open end"
+      },
+      "agents": [
+        "claire",
+        "jamie"
+      ]
     }
   ],
   "edges": [
     {
       "id": "c1",
       "kind": "causal",
-      "from": "e_craigh",
-      "to": "e_arrive_1743"
+      "from": "e_honeymoon",
+      "to": "e_stones"
     },
     {
       "id": "c2",
-      "kind": "temporal",
-      "from": "e_arrive_1743",
-      "to": "e_culloden_know"
+      "kind": "causal",
+      "from": "e_stones",
+      "to": "e_arrive1743"
     },
     {
       "id": "c3",
       "kind": "causal",
-      "from": "e_culloden_know",
-      "to": "e_send_back"
+      "from": "e_arrive1743",
+      "to": "e_jamie_meet"
     },
     {
       "id": "c4",
-      "kind": "temporal",
-      "from": "e_send_back",
-      "to": "e_1968_return"
+      "kind": "causal",
+      "from": "e_jamie_meet",
+      "to": "e_marry"
     },
     {
       "id": "c5",
       "kind": "causal",
-      "from": "e_1968_return",
-      "to": "e_brianna_travel"
+      "from": "e_marry",
+      "to": "e_frank_search"
     },
     {
       "id": "c6",
-      "kind": "intervention",
-      "from": "e_geillis",
-      "to": "e_culloden_know"
+      "kind": "causal",
+      "from": "e_frank_search",
+      "to": "e_culloden_foreknowledge"
     },
     {
       "id": "c7",
-      "kind": "temporal",
-      "from": "e_brianna_travel",
-      "to": "e_ridge"
+      "kind": "causal",
+      "from": "e_culloden_foreknowledge",
+      "to": "e_try_change"
     },
     {
       "id": "c8",
-      "kind": "temporal",
-      "from": "e_ridge",
-      "to": "e_abandawe"
+      "kind": "causal",
+      "from": "e_try_change",
+      "to": "e_sep"
     },
     {
       "id": "c9",
-      "kind": "identity",
-      "from": "claire",
-      "to": "brianna"
+      "kind": "causal",
+      "from": "e_sep",
+      "to": "e_return20"
     },
     {
       "id": "c10",
       "kind": "causal",
-      "from": "e_rules",
-      "to": "e_craigh"
+      "from": "e_return20",
+      "to": "e_brianna_born"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_brianna_born",
+      "to": "e_research"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_research",
+      "to": "e_return18"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_return18",
+      "to": "e_reunion"
+    },
+    {
+      "id": "c14",
+      "kind": "causal",
+      "from": "e_reunion",
+      "to": "e_brianna_roger"
+    },
+    {
+      "id": "c15",
+      "kind": "causal",
+      "from": "e_brianna_roger",
+      "to": "e_family"
+    },
+    {
+      "id": "c16",
+      "kind": "causal",
+      "from": "e_family",
+      "to": "e_fixedish"
+    },
+    {
+      "id": "c17",
+      "kind": "causal",
+      "from": "e_fixedish",
+      "to": "e_geillis"
+    },
+    {
+      "id": "c18",
+      "kind": "causal",
+      "from": "e_geillis",
+      "to": "e_voyage"
+    },
+    {
+      "id": "c19",
+      "kind": "causal",
+      "from": "e_voyage",
+      "to": "e_letters"
+    },
+    {
+      "id": "c20",
+      "kind": "causal",
+      "from": "e_letters",
+      "to": "e_destiny"
+    },
+    {
+      "id": "c21",
+      "kind": "causal",
+      "from": "e_destiny",
+      "to": "e_close"
+    },
+    {
+      "id": "x1",
+      "kind": "temporal",
+      "from": "e_stones",
+      "to": "e_arrive1743"
+    },
+    {
+      "id": "x2",
+      "kind": "temporal",
+      "from": "e_return20",
+      "to": "e_brianna_born"
+    },
+    {
+      "id": "x3",
+      "kind": "world_relation",
+      "from": "w_stones",
+      "to": "w_1743",
+      "label": "stones link eras",
+      "relation": "correspondsTo"
+    },
+    {
+      "id": "x4",
+      "kind": "intervention",
+      "from": "e_try_change",
+      "to": "e_fixedish"
+    },
+    {
+      "id": "x5",
+      "kind": "causal",
+      "from": "e_research",
+      "to": "e_return18"
+    },
+    {
+      "id": "x6",
+      "kind": "temporal",
+      "from": "e_return18",
+      "to": "e_reunion"
+    },
+    {
+      "id": "x7",
+      "kind": "causal",
+      "from": "e_letters",
+      "to": "e_brianna_roger"
     }
   ],
   "interventions": [
     {
-      "id": "iv_culloden",
-      "eventId": "e_culloden_know",
+      "id": "iv_stones",
+      "eventId": "e_stones",
       "ruleEffects": [
         {
           "ruleSetId": "fixed_novikov",
-          "effect": "Attempts to avert Culloden fail or fulfill recorded outcomes"
+          "effect": "Major historical events (Culloden) largely hold"
         },
         {
           "ruleSetId": "predestination_closed_loop",
-          "effect": "Traveler knowledge often produces the history already known"
-        }
-      ]
-    },
-    {
-      "id": "iv_geillis",
-      "eventId": "e_geillis",
-      "ruleEffects": [
-        {
-          "ruleSetId": "fixed_novikov",
-          "effect": "Geillis's changewar is narratively thwarted relative to Claire's survival ethics"
+          "effect": "Personal fates feel drawn despite attempts to warn"
         }
       ]
     }
   ],
   "outcome": {
-    "summary": "Standing-stone time-slip romance under soft Novikov rules: hereditary travel, festival/gem constraints, big history resists while personal lives remain contingent.",
+    "summary": "Standing stones displace Claire between 1940s and 1740s; family later multi-travels; history resists macro change.",
     "endWorldRefs": [
+      "w_1743",
       "w_stones"
     ]
   }

@@ -7,7 +7,8 @@
     "sources": [
       "Donald P. Bellisario (1989\u20131993)",
       "time-travel-archive/tv/quantum-leap.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -244,6 +245,78 @@
       "agents": [
         "al"
       ]
+    },
+    {
+      "id": "e_x_leap",
+      "type": "arrival",
+      "label": "Sam leaps into another life",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_al",
+      "type": "ordinary",
+      "label": "Al hologram guidance",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "ongoing"
+      }
+    },
+    {
+      "id": "e_x_ziggy",
+      "type": "observation",
+      "label": "Ziggy probability calculations",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "rules"
+      }
+    },
+    {
+      "id": "e_x_put_right",
+      "type": "intervention",
+      "label": "Put right what once went wrong",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "episode"
+      }
+    },
+    {
+      "id": "e_x_leapout",
+      "type": "departure",
+      "label": "Leap out when mirror shows next",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "ongoing"
+      }
+    },
+    {
+      "id": "e_x_home",
+      "type": "ordinary",
+      "label": "Never quite home arc",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "theme"
+      }
+    },
+    {
+      "id": "e_x_evil",
+      "type": "ordinary",
+      "label": "Evil leaper arcs",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_finale",
+      "type": "ordinary",
+      "label": "Series finale revelations",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "end"
+      }
     }
   ],
   "edges": [
@@ -333,6 +406,66 @@
       "from": "e_leap_out",
       "to": "e_first_leap",
       "label": "series leap cycle"
+    },
+    {
+      "id": "nqua1",
+      "kind": "causal",
+      "from": "e_x_leap",
+      "to": "e_x_al"
+    },
+    {
+      "id": "nqua2",
+      "kind": "causal",
+      "from": "e_x_al",
+      "to": "e_x_ziggy"
+    },
+    {
+      "id": "nqua3",
+      "kind": "causal",
+      "from": "e_x_ziggy",
+      "to": "e_x_put_right"
+    },
+    {
+      "id": "nqua4",
+      "kind": "causal",
+      "from": "e_x_put_right",
+      "to": "e_x_leapout"
+    },
+    {
+      "id": "nqua5",
+      "kind": "causal",
+      "from": "e_x_leapout",
+      "to": "e_x_home"
+    },
+    {
+      "id": "nqua6",
+      "kind": "causal",
+      "from": "e_x_home",
+      "to": "e_x_evil"
+    },
+    {
+      "id": "nqua7",
+      "kind": "causal",
+      "from": "e_x_evil",
+      "to": "e_x_finale"
+    },
+    {
+      "id": "bridge_quantum-",
+      "kind": "causal",
+      "from": "e_project_obs",
+      "to": "e_x_leap"
+    },
+    {
+      "id": "x_quan_1",
+      "kind": "causal",
+      "from": "e_x_leap",
+      "to": "e_x_finale"
+    },
+    {
+      "id": "x_quan_2",
+      "kind": "temporal",
+      "from": "e_x_al",
+      "to": "e_x_ziggy"
     }
   ],
   "interventions": [

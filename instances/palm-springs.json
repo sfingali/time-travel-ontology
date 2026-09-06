@@ -7,7 +7,8 @@
     "sources": [
       "Max Barbakow; Andy Siara (2020)",
       "time-travel-archive/films/palm-springs.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -143,7 +144,7 @@
     {
       "id": "e_exit",
       "type": "arrival",
-      "label": "Wake Nov 10 — loop broken",
+      "label": "Wake Nov 10 \u2014 loop broken",
       "at": {
         "worldRef": "w_ps",
         "timeLabel": "Nov 10"
@@ -171,18 +172,177 @@
     },
     {
       "id": "ev_cave",
+      "type": "ordinary",
       "label": "Sarah pulled into wedding loop",
-      "timeLabel": "day N"
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "day N"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_roy",
+      "type": "ordinary",
       "label": "Roy revenge/truce arc",
-      "timeLabel": "mid"
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "mid"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_bomb_exit",
+      "type": "ordinary",
       "label": "Cave explosion exit to Nov 10",
-      "timeLabel": "exit"
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "exit"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_wedding_day",
+      "type": "ordinary",
+      "label": "Nyles trapped at wedding day loop",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "Nov 9 endless"
+      },
+      "agents": [
+        "nyles"
+      ]
+    },
+    {
+      "id": "e_sarah_follow",
+      "type": "departure",
+      "label": "Sarah follows Nyles into glowing cave",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "night"
+      },
+      "payload": {
+        "travelMode": "cave_portal"
+      }
+    },
+    {
+      "id": "e_sarah_loop",
+      "type": "loop_reset",
+      "label": "Sarah wakes in loop with Nyles",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "next morning"
+      },
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_roy_rage",
+      "type": "ordinary",
+      "label": "Roy (older looper) seeks revenge for being pulled in",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_romance",
+      "type": "ordinary",
+      "label": "Nyles/Sarah romance and fights inside loop",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_guilt",
+      "type": "reveal",
+      "label": "Sarah's guilt over sister's fianc\u00e9",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "confession"
+      }
+    },
+    {
+      "id": "e_experiments",
+      "type": "intervention",
+      "label": "Couple experiments with loop rules",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "tests"
+      },
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_truce_roy",
+      "type": "ordinary",
+      "label": "Roy truce / explanation",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_bomb_plan",
+      "type": "intervention",
+      "label": "Sarah builds cave bomb exit hypothesis",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "plan"
+      },
+      "payload": {
+        "travelMode": "cave_portal"
+      }
+    },
+    {
+      "id": "e_blast",
+      "type": "collapse",
+      "label": "Both enter cave; blast at right moment",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "exit attempt"
+      },
+      "payload": {
+        "travelMode": "cave_portal"
+      }
+    },
+    {
+      "id": "e_nov10",
+      "type": "checkpoint",
+      "label": "Wake November 10 \u2014 loop broken",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "Nov 10"
+      },
+      "payload": {
+        "exitCondition": "cave blast escape"
+      }
+    },
+    {
+      "id": "e_together",
+      "type": "ordinary",
+      "label": "Together in ordinary time",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "epilogue"
+      }
     }
   ],
   "edges": [
@@ -229,14 +389,114 @@
       "to": "e_pool"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_cave",
       "to": "ev_roy",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "temporal",
       "from": "ev_roy",
       "to": "ev_bomb_exit",
-      "type": "precedes"
+      "label": "precedes"
+    },
+    {
+      "id": "npal1",
+      "kind": "causal",
+      "from": "e_wedding_day",
+      "to": "e_sarah_follow"
+    },
+    {
+      "id": "npal2",
+      "kind": "causal",
+      "from": "e_sarah_follow",
+      "to": "e_sarah_loop"
+    },
+    {
+      "id": "npal3",
+      "kind": "causal",
+      "from": "e_sarah_loop",
+      "to": "e_roy_rage"
+    },
+    {
+      "id": "npal4",
+      "kind": "causal",
+      "from": "e_roy_rage",
+      "to": "e_romance"
+    },
+    {
+      "id": "npal5",
+      "kind": "causal",
+      "from": "e_romance",
+      "to": "e_guilt"
+    },
+    {
+      "id": "npal6",
+      "kind": "causal",
+      "from": "e_guilt",
+      "to": "e_experiments"
+    },
+    {
+      "id": "npal7",
+      "kind": "causal",
+      "from": "e_experiments",
+      "to": "e_truce_roy"
+    },
+    {
+      "id": "npal8",
+      "kind": "causal",
+      "from": "e_truce_roy",
+      "to": "e_bomb_plan"
+    },
+    {
+      "id": "npal9",
+      "kind": "causal",
+      "from": "e_bomb_plan",
+      "to": "e_blast"
+    },
+    {
+      "id": "npal10",
+      "kind": "causal",
+      "from": "e_blast",
+      "to": "e_nov10"
+    },
+    {
+      "id": "npal11",
+      "kind": "causal",
+      "from": "e_nov10",
+      "to": "e_together"
+    },
+    {
+      "id": "bridge_palm-spr",
+      "kind": "causal",
+      "from": "ev_bomb_exit",
+      "to": "e_wedding_day"
+    },
+    {
+      "id": "px1",
+      "kind": "temporal",
+      "from": "e_sarah_follow",
+      "to": "e_sarah_loop"
+    },
+    {
+      "id": "px2",
+      "kind": "intervention",
+      "from": "e_bomb_plan",
+      "to": "e_blast"
+    },
+    {
+      "id": "px3",
+      "kind": "causal",
+      "from": "e_blast",
+      "to": "e_nov10"
+    },
+    {
+      "id": "px4",
+      "kind": "causal",
+      "from": "e_roy_rage",
+      "to": "e_truce_roy"
     }
   ],
   "interventions": [

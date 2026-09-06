@@ -5,15 +5,16 @@
     "year": 2019,
     "medium": "tv",
     "sources": [
-      "Natasha Lyonne, Leslye Headland, Amy Poehler (2019–2022)",
+      "Natasha Lyonne, Leslye Headland, Amy Poehler (2019\u20132022)",
       "time-travel-archive/tv/russian-doll.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
+    "multiverse_contact",
     "temporal_loop_exit",
-    "death_checkpoint_rewrite",
-    "multiverse_contact"
+    "death_checkpoint_rewrite"
   ],
   "primaryRuleSetId": "temporal_loop_exit",
   "mixinRuleSetIds": [
@@ -98,7 +99,7 @@
     {
       "id": "e_reset1",
       "type": "loop_reset",
-      "label": "Reset to bathroom mirror at party — Kraken hardware store night",
+      "label": "Reset to bathroom mirror at party \u2014 Kraken hardware store night",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "loop+1"
@@ -221,23 +222,120 @@
     },
     {
       "id": "ev_s1_loop",
+      "type": "ordinary",
       "label": "S1 party death loop with Alan",
-      "timeLabel": "S1"
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "S1"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_s1_exit",
+      "type": "ordinary",
       "label": "S1 linear morning exit",
-      "timeLabel": "S1 end"
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "S1 end"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_s2_subway",
+      "type": "ordinary",
       "label": "S2 time subway / decades",
-      "timeLabel": "S2"
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "S2"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_s2_family",
+      "type": "ordinary",
       "label": "S2 ancestral confrontation",
-      "timeLabel": "S2 end"
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "S2 end"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_alan",
+      "type": "ordinary",
+      "label": "Alan also looping",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_origin",
+      "type": "observation",
+      "label": "Shared trauma origins",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_other_loopers",
+      "type": "contact",
+      "label": "Other time issues / S2 multiverse hints",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "S2"
+      }
+    },
+    {
+      "id": "e_krugers",
+      "type": "ordinary",
+      "label": "Family history entanglement",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "S2"
+      }
+    },
+    {
+      "id": "e_s2_travel",
+      "type": "departure",
+      "label": "S2 time/timeline travel stakes",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "S2"
+      },
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_pad_therapy",
+      "type": "ordinary",
+      "label": "Therapy and community as exit conditions",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "growth"
+      }
     }
   ],
   "edges": [
@@ -304,19 +402,73 @@
       "to": "e_s2_resolve"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_s1_loop",
       "to": "ev_s1_exit",
-      "type": "resolved_by"
+      "label": "resolved_by"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_s1_exit",
       "to": "ev_s2_subway",
-      "type": "season_gap"
+      "label": "season_gap"
     },
     {
+      "id": "rep_3",
+      "kind": "causal",
       "from": "ev_s2_subway",
       "to": "ev_s2_family",
-      "type": "leads_to"
+      "label": "leads_to"
+    },
+    {
+      "id": "nrus1",
+      "kind": "causal",
+      "from": "e_alan",
+      "to": "e_origin"
+    },
+    {
+      "id": "nrus2",
+      "kind": "causal",
+      "from": "e_origin",
+      "to": "e_other_loopers"
+    },
+    {
+      "id": "nrus3",
+      "kind": "causal",
+      "from": "e_other_loopers",
+      "to": "e_krugers"
+    },
+    {
+      "id": "nrus4",
+      "kind": "causal",
+      "from": "e_krugers",
+      "to": "e_s2_travel"
+    },
+    {
+      "id": "bridge_russian-",
+      "kind": "causal",
+      "from": "ev_s2_family",
+      "to": "e_alan"
+    },
+    {
+      "id": "rx1",
+      "kind": "temporal",
+      "from": "e_death1",
+      "to": "e_alan"
+    },
+    {
+      "id": "rx2",
+      "kind": "causal",
+      "from": "e_origin",
+      "to": "e_exit_s1"
+    },
+    {
+      "id": "rxx",
+      "kind": "causal",
+      "from": "e_pad_therapy",
+      "to": "e_exit_s1"
     }
   ],
   "interventions": [

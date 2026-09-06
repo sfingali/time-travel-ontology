@@ -7,7 +7,8 @@
     "sources": [
       "Simon Barry (2012\u20132015)",
       "time-travel-archive/tv/continuum.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -256,6 +257,78 @@
       "agents": [
         "kiera"
       ]
+    },
+    {
+      "id": "e_x_future",
+      "type": "ordinary",
+      "label": "2077 corporate future cops",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "future"
+      }
+    },
+    {
+      "id": "e_x_jump",
+      "type": "departure",
+      "label": "Kiera jumps to 2012 with Liber8",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "2012"
+      }
+    },
+    {
+      "id": "e_x_vancouver",
+      "type": "ordinary",
+      "label": "Vancouver police embed",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_alec",
+      "type": "ordinary",
+      "label": "Young Alec Sadler nexus",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_liber8",
+      "type": "intervention",
+      "label": "Stop/alter Liber8 attacks",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "ongoing"
+      }
+    },
+    {
+      "id": "e_x_branch",
+      "type": "branch_fork",
+      "label": "Future messages rewrite",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_tech",
+      "type": "ordinary",
+      "label": "CMR / time travel tech politics",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "theme"
+      }
+    },
+    {
+      "id": "e_x_end",
+      "type": "ordinary",
+      "label": "Series future renegotiation",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "end"
+      }
     }
   ],
   "edges": [
@@ -360,6 +433,66 @@
       "from": "w_2077a",
       "to": "w_2077b",
       "relation": "supersedes"
+    },
+    {
+      "id": "ncon1",
+      "kind": "causal",
+      "from": "e_x_future",
+      "to": "e_x_jump"
+    },
+    {
+      "id": "ncon2",
+      "kind": "causal",
+      "from": "e_x_jump",
+      "to": "e_x_vancouver"
+    },
+    {
+      "id": "ncon3",
+      "kind": "causal",
+      "from": "e_x_vancouver",
+      "to": "e_x_alec"
+    },
+    {
+      "id": "ncon4",
+      "kind": "causal",
+      "from": "e_x_alec",
+      "to": "e_x_liber8"
+    },
+    {
+      "id": "ncon5",
+      "kind": "causal",
+      "from": "e_x_liber8",
+      "to": "e_x_branch"
+    },
+    {
+      "id": "ncon6",
+      "kind": "causal",
+      "from": "e_x_branch",
+      "to": "e_x_tech"
+    },
+    {
+      "id": "ncon7",
+      "kind": "causal",
+      "from": "e_x_tech",
+      "to": "e_x_end"
+    },
+    {
+      "id": "bridge_continuu",
+      "kind": "causal",
+      "from": "e_accept",
+      "to": "e_x_future"
+    },
+    {
+      "id": "x_cont_1",
+      "kind": "causal",
+      "from": "e_x_future",
+      "to": "e_x_end"
+    },
+    {
+      "id": "x_cont_2",
+      "kind": "temporal",
+      "from": "e_x_jump",
+      "to": "e_x_vancouver"
     }
   ],
   "interventions": [

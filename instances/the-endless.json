@@ -7,7 +7,8 @@
     "sources": [
       "Justin Benson & Aaron Moorhead (2017)",
       "time-travel-archive/films/the-endless.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -295,6 +296,78 @@
       "payload": {
         "note": "ambiguous outer loop"
       }
+    },
+    {
+      "id": "e_x_return",
+      "type": "ordinary",
+      "label": "Brothers return to UFO cult",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_time",
+      "type": "observation",
+      "label": "Different time rates in zones",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_entity",
+      "type": "reveal",
+      "label": "Entity trapping people in loops",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_tape",
+      "type": "ordinary",
+      "label": "Arcane video tapes",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_stay",
+      "type": "intervention",
+      "label": "One brother stays; one leaves",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_loop",
+      "type": "loop_reset",
+      "label": "Camp time loop implications",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "rules"
+      }
+    },
+    {
+      "id": "e_x_ascend",
+      "type": "ordinary",
+      "label": "Ascension lore",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_close",
+      "type": "ordinary",
+      "label": "Ambiguous freedom",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "end"
+      }
     }
   ],
   "edges": [
@@ -405,6 +478,66 @@
       "to": "w_outside",
       "relation": "nestsWithin",
       "label": "camp region under Entity"
+    },
+    {
+      "id": "nthe1",
+      "kind": "causal",
+      "from": "e_x_return",
+      "to": "e_x_time"
+    },
+    {
+      "id": "nthe2",
+      "kind": "causal",
+      "from": "e_x_time",
+      "to": "e_x_entity"
+    },
+    {
+      "id": "nthe3",
+      "kind": "causal",
+      "from": "e_x_entity",
+      "to": "e_x_tape"
+    },
+    {
+      "id": "nthe4",
+      "kind": "causal",
+      "from": "e_x_tape",
+      "to": "e_x_stay"
+    },
+    {
+      "id": "nthe5",
+      "kind": "causal",
+      "from": "e_x_stay",
+      "to": "e_x_loop"
+    },
+    {
+      "id": "nthe6",
+      "kind": "causal",
+      "from": "e_x_loop",
+      "to": "e_x_ascend"
+    },
+    {
+      "id": "nthe7",
+      "kind": "causal",
+      "from": "e_x_ascend",
+      "to": "e_x_close"
+    },
+    {
+      "id": "bridge_the-endl",
+      "kind": "causal",
+      "from": "e_meta",
+      "to": "e_x_return"
+    },
+    {
+      "id": "x_the-_1",
+      "kind": "causal",
+      "from": "e_x_return",
+      "to": "e_x_close"
+    },
+    {
+      "id": "x_the-_2",
+      "kind": "temporal",
+      "from": "e_x_time",
+      "to": "e_x_entity"
     }
   ],
   "interventions": [

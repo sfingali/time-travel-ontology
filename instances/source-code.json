@@ -7,13 +7,14 @@
     "sources": [
       "Duncan Jones; Ben Ripley (2011)",
       "time-travel-archive/films/source-code.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "temporal_loop_exit",
+    "perception_nonlinear",
     "branch_on_intervention",
-    "perception_nonlinear"
+    "temporal_loop_exit"
   ],
   "primaryRuleSetId": "temporal_loop_exit",
   "mixinRuleSetIds": [
@@ -164,7 +165,7 @@
     {
       "id": "e_text",
       "type": "ordinary",
-      "label": "Alt Colter texts Goodwin — worlds diverge",
+      "label": "Alt Colter texts Goodwin \u2014 worlds diverge",
       "at": {
         "worldRef": "w_alt_chicago",
         "timeLabel": "afternoon"
@@ -189,18 +190,129 @@
     },
     {
       "id": "ev_eight",
+      "type": "ordinary",
       "label": "Eight-minute train iterations",
-      "timeLabel": "runs"
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "runs"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_bomber",
+      "type": "ordinary",
       "label": "Bomber identified/stopped",
-      "timeLabel": "solution"
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "solution"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_branch_email",
+      "type": "ordinary",
       "label": "Final jump continuum + Goodwin email",
-      "timeLabel": "ending"
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "ending"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_awake",
+      "type": "ordinary",
+      "label": "Colter wakes as Sean on train",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "Source Code run"
+      },
+      "payload": {
+        "travelMode": "perception"
+      }
+    },
+    {
+      "id": "e_handler",
+      "type": "ordinary",
+      "label": "Goodwin/Rutledge brief: find bomber",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "capsule"
+      }
+    },
+    {
+      "id": "e_rules",
+      "type": "observation",
+      "label": "Source Code is quantum re-creation not true past",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "rules"
+      },
+      "payload": {
+        "perceptionMode": "source_code"
+      }
+    },
+    {
+      "id": "e_bomber",
+      "type": "intervention",
+      "label": "Identifies bomber Derek Frost",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "success run"
+      }
+    },
+    {
+      "id": "e_second_bomb",
+      "type": "ordinary",
+      "label": "City bomb threat beyond train",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "stakes"
+      }
+    },
+    {
+      "id": "e_defy",
+      "type": "intervention",
+      "label": "Defies orders to save train worldline",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_freeze",
+      "type": "checkpoint",
+      "label": "Last seconds frozen; life in alternate thread",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "ending"
+      },
+      "payload": {
+        "exitCondition": "remain in SC world"
+      }
+    },
+    {
+      "id": "e_ethics",
+      "type": "observation",
+      "label": "Mind of dying soldier reused",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "theme"
+      }
     }
   ],
   "edges": [
@@ -256,14 +368,84 @@
       "label": "consciousness continuity"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_eight",
       "to": "ev_bomber",
-      "type": "enables"
+      "label": "enables"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_bomber",
       "to": "ev_branch_email",
-      "type": "leads_to"
+      "label": "leads_to"
+    },
+    {
+      "id": "nsou1",
+      "kind": "causal",
+      "from": "e_awake",
+      "to": "e_handler"
+    },
+    {
+      "id": "nsou2",
+      "kind": "causal",
+      "from": "e_handler",
+      "to": "e_rules"
+    },
+    {
+      "id": "nsou3",
+      "kind": "causal",
+      "from": "e_rules",
+      "to": "e_bomber"
+    },
+    {
+      "id": "nsou4",
+      "kind": "causal",
+      "from": "e_bomber",
+      "to": "e_second_bomb"
+    },
+    {
+      "id": "nsou5",
+      "kind": "causal",
+      "from": "e_second_bomb",
+      "to": "e_defy"
+    },
+    {
+      "id": "nsou6",
+      "kind": "causal",
+      "from": "e_defy",
+      "to": "e_freeze"
+    },
+    {
+      "id": "nsou7",
+      "kind": "causal",
+      "from": "e_freeze",
+      "to": "e_ethics"
+    },
+    {
+      "id": "bridge_source-c",
+      "kind": "causal",
+      "from": "ev_branch_email",
+      "to": "e_awake"
+    },
+    {
+      "id": "sx1",
+      "kind": "temporal",
+      "from": "e_bomb",
+      "to": "e_awake"
+    },
+    {
+      "id": "sx2",
+      "kind": "intervention",
+      "from": "e_bomber",
+      "to": "e_defy"
+    },
+    {
+      "id": "sx3",
+      "kind": "causal",
+      "from": "e_defy",
+      "to": "e_freeze"
     }
   ],
   "interventions": [

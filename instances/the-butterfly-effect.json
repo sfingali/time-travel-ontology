@@ -7,7 +7,8 @@
     "sources": [
       "Eric Bress & J. Mackye Gruber (2004)",
       "time-travel-archive/films/the-butterfly-effect.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -24,7 +25,7 @@
       "kind": "timeline",
       "id": "w_base",
       "label": "Baseline damaged adulthood",
-      "spanLabel": "childhood→college"
+      "spanLabel": "childhood\u2192college"
     },
     {
       "kind": "branch",
@@ -92,7 +93,7 @@
     {
       "id": "e_read",
       "type": "departure",
-      "label": "College Evan reads journals → body past",
+      "label": "College Evan reads journals \u2192 body past",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "college"
@@ -194,7 +195,7 @@
     {
       "id": "e_cost",
       "type": "reveal",
-      "label": "Each fix harms someone else — butterfly cost",
+      "label": "Each fix harms someone else \u2014 butterfly cost",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "meta"
@@ -205,18 +206,118 @@
     },
     {
       "id": "ev_journal",
+      "type": "ordinary",
       "label": "Journals enable past occupation",
-      "timeLabel": "college"
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "college"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_branches",
+      "type": "ordinary",
       "label": "Cascade of damaged timelines",
-      "timeLabel": "attempts"
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "attempts"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_terminal",
+      "type": "ordinary",
       "label": "Theatrical exile OR Director in-utero erase",
-      "timeLabel": "ending fork"
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "ending fork"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_journals",
+      "type": "ordinary",
+      "label": "Evan journals blackouts",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "childhood/college"
+      }
+    },
+    {
+      "id": "e_travel",
+      "type": "departure",
+      "label": "Reads journals; returns to past body",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "inciting"
+      },
+      "payload": {
+        "travelMode": "other",
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_kayleigh",
+      "type": "intervention",
+      "label": "Tries to save Kayleigh from abuse",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "first fix"
+      }
+    },
+    {
+      "id": "e_worse",
+      "type": "branch_fork",
+      "label": "Each fix spawns worse present",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_prison",
+      "type": "ordinary",
+      "label": "Prison / amputation timelines",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "variants"
+      }
+    },
+    {
+      "id": "e_kill_self",
+      "type": "intervention",
+      "label": "Strangles self in womb to erase harm",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "theatrical ending"
+      },
+      "payload": {
+        "note": "theatrical cut"
+      }
+    },
+    {
+      "id": "e_director",
+      "type": "ordinary",
+      "label": "Director ending: leaves Kayleigh alone",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "alt ending"
+      }
     }
   ],
   "edges": [
@@ -284,14 +385,72 @@
       "to": "e_cost"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_journal",
       "to": "ev_branches",
-      "type": "causes"
+      "label": "causes"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_branches",
       "to": "ev_terminal",
-      "type": "leads_to"
+      "label": "leads_to"
+    },
+    {
+      "id": "nthe1",
+      "kind": "causal",
+      "from": "e_journals",
+      "to": "e_travel"
+    },
+    {
+      "id": "nthe2",
+      "kind": "causal",
+      "from": "e_travel",
+      "to": "e_kayleigh"
+    },
+    {
+      "id": "nthe3",
+      "kind": "causal",
+      "from": "e_kayleigh",
+      "to": "e_worse"
+    },
+    {
+      "id": "nthe4",
+      "kind": "causal",
+      "from": "e_worse",
+      "to": "e_prison"
+    },
+    {
+      "id": "nthe5",
+      "kind": "causal",
+      "from": "e_prison",
+      "to": "e_kill_self"
+    },
+    {
+      "id": "nthe6",
+      "kind": "causal",
+      "from": "e_kill_self",
+      "to": "e_director"
+    },
+    {
+      "id": "bridge_the-butt",
+      "kind": "causal",
+      "from": "ev_terminal",
+      "to": "e_journals"
+    },
+    {
+      "id": "bfx1",
+      "kind": "intervention",
+      "from": "e_kayleigh",
+      "to": "e_worse"
+    },
+    {
+      "id": "bfx2",
+      "kind": "causal",
+      "from": "e_cost",
+      "to": "e_travel"
     }
   ],
   "interventions": [

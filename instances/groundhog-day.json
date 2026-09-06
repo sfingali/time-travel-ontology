@@ -7,7 +7,8 @@
     "sources": [
       "Harold Ramis & Danny Rubin (1993)",
       "time-travel-archive/films/groundhog-day.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -79,7 +80,7 @@
     {
       "id": "e_reset1",
       "type": "loop_reset",
-      "label": "Wake to same morning — loop begins",
+      "label": "Wake to same morning \u2014 loop begins",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 #2"
@@ -199,7 +200,7 @@
     {
       "id": "e_exit",
       "type": "loop_reset",
-      "label": "Wake to Feb 3 — loop exits",
+      "label": "Wake to Feb 3 \u2014 loop exits",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 3"
@@ -216,23 +217,126 @@
     },
     {
       "id": "ev_loop_start",
+      "type": "ordinary",
       "label": "Phil first repeated Feb 2",
-      "timeLabel": "Feb 2"
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_despair",
+      "type": "ordinary",
       "label": "Suicide attempts fail to exit",
-      "timeLabel": "mid loops"
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "mid loops"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_virtue",
+      "type": "ordinary",
       "label": "Learning/altruism phase",
-      "timeLabel": "late loops"
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "late loops"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_exit",
+      "type": "ordinary",
       "label": "Wake on Feb 3 with Rita",
-      "timeLabel": "Feb 3"
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 3"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_arrive_punx",
+      "type": "ordinary",
+      "label": "Phil arrives Punxsutawney",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 1"
+      }
+    },
+    {
+      "id": "e_loop_realize",
+      "type": "loop_reset",
+      "label": "Realizes day repeats",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "early loops"
+      },
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_despair",
+      "type": "death",
+      "label": "Suicides fail to exit",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "despair"
+      },
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_rita_learn",
+      "type": "intervention",
+      "label": "Learns Rita's preferences across loops",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "growth"
+      },
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_skills",
+      "type": "ordinary",
+      "label": "Piano, French, ice sculpture mastery",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "later loops"
+      }
+    },
+    {
+      "id": "e_good_day",
+      "type": "ordinary",
+      "label": "Perfect altruistic day",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "penultimate"
+      }
     }
   ],
   "edges": [
@@ -310,19 +414,73 @@
       "to": "e_exit"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_loop_start",
       "to": "ev_despair",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "temporal",
       "from": "ev_despair",
       "to": "ev_virtue",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_3",
+      "kind": "causal",
       "from": "ev_virtue",
       "to": "ev_exit",
-      "type": "enables"
+      "label": "enables"
+    },
+    {
+      "id": "ngro1",
+      "kind": "causal",
+      "from": "e_arrive_punx",
+      "to": "e_loop_realize"
+    },
+    {
+      "id": "ngro2",
+      "kind": "causal",
+      "from": "e_loop_realize",
+      "to": "e_despair"
+    },
+    {
+      "id": "ngro3",
+      "kind": "causal",
+      "from": "e_despair",
+      "to": "e_rita_learn"
+    },
+    {
+      "id": "ngro4",
+      "kind": "causal",
+      "from": "e_rita_learn",
+      "to": "e_skills"
+    },
+    {
+      "id": "ngro5",
+      "kind": "causal",
+      "from": "e_skills",
+      "to": "e_good_day"
+    },
+    {
+      "id": "bridge_groundho",
+      "kind": "causal",
+      "from": "ev_exit",
+      "to": "e_arrive_punx"
+    },
+    {
+      "id": "gx1",
+      "kind": "temporal",
+      "from": "e_despair",
+      "to": "e_rita_learn"
+    },
+    {
+      "id": "gx2",
+      "kind": "causal",
+      "from": "e_good_day",
+      "to": "e_exit"
     }
   ],
   "interventions": [

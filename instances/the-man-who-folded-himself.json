@@ -7,7 +7,8 @@
     "sources": [
       "David Gerrold (1973)",
       "time-travel-archive/novels/the-man-who-folded-himself.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -257,6 +258,78 @@
       "agents": [
         "danny"
       ]
+    },
+    {
+      "id": "e_x_belt",
+      "type": "departure",
+      "label": "Time belt inheritance",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_meet",
+      "type": "contact",
+      "label": "Meets other selves",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_love",
+      "type": "ordinary",
+      "label": "Relationships with variants",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_war",
+      "type": "ordinary",
+      "label": "Time wars among selves",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_origin",
+      "type": "bootstrap_origin",
+      "label": "Belt origin paradox",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "reveal"
+      }
+    },
+    {
+      "id": "e_x_old",
+      "type": "ordinary",
+      "label": "Aging continuum of selves",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_identity",
+      "type": "observation",
+      "label": "Identity multiplicity theme",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "theme"
+      }
+    },
+    {
+      "id": "e_x_close",
+      "type": "ordinary",
+      "label": "Final solitude among selves",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "end"
+      }
     }
   ],
   "edges": [
@@ -366,6 +439,66 @@
       "from": "w_prime",
       "to": "w_diane",
       "relation": "forksFrom"
+    },
+    {
+      "id": "nthe1",
+      "kind": "causal",
+      "from": "e_x_belt",
+      "to": "e_x_meet"
+    },
+    {
+      "id": "nthe2",
+      "kind": "causal",
+      "from": "e_x_meet",
+      "to": "e_x_love"
+    },
+    {
+      "id": "nthe3",
+      "kind": "causal",
+      "from": "e_x_love",
+      "to": "e_x_war"
+    },
+    {
+      "id": "nthe4",
+      "kind": "causal",
+      "from": "e_x_war",
+      "to": "e_x_origin"
+    },
+    {
+      "id": "nthe5",
+      "kind": "causal",
+      "from": "e_x_origin",
+      "to": "e_x_old"
+    },
+    {
+      "id": "nthe6",
+      "kind": "causal",
+      "from": "e_x_old",
+      "to": "e_x_identity"
+    },
+    {
+      "id": "nthe7",
+      "kind": "causal",
+      "from": "e_x_identity",
+      "to": "e_x_close"
+    },
+    {
+      "id": "bridge_the-man-",
+      "kind": "causal",
+      "from": "e_choice",
+      "to": "e_x_belt"
+    },
+    {
+      "id": "x_the-_1",
+      "kind": "causal",
+      "from": "e_x_belt",
+      "to": "e_x_close"
+    },
+    {
+      "id": "x_the-_2",
+      "kind": "temporal",
+      "from": "e_x_meet",
+      "to": "e_x_love"
     }
   ],
   "interventions": [

@@ -7,13 +7,14 @@
     "sources": [
       "Marvel Studios Loki S1 (2021)",
       "time-travel-archive/tv/loki.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "branch_bureaucracy_prune",
     "branch_on_intervention",
-    "multiverse_contact"
+    "multiverse_contact",
+    "branch_bureaucracy_prune"
   ],
   "primaryRuleSetId": "branch_bureaucracy_prune",
   "mixinRuleSetIds": [
@@ -33,7 +34,7 @@
       "id": "w_variant_loki",
       "label": "Loki Variant branch (2012 escape)",
       "parentRef": "w_sacred",
-      "forkLabel": "nexus — Tesseract grab",
+      "forkLabel": "nexus \u2014 Tesseract grab",
       "pruneAuthority": "TVA"
     },
     {
@@ -101,7 +102,7 @@
     {
       "id": "e_nexus",
       "type": "branch_fork",
-      "label": "2012 Loki escapes with Tesseract — nexus",
+      "label": "2012 Loki escapes with Tesseract \u2014 nexus",
       "at": {
         "worldRef": "w_variant_loki",
         "timeLabel": "2012 NY"
@@ -253,7 +254,7 @@
     {
       "id": "e_multiverse",
       "type": "branch_fork",
-      "label": "Multiverse unleashed — branches infinite",
+      "label": "Multiverse unleashed \u2014 branches infinite",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "post-HWR"
@@ -268,18 +269,123 @@
     },
     {
       "id": "ev_tva",
+      "type": "ordinary",
       "label": "Variant Loki captured by TVA",
-      "timeLabel": "S1"
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "S1"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_hwr",
+      "type": "ordinary",
       "label": "He Who Remains killed; branches unbound",
-      "timeLabel": "S1 end"
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "S1 end"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_ygg",
+      "type": "ordinary",
       "label": "Loki becomes living loom/Yggdrasil",
-      "timeLabel": "S2 end"
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "S2 end"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_tva",
+      "type": "arrival",
+      "label": "Loki variant arrives at TVA",
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "S1"
+      }
+    },
+    {
+      "id": "e_prune",
+      "type": "branch_prune",
+      "label": "Sacred Timeline pruning explained",
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "early"
+      },
+      "payload": {
+        "pruneAuthority": "TVA"
+      }
+    },
+    {
+      "id": "e_sylvie",
+      "type": "ordinary",
+      "label": "Sylvie counterpart alliance/romance",
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_alioth",
+      "type": "ordinary",
+      "label": "Alioth at End of Time",
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "late S1"
+      }
+    },
+    {
+      "id": "e_kill_hwr",
+      "type": "intervention",
+      "label": "Sylvie kills He Who Remains",
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "S1 end"
+      }
+    },
+    {
+      "id": "e_branch_war",
+      "type": "branch_fork",
+      "label": "Timeline branches explode",
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "aftermath"
+      }
+    },
+    {
+      "id": "e_loom",
+      "type": "ordinary",
+      "label": "Temporal loom crisis S2",
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "S2"
+      }
+    },
+    {
+      "id": "e_loki_throne",
+      "type": "intervention",
+      "label": "Loki replaces loom; holds branches",
+      "at": {
+        "worldRef": "w_sacred",
+        "timeLabel": "S2 end"
+      }
     }
   ],
   "edges": [
@@ -386,14 +492,84 @@
       "to": "e_multiverse"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_tva",
       "to": "ev_hwr",
-      "type": "leads_to"
+      "label": "leads_to"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_hwr",
       "to": "ev_ygg",
-      "type": "necessitates"
+      "label": "necessitates"
+    },
+    {
+      "id": "nlok1",
+      "kind": "causal",
+      "from": "e_tva",
+      "to": "e_prune"
+    },
+    {
+      "id": "nlok2",
+      "kind": "causal",
+      "from": "e_prune",
+      "to": "e_sylvie"
+    },
+    {
+      "id": "nlok3",
+      "kind": "causal",
+      "from": "e_sylvie",
+      "to": "e_alioth"
+    },
+    {
+      "id": "nlok4",
+      "kind": "causal",
+      "from": "e_alioth",
+      "to": "e_kill_hwr"
+    },
+    {
+      "id": "nlok5",
+      "kind": "causal",
+      "from": "e_kill_hwr",
+      "to": "e_branch_war"
+    },
+    {
+      "id": "nlok6",
+      "kind": "causal",
+      "from": "e_branch_war",
+      "to": "e_loom"
+    },
+    {
+      "id": "nlok7",
+      "kind": "causal",
+      "from": "e_loom",
+      "to": "e_loki_throne"
+    },
+    {
+      "id": "bridge_loki",
+      "kind": "causal",
+      "from": "ev_ygg",
+      "to": "e_tva"
+    },
+    {
+      "id": "lx1",
+      "kind": "intervention",
+      "from": "e_kill_hwr",
+      "to": "e_branch_war"
+    },
+    {
+      "id": "lx2",
+      "kind": "causal",
+      "from": "e_loom",
+      "to": "e_loki_throne"
+    },
+    {
+      "id": "lx3",
+      "kind": "identity",
+      "from": "e_sylvie",
+      "to": "e_tva"
     }
   ],
   "interventions": [

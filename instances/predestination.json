@@ -7,13 +7,14 @@
     "sources": [
       "Spierig brothers; Heinlein All You Zombies",
       "time-travel-archive/films/predestination.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "predestination_closed_loop",
+    "fixed_novikov",
     "bootstrap_ontological",
-    "fixed_novikov"
+    "predestination_closed_loop"
   ],
   "primaryRuleSetId": "predestination_closed_loop",
   "mixinRuleSetIds": [
@@ -26,7 +27,7 @@
       "kind": "timeline",
       "id": "w_loop",
       "label": "Closed predestination timeline",
-      "spanLabel": "orphanage→bombings→recruitment"
+      "spanLabel": "orphanage\u2192bombings\u2192recruitment"
     }
   ],
   "agents": [
@@ -114,7 +115,7 @@
     {
       "id": "e_transition",
       "type": "ordinary",
-      "label": "Gender transition Jane→John",
+      "label": "Gender transition Jane\u2192John",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "post-birth"
@@ -252,33 +253,135 @@
     },
     {
       "id": "ev_orphanage",
+      "type": "ordinary",
       "label": "Baby left at 1945 orphanage",
-      "timeLabel": "1945",
-      "agents": []
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "1945"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_romance",
+      "type": "ordinary",
       "label": "John meets Jane / conceives",
-      "timeLabel": "1963",
-      "agents": []
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "1963"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_bar",
+      "type": "ordinary",
       "label": "Barkeeper hears Unmarried Mother story",
-      "timeLabel": "1970",
-      "agents": []
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "1970"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_burn",
+      "type": "ordinary",
       "label": "Agent burned failing bomb disarm",
-      "timeLabel": "1975",
-      "agents": []
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "1975"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_bomber",
+      "type": "ordinary",
       "label": "Agent confronts Fizzle Bomber self",
-      "timeLabel": "1975+",
-      "agents": []
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "1975+"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_pad_bar",
+      "type": "ordinary",
+      "label": "Bartender/agent hears unmarried mother story",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "1970s"
+      }
+    },
+    {
+      "id": "e_pad_baby",
+      "type": "birth",
+      "label": "Baby stolen from hospital",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "birth"
+      }
+    },
+    {
+      "id": "e_pad_jane",
+      "type": "ordinary",
+      "label": "Jane's life / Fizzle Bomber hunt",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "arc"
+      }
+    },
+    {
+      "id": "e_pad_reveal",
+      "type": "reveal",
+      "label": "Agent, Jane, John, baby, bomber are one continuum",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "reveal"
+      }
+    },
+    {
+      "id": "e_pad_bomb",
+      "type": "ordinary",
+      "label": "Fizzle Bomber confrontations",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_pad_loop",
+      "type": "bootstrap_origin",
+      "label": "Ontological paradox closed",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "close"
+      },
+      "payload": {
+        "bootstrapEntity": "self"
+      }
     }
   ],
   "edges": [
@@ -388,29 +491,87 @@
       "to": "e_recruit"
     },
     {
+      "id": "rep_1",
+      "kind": "temporal",
       "from": "ev_orphanage",
       "to": "ev_romance",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_2",
+      "kind": "temporal",
       "from": "ev_romance",
       "to": "ev_bar",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_3",
+      "kind": "temporal",
       "from": "ev_bar",
       "to": "ev_burn",
-      "type": "precedes"
+      "label": "precedes"
     },
     {
+      "id": "rep_4",
+      "kind": "causal",
       "from": "ev_burn",
       "to": "ev_bomber",
-      "type": "leads_to"
+      "label": "leads_to"
     },
     {
+      "id": "rep_5",
+      "kind": "identity",
       "from": "ev_bomber",
       "to": "ev_orphanage",
-      "type": "bootstrap_causes"
+      "label": "bootstrap_causes"
+    },
+    {
+      "id": "npre1",
+      "kind": "causal",
+      "from": "e_pad_bar",
+      "to": "e_pad_baby"
+    },
+    {
+      "id": "npre2",
+      "kind": "causal",
+      "from": "e_pad_baby",
+      "to": "e_pad_jane"
+    },
+    {
+      "id": "npre3",
+      "kind": "causal",
+      "from": "e_pad_jane",
+      "to": "e_pad_reveal"
+    },
+    {
+      "id": "npre4",
+      "kind": "causal",
+      "from": "e_pad_reveal",
+      "to": "e_pad_bomb"
+    },
+    {
+      "id": "npre5",
+      "kind": "causal",
+      "from": "e_pad_bomb",
+      "to": "e_pad_loop"
+    },
+    {
+      "id": "bridge_predesti",
+      "kind": "causal",
+      "from": "ev_bomber",
+      "to": "e_pad_bar"
+    },
+    {
+      "id": "pdx1",
+      "kind": "identity",
+      "from": "e_pad_baby",
+      "to": "e_pad_reveal"
+    },
+    {
+      "id": "pdx2",
+      "kind": "identity",
+      "from": "e_pad_reveal",
+      "to": "e_pad_loop"
     }
   ],
   "interventions": [
@@ -440,7 +601,7 @@
     }
   ],
   "outcome": {
-    "summary": "One person is mother, father, child, lover, agent, and bomber—an ontological unicycle with no external origin.",
+    "summary": "One person is mother, father, child, lover, agent, and bomber\u2014an ontological unicycle with no external origin.",
     "endWorldRefs": [
       "w_loop"
     ]

@@ -7,13 +7,14 @@
     "sources": [
       "Makoto Shinkai (2016)",
       "time-travel-archive/films/your-name.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "mutable_ripple",
     "perception_nonlinear",
-    "bootstrap_ontological"
+    "bootstrap_ontological",
+    "mutable_ripple"
   ],
   "primaryRuleSetId": "mutable_ripple",
   "mixinRuleSetIds": [
@@ -237,23 +238,138 @@
     },
     {
       "id": "ev_swap",
+      "type": "ordinary",
       "label": "Body swaps begin",
-      "timeLabel": "early"
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "early"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_offset",
+      "type": "ordinary",
       "label": "Taki learns 3-year disaster offset",
-      "timeLabel": "mid"
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "mid"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_evacuate",
+      "type": "ordinary",
       "label": "Itomori evacuation succeeds",
-      "timeLabel": "comet"
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "comet"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_reunion",
+      "type": "ordinary",
       "label": "Adult name reunion",
-      "timeLabel": "years later"
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "years later"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_swap_start",
+      "type": "ordinary",
+      "label": "Taki/Mitsuha body-swap begins",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "early"
+      },
+      "payload": {
+        "travelMode": "body_swap"
+      }
+    },
+    {
+      "id": "e_comet",
+      "type": "ordinary",
+      "label": "Comet Tiamat approaches",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "stakes"
+      }
+    },
+    {
+      "id": "e_diary",
+      "type": "ordinary",
+      "label": "Notes / phone diaries across swaps",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_realize_dead",
+      "type": "reveal",
+      "label": "Taki realizes Mitsuha's town already destroyed years prior",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_twilight",
+      "type": "intervention",
+      "label": "Kataware-doki meet; he gives her ribbon/name",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_evacuate",
+      "type": "intervention",
+      "label": "Mitsuha's side evacuates Itomori",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "2013"
+      }
+    },
+    {
+      "id": "e_forget",
+      "type": "ordinary",
+      "label": "Memories fade after save",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "aftermath"
+      }
+    },
+    {
+      "id": "e_stairs",
+      "type": "ordinary",
+      "label": "Years later stairs reunion",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "epilogue"
+      }
     }
   ],
   "edges": [
@@ -327,19 +443,85 @@
       "label": "body-swap link"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_swap",
       "to": "ev_offset",
-      "type": "leads_to"
+      "label": "leads_to"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_offset",
       "to": "ev_evacuate",
-      "type": "enables"
+      "label": "enables"
     },
     {
+      "id": "rep_3",
+      "kind": "temporal",
       "from": "ev_evacuate",
       "to": "ev_reunion",
-      "type": "precedes"
+      "label": "precedes"
+    },
+    {
+      "id": "nyou1",
+      "kind": "causal",
+      "from": "e_swap_start",
+      "to": "e_comet"
+    },
+    {
+      "id": "nyou2",
+      "kind": "causal",
+      "from": "e_comet",
+      "to": "e_diary"
+    },
+    {
+      "id": "nyou3",
+      "kind": "causal",
+      "from": "e_diary",
+      "to": "e_realize_dead"
+    },
+    {
+      "id": "nyou4",
+      "kind": "causal",
+      "from": "e_realize_dead",
+      "to": "e_twilight"
+    },
+    {
+      "id": "nyou5",
+      "kind": "causal",
+      "from": "e_twilight",
+      "to": "e_evacuate"
+    },
+    {
+      "id": "nyou6",
+      "kind": "causal",
+      "from": "e_evacuate",
+      "to": "e_forget"
+    },
+    {
+      "id": "nyou7",
+      "kind": "causal",
+      "from": "e_forget",
+      "to": "e_stairs"
+    },
+    {
+      "id": "bridge_your-nam",
+      "kind": "causal",
+      "from": "ev_reunion",
+      "to": "e_swap_start"
+    },
+    {
+      "id": "yx1",
+      "kind": "causal",
+      "from": "e_realize_dead",
+      "to": "e_twilight"
+    },
+    {
+      "id": "yx2",
+      "kind": "intervention",
+      "from": "e_evacuate",
+      "to": "e_stairs"
     }
   ],
   "interventions": [

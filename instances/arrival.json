@@ -7,13 +7,14 @@
     "sources": [
       "Denis Villeneuve; Ted Chiang Story of Your Life",
       "time-travel-archive/films/arrival.md",
-      "time-travel-archive true-deep wave 2026-09-06"
+      "time-travel-archive true-deep wave 2026-09-06",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
-    "perception_nonlinear",
+    "fixed_novikov",
     "bootstrap_ontological",
-    "fixed_novikov"
+    "perception_nonlinear"
   ],
   "primaryRuleSetId": "perception_nonlinear",
   "mixinRuleSetIds": [
@@ -26,7 +27,7 @@
       "kind": "timeline",
       "id": "w_earth",
       "label": "Earth contact continuum",
-      "spanLabel": "landing→epilogue"
+      "spanLabel": "landing\u2192epilogue"
     }
   ],
   "agents": [
@@ -89,7 +90,7 @@
     {
       "id": "e_logograms",
       "type": "observation",
-      "label": "Learning heptapod logograms — nonlinear language",
+      "label": "Learning heptapod logograms \u2014 nonlinear language",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "sessions"
@@ -207,18 +208,135 @@
     },
     {
       "id": "ev_heptapod_b",
+      "type": "ordinary",
       "label": "Louise learns Heptapod B",
-      "timeLabel": "contact"
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "contact"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_shang",
+      "type": "ordinary",
       "label": "Future phone call saves diplomacy",
-      "timeLabel": "crisis"
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "crisis"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
     },
     {
       "id": "ev_choose_hannah",
+      "type": "ordinary",
       "label": "Chooses life with Hannah knowing grief",
-      "timeLabel": "personal"
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "personal"
+      },
+      "payload": {
+        "note": "repaired from true-deep stub",
+        "tags": [
+          "stub_repair"
+        ]
+      }
+    },
+    {
+      "id": "e_team",
+      "type": "ordinary",
+      "label": "Louise and Ian join contact team",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "early"
+      }
+    },
+    {
+      "id": "e_weapon_fear",
+      "type": "ordinary",
+      "label": "China/US weapon misread crisis",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "crisis"
+      }
+    },
+    {
+      "id": "e_shang_call",
+      "type": "bootstrap_origin",
+      "label": "Future Louise's call to Shang saves diplomacy",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "crisis"
+      },
+      "payload": {
+        "bootstrapEntity": "phone_call"
+      }
+    },
+    {
+      "id": "e_hannah_arc",
+      "type": "reveal",
+      "label": "Daughter Hannah life known in advance",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "personal"
+      }
+    },
+    {
+      "id": "e_choose",
+      "type": "intervention",
+      "label": "Chooses to have Hannah despite grief foreknowledge",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "decision"
+      }
+    },
+    {
+      "id": "e_abbott_costello",
+      "type": "ordinary",
+      "label": "Names heptapods Abbott and Costello",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_nonlinearity",
+      "type": "reveal",
+      "label": "Language rewires Louise temporal cognition",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "mid"
+      },
+      "payload": {
+        "perceptionMode": "heptapod_b"
+      }
+    },
+    {
+      "id": "e_ian_father",
+      "type": "ordinary",
+      "label": "Ian as father in future memories",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "personal"
+      }
+    },
+    {
+      "id": "e_departure_ships",
+      "type": "ordinary",
+      "label": "Ships depart after gift of language",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "late"
+      }
     }
   ],
   "edges": [
@@ -298,19 +416,86 @@
       "label": "perceiver continuum"
     },
     {
+      "id": "rep_1",
+      "kind": "causal",
       "from": "ev_heptapod_b",
       "to": "ev_shang",
-      "type": "enables"
+      "label": "enables"
     },
     {
+      "id": "rep_2",
+      "kind": "causal",
       "from": "ev_heptapod_b",
       "to": "ev_choose_hannah",
-      "type": "enables"
+      "label": "enables"
     },
     {
+      "id": "rep_3",
+      "kind": "identity",
       "from": "ev_shang",
       "to": "ev_heptapod_b",
-      "type": "bootstrap_causes"
+      "label": "bootstrap_causes"
+    },
+    {
+      "id": "narr1",
+      "kind": "causal",
+      "from": "e_team",
+      "to": "e_weapon_fear"
+    },
+    {
+      "id": "narr2",
+      "kind": "causal",
+      "from": "e_weapon_fear",
+      "to": "e_shang_call"
+    },
+    {
+      "id": "narr3",
+      "kind": "causal",
+      "from": "e_shang_call",
+      "to": "e_hannah_arc"
+    },
+    {
+      "id": "narr4",
+      "kind": "causal",
+      "from": "e_hannah_arc",
+      "to": "e_choose"
+    },
+    {
+      "id": "bridge_arrival",
+      "kind": "causal",
+      "from": "ev_choose_hannah",
+      "to": "e_team"
+    },
+    {
+      "id": "ax1",
+      "kind": "causal",
+      "from": "e_logograms",
+      "to": "e_shang_call"
+    },
+    {
+      "id": "ax2",
+      "kind": "identity",
+      "from": "e_shang_call",
+      "to": "e_logograms",
+      "label": "bootstrap knowledge"
+    },
+    {
+      "id": "ax3",
+      "kind": "causal",
+      "from": "e_hannah_arc",
+      "to": "e_choose"
+    },
+    {
+      "id": "ax4",
+      "kind": "causal",
+      "from": "e_nonlinearity",
+      "to": "e_hannah_arc"
+    },
+    {
+      "id": "ax5",
+      "kind": "temporal",
+      "from": "e_departure_ships",
+      "to": "e_book"
     }
   ],
   "interventions": [

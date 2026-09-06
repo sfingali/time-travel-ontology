@@ -7,7 +7,8 @@
     "sources": [
       "Tony Scott; Marsilii & Rossio (2006)",
       "time-travel-archive/films/deja-vu.md",
-      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
+      "tenet-class deepen 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -251,6 +252,78 @@
         "carlin",
         "claire"
       ]
+    },
+    {
+      "id": "e_x_ferry",
+      "type": "ordinary",
+      "label": "Ferry bombing investigation",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "open"
+      }
+    },
+    {
+      "id": "e_x_trail",
+      "type": "observation",
+      "label": "Snow White surveillance past viewer",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_send",
+      "type": "departure",
+      "label": "Send objects then self into past",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "late"
+      }
+    },
+    {
+      "id": "e_x_claire",
+      "type": "ordinary",
+      "label": "Claire relationship",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      }
+    },
+    {
+      "id": "e_x_prevent",
+      "type": "intervention",
+      "label": "Attempt to prevent bombing",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_ambush",
+      "type": "ordinary",
+      "label": "Ambush / death beats",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "climax"
+      }
+    },
+    {
+      "id": "e_x_survive",
+      "type": "checkpoint",
+      "label": "Altered outcome; Carlin lives in new line",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "end"
+      }
+    },
+    {
+      "id": "e_x_rules",
+      "type": "observation",
+      "label": "Past writable with tech cost",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "rules"
+      }
     }
   ],
   "edges": [
@@ -347,6 +420,66 @@
       "from": "e_call",
       "to": "e_claire_body",
       "label": "call already in evidence trail"
+    },
+    {
+      "id": "ndej1",
+      "kind": "causal",
+      "from": "e_x_ferry",
+      "to": "e_x_trail"
+    },
+    {
+      "id": "ndej2",
+      "kind": "causal",
+      "from": "e_x_trail",
+      "to": "e_x_send"
+    },
+    {
+      "id": "ndej3",
+      "kind": "causal",
+      "from": "e_x_send",
+      "to": "e_x_claire"
+    },
+    {
+      "id": "ndej4",
+      "kind": "causal",
+      "from": "e_x_claire",
+      "to": "e_x_prevent"
+    },
+    {
+      "id": "ndej5",
+      "kind": "causal",
+      "from": "e_x_prevent",
+      "to": "e_x_ambush"
+    },
+    {
+      "id": "ndej6",
+      "kind": "causal",
+      "from": "e_x_ambush",
+      "to": "e_x_survive"
+    },
+    {
+      "id": "ndej7",
+      "kind": "causal",
+      "from": "e_x_survive",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "bridge_deja-vu",
+      "kind": "causal",
+      "from": "e_branch",
+      "to": "e_x_ferry"
+    },
+    {
+      "id": "x_deja_1",
+      "kind": "causal",
+      "from": "e_x_ferry",
+      "to": "e_x_rules"
+    },
+    {
+      "id": "x_deja_2",
+      "kind": "temporal",
+      "from": "e_x_trail",
+      "to": "e_x_send"
     }
   ],
   "interventions": [
