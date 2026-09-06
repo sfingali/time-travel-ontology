@@ -2,88 +2,75 @@
 
 **Machine-checkable ontology for time-travel and interacting-multiverse stories.**
 
-Encode any plotline as typed, validated data: which **laws of fictional physics** apply, how **worlds** relate, and a **narrative graph** of agents, events, and causal links. Encodings are comparable across a corpus and rich enough for a separate visual engine to render later — without baking layout or graphics into this repo.
+[![CI](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml/badge.svg)](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml)
 
-| Layer | What it captures |
-|-------|------------------|
-| **Rule sets** | Named physics variants (fixed/Novikov, mutable ripple, branching, bootstrap, loops, worldlines, entropy inversion, tangent universes, multiverse contact, …) |
-| **World topology** | **Timeline**, **branch**, and **parallel world** as related but **distinct** primitives — not synonyms |
-| **Narrative encoding** | Agents (with identity continuity), events, interventions, edges, outcomes under those laws |
+**13** rule sets · **8** topology patterns · **21** validated instances · **461** archive works · **71** diagram images (LFS)
 
-Zod schemas are the source of truth; JSON Schema is exported for non-TypeScript consumers. Hand-crafted instances under `instances/` must validate on every push (CI).
+Encode a plotline as typed JSON: which **laws** apply, how **worlds** relate, and a **narrative graph** (agents, events, edges). Comparable across the corpus; consumable by a later visual engine. Zod is the source of truth; `schema/ontology.schema.json` is exported for everyone else.
 
----
+| Layer | Captures |
+|-------|----------|
+| **Rule sets** | Named fictional physics (Novikov, mutable ripple, branching, bootstrap, loops, worldlines, entropy inversion, tangent universes, multiverse contact, …) |
+| **World topology** | **Timeline**, **branch**, and **parallel world** — related, **not** synonyms |
+| **Narrative** | Agents (identity continuity), events, interventions, edges, outcomes |
 
-## Why this exists
-
-Stephen’s meta-archive (`reference-archive/`) holds **461** public plot summaries and diagram sources across film, TV, and novels. Free-text summaries don’t compare cleanly and don’t feed a diagram engine. This package is the **contract**: stable IDs, explicit constraints, validated JSON.
-
-**In scope:** formalisation, validation, import stubs from the archive, documentation for encoders and future renderers.  
-**Out of scope:** the visual/diagram engine itself, literary scoring, ad-hoc per-story fields.
+**In scope:** formalisation, validation, archive→stub import, docs for encoders/renderers.  
+**Out of scope:** drawing diagrams, literary scoring, ad-hoc fields.
 
 ---
 
 ## Quick start
 
-Requires **Node 20+**.
+Node **20+**. This repo already vendors the narrative corpus at [`reference-archive/`](reference-archive/).
 
 ```bash
 npm install
-npm run build          # compile + export schema/ontology.schema.json
-npm run validate       # all instances/*.json against the schema
-npm test               # catalogues + instances + invalid fixture
-npm run import         # draft stubs → instances/generated/ (never overwrites hand-crafted)
+npm run build       # tsc + export JSON Schema
+npm run validate    # instances/*.json must pass
+npm test
+
+# Optional: draft stubs from archive YAML (writes instances/generated/ only)
+ARCHIVE_ROOT=./reference-archive npm run import
 ```
 
-CI (`.github/workflows/ci.yml`) runs `npm ci`, `build`, `test`, and `validate` on push/PR.
+CI runs `build` / `test` / `validate` on every push.
 
 ---
 
-## Core ideas (60-second version)
-
-### Timeline ≠ branch ≠ parallel world
+## Timeline ≠ branch ≠ parallel world
 
 | Primitive | Meaning |
 |-----------|---------|
-| **Timeline** | One ordered history continuum (agents may loop *along* it) |
-| **Branch** | A divergent history that **forks** from a parent at an event (same world-family) |
-| **Parallel world** | A coexisting universe **not** necessarily a fork — may have correspondence maps |
+| **Timeline** | One ordered history (agents may loop *along* it) |
+| **Branch** | History that **forks** from a parent at an event |
+| **Parallel world** | Coexisting universe, not necessarily a fork (optional correspondence maps) |
 
-Reusable topology patterns (`single_fixed_timeline`, `branching_tree`, `dual_parallel_pair`, `worldline_bundle`, `tangent_bubble`, `inverted_single_timeline`, …) live in `src/catalog/topologies.ts`. Details: [docs/TOPOLOGY.md](docs/TOPOLOGY.md).
+Patterns: `single_fixed_timeline`, `branching_tree`, `dual_parallel_pair`, `worldline_bundle`, `tangent_bubble`, `inverted_single_timeline`, … — see [docs/TOPOLOGY.md](docs/TOPOLOGY.md).
 
-### Rule sets and mixins
+Every encoding needs **`primaryRuleSetId`**; optional **`mixinRuleSetIds`** for secondary laws. Compare on the primary. [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md).
 
-Every story encoding **must** set `primaryRuleSetId` (the dominant physics). Optional `mixinRuleSetIds` add secondary constraints. Philosophically opposing mixes are allowed when fiction is ambiguous, but the **primary** is what you compare on — see [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md).
+### Start here
 
-Catalogue today: **13** rule sets · **8** topology patterns · **21** validated hand-crafted instances.
+| File | Why |
+|------|-----|
+| [`instances/tenet.json`](instances/tenet.json) | Entropy inversion, single timeline, pincers — **27** events / **39** edges |
+| [`instances/primer.json`](instances/primer.json) | Failsafe preemption / overlapping selves |
+| [`instances/dark.json`](instances/dark.json) | Bootstrap knot + origin/twin worlds |
+| [`instances/steins-gate.json`](instances/steins-gate.json) | Worldlines / attractors |
+| [`instances/predestination.json`](instances/predestination.json) | Ontological closed loop |
 
-### Exemplars
-
-| Instance | Fingerprint |
-|----------|-------------|
-| [`instances/tenet.json`](instances/tenet.json) | `entropy_inversion` on one inverted timeline; turnstiles, pincers, Algorithm, Neil bootstrap (**27** events / **39** edges) |
-| [`instances/primer.json`](instances/primer.json) | Failsafe preemption, overlapping selves, broken symmetry |
-| [`instances/dark.json`](instances/dark.json) | Bootstrap knot + twin/origin worlds |
-| [`instances/steins-gate.json`](instances/steins-gate.json) | Worldlines / attractor fields / Reading Steiner |
-| [`instances/predestination.json`](instances/predestination.json) | Ontological bootstrap closed loop |
-
-Encode a new title: [docs/ENCODING-GUIDE.md](docs/ENCODING-GUIDE.md).
+New story → [docs/ENCODING-GUIDE.md](docs/ENCODING-GUIDE.md).
 
 ---
 
-## Repository map
+## Layout
 
 ```
-src/schema/          Zod: rules, topology, narrative, StoryEncoding
-src/catalog/         Named rule sets + topology patterns
-src/validate.ts      CLI validator
-src/export-json-schema.ts
-schema/ontology.schema.json
-instances/           Hand-crafted encodings (CI-gated)
-instances/generated/ Importer drafts only
-fixtures/invalid/    Negative tests
-docs/                OVERVIEW · RULES · TOPOLOGY · NARRATIVE · ENCODING-GUIDE · COMPATIBILITY
-reference-archive/   Narrative meta-archive companion (summaries + diagram assets)
+src/schema/   src/catalog/   schema/ontology.schema.json
+instances/              # hand-crafted (CI)
+instances/generated/    # importer drafts only
+docs/                   # OVERVIEW RULES TOPOLOGY NARRATIVE ENCODING-GUIDE COMPATIBILITY
+reference-archive/      # narrative corpus + diagram assets
 .github/workflows/ci.yml
 ```
 
@@ -91,45 +78,20 @@ reference-archive/   Narrative meta-archive companion (summaries + diagram asset
 
 ## Reference archive
 
-[`reference-archive/`](reference-archive/) is the companion **narrative** corpus (public spoilers, no original media):
+Public spoilers, **no original media**: **203** films · **119** TV · **139** novels (**461** total) · **71** LFS images under `reference-archive/diagrams/assets/`.
 
-| Section | Count |
-|---------|------:|
-| Films | 203 |
-| TV / major arcs | 119 |
-| Novels & shorts | 139 |
-| **Catalogued works** | **461** |
-| Exhaustive deep entries | 168 |
-| Local diagram images (LFS) | **71** under `diagrams/assets/` |
-
-YAML frontmatter on entries maps into importer heuristics (`npm run import`). See [reference-archive/README.md](reference-archive/README.md).
+YAML `mechanism` / `paradox_type` tags are the bridge into this ontology (`npm run import` → stubs; deepen by hand into `instances/`). Details: [reference-archive/README.md](reference-archive/README.md).
 
 ---
 
-## Documentation
+## Docs & visual-engine contract
 
-| Doc | Contents |
-|-----|----------|
-| [OVERVIEW.md](docs/OVERVIEW.md) | Three layers, source of truth, non-goals |
-| [RULES.md](docs/RULES.md) | Law catalogue |
-| [TOPOLOGY.md](docs/TOPOLOGY.md) | Timeline / branch / parallel world |
-| [NARRATIVE.md](docs/NARRATIVE.md) | Events & edges for a future visual engine |
-| [ENCODING-GUIDE.md](docs/ENCODING-GUIDE.md) | How to formalise a story |
-| [COMPATIBILITY.md](docs/COMPATIBILITY.md) | Primary vs mixin conventions |
+| Doc | |
+|-----|--|
+| [OVERVIEW](docs/OVERVIEW.md) · [RULES](docs/RULES.md) · [TOPOLOGY](docs/TOPOLOGY.md) | Model |
+| [NARRATIVE](docs/NARRATIVE.md) · [ENCODING-GUIDE](docs/ENCODING-GUIDE.md) · [COMPATIBILITY](docs/COMPATIBILITY.md) | Practice |
 
----
-
-## Visual engine contract (later)
-
-This repo does **not** draw diagrams. A renderer should consume:
-
-- `worlds[]` — timeline / branch / parallel world nodes + relations
-- `agents[]` — identity groups and continuity roles
-- `events[]` — typed beats located in a world/time label
-- `edges[]` — `causal` · `temporal` · `identity` · `world_relation` · `intervention`
-- `interventions[]` + `outcome` — rule effects and end-state world refs
-
-No layout, colours, or graphics are prescribed here.
+A future renderer should read `worlds[]`, `agents[]`, `events[]`, and `edges[]` (`causal` · `temporal` · `identity` · `world_relation` · `intervention`) plus `interventions[]` / `outcome`. **No layout or graphics are prescribed here.**
 
 ---
 
