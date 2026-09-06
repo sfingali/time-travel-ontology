@@ -248,14 +248,28 @@ function parseArgs(argv) {
   let reportFormat = "both"; // markdown | json | both
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a === "--archive" && argv[i + 1]) archiveRoot = path.resolve(argv[++i]);
-    else if (a === "--force-generated") forceGenerated = true;
-    else if (a === "--report" && argv[i + 1]) reportFormat = String(argv[++i]).toLowerCase();
+    if (a === "--archive" || a === "--report") {
+      const value = argv[i + 1];
+      if (!value || value.startsWith("-")) {
+        throw new Error(`${a} requires a value`);
+      }
+      i += 1;
+      if (a === "--archive") {
+        archiveRoot = path.resolve(value);
+      } else {
+        reportFormat = value.toLowerCase();
+        if (!["md", "markdown", "json", "both"].includes(reportFormat)) {
+          throw new Error(`Invalid --report value "${value}"; expected md|markdown|json|both`);
+        }
+      }
+    } else if (a === "--force-generated") forceGenerated = true;
     else if (a === "--help" || a === "-h") {
       console.log(`Usage: node scripts/import-archive.mjs [--archive PATH] [--force-generated] [--report md|json|both]
   ARCHIVE_ROOT env overrides default when --archive is omitted.
   Default archive: ./reference-archive if present, else ../time-travel-archive.`);
       process.exit(0);
+    } else {
+      throw new Error(`Unknown argument: ${a}`);
     }
   }
   return { archiveRoot, forceGenerated, reportFormat };
@@ -384,7 +398,7 @@ function mapTopology(primary, paradoxTags, mechanismTags) {
   if (/worldline|attractor|reading.?steiner/i.test(tags)) return "worldline_bundle";
   if (/parallel|multiverse|mirror|counterpart|verse.?jump|reality_bleed/i.test(tags)) return "dual_parallel_pair";
   if (/branch|fork|alternate|butterfly|flashpoint|changewar/i.test(tags)) return "branching_tree";
-  if (/ripple|overwrite|butterfly|reality_rewrite|set_right|personal_rewrite/i.test(tags)) return "mutable_single_with_ripples";
+  if (/ripple|overwrite|reality_rewrite|set_right|personal_rewrite/i.test(tags)) return "mutable_single_with_ripples";
   if (/entrop|invers/i.test(tags)) return "inverted_single_timeline";
   return TOPOLOGY_FOR_PRIMARY[primary] ?? "single_fixed_timeline";
 }
@@ -464,8 +478,9 @@ async function exists(p) {
   try {
     await access(p, fsConstants.F_OK);
     return true;
-  } catch {
-    return false;
+  } catch (error) {
+    if (error?.code === "ENOENT") return false;
+    throw error;
   }
 }
 
@@ -482,32 +497,97 @@ function normalizeTitle(t) {
     .replace(/[^a-z0-9]+/g, "");
 }
 
-async function loadHandCraftedMeta(instancesDir, handCraftedIds) {
-  const byId = new Set(handCraftedIds);
-  const titles = new Map(); // normalized title -> id
-  for (const id of handCraftedIds) {
-    try {
-      const raw = await readFile(path.join(instancesDir, id + ".json"), "utf8");
-      const data = JSON.parse(raw);
-      const title = data?.meta?.title;
-      if (title) titles.set(normalizeTitle(title), id);
-      titles.set(normalizeTitle(id), id);
-    } catch {
-      /* ignore unreadable */
-    }
-  }
-  return { byId, titles };
+function creatorKeyFromMeta(meta) {
+  const value = meta.creator ?? meta.creators ?? meta.author ?? meta.director;
+  if (value == null) return null;
+  const values = Array.isArray(value) ? value : [value];
+  const keys = values.map(normalizeTitle).filter(Boolean);
+  return keys.length ? [...new Set(keys)].sort().join("|") : null;
 }
 
-function findHandMatch(slug, title, hand) {
-  if (hand.byId.has(slug)) return slug;
-  const nt = normalizeTitle(title);
-  if (hand.titles.has(nt)) return hand.titles.get(nt);
-  // Hyphen-prefix only (e.g. the-time-machine ↔ the-time-machine-1960), not bare substring.
-  for (const id of hand.byId) {
-    if (id.startsWith(slug + "-") || slug.startsWith(id + "-")) return id;
+function sameOptionalValue(left, right) {
+  if (left == null && right == null) return true;
+  return left != null && right != null && String(left) === String(right);
+}
+
+async function loadHandCraftedMeta(instancesDir, handCraftedIds) {
+  const entries = [];
+  const errors = [];
+  for (const id of handCraftedIds) {
+    const file = path.join(instancesDir, id + ".json");
+    try {
+      const data = JSON.parse(await readFile(file, "utf8"));
+      if (
+        typeof data?.meta?.title !== "string" ||
+        typeof data?.meta?.medium !== "string"
+      ) {
+        throw new Error("Hand encoding lacks title/medium metadata");
+      }
+      entries.push({ id, meta: data.meta });
+    } catch (error) {
+      errors.push({ file, error: String(error) });
+    }
   }
-  return null;
+  return { entries, errors };
+}
+
+function findHandMatch(baseSlug, title, medium, fm, handEntries) {
+  // Slug identity is authoritative.
+  if (handEntries.some((e) => e.id === baseSlug)) return baseSlug;
+  const nt = normalizeTitle(title);
+  if (!nt) return null;
+  const matches = handEntries.filter((e) => {
+    if (normalizeTitle(e.meta.title) !== nt) return false;
+    if (String(e.meta.medium).toLowerCase() !== String(medium).toLowerCase()) return false;
+    if (!sameOptionalValue(e.meta.year, fm.year)) return false;
+    const c1 = creatorKeyFromMeta(e.meta);
+    const c2 = creatorKeyFromMeta(fm);
+    if (c1 != null || c2 != null) {
+      if (c1 !== c2) return false;
+    }
+    return true;
+  });
+  if (matches.length > 1) {
+    return { status: "AMBIGUOUS", candidates: matches.map((e) => e.id).sort() };
+  }
+  return matches.length === 1 ? matches[0].id : null;
+}
+
+function storedStubMetadata(data, file) {
+  if (
+    typeof data?.meta?.id !== "string" ||
+    typeof data.meta.title !== "string" ||
+    typeof data.meta.medium !== "string"
+  ) {
+    throw new Error("Generated stub lacks id/title/medium metadata");
+  }
+  const sources = Array.isArray(data.meta.sources)
+    ? data.meta.sources.filter((s) => typeof s === "string")
+    : [];
+  const summary = String(data.outcome?.summary ?? "");
+  const confidenceMatch = summary.match(/^DRAFT \((high|medium|low)\):/);
+  const confidence = confidenceMatch ? confidenceMatch[1] : null;
+  const tags = Array.isArray(data.events)
+    ? data.events.flatMap((e) =>
+        Array.isArray(e.payload?.tags) ? e.payload.tags.filter((t) => typeof t === "string") : [],
+      )
+    : [];
+  return {
+    file,
+    id: data.meta.id,
+    title: data.meta.title,
+    year: data.meta.year ?? null,
+    medium: data.meta.medium,
+    sources,
+    archivePath: sources.find((s) => s !== "generated by import") ?? null,
+    ruleSetIds: data.ruleSetIds ?? [],
+    primaryRuleSetId: data.primaryRuleSetId ?? null,
+    mixinRuleSetIds: data.mixinRuleSetIds ?? null,
+    topologyPatternId: data.topologyPatternId ?? null,
+    confidence,
+    tags: [...new Set(tags)],
+    writtenThisRun: false,
+  };
 }
 
 function renderMarkdownReport(report) {
@@ -594,17 +674,38 @@ async function main() {
   const outDir = path.join(instancesDir, "generated");
   await mkdir(outDir, { recursive: true });
 
+  const fileErrors = [];
   const handCraftedIds = (await readdir(instancesDir))
     .filter((f) => f.endsWith(".json"))
-    .map((f) => f.replace(/\.json$/, ""));
-  const hand = await loadHandCraftedMeta(instancesDir, handCraftedIds);
+    .map((f) => f.replace(/\.json$/, ""))
+    .sort();
+  const { entries: handEntries, errors: handErrors } = await loadHandCraftedMeta(
+    instancesDir,
+    handCraftedIds,
+  );
+  fileErrors.push(...handErrors);
 
   const existingGenerated = new Set(
-    (await readdir(outDir)).filter((f) => f.endsWith(".json") && f !== "_index.json").map((f) => f.replace(/\.json$/, "")),
+    (await readdir(outDir))
+      .filter((f) => f.endsWith(".json") && f !== "_index.json")
+      .map((f) => f.replace(/\.json$/, "")),
   );
+  // Read stored stub metadata so the index reflects what is actually on disk,
+  // not just this run's freshly computed mapping (review finding #11).
+  const storedFiles = new Map();
+  for (const id of [...existingGenerated].sort()) {
+    const file = path.join(outDir, id + ".json");
+    try {
+      const data = JSON.parse(await readFile(file, "utf8"));
+      storedFiles.set(id, storedStubMetadata(data, id + ".json"));
+    } catch (error) {
+      fileErrors.push({ file, error: String(error) });
+    }
+  }
 
   const index = [];
   const gaps = [];
+  const ambiguousMatches = [];
   const unmappedCounter = new Map();
   const confidenceCounts = { high: 0, medium: 0, low: 0 };
   let written = 0;
@@ -622,13 +723,16 @@ async function main() {
       const raw = await readFile(path.join(dir, file), "utf8");
       const { fm, body } = parseFrontmatter(raw);
       const title = String(fm.title ?? baseSlug);
+      const medium = mediumFrom(section, fm);
       const mechanismTags = splitTags(fm.mechanism);
       const paradoxTags = splitTags(fm.paradox_type);
       const mapped = mapRules(mechanismTags, paradoxTags);
       const topologyPatternId = mapTopology(mapped.primary, paradoxTags, mechanismTags);
       const exhaustive = String(fm.summary_depth || "").toLowerCase() === "exhaustive";
       const diagramFlagged = hasDiagramSignal(fm);
-      const handMatch = findHandMatch(baseSlug, title, hand);
+      const handMatch = findHandMatch(baseSlug, title, medium, fm, handEntries);
+      const handCraftedId = typeof handMatch === "string" ? handMatch : null;
+      const ambiguous = handMatch !== null && typeof handMatch === "object";
       const relArchive = path.relative(root, path.join(dir, file)).replace(/\\/g, "/");
       const archivePath = relArchive.startsWith("..")
         ? `time-travel-archive/${section}/${file}`
@@ -642,7 +746,7 @@ async function main() {
         id: baseSlug,
         title,
         year: fm.year,
-        medium: mediumFrom(section, fm),
+        medium,
         archivePath,
         section,
         mechanismTags,
@@ -656,23 +760,33 @@ async function main() {
         unmappedTags: mapped.unmapped,
         exhaustive,
         diagramFlagged,
-        handCraftedId: handMatch,
+        handCraftedId,
       };
 
-      if (!handMatch && (exhaustive || diagramFlagged)) {
+      if (!handCraftedId && (exhaustive || diagramFlagged)) {
         gaps.push({
           id: baseSlug,
           title,
           section,
           exhaustive,
           diagramFlagged,
-          hasGeneratedStub: existingGenerated.has(baseSlug) || false,
+          hasGeneratedStub: storedFiles.has(baseSlug),
           primaryRuleSetId: mapped.primary,
           confidence: mapped.confidence,
         });
       }
 
-      if (handMatch) {
+      if (ambiguous) {
+        ambiguousMatches.push({
+          archivePath,
+          title,
+          medium,
+          candidates: handMatch.candidates,
+        });
+        continue;
+      }
+
+      if (handCraftedId) {
         skippedHand += 1;
         continue;
       }
@@ -681,19 +795,20 @@ async function main() {
 
       const outPath = path.join(outDir, meta.id + ".json");
       const already = existingGenerated.has(meta.id);
+      const stored = storedFiles.get(meta.id);
       if (already && !forceGenerated) {
         skippedExistingGenerated += 1;
-        // Keep prior stub in index by reading light meta if possible
-        index.push({ ...meta, writtenThisRun: false });
-        // update gap generated flag
+        index.push(stored ? { ...stored, writtenThisRun: false } : { ...meta, writtenThisRun: false });
         const g = gaps.find((x) => x.id === meta.id);
         if (g) g.hasGeneratedStub = true;
         continue;
       }
 
-      await writeFile(outPath, JSON.stringify(buildStub(meta, blurbFromBody(body)), null, 2) + "\n", "utf8");
+      const stub = buildStub(meta, blurbFromBody(body));
+      await writeFile(outPath, JSON.stringify(stub, null, 2) + "\n", "utf8");
       written += 1;
       existingGenerated.add(meta.id);
+      storedFiles.set(meta.id, { ...storedStubMetadata(stub, meta.id + ".json"), writtenThisRun: true });
       index.push({ ...meta, writtenThisRun: true });
       const g = gaps.find((x) => x.id === meta.id);
       if (g) g.hasGeneratedStub = true;
@@ -721,6 +836,8 @@ async function main() {
     exhaustiveGaps: gaps.filter((g) => g.exhaustive).length,
     diagramGaps: gaps.filter((g) => g.diagramFlagged).length,
     unmappedTagTypes: unmappedTags.length,
+    ambiguousHandMatches: ambiguousMatches.length,
+    fileErrors: fileErrors.length,
   };
 
   const indexPayload = {
@@ -747,6 +864,8 @@ async function main() {
       unmappedTags: s.unmappedTags,
       writtenThisRun: s.writtenThisRun,
     })),
+    ambiguousMatches,
+    fileErrors,
   };
 
   await writeFile(path.join(outDir, "_index.json"), JSON.stringify(indexPayload, null, 2) + "\n", "utf8");
@@ -759,6 +878,8 @@ async function main() {
     gaps,
     unmappedTags,
     stubs: indexPayload.stubs,
+    ambiguousMatches,
+    fileErrors,
   };
 
   const reportsDir = path.join(root, "instances", "generated");
@@ -776,6 +897,10 @@ async function main() {
   );
   console.log(`Quality report: ${reportFormat === "json" ? jsonPath : mdPath}`);
   console.log(`Gaps: ${counts.exhaustiveGaps} exhaustive, ${counts.diagramGaps} diagram-flagged without hand-crafted instance; ${counts.unmappedTagTypes} unmapped tag types.`);
+  console.log(`Identity: ${ambiguousMatches.length} AMBIGUOUS hand match(es); ${fileErrors.length} file error(s).`);
+  if (fileErrors.length || ambiguousMatches.length) {
+    process.exitCode = 1;
+  }
 }
 
 main().catch((err) => {
