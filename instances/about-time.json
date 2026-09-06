@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "id": "about-time",
+    "title": "About Time",
+    "year": 2013,
+    "medium": "film",
+    "sources": [
+      "Richard Curtis (2013)",
+      "time-travel-archive/films/about-time.md"
+    ]
+  },
+  "ruleSetIds": ["mutable_ripple", "fixed_novikov"],
+  "primaryRuleSetId": "mutable_ripple",
+  "mixinRuleSetIds": ["fixed_novikov"],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [{
+    "kind": "timeline",
+    "id": "w_about",
+    "label": "Tim's personal timeline",
+    "spanLabel": "adulthood",
+    "description": "Men in family can return to personal past; ripples personal events"
+  }],
+  "agents": [
+    {"id": "tim", "label": "Tim Lake", "identityGroup": "tim", "continuityRole": "observer_persistent", "homeWorldRef": "w_about"},
+    {"id": "dad", "label": "Dad (James)", "identityGroup": "dad", "continuityRole": "older_self", "homeWorldRef": "w_about"},
+    {"id": "mary", "label": "Mary", "homeWorldRef": "w_about"},
+    {"id": "kitkat", "label": "Kit Kat", "homeWorldRef": "w_about"}
+  ],
+  "events": [
+    {"id": "e_reveal", "type": "reveal", "label": "Dad reveals hereditary time travel", "at": {"worldRef": "w_about", "timeLabel": "21st birthday"}, "agents": ["tim", "dad"], "payload": {"travelMode": "other"}},
+    {"id": "e_meet_mary", "type": "ordinary", "label": "Meets Mary (after rewrites)", "at": {"worldRef": "w_about", "timeLabel": "London"}, "agents": ["tim", "mary"]},
+    {"id": "e_fix_dates", "type": "intervention", "label": "Replay dates / career / sister outcomes", "at": {"worldRef": "w_about", "timeLabel": "various"}, "agents": ["tim", "mary", "kitkat"]},
+    {"id": "e_child_rule", "type": "observation", "label": "Cannot travel before a child's birth without losing them", "at": {"worldRef": "w_about", "timeLabel": "parenthood"}, "agents": ["tim", "dad"], "payload": {"note": "soft immutability constraint"}},
+    {"id": "e_dad_last", "type": "ordinary", "label": "Last travels with Dad before his death", "at": {"worldRef": "w_about", "timeLabel": "Dad's end"}, "agents": ["tim", "dad"]},
+    {"id": "e_dad_death", "type": "death", "label": "Dad dies; Tim stops rewinding grief", "at": {"worldRef": "w_about", "timeLabel": "later"}, "agents": ["tim", "dad"]},
+    {"id": "e_live_forward", "type": "intervention", "label": "Chooses to live each day once", "at": {"worldRef": "w_about", "timeLabel": "resolution"}, "agents": ["tim", "mary"], "payload": {"exitCondition": "stop replaying ordinary days"}},
+    {"id": "e_ordinary", "type": "ordinary", "label": "Ordinary happiness without constant reset", "at": {"worldRef": "w_about", "timeLabel": "epilogue"}, "agents": ["tim", "mary"]}
+  ],
+  "edges": [
+    {"id": "c1", "kind": "causal", "from": "e_reveal", "to": "e_meet_mary"},
+    {"id": "c2", "kind": "intervention", "from": "e_meet_mary", "to": "e_fix_dates"},
+    {"id": "c3", "kind": "causal", "from": "e_fix_dates", "to": "e_child_rule"},
+    {"id": "c4", "kind": "temporal", "from": "e_child_rule", "to": "e_dad_last"},
+    {"id": "c5", "kind": "causal", "from": "e_dad_last", "to": "e_dad_death"},
+    {"id": "c6", "kind": "causal", "from": "e_dad_death", "to": "e_live_forward"},
+    {"id": "c7", "kind": "temporal", "from": "e_live_forward", "to": "e_ordinary"}
+  ],
+  "interventions": [{
+    "id": "iv_stop",
+    "eventId": "e_live_forward",
+    "ruleEffects": [
+      {"ruleSetId": "mutable_ripple", "effect": "Stops using personal overwrite as coping mechanism"},
+      {"ruleSetId": "fixed_novikov", "effect": "Child-birth rule acts as soft self-consistency lock"}
+    ]
+  }],
+  "outcome": {
+    "summary": "Personal mutable past used then renounced; Tim lives forward after Dad's death.",
+    "endWorldRefs": ["w_about"]
+  }
+}

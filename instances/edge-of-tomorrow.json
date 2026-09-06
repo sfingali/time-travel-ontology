@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "edge-of-tomorrow",
+    "title": "Edge of Tomorrow",
+    "year": 2014,
+    "medium": "film",
+    "sources": [
+      "Doug Liman; adapted from All You Need Is Kill (2014)",
+      "time-travel-archive/films/edge-of-tomorrow.md"
+    ]
+  },
+  "ruleSetIds": ["temporal_loop_exit", "death_checkpoint_rewrite"],
+  "primaryRuleSetId": "temporal_loop_exit",
+  "mixinRuleSetIds": ["death_checkpoint_rewrite"],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [{"kind": "timeline", "id": "w_eot", "label": "Mimic war Earth", "spanLabel": "Invasion day loop"}],
+  "agents": [
+    {"id": "cage", "label": "Maj. William Cage", "identityGroup": "cage", "continuityRole": "observer_persistent", "homeWorldRef": "w_eot"},
+    {"id": "rita", "label": "Sgt. Rita Vrataski", "identityGroup": "rita", "continuityRole": "primary", "homeWorldRef": "w_eot"},
+    {"id": "j_squad", "label": "J-Squad", "homeWorldRef": "w_eot"},
+    {"id": "omega", "label": "Omega Mimic", "homeWorldRef": "w_eot"}
+  ],
+  "events": [
+    {"id": "e_beach", "type": "ordinary", "label": "Cage dropped on Verdun beach assault", "at": {"worldRef": "w_eot", "timeLabel": "Day 1"}, "agents": ["cage", "j_squad", "rita"]},
+    {"id": "e_blood", "type": "death", "label": "Cage killed; alpha blood grants reset", "at": {"worldRef": "w_eot", "timeLabel": "Day 1"}, "agents": ["cage"], "payload": {"travelMode": "blood_reset"}},
+    {"id": "e_reset", "type": "loop_reset", "label": "Wake at previous morning — loop", "at": {"worldRef": "w_eot", "timeLabel": "Day 0 morning"}, "agents": ["cage"], "payload": {"iteration": 1, "memoryRetained": true, "checkpointId": "base_morning"}},
+    {"id": "e_train", "type": "ordinary", "label": "Hundreds of loops training with Rita", "at": {"worldRef": "w_eot", "timeLabel": "loops N"}, "agents": ["cage", "rita"], "payload": {"iteration": 100}},
+    {"id": "e_lose_power", "type": "ordinary", "label": "Transfusion: Cage loses reset power", "at": {"worldRef": "w_eot", "timeLabel": "late loops"}, "agents": ["cage"]},
+    {"id": "e_find_omega", "type": "observation", "label": "Locate Omega under Louvre", "at": {"worldRef": "w_eot", "timeLabel": "final day"}, "agents": ["cage", "rita"]},
+    {"id": "e_kill_omega", "type": "intervention", "label": "Destroy Omega with grenade/blood", "at": {"worldRef": "w_eot", "timeLabel": "Louvre"}, "agents": ["cage", "omega"]},
+    {"id": "e_exit", "type": "arrival", "label": "General reset to pre-invasion briefing — victory state", "at": {"worldRef": "w_eot", "timeLabel": "new Day 0"}, "agents": ["cage", "rita"], "payload": {"exitCondition": "Omega destroyed", "memoryRetained": true}},
+    {"id": "e_smile", "type": "ordinary", "label": "Cage finds Rita alive; war flipped", "at": {"worldRef": "w_eot", "timeLabel": "aftermath"}, "agents": ["cage", "rita"]}
+  ],
+  "edges": [
+    {"id": "c1", "kind": "causal", "from": "e_beach", "to": "e_blood"},
+    {"id": "c2", "kind": "causal", "from": "e_blood", "to": "e_reset"},
+    {"id": "c3", "kind": "temporal", "from": "e_reset", "to": "e_train"},
+    {"id": "c4", "kind": "causal", "from": "e_train", "to": "e_lose_power"},
+    {"id": "c5", "kind": "causal", "from": "e_train", "to": "e_find_omega"},
+    {"id": "c6", "kind": "intervention", "from": "e_find_omega", "to": "e_kill_omega"},
+    {"id": "c7", "kind": "causal", "from": "e_kill_omega", "to": "e_exit"},
+    {"id": "c8", "kind": "temporal", "from": "e_exit", "to": "e_smile"}
+  ],
+  "interventions": [{
+    "id": "iv_omega",
+    "eventId": "e_kill_omega",
+    "ruleEffects": [
+      {"ruleSetId": "temporal_loop_exit", "effect": "Killing Omega satisfies exit condition and rewrites day-zero state"},
+      {"ruleSetId": "death_checkpoint_rewrite", "effect": "Alpha-blood death checkpoint overwritten by Omega-level reset"}
+    ]
+  }],
+  "outcome": {
+    "summary": "Death-loop training until Omega destroyed; Cage exits into a timeline where the invasion fails.",
+    "endWorldRefs": ["w_eot"]
+  }
+}
