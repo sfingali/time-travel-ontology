@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "id": "re-zero",
+    "title": "Re:Zero − Starting Life in Another World",
+    "year": 2016,
+    "medium": "tv",
+    "sources": ["Tappei Nagatsuki / White Fox, Re:Zero (anime S1 abstraction)"]
+  },
+  "ruleSetIds": ["death_checkpoint_rewrite", "temporal_loop_exit"],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_lugunica",
+      "label": "Lugunica primary line",
+      "spanLabel": "Summoning arc"
+    },
+    {
+      "kind": "branch",
+      "id": "w_failed_loops",
+      "label": "Failed Return by Death iterations (overwritten)",
+      "parentRef": "w_lugunica",
+      "forkLabel": "checkpoint deaths",
+      "description": "Narrative memory of overwritten runs"
+    },
+    {
+      "kind": "branch",
+      "id": "w_saved",
+      "label": "Checkpoint-saved continuation",
+      "parentRef": "w_lugunica",
+      "forkLabel": "successful save arc"
+    }
+  ],
+  "agents": [
+    { "id": "subaru", "label": "Natsuki Subaru", "identityGroup": "subaru" },
+    { "id": "emilia", "label": "Emilia" },
+    { "id": "puck", "label": "Puck" },
+    { "id": "rem", "label": "Rem" },
+    { "id": "ram", "label": "Ram" },
+    { "id": "beatrice", "label": "Beatrice" }
+  ],
+  "events": [
+    {
+      "id": "e_summon",
+      "type": "arrival",
+      "label": "Subaru summoned to Lugunica",
+      "at": { "worldRef": "w_lugunica", "timeLabel": "Day 0" },
+      "agents": ["subaru"]
+    },
+    {
+      "id": "e_checkpoint",
+      "type": "ordinary",
+      "label": "Return by Death checkpoint set (unseen)",
+      "at": { "worldRef": "w_lugunica", "timeLabel": "save point" },
+      "agents": ["subaru"],
+      "payload": { "checkpoint": true }
+    },
+    {
+      "id": "e_death_1",
+      "type": "death",
+      "label": "Subaru dies in alley / manor loops",
+      "at": { "worldRef": "w_failed_loops", "timeLabel": "loop deaths" },
+      "agents": ["subaru"]
+    },
+    {
+      "id": "e_return",
+      "type": "loop_reset",
+      "label": "Return by Death to checkpoint",
+      "at": { "worldRef": "w_lugunica", "timeLabel": "rewind" },
+      "agents": ["subaru"],
+      "payload": { "memoryRetained": true }
+    },
+    {
+      "id": "e_bowel_hunter",
+      "type": "intervention",
+      "label": "Confront Elsa / save Emilia with foreknowledge",
+      "at": { "worldRef": "w_saved", "timeLabel": "loot house" },
+      "agents": ["subaru", "emilia"]
+    },
+    {
+      "id": "e_mansion_arc",
+      "type": "death",
+      "label": "Mansion curse / Rem-Ram deaths in failed runs",
+      "at": { "worldRef": "w_failed_loops", "timeLabel": "mansion" },
+      "agents": ["subaru", "rem", "ram"]
+    },
+    {
+      "id": "e_trust",
+      "type": "intervention",
+      "label": "Subaru earns Rem trust; survives with knowledge",
+      "at": { "worldRef": "w_saved", "timeLabel": "post-loops" },
+      "agents": ["subaru", "rem", "emilia"]
+    },
+    {
+      "id": "e_taboo",
+      "type": "reveal",
+      "label": "Cannot tell others about Return by Death (Satella taboo)",
+      "at": { "worldRef": "w_lugunica", "timeLabel": "constraint" },
+      "agents": ["subaru"]
+    }
+  ],
+  "edges": [
+    { "id": "wr1", "kind": "world_relation", "from": "w_failed_loops", "to": "w_lugunica", "relation": "forksFrom", "label": "overwritten runs" },
+    { "id": "wr2", "kind": "world_relation", "from": "w_saved", "to": "w_lugunica", "relation": "supersedes" },
+    { "id": "c1", "kind": "causal", "from": "e_summon", "to": "e_checkpoint" },
+    { "id": "c2", "kind": "causal", "from": "e_death_1", "to": "e_return" },
+    { "id": "c3", "kind": "temporal", "from": "e_return", "to": "e_checkpoint", "label": "rewind target" },
+    { "id": "c4", "kind": "intervention", "from": "e_return", "to": "e_bowel_hunter" },
+    { "id": "c5", "kind": "causal", "from": "e_mansion_arc", "to": "e_return" },
+    { "id": "c6", "kind": "causal", "from": "e_trust", "to": "e_taboo" },
+    { "id": "c7", "kind": "identity", "from": "subaru", "to": "e_return", "label": "memory-bearing self" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_rbd",
+      "eventId": "e_return",
+      "ruleEffects": [
+        { "ruleSetId": "death_checkpoint_rewrite", "effect": "Death rewinds to checkpoint; Subaru retains memory" }
+      ]
+    },
+    {
+      "id": "iv_save",
+      "eventId": "e_trust",
+      "ruleEffects": [
+        { "ruleSetId": "temporal_loop_exit", "effect": "Arc exits failed loops via learned correct actions" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Return by Death overwrites failed branches from checkpoints; Subaru's retained knowledge enables a saved continuation under taboo silence.",
+    "endWorldRefs": ["w_saved"]
+  }
+}
