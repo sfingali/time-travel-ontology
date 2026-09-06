@@ -1,0 +1,38 @@
+name: Decode reference-archive image sidecars
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "reference-archive/**/*.b64"
+      - ".github/workflows/decode-reference-archive-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode .b64 sidecars to binary images
+        run: |
+          set -euo pipefail
+          count=0
+          while IFS= read -r -d '' f; do
+            out="${f%.b64}"
+            base64 -d "$f" > "$out"
+            rm -f "$f"
+            count=$((count+1))
+            echo "decoded $out"
+          done < <(find reference-archive -type f -name '*.b64' -print0)
+          echo "decoded_count=$count"
+          if [ "$count" -eq 0 ]; then
+            echo "No sidecars to decode"
+            exit 0
+          fi
+      - name: Commit decoded images
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Decode reference-archive image sidecars to binary assets"
+          file_pattern: reference-archive
