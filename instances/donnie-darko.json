@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "id": "donnie-darko",
+    "title": "Donnie Darko",
+    "year": 2001,
+    "medium": "film",
+    "sources": ["Richard Kelly, Donnie Darko (2001)"]
+  },
+  "ruleSetIds": ["tangent_universe", "fixed_novikov"],
+  "topologyPatternId": "tangent_bubble",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_primary",
+      "label": "Primary universe",
+      "spanLabel": "1988 October"
+    },
+    {
+      "kind": "branch",
+      "id": "w_tangent",
+      "label": "Tangent universe",
+      "parentRef": "w_primary",
+      "forkLabel": "jet engine artifact arrival",
+      "description": "Unstable bubble that must collapse"
+    }
+  ],
+  "agents": [
+    { "id": "donnie", "label": "Donnie Darko", "identityGroup": "donnie" },
+    { "id": "frank", "label": "Frank (rabbit / human)", "identityGroup": "frank" },
+    { "id": "gretchen", "label": "Gretchen Ross" },
+    { "id": "roberta", "label": "Roberta Sparrow / Grandma Death" }
+  ],
+  "events": [
+    {
+      "id": "e_engine_fall",
+      "type": "arrival",
+      "label": "Jet engine falls; Donnie lured out by Frank",
+      "at": { "worldRef": "w_tangent", "timeLabel": "Oct 2 night" },
+      "agents": ["donnie", "frank"]
+    },
+    {
+      "id": "e_living_receiver",
+      "type": "reveal",
+      "label": "Donnie as Living Receiver guided by Frank",
+      "at": { "worldRef": "w_tangent", "timeLabel": "tangent days" },
+      "agents": ["donnie", "frank", "roberta"]
+    },
+    {
+      "id": "e_flood_fire",
+      "type": "intervention",
+      "label": "Donnie floods school / burns Cunningham house",
+      "at": { "worldRef": "w_tangent", "timeLabel": "mid-tangent" },
+      "agents": ["donnie"]
+    },
+    {
+      "id": "e_gretchen_death",
+      "type": "death",
+      "label": "Gretchen killed; Frank killed by Donnie",
+      "at": { "worldRef": "w_tangent", "timeLabel": "Halloween" },
+      "agents": ["gretchen", "frank", "donnie"]
+    },
+    {
+      "id": "e_engine_return",
+      "type": "departure",
+      "label": "Engine returned through portal to primary",
+      "at": { "worldRef": "w_tangent", "timeLabel": "collapse window" },
+      "agents": ["donnie"],
+      "payload": { "artifact": "jet_engine" }
+    },
+    {
+      "id": "e_collapse",
+      "type": "collapse",
+      "label": "Tangent collapses; Donnie dies in bed under engine in primary",
+      "at": { "worldRef": "w_primary", "timeLabel": "Oct 2 restored" },
+      "agents": ["donnie"]
+    },
+    {
+      "id": "e_aftermath",
+      "type": "observation",
+      "label": "Primary continues; others feel residual grief",
+      "at": { "worldRef": "w_primary", "timeLabel": "morning after" },
+      "agents": ["gretchen", "frank"]
+    }
+  ],
+  "edges": [
+    { "id": "wr1", "kind": "world_relation", "from": "w_tangent", "to": "w_primary", "relation": "nestsWithin" },
+    { "id": "wr2", "kind": "world_relation", "from": "w_tangent", "to": "w_primary", "relation": "collapsesInto" },
+    { "id": "c1", "kind": "causal", "from": "e_engine_fall", "to": "e_living_receiver" },
+    { "id": "c2", "kind": "causal", "from": "e_living_receiver", "to": "e_flood_fire" },
+    { "id": "c3", "kind": "causal", "from": "e_gretchen_death", "to": "e_engine_return" },
+    { "id": "c4", "kind": "intervention", "from": "e_engine_return", "to": "e_collapse" },
+    { "id": "c5", "kind": "temporal", "from": "e_collapse", "to": "e_aftermath" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_receiver",
+      "eventId": "e_engine_return",
+      "ruleEffects": [
+        { "ruleSetId": "tangent_universe", "effect": "Living Receiver returns artifact; tangent must collapse" }
+      ]
+    },
+    {
+      "id": "iv_collapse",
+      "eventId": "e_collapse",
+      "ruleEffects": [
+        { "ruleSetId": "tangent_universe", "effect": "Primary restored; Donnie dies in primary bed" },
+        { "ruleSetId": "fixed_novikov", "effect": "Primary history absorbs engine death consistently" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Tangent universe collapses after Donnie returns the engine artifact; primary timeline continues with Donnie dead under the engine.",
+    "endWorldRefs": ["w_primary"]
+  }
+}
