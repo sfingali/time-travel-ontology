@@ -1,0 +1,551 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://stephenf.local/time-travel-ontology/ontology.schema.json",
+  "title": "Time Travel / Multiverse Story Encoding Ontology",
+  "description": "Machine-checkable encoding of rule sets, world topology, and narrative graphs for time-travel and multiverse stories.",
+  "$ref": "#/definitions/StoryEncoding",
+  "definitions": {
+    "RuleSet": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pastMutability": {
+          "type": "string",
+          "enum": [
+            "immutable",
+            "mutable_overwrite",
+            "mutable_branch",
+            "perception_only",
+            "conditional"
+          ]
+        },
+        "createsBranches": {
+          "type": "boolean"
+        },
+        "allowsBootstrap": {
+          "type": "boolean"
+        },
+        "paradoxHandling": {
+          "type": "string",
+          "enum": [
+            "forbidden",
+            "self_consistency",
+            "overwrite",
+            "branch",
+            "prune",
+            "collapse_tangent",
+            "ignore_or_unspecified",
+            "checkpoint_reset"
+          ]
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "default": []
+        },
+        "paramsNotes": {
+          "type": "string"
+        },
+        "params": {
+          "type": "object",
+          "additionalProperties": {}
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "description",
+        "pastMutability",
+        "createsBranches",
+        "allowsBootstrap",
+        "paradoxHandling"
+      ],
+      "additionalProperties": false
+    },
+    "TopologyPattern": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "typicalWorldKinds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "timeline",
+              "branch",
+              "parallel_world"
+            ]
+          },
+          "minItems": 1
+        },
+        "typicalRelations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "forksFrom",
+              "mergesInto",
+              "correspondsTo",
+              "prunes",
+              "nestsWithin",
+              "attractsToward",
+              "collapsesInto",
+              "mirrors",
+              "supersedes"
+            ]
+          },
+          "default": []
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "description",
+        "typicalWorldKinds"
+      ],
+      "additionalProperties": false
+    },
+    "StoryEncoding": {
+      "type": "object",
+      "properties": {
+        "meta": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "year": {
+              "type": "integer"
+            },
+            "medium": {
+              "type": "string",
+              "enum": [
+                "film",
+                "tv",
+                "novel",
+                "short_story",
+                "game",
+                "comic",
+                "other"
+              ]
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "medium"
+          ],
+          "additionalProperties": false
+        },
+        "ruleSetIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+          },
+          "minItems": 1
+        },
+        "topologyPatternId": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+        },
+        "worlds": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "kind": {
+                    "type": "string",
+                    "const": "timeline"
+                  },
+                  "spanLabel": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "label",
+                  "kind"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "kind": {
+                    "type": "string",
+                    "const": "branch"
+                  },
+                  "parentRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "forkLabel": {
+                    "type": "string"
+                  },
+                  "pruned": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "label",
+                  "kind"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "kind": {
+                    "type": "string",
+                    "const": "parallel_world"
+                  },
+                  "correspondenceKey": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "label",
+                  "kind"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "minItems": 1
+        },
+        "agents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "identityGroup": {
+                "type": "string",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "ordinary",
+                  "departure",
+                  "arrival",
+                  "intervention",
+                  "observation",
+                  "death",
+                  "birth",
+                  "loop_reset",
+                  "branch_fork",
+                  "branch_prune",
+                  "collapse",
+                  "contact",
+                  "bootstrap_origin",
+                  "reveal",
+                  "other"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "at": {
+                "type": "object",
+                "properties": {
+                  "worldRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "timeLabel": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "worldRef"
+                ],
+                "additionalProperties": false
+              },
+              "agents": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                }
+              },
+              "payload": {
+                "type": "object",
+                "additionalProperties": {}
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "label",
+              "at"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "causal",
+                  "temporal",
+                  "identity",
+                  "world_relation",
+                  "intervention"
+                ]
+              },
+              "from": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "to": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "label": {
+                "type": "string"
+              },
+              "relation": {
+                "type": "string",
+                "enum": [
+                  "forksFrom",
+                  "mergesInto",
+                  "correspondsTo",
+                  "prunes",
+                  "nestsWithin",
+                  "attractsToward",
+                  "collapsesInto",
+                  "mirrors",
+                  "supersedes"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "from",
+              "to"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "interventions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "eventId": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "ruleEffects": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ruleSetId": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                    },
+                    "effect": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "ruleSetId",
+                    "effect"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "eventId",
+              "ruleEffects"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "outcome": {
+          "type": "object",
+          "properties": {
+            "summary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "endWorldRefs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "summary",
+            "endWorldRefs"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "meta",
+        "ruleSetIds",
+        "topologyPatternId",
+        "worlds",
+        "events",
+        "outcome"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
