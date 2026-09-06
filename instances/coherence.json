@@ -1,0 +1,337 @@
+{
+  "meta": {
+    "id": "coherence",
+    "title": "Coherence",
+    "year": 2013,
+    "medium": "film",
+    "sources": [
+      "James Ward Byrkit (2013)",
+      "time-travel-archive/films/coherence.md"
+    ]
+  },
+  "ruleSetIds": [
+    "multiverse_contact",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "multiverse_contact",
+  "mixinRuleSetIds": [
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "dual_parallel_pair",
+  "worlds": [
+    {
+      "kind": "parallel_world",
+      "id": "w_house_a",
+      "label": "Origin dinner-party house (glowstick A)",
+      "correspondenceKey": "dinner_party"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_house_b",
+      "label": "Alternate party house (dark street double)",
+      "correspondenceKey": "dinner_party",
+      "mirrorOf": "w_house_a",
+      "correspondenceMap": [
+        {
+          "localKey": "emily",
+          "remoteWorldRef": "w_house_a",
+          "remoteKey": "emily"
+        }
+      ]
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_house_happy",
+      "label": "Happier Emily reality (swap target)",
+      "correspondenceKey": "dinner_party"
+    }
+  ],
+  "agents": [
+    {
+      "id": "emily",
+      "label": "Emily",
+      "identityGroup": "emily",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_house_a"
+    },
+    {
+      "id": "emily_b",
+      "label": "Emily (other house)",
+      "identityGroup": "emily",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_house_b"
+    },
+    {
+      "id": "kevin",
+      "label": "Kevin",
+      "identityGroup": "kevin",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_house_a"
+    },
+    {
+      "id": "mike",
+      "label": "Mike",
+      "homeWorldRef": "w_house_a"
+    },
+    {
+      "id": "laurie",
+      "label": "Laurie",
+      "homeWorldRef": "w_house_a"
+    },
+    {
+      "id": "hugh",
+      "label": "Hugh",
+      "homeWorldRef": "w_house_a"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_dinner",
+      "type": "ordinary",
+      "label": "Dinner party begins; comet banter",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "comet night early"
+      },
+      "agents": [
+        "emily",
+        "kevin",
+        "mike",
+        "laurie",
+        "hugh"
+      ]
+    },
+    {
+      "id": "e_blackout",
+      "type": "ordinary",
+      "label": "Power fails; phones lose signal",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "comet night"
+      },
+      "agents": [
+        "emily",
+        "kevin"
+      ]
+    },
+    {
+      "id": "e_other_house",
+      "type": "contact",
+      "label": "Identical lit house spotted across dark street",
+      "at": {
+        "worldRef": "w_house_b",
+        "timeLabel": "comet night"
+      },
+      "agents": [
+        "hugh"
+      ],
+      "payload": {
+        "tags": [
+          "comet",
+          "decoherence"
+        ]
+      }
+    },
+    {
+      "id": "e_schrodinger",
+      "type": "observation",
+      "label": "Schr\u00f6dinger / decoherence framing becomes literal",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "discussion"
+      },
+      "agents": [
+        "mike",
+        "hugh"
+      ]
+    },
+    {
+      "id": "e_glowsticks",
+      "type": "intervention",
+      "label": "Glow sticks and notes label origin groups",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "mapping"
+      },
+      "agents": [
+        "emily",
+        "kevin",
+        "mike"
+      ]
+    },
+    {
+      "id": "e_split_groups",
+      "type": "branch_fork",
+      "label": "Groups split across dark streets into alternate copies",
+      "at": {
+        "worldRef": "w_house_b",
+        "timeLabel": "exploration"
+      },
+      "agents": [
+        "emily",
+        "kevin",
+        "mike"
+      ]
+    },
+    {
+      "id": "e_box_note",
+      "type": "observation",
+      "label": "Box of numbered photos / notes found",
+      "at": {
+        "worldRef": "w_house_a",
+        "timeLabel": "mid night"
+      },
+      "agents": [
+        "emily",
+        "mike"
+      ]
+    },
+    {
+      "id": "e_violence",
+      "type": "intervention",
+      "label": "Betrayals escalate; doubles replaced",
+      "at": {
+        "worldRef": "w_house_b",
+        "timeLabel": "late"
+      },
+      "agents": [
+        "mike",
+        "emily",
+        "kevin"
+      ]
+    },
+    {
+      "id": "e_emily_attack",
+      "type": "intervention",
+      "label": "Emily attacks another Emily to steal happier reality",
+      "at": {
+        "worldRef": "w_house_happy",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "emily",
+        "emily_b"
+      ],
+      "payload": {
+        "tags": [
+          "reality_theft"
+        ]
+      }
+    },
+    {
+      "id": "e_phone",
+      "type": "reveal",
+      "label": "Morning phone call may expose the swap",
+      "at": {
+        "worldRef": "w_house_happy",
+        "timeLabel": "next morning"
+      },
+      "agents": [
+        "emily"
+      ],
+      "payload": {
+        "signal": "phone_call_doubt"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "temporal",
+      "from": "e_dinner",
+      "to": "e_blackout"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_blackout",
+      "to": "e_other_house"
+    },
+    {
+      "id": "c3",
+      "kind": "world_relation",
+      "from": "w_house_a",
+      "to": "w_house_b",
+      "relation": "correspondsTo",
+      "label": "comet-overlapping houses"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_other_house",
+      "to": "e_glowsticks"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_glowsticks",
+      "to": "e_split_groups"
+    },
+    {
+      "id": "c6",
+      "kind": "intervention",
+      "from": "e_split_groups",
+      "to": "e_violence"
+    },
+    {
+      "id": "c7",
+      "kind": "intervention",
+      "from": "e_violence",
+      "to": "e_emily_attack"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_emily_attack",
+      "to": "e_phone"
+    },
+    {
+      "id": "c9",
+      "kind": "identity",
+      "from": "emily",
+      "to": "emily_b",
+      "label": "counterpart Emilys"
+    },
+    {
+      "id": "c10",
+      "kind": "world_relation",
+      "from": "w_house_a",
+      "to": "w_house_happy",
+      "relation": "correspondsTo"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_glow",
+      "eventId": "e_glowsticks",
+      "ruleEffects": [
+        {
+          "ruleSetId": "multiverse_contact",
+          "effect": "Glow sticks attempt to map correspondence across parallel houses"
+        }
+      ]
+    },
+    {
+      "id": "iv_steal",
+      "eventId": "e_emily_attack",
+      "ruleEffects": [
+        {
+          "ruleSetId": "multiverse_contact",
+          "effect": "Emily forcibly replaces her counterpart in a preferred parallel"
+        },
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Violence selects which house-copy she occupies"
+        }
+      ],
+      "notes": "Ending leaves swap possibly exposed"
+    }
+  ],
+  "outcome": {
+    "summary": "Comet decoheres a dinner party into overlapping parallel houses; Emily steals a happier counterpart reality, with a phone call threatening exposure.",
+    "endWorldRefs": [
+      "w_house_happy",
+      "w_house_a"
+    ]
+  }
+}

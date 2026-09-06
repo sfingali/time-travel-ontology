@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "id": "the-time-machine-1960",
+    "title": "The Time Machine (1960)",
+    "year": 1960,
+    "medium": "film",
+    "sources": [
+      "George Pal adapting H.G. Wells (1960)",
+      "time-travel-archive/films/the-time-machine-1960.md"
+    ]
+  },
+  "ruleSetIds": [
+    "fixed_novikov"
+  ],
+  "primaryRuleSetId": "fixed_novikov",
+  "mixinRuleSetIds": [],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_wells",
+      "label": "Victorian\u2192802,701 continuum",
+      "spanLabel": "1899\u20131900 / wars / 802701",
+      "description": "Tourism not rewrite of historical wars; personal exit to civilize Eloi"
+    }
+  ],
+  "agents": [
+    {
+      "id": "george",
+      "label": "H. George Wells (Time Traveller)",
+      "identityGroup": "george",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_wells"
+    },
+    {
+      "id": "filby",
+      "label": "Filby",
+      "homeWorldRef": "w_wells"
+    },
+    {
+      "id": "weena",
+      "label": "Weena",
+      "homeWorldRef": "w_wells"
+    },
+    {
+      "id": "eloi",
+      "label": "Eloi (collective)",
+      "homeWorldRef": "w_wells"
+    },
+    {
+      "id": "morlocks",
+      "label": "Morlocks (collective)",
+      "homeWorldRef": "w_wells"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_dinner",
+      "type": "ordinary",
+      "label": "New Year's Eve 1899 dinner; machine unveiled",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "1899-12-31"
+      },
+      "agents": [
+        "george",
+        "filby"
+      ]
+    },
+    {
+      "id": "e_demo",
+      "type": "departure",
+      "label": "Short demo then full embarkation",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "1900"
+      },
+      "agents": [
+        "george"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_wars",
+      "type": "observation",
+      "label": "Time-lapse through WWI, WWII Blitz, 1966 atomic war",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "war montage"
+      },
+      "agents": [
+        "george"
+      ],
+      "payload": {
+        "note": "spectator only; no intervention in wars"
+      }
+    },
+    {
+      "id": "e_arrive_802701",
+      "type": "arrival",
+      "label": "Arrives 802,701 among Eloi",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "802701"
+      },
+      "agents": [
+        "george",
+        "eloi",
+        "weena"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_save_weena",
+      "type": "intervention",
+      "label": "Saves Weena from drowning",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "802701"
+      },
+      "agents": [
+        "george",
+        "weena"
+      ]
+    },
+    {
+      "id": "e_sirens",
+      "type": "ordinary",
+      "label": "Sirens call Eloi underground; Morlock farming revealed",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "802701 night"
+      },
+      "agents": [
+        "george",
+        "eloi",
+        "morlocks"
+      ]
+    },
+    {
+      "id": "e_descend",
+      "type": "intervention",
+      "label": "Descends; fights Morlocks; recovers stolen machine",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "Morlock caves"
+      },
+      "agents": [
+        "george",
+        "morlocks",
+        "weena"
+      ]
+    },
+    {
+      "id": "e_burn",
+      "type": "ordinary",
+      "label": "Morlock caves burn; escape to surface",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "802701"
+      },
+      "agents": [
+        "george",
+        "morlocks"
+      ]
+    },
+    {
+      "id": "e_return_1900",
+      "type": "arrival",
+      "label": "Returns to 1900; tells Filby the tale",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "1900"
+      },
+      "agents": [
+        "george",
+        "filby"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_books",
+      "type": "departure",
+      "label": "Departs again with three books to teach the Eloi",
+      "at": {
+        "worldRef": "w_wells",
+        "timeLabel": "1900 coda"
+      },
+      "agents": [
+        "george",
+        "filby"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "artifactKind": "book",
+        "note": "Filby notes missing books"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "temporal",
+      "from": "e_dinner",
+      "to": "e_demo"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_demo",
+      "to": "e_wars"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_wars",
+      "to": "e_arrive_802701"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_arrive_802701",
+      "to": "e_save_weena"
+    },
+    {
+      "id": "c5",
+      "kind": "temporal",
+      "from": "e_save_weena",
+      "to": "e_sirens"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_sirens",
+      "to": "e_descend"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_descend",
+      "to": "e_burn"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_burn",
+      "to": "e_return_1900"
+    },
+    {
+      "id": "c9",
+      "kind": "temporal",
+      "from": "e_return_1900",
+      "to": "e_books"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_demo",
+      "to": "e_return_1900"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_local",
+      "eventId": "e_descend",
+      "ruleEffects": [
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Local Morlock fight does not rewrite the war montage past; history of 20th century remains as observed"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Victorian machine tourism through wars to 802,701; Eloi/Morlock allegory; brief return then second departure with books\u2014no branching of observed history.",
+    "endWorldRefs": [
+      "w_wells"
+    ]
+  }
+}

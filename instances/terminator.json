@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "id": "terminator",
+    "title": "The Terminator",
+    "year": 1984,
+    "medium": "film",
+    "sources": [
+      "James Cameron & Gale Anne Hurd (1984)",
+      "time-travel-archive/films/terminator.md"
+    ]
+  },
+  "ruleSetIds": [
+    "bootstrap_ontological",
+    "predestination_closed_loop",
+    "fixed_novikov"
+  ],
+  "primaryRuleSetId": "bootstrap_ontological",
+  "mixinRuleSetIds": [
+    "predestination_closed_loop",
+    "fixed_novikov"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_t1",
+      "label": "1984\u21942029 closed war timeline",
+      "spanLabel": "1984 / 2029",
+      "description": "John's existence bootstrapped; Judgment Day tone inevitable"
+    }
+  ],
+  "agents": [
+    {
+      "id": "sarah",
+      "label": "Sarah Connor",
+      "identityGroup": "sarah",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_t1"
+    },
+    {
+      "id": "reese",
+      "label": "Kyle Reese",
+      "identityGroup": "reese",
+      "continuityRole": "bootstrap_source",
+      "homeWorldRef": "w_t1"
+    },
+    {
+      "id": "t800",
+      "label": "T-800",
+      "identityGroup": "t800",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_t1"
+    },
+    {
+      "id": "john",
+      "label": "John Connor (unborn/future)",
+      "identityGroup": "john",
+      "continuityRole": "bootstrap_sink",
+      "homeWorldRef": "w_t1"
+    },
+    {
+      "id": "skynet",
+      "label": "Skynet",
+      "homeWorldRef": "w_t1"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_send_t800",
+      "type": "departure",
+      "label": "Skynet sends T-800 to kill Sarah Connor",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "2029"
+      },
+      "agents": [
+        "t800",
+        "skynet"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_send_reese",
+      "type": "departure",
+      "label": "Resistance (John) sends Kyle Reese",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "2029"
+      },
+      "agents": [
+        "reese",
+        "john"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_arrive_la",
+      "type": "arrival",
+      "label": "Naked cyborg and Reese arrive 1984 LA",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "1984"
+      },
+      "agents": [
+        "t800",
+        "reese"
+      ]
+    },
+    {
+      "id": "e_hunt",
+      "type": "ordinary",
+      "label": "Phone-book hunt; Sarah targeted",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "1984"
+      },
+      "agents": [
+        "t800",
+        "sarah"
+      ]
+    },
+    {
+      "id": "e_rescue",
+      "type": "intervention",
+      "label": "Reese rescues Sarah; explains Judgment Day 1997",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "Tech-Noir"
+      },
+      "agents": [
+        "reese",
+        "sarah",
+        "t800"
+      ]
+    },
+    {
+      "id": "e_love",
+      "type": "bootstrap_origin",
+      "label": "Reese and Sarah conceive John Connor",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "1984 night"
+      },
+      "agents": [
+        "reese",
+        "sarah",
+        "john"
+      ],
+      "payload": {
+        "bootstrapEntity": "john_connor",
+        "identityNote": "John sends his own father"
+      }
+    },
+    {
+      "id": "e_factory",
+      "type": "death",
+      "label": "Factory climax: Reese dies; T-800 crushed",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "factory"
+      },
+      "agents": [
+        "reese",
+        "t800",
+        "sarah"
+      ]
+    },
+    {
+      "id": "e_cpu_left",
+      "type": "ordinary",
+      "label": "Arm/CPU left behind (Cyberdyne seed in sequels)",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "aftermath"
+      },
+      "agents": [
+        "t800",
+        "sarah"
+      ],
+      "payload": {
+        "artifactId": "t800_cpu",
+        "artifactKind": "cpu"
+      }
+    },
+    {
+      "id": "e_pregnant",
+      "type": "ordinary",
+      "label": "Pregnant Sarah drives toward storm; records tapes for John",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "sarah",
+        "john"
+      ]
+    },
+    {
+      "id": "e_loop_note",
+      "type": "reveal",
+      "label": "John's leadership depends on Reese whom John sent",
+      "at": {
+        "worldRef": "w_t1",
+        "timeLabel": "structural"
+      },
+      "agents": [
+        "john",
+        "reese"
+      ],
+      "payload": {
+        "bootstrapEntity": "reese_mission"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_send_t800",
+      "to": "e_arrive_la"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_send_reese",
+      "to": "e_arrive_la"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_arrive_la",
+      "to": "e_hunt"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_hunt",
+      "to": "e_rescue"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_rescue",
+      "to": "e_love"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_love",
+      "to": "e_send_reese",
+      "label": "John exists to send Reese"
+    },
+    {
+      "id": "c7",
+      "kind": "temporal",
+      "from": "e_love",
+      "to": "e_factory"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_factory",
+      "to": "e_cpu_left"
+    },
+    {
+      "id": "c9",
+      "kind": "temporal",
+      "from": "e_cpu_left",
+      "to": "e_pregnant"
+    },
+    {
+      "id": "c10",
+      "kind": "identity",
+      "from": "reese",
+      "to": "john",
+      "label": "father\u2192son bootstrap"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_love",
+      "eventId": "e_love",
+      "ruleEffects": [
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "John Connor has no origin outside the loop that sends his father"
+        },
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Skynet's attempt to erase John produces the conditions of his birth"
+        },
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "1984 events close consistently with the 2029 war that sent the travelers"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Closed bootstrap: Reese sent by John fathers John; T-800 fails to erase Sarah; future war tone remains inevitable (contrast T2 mutability).",
+    "endWorldRefs": [
+      "w_t1"
+    ]
+  }
+}

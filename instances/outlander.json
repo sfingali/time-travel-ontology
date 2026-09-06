@@ -1,0 +1,328 @@
+{
+  "meta": {
+    "id": "outlander",
+    "title": "Outlander",
+    "year": 2014,
+    "medium": "tv",
+    "sources": [
+      "Ronald D. Moore adapting Diana Gabaldon (2014\u2013)",
+      "time-travel-archive/tv/outlander.md"
+    ]
+  },
+  "ruleSetIds": [
+    "fixed_novikov",
+    "predestination_closed_loop"
+  ],
+  "primaryRuleSetId": "fixed_novikov",
+  "mixinRuleSetIds": [
+    "predestination_closed_loop"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_stones",
+      "label": "Claire/Jamie continuum via standing stones",
+      "spanLabel": "1743\u21941945\u21941968\u21941770s",
+      "description": "Soft Novikov: big history resists; personal lives contingent"
+    }
+  ],
+  "agents": [
+    {
+      "id": "claire",
+      "label": "Claire Randall/Fraser",
+      "identityGroup": "claire",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_stones"
+    },
+    {
+      "id": "jamie",
+      "label": "Jamie Fraser",
+      "identityGroup": "jamie",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_stones"
+    },
+    {
+      "id": "frank",
+      "label": "Frank Randall",
+      "homeWorldRef": "w_stones"
+    },
+    {
+      "id": "brianna",
+      "label": "Brianna Fraser",
+      "identityGroup": "brianna",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_stones"
+    },
+    {
+      "id": "roger",
+      "label": "Roger Wakefield Mackenzie",
+      "homeWorldRef": "w_stones"
+    },
+    {
+      "id": "geillis",
+      "label": "Geillis Duncan / Gillian Edgars",
+      "continuityRole": "other",
+      "homeWorldRef": "w_stones"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_craigh",
+      "type": "departure",
+      "label": "Claire touches Craigh na Dun stones; slips 1945\u21921743",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1945 Beltane"
+      },
+      "agents": [
+        "claire"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "artifactKind": "stone",
+        "tags": [
+          "standing_stones"
+        ]
+      }
+    },
+    {
+      "id": "e_arrive_1743",
+      "type": "arrival",
+      "label": "Taken for spy; forced marriage to Jamie for protection",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1743"
+      },
+      "agents": [
+        "claire",
+        "jamie"
+      ]
+    },
+    {
+      "id": "e_culloden_know",
+      "type": "observation",
+      "label": "Claire knows Culloden doom; attempts to steer largely fail/fulfill",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1745-46"
+      },
+      "agents": [
+        "claire",
+        "jamie"
+      ],
+      "payload": {
+        "note": "soft Novikov on big history"
+      }
+    },
+    {
+      "id": "e_send_back",
+      "type": "departure",
+      "label": "Pregnant Claire sent through stones to save child in 20th century",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "post-Rising"
+      },
+      "agents": [
+        "claire",
+        "jamie",
+        "brianna"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "artifactKind": "stone"
+      }
+    },
+    {
+      "id": "e_1968_return",
+      "type": "departure",
+      "label": "1968 Claire returns through stones (gem consumed) to Jamie",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1968"
+      },
+      "agents": [
+        "claire",
+        "jamie"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "artifactId": "gemstone_ring"
+      }
+    },
+    {
+      "id": "e_brianna_travel",
+      "type": "departure",
+      "label": "Brianna and Roger travel fearing 1770s fire deaths",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1970s\u21921770s"
+      },
+      "agents": [
+        "brianna",
+        "roger"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "artifactKind": "stone"
+      }
+    },
+    {
+      "id": "e_geillis",
+      "type": "intervention",
+      "label": "Geillis tries to alter Jacobite success \u2014 foil",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1740s/1960s"
+      },
+      "agents": [
+        "geillis",
+        "claire"
+      ]
+    },
+    {
+      "id": "e_ridge",
+      "type": "ordinary",
+      "label": "Fraser's Ridge / Revolution-era America arcs",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "1770s"
+      },
+      "agents": [
+        "claire",
+        "jamie",
+        "brianna",
+        "roger"
+      ]
+    },
+    {
+      "id": "e_abandawe",
+      "type": "ordinary",
+      "label": "Other stone sites (Abandawe, Carolina circles)",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "later seasons"
+      },
+      "agents": [
+        "claire",
+        "brianna"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "artifactKind": "stone"
+      }
+    },
+    {
+      "id": "e_rules",
+      "type": "reveal",
+      "label": "Gene + festival timing + gems as travel constraints",
+      "at": {
+        "worldRef": "w_stones",
+        "timeLabel": "series lore"
+      },
+      "agents": [
+        "claire",
+        "brianna",
+        "roger",
+        "geillis"
+      ],
+      "payload": {
+        "note": "hereditary ability; ~200y spans; history resists"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_craigh",
+      "to": "e_arrive_1743"
+    },
+    {
+      "id": "c2",
+      "kind": "temporal",
+      "from": "e_arrive_1743",
+      "to": "e_culloden_know"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_culloden_know",
+      "to": "e_send_back"
+    },
+    {
+      "id": "c4",
+      "kind": "temporal",
+      "from": "e_send_back",
+      "to": "e_1968_return"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_1968_return",
+      "to": "e_brianna_travel"
+    },
+    {
+      "id": "c6",
+      "kind": "intervention",
+      "from": "e_geillis",
+      "to": "e_culloden_know"
+    },
+    {
+      "id": "c7",
+      "kind": "temporal",
+      "from": "e_brianna_travel",
+      "to": "e_ridge"
+    },
+    {
+      "id": "c8",
+      "kind": "temporal",
+      "from": "e_ridge",
+      "to": "e_abandawe"
+    },
+    {
+      "id": "c9",
+      "kind": "identity",
+      "from": "claire",
+      "to": "brianna"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_rules",
+      "to": "e_craigh"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_culloden",
+      "eventId": "e_culloden_know",
+      "ruleEffects": [
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Attempts to avert Culloden fail or fulfill recorded outcomes"
+        },
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Traveler knowledge often produces the history already known"
+        }
+      ]
+    },
+    {
+      "id": "iv_geillis",
+      "eventId": "e_geillis",
+      "ruleEffects": [
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Geillis's changewar is narratively thwarted relative to Claire's survival ethics"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Standing-stone time-slip romance under soft Novikov rules: hereditary travel, festival/gem constraints, big history resists while personal lives remain contingent.",
+    "endWorldRefs": [
+      "w_stones"
+    ]
+  }
+}

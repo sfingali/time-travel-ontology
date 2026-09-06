@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "id": "happy-death-day",
+    "title": "Happy Death Day",
+    "year": 2017,
+    "medium": "film",
+    "sources": [
+      "Christopher Landon (2017)",
+      "time-travel-archive/films/happy-death-day.md"
+    ]
+  },
+  "ruleSetIds": [
+    "temporal_loop_exit",
+    "death_checkpoint_rewrite"
+  ],
+  "primaryRuleSetId": "temporal_loop_exit",
+  "mixinRuleSetIds": [
+    "death_checkpoint_rewrite"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_birthday",
+      "label": "Tree's birthday death loop",
+      "spanLabel": "one calendar birthday"
+    }
+  ],
+  "agents": [
+    {
+      "id": "tree",
+      "label": "Tree Gelbman",
+      "identityGroup": "tree",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_birthday"
+    },
+    {
+      "id": "carter",
+      "label": "Carter Davis",
+      "homeWorldRef": "w_birthday"
+    },
+    {
+      "id": "lori",
+      "label": "Lori Spengler",
+      "homeWorldRef": "w_birthday"
+    },
+    {
+      "id": "gregory",
+      "label": "Professor Gregory Butler",
+      "homeWorldRef": "w_birthday"
+    },
+    {
+      "id": "tombs",
+      "label": "John Tombs",
+      "homeWorldRef": "w_birthday"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_wake",
+      "type": "checkpoint",
+      "label": "Wake in Carter's dorm on birthday",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "morning"
+      },
+      "agents": [
+        "tree",
+        "carter"
+      ],
+      "payload": {
+        "checkpointId": "carter_bed"
+      }
+    },
+    {
+      "id": "e_tunnel",
+      "type": "death",
+      "label": "Baby-masked killer stabs Tree in tunnel",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "night1"
+      },
+      "agents": [
+        "tree"
+      ]
+    },
+    {
+      "id": "e_reset1",
+      "type": "loop_reset",
+      "label": "Wake again \u2014 loop begins",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "morning#2"
+      },
+      "agents": [
+        "tree"
+      ],
+      "payload": {
+        "iteration": 2,
+        "memoryRetained": true,
+        "checkpointEventId": "e_wake"
+      }
+    },
+    {
+      "id": "e_investigate",
+      "type": "ordinary",
+      "label": "Investigation loops; suspect trail (Tombs, Butler, Lori)",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "mid loops"
+      },
+      "agents": [
+        "tree",
+        "carter"
+      ],
+      "payload": {
+        "iteration": 8,
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_carter_dies",
+      "type": "death",
+      "label": "False solution: Tombs kills Carter",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "hospital loop"
+      },
+      "agents": [
+        "carter",
+        "tombs",
+        "tree"
+      ]
+    },
+    {
+      "id": "e_suicide_reset",
+      "type": "loop_reset",
+      "label": "Tree hangs herself to restore Carter",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "moral reset"
+      },
+      "agents": [
+        "tree"
+      ],
+      "payload": {
+        "iteration": 12,
+        "memoryRetained": true,
+        "exitFailed": true,
+        "checkpointEventId": "e_wake",
+        "note": "will not accept win with Carter dead"
+      }
+    },
+    {
+      "id": "e_kill_tombs",
+      "type": "intervention",
+      "label": "Perfect day: ends affair, reconciles with father, kills Tombs, eats cupcake",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "false exit"
+      },
+      "agents": [
+        "tree",
+        "carter",
+        "tombs",
+        "lori"
+      ]
+    },
+    {
+      "id": "e_poison",
+      "type": "loop_reset",
+      "label": "Still loops \u2014 cupcake poisoned; Lori is true killer",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "reveal morning"
+      },
+      "agents": [
+        "tree",
+        "lori"
+      ],
+      "payload": {
+        "iteration": 13,
+        "memoryRetained": true,
+        "checkpointEventId": "e_wake"
+      }
+    },
+    {
+      "id": "e_final",
+      "type": "death",
+      "label": "Tree force-feeds Lori the cupcake; Lori falls from window",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "final night"
+      },
+      "agents": [
+        "tree",
+        "lori"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "ordinary",
+      "label": "Next calendar day confirmed (Carter prank); loop exit",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "true next day"
+      },
+      "agents": [
+        "tree",
+        "carter"
+      ],
+      "payload": {
+        "exitCondition": "true killer stopped and survive the night",
+        "memoryRetained": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_wake",
+      "to": "e_tunnel"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_tunnel",
+      "to": "e_reset1"
+    },
+    {
+      "id": "c3",
+      "kind": "temporal",
+      "from": "e_reset1",
+      "to": "e_investigate"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_investigate",
+      "to": "e_carter_dies"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_carter_dies",
+      "to": "e_suicide_reset"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_suicide_reset",
+      "to": "e_kill_tombs"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_kill_tombs",
+      "to": "e_poison"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_poison",
+      "to": "e_final"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_final",
+      "to": "e_exit"
+    },
+    {
+      "id": "c10",
+      "kind": "intervention",
+      "from": "e_investigate",
+      "to": "e_final"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_moral",
+      "eventId": "e_suicide_reset",
+      "ruleEffects": [
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Tree refuses exit conditions that leave Carter dead"
+        },
+        {
+          "ruleSetId": "death_checkpoint_rewrite",
+          "effect": "Suicide returns to dorm checkpoint with knowledge retained"
+        }
+      ]
+    },
+    {
+      "id": "iv_lori",
+      "eventId": "e_final",
+      "ruleEffects": [
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Killing true murderer and surviving ends the birthday loop"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Death-triggered birthday loop ends when Tree stops roommate Lori (not serial-killer red herring Tombs) and wakes on a true next day.",
+    "endWorldRefs": [
+      "w_birthday"
+    ]
+  }
+}

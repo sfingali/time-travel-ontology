@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "id": "run-lola-run",
+    "title": "Run Lola Run",
+    "year": 1998,
+    "medium": "film",
+    "sources": [
+      "Tom Tykwer (1998)",
+      "time-travel-archive/films/run-lola-run.md"
+    ]
+  },
+  "ruleSetIds": [
+    "branch_on_intervention",
+    "temporal_loop_exit"
+  ],
+  "primaryRuleSetId": "branch_on_intervention",
+  "mixinRuleSetIds": [
+    "temporal_loop_exit"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_call",
+      "label": "Manni's noon deadline (shared start)",
+      "spanLabel": "20 minutes"
+    },
+    {
+      "kind": "branch",
+      "id": "w_run1",
+      "label": "Run 1 \u2014 Lola shot",
+      "parentRef": "w_call",
+      "forkLabel": "stumble / father refuse"
+    },
+    {
+      "kind": "branch",
+      "id": "w_run2",
+      "label": "Run 2 \u2014 Manni killed",
+      "parentRef": "w_call",
+      "forkLabel": "gun / bank heist"
+    },
+    {
+      "kind": "branch",
+      "id": "w_run3",
+      "label": "Run 3 \u2014 double win",
+      "parentRef": "w_call",
+      "forkLabel": "casino scream + Manni recovers cash"
+    }
+  ],
+  "agents": [
+    {
+      "id": "lola",
+      "label": "Lola",
+      "identityGroup": "lola",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_call"
+    },
+    {
+      "id": "manni",
+      "label": "Manni",
+      "identityGroup": "manni",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_call"
+    },
+    {
+      "id": "father",
+      "label": "Lola's father (bank manager)",
+      "homeWorldRef": "w_call"
+    },
+    {
+      "id": "ronnie",
+      "label": "Ronnie (boss)",
+      "homeWorldRef": "w_call"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_call",
+      "type": "ordinary",
+      "label": "Manni calls: lost 100k DM; Ronnie kills at noon",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "t-20min"
+      },
+      "agents": [
+        "lola",
+        "manni",
+        "ronnie"
+      ]
+    },
+    {
+      "id": "e_run1_start",
+      "type": "branch_fork",
+      "label": "Run 1 starts; stair/dog stumble",
+      "at": {
+        "worldRef": "w_run1",
+        "timeLabel": "run1"
+      },
+      "agents": [
+        "lola"
+      ]
+    },
+    {
+      "id": "e_run1_fail",
+      "type": "death",
+      "label": "Father refuses; supermarket robbery; Lola shot by police",
+      "at": {
+        "worldRef": "w_run1",
+        "timeLabel": "noon1"
+      },
+      "agents": [
+        "lola",
+        "manni",
+        "father"
+      ]
+    },
+    {
+      "id": "e_bed1",
+      "type": "loop_reset",
+      "label": "Red-tinted bed talk; cinematic restart",
+      "at": {
+        "worldRef": "w_call",
+        "timeLabel": "between1-2"
+      },
+      "agents": [
+        "lola",
+        "manni"
+      ],
+      "payload": {
+        "iteration": 2,
+        "memoryRetained": false,
+        "note": "audience sees alternate worldlines; not clear memory-loop"
+      }
+    },
+    {
+      "id": "e_run2",
+      "type": "branch_fork",
+      "label": "Run 2: different timing; Lola robs bank with gun",
+      "at": {
+        "worldRef": "w_run2",
+        "timeLabel": "run2"
+      },
+      "agents": [
+        "lola",
+        "father"
+      ]
+    },
+    {
+      "id": "e_run2_fail",
+      "type": "death",
+      "label": "Manni hit by ambulance",
+      "at": {
+        "worldRef": "w_run2",
+        "timeLabel": "noon2"
+      },
+      "agents": [
+        "manni",
+        "lola"
+      ]
+    },
+    {
+      "id": "e_flashforwards",
+      "type": "observation",
+      "label": "Passerby flash-forward polaroids alter each run",
+      "at": {
+        "worldRef": "w_run2",
+        "timeLabel": "butterflies"
+      },
+      "agents": [
+        "lola"
+      ],
+      "payload": {
+        "tags": [
+          "butterfly_vignettes"
+        ]
+      }
+    },
+    {
+      "id": "e_run3",
+      "type": "branch_fork",
+      "label": "Run 3: leaps dog; casino scream luck",
+      "at": {
+        "worldRef": "w_run3",
+        "timeLabel": "run3"
+      },
+      "agents": [
+        "lola"
+      ]
+    },
+    {
+      "id": "e_manni_fix",
+      "type": "intervention",
+      "label": "Manni recovers money from homeless man",
+      "at": {
+        "worldRef": "w_run3",
+        "timeLabel": "noon3"
+      },
+      "agents": [
+        "manni"
+      ]
+    },
+    {
+      "id": "e_win",
+      "type": "ordinary",
+      "label": "Both survive with surplus; walk off",
+      "at": {
+        "worldRef": "w_run3",
+        "timeLabel": "exit"
+      },
+      "agents": [
+        "lola",
+        "manni"
+      ],
+      "payload": {
+        "exitCondition": "run3 success"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_call",
+      "to": "e_run1_start"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_run1_start",
+      "to": "e_run1_fail"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_run1_fail",
+      "to": "e_bed1"
+    },
+    {
+      "id": "c4",
+      "kind": "world_relation",
+      "from": "w_call",
+      "to": "w_run1",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c5",
+      "kind": "world_relation",
+      "from": "w_call",
+      "to": "w_run2",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c6",
+      "kind": "world_relation",
+      "from": "w_call",
+      "to": "w_run3",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_bed1",
+      "to": "e_run2"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_run2",
+      "to": "e_run2_fail"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_run2_fail",
+      "to": "e_run3"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_run3",
+      "to": "e_manni_fix"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_manni_fix",
+      "to": "e_win"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_runs",
+      "eventId": "e_run3",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Micro-timing forks three mutually exclusive noon outcomes"
+        },
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Triptych plays like game continues until a winning run"
+        }
+      ],
+      "notes": "Form is the theory; no ontology lecture"
+    }
+  ],
+  "outcome": {
+    "summary": "Three cinematic runs from the same call fork butterfly-different endings; run 3's casino luck plus Manni's recovery yields survival.",
+    "endWorldRefs": [
+      "w_run3",
+      "w_call"
+    ]
+  }
+}

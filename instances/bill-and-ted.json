@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "id": "bill-and-ted",
+    "title": "Bill & Ted's Excellent Adventure",
+    "year": 1989,
+    "medium": "film",
+    "sources": [
+      "Stephen Herek; Chris Matheson & Ed Solomon (1989)",
+      "time-travel-archive/films/bill-and-ted.md"
+    ]
+  },
+  "ruleSetIds": [
+    "predestination_closed_loop",
+    "bootstrap_ontological",
+    "fixed_novikov"
+  ],
+  "primaryRuleSetId": "predestination_closed_loop",
+  "mixinRuleSetIds": [
+    "bootstrap_ontological",
+    "fixed_novikov"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_san_dimas",
+      "label": "San Dimas \u2194 utopian future",
+      "spanLabel": "1988 / far future",
+      "description": "San Dimas time runs while they travel; utopia depends on report"
+    }
+  ],
+  "agents": [
+    {
+      "id": "bill",
+      "label": "Bill Preston",
+      "identityGroup": "bill",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "ted",
+      "label": "Ted Logan",
+      "identityGroup": "ted",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "rufus",
+      "label": "Rufus",
+      "continuityRole": "bootstrap_source",
+      "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "napoleon",
+      "label": "Napoleon",
+      "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "socrates",
+      "label": "Socrates",
+      "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "lincoln",
+      "label": "Abraham Lincoln",
+      "homeWorldRef": "w_san_dimas"
+    },
+    {
+      "id": "joan",
+      "label": "Joan of Arc",
+      "homeWorldRef": "w_san_dimas"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_stake",
+      "type": "ordinary",
+      "label": "History oratory or military school; utopia stake",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "1988"
+      },
+      "agents": [
+        "bill",
+        "ted"
+      ]
+    },
+    {
+      "id": "e_rufus",
+      "type": "arrival",
+      "label": "Rufus arrives with phone-booth time machine",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "1988"
+      },
+      "agents": [
+        "rufus",
+        "bill",
+        "ted"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "bootstrapEntity": "rufus_mission"
+      }
+    },
+    {
+      "id": "e_tour",
+      "type": "departure",
+      "label": "Historical kidnapping tour begins",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "travel"
+      },
+      "agents": [
+        "bill",
+        "ted",
+        "rufus"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_napoleon",
+      "type": "arrival",
+      "label": "Collect Napoleon and other figures",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "past stops"
+      },
+      "agents": [
+        "bill",
+        "ted",
+        "napoleon",
+        "socrates",
+        "joan",
+        "lincoln"
+      ]
+    },
+    {
+      "id": "e_stash",
+      "type": "ordinary",
+      "label": "Stash figures in present; mall/park chaos",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "1988 babysitting"
+      },
+      "agents": [
+        "bill",
+        "ted",
+        "napoleon"
+      ]
+    },
+    {
+      "id": "e_prank",
+      "type": "intervention",
+      "label": "Predestination pranks: 'Has it been done to you?'",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "bill",
+        "ted"
+      ],
+      "payload": {
+        "tags": [
+          "san_dimas_time"
+        ]
+      }
+    },
+    {
+      "id": "e_report",
+      "type": "intervention",
+      "label": "Historical figures assemble for report; ace presentation",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "report"
+      },
+      "agents": [
+        "bill",
+        "ted",
+        "lincoln",
+        "socrates",
+        "joan",
+        "napoleon"
+      ]
+    },
+    {
+      "id": "e_future_ok",
+      "type": "bootstrap_origin",
+      "label": "Rufus confirms Wyld Stallyns utopia secured",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "rufus",
+        "bill",
+        "ted"
+      ],
+      "payload": {
+        "bootstrapEntity": "wyld_stallyns_utopia"
+      }
+    },
+    {
+      "id": "e_clock",
+      "type": "observation",
+      "label": "San Dimas present clock kept ticking during travel",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "deadline"
+      },
+      "agents": [
+        "bill",
+        "ted"
+      ],
+      "payload": {
+        "note": "deadline comedy physics"
+      }
+    },
+    {
+      "id": "e_return_figures",
+      "type": "ordinary",
+      "label": "Historical figures returned (mostly unharmed)",
+      "at": {
+        "worldRef": "w_san_dimas",
+        "timeLabel": "wrap"
+      },
+      "agents": [
+        "rufus",
+        "napoleon",
+        "lincoln"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_stake",
+      "to": "e_rufus"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_rufus",
+      "to": "e_tour"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_tour",
+      "to": "e_napoleon"
+    },
+    {
+      "id": "c4",
+      "kind": "temporal",
+      "from": "e_napoleon",
+      "to": "e_stash"
+    },
+    {
+      "id": "c5",
+      "kind": "intervention",
+      "from": "e_prank",
+      "to": "e_report"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_report",
+      "to": "e_future_ok"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_future_ok",
+      "to": "e_rufus",
+      "label": "utopia sends Rufus because report succeeds"
+    },
+    {
+      "id": "c8",
+      "kind": "temporal",
+      "from": "e_clock",
+      "to": "e_report"
+    },
+    {
+      "id": "c9",
+      "kind": "temporal",
+      "from": "e_report",
+      "to": "e_return_figures"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_stash",
+      "to": "e_report"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_report",
+      "eventId": "e_report",
+      "ruleEffects": [
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Passing the report fulfills the utopia that sent help"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Rufus and booth arrive because the future they enable already exists"
+        },
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Predestination gags close without branching San Dimas"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Phone-booth circuit: future utopia sends Rufus so Bill & Ted pass history, securing the Wyld Stallyns future that sent him.",
+    "endWorldRefs": [
+      "w_san_dimas"
+    ]
+  }
+}

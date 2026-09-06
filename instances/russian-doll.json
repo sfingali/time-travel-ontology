@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "id": "russian-doll",
+    "title": "Russian Doll",
+    "year": 2019,
+    "medium": "tv",
+    "sources": [
+      "Natasha Lyonne, Leslye Headland, Amy Poehler (2019\u20132022)",
+      "time-travel-archive/tv/russian-doll.md"
+    ]
+  },
+  "ruleSetIds": [
+    "temporal_loop_exit",
+    "death_checkpoint_rewrite",
+    "multiverse_contact"
+  ],
+  "primaryRuleSetId": "temporal_loop_exit",
+  "mixinRuleSetIds": [
+    "death_checkpoint_rewrite",
+    "multiverse_contact"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_s1",
+      "label": "Nadia's 36th-birthday NYC loop",
+      "spanLabel": "S1 party night"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_s2_train",
+      "label": "S2 multiverse subway / lineage timelines",
+      "correspondenceKey": "nadia_lineage",
+      "description": "Season 2 nested mother/lineage contact"
+    }
+  ],
+  "agents": [
+    {
+      "id": "nadia",
+      "label": "Nadia Vulvokov",
+      "identityGroup": "nadia",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_s1"
+    },
+    {
+      "id": "alan",
+      "label": "Alan Zaveri",
+      "identityGroup": "alan",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_s1"
+    },
+    {
+      "id": "maxine",
+      "label": "Maxine",
+      "homeWorldRef": "w_s1"
+    },
+    {
+      "id": "ruth",
+      "label": "Ruth",
+      "homeWorldRef": "w_s1"
+    },
+    {
+      "id": "young_nadia",
+      "label": "Young Nadia / mother-line (S2)",
+      "identityGroup": "nadia",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_s2_train"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_party",
+      "type": "ordinary",
+      "label": "Nadia's 36th birthday party",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "party start"
+      },
+      "agents": [
+        "nadia",
+        "maxine"
+      ]
+    },
+    {
+      "id": "e_death1",
+      "type": "death",
+      "label": "Nadia dies (stairs / street / etc.)",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "night"
+      },
+      "agents": [
+        "nadia"
+      ]
+    },
+    {
+      "id": "e_reset1",
+      "type": "loop_reset",
+      "label": "Reset to bathroom mirror at party \u2014 Kraken hardware store night",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "loop+1"
+      },
+      "agents": [
+        "nadia"
+      ],
+      "payload": {
+        "iteration": 2,
+        "memoryRetained": true,
+        "checkpointId": "party_bathroom"
+      }
+    },
+    {
+      "id": "e_many_deaths",
+      "type": "loop_reset",
+      "label": "Repeated deaths and resets while investigating",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "mid S1"
+      },
+      "agents": [
+        "nadia"
+      ],
+      "payload": {
+        "iteration": 10,
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_meet_alan",
+      "type": "contact",
+      "label": "Nadia discovers Alan shares a death loop",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "mid S1"
+      },
+      "agents": [
+        "nadia",
+        "alan"
+      ]
+    },
+    {
+      "id": "e_trauma",
+      "type": "intervention",
+      "label": "They confront trauma/guilt to find exit conditions",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "late S1"
+      },
+      "agents": [
+        "nadia",
+        "alan",
+        "ruth"
+      ],
+      "payload": {
+        "exitCondition": "help each other face guilt/trauma"
+      }
+    },
+    {
+      "id": "e_exit_s1",
+      "type": "ordinary",
+      "label": "S1 exit: mutual help breaks the shared loop",
+      "at": {
+        "worldRef": "w_s1",
+        "timeLabel": "S1 end"
+      },
+      "agents": [
+        "nadia",
+        "alan"
+      ],
+      "payload": {
+        "exitCondition": "mutual rescue",
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_s2_subway",
+      "type": "contact",
+      "label": "S2: multiverse subway through mother/lineage timelines",
+      "at": {
+        "worldRef": "w_s2_train",
+        "timeLabel": "S2"
+      },
+      "agents": [
+        "nadia",
+        "young_nadia"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "tags": [
+          "multiverse_subway"
+        ]
+      }
+    },
+    {
+      "id": "e_s2_mother",
+      "type": "ordinary",
+      "label": "Nadia experiences mother-line nested identities",
+      "at": {
+        "worldRef": "w_s2_train",
+        "timeLabel": "S2 mid"
+      },
+      "agents": [
+        "nadia",
+        "young_nadia"
+      ]
+    },
+    {
+      "id": "e_s2_resolve",
+      "type": "reveal",
+      "label": "Lineage dolls metaphor resolved across parallel contacts",
+      "at": {
+        "worldRef": "w_s2_train",
+        "timeLabel": "S2 end"
+      },
+      "agents": [
+        "nadia"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_party",
+      "to": "e_death1"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_death1",
+      "to": "e_reset1"
+    },
+    {
+      "id": "c3",
+      "kind": "temporal",
+      "from": "e_reset1",
+      "to": "e_many_deaths"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_many_deaths",
+      "to": "e_meet_alan"
+    },
+    {
+      "id": "c5",
+      "kind": "intervention",
+      "from": "e_meet_alan",
+      "to": "e_trauma"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_trauma",
+      "to": "e_exit_s1"
+    },
+    {
+      "id": "c7",
+      "kind": "temporal",
+      "from": "e_exit_s1",
+      "to": "e_s2_subway"
+    },
+    {
+      "id": "c8",
+      "kind": "world_relation",
+      "from": "w_s1",
+      "to": "w_s2_train",
+      "relation": "correspondsTo",
+      "label": "S2 subway multiverse"
+    },
+    {
+      "id": "c9",
+      "kind": "identity",
+      "from": "nadia",
+      "to": "young_nadia"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_s2_subway",
+      "to": "e_s2_resolve"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_exit",
+      "eventId": "e_trauma",
+      "ruleEffects": [
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Shared trauma work supplies exit condition for both loopers"
+        },
+        {
+          "ruleSetId": "death_checkpoint_rewrite",
+          "effect": "Each death returns to party checkpoint with memory retained"
+        }
+      ]
+    },
+    {
+      "id": "iv_s2",
+      "eventId": "e_s2_subway",
+      "ruleEffects": [
+        {
+          "ruleSetId": "multiverse_contact",
+          "effect": "Subway links lineage parallels beyond the S1 day loop"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "S1: Nadia and Alan exit a shared death loop by facing trauma together. S2: multiverse subway through mother/lineage timelines extends the metaphor.",
+    "endWorldRefs": [
+      "w_s1",
+      "w_s2_train"
+    ]
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "id": "your-name",
+    "title": "Your Name",
+    "year": 2016,
+    "medium": "film",
+    "sources": [
+      "Makoto Shinkai (2016)",
+      "time-travel-archive/films/your-name.md"
+    ]
+  },
+  "ruleSetIds": [
+    "mutable_ripple",
+    "perception_nonlinear",
+    "bootstrap_ontological"
+  ],
+  "primaryRuleSetId": "mutable_ripple",
+  "mixinRuleSetIds": [
+    "perception_nonlinear",
+    "bootstrap_ontological"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_2013",
+      "label": "Itomori 2013 (Mitsuha era / comet impact)",
+      "spanLabel": "2013"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_2016",
+      "label": "Tokyo 2016 (Taki era)",
+      "spanLabel": "2016"
+    },
+    {
+      "kind": "branch",
+      "id": "w_evacuated",
+      "label": "Rewritten Itomori (evacuation succeeds)",
+      "parentRef": "w_2013",
+      "forkLabel": "forced evacuation before impact"
+    }
+  ],
+  "agents": [
+    {
+      "id": "taki",
+      "label": "Taki Tachibana",
+      "identityGroup": "taki",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_2016"
+    },
+    {
+      "id": "mitsuha",
+      "label": "Mitsuha Miyamizu",
+      "identityGroup": "mitsuha",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_2013"
+    },
+    {
+      "id": "tessie",
+      "label": "Tessie",
+      "homeWorldRef": "w_2013"
+    },
+    {
+      "id": "sayaka",
+      "label": "Sayaka",
+      "homeWorldRef": "w_2013"
+    },
+    {
+      "id": "mayor",
+      "label": "Mitsuha's father (mayor)",
+      "homeWorldRef": "w_2013"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_swaps",
+      "type": "ordinary",
+      "label": "Intermittent body swaps; notes left for each other",
+      "at": {
+        "worldRef": "w_2016",
+        "timeLabel": "swap period"
+      },
+      "agents": [
+        "taki",
+        "mitsuha"
+      ],
+      "payload": {
+        "travelMode": "body_swap"
+      }
+    },
+    {
+      "id": "e_swaps_stop",
+      "type": "ordinary",
+      "label": "Swaps stop; Taki seeks Mitsuha",
+      "at": {
+        "worldRef": "w_2016",
+        "timeLabel": "2016 search"
+      },
+      "agents": [
+        "taki"
+      ]
+    },
+    {
+      "id": "e_destroyed",
+      "type": "observation",
+      "label": "Taki learns Itomori destroyed by Comet Tiamat in 2013",
+      "at": {
+        "worldRef": "w_2016",
+        "timeLabel": "2016 discovery"
+      },
+      "agents": [
+        "taki"
+      ],
+      "payload": {
+        "note": "Three-year offset revealed"
+      }
+    },
+    {
+      "id": "e_sake",
+      "type": "departure",
+      "label": "Taki drinks kuchikamizake at Goshintai; returns to Mitsuha's body",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "festival morning 2013"
+      },
+      "agents": [
+        "taki",
+        "mitsuha"
+      ],
+      "payload": {
+        "travelMode": "body_swap",
+        "artifactKind": "other",
+        "artifactId": "kuchikamizake"
+      }
+    },
+    {
+      "id": "e_evac_plan",
+      "type": "intervention",
+      "label": "In Mitsuha's body: substation sabotage and emergency broadcast with Tessie and Sayaka",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "festival day"
+      },
+      "agents": [
+        "taki",
+        "tessie",
+        "sayaka"
+      ]
+    },
+    {
+      "id": "e_kataware",
+      "type": "contact",
+      "label": "Kataware-doki twilight: timelines meet; braid returned; palms written",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "twilight"
+      },
+      "agents": [
+        "taki",
+        "mitsuha"
+      ],
+      "payload": {
+        "tags": [
+          "kataware_doki"
+        ]
+      }
+    },
+    {
+      "id": "e_persuade",
+      "type": "intervention",
+      "label": "Mitsuha persuades mayor-father to evacuate town",
+      "at": {
+        "worldRef": "w_2013",
+        "timeLabel": "pre-impact"
+      },
+      "agents": [
+        "mitsuha",
+        "mayor"
+      ]
+    },
+    {
+      "id": "e_fork_save",
+      "type": "branch_fork",
+      "label": "Evacuation rewrites comet-disaster outcome",
+      "at": {
+        "worldRef": "w_evacuated",
+        "timeLabel": "impact night"
+      },
+      "agents": [
+        "mitsuha",
+        "mayor"
+      ]
+    },
+    {
+      "id": "e_memory_fade",
+      "type": "ordinary",
+      "label": "Memories fade as timelines realign",
+      "at": {
+        "worldRef": "w_2016",
+        "timeLabel": "post-rewrite"
+      },
+      "agents": [
+        "taki",
+        "mitsuha"
+      ],
+      "payload": {
+        "signal": "memory_fade"
+      }
+    },
+    {
+      "id": "e_reunion",
+      "type": "ordinary",
+      "label": "Five years later near-amnesiac adults reunite on Suga Shrine steps",
+      "at": {
+        "worldRef": "w_evacuated",
+        "timeLabel": "five years later"
+      },
+      "agents": [
+        "taki",
+        "mitsuha"
+      ]
+    },
+    {
+      "id": "e_names",
+      "type": "reveal",
+      "label": "They ask each other's names",
+      "at": {
+        "worldRef": "w_evacuated",
+        "timeLabel": "reunion"
+      },
+      "agents": [
+        "taki",
+        "mitsuha"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "temporal",
+      "from": "e_swaps",
+      "to": "e_swaps_stop"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_swaps_stop",
+      "to": "e_destroyed"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_destroyed",
+      "to": "e_sake"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_sake",
+      "to": "e_evac_plan"
+    },
+    {
+      "id": "c5",
+      "kind": "temporal",
+      "from": "e_evac_plan",
+      "to": "e_kataware"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_kataware",
+      "to": "e_persuade"
+    },
+    {
+      "id": "c7",
+      "kind": "intervention",
+      "from": "e_persuade",
+      "to": "e_fork_save"
+    },
+    {
+      "id": "c8",
+      "kind": "world_relation",
+      "from": "w_2013",
+      "to": "w_evacuated",
+      "relation": "supersedes",
+      "label": "evacuation rewrite"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_fork_save",
+      "to": "e_memory_fade"
+    },
+    {
+      "id": "c10",
+      "kind": "temporal",
+      "from": "e_memory_fade",
+      "to": "e_reunion"
+    },
+    {
+      "id": "c11",
+      "kind": "identity",
+      "from": "taki",
+      "to": "mitsuha",
+      "label": "body-swap link"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_evac",
+      "eventId": "e_persuade",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Forced evacuation overwrites Itomori destruction in downstream present"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Body-swap knowledge and sake ritual close a guided loop that enables the rewrite"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Body-swap across a three-year offset lets Taki/Mitsuha evacuate Itomori before Comet Tiamat; memories fade then adults reunite asking each other's names.",
+    "endWorldRefs": [
+      "w_evacuated",
+      "w_2016"
+    ]
+  }
+}

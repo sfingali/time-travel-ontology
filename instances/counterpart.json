@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "id": "counterpart",
+    "title": "Counterpart",
+    "year": 2017,
+    "medium": "tv",
+    "sources": [
+      "Justin Marks (2017\u20132019)",
+      "time-travel-archive/tv/counterpart.md"
+    ]
+  },
+  "ruleSetIds": [
+    "multiverse_contact"
+  ],
+  "primaryRuleSetId": "multiverse_contact",
+  "mixinRuleSetIds": [],
+  "topologyPatternId": "dual_parallel_pair",
+  "worlds": [
+    {
+      "kind": "parallel_world",
+      "id": "w_prime",
+      "label": "Prime Berlin (Alpha)",
+      "correspondenceKey": "berlin_crossing",
+      "correspondenceMap": [
+        {
+          "localKey": "howard",
+          "remoteWorldRef": "w_echo",
+          "remoteKey": "howard_echo"
+        }
+      ]
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_echo",
+      "label": "Echo Berlin (Other Side)",
+      "correspondenceKey": "berlin_crossing",
+      "mirrorOf": "w_prime",
+      "correspondenceMap": [
+        {
+          "localKey": "howard_echo",
+          "remoteWorldRef": "w_prime",
+          "remoteKey": "howard"
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "howard",
+      "label": "Howard Silk (Prime)",
+      "identityGroup": "howard",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_prime"
+    },
+    {
+      "id": "howard_echo",
+      "label": "Howard Silk (Echo)",
+      "identityGroup": "howard",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_echo"
+    },
+    {
+      "id": "emily",
+      "label": "Emily Silk (Prime)",
+      "identityGroup": "emily",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_prime"
+    },
+    {
+      "id": "clare",
+      "label": "Clare (sleeper)",
+      "homeWorldRef": "w_echo"
+    },
+    {
+      "id": "baldwin",
+      "label": "Baldwin (assassin)",
+      "homeWorldRef": "w_echo"
+    },
+    {
+      "id": "management",
+      "label": "Management / Office of Interchange",
+      "homeWorldRef": "w_prime"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_diverge",
+      "type": "ordinary",
+      "label": "1987 experiment diverges two Earths",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "1987"
+      },
+      "agents": [
+        "management"
+      ],
+      "payload": {
+        "note": "Crossing origin"
+      }
+    },
+    {
+      "id": "e_crossing",
+      "type": "contact",
+      "label": "Berlin embassy Crossing links Prime and Echo",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "series present"
+      },
+      "agents": [
+        "management"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "tags": [
+          "embassy"
+        ]
+      }
+    },
+    {
+      "id": "e_meet",
+      "type": "contact",
+      "label": "Mild Howard meets hardened Echo Howard",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "S1"
+      },
+      "agents": [
+        "howard",
+        "howard_echo"
+      ]
+    },
+    {
+      "id": "e_induction",
+      "type": "ordinary",
+      "label": "Induction into espionage across mirrored Cold Wars",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "S1"
+      },
+      "agents": [
+        "howard",
+        "howard_echo",
+        "management"
+      ]
+    },
+    {
+      "id": "e_flu",
+      "type": "observation",
+      "label": "Flu weapon history between worlds revealed",
+      "at": {
+        "worldRef": "w_echo",
+        "timeLabel": "backstory"
+      },
+      "agents": [
+        "howard_echo",
+        "management"
+      ]
+    },
+    {
+      "id": "e_baldwin",
+      "type": "intervention",
+      "label": "Baldwin assassin arcs across the Crossing",
+      "at": {
+        "worldRef": "w_echo",
+        "timeLabel": "S1-S2"
+      },
+      "agents": [
+        "baldwin",
+        "howard"
+      ]
+    },
+    {
+      "id": "e_clare",
+      "type": "reveal",
+      "label": "Clare sleeper identity exposed",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "S1-S2"
+      },
+      "agents": [
+        "clare",
+        "howard"
+      ]
+    },
+    {
+      "id": "e_emily_arcs",
+      "type": "ordinary",
+      "label": "Emily counterparts shape loyalty and Strategy",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "S2"
+      },
+      "agents": [
+        "emily",
+        "howard"
+      ]
+    },
+    {
+      "id": "e_management",
+      "type": "intervention",
+      "label": "Management power struggle over Crossing policy",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "S2"
+      },
+      "agents": [
+        "management",
+        "howard_echo"
+      ]
+    },
+    {
+      "id": "e_partial_close",
+      "type": "ordinary",
+      "label": "Series ends with partial closure after two seasons",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "finale"
+      },
+      "agents": [
+        "howard",
+        "howard_echo"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "world_relation",
+      "from": "w_prime",
+      "to": "w_echo",
+      "relation": "mirrors",
+      "label": "1987 twin Berlins"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_diverge",
+      "to": "e_crossing"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_crossing",
+      "to": "e_meet"
+    },
+    {
+      "id": "c4",
+      "kind": "identity",
+      "from": "howard",
+      "to": "howard_echo"
+    },
+    {
+      "id": "c5",
+      "kind": "temporal",
+      "from": "e_meet",
+      "to": "e_induction"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_induction",
+      "to": "e_baldwin"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_induction",
+      "to": "e_clare"
+    },
+    {
+      "id": "c8",
+      "kind": "temporal",
+      "from": "e_clare",
+      "to": "e_management"
+    },
+    {
+      "id": "c9",
+      "kind": "temporal",
+      "from": "e_management",
+      "to": "e_partial_close"
+    },
+    {
+      "id": "c10",
+      "kind": "world_relation",
+      "from": "w_echo",
+      "to": "w_prime",
+      "relation": "correspondsTo"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_crossing",
+      "eventId": "e_crossing",
+      "ruleEffects": [
+        {
+          "ruleSetId": "multiverse_contact",
+          "effect": "Embassy Crossing enables tradecraft between coexisting parallel Earths (not parent/child branches)"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Prime and Echo Berlins remain dual parallels linked by a Crossing embassy; Howard counterparts drive espionage until partial series closure.",
+    "endWorldRefs": [
+      "w_prime",
+      "w_echo"
+    ]
+  }
+}

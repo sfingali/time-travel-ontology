@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "id": "timecrimes",
+    "title": "Timecrimes (Los Cronocr\u00edmenes)",
+    "year": 2007,
+    "medium": "film",
+    "sources": [
+      "Nacho Vigalondo (2007)",
+      "time-travel-archive/films/timecrimes.md"
+    ]
+  },
+  "ruleSetIds": [
+    "predestination_closed_loop",
+    "fixed_novikov",
+    "bootstrap_ontological"
+  ],
+  "primaryRuleSetId": "predestination_closed_loop",
+  "mixinRuleSetIds": [
+    "fixed_novikov",
+    "bootstrap_ontological"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_afternoon",
+      "label": "Single afternoon causal knot",
+      "spanLabel": "one evening",
+      "description": "Triple H\u00e9ctor overlap; forced self-consistency"
+    }
+  ],
+  "agents": [
+    {
+      "id": "hector1",
+      "label": "H\u00e9ctor-1 (first)",
+      "identityGroup": "hector",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_afternoon",
+      "iterationIndex": 1
+    },
+    {
+      "id": "hector2",
+      "label": "H\u00e9ctor-2 (bandaged)",
+      "identityGroup": "hector",
+      "continuityRole": "iteration",
+      "homeWorldRef": "w_afternoon",
+      "iterationIndex": 2
+    },
+    {
+      "id": "hector3",
+      "label": "H\u00e9ctor-3 (third)",
+      "identityGroup": "hector",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_afternoon",
+      "iterationIndex": 3
+    },
+    {
+      "id": "scientist",
+      "label": "Lab scientist",
+      "homeWorldRef": "w_afternoon"
+    },
+    {
+      "id": "clara",
+      "label": "Clara (wife)",
+      "homeWorldRef": "w_afternoon"
+    },
+    {
+      "id": "woman",
+      "label": "Woman in woods",
+      "homeWorldRef": "w_afternoon"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_glimpse",
+      "type": "observation",
+      "label": "H\u00e9ctor-1 glimpses nude woman in woods",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "afternoon"
+      },
+      "agents": [
+        "hector1",
+        "woman"
+      ]
+    },
+    {
+      "id": "e_chase",
+      "type": "ordinary",
+      "label": "Bandaged figure stabs/chases H\u00e9ctor-1",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "afternoon"
+      },
+      "agents": [
+        "hector1",
+        "hector2"
+      ]
+    },
+    {
+      "id": "e_lab",
+      "type": "arrival",
+      "label": "H\u00e9ctor-1 flees to lab with time machine",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "lab"
+      },
+      "agents": [
+        "hector1",
+        "scientist"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_jump1",
+      "type": "departure",
+      "label": "H\u00e9ctor-1 enters machine; emerges ~1 hour earlier as H\u00e9ctor-2",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "machine"
+      },
+      "agents": [
+        "hector1"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "travelDelta": "-1 hour"
+      }
+    },
+    {
+      "id": "e_become_bandage",
+      "type": "intervention",
+      "label": "H\u00e9ctor-2 recreates bandage attacker from own wound",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "woods"
+      },
+      "agents": [
+        "hector2",
+        "woman"
+      ],
+      "payload": {
+        "identityNote": "becomes the pursuer"
+      }
+    },
+    {
+      "id": "e_preserve",
+      "type": "intervention",
+      "label": "H\u00e9ctor-2 forces events to preserve the loop",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "overlap"
+      },
+      "agents": [
+        "hector2",
+        "hector1",
+        "scientist"
+      ]
+    },
+    {
+      "id": "e_jump2",
+      "type": "departure",
+      "label": "Second jump produces H\u00e9ctor-3",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "machine again"
+      },
+      "agents": [
+        "hector2"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_van",
+      "type": "intervention",
+      "label": "H\u00e9ctor-3 corrections involving deadly van crash",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "road"
+      },
+      "agents": [
+        "hector3",
+        "woman",
+        "clara"
+      ]
+    },
+    {
+      "id": "e_clara_threat",
+      "type": "ordinary",
+      "label": "Threat to Clara drives final self-consistent choices",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "home"
+      },
+      "agents": [
+        "hector3",
+        "clara"
+      ]
+    },
+    {
+      "id": "e_close",
+      "type": "reveal",
+      "label": "Afternoon closes: each H\u00e9ctor role was always filled by himself",
+      "at": {
+        "worldRef": "w_afternoon",
+        "timeLabel": "night"
+      },
+      "agents": [
+        "hector1",
+        "hector2",
+        "hector3"
+      ],
+      "payload": {
+        "bootstrapEntity": "pink_bandage"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_glimpse",
+      "to": "e_chase"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_chase",
+      "to": "e_lab"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_lab",
+      "to": "e_jump1"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_jump1",
+      "to": "e_become_bandage"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_become_bandage",
+      "to": "e_chase",
+      "label": "creates pursuer"
+    },
+    {
+      "id": "c6",
+      "kind": "intervention",
+      "from": "e_preserve",
+      "to": "e_jump2"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_jump2",
+      "to": "e_van"
+    },
+    {
+      "id": "c8",
+      "kind": "identity",
+      "from": "hector1",
+      "to": "hector2"
+    },
+    {
+      "id": "c9",
+      "kind": "identity",
+      "from": "hector2",
+      "to": "hector3"
+    },
+    {
+      "id": "c10",
+      "kind": "temporal",
+      "from": "e_van",
+      "to": "e_close"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_bandage",
+      "eventId": "e_become_bandage",
+      "ruleEffects": [
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Attempting escape creates the attacker that forced the escape"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Bandaged pursuer has no origin outside H\u00e9ctor's own wound"
+        },
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Events self-consistently fill all three H\u00e9ctor slots"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Compact causal knot: H\u00e9ctor becomes each role in a single afternoon\u2014glimpse, pursuer, corrector\u2014forced into self-consistency.",
+    "endWorldRefs": [
+      "w_afternoon"
+    ]
+  }
+}

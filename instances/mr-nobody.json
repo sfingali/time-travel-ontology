@@ -1,0 +1,342 @@
+{
+  "meta": {
+    "id": "mr-nobody",
+    "title": "Mr. Nobody",
+    "year": 2009,
+    "medium": "film",
+    "sources": [
+      "Jaco Van Dormael (2009)",
+      "time-travel-archive/films/mr-nobody.md"
+    ]
+  },
+  "ruleSetIds": [
+    "branch_on_intervention",
+    "perception_nonlinear"
+  ],
+  "primaryRuleSetId": "branch_on_intervention",
+  "mixinRuleSetIds": [
+    "perception_nonlinear"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_frame",
+      "label": "118-year-old Nemo framing future",
+      "spanLabel": "2092 rebirth eve"
+    },
+    {
+      "kind": "branch",
+      "id": "w_mom",
+      "label": "Life with mother (Anna path root)",
+      "parentRef": "w_frame",
+      "forkLabel": "choose mother at station"
+    },
+    {
+      "kind": "branch",
+      "id": "w_dad",
+      "label": "Life with father",
+      "parentRef": "w_frame",
+      "forkLabel": "choose father at station"
+    },
+    {
+      "kind": "branch",
+      "id": "w_anna",
+      "label": "Adulthood with Anna",
+      "parentRef": "w_mom",
+      "forkLabel": "Anna romance"
+    },
+    {
+      "kind": "branch",
+      "id": "w_elise",
+      "label": "Adulthood with Elise",
+      "parentRef": "w_dad",
+      "forkLabel": "Elise marriage"
+    },
+    {
+      "kind": "branch",
+      "id": "w_jean",
+      "label": "Adulthood with Jean",
+      "parentRef": "w_dad",
+      "forkLabel": "Jean marriage"
+    }
+  ],
+  "agents": [
+    {
+      "id": "nemo",
+      "label": "Nemo Nobody",
+      "identityGroup": "nemo",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_frame"
+    },
+    {
+      "id": "nemo_child",
+      "label": "Young Nemo at station",
+      "identityGroup": "nemo",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_frame"
+    },
+    {
+      "id": "anna",
+      "label": "Anna",
+      "homeWorldRef": "w_anna"
+    },
+    {
+      "id": "elise",
+      "label": "Elise",
+      "homeWorldRef": "w_elise"
+    },
+    {
+      "id": "jean",
+      "label": "Jean",
+      "homeWorldRef": "w_jean"
+    },
+    {
+      "id": "mom",
+      "label": "Nemo's mother",
+      "homeWorldRef": "w_mom"
+    },
+    {
+      "id": "dad",
+      "label": "Nemo's father",
+      "homeWorldRef": "w_dad"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_frame",
+      "type": "ordinary",
+      "label": "Elderly last-mortal Nemo interviewed before universal rebirth",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "2092"
+      },
+      "agents": [
+        "nemo"
+      ]
+    },
+    {
+      "id": "e_station",
+      "type": "branch_fork",
+      "label": "Childhood station: choose mother or father",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "childhood"
+      },
+      "agents": [
+        "nemo_child",
+        "mom",
+        "dad"
+      ]
+    },
+    {
+      "id": "e_mom_path",
+      "type": "ordinary",
+      "label": "Life path with mother begins",
+      "at": {
+        "worldRef": "w_mom",
+        "timeLabel": "youth"
+      },
+      "agents": [
+        "nemo_child",
+        "mom"
+      ]
+    },
+    {
+      "id": "e_dad_path",
+      "type": "ordinary",
+      "label": "Life path with father begins",
+      "at": {
+        "worldRef": "w_dad",
+        "timeLabel": "youth"
+      },
+      "agents": [
+        "nemo_child",
+        "dad"
+      ]
+    },
+    {
+      "id": "e_anna_life",
+      "type": "ordinary",
+      "label": "Possible adulthood with Anna (missed reunions, pool)",
+      "at": {
+        "worldRef": "w_anna",
+        "timeLabel": "adulthood"
+      },
+      "agents": [
+        "nemo",
+        "anna"
+      ]
+    },
+    {
+      "id": "e_elise_life",
+      "type": "ordinary",
+      "label": "Possible adulthood with Elise (depression, accidents)",
+      "at": {
+        "worldRef": "w_elise",
+        "timeLabel": "adulthood"
+      },
+      "agents": [
+        "nemo",
+        "elise"
+      ]
+    },
+    {
+      "id": "e_jean_life",
+      "type": "ordinary",
+      "label": "Possible adulthood with Jean (loveless wealth)",
+      "at": {
+        "worldRef": "w_jean",
+        "timeLabel": "adulthood"
+      },
+      "agents": [
+        "nemo",
+        "jean"
+      ]
+    },
+    {
+      "id": "e_mars",
+      "type": "ordinary",
+      "label": "Mars / disaster variants across branches",
+      "at": {
+        "worldRef": "w_elise",
+        "timeLabel": "midlife"
+      },
+      "agents": [
+        "nemo"
+      ]
+    },
+    {
+      "id": "e_observer",
+      "type": "observation",
+      "label": "Framing: every unlived path exists in possibility space",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "interview"
+      },
+      "agents": [
+        "nemo"
+      ],
+      "payload": {
+        "perceptionMode": "many_worlds_recount",
+        "observerContinuity": true
+      }
+    },
+    {
+      "id": "e_choice_thesis",
+      "type": "reveal",
+      "label": "Argument that every choice forks a lived biography",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "climax talk"
+      },
+      "agents": [
+        "nemo"
+      ]
+    },
+    {
+      "id": "e_rebirth",
+      "type": "ordinary",
+      "label": "Universal rebirth approaches; last mortal recounts",
+      "at": {
+        "worldRef": "w_frame",
+        "timeLabel": "2092 end"
+      },
+      "agents": [
+        "nemo"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "temporal",
+      "from": "e_frame",
+      "to": "e_station"
+    },
+    {
+      "id": "c2",
+      "kind": "world_relation",
+      "from": "w_frame",
+      "to": "w_mom",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c3",
+      "kind": "world_relation",
+      "from": "w_frame",
+      "to": "w_dad",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_station",
+      "to": "e_mom_path"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_station",
+      "to": "e_dad_path"
+    },
+    {
+      "id": "c6",
+      "kind": "world_relation",
+      "from": "w_mom",
+      "to": "w_anna",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c7",
+      "kind": "world_relation",
+      "from": "w_dad",
+      "to": "w_elise",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c8",
+      "kind": "world_relation",
+      "from": "w_dad",
+      "to": "w_jean",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c9",
+      "kind": "identity",
+      "from": "nemo_child",
+      "to": "nemo"
+    },
+    {
+      "id": "c10",
+      "kind": "temporal",
+      "from": "e_observer",
+      "to": "e_rebirth"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_station",
+      "eventId": "e_station",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Parental choice forks mutually exclusive adult biographies"
+        },
+        {
+          "ruleSetId": "perception_nonlinear",
+          "effect": "Elder Nemo holds all forks as recounted possibility rather than machine travel"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Nemo recounts contradictory lives forked by childhood and romantic choices; film treats every path as real in possibility space without a machine.",
+    "endWorldRefs": [
+      "w_frame",
+      "w_anna",
+      "w_elise",
+      "w_jean"
+    ]
+  }
+}

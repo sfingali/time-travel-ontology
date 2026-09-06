@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "id": "interstellar",
+    "title": "Interstellar",
+    "year": 2014,
+    "medium": "film",
+    "sources": [
+      "Christopher Nolan & Jonathan Nolan (2014)",
+      "time-travel-archive/films/interstellar.md"
+    ]
+  },
+  "ruleSetIds": [
+    "fixed_novikov",
+    "bootstrap_ontological",
+    "predestination_closed_loop"
+  ],
+  "primaryRuleSetId": "fixed_novikov",
+  "mixinRuleSetIds": [
+    "bootstrap_ontological",
+    "predestination_closed_loop"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_earth",
+      "label": "Blight Earth \u2192 Cooper Station continuum",
+      "spanLabel": "near future \u2192 decades later",
+      "description": "One history; anomalies always included Cooper's messages"
+    }
+  ],
+  "agents": [
+    {
+      "id": "cooper",
+      "label": "Joseph Cooper",
+      "identityGroup": "cooper",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_earth"
+    },
+    {
+      "id": "murph_young",
+      "label": "Young Murphy Cooper",
+      "identityGroup": "murph",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_earth"
+    },
+    {
+      "id": "murph_adult",
+      "label": "Adult Murph",
+      "identityGroup": "murph",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_earth"
+    },
+    {
+      "id": "amelia",
+      "label": "Amelia Brand",
+      "homeWorldRef": "w_earth"
+    },
+    {
+      "id": "tars",
+      "label": "TARS",
+      "homeWorldRef": "w_earth"
+    },
+    {
+      "id": "brand",
+      "label": "Professor Brand",
+      "homeWorldRef": "w_earth"
+    },
+    {
+      "id": "mann",
+      "label": "Dr. Mann",
+      "homeWorldRef": "w_earth"
+    },
+    {
+      "id": "they",
+      "label": "Future humans ('they')",
+      "continuityRole": "bootstrap_source",
+      "homeWorldRef": "w_earth"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_dust",
+      "type": "ordinary",
+      "label": "Blight Earth; gravitational anomalies in Murph's room",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "departure eve"
+      },
+      "agents": [
+        "cooper",
+        "murph_young"
+      ]
+    },
+    {
+      "id": "e_coords",
+      "type": "bootstrap_origin",
+      "label": "Dust/binary coordinates lead to NASA \u2014 Cooper was the ghost",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "bookshelf"
+      },
+      "agents": [
+        "cooper",
+        "murph_young",
+        "they"
+      ],
+      "payload": {
+        "bootstrapEntity": "bookshelf_coords",
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_depart",
+      "type": "departure",
+      "label": "Endurance launches through Saturn wormhole",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "mission start"
+      },
+      "agents": [
+        "cooper",
+        "amelia",
+        "tars"
+      ],
+      "payload": {
+        "travelMode": "wormhole"
+      }
+    },
+    {
+      "id": "e_miller",
+      "type": "ordinary",
+      "label": "Miller's planet: 1 hour \u2248 7 years; Doyle dies; +23 years Earth",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "Miller"
+      },
+      "agents": [
+        "cooper",
+        "amelia"
+      ]
+    },
+    {
+      "id": "e_mann",
+      "type": "intervention",
+      "label": "Mann betrayal; Endurance damaged; Mann dies",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "Mann planet"
+      },
+      "agents": [
+        "cooper",
+        "mann",
+        "amelia"
+      ]
+    },
+    {
+      "id": "e_slingshot",
+      "type": "ordinary",
+      "label": "Gargantua slingshot; Cooper and TARS eject",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "slingshot"
+      },
+      "agents": [
+        "cooper",
+        "tars",
+        "amelia"
+      ]
+    },
+    {
+      "id": "e_tesseract",
+      "type": "arrival",
+      "label": "Fall into tesseract: infinite Murph bedrooms across time",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "tesseract"
+      },
+      "agents": [
+        "cooper",
+        "tars",
+        "they"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "perceptionMode": "5d_tesseract"
+      }
+    },
+    {
+      "id": "e_ghost",
+      "type": "intervention",
+      "label": "Cooper pushes gravity messages into past (books, dust, watch)",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "Murph childhood\u2194adult"
+      },
+      "agents": [
+        "cooper",
+        "murph_young",
+        "murph_adult"
+      ],
+      "payload": {
+        "bootstrapEntity": "watch_morse"
+      }
+    },
+    {
+      "id": "e_watch",
+      "type": "bootstrap_origin",
+      "label": "Watch Morse delivers quantum data; Murph solves gravity",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "adult Murph"
+      },
+      "agents": [
+        "cooper",
+        "murph_adult",
+        "tars"
+      ],
+      "payload": {
+        "bootstrapEntity": "quantum_data",
+        "artifactId": "watch",
+        "artifactKind": "device"
+      }
+    },
+    {
+      "id": "e_plan_a",
+      "type": "ordinary",
+      "label": "Plan A habitats; humanity evacuates",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "exodus"
+      },
+      "agents": [
+        "murph_adult",
+        "brand"
+      ]
+    },
+    {
+      "id": "e_station",
+      "type": "ordinary",
+      "label": "Cooper wakes on Cooper Station; reunites with elderly Murph",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "Cooper Station"
+      },
+      "agents": [
+        "cooper",
+        "murph_adult"
+      ]
+    },
+    {
+      "id": "e_edmunds",
+      "type": "departure",
+      "label": "Cooper leaves to find Amelia on Edmunds's world",
+      "at": {
+        "worldRef": "w_earth",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "cooper",
+        "amelia"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_coords",
+      "to": "e_depart"
+    },
+    {
+      "id": "c2",
+      "kind": "temporal",
+      "from": "e_depart",
+      "to": "e_miller"
+    },
+    {
+      "id": "c3",
+      "kind": "temporal",
+      "from": "e_miller",
+      "to": "e_mann"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_mann",
+      "to": "e_slingshot"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_slingshot",
+      "to": "e_tesseract"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_tesseract",
+      "to": "e_ghost"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_ghost",
+      "to": "e_coords",
+      "label": "closes bookshelf loop"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_ghost",
+      "to": "e_watch"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_watch",
+      "to": "e_plan_a"
+    },
+    {
+      "id": "c10",
+      "kind": "temporal",
+      "from": "e_plan_a",
+      "to": "e_station"
+    },
+    {
+      "id": "c11",
+      "kind": "identity",
+      "from": "murph_young",
+      "to": "murph_adult"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_watch",
+      "to": "e_tesseract",
+      "label": "future humans enable tesseract that enables data"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_ghost",
+      "eventId": "e_ghost",
+      "ruleEffects": [
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Messages were always Murph's childhood anomalies; timeline stays self-consistent"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Quantum data and wormhole placement lack external origin outside the loop"
+        },
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Cooper becomes the ghost he already was"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "One fixed history: future humans bootstrap the wormhole/tesseract so Cooper can send the quantum data that saves Earth; dilation is costly but not branching.",
+    "endWorldRefs": [
+      "w_earth"
+    ]
+  }
+}

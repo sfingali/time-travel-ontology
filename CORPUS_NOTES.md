@@ -1,74 +1,56 @@
-# Corpus notes
+# Corpus notes for ontology design (from Stephen's meta-archive)
 
-Living bridge between the **narrative meta-archive** and this **ontology** package. Refresh when catalogue or instance counts move.
+Source archive on Grok Bot box: `/workspace/time-travel-archive/` (films/tv/novels markdown with YAML frontmatter). This repo is the **formal schema + encodings**; the narrative archive stays separate.
 
-| | |
-|--|--|
-| Narrative corpus | [`reference-archive/`](reference-archive/) (also developed as `/workspace/time-travel-archive/` on the bot box) |
-| Formal encodings | [`instances/`](instances/) + Zod/`schema/ontology.schema.json` |
-| Last refreshed | 2026-09-06 |
+## Observed `mechanism` tags (top)
+time_machine, loop, time_slip, unexplained_timeslip, reality_rewrite, parallel_worlds, multiverse_contact, time_displacement, oxford_net, worldlines, standing_stones, speed_force, revival_leap, handshake_time_leap, subtle_knife_windows, …
 
----
+## Observed `paradox_type` / structure tags (top)
+branching_timeline, destiny_manipulation, closed_loop, reality_rewrite, bootstrap, groundhog_day_loop, parallel_worlds, multiverse_contact, set_right_what_once_went_wrong, predestination, butterfly_effect, grandfather_risk, reading_steiner, ambiguous_ontology, …
 
-## Live archive snapshot
+## Canonical example stories to encode (diverse rule/topology combos)
+1. **Primer** — overlapping boxes, failsafe preemption, broken symmetry / multiple histories
+2. **Predestination / —All You Zombies—** — bootstrap identity closed loop
+3. **Twelve Monkeys / La Jetée** — predestination / closed loop witness
+4. **Back to the Future** — mutable past with ripple / alternate 1985A branch
+5. **Dark (Netflix)** — bootstrap + knot; interlocking family loops across eras
+6. **Steins;Gate** — worldlines / Reading Steiner / attractor fields (quasi-branching)
+7. **Tenet** — entropy inversion; single timeline with inverted agents
+8. **Looper** — closed-ish loop with mutable personal timeline tension
+9. **Donnie Darko** — tangent universe / Living Receiver closure
+10. **Coherence** — decoherence / parallel-world bleed via comet
+11. **Everything Everywhere All at Once** — verse-jumping multiverse contact
+12. **Groundhog Day / Edge of Tomorrow / Russian Doll** — day/death loops with exit conditions
+13. **Arrival** — non-linear perception (Heptapod); bootstrap knowledge
+14. **The Butterfly Effect** — mutable past with cascading personal rewrites
+15. **Mr. Nobody** — branching life-paths / observer
+16. **Loki (TVA)** — pruned branches / Sacred Timeline bureaucracy
+17. **Fringe / Counterpart** — parallel universe contact
+18. **Your Name** — body-swap across time offset; comet catastrophe rewrite
+19. **Re:Zero** — Return by Death loops (checkpoint rewrite)
+20. **The Man Who Folded Himself** — self-multiplicity via time travel
 
-| Section | Count |
-|---------|------:|
-| Films | **203** |
-| TV / major arcs | **119** |
-| Novels & shorts | **139** |
-| **Catalogued works** | **461** |
-| Exhaustive (`summary_depth`) | **168** |
-| Diagram images (LFS) | **71** under `reference-archive/diagrams/assets/` |
+## Design requirements (user)
+- Rule sets / fictional physics as named, reusable law variants
+- World topology: **timeline**, **branch**, and **parallel world** as related but distinct primitives
+- Narrative encoding: events, interventions, outcomes under those laws + topology
+- Typed machine-checkable schema (JSON Schema + Zod preferred)
+- Instance data validates; comparable across corpus
+- Rich enough for a later visual engine (events, causal links, forks, world identities) — do NOT implement the visual engine
 
-Entry YAML (`mechanism`, `paradox_type`, …) feeds `ARCHIVE_ROOT=./reference-archive npm run import` → drafts in `instances/generated/` (never overwrites hand-crafted files).
 
----
+## Hand-crafted instance inventory (37)
 
-## Ontology snapshot
+Encoded under `instances/*.json` (excludes `instances/generated/` stubs).
 
-| Asset | Count |
-|-------|------:|
-| Rule sets (`src/catalog/rules.ts`) | **13** |
-| Topology patterns (`src/catalog/topologies.ts`) | **8** |
-| Hand-crafted instances (`instances/*.json`) | **21** |
-| Generated stubs (sample) | under `instances/generated/` |
+### Prior set (21)
+about-time, arrival, back-to-the-future, dark, donnie-darko, edge-of-tomorrow, eeaao, frequency, groundhog-day, loki, looper, palm-springs, predestination, primer, re-zero, source-code, steins-gate, tenet, terminator-2, the-butterfly-effect, twelve-monkeys
 
-### Rule set IDs
+### Expansion batch (16)
+11-22-63, bill-and-ted, coherence, counterpart, fringe, happy-death-day, interstellar, mr-nobody, outlander, run-lola-run, russian-doll, sliding-doors, terminator, the-time-machine-1960, timecrimes, your-name
 
-`fixed_novikov` · `mutable_ripple` · `branch_on_intervention` · `bootstrap_ontological` · `predestination_closed_loop` · `temporal_loop_exit` · `worldline_attractor` · `entropy_inversion` · `tangent_universe` · `multiverse_contact` · `branch_bureaucracy_prune` · `death_checkpoint_rewrite` · `perception_nonlinear`
+### Coverage targets
+- **Rule sets (each appears as primary ≥1):** fixed_novikov, mutable_ripple, branch_on_intervention, bootstrap_ontological, predestination_closed_loop, temporal_loop_exit, worldline_attractor, entropy_inversion, tangent_universe, multiverse_contact, branch_bureaucracy_prune, death_checkpoint_rewrite, perception_nonlinear
+- **Topology patterns (each ≥1):** single_fixed_timeline, mutable_single_with_ripples, branching_tree, dual_parallel_pair, worldline_bundle, tangent_bubble, inverted_single_timeline, origin_plus_twins
 
-### Topology pattern IDs
-
-`single_fixed_timeline` · `mutable_single_with_ripples` · `branching_tree` · `dual_parallel_pair` · `worldline_bundle` · `tangent_bubble` · `inverted_single_timeline` · `origin_plus_twins`
-
-### Hand-crafted instances (on `main`)
-
-`about-time` · `arrival` · `back-to-the-future` · `dark` · `donnie-darko` · `edge-of-tomorrow` · `eeaao` · `frequency` · `groundhog-day` · `loki` · `looper` · `palm-springs` · `predestination` · `primer` · `re-zero` · `source-code` · `steins-gate` · `tenet` · `terminator-2` · `the-butterfly-effect` · `twelve-monkeys`
-
-**Dense exemplar:** `tenet` — primary `entropy_inversion`, **27** events / **39** edges.
-
-Still useful as **next encodes** (archive-rich, thin or missing as hand-crafted instances): Coherence, Mr. Nobody, Your Name / Counterpart / Fringe, Russian Doll, Interstellar, Timecrimes, Outlander, Bill & Ted, The Time Machine (1960), Terminator (1984), 11/22/63 — several already appear as importer stubs under `instances/generated/`.
-
----
-
-## Top archive tags (heuristic signal)
-
-**`mechanism` (top):** `time_machine` (52) · `loop` (12) · `time_slip` (10) · `unexplained_timeslip` (9) · `reality_rewrite` (8) · `parallel_worlds` / `multiverse_contact` (7) · `time_displacement` (6) · `oxford_net` / `cafe_seat_rules` (4) · …
-
-**`paradox_type` (top):** `branching_timeline` (97) · `destiny_manipulation` (54) · `closed_loop` (37) · `reality_rewrite` (33) · `groundhog_day_loop` / `bootstrap` (32) · `parallel_worlds` (27) · `multiverse_contact` (26) · `set_right_what_once_went_wrong` (19) · `predestination` (18) · …
-
-Map tags → catalogue IDs in the importer; refine by hand with `primaryRuleSetId` + optional `mixinRuleSetIds` ([docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)).
-
----
-
-## Design contract (stable)
-
-1. **Rule sets** — named reusable fictional physics  
-2. **World topology** — timeline / branch / parallel world as **distinct** primitives  
-3. **Narrative encoding** — events, interventions, outcomes under those laws + topology  
-4. Typed, machine-checkable schema (Zod → JSON Schema)  
-5. Instances validate and compare across the corpus  
-6. Entities/relations rich enough for a **later** visual engine — **not** implemented here  
-
-See [README.md](README.md) and [docs/OVERVIEW.md](docs/OVERVIEW.md).
+Stubs remain in `instances/generated/` for import drafts; promoted titles above are dense hand-crafted encodings sourced from `/workspace/time-travel-archive/`.

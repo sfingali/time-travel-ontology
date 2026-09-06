@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "id": "11-22-63",
+    "title": "11/22/63",
+    "year": 2016,
+    "medium": "tv",
+    "sources": [
+      "Bridget Carpenter adapting Stephen King (Hulu 2016)",
+      "time-travel-archive/tv/11-22-63.md",
+      "time-travel-archive/novels/11-22-63.md"
+    ]
+  },
+  "ruleSetIds": [
+    "branch_on_intervention",
+    "mutable_ripple",
+    "worldline_attractor"
+  ],
+  "primaryRuleSetId": "branch_on_intervention",
+  "mixinRuleSetIds": [
+    "mutable_ripple",
+    "worldline_attractor"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_2015",
+      "label": "2015/16 Lisbon Falls present",
+      "spanLabel": "2015"
+    },
+    {
+      "kind": "branch",
+      "id": "w_1960s",
+      "label": "Past sojourn (portal default night)",
+      "parentRef": "w_2015",
+      "forkLabel": "diner portal entry"
+    },
+    {
+      "kind": "branch",
+      "id": "w_jfk_saved",
+      "label": "Dystopian present after saving JFK",
+      "parentRef": "w_2015",
+      "forkLabel": "Dealey Plaza success"
+    },
+    {
+      "kind": "branch",
+      "id": "w_accepted",
+      "label": "Accepted imperfect present (undo)",
+      "parentRef": "w_2015",
+      "forkLabel": "reset without saving Kennedy"
+    }
+  ],
+  "agents": [
+    {
+      "id": "jake",
+      "label": "Jake Epping / James Amberson",
+      "identityGroup": "jake",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_2015"
+    },
+    {
+      "id": "al",
+      "label": "Al Templeton",
+      "homeWorldRef": "w_2015"
+    },
+    {
+      "id": "sadie",
+      "label": "Sadie Dunhill",
+      "homeWorldRef": "w_1960s"
+    },
+    {
+      "id": "oswald",
+      "label": "Lee Harvey Oswald",
+      "homeWorldRef": "w_1960s"
+    },
+    {
+      "id": "yellow",
+      "label": "Yellow-card stranger / steward",
+      "homeWorldRef": "w_1960s"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_portal",
+      "type": "ordinary",
+      "label": "Al shows Jake diner pantry portal (fixed landing night)",
+      "at": {
+        "worldRef": "w_2015",
+        "timeLabel": "2015"
+      },
+      "agents": [
+        "jake",
+        "al"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "note": "re-entry resets past"
+      }
+    },
+    {
+      "id": "e_enter",
+      "type": "departure",
+      "label": "Jake enters portal to 1960 evening",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "1960-10-21"
+      },
+      "agents": [
+        "jake"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_test",
+      "type": "intervention",
+      "label": "Test change: save family from domestic horror (costly)",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "training"
+      },
+      "agents": [
+        "jake"
+      ],
+      "payload": {
+        "tags": [
+          "past_pushes_back"
+        ]
+      }
+    },
+    {
+      "id": "e_jodie",
+      "type": "ordinary",
+      "label": "Settles in Jodie as teacher; romance with Sadie",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "1961-63"
+      },
+      "agents": [
+        "jake",
+        "sadie"
+      ]
+    },
+    {
+      "id": "e_resist",
+      "type": "ordinary",
+      "label": "Past pushes back: fires, accidents, destroyed notes",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "escalation"
+      },
+      "agents": [
+        "jake",
+        "sadie",
+        "yellow"
+      ],
+      "payload": {
+        "attractorFieldId": "history_immune",
+        "divergenceMagnitude": 0.2
+      }
+    },
+    {
+      "id": "e_oswald",
+      "type": "observation",
+      "label": "Infiltrate Oswald's orbit; lone gunman confirmation arc",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "1963"
+      },
+      "agents": [
+        "jake",
+        "oswald"
+      ]
+    },
+    {
+      "id": "e_dealey",
+      "type": "intervention",
+      "label": "Dealey Plaza: Jake stops the assassination",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "1963-11-22"
+      },
+      "agents": [
+        "jake",
+        "oswald",
+        "sadie"
+      ]
+    },
+    {
+      "id": "e_dystopia",
+      "type": "branch_fork",
+      "label": "Return: dystopian present (war, ruin, frayed time)",
+      "at": {
+        "worldRef": "w_jfk_saved",
+        "timeLabel": "2015+"
+      },
+      "agents": [
+        "jake"
+      ],
+      "payload": {
+        "tags": [
+          "butterfly_catastrophe"
+        ]
+      }
+    },
+    {
+      "id": "e_undo",
+      "type": "intervention",
+      "label": "Re-enter portal; do not save Kennedy; accept imperfect timeline",
+      "at": {
+        "worldRef": "w_accepted",
+        "timeLabel": "reset"
+      },
+      "agents": [
+        "jake",
+        "sadie"
+      ]
+    },
+    {
+      "id": "e_coda",
+      "type": "ordinary",
+      "label": "Finale: seek present-day connection / accept history",
+      "at": {
+        "worldRef": "w_accepted",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "jake"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_portal",
+      "to": "e_enter"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_enter",
+      "to": "e_test"
+    },
+    {
+      "id": "c3",
+      "kind": "temporal",
+      "from": "e_test",
+      "to": "e_jodie"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_jodie",
+      "to": "e_resist"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_oswald",
+      "to": "e_dealey"
+    },
+    {
+      "id": "c6",
+      "kind": "intervention",
+      "from": "e_dealey",
+      "to": "e_dystopia"
+    },
+    {
+      "id": "c7",
+      "kind": "world_relation",
+      "from": "w_2015",
+      "to": "w_jfk_saved",
+      "relation": "forksFrom",
+      "label": "JFK saved"
+    },
+    {
+      "id": "c8",
+      "kind": "world_relation",
+      "from": "w_jfk_saved",
+      "to": "w_accepted",
+      "relation": "supersedes",
+      "label": "undo"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_dystopia",
+      "to": "e_undo"
+    },
+    {
+      "id": "c10",
+      "kind": "temporal",
+      "from": "e_undo",
+      "to": "e_coda"
+    },
+    {
+      "id": "c11",
+      "kind": "world_relation",
+      "from": "w_1960s",
+      "to": "w_2015",
+      "relation": "originatesFrom"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_dealey",
+      "eventId": "e_dealey",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Saving JFK forks a catastrophic present rather than healing history"
+        },
+        {
+          "ruleSetId": "worldline_attractor",
+          "effect": "Past resistance (accidents, stewards) pulls toward unaltered assassination worldline"
+        },
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Portal re-entry wipes prior sojourn changes \u2014 high-stakes overwrite of the wrought past"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Diner portal mission stops JFK and births dystopia; Jake undoes the save, accepting an imperfect timeline over forced utopia.",
+    "endWorldRefs": [
+      "w_accepted",
+      "w_2015"
+    ]
+  }
+}

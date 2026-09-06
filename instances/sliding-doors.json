@@ -1,0 +1,289 @@
+{
+  "meta": {
+    "id": "sliding-doors",
+    "title": "Sliding Doors",
+    "year": 1998,
+    "medium": "film",
+    "sources": [
+      "Peter Howitt (1998)",
+      "time-travel-archive/films/sliding-doors.md"
+    ]
+  },
+  "ruleSetIds": [
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "branch_on_intervention",
+  "mixinRuleSetIds": [],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_root",
+      "label": "Pre-split Helen (fired PR exec)",
+      "spanLabel": "London day 0"
+    },
+    {
+      "kind": "branch",
+      "id": "w_catch",
+      "label": "Catch-train Helen",
+      "parentRef": "w_root",
+      "forkLabel": "catches Tube"
+    },
+    {
+      "kind": "branch",
+      "id": "w_miss",
+      "label": "Miss-train Helen",
+      "parentRef": "w_root",
+      "forkLabel": "misses Tube"
+    }
+  ],
+  "agents": [
+    {
+      "id": "helen_catch",
+      "label": "Helen (catch path)",
+      "identityGroup": "helen",
+      "continuityRole": "variant",
+      "homeWorldRef": "w_catch"
+    },
+    {
+      "id": "helen_miss",
+      "label": "Helen (miss path)",
+      "identityGroup": "helen",
+      "continuityRole": "variant",
+      "homeWorldRef": "w_miss"
+    },
+    {
+      "id": "gerry",
+      "label": "Gerry",
+      "homeWorldRef": "w_root"
+    },
+    {
+      "id": "lydia",
+      "label": "Lydia",
+      "homeWorldRef": "w_miss"
+    },
+    {
+      "id": "james",
+      "label": "James",
+      "homeWorldRef": "w_catch"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_fired",
+      "type": "ordinary",
+      "label": "Helen fired from PR job; rushes home",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "day 0"
+      },
+      "agents": [
+        "helen_catch"
+      ]
+    },
+    {
+      "id": "e_split",
+      "type": "branch_fork",
+      "label": "Tube doors: catch vs miss",
+      "at": {
+        "worldRef": "w_root",
+        "timeLabel": "station"
+      },
+      "agents": [
+        "helen_catch",
+        "helen_miss"
+      ]
+    },
+    {
+      "id": "e_affair",
+      "type": "observation",
+      "label": "Catch-Helen finds Gerry with Lydia",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "afternoon"
+      },
+      "agents": [
+        "helen_catch",
+        "gerry",
+        "lydia"
+      ]
+    },
+    {
+      "id": "e_leave",
+      "type": "intervention",
+      "label": "Catch-Helen leaves Gerry; cuts hair; meets James",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "rebuild"
+      },
+      "agents": [
+        "helen_catch",
+        "james"
+      ]
+    },
+    {
+      "id": "e_career",
+      "type": "ordinary",
+      "label": "Catch-Helen builds new career",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "helen_catch",
+        "james"
+      ]
+    },
+    {
+      "id": "e_stay",
+      "type": "ordinary",
+      "label": "Miss-Helen delayed; remains with cheating Gerry",
+      "at": {
+        "worldRef": "w_miss",
+        "timeLabel": "afternoon"
+      },
+      "agents": [
+        "helen_miss",
+        "gerry",
+        "lydia"
+      ]
+    },
+    {
+      "id": "e_humiliate",
+      "type": "ordinary",
+      "label": "Miss-Helen suffers humiliations and pregnancy complication",
+      "at": {
+        "worldRef": "w_miss",
+        "timeLabel": "late"
+      },
+      "agents": [
+        "helen_miss",
+        "gerry"
+      ]
+    },
+    {
+      "id": "e_hospital_c",
+      "type": "ordinary",
+      "label": "Catch path hospital crisis",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "helen_catch",
+        "james"
+      ]
+    },
+    {
+      "id": "e_hospital_m",
+      "type": "ordinary",
+      "label": "Miss path hospital crisis",
+      "at": {
+        "worldRef": "w_miss",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "helen_miss"
+      ]
+    },
+    {
+      "id": "e_rhyme",
+      "type": "reveal",
+      "label": "Timelines rhyme; ambiguous memory flash / second chance with James",
+      "at": {
+        "worldRef": "w_catch",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "helen_catch",
+        "james"
+      ],
+      "payload": {
+        "note": "soft convergence; character persists across forks"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_fired",
+      "to": "e_split"
+    },
+    {
+      "id": "c2",
+      "kind": "world_relation",
+      "from": "w_root",
+      "to": "w_catch",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c3",
+      "kind": "world_relation",
+      "from": "w_root",
+      "to": "w_miss",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_split",
+      "to": "e_affair"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_split",
+      "to": "e_stay"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_affair",
+      "to": "e_leave"
+    },
+    {
+      "id": "c7",
+      "kind": "temporal",
+      "from": "e_leave",
+      "to": "e_career"
+    },
+    {
+      "id": "c8",
+      "kind": "temporal",
+      "from": "e_stay",
+      "to": "e_humiliate"
+    },
+    {
+      "id": "c9",
+      "kind": "identity",
+      "from": "helen_catch",
+      "to": "helen_miss"
+    },
+    {
+      "id": "c10",
+      "kind": "temporal",
+      "from": "e_hospital_c",
+      "to": "e_rhyme"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_split",
+      "eventId": "e_split",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Catching vs missing the train forks two co-presented lives without a portal device"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Pure counterfactual branching at Tube doors: knowledge of the affair vs continued deception; hospital rhyme suggests character persists across forks.",
+    "endWorldRefs": [
+      "w_catch",
+      "w_miss"
+    ]
+  }
+}
