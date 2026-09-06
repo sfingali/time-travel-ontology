@@ -10,7 +10,7 @@
     "export-schema": "tsc && node dist/export-json-schema.js",
     "validate": "tsc && node dist/validate.js",
     "test": "tsc && node --test dist/tests/*.js",
-    "import": "tsc && node dist/import-archive.js"
+    "import": "node scripts/import-archive.mjs"
   },
   "engines": {
     "node": ">=20"
