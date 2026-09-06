@@ -1,1 +1,424 @@
-{"meta":{"id":"re-zero","title":"Re:Zero − Starting Life in Another World","year":2016,"medium":"tv","sources":["Tappei Nagatsuki; Re:Zero anime","time-travel-archive"]},"ruleSetIds":["death_checkpoint_rewrite","mutable_ripple"],"primaryRuleSetId":"death_checkpoint_rewrite","mixinRuleSetIds":["mutable_ripple"],"topologyPatternId":"mutable_single_with_ripples","worlds":[{"kind":"timeline","id":"w_lugunica","label":"Lugunica continuum (rewritten from checkpoints)","spanLabel":"arc 1–2 abstraction"},{"kind":"branch","id":"w_iter","label":"Failed iteration overlays","parentRef":"w_lugunica","forkLabel":"pre-RbD deaths","description":"Transient; overwritten on Return by Death"}],"agents":[{"id":"subaru","label":"Natsuki Subaru","identityGroup":"subaru","continuityRole":"observer_persistent","homeWorldRef":"w_lugunica"},{"id":"emilia","label":"Emilia","homeWorldRef":"w_lugunica"},{"id":"puck","label":"Puck","homeWorldRef":"w_lugunica"},{"id":"rem","label":"Rem","homeWorldRef":"w_lugunica"},{"id":"ram","label":"Ram","homeWorldRef":"w_lugunica"},{"id":"beatrice","label":"Beatrice","homeWorldRef":"w_lugunica"},{"id":"elsa","label":"Elsa Granhiert","homeWorldRef":"w_lugunica"},{"id":"satella","label":"Satella / Witch of Envy","homeWorldRef":"w_lugunica","notes":"Implied save authority"}],"events":[{"id":"e_summon","type":"arrival","label":"Subaru summoned to Lugunica","at":{"worldRef":"w_lugunica","timeLabel":"T0"},"agents":["subaru"]},{"id":"e_cp1","type":"checkpoint","label":"Checkpoint set — alley / loot house approach","at":{"worldRef":"w_lugunica","timeLabel":"CP1"},"agents":["subaru","satella"],"payload":{"checkpointId":"cp_alley","memoryRetained":true}},{"id":"e_death1","type":"death","label":"First death (thugs / Elsa arc)","at":{"worldRef":"w_iter","timeLabel":"iter1"},"agents":["subaru"],"payload":{"checkpointEventId":"e_cp1","iteration":1}},{"id":"e_rbd1","type":"loop_reset","label":"Return by Death to CP1","at":{"worldRef":"w_lugunica","timeLabel":"RbD1"},"agents":["subaru"],"payload":{"checkpointId":"cp_alley","checkpointEventId":"e_cp1","memoryRetained":true,"iteration":1}},{"id":"e_emilia_meet","type":"contact","label":"Meet Emilia properly with foreknowledge","at":{"worldRef":"w_lugunica","timeLabel":"loot house"},"agents":["subaru","emilia","puck"]},{"id":"e_elsa_fight","type":"intervention","label":"Survive Elsa with allies","at":{"worldRef":"w_lugunica","timeLabel":"loot house fight"},"agents":["subaru","emilia","elsa"]},{"id":"e_cp2","type":"checkpoint","label":"Checkpoint moves — mansion arc","at":{"worldRef":"w_lugunica","timeLabel":"CP2"},"agents":["subaru","satella"],"payload":{"checkpointId":"cp_mansion"}},{"id":"e_bowel","type":"death","label":"Mansion deaths (Rem/Ram/Beatrice routes)","at":{"worldRef":"w_iter","timeLabel":"mansion iters"},"agents":["subaru","rem","ram"],"payload":{"checkpointEventId":"e_cp2","iteration":3}},{"id":"e_rbd2","type":"loop_reset","label":"Return by Death to mansion CP","at":{"worldRef":"w_lugunica","timeLabel":"RbD mansion"},"agents":["subaru"],"payload":{"checkpointId":"cp_mansion","checkpointEventId":"e_cp2","memoryRetained":true,"iteration":3}},{"id":"e_curse","type":"reveal","label":"Cult curses / Rem truth","at":{"worldRef":"w_lugunica","timeLabel":"mansion mystery"},"agents":["subaru","rem","beatrice"]},{"id":"e_save_rem","type":"intervention","label":"Save Rem; confront cult threat","at":{"worldRef":"w_lugunica","timeLabel":"resolution arc2"},"agents":["subaru","rem","ram","emilia"]},{"id":"e_vow","type":"ordinary","label":"Subaru vows to save everyone without wasting RbD","at":{"worldRef":"w_lugunica","timeLabel":"character turn"},"agents":["subaru","emilia"]}],"edges":[{"id":"wr1","kind":"world_relation","from":"w_iter","to":"w_lugunica","relation":"forksFrom"},{"id":"wr2","kind":"world_relation","from":"w_lugunica","to":"w_iter","relation":"supersedes","label":"RbD overwrite"},{"id":"c1","kind":"causal","from":"e_summon","to":"e_cp1"},{"id":"c2","kind":"causal","from":"e_cp1","to":"e_death1"},{"id":"c3","kind":"causal","from":"e_death1","to":"e_rbd1"},{"id":"c4","kind":"causal","from":"e_rbd1","to":"e_emilia_meet"},{"id":"c5","kind":"causal","from":"e_emilia_meet","to":"e_elsa_fight"},{"id":"c6","kind":"causal","from":"e_elsa_fight","to":"e_cp2"},{"id":"c7","kind":"causal","from":"e_cp2","to":"e_bowel"},{"id":"c8","kind":"causal","from":"e_bowel","to":"e_rbd2"},{"id":"c9","kind":"causal","from":"e_rbd2","to":"e_curse"},{"id":"c10","kind":"causal","from":"e_curse","to":"e_save_rem"},{"id":"c11","kind":"causal","from":"e_save_rem","to":"e_vow"},{"id":"iv1","kind":"intervention","from":"e_death1","to":"e_rbd1"},{"id":"iv2","kind":"intervention","from":"e_bowel","to":"e_rbd2"},{"id":"id1","kind":"identity","from":"subaru","to":"e_rbd1","label":"memory-bearing continuum"}],"interventions":[{"id":"iv_rbd","eventId":"e_rbd1","ruleEffects":[{"ruleSetId":"death_checkpoint_rewrite","effect":"Death rewinds to checkpoint; Subaru retains memory"},{"ruleSetId":"mutable_ripple","effect":"Timeline from checkpoint is rewritten"}]}],"outcome":{"summary":"Return by Death rewrites from moving checkpoints; Subaru retains memory and progresses arcs at great cost.","endWorldRefs":["w_lugunica"]}}
+{
+  "meta": {
+    "id": "re-zero",
+    "title": "Re:Zero − Starting Life in Another World",
+    "year": 2016,
+    "medium": "tv",
+    "sources": [
+      "Tappei Nagatsuki; Re:Zero anime",
+      "time-travel-archive",
+      "time-travel-archive true-deep wave 2026-09-06"
+    ]
+  },
+  "ruleSetIds": [
+    "death_checkpoint_rewrite",
+    "mutable_ripple"
+  ],
+  "primaryRuleSetId": "death_checkpoint_rewrite",
+  "mixinRuleSetIds": [
+    "mutable_ripple"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_lugunica",
+      "label": "Lugunica continuum (rewritten from checkpoints)",
+      "spanLabel": "arc 1–2 abstraction"
+    },
+    {
+      "kind": "branch",
+      "id": "w_iter",
+      "label": "Failed iteration overlays",
+      "parentRef": "w_lugunica",
+      "forkLabel": "pre-RbD deaths",
+      "description": "Transient; overwritten on Return by Death"
+    }
+  ],
+  "agents": [
+    {
+      "id": "subaru",
+      "label": "Natsuki Subaru",
+      "identityGroup": "subaru",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_lugunica"
+    },
+    {
+      "id": "emilia",
+      "label": "Emilia",
+      "homeWorldRef": "w_lugunica"
+    },
+    {
+      "id": "puck",
+      "label": "Puck",
+      "homeWorldRef": "w_lugunica"
+    },
+    {
+      "id": "rem",
+      "label": "Rem",
+      "homeWorldRef": "w_lugunica"
+    },
+    {
+      "id": "ram",
+      "label": "Ram",
+      "homeWorldRef": "w_lugunica"
+    },
+    {
+      "id": "beatrice",
+      "label": "Beatrice",
+      "homeWorldRef": "w_lugunica"
+    },
+    {
+      "id": "elsa",
+      "label": "Elsa Granhiert",
+      "homeWorldRef": "w_lugunica"
+    },
+    {
+      "id": "satella",
+      "label": "Satella / Witch of Envy",
+      "homeWorldRef": "w_lugunica",
+      "notes": "Implied save authority"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_summon",
+      "type": "arrival",
+      "label": "Subaru summoned to Lugunica",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "T0"
+      },
+      "agents": [
+        "subaru"
+      ]
+    },
+    {
+      "id": "e_cp1",
+      "type": "checkpoint",
+      "label": "Checkpoint set — alley / loot house approach",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "CP1"
+      },
+      "agents": [
+        "subaru",
+        "satella"
+      ],
+      "payload": {
+        "checkpointId": "cp_alley",
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_death1",
+      "type": "death",
+      "label": "First death (thugs / Elsa arc)",
+      "at": {
+        "worldRef": "w_iter",
+        "timeLabel": "iter1"
+      },
+      "agents": [
+        "subaru"
+      ],
+      "payload": {
+        "checkpointEventId": "e_cp1",
+        "iteration": 1
+      }
+    },
+    {
+      "id": "e_rbd1",
+      "type": "loop_reset",
+      "label": "Return by Death to CP1",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "RbD1"
+      },
+      "agents": [
+        "subaru"
+      ],
+      "payload": {
+        "checkpointId": "cp_alley",
+        "checkpointEventId": "e_cp1",
+        "memoryRetained": true,
+        "iteration": 1
+      }
+    },
+    {
+      "id": "e_emilia_meet",
+      "type": "contact",
+      "label": "Meet Emilia properly with foreknowledge",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "loot house"
+      },
+      "agents": [
+        "subaru",
+        "emilia",
+        "puck"
+      ]
+    },
+    {
+      "id": "e_elsa_fight",
+      "type": "intervention",
+      "label": "Survive Elsa with allies",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "loot house fight"
+      },
+      "agents": [
+        "subaru",
+        "emilia",
+        "elsa"
+      ]
+    },
+    {
+      "id": "e_cp2",
+      "type": "checkpoint",
+      "label": "Checkpoint moves — mansion arc",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "CP2"
+      },
+      "agents": [
+        "subaru",
+        "satella"
+      ],
+      "payload": {
+        "checkpointId": "cp_mansion"
+      }
+    },
+    {
+      "id": "e_bowel",
+      "type": "death",
+      "label": "Mansion deaths (Rem/Ram/Beatrice routes)",
+      "at": {
+        "worldRef": "w_iter",
+        "timeLabel": "mansion iters"
+      },
+      "agents": [
+        "subaru",
+        "rem",
+        "ram"
+      ],
+      "payload": {
+        "checkpointEventId": "e_cp2",
+        "iteration": 3
+      }
+    },
+    {
+      "id": "e_rbd2",
+      "type": "loop_reset",
+      "label": "Return by Death to mansion CP",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "RbD mansion"
+      },
+      "agents": [
+        "subaru"
+      ],
+      "payload": {
+        "checkpointId": "cp_mansion",
+        "checkpointEventId": "e_cp2",
+        "memoryRetained": true,
+        "iteration": 3
+      }
+    },
+    {
+      "id": "e_curse",
+      "type": "reveal",
+      "label": "Cult curses / Rem truth",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "mansion mystery"
+      },
+      "agents": [
+        "subaru",
+        "rem",
+        "beatrice"
+      ]
+    },
+    {
+      "id": "e_save_rem",
+      "type": "intervention",
+      "label": "Save Rem; confront cult threat",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "resolution arc2"
+      },
+      "agents": [
+        "subaru",
+        "rem",
+        "ram",
+        "emilia"
+      ]
+    },
+    {
+      "id": "e_vow",
+      "type": "ordinary",
+      "label": "Subaru vows to save everyone without wasting RbD",
+      "at": {
+        "worldRef": "w_lugunica",
+        "timeLabel": "character turn"
+      },
+      "agents": [
+        "subaru",
+        "emilia"
+      ]
+    },
+    {
+      "id": "ev_rbd",
+      "label": "Return by Death discovered",
+      "timeLabel": "early"
+    },
+    {
+      "id": "ev_failed",
+      "label": "Failed loops / trauma accumulation",
+      "timeLabel": "ongoing"
+    },
+    {
+      "id": "ev_checkpoint",
+      "label": "Checkpoint advances after major arcs",
+      "timeLabel": "arc ends"
+    }
+  ],
+  "edges": [
+    {
+      "id": "wr1",
+      "kind": "world_relation",
+      "from": "w_iter",
+      "to": "w_lugunica",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "wr2",
+      "kind": "world_relation",
+      "from": "w_lugunica",
+      "to": "w_iter",
+      "relation": "supersedes",
+      "label": "RbD overwrite"
+    },
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_summon",
+      "to": "e_cp1"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_cp1",
+      "to": "e_death1"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_death1",
+      "to": "e_rbd1"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_rbd1",
+      "to": "e_emilia_meet"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_emilia_meet",
+      "to": "e_elsa_fight"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_elsa_fight",
+      "to": "e_cp2"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_cp2",
+      "to": "e_bowel"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_bowel",
+      "to": "e_rbd2"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_rbd2",
+      "to": "e_curse"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_curse",
+      "to": "e_save_rem"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_save_rem",
+      "to": "e_vow"
+    },
+    {
+      "id": "iv1",
+      "kind": "intervention",
+      "from": "e_death1",
+      "to": "e_rbd1"
+    },
+    {
+      "id": "iv2",
+      "kind": "intervention",
+      "from": "e_bowel",
+      "to": "e_rbd2"
+    },
+    {
+      "id": "id1",
+      "kind": "identity",
+      "from": "subaru",
+      "to": "e_rbd1",
+      "label": "memory-bearing continuum"
+    },
+    {
+      "from": "ev_rbd",
+      "to": "ev_failed",
+      "type": "produces"
+    },
+    {
+      "from": "ev_failed",
+      "to": "ev_checkpoint",
+      "type": "eventually"
+    },
+    {
+      "from": "ev_checkpoint",
+      "to": "ev_failed",
+      "type": "resets_into"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_rbd",
+      "eventId": "e_rbd1",
+      "ruleEffects": [
+        {
+          "ruleSetId": "death_checkpoint_rewrite",
+          "effect": "Death rewinds to checkpoint; Subaru retains memory"
+        },
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Timeline from checkpoint is rewritten"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Return by Death rewrites from moving checkpoints; Subaru retains memory and progresses arcs at great cost.",
+    "endWorldRefs": [
+      "w_lugunica"
+    ]
+  }
+}

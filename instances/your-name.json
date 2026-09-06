@@ -6,7 +6,8 @@
     "medium": "film",
     "sources": [
       "Makoto Shinkai (2016)",
-      "time-travel-archive/films/your-name.md"
+      "time-travel-archive/films/your-name.md",
+      "time-travel-archive true-deep wave 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -233,6 +234,26 @@
         "taki",
         "mitsuha"
       ]
+    },
+    {
+      "id": "ev_swap",
+      "label": "Body swaps begin",
+      "timeLabel": "early"
+    },
+    {
+      "id": "ev_offset",
+      "label": "Taki learns 3-year disaster offset",
+      "timeLabel": "mid"
+    },
+    {
+      "id": "ev_evacuate",
+      "label": "Itomori evacuation succeeds",
+      "timeLabel": "comet"
+    },
+    {
+      "id": "ev_reunion",
+      "label": "Adult name reunion",
+      "timeLabel": "years later"
     }
   ],
   "edges": [
@@ -304,6 +325,21 @@
       "from": "taki",
       "to": "mitsuha",
       "label": "body-swap link"
+    },
+    {
+      "from": "ev_swap",
+      "to": "ev_offset",
+      "type": "leads_to"
+    },
+    {
+      "from": "ev_offset",
+      "to": "ev_evacuate",
+      "type": "enables"
+    },
+    {
+      "from": "ev_evacuate",
+      "to": "ev_reunion",
+      "type": "precedes"
     }
   ],
   "interventions": [

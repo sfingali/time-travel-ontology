@@ -6,7 +6,8 @@
     "medium": "film",
     "sources": [
       "James Ward Byrkit (2013)",
-      "time-travel-archive/films/coherence.md"
+      "time-travel-archive/films/coherence.md",
+      "time-travel-archive true-deep wave 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -135,7 +136,7 @@
     {
       "id": "e_schrodinger",
       "type": "observation",
-      "label": "Schr\u00f6dinger / decoherence framing becomes literal",
+      "label": "Schrödinger / decoherence framing becomes literal",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "discussion"
@@ -232,6 +233,21 @@
       "payload": {
         "signal": "phone_call_doubt"
       }
+    },
+    {
+      "id": "ev_comet",
+      "label": "Miller's Comet dinner blackout",
+      "timeLabel": "night"
+    },
+    {
+      "id": "ev_split",
+      "label": "Dark-path house multiples / glow sticks",
+      "timeLabel": "night"
+    },
+    {
+      "id": "ev_emily_replace",
+      "label": "Emily replaces other-self",
+      "timeLabel": "climax"
     }
   ],
   "edges": [
@@ -298,6 +314,16 @@
       "from": "w_house_a",
       "to": "w_house_happy",
       "relation": "correspondsTo"
+    },
+    {
+      "from": "ev_comet",
+      "to": "ev_split",
+      "type": "causes"
+    },
+    {
+      "from": "ev_split",
+      "to": "ev_emily_replace",
+      "type": "enables"
     }
   ],
   "interventions": [

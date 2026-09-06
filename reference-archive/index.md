@@ -3,14 +3,14 @@
 Meta-archive of **public** plot summaries, structure notes, and diagram/timeline sources.
 **No original media.** Spoilers throughout.
 
-## Live corpus (post Wave E)
+## Live corpus (post True-deep)
 | Section | Entries |
 |---------|---------|
 | Films | 203 |
 | TV / major arcs | 119 |
 | Novels & major shorts | 139 |
 | Diagram work-pages | 26 |
-| Exhaustive deep entries | 168 |
+| Exhaustive deep entries | 169 |
 | **Catalogued works** | **461** |
 
 ## Candidate pools
@@ -31,4 +31,4 @@ Meta-archive of **public** plot summaries, structure notes, and diagram/timeline
 - [Stream / wave logs](logs/) · [Full burn report](FULL_BURN_REPORT.md) · [README](README.md)
 
 ## Waves completed
-Full burn 1–4 · A promote · B non-EN · C diagrams · **D1 expand stubs** · **D2 non-EN** · **D3 novels** · **E1 expand** · **E2 non-EN** · **E3 novels**
+Full burn 1–4 · A promote · B non-EN · C diagrams · **D1 expand stubs** · **D2 non-EN** · **D3 novels** · **E1 expand** · **E2 non-EN** · **E3 novels** · **True-deep crown jewels**

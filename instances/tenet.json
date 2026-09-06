@@ -1,1 +1,966 @@
-{"meta":{"id":"tenet","title":"Tenet","year":2020,"medium":"film","sources":["Christopher Nolan, Tenet (2020)","time-travel-archive/films/tenet.md"]},"ruleSetIds":["entropy_inversion","fixed_novikov","predestination_closed_loop","bootstrap_ontological"],"primaryRuleSetId":"entropy_inversion","mixinRuleSetIds":["fixed_novikov","predestination_closed_loop","bootstrap_ontological"],"topologyPatternId":"inverted_single_timeline","worlds":[{"kind":"timeline","id":"w_tenet","label":"Single temporal-pincer continuum","spanLabel":"forward + inverted on one line","description":"One immutable timeline; inverted agents overlay reverse traces without branching."}],"agents":[{"id":"protagonist","label":"The Protagonist","identityGroup":"protagonist","continuityRole":"primary","homeWorldRef":"w_tenet"},{"id":"protagonist_inverted","label":"Protagonist (inverted)","identityGroup":"protagonist","continuityRole":"inverted_self","homeWorldRef":"w_tenet","continuedFrom":"protagonist"},{"id":"neil","label":"Neil","identityGroup":"neil","continuityRole":"primary","homeWorldRef":"w_tenet"},{"id":"neil_inverted","label":"Neil (inverted / orange)","identityGroup":"neil","continuityRole":"inverted_self","homeWorldRef":"w_tenet","continuedFrom":"neil"},{"id":"neil_future","label":"Neil (future recruit knowledge)","identityGroup":"neil","continuityRole":"older_self","homeWorldRef":"w_tenet","continuedFrom":"neil"},{"id":"sator","label":"Andrei Sator","identityGroup":"sator","continuityRole":"primary","homeWorldRef":"w_tenet"},{"id":"sator_inverted","label":"Sator (inverted)","identityGroup":"sator","continuityRole":"inverted_self","homeWorldRef":"w_tenet","continuedFrom":"sator"},{"id":"kat","label":"Kat Barton","identityGroup":"kat","continuityRole":"primary","homeWorldRef":"w_tenet"},{"id":"priya","label":"Priya","identityGroup":"priya","continuityRole":"primary","homeWorldRef":"w_tenet"},{"id":"barbara","label":"Barbara (scientist)","homeWorldRef":"w_tenet"},{"id":"ivol","label":"Ives","homeWorldRef":"w_tenet"},{"id":"wheeler","label":"Wheeler (blue team)","homeWorldRef":"w_tenet"},{"id":"future_tenet","label":"Future Tenet / Protagonist-as-founder","identityGroup":"protagonist","continuityRole":"older_self","homeWorldRef":"w_tenet","continuedFrom":"protagonist"}],"events":[{"id":"e_opera","type":"ordinary","label":"Kyiv opera siege / CIA extraction","at":{"worldRef":"w_tenet","timeLabel":"14th — Kyiv opera"},"agents":["protagonist","neil"],"payload":{"tags":["opening","same_calendar_14th"],"note":"Neil already present as covert ally"}},{"id":"e_suicide_pill","type":"ordinary","label":"Protagonist captured; cyanide; revived by Tenet","at":{"worldRef":"w_tenet","timeLabel":"post-opera"},"agents":["protagonist"]},{"id":"e_recruit","type":"reveal","label":"Recruited into Tenet; word TENET test","at":{"worldRef":"w_tenet","timeLabel":"recruitment"},"agents":["protagonist"],"payload":{"bootstrapEntity":"tenet_org"}},{"id":"e_barbara_demo","type":"observation","label":"Barbara demonstrates inverted bullet / entropy","at":{"worldRef":"w_tenet","timeLabel":"lab"},"agents":["protagonist","barbara"],"payload":{"entropy":"mixed","artifactKind":"other","note":"Bullet returns to gun; inversion primer"}},{"id":"e_neil_meet","type":"contact","label":"Protagonist partners with Neil","at":{"worldRef":"w_tenet","timeLabel":"early mission"},"agents":["protagonist","neil"],"payload":{"identityNote":"Friendship already bootstrapped from future"}},{"id":"e_mumbai_priya","type":"reveal","label":"Priya briefs: Sator, Algorithm, future war","at":{"worldRef":"w_tenet","timeLabel":"Mumbai"},"agents":["protagonist","priya","neil"],"payload":{"artifactKind":"algorithm","note":"Future seeks to invert Earth over climate"}},{"id":"e_goya_plot","type":"ordinary","label":"Forged Goya used to blackmail Kat","at":{"worldRef":"w_tenet","timeLabel":"art world"},"agents":["sator","kat","protagonist"]},{"id":"e_amalfi","type":"ordinary","label":"Amalfi yacht approach; Kat / Sator marriage trap","at":{"worldRef":"w_tenet","timeLabel":"Amalfi"},"agents":["protagonist","kat","sator","neil"]},{"id":"e_oslo_freeport_fwd","type":"arrival","label":"Oslo Freeport — forward team enters","at":{"worldRef":"w_tenet","timeLabel":"Oslo Freeport (forward)"},"agents":["protagonist","neil"],"payload":{"freeportId":"oslo","entropy":"forward","travelMode":"other"}},{"id":"e_turnstile_oslo_seen","type":"reveal","label":"Turnstile discovered; fight with inverted selves","at":{"worldRef":"w_tenet","timeLabel":"Oslo Freeport"},"agents":["protagonist","neil","protagonist_inverted"],"payload":{"entropy":"mixed","turnstileId":"oslo_turnstile","freeportId":"oslo","travelMode":"turnstile"}},{"id":"e_priya_algorithm","type":"reveal","label":"Algorithm: nine-section device; bury past","at":{"worldRef":"w_tenet","timeLabel":"briefing"},"agents":["priya","protagonist"],"payload":{"artifactKind":"algorithm","artifactId":"algorithm_9","note":"Assemble+trigger inverts Earth permanently"}},{"id":"e_tallinn_heist","type":"intervention","label":"Tallinn highway — plutonium/Algorithm piece heist","at":{"worldRef":"w_tenet","timeLabel":"Tallinn"},"agents":["protagonist","neil","sator","sator_inverted"],"payload":{"entropy":"mixed","pincerRole":"teaching","artifactKind":"algorithm","algorithmPiece":1,"travelMode":"other"}},{"id":"e_tallinn_pincer","type":"inversion","label":"Teaching temporal pincer: forward vs inverted cars","at":{"worldRef":"w_tenet","timeLabel":"Tallinn highway"},"agents":["protagonist","protagonist_inverted","sator","sator_inverted","neil"],"payload":{"entropy":"mixed","pincerRole":"teaching","note":"Same operation lived forward and inverted"}},{"id":"e_kat_inverted_bullet","type":"death","label":"Kat shot with inverted bullet (near-death)","at":{"worldRef":"w_tenet","timeLabel":"Tallinn aftermath"},"agents":["kat","sator"],"payload":{"entropy":"inverted","note":"Requires medical inversion care"}},{"id":"e_invert_protagonist","type":"inversion","label":"Protagonist inverts via turnstile to go back","at":{"worldRef":"w_tenet","timeLabel":"turnstile post-Tallinn"},"agents":["protagonist","protagonist_inverted"],"payload":{"entropy":"inverted","turnstileId":"mission_turnstile","travelMode":"turnstile","inverted":true}},{"id":"e_oslo_freeport_inv","type":"intervention","label":"Inverted Protagonist re-fights Oslo Freeport (past self)","at":{"worldRef":"w_tenet","timeLabel":"Oslo Freeport (inverted pass)"},"agents":["protagonist_inverted","neil"],"payload":{"entropy":"inverted","freeportId":"oslo","turnstileId":"oslo_turnstile","pincerRole":"solo"}},{"id":"e_kat_care_invert","type":"ordinary","label":"Kat medically inverted then restored","at":{"worldRef":"w_tenet","timeLabel":"medical inversion"},"agents":["kat"],"payload":{"entropy":"mixed","travelMode":"turnstile"}},{"id":"e_stalsk_plan","type":"ordinary","label":"Plan Stalsk-12 war pincer; red/blue teams","at":{"worldRef":"w_tenet","timeLabel":"pre-Stalsk"},"agents":["protagonist","neil","ivol","wheeler"],"payload":{"pincerRole":"war","tags":["14th"]}},{"id":"e_vietnam_kat","type":"intervention","label":"Kat poses as past self on yacht (Vietnam) to hold Sator","at":{"worldRef":"w_tenet","timeLabel":"14th — yacht Vietnam"},"agents":["kat","sator"],"payload":{"tags":["same_calendar_14th"],"note":"Sync with hypocenter assault"}},{"id":"e_stalsk_red","type":"intervention","label":"Red team (forward) assaults Stalsk-12 hypocenter","at":{"worldRef":"w_tenet","timeLabel":"14th — Stalsk-12 forward"},"agents":["protagonist","ivol","neil"],"payload":{"entropy":"forward","pincerRole":"red_forward","artifactKind":"algorithm"}},{"id":"e_stalsk_blue","type":"inversion","label":"Blue team (inverted) assaults from after","at":{"worldRef":"w_tenet","timeLabel":"14th — Stalsk-12 inverted"},"agents":["wheeler","neil_inverted"],"payload":{"entropy":"inverted","pincerRole":"blue_inverted","artifactKind":"algorithm"}},{"id":"e_neil_unlock","type":"death","label":"Inverted Neil unlocks gate; dies (orange cord)","at":{"worldRef":"w_tenet","timeLabel":"14th — hypocenter gate"},"agents":["neil_inverted","neil"],"payload":{"entropy":"inverted","note":"Multiple overlapping Neils at Stalsk; sacrifice always happens"}},{"id":"e_algorithm_secure","type":"intervention","label":"Algorithm pieces recovered / separated","at":{"worldRef":"w_tenet","timeLabel":"14th — hypocenter"},"agents":["protagonist","ivol"],"payload":{"artifactKind":"algorithm","artifactId":"algorithm_9"}},{"id":"e_sator_dead","type":"death","label":"Kat kills Sator on yacht; dead-man switch race ends","at":{"worldRef":"w_tenet","timeLabel":"14th — yacht sync"},"agents":["kat","sator"],"payload":{"tags":["same_calendar_14th"]}},{"id":"e_neil_trinket","type":"reveal","label":"Neil's orange trinket / looped friendship revealed","at":{"worldRef":"w_tenet","timeLabel":"coda"},"agents":["neil","protagonist"],"payload":{"bootstrapEntity":"neil_friendship"}},{"id":"e_founder","type":"bootstrap_origin","label":"Protagonist will found Tenet; Neil recruited from future","at":{"worldRef":"w_tenet","timeLabel":"future relative"},"agents":["future_tenet","neil_future","priya","protagonist"],"payload":{"bootstrapEntity":"tenet_org","identityNote":"We live in a twilight world"}},{"id":"e_spare_priya","type":"intervention","label":"Protagonist spares/ends threat to Kat; asserts agency inside loop","at":{"worldRef":"w_tenet","timeLabel":"coda"},"agents":["protagonist","priya","kat"]}],"edges":[{"id":"tc1","kind":"causal","from":"e_opera","to":"e_suicide_pill"},{"id":"tc2","kind":"causal","from":"e_suicide_pill","to":"e_recruit"},{"id":"tc3","kind":"causal","from":"e_recruit","to":"e_barbara_demo"},{"id":"tc4","kind":"causal","from":"e_barbara_demo","to":"e_neil_meet"},{"id":"tc5","kind":"causal","from":"e_neil_meet","to":"e_mumbai_priya"},{"id":"tc6","kind":"causal","from":"e_mumbai_priya","to":"e_goya_plot"},{"id":"tc7","kind":"causal","from":"e_goya_plot","to":"e_amalfi"},{"id":"tc8","kind":"causal","from":"e_amalfi","to":"e_oslo_freeport_fwd"},{"id":"tc9","kind":"causal","from":"e_oslo_freeport_fwd","to":"e_turnstile_oslo_seen"},{"id":"tc10","kind":"causal","from":"e_turnstile_oslo_seen","to":"e_priya_algorithm"},{"id":"tc11","kind":"causal","from":"e_priya_algorithm","to":"e_tallinn_heist"},{"id":"tc12","kind":"causal","from":"e_tallinn_heist","to":"e_tallinn_pincer"},{"id":"tc13","kind":"causal","from":"e_tallinn_pincer","to":"e_kat_inverted_bullet"},{"id":"tc14","kind":"causal","from":"e_kat_inverted_bullet","to":"e_invert_protagonist"},{"id":"tc15","kind":"causal","from":"e_invert_protagonist","to":"e_oslo_freeport_inv"},{"id":"tc16","kind":"causal","from":"e_oslo_freeport_inv","to":"e_kat_care_invert"},{"id":"tc17","kind":"causal","from":"e_kat_care_invert","to":"e_stalsk_plan"},{"id":"tc18","kind":"causal","from":"e_stalsk_plan","to":"e_stalsk_red"},{"id":"tc19","kind":"causal","from":"e_stalsk_red","to":"e_algorithm_secure"},{"id":"tc20","kind":"causal","from":"e_algorithm_secure","to":"e_neil_trinket"},{"id":"tc21","kind":"causal","from":"e_neil_trinket","to":"e_founder"},{"id":"tp1","kind":"temporal","from":"e_invert_protagonist","to":"e_oslo_freeport_inv","label":"living backward to Freeport"},{"id":"tp2","kind":"temporal","from":"e_oslo_freeport_inv","to":"e_turnstile_oslo_seen","label":"inverted pass meets forward fight"},{"id":"tp3","kind":"temporal","from":"e_tallinn_pincer","to":"e_tallinn_heist","label":"inverted knowledge overlays heist"},{"id":"tp4","kind":"temporal","from":"e_stalsk_blue","to":"e_stalsk_red","label":"war pincer simultaneous"},{"id":"tp5","kind":"temporal","from":"e_vietnam_kat","to":"e_sator_dead","label":"yacht hold until sync"},{"id":"tp6","kind":"temporal","from":"e_sator_dead","to":"e_algorithm_secure","label":"dead-man switch sync"},{"id":"iv_neil_gate","kind":"intervention","from":"e_neil_unlock","to":"e_algorithm_secure","label":"gate unlock enables recovery"},{"id":"iv_pincer_war","kind":"intervention","from":"e_stalsk_plan","to":"e_stalsk_blue"},{"id":"iv_pincer_war2","kind":"intervention","from":"e_stalsk_plan","to":"e_vietnam_kat"},{"id":"id_prot","kind":"identity","from":"protagonist","to":"protagonist_inverted","label":"entropy flip same person"},{"id":"id_neil","kind":"identity","from":"neil","to":"neil_inverted","label":"inverted Neil at gate"},{"id":"id_neil2","kind":"identity","from":"neil","to":"neil_future","label":"recruitment continuum"},{"id":"id_founder","kind":"identity","from":"protagonist","to":"future_tenet","label":"will become founder"},{"id":"id_sator","kind":"identity","from":"sator","to":"sator_inverted"},{"id":"boot1","kind":"intervention","from":"e_founder","to":"e_recruit","label":"bootstrap org founding"},{"id":"boot2","kind":"intervention","from":"e_founder","to":"e_neil_meet","label":"Neil recruited by future Protagonist"},{"id":"boot3","kind":"causal","from":"e_founder","to":"e_opera","label":"Tenet already midwifing opera"},{"id":"boot4","kind":"causal","from":"e_neil_unlock","to":"e_neil_trinket","label":"death was always in the friendship"}],"interventions":[{"id":"iv_entropy","eventId":"e_tallinn_pincer","ruleEffects":[{"ruleSetId":"entropy_inversion","effect":"Forward and inverted processes meet on one timeline; no branch created"},{"ruleSetId":"fixed_novikov","effect":"Teaching pincer was always part of history"}]},{"id":"iv_war_pincer","eventId":"e_stalsk_red","ruleEffects":[{"ruleSetId":"entropy_inversion","effect":"Red/blue teams enact same battle from opposite arrows"},{"ruleSetId":"predestination_closed_loop","effect":"Algorithm recovery and Neil's sacrifice close the loop"}]},{"id":"iv_neil_death","eventId":"e_neil_unlock","ruleEffects":[{"ruleSetId":"predestination_closed_loop","effect":"Neil's death enables the mission that recruits him"},{"ruleSetId":"bootstrap_ontological","effect":"Friendship and recruitment lack external origin outside the loop"}]},{"id":"iv_found","eventId":"e_founder","ruleEffects":[{"ruleSetId":"bootstrap_ontological","effect":"Tenet organization is founded by the man it recruits"}]}],"outcome":{"summary":"Algorithm secured on a single inverted-capable timeline; temporal pincers and turnstiles overlay reverse traces without branching; Tenet's founding and Neil's recruitment/death form a closed bootstrap. What's happened happened.","endWorldRefs":["w_tenet"]}}
+{
+  "meta": {
+    "id": "tenet",
+    "title": "Tenet",
+    "year": 2020,
+    "medium": "film",
+    "sources": [
+      "Christopher Nolan, Tenet (2020)",
+      "time-travel-archive/films/tenet.md",
+      "time-travel-archive true-deep wave 2026-09-06"
+    ]
+  },
+  "ruleSetIds": [
+    "entropy_inversion",
+    "fixed_novikov",
+    "predestination_closed_loop",
+    "bootstrap_ontological"
+  ],
+  "primaryRuleSetId": "entropy_inversion",
+  "mixinRuleSetIds": [
+    "fixed_novikov",
+    "predestination_closed_loop",
+    "bootstrap_ontological"
+  ],
+  "topologyPatternId": "inverted_single_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_tenet",
+      "label": "Single temporal-pincer continuum",
+      "spanLabel": "forward + inverted on one line",
+      "description": "One immutable timeline; inverted agents overlay reverse traces without branching."
+    }
+  ],
+  "agents": [
+    {
+      "id": "protagonist",
+      "label": "The Protagonist",
+      "identityGroup": "protagonist",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_tenet"
+    },
+    {
+      "id": "protagonist_inverted",
+      "label": "Protagonist (inverted)",
+      "identityGroup": "protagonist",
+      "continuityRole": "inverted_self",
+      "homeWorldRef": "w_tenet",
+      "continuedFrom": "protagonist"
+    },
+    {
+      "id": "neil",
+      "label": "Neil",
+      "identityGroup": "neil",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_tenet"
+    },
+    {
+      "id": "neil_inverted",
+      "label": "Neil (inverted / orange)",
+      "identityGroup": "neil",
+      "continuityRole": "inverted_self",
+      "homeWorldRef": "w_tenet",
+      "continuedFrom": "neil"
+    },
+    {
+      "id": "neil_future",
+      "label": "Neil (future recruit knowledge)",
+      "identityGroup": "neil",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_tenet",
+      "continuedFrom": "neil"
+    },
+    {
+      "id": "sator",
+      "label": "Andrei Sator",
+      "identityGroup": "sator",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_tenet"
+    },
+    {
+      "id": "sator_inverted",
+      "label": "Sator (inverted)",
+      "identityGroup": "sator",
+      "continuityRole": "inverted_self",
+      "homeWorldRef": "w_tenet",
+      "continuedFrom": "sator"
+    },
+    {
+      "id": "kat",
+      "label": "Kat Barton",
+      "identityGroup": "kat",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_tenet"
+    },
+    {
+      "id": "priya",
+      "label": "Priya",
+      "identityGroup": "priya",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_tenet"
+    },
+    {
+      "id": "barbara",
+      "label": "Barbara (scientist)",
+      "homeWorldRef": "w_tenet"
+    },
+    {
+      "id": "ivol",
+      "label": "Ives",
+      "homeWorldRef": "w_tenet"
+    },
+    {
+      "id": "wheeler",
+      "label": "Wheeler (blue team)",
+      "homeWorldRef": "w_tenet"
+    },
+    {
+      "id": "future_tenet",
+      "label": "Future Tenet / Protagonist-as-founder",
+      "identityGroup": "protagonist",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_tenet",
+      "continuedFrom": "protagonist"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_opera",
+      "type": "ordinary",
+      "label": "Kyiv opera siege / CIA extraction",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "14th — Kyiv opera"
+      },
+      "agents": [
+        "protagonist",
+        "neil"
+      ],
+      "payload": {
+        "tags": [
+          "opening",
+          "same_calendar_14th"
+        ],
+        "note": "Neil already present as covert ally"
+      }
+    },
+    {
+      "id": "e_suicide_pill",
+      "type": "ordinary",
+      "label": "Protagonist captured; cyanide; revived by Tenet",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "post-opera"
+      },
+      "agents": [
+        "protagonist"
+      ]
+    },
+    {
+      "id": "e_recruit",
+      "type": "reveal",
+      "label": "Recruited into Tenet; word TENET test",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "recruitment"
+      },
+      "agents": [
+        "protagonist"
+      ],
+      "payload": {
+        "bootstrapEntity": "tenet_org"
+      }
+    },
+    {
+      "id": "e_barbara_demo",
+      "type": "observation",
+      "label": "Barbara demonstrates inverted bullet / entropy",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "lab"
+      },
+      "agents": [
+        "protagonist",
+        "barbara"
+      ],
+      "payload": {
+        "entropy": "mixed",
+        "artifactKind": "other",
+        "note": "Bullet returns to gun; inversion primer"
+      }
+    },
+    {
+      "id": "e_neil_meet",
+      "type": "contact",
+      "label": "Protagonist partners with Neil",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "early mission"
+      },
+      "agents": [
+        "protagonist",
+        "neil"
+      ],
+      "payload": {
+        "identityNote": "Friendship already bootstrapped from future"
+      }
+    },
+    {
+      "id": "e_mumbai_priya",
+      "type": "reveal",
+      "label": "Priya briefs: Sator, Algorithm, future war",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Mumbai"
+      },
+      "agents": [
+        "protagonist",
+        "priya",
+        "neil"
+      ],
+      "payload": {
+        "artifactKind": "algorithm",
+        "note": "Future seeks to invert Earth over climate"
+      }
+    },
+    {
+      "id": "e_goya_plot",
+      "type": "ordinary",
+      "label": "Forged Goya used to blackmail Kat",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "art world"
+      },
+      "agents": [
+        "sator",
+        "kat",
+        "protagonist"
+      ]
+    },
+    {
+      "id": "e_amalfi",
+      "type": "ordinary",
+      "label": "Amalfi yacht approach; Kat / Sator marriage trap",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Amalfi"
+      },
+      "agents": [
+        "protagonist",
+        "kat",
+        "sator",
+        "neil"
+      ]
+    },
+    {
+      "id": "e_oslo_freeport_fwd",
+      "type": "arrival",
+      "label": "Oslo Freeport — forward team enters",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Oslo Freeport (forward)"
+      },
+      "agents": [
+        "protagonist",
+        "neil"
+      ],
+      "payload": {
+        "freeportId": "oslo",
+        "entropy": "forward",
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_turnstile_oslo_seen",
+      "type": "reveal",
+      "label": "Turnstile discovered; fight with inverted selves",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Oslo Freeport"
+      },
+      "agents": [
+        "protagonist",
+        "neil",
+        "protagonist_inverted"
+      ],
+      "payload": {
+        "entropy": "mixed",
+        "turnstileId": "oslo_turnstile",
+        "freeportId": "oslo",
+        "travelMode": "turnstile"
+      }
+    },
+    {
+      "id": "e_priya_algorithm",
+      "type": "reveal",
+      "label": "Algorithm: nine-section device; bury past",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "briefing"
+      },
+      "agents": [
+        "priya",
+        "protagonist"
+      ],
+      "payload": {
+        "artifactKind": "algorithm",
+        "artifactId": "algorithm_9",
+        "note": "Assemble+trigger inverts Earth permanently"
+      }
+    },
+    {
+      "id": "e_tallinn_heist",
+      "type": "intervention",
+      "label": "Tallinn highway — plutonium/Algorithm piece heist",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Tallinn"
+      },
+      "agents": [
+        "protagonist",
+        "neil",
+        "sator",
+        "sator_inverted"
+      ],
+      "payload": {
+        "entropy": "mixed",
+        "pincerRole": "teaching",
+        "artifactKind": "algorithm",
+        "algorithmPiece": 1,
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_tallinn_pincer",
+      "type": "inversion",
+      "label": "Teaching temporal pincer: forward vs inverted cars",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Tallinn highway"
+      },
+      "agents": [
+        "protagonist",
+        "protagonist_inverted",
+        "sator",
+        "sator_inverted",
+        "neil"
+      ],
+      "payload": {
+        "entropy": "mixed",
+        "pincerRole": "teaching",
+        "note": "Same operation lived forward and inverted"
+      }
+    },
+    {
+      "id": "e_kat_inverted_bullet",
+      "type": "death",
+      "label": "Kat shot with inverted bullet (near-death)",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Tallinn aftermath"
+      },
+      "agents": [
+        "kat",
+        "sator"
+      ],
+      "payload": {
+        "entropy": "inverted",
+        "note": "Requires medical inversion care"
+      }
+    },
+    {
+      "id": "e_invert_protagonist",
+      "type": "inversion",
+      "label": "Protagonist inverts via turnstile to go back",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "turnstile post-Tallinn"
+      },
+      "agents": [
+        "protagonist",
+        "protagonist_inverted"
+      ],
+      "payload": {
+        "entropy": "inverted",
+        "turnstileId": "mission_turnstile",
+        "travelMode": "turnstile",
+        "inverted": true
+      }
+    },
+    {
+      "id": "e_oslo_freeport_inv",
+      "type": "intervention",
+      "label": "Inverted Protagonist re-fights Oslo Freeport (past self)",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "Oslo Freeport (inverted pass)"
+      },
+      "agents": [
+        "protagonist_inverted",
+        "neil"
+      ],
+      "payload": {
+        "entropy": "inverted",
+        "freeportId": "oslo",
+        "turnstileId": "oslo_turnstile",
+        "pincerRole": "solo"
+      }
+    },
+    {
+      "id": "e_kat_care_invert",
+      "type": "ordinary",
+      "label": "Kat medically inverted then restored",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "medical inversion"
+      },
+      "agents": [
+        "kat"
+      ],
+      "payload": {
+        "entropy": "mixed",
+        "travelMode": "turnstile"
+      }
+    },
+    {
+      "id": "e_stalsk_plan",
+      "type": "ordinary",
+      "label": "Plan Stalsk-12 war pincer; red/blue teams",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "pre-Stalsk"
+      },
+      "agents": [
+        "protagonist",
+        "neil",
+        "ivol",
+        "wheeler"
+      ],
+      "payload": {
+        "pincerRole": "war",
+        "tags": [
+          "14th"
+        ]
+      }
+    },
+    {
+      "id": "e_vietnam_kat",
+      "type": "intervention",
+      "label": "Kat poses as past self on yacht (Vietnam) to hold Sator",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "14th — yacht Vietnam"
+      },
+      "agents": [
+        "kat",
+        "sator"
+      ],
+      "payload": {
+        "tags": [
+          "same_calendar_14th"
+        ],
+        "note": "Sync with hypocenter assault"
+      }
+    },
+    {
+      "id": "e_stalsk_red",
+      "type": "intervention",
+      "label": "Red team (forward) assaults Stalsk-12 hypocenter",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "14th — Stalsk-12 forward"
+      },
+      "agents": [
+        "protagonist",
+        "ivol",
+        "neil"
+      ],
+      "payload": {
+        "entropy": "forward",
+        "pincerRole": "red_forward",
+        "artifactKind": "algorithm"
+      }
+    },
+    {
+      "id": "e_stalsk_blue",
+      "type": "inversion",
+      "label": "Blue team (inverted) assaults from after",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "14th — Stalsk-12 inverted"
+      },
+      "agents": [
+        "wheeler",
+        "neil_inverted"
+      ],
+      "payload": {
+        "entropy": "inverted",
+        "pincerRole": "blue_inverted",
+        "artifactKind": "algorithm"
+      }
+    },
+    {
+      "id": "e_neil_unlock",
+      "type": "death",
+      "label": "Inverted Neil unlocks gate; dies (orange cord)",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "14th — hypocenter gate"
+      },
+      "agents": [
+        "neil_inverted",
+        "neil"
+      ],
+      "payload": {
+        "entropy": "inverted",
+        "note": "Multiple overlapping Neils at Stalsk; sacrifice always happens"
+      }
+    },
+    {
+      "id": "e_algorithm_secure",
+      "type": "intervention",
+      "label": "Algorithm pieces recovered / separated",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "14th — hypocenter"
+      },
+      "agents": [
+        "protagonist",
+        "ivol"
+      ],
+      "payload": {
+        "artifactKind": "algorithm",
+        "artifactId": "algorithm_9"
+      }
+    },
+    {
+      "id": "e_sator_dead",
+      "type": "death",
+      "label": "Kat kills Sator on yacht; dead-man switch race ends",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "14th — yacht sync"
+      },
+      "agents": [
+        "kat",
+        "sator"
+      ],
+      "payload": {
+        "tags": [
+          "same_calendar_14th"
+        ]
+      }
+    },
+    {
+      "id": "e_neil_trinket",
+      "type": "reveal",
+      "label": "Neil's orange trinket / looped friendship revealed",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "neil",
+        "protagonist"
+      ],
+      "payload": {
+        "bootstrapEntity": "neil_friendship"
+      }
+    },
+    {
+      "id": "e_founder",
+      "type": "bootstrap_origin",
+      "label": "Protagonist will found Tenet; Neil recruited from future",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "future relative"
+      },
+      "agents": [
+        "future_tenet",
+        "neil_future",
+        "priya",
+        "protagonist"
+      ],
+      "payload": {
+        "bootstrapEntity": "tenet_org",
+        "identityNote": "We live in a twilight world"
+      }
+    },
+    {
+      "id": "e_spare_priya",
+      "type": "intervention",
+      "label": "Protagonist spares/ends threat to Kat; asserts agency inside loop",
+      "at": {
+        "worldRef": "w_tenet",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "protagonist",
+        "priya",
+        "kat"
+      ]
+    },
+    {
+      "id": "ev_opera",
+      "label": "Kiev opera extraction / orange trinket",
+      "timeLabel": "the 14th"
+    },
+    {
+      "id": "ev_turnstile_oslo",
+      "label": "Oslo Freeport turnstile fight",
+      "timeLabel": "Oslo"
+    },
+    {
+      "id": "ev_tallinn_pincer",
+      "label": "Tallinn highway temporal pincer",
+      "timeLabel": "Tallinn"
+    },
+    {
+      "id": "ev_stalsk",
+      "label": "Stalsk-12 red/blue war pincer",
+      "timeLabel": "the 14th"
+    },
+    {
+      "id": "ev_neil_reveal",
+      "label": "Neil bootstrap friendship reveal",
+      "timeLabel": "aftermath"
+    }
+  ],
+  "edges": [
+    {
+      "id": "tc1",
+      "kind": "causal",
+      "from": "e_opera",
+      "to": "e_suicide_pill"
+    },
+    {
+      "id": "tc2",
+      "kind": "causal",
+      "from": "e_suicide_pill",
+      "to": "e_recruit"
+    },
+    {
+      "id": "tc3",
+      "kind": "causal",
+      "from": "e_recruit",
+      "to": "e_barbara_demo"
+    },
+    {
+      "id": "tc4",
+      "kind": "causal",
+      "from": "e_barbara_demo",
+      "to": "e_neil_meet"
+    },
+    {
+      "id": "tc5",
+      "kind": "causal",
+      "from": "e_neil_meet",
+      "to": "e_mumbai_priya"
+    },
+    {
+      "id": "tc6",
+      "kind": "causal",
+      "from": "e_mumbai_priya",
+      "to": "e_goya_plot"
+    },
+    {
+      "id": "tc7",
+      "kind": "causal",
+      "from": "e_goya_plot",
+      "to": "e_amalfi"
+    },
+    {
+      "id": "tc8",
+      "kind": "causal",
+      "from": "e_amalfi",
+      "to": "e_oslo_freeport_fwd"
+    },
+    {
+      "id": "tc9",
+      "kind": "causal",
+      "from": "e_oslo_freeport_fwd",
+      "to": "e_turnstile_oslo_seen"
+    },
+    {
+      "id": "tc10",
+      "kind": "causal",
+      "from": "e_turnstile_oslo_seen",
+      "to": "e_priya_algorithm"
+    },
+    {
+      "id": "tc11",
+      "kind": "causal",
+      "from": "e_priya_algorithm",
+      "to": "e_tallinn_heist"
+    },
+    {
+      "id": "tc12",
+      "kind": "causal",
+      "from": "e_tallinn_heist",
+      "to": "e_tallinn_pincer"
+    },
+    {
+      "id": "tc13",
+      "kind": "causal",
+      "from": "e_tallinn_pincer",
+      "to": "e_kat_inverted_bullet"
+    },
+    {
+      "id": "tc14",
+      "kind": "causal",
+      "from": "e_kat_inverted_bullet",
+      "to": "e_invert_protagonist"
+    },
+    {
+      "id": "tc15",
+      "kind": "causal",
+      "from": "e_invert_protagonist",
+      "to": "e_oslo_freeport_inv"
+    },
+    {
+      "id": "tc16",
+      "kind": "causal",
+      "from": "e_oslo_freeport_inv",
+      "to": "e_kat_care_invert"
+    },
+    {
+      "id": "tc17",
+      "kind": "causal",
+      "from": "e_kat_care_invert",
+      "to": "e_stalsk_plan"
+    },
+    {
+      "id": "tc18",
+      "kind": "causal",
+      "from": "e_stalsk_plan",
+      "to": "e_stalsk_red"
+    },
+    {
+      "id": "tc19",
+      "kind": "causal",
+      "from": "e_stalsk_red",
+      "to": "e_algorithm_secure"
+    },
+    {
+      "id": "tc20",
+      "kind": "causal",
+      "from": "e_algorithm_secure",
+      "to": "e_neil_trinket"
+    },
+    {
+      "id": "tc21",
+      "kind": "causal",
+      "from": "e_neil_trinket",
+      "to": "e_founder"
+    },
+    {
+      "id": "tp1",
+      "kind": "temporal",
+      "from": "e_invert_protagonist",
+      "to": "e_oslo_freeport_inv",
+      "label": "living backward to Freeport"
+    },
+    {
+      "id": "tp2",
+      "kind": "temporal",
+      "from": "e_oslo_freeport_inv",
+      "to": "e_turnstile_oslo_seen",
+      "label": "inverted pass meets forward fight"
+    },
+    {
+      "id": "tp3",
+      "kind": "temporal",
+      "from": "e_tallinn_pincer",
+      "to": "e_tallinn_heist",
+      "label": "inverted knowledge overlays heist"
+    },
+    {
+      "id": "tp4",
+      "kind": "temporal",
+      "from": "e_stalsk_blue",
+      "to": "e_stalsk_red",
+      "label": "war pincer simultaneous"
+    },
+    {
+      "id": "tp5",
+      "kind": "temporal",
+      "from": "e_vietnam_kat",
+      "to": "e_sator_dead",
+      "label": "yacht hold until sync"
+    },
+    {
+      "id": "tp6",
+      "kind": "temporal",
+      "from": "e_sator_dead",
+      "to": "e_algorithm_secure",
+      "label": "dead-man switch sync"
+    },
+    {
+      "id": "iv_neil_gate",
+      "kind": "intervention",
+      "from": "e_neil_unlock",
+      "to": "e_algorithm_secure",
+      "label": "gate unlock enables recovery"
+    },
+    {
+      "id": "iv_pincer_war",
+      "kind": "intervention",
+      "from": "e_stalsk_plan",
+      "to": "e_stalsk_blue"
+    },
+    {
+      "id": "iv_pincer_war2",
+      "kind": "intervention",
+      "from": "e_stalsk_plan",
+      "to": "e_vietnam_kat"
+    },
+    {
+      "id": "id_prot",
+      "kind": "identity",
+      "from": "protagonist",
+      "to": "protagonist_inverted",
+      "label": "entropy flip same person"
+    },
+    {
+      "id": "id_neil",
+      "kind": "identity",
+      "from": "neil",
+      "to": "neil_inverted",
+      "label": "inverted Neil at gate"
+    },
+    {
+      "id": "id_neil2",
+      "kind": "identity",
+      "from": "neil",
+      "to": "neil_future",
+      "label": "recruitment continuum"
+    },
+    {
+      "id": "id_founder",
+      "kind": "identity",
+      "from": "protagonist",
+      "to": "future_tenet",
+      "label": "will become founder"
+    },
+    {
+      "id": "id_sator",
+      "kind": "identity",
+      "from": "sator",
+      "to": "sator_inverted"
+    },
+    {
+      "id": "boot1",
+      "kind": "intervention",
+      "from": "e_founder",
+      "to": "e_recruit",
+      "label": "bootstrap org founding"
+    },
+    {
+      "id": "boot2",
+      "kind": "intervention",
+      "from": "e_founder",
+      "to": "e_neil_meet",
+      "label": "Neil recruited by future Protagonist"
+    },
+    {
+      "id": "boot3",
+      "kind": "causal",
+      "from": "e_founder",
+      "to": "e_opera",
+      "label": "Tenet already midwifing opera"
+    },
+    {
+      "id": "boot4",
+      "kind": "causal",
+      "from": "e_neil_unlock",
+      "to": "e_neil_trinket",
+      "label": "death was always in the friendship"
+    },
+    {
+      "from": "ev_opera",
+      "to": "ev_turnstile_oslo",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_turnstile_oslo",
+      "to": "ev_tallinn_pincer",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_tallinn_pincer",
+      "to": "ev_stalsk",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_stalsk",
+      "to": "ev_neil_reveal",
+      "type": "reveals"
+    },
+    {
+      "from": "ev_neil_reveal",
+      "to": "ev_opera",
+      "type": "bootstrap_causes"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_entropy",
+      "eventId": "e_tallinn_pincer",
+      "ruleEffects": [
+        {
+          "ruleSetId": "entropy_inversion",
+          "effect": "Forward and inverted processes meet on one timeline; no branch created"
+        },
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Teaching pincer was always part of history"
+        }
+      ]
+    },
+    {
+      "id": "iv_war_pincer",
+      "eventId": "e_stalsk_red",
+      "ruleEffects": [
+        {
+          "ruleSetId": "entropy_inversion",
+          "effect": "Red/blue teams enact same battle from opposite arrows"
+        },
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Algorithm recovery and Neil's sacrifice close the loop"
+        }
+      ]
+    },
+    {
+      "id": "iv_neil_death",
+      "eventId": "e_neil_unlock",
+      "ruleEffects": [
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Neil's death enables the mission that recruits him"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Friendship and recruitment lack external origin outside the loop"
+        }
+      ]
+    },
+    {
+      "id": "iv_found",
+      "eventId": "e_founder",
+      "ruleEffects": [
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Tenet organization is founded by the man it recruits"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Algorithm secured on a single inverted-capable timeline; temporal pincers and turnstiles overlay reverse traces without branching; Tenet's founding and Neil's recruitment/death form a closed bootstrap. What's happened happened.",
+    "endWorldRefs": [
+      "w_tenet"
+    ]
+  }
+}

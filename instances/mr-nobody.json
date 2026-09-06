@@ -6,7 +6,8 @@
     "medium": "film",
     "sources": [
       "Jaco Van Dormael (2009)",
-      "time-travel-archive/films/mr-nobody.md"
+      "time-travel-archive/films/mr-nobody.md",
+      "time-travel-archive true-deep wave 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -245,6 +246,21 @@
       "agents": [
         "nemo"
       ]
+    },
+    {
+      "id": "ev_station",
+      "label": "Child Nemo train-station fork",
+      "timeLabel": "childhood"
+    },
+    {
+      "id": "ev_lives",
+      "label": "Parallel adult lives with Anna/Elise/Jean",
+      "timeLabel": "adulthood"
+    },
+    {
+      "id": "ev_2092",
+      "label": "2092 last-mortal interview frame",
+      "timeLabel": "2092"
     }
   ],
   "edges": [
@@ -312,6 +328,16 @@
       "kind": "temporal",
       "from": "e_observer",
       "to": "e_rebirth"
+    },
+    {
+      "from": "ev_station",
+      "to": "ev_lives",
+      "type": "branches_to"
+    },
+    {
+      "from": "ev_lives",
+      "to": "ev_2092",
+      "type": "framed_by"
     }
   ],
   "interventions": [

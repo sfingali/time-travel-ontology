@@ -6,7 +6,8 @@
     "medium": "film",
     "sources": [
       "Christopher Nolan & Jonathan Nolan (2014)",
-      "time-travel-archive/films/interstellar.md"
+      "time-travel-archive/films/interstellar.md",
+      "time-travel-archive true-deep wave 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -24,8 +25,8 @@
     {
       "kind": "timeline",
       "id": "w_earth",
-      "label": "Blight Earth \u2192 Cooper Station continuum",
-      "spanLabel": "near future \u2192 decades later",
+      "label": "Blight Earth → Cooper Station continuum",
+      "spanLabel": "near future → decades later",
       "description": "One history; anomalies always included Cooper's messages"
     }
   ],
@@ -95,7 +96,7 @@
     {
       "id": "e_coords",
       "type": "bootstrap_origin",
-      "label": "Dust/binary coordinates lead to NASA \u2014 Cooper was the ghost",
+      "label": "Dust/binary coordinates lead to NASA — Cooper was the ghost",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "bookshelf"
@@ -130,7 +131,7 @@
     {
       "id": "e_miller",
       "type": "ordinary",
-      "label": "Miller's planet: 1 hour \u2248 7 years; Doyle dies; +23 years Earth",
+      "label": "Miller's planet: 1 hour ≈ 7 years; Doyle dies; +23 years Earth",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "Miller"
@@ -192,7 +193,7 @@
       "label": "Cooper pushes gravity messages into past (books, dust, watch)",
       "at": {
         "worldRef": "w_earth",
-        "timeLabel": "Murph childhood\u2194adult"
+        "timeLabel": "Murph childhood↔adult"
       },
       "agents": [
         "cooper",
@@ -260,6 +261,21 @@
         "cooper",
         "amelia"
       ]
+    },
+    {
+      "id": "ev_miller",
+      "label": "Miller planet dilation loss",
+      "timeLabel": "Gargantua"
+    },
+    {
+      "id": "ev_tesseract",
+      "label": "Tesseract bookshelf messages",
+      "timeLabel": "inside BH"
+    },
+    {
+      "id": "ev_plan_a",
+      "label": "Murph solves gravity with watch data",
+      "timeLabel": "Earth"
     }
   ],
   "edges": [
@@ -336,6 +352,21 @@
       "from": "e_watch",
       "to": "e_tesseract",
       "label": "future humans enable tesseract that enables data"
+    },
+    {
+      "from": "ev_miller",
+      "to": "ev_tesseract",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_tesseract",
+      "to": "ev_plan_a",
+      "type": "enables"
+    },
+    {
+      "from": "ev_plan_a",
+      "to": "ev_tesseract",
+      "type": "bootstrap_causes"
     }
   ],
   "interventions": [

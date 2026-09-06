@@ -1,66 +1,110 @@
 ---
-title: "Frequency"
+title: Frequency
 year: 2000
 medium: film
-creators: Gregory Hoblit (director); Toby Emmerich (writer); Dennis Quaid; Jim Caviezel; Andre Braugher
+creators: Gregory Hoblit (director); Toby Emmerich (writer); Dennis Quaid; Jim Caviezel;
+  Andre Braugher
 mechanism: ham_radio_time_link | solar_flare_aurora | shared_object_sync
 paradox_type: branching_timeline | reality_rewrite | father_son_bootstrap | scar_ripple
 summary_depth: exhaustive
 diagram_refs: []
 plot_summary_sources:
-  - "https://en.wikipedia.org/wiki/Frequency_(2000_film)"
-  - "https://tvtropes.org/pmwiki/pmwiki.php/Film/Frequency"
-flag_diagrams: false
+- https://en.wikipedia.org/wiki/Frequency_(2000_film)
+- https://tvtropes.org/pmwiki/pmwiki.php/Film/Frequency
+flag_diagrams: true
 ---
-
 # Frequency (2000)
 
+> **DIAGRAM FLAG:** Father–son HAM-radio timeline charts and serial-killer butterfly diagrams are common.
+
 ## Short blurb
-NYPD detective John Sullivan contacts his firefighter father Frank in 1969 over a ham radio during an aurora. Saving Frank from a warehouse fire rewrites John’s life—and unleashes a serial-killer cascade they must close together across thirty years.
+
+NYC cop John Sullivan talks to his long-dead firefighter father Frank via a freak-solar-cycle HAM radio in 1999/1969 — changing fires, murders, and their shared family timeline.
 
 ## Detailed plot summary (spoilers)
 
-**1969:** Frank Sullivan dies in a fire; wife Julia and young son John survive. **1999:** Adult John (Jim Caviezel), emotionally shut down, finds the old ham radio working during a rare atmospheric event. He reaches Frank (Dennis Quaid) thirty years earlier and warns him about the fatal warehouse job. Frank survives; John’s memories rewrite—Frank now dies of lung cancer in 1989. John tells Frank to quit smoking.
+In 1969, veteran firefighter Frank Sullivan dies on duty and is survived by Julia, his wife, and John, his young son. In 1999, John has become an NYPD detective and struggles with emotional openness as a result of his loss. An atmospheric phenomenon causes a broken radio in John's home to start working again, and he realizes he can communicate with Frank in 1969 through it.
 
-Unintended cascade: Frank’s survival lets nurse Julia save a patient who becomes (or continues as) the **Nightingale** killer. In the new history Julia herself is among ~11 victims (versus four in the original timeline). John feeds Frank case details so Frank can intercept victims in 1969. The killer steals Frank’s driver’s license and frames him. Father and son pass physical evidence across the link (prints sequestered in the house) identifying NYPD detective **Jack Shepard** as the Nightingale.
+John forewarns his father of his imminent death, allowing Frank to avoid the accident that would have killed him in 1969. John experiences new memories as a result of changing the past, now remembering Frank dying in 1989 from lung cancer. He shares this news with Frank in 1969, who promptly quits smoking. Changing history brings unintended side-effects: Frank's survival allowed Julia to unknowingly save the life of a serial murderer known as "the Nightingale", who now kills 11 victims, including Julia, as compared to four in the original timeline.
 
-Frank is arrested by friend Det. Satch DeLeon (Andre Braugher); he proves knowledge of the future by calling 1969 World Series Game 5 play-by-play from John’s memory. Frank escapes, finds Shepard’s trophies, and after a fight Shepard seemingly drowns. Julia survives into 1999. Separate Shepards then attack Frank (1969) and John (1999); Frank blasts off Shepard’s hand in 1969—the hand dematerializes on 1999-Shepard mid-fight. A now-living present-day Frank arrives and finishes Shepard, aligning both eras.
+John shares the Nightingale's case history with Frank, allowing him to save some of the would-be victims in 1969, but the Nightingale steals Frank's driver's license and plants it on his next victim. By sequestering potential fingerprint evidence in their house, Frank passes physical information from 1969 to 1999 to help John stop the Nightingale, who is revealed to be NYPD detective Jack Shepard.
 
-Coda: John is happily married with kids; aging Frank and Julia are alive; friends benefit from future tips John shared into their pasts (including young Michael Cera cameo as kid neighbor).
+Frank is arrested by his close friend Det. Satch DeLeon (John's boss in 1999) on suspicion of murder, and attempts to prove himself innocent by predicting play-by-play details of the upcoming 1969 World Series Game 5 , which he heard John recount. Frank escapes from the police station and breaks into Shepard's apartment, where he finds trophies from the murders.
+
+Shepard arrives and attacks Frank, but is seemingly killed after a scuffle and a fall into a river, allowing Julia to survive until 1999. Frank's predictions of future events prove to be accurate, letting Satch realize he was telling the truth. Satch investigates Shepard's apartment and exonerates Frank, but the police find no trace of Shepard in the river. Frank returns home, where he and John are attacked by separate versions of Shepard in their respective times.
+
+In 1969, Frank blows off Shepard's hand with a shotgun, causing the same hand to dematerialize in 1999 as Shepard fights John. History changes again, and a now-living Frank comes to John's rescue, killing Shepard in 1999 and resolving both time frames. The film concludes with John happily married and with children, enjoying the company of both his aging parents, and witnessing his acquaintances benefit from future information he shared with their past selves.
 
 ## Beat-by-beat temporal structure
 
-1. **Link opens:** Aurora + broken radio → father–son voice channel (communication-only, not bodily travel).
-2. **Fire save:** Immediate rewrite; cancer-death memory replaces fire-death.
-3. **Smoking quit:** Second health rewrite.
-4. **Nightingale inflation:** Mother murdered in new branch; case becomes the shared mission.
-5. **Evidence ferry:** Objects/info in the house act as sync devices across decades.
-6. **Frame & Series proof:** Past integrity test via baseball broadcast.
-7. **Shepard confrontation:** Dual-time fight; wound ripples forward (hand vanishes).
-8. **Stable happy present:** Family restored; soft epilogue blessings.
+1. **Radio bridge:** Aurora/solar weirdness lets 1999 John reach 1969 Frank nights before Frank’s canonical warehouse-fire death.
+2. **Save Frank:** John coaches fire safety; Frank survives — photo/present rewrite (BTTF-style vanishing/changing objects).
+3. **Serial killer side effect:** Changing the past alters a Nightingale murders case; John’s mother Julia’s fate gets entangled; timeline sickness as cost.
+4. **Father–son teamwork across 30 years:** Share info to stop the killer in both eras; identities and scars update live.
+5. **Stabilized present:** Family restored in a happier 1999; baseball shared memories as emotional proof; leftover anomalies acknowledged.
 
-Public explainers emphasize the radio as a *causal bridge*, not a machine you enter—changes still rewrite the living present the way BTTF photos update.
+Gwynne/Cage vehicle that popularized ‘phone call to the past’ for mainstream audiences.
 
 ## Paradox analysis
 
-- **Mutable past with living update:** John’s body and memories rewrite as 1969 changes; scars/headlines are on-screen ripple meters.
-- **Communication channel, not machine:** Neither man leaves his year; causality still branches.
-- **Killer butterfly:** Saving Frank → Julia saves Shepard’s path → more victims including Julia—classic “fix creates worse problem.”
-- **Cross-time wound:** Injuring past Shepard instantly degrades future Shepard—shared identity across the link.
-- **Not Novikov:** Multiple successful changes; final state is a constructed better branch, not a closed loop that always was.
-- **Information bootstrap-lite:** World Series call and case files ferry future knowledge into past action without creating the radio itself.
+- **Mutable timeline with live feedback:** Changing 1969 immediately edits 1999 objects/people — popular overwrite model.
+- **Information channel as mechanism:** HAM radio, not bodily travel — Frequency/Arrival-adjacent message TT.
+- **Butterfly crime:** Saving one life reshuffles a murderer’s victim list — moral cost of intervention.
+- **Parent–child emotional core:** Like Interstellar’s watch, but two-way conversation.
+- **Not a closed Predestination loop:** Goal is successful rewrite, achieved with scars.
+- **Sports/memory cues:** Yankees games as shared timestamp authentication between eras.
 
 ## Endings / cuts / production notes
 
-New Line; mostly Toronto shoot with NYC second unit. Stallone/Harlin attached early; Hoblit took over after his father’s death shaped the father–son core. Hugo Award nominee for Best Dramatic Presentation (lost to *Crouching Tiger, Hidden Dragon*). Garth Brooks end-title song Golden Globe–nominated. CW TV reboot (2016–17) canceled after one season. Ham operators noted technical radio glitches despite ARRL consulting.
-
-## Diagram & explainer sources
-- https://en.wikipedia.org/wiki/Frequency_(2000_film)
-- https://tvtropes.org/pmwiki/pmwiki.php/Film/Frequency
+2000 New Line; Jim Caviezel, Dennis Quaid. Gregory Hoblit. Ending is healed family present. Remake/series adaptations exist separately.
 
 ## Adaptation / related text notes
 
-Original screenplay (not adapted from a novel). Frequently compared in fan discourse to *The Time Traveler's Wife* (shared McAdams casting in About Time's case) and to soft-rules romantic TT generally. Teachable alongside Frequency / Butterfly Effect as “emotional rewrite” cinema rather than puzzle-box Primer-type TT.
+Original screenplay by Toby Emmerich. Often recommended with *The Lake House* and *Frequency* TV remake notes — this entry is the 2000 film.
+
+## Mechanism notes
+
+- **Device:** Father’s old HAM radio + freak solar max.
+- **Link window:** Limited nights; urgency plot driver.
+- **Feedback:** Cigarettes, newspaper headlines, wounds update across the conversation.
+
+
+## Diagram & explainer sources
+
+- https://en.wikipedia.org/wiki/Frequency_(2000_film)
+- https://tvtropes.org/pmwiki/pmwiki.php/Film/Frequency
+- https://www.astronomytrek.com/frequency-2000-explained/
 
 ## Related works
-Frequency (TV); Deja Vu; The Butterfly Effect; About Time; Ditto (2000); Somewhere in Time; The Lake House.
+
+Back to the Future; Interstellar; About Time; Butterfly Effect; Primer (contrast).
+
+## Parent–child message TT cluster
+
+Frequency sits with *Interstellar* (watch/gravity Morse), *The Lake House* (mailbox), and *About Time* (relational use of travel) as emotional-information time links rather than war/assassination plots. The serial-killer butterfly is the cost chapter that keeps it from pure wish-fulfillment. For ontology edges, model: radio_open → save_frank → timeline_sickness → joint_capture → stabilized_present.
+
+## Beat table (public reconstruction)
+
+| Beat | 1969 | 1999 |
+|---|---|---|
+| Radio opens | Frank on night shifts | John finds old set |
+| Fire rewrite | Frank survives warehouse | Household objects/photos update |
+| Killer ripple | Nightingale path changes | Julia endangered; case mutates |
+| Joint hunt | Frank acts on John’s intel | John acts on Frank’s intel |
+| Stabilize | Scars/evidence settle | Happier family baseball coda |
+
+## Why it remains crown-jewel
+
+Simple mechanism, clear overwrite feedback, and an ethical butterfly make Frequency a teaching film between *Back to the Future* spectacle and *Primer* opacity. Instance sync should emphasize the radio as an edge type `info_channel` rather than `body_travel`.
+
+## Ontology fingerprint cues
+
+- Record **mechanism** tags from frontmatter as primary rule hooks.
+- Record **paradox_type** tags as mixin rule hooks.
+- Prefer event edges that match beat-by-beat structure above (origin → intervention → cost → exit/terminal).
+- Diagram_refs URLs are citation pointers only — no binaries in this pass.
+- If instance JSON exists under `time-travel-ontology/instances/`, deepen events/edges to mirror these beats; else leave a fingerprint-worker note.
+
+## Spoiler / sourcing posture
+
+Plot beats above are condensed from public Wikipedia plot sections and widely cited explainers linked in sources. No original media. No invented scenes. Where cuts disagree (theatrical vs director), both are noted rather than silently merged.

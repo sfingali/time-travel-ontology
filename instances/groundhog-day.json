@@ -1,1 +1,346 @@
-{"meta":{"id":"groundhog-day","title":"Groundhog Day","year":1993,"medium":"film","sources":["Harold Ramis & Danny Rubin (1993)","time-travel-archive/films/groundhog-day.md"]},"ruleSetIds":["temporal_loop_exit"],"primaryRuleSetId":"temporal_loop_exit","mixinRuleSetIds":[],"topologyPatternId":"single_fixed_timeline","worlds":[{"kind":"timeline","id":"w_punx","label":"Punxsutawney loop day","spanLabel":"Feb 2 repeating"}],"agents":[{"id":"phil","label":"Phil Connors","identityGroup":"phil","continuityRole":"observer_persistent","homeWorldRef":"w_punx"},{"id":"rita","label":"Rita","homeWorldRef":"w_punx"},{"id":"larry","label":"Larry","homeWorldRef":"w_punx"},{"id":"ned","label":"Ned Ryerson","homeWorldRef":"w_punx"}],"events":[{"id":"e_arrive","type":"ordinary","label":"Phil arrives to cover Groundhog Day","at":{"worldRef":"w_punx","timeLabel":"Feb 1 evening"},"agents":["phil","rita","larry"]},{"id":"e_day1","type":"ordinary","label":"First Feb 2 broadcast day","at":{"worldRef":"w_punx","timeLabel":"Feb 2 #1"},"agents":["phil","rita"]},{"id":"e_reset1","type":"loop_reset","label":"Wake to same morning — loop begins","at":{"worldRef":"w_punx","timeLabel":"Feb 2 #2"},"agents":["phil"],"payload":{"iteration":2,"memoryRetained":true,"checkpointId":"morning_radio"}},{"id":"e_hedonism","type":"ordinary","label":"Hedonism / consequences-free phase","at":{"worldRef":"w_punx","timeLabel":"Feb 2 hedonist"},"agents":["phil"],"payload":{"iteration":10}},{"id":"e_robbery","type":"intervention","label":"Bank robbery / joyrides","at":{"worldRef":"w_punx","timeLabel":"Feb 2 chaos"},"agents":["phil"]},{"id":"e_suicide","type":"death","label":"Suicide attempts; still resets","at":{"worldRef":"w_punx","timeLabel":"Feb 2 despair"},"agents":["phil"],"payload":{"exitFailed":true,"iteration":50}},{"id":"e_reset_s","type":"loop_reset","label":"Reset after suicide","at":{"worldRef":"w_punx","timeLabel":"Feb 2 after death"},"agents":["phil"],"payload":{"iteration":51,"memoryRetained":true,"checkpointId":"morning_radio"}},{"id":"e_learn","type":"ordinary","label":"Learning piano, French, ice sculpting, kindness","at":{"worldRef":"w_punx","timeLabel":"Feb 2 growth"},"agents":["phil","rita"],"payload":{"iteration":200}},{"id":"e_save_day","type":"intervention","label":"Perfect day: saves boy, helps townsfolk, concert","at":{"worldRef":"w_punx","timeLabel":"Feb 2 perfected"},"agents":["phil","rita","ned"]},{"id":"e_rita_night","type":"ordinary","label":"Rita stays; genuine connection","at":{"worldRef":"w_punx","timeLabel":"Feb 2 night"},"agents":["phil","rita"]},{"id":"e_exit","type":"loop_reset","label":"Wake to Feb 3 — loop exits","at":{"worldRef":"w_punx","timeLabel":"Feb 3"},"agents":["phil","rita"],"payload":{"exitCondition":"genuine_care_and_growth","iteration":0,"memoryRetained":true}}],"edges":[{"id":"c1","kind":"causal","from":"e_arrive","to":"e_day1"},{"id":"c2","kind":"causal","from":"e_day1","to":"e_reset1"},{"id":"c3","kind":"causal","from":"e_reset1","to":"e_hedonism"},{"id":"c4","kind":"causal","from":"e_hedonism","to":"e_robbery"},{"id":"c5","kind":"causal","from":"e_robbery","to":"e_suicide"},{"id":"c6","kind":"causal","from":"e_suicide","to":"e_reset_s"},{"id":"c7","kind":"causal","from":"e_reset_s","to":"e_learn"},{"id":"c8","kind":"causal","from":"e_learn","to":"e_save_day"},{"id":"c9","kind":"causal","from":"e_save_day","to":"e_rita_night"},{"id":"c10","kind":"causal","from":"e_rita_night","to":"e_exit"},{"id":"t1","kind":"temporal","from":"e_suicide","to":"e_reset_s","label":"death does not exit"},{"id":"iv1","kind":"intervention","from":"e_save_day","to":"e_exit"}],"interventions":[{"id":"iv_exit","eventId":"e_exit","ruleEffects":[{"ruleSetId":"temporal_loop_exit","effect":"Exit when Phil becomes capable of care without exploitation"}]}],"outcome":{"summary":"Day loop exits after Phil's moral and skill growth; Feb 3 begins.","endWorldRefs":["w_punx"]}}
+{
+  "meta": {
+    "id": "groundhog-day",
+    "title": "Groundhog Day",
+    "year": 1993,
+    "medium": "film",
+    "sources": [
+      "Harold Ramis & Danny Rubin (1993)",
+      "time-travel-archive/films/groundhog-day.md",
+      "time-travel-archive true-deep wave 2026-09-06"
+    ]
+  },
+  "ruleSetIds": [
+    "temporal_loop_exit"
+  ],
+  "primaryRuleSetId": "temporal_loop_exit",
+  "mixinRuleSetIds": [],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_punx",
+      "label": "Punxsutawney loop day",
+      "spanLabel": "Feb 2 repeating"
+    }
+  ],
+  "agents": [
+    {
+      "id": "phil",
+      "label": "Phil Connors",
+      "identityGroup": "phil",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_punx"
+    },
+    {
+      "id": "rita",
+      "label": "Rita",
+      "homeWorldRef": "w_punx"
+    },
+    {
+      "id": "larry",
+      "label": "Larry",
+      "homeWorldRef": "w_punx"
+    },
+    {
+      "id": "ned",
+      "label": "Ned Ryerson",
+      "homeWorldRef": "w_punx"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_arrive",
+      "type": "ordinary",
+      "label": "Phil arrives to cover Groundhog Day",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 1 evening"
+      },
+      "agents": [
+        "phil",
+        "rita",
+        "larry"
+      ]
+    },
+    {
+      "id": "e_day1",
+      "type": "ordinary",
+      "label": "First Feb 2 broadcast day",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2 #1"
+      },
+      "agents": [
+        "phil",
+        "rita"
+      ]
+    },
+    {
+      "id": "e_reset1",
+      "type": "loop_reset",
+      "label": "Wake to same morning — loop begins",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2 #2"
+      },
+      "agents": [
+        "phil"
+      ],
+      "payload": {
+        "iteration": 2,
+        "memoryRetained": true,
+        "checkpointId": "morning_radio"
+      }
+    },
+    {
+      "id": "e_hedonism",
+      "type": "ordinary",
+      "label": "Hedonism / consequences-free phase",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2 hedonist"
+      },
+      "agents": [
+        "phil"
+      ],
+      "payload": {
+        "iteration": 10
+      }
+    },
+    {
+      "id": "e_robbery",
+      "type": "intervention",
+      "label": "Bank robbery / joyrides",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2 chaos"
+      },
+      "agents": [
+        "phil"
+      ]
+    },
+    {
+      "id": "e_suicide",
+      "type": "death",
+      "label": "Suicide attempts; still resets",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2 despair"
+      },
+      "agents": [
+        "phil"
+      ],
+      "payload": {
+        "exitFailed": true,
+        "iteration": 50
+      }
+    },
+    {
+      "id": "e_reset_s",
+      "type": "loop_reset",
+      "label": "Reset after suicide",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2 after death"
+      },
+      "agents": [
+        "phil"
+      ],
+      "payload": {
+        "iteration": 51,
+        "memoryRetained": true,
+        "checkpointId": "morning_radio"
+      }
+    },
+    {
+      "id": "e_learn",
+      "type": "ordinary",
+      "label": "Learning piano, French, ice sculpting, kindness",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2 growth"
+      },
+      "agents": [
+        "phil",
+        "rita"
+      ],
+      "payload": {
+        "iteration": 200
+      }
+    },
+    {
+      "id": "e_save_day",
+      "type": "intervention",
+      "label": "Perfect day: saves boy, helps townsfolk, concert",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2 perfected"
+      },
+      "agents": [
+        "phil",
+        "rita",
+        "ned"
+      ]
+    },
+    {
+      "id": "e_rita_night",
+      "type": "ordinary",
+      "label": "Rita stays; genuine connection",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 2 night"
+      },
+      "agents": [
+        "phil",
+        "rita"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "loop_reset",
+      "label": "Wake to Feb 3 — loop exits",
+      "at": {
+        "worldRef": "w_punx",
+        "timeLabel": "Feb 3"
+      },
+      "agents": [
+        "phil",
+        "rita"
+      ],
+      "payload": {
+        "exitCondition": "genuine_care_and_growth",
+        "iteration": 0,
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "ev_loop_start",
+      "label": "Phil first repeated Feb 2",
+      "timeLabel": "Feb 2"
+    },
+    {
+      "id": "ev_despair",
+      "label": "Suicide attempts fail to exit",
+      "timeLabel": "mid loops"
+    },
+    {
+      "id": "ev_virtue",
+      "label": "Learning/altruism phase",
+      "timeLabel": "late loops"
+    },
+    {
+      "id": "ev_exit",
+      "label": "Wake on Feb 3 with Rita",
+      "timeLabel": "Feb 3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_arrive",
+      "to": "e_day1"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_day1",
+      "to": "e_reset1"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_reset1",
+      "to": "e_hedonism"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_hedonism",
+      "to": "e_robbery"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_robbery",
+      "to": "e_suicide"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_suicide",
+      "to": "e_reset_s"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_reset_s",
+      "to": "e_learn"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_learn",
+      "to": "e_save_day"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_save_day",
+      "to": "e_rita_night"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_rita_night",
+      "to": "e_exit"
+    },
+    {
+      "id": "t1",
+      "kind": "temporal",
+      "from": "e_suicide",
+      "to": "e_reset_s",
+      "label": "death does not exit"
+    },
+    {
+      "id": "iv1",
+      "kind": "intervention",
+      "from": "e_save_day",
+      "to": "e_exit"
+    },
+    {
+      "from": "ev_loop_start",
+      "to": "ev_despair",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_despair",
+      "to": "ev_virtue",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_virtue",
+      "to": "ev_exit",
+      "type": "enables"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_exit",
+      "eventId": "e_exit",
+      "ruleEffects": [
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Exit when Phil becomes capable of care without exploitation"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Day loop exits after Phil's moral and skill growth; Feb 3 begins.",
+    "endWorldRefs": [
+      "w_punx"
+    ]
+  }
+}

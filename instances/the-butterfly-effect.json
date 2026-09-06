@@ -1,1 +1,325 @@
-{"meta":{"id":"the-butterfly-effect","title":"The Butterfly Effect","year":2004,"medium":"film","sources":["Eric Bress & J. Mackye Gruber (2004)","time-travel-archive/films/the-butterfly-effect.md"]},"ruleSetIds":["mutable_ripple","branch_on_intervention"],"primaryRuleSetId":"mutable_ripple","mixinRuleSetIds":["branch_on_intervention"],"topologyPatternId":"mutable_single_with_ripples","worlds":[{"kind":"timeline","id":"w_base","label":"Baseline damaged adulthood","spanLabel":"childhood→college"},{"kind":"branch","id":"w_prison","label":"Rewrite: Kayleigh murdered path / prison","parentRef":"w_base","forkLabel":"journal jump #1"},{"kind":"branch","id":"w_amputee","label":"Rewrite: fraternity / severed hands","parentRef":"w_base","forkLabel":"journal jump #2"},{"kind":"branch","id":"w_neverborn","label":"Final: Evan never born (theatrical)","parentRef":"w_base","forkLabel":"umbilical self-strangle"}],"agents":[{"id":"evan","label":"Evan Treborn","identityGroup":"evan","continuityRole":"observer_persistent","homeWorldRef":"w_base"},{"id":"kayleigh","label":"Kayleigh Miller","identityGroup":"kayleigh","continuityRole":"primary","homeWorldRef":"w_base"},{"id":"tommy","label":"Tommy Miller","homeWorldRef":"w_base"},{"id":"lenny","label":"Lenny","homeWorldRef":"w_base"}],"events":[{"id":"e_blackouts","type":"ordinary","label":"Childhood blackouts / journals","at":{"worldRef":"w_base","timeLabel":"childhood"},"agents":["evan","kayleigh","tommy"]},{"id":"e_read","type":"departure","label":"College Evan reads journals → body past","at":{"worldRef":"w_base","timeLabel":"college"},"agents":["evan"],"payload":{"travelMode":"perception","note":"consciousness to past body"}},{"id":"e_fix1","type":"intervention","label":"First childhood fix attempt","at":{"worldRef":"w_base","timeLabel":"past"},"agents":["evan","kayleigh"]},{"id":"e_wake_prison","type":"arrival","label":"Wake into prison timeline","at":{"worldRef":"w_prison","timeLabel":"adult"},"agents":["evan"]},{"id":"e_fix2","type":"intervention","label":"Further journal rewrites cascade","at":{"worldRef":"w_prison","timeLabel":"past"},"agents":["evan"]},{"id":"e_wake_amp","type":"arrival","label":"Wake into amputee / frat timeline","at":{"worldRef":"w_amputee","timeLabel":"adult"},"agents":["evan","kayleigh"]},{"id":"e_final","type":"intervention","label":"In utero: strangle self with cord","at":{"worldRef":"w_base","timeLabel":"birth"},"agents":["evan"]},{"id":"e_fork_never","type":"branch_fork","label":"Evan never born; Kayleigh spared","at":{"worldRef":"w_neverborn","timeLabel":"life without Evan"},"agents":["kayleigh"]},{"id":"e_street","type":"observation","label":"Adult Kayleigh passes stranger Evan (alt cut) / absence","at":{"worldRef":"w_neverborn","timeLabel":"years later"},"agents":["kayleigh"]},{"id":"e_cost","type":"reveal","label":"Each fix harms someone else — butterfly cost","at":{"worldRef":"w_base","timeLabel":"meta"},"agents":["evan"]}],"edges":[{"id":"c1","kind":"causal","from":"e_blackouts","to":"e_read"},{"id":"c2","kind":"causal","from":"e_read","to":"e_fix1"},{"id":"c3","kind":"causal","from":"e_fix1","to":"e_wake_prison"},{"id":"c4","kind":"world_relation","from":"w_base","to":"w_prison","relation":"supersedes"},{"id":"c5","kind":"causal","from":"e_fix2","to":"e_wake_amp"},{"id":"c6","kind":"world_relation","from":"w_base","to":"w_amputee","relation":"supersedes"},{"id":"c7","kind":"intervention","from":"e_final","to":"e_fork_never"},{"id":"c8","kind":"world_relation","from":"w_base","to":"w_neverborn","relation":"forksFrom"},{"id":"c9","kind":"temporal","from":"e_fork_never","to":"e_street"},{"id":"c10","kind":"causal","from":"e_fix1","to":"e_cost"}],"interventions":[{"id":"iv_journals","eventId":"e_fix1","ruleEffects":[{"ruleSetId":"mutable_ripple","effect":"Past body overwrite ripples entire adulthood"}]},{"id":"iv_unborn","eventId":"e_final","ruleEffects":[{"ruleSetId":"mutable_ripple","effect":"Removing self collapses harmful timeline for others"}]}],"outcome":{"summary":"Cascading personal rewrites; theatrical ending removes Evan so Kayleigh can live unharmed.","endWorldRefs":["w_neverborn"]}}
+{
+  "meta": {
+    "id": "the-butterfly-effect",
+    "title": "The Butterfly Effect",
+    "year": 2004,
+    "medium": "film",
+    "sources": [
+      "Eric Bress & J. Mackye Gruber (2004)",
+      "time-travel-archive/films/the-butterfly-effect.md",
+      "time-travel-archive true-deep wave 2026-09-06"
+    ]
+  },
+  "ruleSetIds": [
+    "mutable_ripple",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "mutable_ripple",
+  "mixinRuleSetIds": [
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_base",
+      "label": "Baseline damaged adulthood",
+      "spanLabel": "childhood→college"
+    },
+    {
+      "kind": "branch",
+      "id": "w_prison",
+      "label": "Rewrite: Kayleigh murdered path / prison",
+      "parentRef": "w_base",
+      "forkLabel": "journal jump #1"
+    },
+    {
+      "kind": "branch",
+      "id": "w_amputee",
+      "label": "Rewrite: fraternity / severed hands",
+      "parentRef": "w_base",
+      "forkLabel": "journal jump #2"
+    },
+    {
+      "kind": "branch",
+      "id": "w_neverborn",
+      "label": "Final: Evan never born (theatrical)",
+      "parentRef": "w_base",
+      "forkLabel": "umbilical self-strangle"
+    }
+  ],
+  "agents": [
+    {
+      "id": "evan",
+      "label": "Evan Treborn",
+      "identityGroup": "evan",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_base"
+    },
+    {
+      "id": "kayleigh",
+      "label": "Kayleigh Miller",
+      "identityGroup": "kayleigh",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_base"
+    },
+    {
+      "id": "tommy",
+      "label": "Tommy Miller",
+      "homeWorldRef": "w_base"
+    },
+    {
+      "id": "lenny",
+      "label": "Lenny",
+      "homeWorldRef": "w_base"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_blackouts",
+      "type": "ordinary",
+      "label": "Childhood blackouts / journals",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "childhood"
+      },
+      "agents": [
+        "evan",
+        "kayleigh",
+        "tommy"
+      ]
+    },
+    {
+      "id": "e_read",
+      "type": "departure",
+      "label": "College Evan reads journals → body past",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "college"
+      },
+      "agents": [
+        "evan"
+      ],
+      "payload": {
+        "travelMode": "perception",
+        "note": "consciousness to past body"
+      }
+    },
+    {
+      "id": "e_fix1",
+      "type": "intervention",
+      "label": "First childhood fix attempt",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "past"
+      },
+      "agents": [
+        "evan",
+        "kayleigh"
+      ]
+    },
+    {
+      "id": "e_wake_prison",
+      "type": "arrival",
+      "label": "Wake into prison timeline",
+      "at": {
+        "worldRef": "w_prison",
+        "timeLabel": "adult"
+      },
+      "agents": [
+        "evan"
+      ]
+    },
+    {
+      "id": "e_fix2",
+      "type": "intervention",
+      "label": "Further journal rewrites cascade",
+      "at": {
+        "worldRef": "w_prison",
+        "timeLabel": "past"
+      },
+      "agents": [
+        "evan"
+      ]
+    },
+    {
+      "id": "e_wake_amp",
+      "type": "arrival",
+      "label": "Wake into amputee / frat timeline",
+      "at": {
+        "worldRef": "w_amputee",
+        "timeLabel": "adult"
+      },
+      "agents": [
+        "evan",
+        "kayleigh"
+      ]
+    },
+    {
+      "id": "e_final",
+      "type": "intervention",
+      "label": "In utero: strangle self with cord",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "birth"
+      },
+      "agents": [
+        "evan"
+      ]
+    },
+    {
+      "id": "e_fork_never",
+      "type": "branch_fork",
+      "label": "Evan never born; Kayleigh spared",
+      "at": {
+        "worldRef": "w_neverborn",
+        "timeLabel": "life without Evan"
+      },
+      "agents": [
+        "kayleigh"
+      ]
+    },
+    {
+      "id": "e_street",
+      "type": "observation",
+      "label": "Adult Kayleigh passes stranger Evan (alt cut) / absence",
+      "at": {
+        "worldRef": "w_neverborn",
+        "timeLabel": "years later"
+      },
+      "agents": [
+        "kayleigh"
+      ]
+    },
+    {
+      "id": "e_cost",
+      "type": "reveal",
+      "label": "Each fix harms someone else — butterfly cost",
+      "at": {
+        "worldRef": "w_base",
+        "timeLabel": "meta"
+      },
+      "agents": [
+        "evan"
+      ]
+    },
+    {
+      "id": "ev_journal",
+      "label": "Journals enable past occupation",
+      "timeLabel": "college"
+    },
+    {
+      "id": "ev_branches",
+      "label": "Cascade of damaged timelines",
+      "timeLabel": "attempts"
+    },
+    {
+      "id": "ev_terminal",
+      "label": "Theatrical exile OR Director in-utero erase",
+      "timeLabel": "ending fork"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_blackouts",
+      "to": "e_read"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_read",
+      "to": "e_fix1"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_fix1",
+      "to": "e_wake_prison"
+    },
+    {
+      "id": "c4",
+      "kind": "world_relation",
+      "from": "w_base",
+      "to": "w_prison",
+      "relation": "supersedes"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_fix2",
+      "to": "e_wake_amp"
+    },
+    {
+      "id": "c6",
+      "kind": "world_relation",
+      "from": "w_base",
+      "to": "w_amputee",
+      "relation": "supersedes"
+    },
+    {
+      "id": "c7",
+      "kind": "intervention",
+      "from": "e_final",
+      "to": "e_fork_never"
+    },
+    {
+      "id": "c8",
+      "kind": "world_relation",
+      "from": "w_base",
+      "to": "w_neverborn",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c9",
+      "kind": "temporal",
+      "from": "e_fork_never",
+      "to": "e_street"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_fix1",
+      "to": "e_cost"
+    },
+    {
+      "from": "ev_journal",
+      "to": "ev_branches",
+      "type": "causes"
+    },
+    {
+      "from": "ev_branches",
+      "to": "ev_terminal",
+      "type": "leads_to"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_journals",
+      "eventId": "e_fix1",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Past body overwrite ripples entire adulthood"
+        }
+      ]
+    },
+    {
+      "id": "iv_unborn",
+      "eventId": "e_final",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Removing self collapses harmful timeline for others"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Cascading personal rewrites; theatrical ending removes Evan so Kayleigh can live unharmed.",
+    "endWorldRefs": [
+      "w_neverborn"
+    ]
+  }
+}

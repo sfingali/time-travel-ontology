@@ -1,1 +1,421 @@
-{"meta":{"id":"eeaao","title":"Everything Everywhere All at Once","year":2022,"medium":"film","sources":["Daniels (2022)","time-travel-archive/films/everything-everywhere-all-at-once.md"]},"ruleSetIds":["multiverse_contact","branch_on_intervention"],"primaryRuleSetId":"multiverse_contact","mixinRuleSetIds":["branch_on_intervention"],"topologyPatternId":"dual_parallel_pair","worlds":[{"kind":"parallel_world","id":"w_alpha","label":"Alpha-verse (verse-jump HQ)","correspondenceKey":"wang_family"},{"kind":"parallel_world","id":"w_irs","label":"IRS laundromat universe (home)","correspondenceKey":"wang_family","mirrorOf":"w_alpha","correspondenceMap":[{"localKey":"evelyn","remoteWorldRef":"w_alpha","remoteKey":"alpha_evelyn"}]},{"kind":"parallel_world","id":"w_hotdog","label":"Hot-dog fingers universe","correspondenceKey":"wang_family"},{"kind":"parallel_world","id":"w_movie","label":"Movie-star Evelyn universe","correspondenceKey":"wang_family"},{"kind":"parallel_world","id":"w_rock","label":"Rock universe","correspondenceKey":"wang_family"},{"kind":"parallel_world","id":"w_bagel","label":"Everything Bagel / Jobu collapse space","correspondenceKey":"jobu"}],"agents":[{"id":"evelyn","label":"Evelyn Wang","identityGroup":"evelyn","continuityRole":"primary","homeWorldRef":"w_irs"},{"id":"alpha_waymond","label":"Alpha Waymond","identityGroup":"waymond","continuityRole":"counterpart","homeWorldRef":"w_alpha"},{"id":"waymond","label":"Waymond Wang","identityGroup":"waymond","continuityRole":"primary","homeWorldRef":"w_irs"},{"id":"joy","label":"Joy Wang","identityGroup":"joy","continuityRole":"primary","homeWorldRef":"w_irs"},{"id":"jobu","label":"Jobu Tupaki","identityGroup":"joy","continuityRole":"variant","homeWorldRef":"w_bagel","continuedFrom":"joy"},{"id":"gong_gong","label":"Gong Gong","homeWorldRef":"w_irs"},{"id":"deirdre","label":"Deirdre Beaubeirdre","homeWorldRef":"w_irs"}],"events":[{"id":"e_irs","type":"ordinary","label":"IRS audit day chaos","at":{"worldRef":"w_irs","timeLabel":"morning"},"agents":["evelyn","waymond","joy","deirdre"]},{"id":"e_contact","type":"contact","label":"Alpha Waymond verse-jumps into Waymond","at":{"worldRef":"w_irs","timeLabel":"elevator"},"agents":["alpha_waymond","evelyn"],"payload":{"travelMode":"quantum"}},{"id":"e_jump","type":"departure","label":"Evelyn learns verse-jumping via absurd acts","at":{"worldRef":"w_irs","timeLabel":"office"},"agents":["evelyn"],"payload":{"travelMode":"quantum"}},{"id":"e_hotdog","type":"arrival","label":"Visit hot-dog fingers world","at":{"worldRef":"w_hotdog","timeLabel":"jump"},"agents":["evelyn","waymond"],"payload":{"travelMode":"quantum"}},{"id":"e_movie","type":"arrival","label":"Movie-star life glimpse","at":{"worldRef":"w_movie","timeLabel":"jump"},"agents":["evelyn"],"payload":{"travelMode":"quantum"}},{"id":"e_jobu","type":"reveal","label":"Jobu Tupaki — Joy who verse-jumped too far","at":{"worldRef":"w_bagel","timeLabel":"confrontation"},"agents":["jobu","evelyn","joy"],"payload":{"identityNote":"all Joy variants"}},{"id":"e_bagel","type":"collapse","label":"Everything Bagel — nihilist attractor","at":{"worldRef":"w_bagel","timeLabel":"climax"},"agents":["jobu"],"payload":{"artifactKind":"other","artifactId":"everything_bagel"}},{"id":"e_kindness","type":"intervention","label":"Evelyn chooses kindness across verses","at":{"worldRef":"w_irs","timeLabel":"fight→hug"},"agents":["evelyn","joy","waymond","gong_gong","deirdre"]},{"id":"e_rock","type":"contact","label":"Rock universe reconciliation moment","at":{"worldRef":"w_rock","timeLabel":"quiet"},"agents":["evelyn","jobu"]},{"id":"e_stay","type":"ordinary","label":"Stay present with family in home verse","at":{"worldRef":"w_irs","timeLabel":"epilogue"},"agents":["evelyn","waymond","joy"]}],"edges":[{"id":"wr1","kind":"world_relation","from":"w_irs","to":"w_alpha","relation":"correspondsTo"},{"id":"wr2","kind":"world_relation","from":"w_hotdog","to":"w_irs","relation":"correspondsTo"},{"id":"wr3","kind":"world_relation","from":"w_movie","to":"w_irs","relation":"correspondsTo"},{"id":"wr4","kind":"world_relation","from":"w_bagel","to":"w_irs","relation":"attractsToward","label":"nihilist pull"},{"id":"c1","kind":"causal","from":"e_irs","to":"e_contact"},{"id":"c2","kind":"causal","from":"e_contact","to":"e_jump"},{"id":"c3","kind":"causal","from":"e_jump","to":"e_hotdog"},{"id":"c4","kind":"causal","from":"e_hotdog","to":"e_movie"},{"id":"c5","kind":"causal","from":"e_movie","to":"e_jobu"},{"id":"c6","kind":"causal","from":"e_jobu","to":"e_bagel"},{"id":"c7","kind":"causal","from":"e_bagel","to":"e_kindness"},{"id":"c8","kind":"causal","from":"e_kindness","to":"e_rock"},{"id":"c9","kind":"causal","from":"e_rock","to":"e_stay"},{"id":"id1","kind":"identity","from":"joy","to":"jobu"},{"id":"id2","kind":"identity","from":"waymond","to":"alpha_waymond"},{"id":"iv1","kind":"intervention","from":"e_kindness","to":"e_stay"}],"interventions":[{"id":"iv_kind","eventId":"e_kindness","ruleEffects":[{"ruleSetId":"multiverse_contact","effect":"Verse-jump skills used to heal rather than dominate"},{"ruleSetId":"branch_on_intervention","effect":"Each verse is a lived parallel, not overwrite"}]}],"outcome":{"summary":"Evelyn rejects Bagel nihilism; reconnects with Joy/Jobu and stays present in her home universe.","endWorldRefs":["w_irs"]}}
+{
+  "meta": {
+    "id": "eeaao",
+    "title": "Everything Everywhere All at Once",
+    "year": 2022,
+    "medium": "film",
+    "sources": [
+      "Daniels (2022)",
+      "time-travel-archive/films/everything-everywhere-all-at-once.md",
+      "time-travel-archive true-deep wave 2026-09-06"
+    ]
+  },
+  "ruleSetIds": [
+    "multiverse_contact",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "multiverse_contact",
+  "mixinRuleSetIds": [
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "dual_parallel_pair",
+  "worlds": [
+    {
+      "kind": "parallel_world",
+      "id": "w_alpha",
+      "label": "Alpha-verse (verse-jump HQ)",
+      "correspondenceKey": "wang_family"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_irs",
+      "label": "IRS laundromat universe (home)",
+      "correspondenceKey": "wang_family",
+      "mirrorOf": "w_alpha",
+      "correspondenceMap": [
+        {
+          "localKey": "evelyn",
+          "remoteWorldRef": "w_alpha",
+          "remoteKey": "alpha_evelyn"
+        }
+      ]
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_hotdog",
+      "label": "Hot-dog fingers universe",
+      "correspondenceKey": "wang_family"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_movie",
+      "label": "Movie-star Evelyn universe",
+      "correspondenceKey": "wang_family"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_rock",
+      "label": "Rock universe",
+      "correspondenceKey": "wang_family"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_bagel",
+      "label": "Everything Bagel / Jobu collapse space",
+      "correspondenceKey": "jobu"
+    }
+  ],
+  "agents": [
+    {
+      "id": "evelyn",
+      "label": "Evelyn Wang",
+      "identityGroup": "evelyn",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_irs"
+    },
+    {
+      "id": "alpha_waymond",
+      "label": "Alpha Waymond",
+      "identityGroup": "waymond",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_alpha"
+    },
+    {
+      "id": "waymond",
+      "label": "Waymond Wang",
+      "identityGroup": "waymond",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_irs"
+    },
+    {
+      "id": "joy",
+      "label": "Joy Wang",
+      "identityGroup": "joy",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_irs"
+    },
+    {
+      "id": "jobu",
+      "label": "Jobu Tupaki",
+      "identityGroup": "joy",
+      "continuityRole": "variant",
+      "homeWorldRef": "w_bagel",
+      "continuedFrom": "joy"
+    },
+    {
+      "id": "gong_gong",
+      "label": "Gong Gong",
+      "homeWorldRef": "w_irs"
+    },
+    {
+      "id": "deirdre",
+      "label": "Deirdre Beaubeirdre",
+      "homeWorldRef": "w_irs"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_irs",
+      "type": "ordinary",
+      "label": "IRS audit day chaos",
+      "at": {
+        "worldRef": "w_irs",
+        "timeLabel": "morning"
+      },
+      "agents": [
+        "evelyn",
+        "waymond",
+        "joy",
+        "deirdre"
+      ]
+    },
+    {
+      "id": "e_contact",
+      "type": "contact",
+      "label": "Alpha Waymond verse-jumps into Waymond",
+      "at": {
+        "worldRef": "w_irs",
+        "timeLabel": "elevator"
+      },
+      "agents": [
+        "alpha_waymond",
+        "evelyn"
+      ],
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_jump",
+      "type": "departure",
+      "label": "Evelyn learns verse-jumping via absurd acts",
+      "at": {
+        "worldRef": "w_irs",
+        "timeLabel": "office"
+      },
+      "agents": [
+        "evelyn"
+      ],
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_hotdog",
+      "type": "arrival",
+      "label": "Visit hot-dog fingers world",
+      "at": {
+        "worldRef": "w_hotdog",
+        "timeLabel": "jump"
+      },
+      "agents": [
+        "evelyn",
+        "waymond"
+      ],
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_movie",
+      "type": "arrival",
+      "label": "Movie-star life glimpse",
+      "at": {
+        "worldRef": "w_movie",
+        "timeLabel": "jump"
+      },
+      "agents": [
+        "evelyn"
+      ],
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_jobu",
+      "type": "reveal",
+      "label": "Jobu Tupaki — Joy who verse-jumped too far",
+      "at": {
+        "worldRef": "w_bagel",
+        "timeLabel": "confrontation"
+      },
+      "agents": [
+        "jobu",
+        "evelyn",
+        "joy"
+      ],
+      "payload": {
+        "identityNote": "all Joy variants"
+      }
+    },
+    {
+      "id": "e_bagel",
+      "type": "collapse",
+      "label": "Everything Bagel — nihilist attractor",
+      "at": {
+        "worldRef": "w_bagel",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "jobu"
+      ],
+      "payload": {
+        "artifactKind": "other",
+        "artifactId": "everything_bagel"
+      }
+    },
+    {
+      "id": "e_kindness",
+      "type": "intervention",
+      "label": "Evelyn chooses kindness across verses",
+      "at": {
+        "worldRef": "w_irs",
+        "timeLabel": "fight→hug"
+      },
+      "agents": [
+        "evelyn",
+        "joy",
+        "waymond",
+        "gong_gong",
+        "deirdre"
+      ]
+    },
+    {
+      "id": "e_rock",
+      "type": "contact",
+      "label": "Rock universe reconciliation moment",
+      "at": {
+        "worldRef": "w_rock",
+        "timeLabel": "quiet"
+      },
+      "agents": [
+        "evelyn",
+        "jobu"
+      ]
+    },
+    {
+      "id": "e_stay",
+      "type": "ordinary",
+      "label": "Stay present with family in home verse",
+      "at": {
+        "worldRef": "w_irs",
+        "timeLabel": "epilogue"
+      },
+      "agents": [
+        "evelyn",
+        "waymond",
+        "joy"
+      ]
+    },
+    {
+      "id": "ev_alpha",
+      "label": "Alpha Waymond recruits Evelyn",
+      "timeLabel": "IRS"
+    },
+    {
+      "id": "ev_jobu",
+      "label": "Jobu/bagel nihilism confrontation",
+      "timeLabel": "multiverse"
+    },
+    {
+      "id": "ev_kindness",
+      "label": "Kindness wins; Joy reached",
+      "timeLabel": "climax"
+    }
+  ],
+  "edges": [
+    {
+      "id": "wr1",
+      "kind": "world_relation",
+      "from": "w_irs",
+      "to": "w_alpha",
+      "relation": "correspondsTo"
+    },
+    {
+      "id": "wr2",
+      "kind": "world_relation",
+      "from": "w_hotdog",
+      "to": "w_irs",
+      "relation": "correspondsTo"
+    },
+    {
+      "id": "wr3",
+      "kind": "world_relation",
+      "from": "w_movie",
+      "to": "w_irs",
+      "relation": "correspondsTo"
+    },
+    {
+      "id": "wr4",
+      "kind": "world_relation",
+      "from": "w_bagel",
+      "to": "w_irs",
+      "relation": "attractsToward",
+      "label": "nihilist pull"
+    },
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_irs",
+      "to": "e_contact"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_contact",
+      "to": "e_jump"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_jump",
+      "to": "e_hotdog"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_hotdog",
+      "to": "e_movie"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_movie",
+      "to": "e_jobu"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_jobu",
+      "to": "e_bagel"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_bagel",
+      "to": "e_kindness"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_kindness",
+      "to": "e_rock"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_rock",
+      "to": "e_stay"
+    },
+    {
+      "id": "id1",
+      "kind": "identity",
+      "from": "joy",
+      "to": "jobu"
+    },
+    {
+      "id": "id2",
+      "kind": "identity",
+      "from": "waymond",
+      "to": "alpha_waymond"
+    },
+    {
+      "id": "iv1",
+      "kind": "intervention",
+      "from": "e_kindness",
+      "to": "e_stay"
+    },
+    {
+      "from": "ev_alpha",
+      "to": "ev_jobu",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_jobu",
+      "to": "ev_kindness",
+      "type": "resolved_by"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_kind",
+      "eventId": "e_kindness",
+      "ruleEffects": [
+        {
+          "ruleSetId": "multiverse_contact",
+          "effect": "Verse-jump skills used to heal rather than dominate"
+        },
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Each verse is a lived parallel, not overwrite"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Evelyn rejects Bagel nihilism; reconnects with Joy/Jobu and stays present in her home universe.",
+    "endWorldRefs": [
+      "w_irs"
+    ]
+  }
+}

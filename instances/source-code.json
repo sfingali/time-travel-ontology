@@ -1,1 +1,292 @@
-{"meta":{"id":"source-code","title":"Source Code","year":2011,"medium":"film","sources":["Duncan Jones; Ben Ripley (2011)","time-travel-archive/films/source-code.md"]},"ruleSetIds":["temporal_loop_exit","branch_on_intervention","perception_nonlinear"],"primaryRuleSetId":"temporal_loop_exit","mixinRuleSetIds":["branch_on_intervention","perception_nonlinear"],"topologyPatternId":"branching_tree","worlds":[{"kind":"timeline","id":"w_capsule","label":"Goodwin capsule / Source Code lab","spanLabel":"mission present"},{"kind":"branch","id":"w_train_sim","label":"8-minute train reconstruction (iterated)","parentRef":"w_capsule","forkLabel":"Source Code inject"},{"kind":"branch","id":"w_alt_chicago","label":"Surviving alt continuum Colter keeps","parentRef":"w_train_sim","forkLabel":"bomb defused ending"}],"agents":[{"id":"colter","label":"Capt. Colter Stevens","identityGroup":"colter","continuityRole":"observer_persistent","homeWorldRef":"w_capsule"},{"id":"goodwin","label":"Colleen Goodwin","homeWorldRef":"w_capsule"},{"id":"christina","label":"Christina Warren","homeWorldRef":"w_train_sim"},{"id":"rutledge","label":"Dr. Rutledge","homeWorldRef":"w_capsule"}],"events":[{"id":"e_wake","type":"loop_reset","label":"Colter wakes as Sean on train","at":{"worldRef":"w_train_sim","timeLabel":"T-8min"},"agents":["colter","christina"],"payload":{"iteration":1,"travelMode":"quantum"}},{"id":"e_bomb","type":"death","label":"Train bomb; Colter reset","at":{"worldRef":"w_train_sim","timeLabel":"T-0"},"agents":["colter"]},{"id":"e_brief","type":"ordinary","label":"Goodwin briefs: find bomber for real world","at":{"worldRef":"w_capsule","timeLabel":"between"},"agents":["colter","goodwin","rutledge"]},{"id":"e_id_bomber","type":"observation","label":"Bomber identified after N loops","at":{"worldRef":"w_train_sim","timeLabel":"loop N"},"agents":["colter"]},{"id":"e_real_stop","type":"intervention","label":"Real-world bomber stopped (mission success)","at":{"worldRef":"w_capsule","timeLabel":"mission"},"agents":["goodwin"]},{"id":"e_last_run","type":"intervention","label":"Unauthorized last run: defuse on-train","at":{"worldRef":"w_train_sim","timeLabel":"final 8min"},"agents":["colter","christina"]},{"id":"e_fork_alt","type":"branch_fork","label":"Alt continuum continues; Colter remains","at":{"worldRef":"w_alt_chicago","timeLabel":"after defusal"},"agents":["colter","christina"]},{"id":"e_text","type":"ordinary","label":"Alt Colter texts Goodwin — worlds diverge","at":{"worldRef":"w_alt_chicago","timeLabel":"afternoon"},"agents":["colter","goodwin"]},{"id":"e_shell","type":"death","label":"Capsule body ended; mind persists in alt","at":{"worldRef":"w_capsule","timeLabel":"shutdown"},"agents":["colter","goodwin"]}],"edges":[{"id":"c1","kind":"causal","from":"e_wake","to":"e_bomb"},{"id":"c2","kind":"causal","from":"e_bomb","to":"e_brief"},{"id":"c3","kind":"temporal","from":"e_brief","to":"e_wake","label":"re-inject"},{"id":"c4","kind":"causal","from":"e_id_bomber","to":"e_real_stop"},{"id":"c5","kind":"intervention","from":"e_last_run","to":"e_fork_alt"},{"id":"c6","kind":"world_relation","from":"w_train_sim","to":"w_alt_chicago","relation":"forksFrom"},{"id":"c7","kind":"causal","from":"e_fork_alt","to":"e_text"},{"id":"c8","kind":"identity","from":"e_shell","to":"e_fork_alt","label":"consciousness continuity"}],"interventions":[{"id":"iv_last","eventId":"e_last_run","ruleEffects":[{"ruleSetId":"temporal_loop_exit","effect":"Final successful 8 minutes exits the failure loop"},{"ruleSetId":"branch_on_intervention","effect":"Defusal forks a kept continuum rather than mere simulation discard"}]}],"outcome":{"summary":"Mission bomber stopped in capsule world; Colter's last run forks a lived-in alt Chicago.","endWorldRefs":["w_alt_chicago","w_capsule"]}}
+{
+  "meta": {
+    "id": "source-code",
+    "title": "Source Code",
+    "year": 2011,
+    "medium": "film",
+    "sources": [
+      "Duncan Jones; Ben Ripley (2011)",
+      "time-travel-archive/films/source-code.md",
+      "time-travel-archive true-deep wave 2026-09-06"
+    ]
+  },
+  "ruleSetIds": [
+    "temporal_loop_exit",
+    "branch_on_intervention",
+    "perception_nonlinear"
+  ],
+  "primaryRuleSetId": "temporal_loop_exit",
+  "mixinRuleSetIds": [
+    "branch_on_intervention",
+    "perception_nonlinear"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_capsule",
+      "label": "Goodwin capsule / Source Code lab",
+      "spanLabel": "mission present"
+    },
+    {
+      "kind": "branch",
+      "id": "w_train_sim",
+      "label": "8-minute train reconstruction (iterated)",
+      "parentRef": "w_capsule",
+      "forkLabel": "Source Code inject"
+    },
+    {
+      "kind": "branch",
+      "id": "w_alt_chicago",
+      "label": "Surviving alt continuum Colter keeps",
+      "parentRef": "w_train_sim",
+      "forkLabel": "bomb defused ending"
+    }
+  ],
+  "agents": [
+    {
+      "id": "colter",
+      "label": "Capt. Colter Stevens",
+      "identityGroup": "colter",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_capsule"
+    },
+    {
+      "id": "goodwin",
+      "label": "Colleen Goodwin",
+      "homeWorldRef": "w_capsule"
+    },
+    {
+      "id": "christina",
+      "label": "Christina Warren",
+      "homeWorldRef": "w_train_sim"
+    },
+    {
+      "id": "rutledge",
+      "label": "Dr. Rutledge",
+      "homeWorldRef": "w_capsule"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_wake",
+      "type": "loop_reset",
+      "label": "Colter wakes as Sean on train",
+      "at": {
+        "worldRef": "w_train_sim",
+        "timeLabel": "T-8min"
+      },
+      "agents": [
+        "colter",
+        "christina"
+      ],
+      "payload": {
+        "iteration": 1,
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_bomb",
+      "type": "death",
+      "label": "Train bomb; Colter reset",
+      "at": {
+        "worldRef": "w_train_sim",
+        "timeLabel": "T-0"
+      },
+      "agents": [
+        "colter"
+      ]
+    },
+    {
+      "id": "e_brief",
+      "type": "ordinary",
+      "label": "Goodwin briefs: find bomber for real world",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "between"
+      },
+      "agents": [
+        "colter",
+        "goodwin",
+        "rutledge"
+      ]
+    },
+    {
+      "id": "e_id_bomber",
+      "type": "observation",
+      "label": "Bomber identified after N loops",
+      "at": {
+        "worldRef": "w_train_sim",
+        "timeLabel": "loop N"
+      },
+      "agents": [
+        "colter"
+      ]
+    },
+    {
+      "id": "e_real_stop",
+      "type": "intervention",
+      "label": "Real-world bomber stopped (mission success)",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "mission"
+      },
+      "agents": [
+        "goodwin"
+      ]
+    },
+    {
+      "id": "e_last_run",
+      "type": "intervention",
+      "label": "Unauthorized last run: defuse on-train",
+      "at": {
+        "worldRef": "w_train_sim",
+        "timeLabel": "final 8min"
+      },
+      "agents": [
+        "colter",
+        "christina"
+      ]
+    },
+    {
+      "id": "e_fork_alt",
+      "type": "branch_fork",
+      "label": "Alt continuum continues; Colter remains",
+      "at": {
+        "worldRef": "w_alt_chicago",
+        "timeLabel": "after defusal"
+      },
+      "agents": [
+        "colter",
+        "christina"
+      ]
+    },
+    {
+      "id": "e_text",
+      "type": "ordinary",
+      "label": "Alt Colter texts Goodwin — worlds diverge",
+      "at": {
+        "worldRef": "w_alt_chicago",
+        "timeLabel": "afternoon"
+      },
+      "agents": [
+        "colter",
+        "goodwin"
+      ]
+    },
+    {
+      "id": "e_shell",
+      "type": "death",
+      "label": "Capsule body ended; mind persists in alt",
+      "at": {
+        "worldRef": "w_capsule",
+        "timeLabel": "shutdown"
+      },
+      "agents": [
+        "colter",
+        "goodwin"
+      ]
+    },
+    {
+      "id": "ev_eight",
+      "label": "Eight-minute train iterations",
+      "timeLabel": "runs"
+    },
+    {
+      "id": "ev_bomber",
+      "label": "Bomber identified/stopped",
+      "timeLabel": "solution"
+    },
+    {
+      "id": "ev_branch_email",
+      "label": "Final jump continuum + Goodwin email",
+      "timeLabel": "ending"
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_wake",
+      "to": "e_bomb"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_bomb",
+      "to": "e_brief"
+    },
+    {
+      "id": "c3",
+      "kind": "temporal",
+      "from": "e_brief",
+      "to": "e_wake",
+      "label": "re-inject"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_id_bomber",
+      "to": "e_real_stop"
+    },
+    {
+      "id": "c5",
+      "kind": "intervention",
+      "from": "e_last_run",
+      "to": "e_fork_alt"
+    },
+    {
+      "id": "c6",
+      "kind": "world_relation",
+      "from": "w_train_sim",
+      "to": "w_alt_chicago",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_fork_alt",
+      "to": "e_text"
+    },
+    {
+      "id": "c8",
+      "kind": "identity",
+      "from": "e_shell",
+      "to": "e_fork_alt",
+      "label": "consciousness continuity"
+    },
+    {
+      "from": "ev_eight",
+      "to": "ev_bomber",
+      "type": "enables"
+    },
+    {
+      "from": "ev_bomber",
+      "to": "ev_branch_email",
+      "type": "leads_to"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_last",
+      "eventId": "e_last_run",
+      "ruleEffects": [
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Final successful 8 minutes exits the failure loop"
+        },
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Defusal forks a kept continuum rather than mere simulation discard"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Mission bomber stopped in capsule world; Colter's last run forks a lived-in alt Chicago.",
+    "endWorldRefs": [
+      "w_alt_chicago",
+      "w_capsule"
+    ]
+  }
+}

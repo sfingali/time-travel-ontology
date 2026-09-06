@@ -6,7 +6,8 @@
     "medium": "film",
     "sources": [
       "James Cameron & Gale Anne Hurd (1984)",
-      "time-travel-archive/films/terminator.md"
+      "time-travel-archive/films/terminator.md",
+      "time-travel-archive true-deep wave 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -24,7 +25,7 @@
     {
       "kind": "timeline",
       "id": "w_t1",
-      "label": "1984\u21942029 closed war timeline",
+      "label": "1984↔2029 closed war timeline",
       "spanLabel": "1984 / 2029",
       "description": "John's existence bootstrapped; Judgment Day tone inevitable"
     }
@@ -214,6 +215,21 @@
       "payload": {
         "bootstrapEntity": "reese_mission"
       }
+    },
+    {
+      "id": "ev_arrive",
+      "label": "T-800 and Reese arrive 1984",
+      "timeLabel": "1984"
+    },
+    {
+      "id": "ev_conceive",
+      "label": "John conceived — paternal bootstrap",
+      "timeLabel": "motel"
+    },
+    {
+      "id": "ev_factory",
+      "label": "Factory destruction; Reese dies",
+      "timeLabel": "climax"
     }
   ],
   "edges": [
@@ -277,7 +293,22 @@
       "kind": "identity",
       "from": "reese",
       "to": "john",
-      "label": "father\u2192son bootstrap"
+      "label": "father→son bootstrap"
+    },
+    {
+      "from": "ev_arrive",
+      "to": "ev_conceive",
+      "type": "enables"
+    },
+    {
+      "from": "ev_conceive",
+      "to": "ev_factory",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_factory",
+      "to": "ev_arrive",
+      "type": "bootstrap_causes"
     }
   ],
   "interventions": [

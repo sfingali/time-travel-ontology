@@ -6,51 +6,284 @@
     "medium": "film",
     "sources": [
       "Gregory Hoblit; Toby Emmerich (2000)",
-      "time-travel-archive/films/frequency.md"
+      "time-travel-archive/films/frequency.md",
+      "time-travel-archive true-deep wave 2026-09-06"
     ]
   },
-  "ruleSetIds": ["mutable_ripple", "fixed_novikov"],
+  "ruleSetIds": [
+    "mutable_ripple",
+    "fixed_novikov"
+  ],
   "primaryRuleSetId": "mutable_ripple",
-  "mixinRuleSetIds": ["fixed_novikov"],
+  "mixinRuleSetIds": [
+    "fixed_novikov"
+  ],
   "topologyPatternId": "mutable_single_with_ripples",
   "worlds": [
-    {"kind": "timeline", "id": "w_1999", "label": "1999 John timeline", "spanLabel": "1999"},
-    {"kind": "branch", "id": "w_1969", "label": "1969 Frank radio night (linked)", "parentRef": "w_1999", "forkLabel": "aurora ham link", "description": "Same continuum; past end mutable via radio"},
-    {"kind": "branch", "id": "w_saved", "label": "Rippled present: Frank survives", "parentRef": "w_1999", "forkLabel": "fire advice"}
+    {
+      "kind": "timeline",
+      "id": "w_1999",
+      "label": "1999 John timeline",
+      "spanLabel": "1999"
+    },
+    {
+      "kind": "branch",
+      "id": "w_1969",
+      "label": "1969 Frank radio night (linked)",
+      "parentRef": "w_1999",
+      "forkLabel": "aurora ham link",
+      "description": "Same continuum; past end mutable via radio"
+    },
+    {
+      "kind": "branch",
+      "id": "w_saved",
+      "label": "Rippled present: Frank survives",
+      "parentRef": "w_1999",
+      "forkLabel": "fire advice"
+    }
   ],
   "agents": [
-    {"id": "john", "label": "John Sullivan", "identityGroup": "john", "continuityRole": "primary", "homeWorldRef": "w_1999"},
-    {"id": "frank", "label": "Frank Sullivan", "identityGroup": "frank", "continuityRole": "primary", "homeWorldRef": "w_1969"},
-    {"id": "julia", "label": "Julia Sullivan", "homeWorldRef": "w_1969"},
-    {"id": "nightingale", "label": "Nightingale killer", "homeWorldRef": "w_1969"}
+    {
+      "id": "john",
+      "label": "John Sullivan",
+      "identityGroup": "john",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_1999"
+    },
+    {
+      "id": "frank",
+      "label": "Frank Sullivan",
+      "identityGroup": "frank",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_1969"
+    },
+    {
+      "id": "julia",
+      "label": "Julia Sullivan",
+      "homeWorldRef": "w_1969"
+    },
+    {
+      "id": "nightingale",
+      "label": "Nightingale killer",
+      "homeWorldRef": "w_1969"
+    }
   ],
   "events": [
-    {"id": "e_aurora", "type": "contact", "label": "Aurora + ham radio links 1969↔1999", "at": {"worldRef": "w_1999", "timeLabel": "1999 night"}, "agents": ["john", "frank"], "payload": {"travelMode": "other", "note": "voice-only cross-time"}},
-    {"id": "e_warn_fire", "type": "intervention", "label": "John warns Frank about warehouse fire", "at": {"worldRef": "w_1969", "timeLabel": "1969"}, "agents": ["john", "frank"]},
-    {"id": "e_frank_lives", "type": "branch_fork", "label": "Frank survives; photos/riples update", "at": {"worldRef": "w_saved", "timeLabel": "ripple"}, "agents": ["john", "frank"], "payload": {"signal": "photograph_update"}},
-    {"id": "e_mother_risk", "type": "ordinary", "label": "Ripple endangers Julia via serial killer path", "at": {"worldRef": "w_saved", "timeLabel": "1969–99"}, "agents": ["julia", "nightingale"]},
-    {"id": "e_catch_killer", "type": "intervention", "label": "Father-son coordination stops Nightingale", "at": {"worldRef": "w_1969", "timeLabel": "1969"}, "agents": ["frank", "john", "nightingale"]},
-    {"id": "e_share_life", "type": "ordinary", "label": "Shared baseball / life across link", "at": {"worldRef": "w_saved", "timeLabel": "ongoing"}, "agents": ["john", "frank"]},
-    {"id": "e_final_present", "type": "arrival", "label": "1999 present consolidated with Frank alive", "at": {"worldRef": "w_saved", "timeLabel": "1999"}, "agents": ["john", "frank", "julia"]},
-    {"id": "e_tension", "type": "reveal", "label": "Saving father creates new threats — ripple tension", "at": {"worldRef": "w_saved", "timeLabel": "mid"}, "agents": ["john"]}
+    {
+      "id": "e_aurora",
+      "type": "contact",
+      "label": "Aurora + ham radio links 1969↔1999",
+      "at": {
+        "worldRef": "w_1999",
+        "timeLabel": "1999 night"
+      },
+      "agents": [
+        "john",
+        "frank"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "note": "voice-only cross-time"
+      }
+    },
+    {
+      "id": "e_warn_fire",
+      "type": "intervention",
+      "label": "John warns Frank about warehouse fire",
+      "at": {
+        "worldRef": "w_1969",
+        "timeLabel": "1969"
+      },
+      "agents": [
+        "john",
+        "frank"
+      ]
+    },
+    {
+      "id": "e_frank_lives",
+      "type": "branch_fork",
+      "label": "Frank survives; photos/riples update",
+      "at": {
+        "worldRef": "w_saved",
+        "timeLabel": "ripple"
+      },
+      "agents": [
+        "john",
+        "frank"
+      ],
+      "payload": {
+        "signal": "photograph_update"
+      }
+    },
+    {
+      "id": "e_mother_risk",
+      "type": "ordinary",
+      "label": "Ripple endangers Julia via serial killer path",
+      "at": {
+        "worldRef": "w_saved",
+        "timeLabel": "1969–99"
+      },
+      "agents": [
+        "julia",
+        "nightingale"
+      ]
+    },
+    {
+      "id": "e_catch_killer",
+      "type": "intervention",
+      "label": "Father-son coordination stops Nightingale",
+      "at": {
+        "worldRef": "w_1969",
+        "timeLabel": "1969"
+      },
+      "agents": [
+        "frank",
+        "john",
+        "nightingale"
+      ]
+    },
+    {
+      "id": "e_share_life",
+      "type": "ordinary",
+      "label": "Shared baseball / life across link",
+      "at": {
+        "worldRef": "w_saved",
+        "timeLabel": "ongoing"
+      },
+      "agents": [
+        "john",
+        "frank"
+      ]
+    },
+    {
+      "id": "e_final_present",
+      "type": "arrival",
+      "label": "1999 present consolidated with Frank alive",
+      "at": {
+        "worldRef": "w_saved",
+        "timeLabel": "1999"
+      },
+      "agents": [
+        "john",
+        "frank",
+        "julia"
+      ]
+    },
+    {
+      "id": "e_tension",
+      "type": "reveal",
+      "label": "Saving father creates new threats — ripple tension",
+      "at": {
+        "worldRef": "w_saved",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "john"
+      ]
+    },
+    {
+      "id": "ev_radio",
+      "label": "HAM radio link 1969↔1999",
+      "timeLabel": "solar max"
+    },
+    {
+      "id": "ev_save_frank",
+      "label": "Frank survives fire",
+      "timeLabel": "1969"
+    },
+    {
+      "id": "ev_killer",
+      "label": "Nightingale case butterfly",
+      "timeLabel": "both eras"
+    },
+    {
+      "id": "ev_stable",
+      "label": "Stabilized happier 1999",
+      "timeLabel": "1999"
+    }
   ],
   "edges": [
-    {"id": "c1", "kind": "causal", "from": "e_aurora", "to": "e_warn_fire"},
-    {"id": "c2", "kind": "intervention", "from": "e_warn_fire", "to": "e_frank_lives"},
-    {"id": "c3", "kind": "world_relation", "from": "w_1999", "to": "w_saved", "relation": "supersedes"},
-    {"id": "c4", "kind": "causal", "from": "e_frank_lives", "to": "e_mother_risk"},
-    {"id": "c5", "kind": "causal", "from": "e_mother_risk", "to": "e_catch_killer"},
-    {"id": "c6", "kind": "causal", "from": "e_catch_killer", "to": "e_final_present"},
-    {"id": "c7", "kind": "temporal", "from": "e_frank_lives", "to": "e_share_life"},
-    {"id": "c8", "kind": "causal", "from": "e_frank_lives", "to": "e_tension"}
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_aurora",
+      "to": "e_warn_fire"
+    },
+    {
+      "id": "c2",
+      "kind": "intervention",
+      "from": "e_warn_fire",
+      "to": "e_frank_lives"
+    },
+    {
+      "id": "c3",
+      "kind": "world_relation",
+      "from": "w_1999",
+      "to": "w_saved",
+      "relation": "supersedes"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_frank_lives",
+      "to": "e_mother_risk"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_mother_risk",
+      "to": "e_catch_killer"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_catch_killer",
+      "to": "e_final_present"
+    },
+    {
+      "id": "c7",
+      "kind": "temporal",
+      "from": "e_frank_lives",
+      "to": "e_share_life"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_frank_lives",
+      "to": "e_tension"
+    },
+    {
+      "from": "ev_radio",
+      "to": "ev_save_frank",
+      "type": "enables"
+    },
+    {
+      "from": "ev_save_frank",
+      "to": "ev_killer",
+      "type": "causes"
+    },
+    {
+      "from": "ev_killer",
+      "to": "ev_stable",
+      "type": "resolved_to"
+    }
   ],
-  "interventions": [{
-    "id": "iv_fire",
-    "eventId": "e_warn_fire",
-    "ruleEffects": [{"ruleSetId": "mutable_ripple", "effect": "Past advice overwrites fire outcome and present photos"}]
-  }],
+  "interventions": [
+    {
+      "id": "iv_fire",
+      "eventId": "e_warn_fire",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Past advice overwrites fire outcome and present photos"
+        }
+      ]
+    }
+  ],
   "outcome": {
     "summary": "Radio-linked past mutation saves Frank and, after further ripples, the family; present consolidates.",
-    "endWorldRefs": ["w_saved"]
+    "endWorldRefs": [
+      "w_saved"
+    ]
   }
 }

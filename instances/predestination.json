@@ -1,1 +1,448 @@
-{"meta":{"id":"predestination","title":"Predestination","year":2014,"medium":"film","sources":["Spierig brothers; Heinlein All You Zombies","time-travel-archive/films/predestination.md"]},"ruleSetIds":["predestination_closed_loop","bootstrap_ontological","fixed_novikov"],"primaryRuleSetId":"predestination_closed_loop","mixinRuleSetIds":["bootstrap_ontological","fixed_novikov"],"topologyPatternId":"single_fixed_timeline","worlds":[{"kind":"timeline","id":"w_loop","label":"Closed predestination timeline","spanLabel":"orphanage→bombings→recruitment"}],"agents":[{"id":"jane","label":"Jane","identityGroup":"unicycle","continuityRole":"younger_self","homeWorldRef":"w_loop"},{"id":"john","label":"John / unmarried mother (post-transition)","identityGroup":"unicycle","continuityRole":"iteration","homeWorldRef":"w_loop","continuedFrom":"jane"},{"id":"bartender","label":"Bartender / temporal agent","identityGroup":"unicycle","continuityRole":"older_self","homeWorldRef":"w_loop","continuedFrom":"john"},{"id":"fizzle","label":"Fizzle Bomber","identityGroup":"unicycle","continuityRole":"bootstrap_sink","homeWorldRef":"w_loop","continuedFrom":"bartender"},{"id":"mr_robertson","label":"Mr Robertson","homeWorldRef":"w_loop"}],"events":[{"id":"e_orphan","type":"birth","label":"Baby left at orphanage","at":{"worldRef":"w_loop","timeLabel":"1945-ish orphanage"},"agents":["jane"],"payload":{"bootstrapEntity":"baby_jane"}},{"id":"e_seduction","type":"ordinary","label":"Jane seduced by mysterious lover","at":{"worldRef":"w_loop","timeLabel":"college era"},"agents":["jane","john"]},{"id":"e_birth","type":"birth","label":"Jane gives birth; baby stolen","at":{"worldRef":"w_loop","timeLabel":"maternity"},"agents":["jane"],"payload":{"bootstrapEntity":"baby_jane"}},{"id":"e_transition","type":"ordinary","label":"Gender transition Jane→John","at":{"worldRef":"w_loop","timeLabel":"post-birth"},"agents":["jane","john"]},{"id":"e_bar_story","type":"reveal","label":"John tells bartender the unbroken circle story","at":{"worldRef":"w_loop","timeLabel":"bar 1970s"},"agents":["john","bartender"]},{"id":"e_recruit","type":"departure","label":"John recruited into Temporal Agency","at":{"worldRef":"w_loop","timeLabel":"recruitment"},"agents":["john","bartender","mr_robertson"],"payload":{"travelMode":"machine"}},{"id":"e_lover_trip","type":"departure","label":"Agent ensures Jane meets lover (self)","at":{"worldRef":"w_loop","timeLabel":"college mission"},"agents":["bartender","jane"],"payload":{"travelMode":"machine","bootstrapEntity":"lover"}},{"id":"e_baby_drop","type":"arrival","label":"Agent returns baby to orphanage","at":{"worldRef":"w_loop","timeLabel":"1945 drop"},"agents":["bartender"],"payload":{"travelMode":"machine","bootstrapEntity":"baby_jane"}},{"id":"e_bomber_hunt","type":"intervention","label":"Hunt for Fizzle Bomber across jumps","at":{"worldRef":"w_loop","timeLabel":"multi-era"},"agents":["bartender","fizzle"],"payload":{"travelMode":"machine"}},{"id":"e_bomber_reveal","type":"reveal","label":"Fizzle Bomber is aged agent self","at":{"worldRef":"w_loop","timeLabel":"confrontation"},"agents":["bartender","fizzle"],"payload":{"identityNote":"unicycle identity closes"}},{"id":"e_kill_fail","type":"intervention","label":"Agent cannot break loop; bomber continues","at":{"worldRef":"w_loop","timeLabel":"final"},"agents":["bartender","fizzle"]},{"id":"e_bootstrap_all","type":"bootstrap_origin","label":"Entire biography is a closed causal unicycle","at":{"worldRef":"w_loop","timeLabel":"ontological"},"agents":["jane","john","bartender","fizzle"],"payload":{"bootstrapEntity":"unicycle_person"}}],"edges":[{"id":"c1","kind":"causal","from":"e_orphan","to":"e_seduction"},{"id":"c2","kind":"causal","from":"e_seduction","to":"e_birth"},{"id":"c3","kind":"causal","from":"e_birth","to":"e_transition"},{"id":"c4","kind":"causal","from":"e_transition","to":"e_bar_story"},{"id":"c5","kind":"causal","from":"e_bar_story","to":"e_recruit"},{"id":"c6","kind":"causal","from":"e_recruit","to":"e_lover_trip"},{"id":"c7","kind":"causal","from":"e_lover_trip","to":"e_baby_drop"},{"id":"c8","kind":"causal","from":"e_baby_drop","to":"e_bomber_hunt"},{"id":"c9","kind":"causal","from":"e_bomber_hunt","to":"e_bomber_reveal"},{"id":"c10","kind":"causal","from":"e_bomber_reveal","to":"e_kill_fail"},{"id":"c11","kind":"causal","from":"e_kill_fail","to":"e_bootstrap_all"},{"id":"id1","kind":"identity","from":"jane","to":"john","label":"same person"},{"id":"id2","kind":"identity","from":"john","to":"bartender"},{"id":"id3","kind":"identity","from":"bartender","to":"fizzle"},{"id":"boot1","kind":"causal","from":"e_baby_drop","to":"e_orphan","label":"baby is self"},{"id":"boot2","kind":"causal","from":"e_lover_trip","to":"e_seduction","label":"lover is self"},{"id":"boot3","kind":"intervention","from":"e_bootstrap_all","to":"e_recruit"}],"interventions":[{"id":"iv_loop","eventId":"e_lover_trip","ruleEffects":[{"ruleSetId":"predestination_closed_loop","effect":"Ensuring the meeting fulfills the biography"},{"ruleSetId":"bootstrap_ontological","effect":"No external parent/lover origin"}]},{"id":"iv_bomb","eventId":"e_bomber_reveal","ruleEffects":[{"ruleSetId":"fixed_novikov","effect":"Bomber identity is self-consistent with agency career"}]}],"outcome":{"summary":"One person is mother, father, child, lover, agent, and bomber—an ontological unicycle with no external origin.","endWorldRefs":["w_loop"]}}
+{
+  "meta": {
+    "id": "predestination",
+    "title": "Predestination",
+    "year": 2014,
+    "medium": "film",
+    "sources": [
+      "Spierig brothers; Heinlein All You Zombies",
+      "time-travel-archive/films/predestination.md",
+      "time-travel-archive true-deep wave 2026-09-06"
+    ]
+  },
+  "ruleSetIds": [
+    "predestination_closed_loop",
+    "bootstrap_ontological",
+    "fixed_novikov"
+  ],
+  "primaryRuleSetId": "predestination_closed_loop",
+  "mixinRuleSetIds": [
+    "bootstrap_ontological",
+    "fixed_novikov"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_loop",
+      "label": "Closed predestination timeline",
+      "spanLabel": "orphanage→bombings→recruitment"
+    }
+  ],
+  "agents": [
+    {
+      "id": "jane",
+      "label": "Jane",
+      "identityGroup": "unicycle",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_loop"
+    },
+    {
+      "id": "john",
+      "label": "John / unmarried mother (post-transition)",
+      "identityGroup": "unicycle",
+      "continuityRole": "iteration",
+      "homeWorldRef": "w_loop",
+      "continuedFrom": "jane"
+    },
+    {
+      "id": "bartender",
+      "label": "Bartender / temporal agent",
+      "identityGroup": "unicycle",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_loop",
+      "continuedFrom": "john"
+    },
+    {
+      "id": "fizzle",
+      "label": "Fizzle Bomber",
+      "identityGroup": "unicycle",
+      "continuityRole": "bootstrap_sink",
+      "homeWorldRef": "w_loop",
+      "continuedFrom": "bartender"
+    },
+    {
+      "id": "mr_robertson",
+      "label": "Mr Robertson",
+      "homeWorldRef": "w_loop"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_orphan",
+      "type": "birth",
+      "label": "Baby left at orphanage",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "1945-ish orphanage"
+      },
+      "agents": [
+        "jane"
+      ],
+      "payload": {
+        "bootstrapEntity": "baby_jane"
+      }
+    },
+    {
+      "id": "e_seduction",
+      "type": "ordinary",
+      "label": "Jane seduced by mysterious lover",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "college era"
+      },
+      "agents": [
+        "jane",
+        "john"
+      ]
+    },
+    {
+      "id": "e_birth",
+      "type": "birth",
+      "label": "Jane gives birth; baby stolen",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "maternity"
+      },
+      "agents": [
+        "jane"
+      ],
+      "payload": {
+        "bootstrapEntity": "baby_jane"
+      }
+    },
+    {
+      "id": "e_transition",
+      "type": "ordinary",
+      "label": "Gender transition Jane→John",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "post-birth"
+      },
+      "agents": [
+        "jane",
+        "john"
+      ]
+    },
+    {
+      "id": "e_bar_story",
+      "type": "reveal",
+      "label": "John tells bartender the unbroken circle story",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "bar 1970s"
+      },
+      "agents": [
+        "john",
+        "bartender"
+      ]
+    },
+    {
+      "id": "e_recruit",
+      "type": "departure",
+      "label": "John recruited into Temporal Agency",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "recruitment"
+      },
+      "agents": [
+        "john",
+        "bartender",
+        "mr_robertson"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_lover_trip",
+      "type": "departure",
+      "label": "Agent ensures Jane meets lover (self)",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "college mission"
+      },
+      "agents": [
+        "bartender",
+        "jane"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "bootstrapEntity": "lover"
+      }
+    },
+    {
+      "id": "e_baby_drop",
+      "type": "arrival",
+      "label": "Agent returns baby to orphanage",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "1945 drop"
+      },
+      "agents": [
+        "bartender"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "bootstrapEntity": "baby_jane"
+      }
+    },
+    {
+      "id": "e_bomber_hunt",
+      "type": "intervention",
+      "label": "Hunt for Fizzle Bomber across jumps",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "multi-era"
+      },
+      "agents": [
+        "bartender",
+        "fizzle"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_bomber_reveal",
+      "type": "reveal",
+      "label": "Fizzle Bomber is aged agent self",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "confrontation"
+      },
+      "agents": [
+        "bartender",
+        "fizzle"
+      ],
+      "payload": {
+        "identityNote": "unicycle identity closes"
+      }
+    },
+    {
+      "id": "e_kill_fail",
+      "type": "intervention",
+      "label": "Agent cannot break loop; bomber continues",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "final"
+      },
+      "agents": [
+        "bartender",
+        "fizzle"
+      ]
+    },
+    {
+      "id": "e_bootstrap_all",
+      "type": "bootstrap_origin",
+      "label": "Entire biography is a closed causal unicycle",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "ontological"
+      },
+      "agents": [
+        "jane",
+        "john",
+        "bartender",
+        "fizzle"
+      ],
+      "payload": {
+        "bootstrapEntity": "unicycle_person"
+      }
+    },
+    {
+      "id": "ev_orphanage",
+      "label": "Baby left at 1945 orphanage",
+      "timeLabel": "1945",
+      "agents": []
+    },
+    {
+      "id": "ev_romance",
+      "label": "John meets Jane / conceives",
+      "timeLabel": "1963",
+      "agents": []
+    },
+    {
+      "id": "ev_bar",
+      "label": "Barkeeper hears Unmarried Mother story",
+      "timeLabel": "1970",
+      "agents": []
+    },
+    {
+      "id": "ev_burn",
+      "label": "Agent burned failing bomb disarm",
+      "timeLabel": "1975",
+      "agents": []
+    },
+    {
+      "id": "ev_bomber",
+      "label": "Agent confronts Fizzle Bomber self",
+      "timeLabel": "1975+",
+      "agents": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_orphan",
+      "to": "e_seduction"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_seduction",
+      "to": "e_birth"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_birth",
+      "to": "e_transition"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_transition",
+      "to": "e_bar_story"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_bar_story",
+      "to": "e_recruit"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_recruit",
+      "to": "e_lover_trip"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_lover_trip",
+      "to": "e_baby_drop"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_baby_drop",
+      "to": "e_bomber_hunt"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_bomber_hunt",
+      "to": "e_bomber_reveal"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_bomber_reveal",
+      "to": "e_kill_fail"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_kill_fail",
+      "to": "e_bootstrap_all"
+    },
+    {
+      "id": "id1",
+      "kind": "identity",
+      "from": "jane",
+      "to": "john",
+      "label": "same person"
+    },
+    {
+      "id": "id2",
+      "kind": "identity",
+      "from": "john",
+      "to": "bartender"
+    },
+    {
+      "id": "id3",
+      "kind": "identity",
+      "from": "bartender",
+      "to": "fizzle"
+    },
+    {
+      "id": "boot1",
+      "kind": "causal",
+      "from": "e_baby_drop",
+      "to": "e_orphan",
+      "label": "baby is self"
+    },
+    {
+      "id": "boot2",
+      "kind": "causal",
+      "from": "e_lover_trip",
+      "to": "e_seduction",
+      "label": "lover is self"
+    },
+    {
+      "id": "boot3",
+      "kind": "intervention",
+      "from": "e_bootstrap_all",
+      "to": "e_recruit"
+    },
+    {
+      "from": "ev_orphanage",
+      "to": "ev_romance",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_romance",
+      "to": "ev_bar",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_bar",
+      "to": "ev_burn",
+      "type": "precedes"
+    },
+    {
+      "from": "ev_burn",
+      "to": "ev_bomber",
+      "type": "leads_to"
+    },
+    {
+      "from": "ev_bomber",
+      "to": "ev_orphanage",
+      "type": "bootstrap_causes"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_loop",
+      "eventId": "e_lover_trip",
+      "ruleEffects": [
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Ensuring the meeting fulfills the biography"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "No external parent/lover origin"
+        }
+      ]
+    },
+    {
+      "id": "iv_bomb",
+      "eventId": "e_bomber_reveal",
+      "ruleEffects": [
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Bomber identity is self-consistent with agency career"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "One person is mother, father, child, lover, agent, and bomber—an ontological unicycle with no external origin.",
+    "endWorldRefs": [
+      "w_loop"
+    ]
+  }
+}

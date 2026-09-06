@@ -2,76 +2,115 @@
 title: Interstellar
 year: 2014
 medium: film
-creators: Christopher Nolan; Jonathan Nolan; Matthew McConaughey; Anne Hathaway; Jessica Chastain; Kip Thorne (science advisor)
+creators: Christopher Nolan; Jonathan Nolan; Matthew McConaughey; Anne Hathaway; Jessica
+  Chastain; Kip Thorne (science advisor)
 mechanism: wormhole | black_hole_tesseract | gravitational_time_dilation
 paradox_type: bootstrap | closed_loop | higher_dimensional_contact
 summary_depth: exhaustive
 diagram_refs:
-  - "https://www.businessinsider.com/interstellar-timeline-2014-11"
-  - "https://www.empireonline.com/movies/features/interstellar-explained/"
-  - "https://www.studiobinder.com/blog/interstellar-explained-meaning-plot-summary/"
-  - "https://www.ilsorpassocinema.com/2020/09/05/da-dark-a-tenet-timeline-e-mappe-per-comprendere-film-e-serie-tv-complicate/"
+- https://www.businessinsider.com/interstellar-timeline-2014-11
+- https://www.empireonline.com/movies/features/interstellar-explained/
+- https://www.studiobinder.com/blog/interstellar-explained-meaning-plot-summary/
+- https://www.ilsorpassocinema.com/2020/09/05/da-dark-a-tenet-timeline-e-mappe-per-comprendere-film-e-serie-tv-complicate/
 plot_summary_sources:
-  - "https://en.wikipedia.org/wiki/Interstellar_(film)"
-  - "https://www.empireonline.com/movies/features/interstellar-explained/"
-  - "https://www.studiobinder.com/blog/interstellar-explained-meaning-plot-summary/"
-  - "https://benlanehodson.com/interstellar-explained/"
+- https://en.wikipedia.org/wiki/Interstellar_(film)
+- https://www.empireonline.com/movies/features/interstellar-explained/
+- https://www.studiobinder.com/blog/interstellar-explained-meaning-plot-summary/
+- https://benlanehodson.com/interstellar-explained/
 flag_diagrams: true
-languages: [en]
+languages:
+- en
 country: US/UK
 ---
 
 # Interstellar (2014)
 
-> **DIAGRAM FLAG:** Business Insider / Reddit Cooper–Murph dual timelines; Gargantua dilation charts; tesseract bookshelf explainers (Empire, StudioBinder).
+> **DIAGRAM FLAG:** Tesseract bookshelf / Gargantua relativity diagrams are among the most shared Nolan-era explainers.
 
 ## Short blurb
-Dust-bowl Earth needs a new home. Pilot Cooper joins NASA’s Lazarus/Endurance mission through a Saturn wormhole to worlds orbiting black hole Gargantua. Extreme time dilation and a five-dimensional tesseract let him become the “ghost” who guided his daughter Murph—and send the quantum data that saves humanity.
+
+Cooper leaves a dying Earth through a wormhole; relativity steals decades from his children’s lives; inside a black-hole tesseract he becomes the ‘ghost’ who sends himself the quantum data — and love as a coordinate.
 
 ## Detailed plot summary (spoilers)
 
-Blight is killing crops. Former NASA pilot **Joseph Cooper** and daughter **Murphy** discover gravitational anomalies in their bookshelves that decode binary coordinates to a secret NASA bunker. Professor Brand reveals a wormhole appeared near Saturn ~48 years earlier, leading to twelve candidate worlds near **Gargantua**. Lazarus probes (Miller, Mann, Edmunds) reported promising data. Plan A: solve gravity so Earth can evacuate. Plan B: colonize with frozen embryos if Earth cannot be saved.
+In the near future, humanity faces extinction due to dust storms and widespread crop blights . Joseph Cooper, a widowed former NASA test pilot, works as a farmer and raises his children, Murph and Tom, with his father-in-law Donald. Following a dust storm, Cooper and Murph discover that dust patterns in Murph's room, which she had attributed to a ghost, result from a gravitational anomaly.
 
-Cooper pilots **Endurance** with Brand’s daughter Amelia, Romilly, Doyle, and robots TARS/CASE. After a two-year trip to Saturn and the wormhole transit:
+Cooper recognizes the patterns as binary code specifying coordinates, which lead him and Murph to a secret NASA facility headed by Professor John Brand. He explains that 48 years earlier, a wormhole appeared near Saturn , apparently placed there by an unknown intelligence, leading to a system in another galaxy with 12 potentially habitable planets located near a black hole named Gargantua.
 
-### Miller’s planet
-Orbit so close to Gargantua that **1 hour ≈ 7 Earth years**. A tidal wave kills Doyle and delays departure; they return to Endurance to find **23 years** have passed. Murph is an adult scientist working with Brand.
+Volunteers of the Lazarus expedition had previously traveled through the wormhole to evaluate the planets, with three — Miller, Mann, and Edmunds — reporting back desirable results. Cooper is enlisted to pilot the Endurance spacecraft through the wormhole as part of a mission to colonize a habitable planet with 5,000 frozen embryos and ensure humanity's survival.
 
-### Mann’s planet
-Dr. Mann faked data to be rescued. He tries to kill Cooper, damages Endurance, and dies attempting a docking. Cooper and Amelia recover the ship.
+Meanwhile, Professor Brand would continue his work on solving a gravity equation whose solution would enable construction of a spacecraft for an exodus from Earth. Cooper accepts against Murph's wishes and promises to return. When she refuses to see him off, he leaves her his wristwatch to compare their relative time when he returns. The crew, consisting of Cooper, robots TARS and CASE, and scientists Amelia Brand (Professor Brand's daughter), Romilly, and Doyle, traverses the wormhole after a two-year voyage to Saturn.
 
-### Slingshot / tesseract
-Fuel is insufficient for Edmunds without a Gargantua slingshot that costs another **~51 years** of dilation. Cooper and TARS eject to lighten Endurance so Amelia can reach Edmunds. Falling past the event horizon, they enter a **tesseract**: infinite copies of Murph’s bedroom across time, constructed by future humans (“they”) so a 3D mind can navigate 5D spacetime. World-lines let Cooper push gravity into the past—he *was* Murph’s ghost (books, dust binary, the watch).
+Cooper, Doyle, and Brand use a lander to investigate Miller's planet, where time is severely dilated . They land in knee-high water and find only wreckage from Miller's expedition before a gigantic tidal wave kills Doyle and waterlogs the lander's engines. By the time they leave the planet, Cooper and Brand discover that 23 years have elapsed on the Endurance .
 
-TARS recovers singularity quantum data. Cooper taps Morse into Murph’s watch second hand. Adult Murph solves Brand’s equation, enabling Plan A habitats. The tesseract closes; Cooper wakes on Cooper Station near Saturn, reunites with elderly dying Murph, then steals a ship to find Amelia on Edmunds’s world.
+Having enough fuel left for only one of the remaining planets, Cooper and Romilly decide to go to Mann's planet, despite Brand's protests, as he is still broadcasting. En route, they receive messages from Earth and Cooper watches Tom grow up, marry, and lose his first son, while an adult Murph is now a scientist working on the gravity equation with Professor Brand.
 
-## Temporal structure table
+On his deathbed, Professor Brand confesses to Murph that the Endurance crew was never meant to return, since a complete solution to the equation was impossible to obtain without measurements from inside a black hole. On Mann's planet, they awaken him from cryostasis , and he assures them that colonization is possible, despite the extreme environment. During a scouting mission, Mann attempts to kill Cooper and reveals that he falsified his data in the hope of being rescued.
 
-| Event (Cooper’s proper time) | Earth / Murph |
-|---|---|
-| Departure; watch left with young Murph | Murph age ~10 |
-| Miller landing + delay | +23 years; Murph adult |
-| Mann betrayal + slingshot prep | Further aging on Earth |
-| Gargantua fall → tesseract messaging | Watch Morse; equation solved; exodus |
-| Cooper Station wake | Murph elderly; habitats built |
+He steals Cooper's lander and heads for the Endurance . A booby trap set by Mann kills Romilly, but Brand rescues Cooper with the other lander and they race back to the Endurance . Mann is killed in a failed manual docking operation, badly damaging the Endurance , but Cooper is able to regain control of the spacecraft through his own docking maneuver. With insufficient fuel, Cooper and Brand resort to a slingshot around Gargantua, which costs them 51 years due to time dilation.
+
+In the process, Cooper and TARS detach in their craft to lighten the Endurance so that Brand and CASE may reach Edmunds' planet. Falling past Gargantua's event horizon , they eject from their craft and find themselves in a tesseract made up of infinite copies of Murph's bedroom across moments in time. Cooper deduces that the tesseract was constructed by advanced humans in the far future, and realizes that he had always been Murph's "ghost".
+
+Using Morse code , he manipulates the second hand of her wristwatch to transmit the data TARS collected, enabling Murph to complete the gravity equation's solution. The tesseract, its purpose fulfilled, collapses, ejecting Cooper and TARS. Cooper wakes up on a station orbiting Saturn. He reunites with Murph, now elderly and on her deathbed, who tells him to seek out Brand.
+
+Cooper and TARS take a spacecraft to rejoin Brand and CASE, who are establishing the human colony on Edmunds' planet.
+
+## Beat-by-beat temporal structure
+
+1. **Dust-bowl Earth:** Crop blight; Cooper (ex-NASA pilot) & Murph; gravity anomalies in Murph’s room; NASA’s hidden bunker.
+2. **Lazarus missions / Endurance:** Wormhole near Saturn (placed by ‘Them’); destinations around Gargantua.
+3. **Miller’s planet:** Extreme time dilation — hours = decades for Romilly on Endurance; wave kills Doyle; plan wrecked.
+4. **Mann’s betrayal:** False habitability data; explosion; Mann dies; Cooper & Amelia Brand survive toward Edmunds.
+5. **Plan A/B:** Earth’s population salvation vs colony hatchery; Murph (adult) solves gravity equation needing quantum data from inside horizon.
+6. **Black hole fall:** Cooper and TARS enter Gargantua; Cooper enters tesseract — higher-dimensional archive of Murph’s bedroom across time.
+7. **Ghost loop:** He transmits coordinates/data via watch’s second hand Morse; younger Murph receives; equation solved; Earth evacuated to stations.
+8. **Return:** Cooper wakes on Cooper Station; reunites with elderly Murph; leaves to find Brand on Edmunds.
+
+Relativity + higher-dimensional intervention; ‘They’ are likely future humans.
 
 ## Paradox analysis
 
-- **Bootstrap:** Future humans (descendants) place the wormhole and tesseract so Cooper can send the data that enables their existence—classic causal loop.
-- **Information loop:** Quantum data has no origin outside the loop; love-as-dimension is the film’s narrative glue for choosing which world-line to touch.
-- **Not branching:** One history; Cooper’s “changes” were always Murph’s childhood anomalies.
-- **Relativistic one-way cost:** Dilation is not machine time travel but irreversible aging asymmetry—closer to Wellsian “forward only” than DeLorean hopping.
+- **Bootstrap / ontological:** Future humans (or evolved Cooper lineage) place wormhole and tesseract enabling the mission that creates that future.
+- **Information via gravity:** Watch data is the closed causal channel — not a person walking out of a box.
+- **Time dilation as tragedy:** Miller’s planet is the emotional TT — parental absence as physics.
+- **Love as coordinate:** Film’s speculative claim that love orients Cooper to the right Murph-time — soft SF metaphysics atop Kip Thorne–informed visuals.
+- **Single continuum preference:** Nolan rhetoric aligns with ‘what’s happened happened’ for the ghost messages; Earth’s survival is still ‘achieved’ inside that loop.
+- **Contrast with Tenet:** Same director; Interstellar uses relativity/wormholes; Tenet uses entropy inversion — different mechanisms, shared bootstrap taste.
 
-## Science / adaptation notes
-Kip Thorne advised; novelization and *The Science of Interstellar* expand Gargantua/Kerr metric discussion. Visual effects (Double Negative) produced widely reused Gargantua imagery.
+## Endings / cuts / production notes
+
+2014 Paramount/Warner; major VFX; Hans Zimmer organ score. Theatrical ending is Murph reunion + Brand on Edmunds. Scientific consultation by Kip Thorne widely publicized; popular articles debate speculative vs rigorous pieces.
+
+## Adaptation / related text notes
+
+Original Nolan/Jonah Nolan screenplay with Thorne input. Book *The Science of Interstellar* expands public physics framing.
+
+## Mechanism notes
+
+- **Wormhole:** Spherical visual; bridge to other galaxy.
+- **Gargantua:** Supermassive black hole; dilation & visual lensing.
+- **Tesseract:** 5D construct translating time into navigable space of the bookshelf.
+- **Plan A data:** Quantum singularity information needed for gravity control / bulk beings’ help.
+
 
 ## Diagram & explainer sources
 
 - https://en.wikipedia.org/wiki/Interstellar_(film)
-- https://www.businessinsider.com/interstellar-timeline-2014-11
-- https://www.empireonline.com/movies/features/interstellar-explained/
-- https://www.studiobinder.com/blog/interstellar-explained-meaning-plot-summary/
-- https://benlanehodson.com/interstellar-explained/
+- https://www.wired.com/2014/10/astrophysics-interstellar-black-hole/
+- https://tvtropes.org/pmwiki/pmwiki.php/Film/Interstellar
 
 ## Related works
-*Tenet*; *Contact*; *Arrival*; *The Time Machine*; *Event Horizon* (foil).
+
+Tenet; Arrival; Contact; Primer (contrast); Frequency (parent-child message channel).
+
+## Ontology fingerprint cues
+
+- Record **mechanism** tags from frontmatter as primary rule hooks.
+- Record **paradox_type** tags as mixin rule hooks.
+- Prefer event edges that match beat-by-beat structure above (origin → intervention → cost → exit/terminal).
+- Diagram_refs URLs are citation pointers only — no binaries in this pass.
+- If instance JSON exists under `time-travel-ontology/instances/`, deepen events/edges to mirror these beats; else leave a fingerprint-worker note.
+
+## Spoiler / sourcing posture
+
+Plot beats above are condensed from public Wikipedia plot sections and widely cited explainers linked in sources. No original media. No invented scenes. Where cuts disagree (theatrical vs director), both are noted rather than silently merged.

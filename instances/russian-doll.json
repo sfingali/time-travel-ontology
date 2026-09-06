@@ -5,8 +5,9 @@
     "year": 2019,
     "medium": "tv",
     "sources": [
-      "Natasha Lyonne, Leslye Headland, Amy Poehler (2019\u20132022)",
-      "time-travel-archive/tv/russian-doll.md"
+      "Natasha Lyonne, Leslye Headland, Amy Poehler (2019–2022)",
+      "time-travel-archive/tv/russian-doll.md",
+      "time-travel-archive true-deep wave 2026-09-06"
     ]
   },
   "ruleSetIds": [
@@ -97,7 +98,7 @@
     {
       "id": "e_reset1",
       "type": "loop_reset",
-      "label": "Reset to bathroom mirror at party \u2014 Kraken hardware store night",
+      "label": "Reset to bathroom mirror at party — Kraken hardware store night",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "loop+1"
@@ -217,6 +218,26 @@
       "agents": [
         "nadia"
       ]
+    },
+    {
+      "id": "ev_s1_loop",
+      "label": "S1 party death loop with Alan",
+      "timeLabel": "S1"
+    },
+    {
+      "id": "ev_s1_exit",
+      "label": "S1 linear morning exit",
+      "timeLabel": "S1 end"
+    },
+    {
+      "id": "ev_s2_subway",
+      "label": "S2 time subway / decades",
+      "timeLabel": "S2"
+    },
+    {
+      "id": "ev_s2_family",
+      "label": "S2 ancestral confrontation",
+      "timeLabel": "S2 end"
     }
   ],
   "edges": [
@@ -281,6 +302,21 @@
       "kind": "causal",
       "from": "e_s2_subway",
       "to": "e_s2_resolve"
+    },
+    {
+      "from": "ev_s1_loop",
+      "to": "ev_s1_exit",
+      "type": "resolved_by"
+    },
+    {
+      "from": "ev_s1_exit",
+      "to": "ev_s2_subway",
+      "type": "season_gap"
+    },
+    {
+      "from": "ev_s2_subway",
+      "to": "ev_s2_family",
+      "type": "leads_to"
     }
   ],
   "interventions": [
