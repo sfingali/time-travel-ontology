@@ -15,6 +15,7 @@ const instancesDir = path.join(root, "instances");
 export interface ValidationResult {
   success: boolean;
   errors: string[];
+  warnings?: string[];
 }
 
 /**
@@ -70,19 +71,51 @@ export function validateStoryEncoding(data: unknown): ValidationResult {
     }
   }
 
-  return { success: errors.length === 0, errors };
+  // Advisory until the hand-crafted corpus has been audited for these edge
+  // conventions. Unknown endpoint IDs remain hard errors in StoryEncodingSchema.
+  const warnings: string[] = [];
+  const worldIds = new Set(enc.worlds.map((world) => world.id));
+  for (const edge of enc.edges) {
+    if (edge.kind === "world_relation") {
+      if (edge.relation === undefined) {
+        warnings.push(`Edge ${edge.id}: world_relation should specify relation`);
+      }
+      if (!worldIds.has(edge.from) || !worldIds.has(edge.to)) {
+        warnings.push(`Edge ${edge.id}: world_relation endpoints should both be worlds`);
+      }
+    } else if (
+      edge.relation !== undefined &&
+      (edge.kind === "causal" || edge.kind === "temporal" || edge.kind === "identity")
+    ) {
+      warnings.push(`Edge ${edge.id}: relation on ${edge.kind} requires corpus/semantic review`);
+    }
+  }
+
+  return { success: errors.length === 0, errors, warnings };
 }
 
-async function validateFile(filePath: string): Promise<string[]> {
-  const raw = await readFile(filePath, "utf8");
+async function validateFile(filePath: string): Promise<ValidationResult> {
+  const name = path.basename(filePath);
+  let raw: string;
+  try {
+    raw = await readFile(filePath, "utf8");
+  } catch (e) {
+    return { success: false, errors: [`${name}: unable to read (${String(e)})`] };
+  }
+
   let data: unknown;
   try {
     data = JSON.parse(raw);
   } catch (e) {
-    return [`${path.basename(filePath)}: invalid JSON (${String(e)})`];
+    return { success: false, errors: [`${name}: invalid JSON (${String(e)})`] };
   }
+
   const result = validateStoryEncoding(data);
-  return result.errors.map((e) => `${path.basename(filePath)}: ${e}`);
+  return {
+    ...result,
+    errors: result.errors.map((error) => `${name}: ${error}`),
+    warnings: result.warnings?.map((warning) => `${name}: ${warning}`),
+  };
 }
 
 async function main(): Promise<void> {
@@ -100,13 +133,16 @@ async function main(): Promise<void> {
 
   let failed = 0;
   for (const f of files) {
-    const errs = await validateFile(path.join(instancesDir, f));
-    if (errs.length) {
+    const result = await validateFile(path.join(instancesDir, f));
+    if (!result.success) {
       failed += 1;
       console.error(`FAIL ${f}`);
-      for (const e of errs) console.error(`  ${e}`);
+      for (const error of result.errors) console.error(`  ${error}`);
     } else {
       console.log(`OK   ${f}`);
+    }
+    for (const warning of result.warnings ?? []) {
+      console.warn(`WARN ${warning}`);
     }
   }
 

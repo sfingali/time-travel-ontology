@@ -129,3 +129,66 @@ describe("invalid fixtures", () => {
     assert.match(result.errors.join("\n"), /not in the active ruleSetIds/);
   });
 });
+
+function schemaValidStory(): any {
+  return {
+    meta: { id: "sv", title: "Schema Valid", medium: "film" },
+    ruleSetIds: ["fixed_novikov"],
+    primaryRuleSetId: "fixed_novikov",
+    topologyPatternId: "single_fixed_timeline",
+    worlds: [{ kind: "timeline", id: "w1", label: "World" }],
+    events: [
+      { id: "e1", type: "ordinary", label: "Event", at: { worldRef: "w1" } },
+      { id: "e2", type: "checkpoint", label: "CP", at: { worldRef: "w1" } },
+    ],
+    outcome: { summary: "x", endWorldRefs: ["w1"] },
+  };
+}
+
+describe("schema hard-validity (review findings #1/#3/#5)", () => {
+  it("entropy 'forward' with inverted:true is rejected", () => {
+    const s = schemaValidStory();
+    s.events.push({
+      id: "e3", type: "ordinary", label: "E", at: { worldRef: "w1" },
+      payload: { entropy: "forward", inverted: true },
+    });
+    const result = validateStoryEncoding(s);
+    assert.ok(!result.success);
+    assert.match(result.errors.join("\n"), /contradicts entropy/);
+  });
+
+  it("checkpointEventId pointing to a non-checkpoint event is rejected", () => {
+    const s = schemaValidStory();
+    s.events.push({
+      id: "e3", type: "ordinary", label: "E", at: { worldRef: "w1" },
+      payload: { checkpointEventId: "e1" }, // e1 is an ordinary event
+    });
+    const result = validateStoryEncoding(s);
+    assert.ok(!result.success);
+    assert.match(result.errors.join("\n"), /checkpoint, loop_reset, or death/);
+  });
+
+  it("duplicate world id is rejected", () => {
+    const s = schemaValidStory();
+    s.worlds.push({ kind: "timeline", id: "w1", label: "World dup" });
+    const result = validateStoryEncoding(s);
+    assert.ok(!result.success);
+    assert.match(result.errors.join("\n"), /Duplicate ID "w1"/);
+  });
+
+  it("cross-category id collision is rejected", () => {
+    const s = schemaValidStory();
+    s.events.push({ id: "w1", type: "ordinary", label: "Collide", at: { worldRef: "w1" } });
+    const result = validateStoryEncoding(s);
+    assert.ok(!result.success);
+    assert.match(result.errors.join("\n"), /across categories/);
+  });
+
+  it("an implicit-mixin active rule outside explicit mixins is still valid", () => {
+    const s = schemaValidStory();
+    s.ruleSetIds = ["fixed_novikov", "mutable_ripple"];
+    // mixinRuleSetIds omitted -> mutable_ripple is an implicit mixin (allowed)
+    const result = validateStoryEncoding(s);
+    assert.ok(result.success, JSON.stringify(result.errors));
+  });
+});

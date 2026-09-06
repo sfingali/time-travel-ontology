@@ -144,7 +144,7 @@ export const EventPayloadSchema = z
 
     // Return-by-Death / checkpoints / loops
     checkpointId: z.string().optional(),
-    checkpointEventId: z.string().optional(),
+    checkpointEventId: IdSchema.optional(),
     iteration: z.number().int().nonnegative().optional(),
     memoryRetained: z.boolean().optional(),
     exitCondition: z.string().optional(),
@@ -163,7 +163,19 @@ export const EventPayloadSchema = z
     note: z.string().optional(),
     tags: z.array(z.string().min(1)).optional(),
   })
-  .strict();
+  .strict()
+  .superRefine((payload, ctx) => {
+    if (
+      (payload.entropy === "forward" && payload.inverted === true) ||
+      (payload.entropy === "inverted" && payload.inverted === false)
+    ) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["inverted"],
+        message: `inverted=${payload.inverted} contradicts entropy="${payload.entropy}"`,
+      });
+    }
+  });
 
 export const EventSchema = z
   .object({

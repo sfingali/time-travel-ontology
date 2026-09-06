@@ -44,11 +44,80 @@ export const StoryEncodingSchema = z
   })
   .strict()
   .superRefine((data, ctx) => {
+    const categories = [
+      "worlds",
+      "agents",
+      "events",
+      "edges",
+      "interventions",
+    ] as const;
+    const allIds = new Map<string, string>();
+    for (const category of categories) {
+      const seen = new Set<string>();
+      data[category].forEach((node, index) => {
+        const first = allIds.get(node.id);
+        if (seen.has(node.id)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: [category, index, "id"],
+            message: `Duplicate ID "${node.id}" within ${category}; first used at ${first}`,
+          });
+        } else if (first !== undefined) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: [category, index, "id"],
+            message: `Duplicate ID "${node.id}" across categories; first used at ${first}`,
+          });
+        }
+        seen.add(node.id);
+        if (first === undefined) {
+          allIds.set(node.id, `${category}.${index}.id`);
+        }
+      });
+    }
+
+    const checkUniqueRules = (
+      ids: string[],
+      field: "ruleSetIds" | "mixinRuleSetIds",
+    ) => {
+      const seen = new Set<string>();
+      ids.forEach((id, index) => {
+        if (seen.has(id)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: [field, index],
+            message: `Duplicate rule ID "${id}" in ${field}`,
+          });
+        }
+        seen.add(id);
+      });
+      return seen;
+    };
+
+    const activeRules = checkUniqueRules(data.ruleSetIds, "ruleSetIds");
+    if (data.mixinRuleSetIds !== undefined) {
+      checkUniqueRules(data.mixinRuleSetIds, "mixinRuleSetIds");
+      const declaredRules = new Set([
+        data.primaryRuleSetId,
+        ...data.mixinRuleSetIds,
+      ]);
+      data.ruleSetIds.forEach((id, index) => {
+        if (!declaredRules.has(id)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ["ruleSetIds", index],
+            message: `Active rule "${id}" must be primary or listed in explicit mixinRuleSetIds`,
+          });
+        }
+      });
+    }
+
     const worldIds = new Set(data.worlds.map((w) => w.id));
     const agentIds = new Set(data.agents.map((a) => a.id));
     const eventIds = new Set(data.events.map((e) => e.id));
+    const eventsById = new Map(data.events.map((e) => [e.id, e]));
 
-    if (!data.ruleSetIds.includes(data.primaryRuleSetId)) {
+    if (!activeRules.has(data.primaryRuleSetId)) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: `primaryRuleSetId "${data.primaryRuleSetId}" must be listed in ruleSetIds`,
@@ -56,7 +125,7 @@ export const StoryEncodingSchema = z
       });
     }
 
-    if (data.mixinRuleSetIds) {
+    if (data.mixinRuleSetIds !== undefined) {
       for (const mid of data.mixinRuleSetIds) {
         if (mid === data.primaryRuleSetId) {
           ctx.addIssue({
@@ -65,7 +134,7 @@ export const StoryEncodingSchema = z
             path: ["mixinRuleSetIds"],
           });
         }
-        if (!data.ruleSetIds.includes(mid)) {
+        if (!activeRules.has(mid)) {
           ctx.addIssue({
             code: z.ZodIssueCode.custom,
             message: `mixinRuleSetId "${mid}" must be listed in ruleSetIds`,
@@ -167,12 +236,26 @@ export const StoryEncodingSchema = z
           });
         }
       }
-      if (e.payload?.checkpointEventId && !eventIds.has(e.payload.checkpointEventId)) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: `Event ${e.id} payload.checkpointEventId unknown: ${e.payload.checkpointEventId}`,
-          path: ["events"],
-        });
+      const checkpointRef = e.payload?.checkpointEventId;
+      if (checkpointRef !== undefined) {
+        const target = eventsById.get(checkpointRef);
+        if (target === undefined) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Event ${e.id} payload.checkpointEventId unknown: ${checkpointRef}`,
+            path: ["events", data.events.indexOf(e), "payload", "checkpointEventId"],
+          });
+        } else if (
+          target.type !== "checkpoint" &&
+          target.type !== "loop_reset" &&
+          target.type !== "death"
+        ) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Event ${e.id} checkpointEventId "${checkpointRef}" must reference a checkpoint, loop_reset, or death event; found ${target.type}`,
+            path: ["events", data.events.indexOf(e), "payload", "checkpointEventId"],
+          });
+        }
       }
     }
 
