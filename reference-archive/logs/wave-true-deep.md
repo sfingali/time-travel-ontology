@@ -61,3 +61,7 @@ Deepened events/edges (and meta source note `true-deep wave 2026-09-06`) for:
 - Target: `sfingali/time-travel-ontology` `reference-archive/` (markdown + logs + index).
 - Ontology `instances/*.json` via MCP.
 - Text only; no LFS binaries.
+
+## Commits
+- `01f193624539c0af126a25580861962a45bf6532` on `sfingali/time-travel-ontology` `main` — 28 reference-archive markdown files + 26 ontology instance JSON files (text only).
+
