@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-09-06T15:21:18.338Z",
+  "archiveRoot": "/workspace/time-travel-archive",
+  "counts": {
+    "written": 441,
+    "skippedHandCrafted": 20,
+    "totalIndexed": 441
+  },
+  "committedSampleIds": [
+    "timecrimes",
+    "interstellar",
+    "outlander",
+    "bill-and-ted",
+    "the-time-machine",
+    "russian-doll",
+    "terminator",
+    "11-22-63"
+  ],
+  "stubs": [
+    {
+      "id": "timecrimes",
+      "title": "Timecrimes (Los Cronocrímenes)",
+      "year": 2007,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": ["bootstrap_ontological"],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "time-travel-archive/films/timecrimes.md",
+      "confidence": "medium"
+    },
+    {
+      "id": "interstellar",
+      "title": "Interstellar",
+      "year": 2014,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": ["bootstrap_ontological"],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "time-travel-archive/films/interstellar.md",
+      "confidence": "medium"
+    },
+    {
+      "id": "outlander",
+      "title": "Outlander",
+      "year": 1991,
+      "medium": "novel",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "time-travel-archive/novels/outlander.md",
+      "confidence": "medium"
+    },
+    {
+      "id": "bill-and-ted",
+      "title": "Bill & Ted's Excellent Adventure",
+      "year": 1989,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": ["bootstrap_ontological"],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "time-travel-archive/films/bill-and-ted.md",
+      "confidence": "medium"
+    },
+    {
+      "id": "the-time-machine",
+      "title": "The Time Machine",
+      "year": 1895,
+      "medium": "novel",
+      "primaryRuleSetId": "mutable_ripple",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "mutable_single_with_ripples",
+      "archivePath": "time-travel-archive/novels/the-time-machine.md",
+      "confidence": "medium"
+    },
+    {
+      "id": "russian-doll",
+      "title": "Russian Doll",
+      "year": 2019,
+      "medium": "tv",
+      "primaryRuleSetId": "multiverse_contact",
+      "mixinRuleSetIds": ["death_checkpoint_rewrite", "temporal_loop_exit"],
+      "topologyPatternId": "dual_parallel_pair",
+      "archivePath": "time-travel-archive/tv/russian-doll.md",
+      "confidence": "medium"
+    },
+    {
+      "id": "terminator",
+      "title": "The Terminator",
+      "year": 1984,
+      "medium": "film",
+      "primaryRuleSetId": "predestination_closed_loop",
+      "mixinRuleSetIds": ["bootstrap_ontological"],
+      "topologyPatternId": "single_fixed_timeline",
+      "archivePath": "time-travel-archive/films/terminator.md",
+      "confidence": "medium"
+    },
+    {
+      "id": "11-22-63",
+      "title": "11/22/63",
+      "year": 2011,
+      "medium": "novel",
+      "primaryRuleSetId": "branch_on_intervention",
+      "mixinRuleSetIds": [],
+      "topologyPatternId": "branching_tree",
+      "archivePath": "time-travel-archive/novels/11-22-63.md",
+      "confidence": "medium"
+    }
+  ],
+  "note": "Full import wrote counts.written stubs; repo keeps sample JSON files + this index. Re-run import locally for the full generated set."
+}

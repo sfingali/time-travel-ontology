@@ -43,6 +43,7 @@ describe("catalogues", () => {
     assert.ok(TOPOLOGY_PATTERNS.length >= 8);
     assert.ok(TOPOLOGY_BY_ID.has("single_fixed_timeline"));
     assert.ok(TOPOLOGY_BY_ID.has("origin_plus_twins"));
+    assert.ok(TOPOLOGY_BY_ID.has("inverted_single_timeline"));
   });
 });
 
@@ -50,7 +51,7 @@ describe("instances", () => {
   it("all instances/*.json validate", async () => {
     const dir = path.join(root, "instances");
     const files = (await readdir(dir)).filter((f) => f.endsWith(".json"));
-    assert.ok(files.length >= 8, "expected at least 8 instances");
+    assert.ok(files.length >= 20, "expected at least 20 instances");
     for (const f of files) {
       const raw = JSON.parse(await readFile(path.join(dir, f), "utf8"));
       const result = StoryEncodingSchema.safeParse(raw);
@@ -65,6 +66,11 @@ describe("instances", () => {
         assert.ok(
           TOPOLOGY_BY_ID.has(result.data.topologyPatternId),
           `${f} unknown topology`,
+        );
+        assert.ok(result.data.primaryRuleSetId, `${f} missing primaryRuleSetId`);
+        assert.ok(
+          result.data.ruleSetIds.includes(result.data.primaryRuleSetId),
+          `${f} primary not in ruleSetIds`,
         );
       }
     }
