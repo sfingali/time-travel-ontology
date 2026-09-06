@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "id": "palm-springs",
+    "title": "Palm Springs",
+    "year": 2020,
+    "medium": "film",
+    "sources": [
+      "Max Barbakow; Andy Siara (2020)",
+      "time-travel-archive/films/palm-springs.md"
+    ]
+  },
+  "ruleSetIds": [
+    "temporal_loop_exit"
+  ],
+  "primaryRuleSetId": "temporal_loop_exit",
+  "mixinRuleSetIds": [],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_ps",
+      "label": "Wedding-day cave loop",
+      "spanLabel": "Nov 9 repeating"
+    }
+  ],
+  "agents": [
+    {
+      "id": "nyles",
+      "label": "Nyles",
+      "identityGroup": "nyles",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_ps"
+    },
+    {
+      "id": "sarah",
+      "label": "Sarah",
+      "identityGroup": "sarah",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_ps"
+    },
+    {
+      "id": "roy",
+      "label": "Roy",
+      "identityGroup": "roy",
+      "continuityRole": "iteration",
+      "homeWorldRef": "w_ps"
+    },
+    {
+      "id": "misty",
+      "label": "Misty",
+      "homeWorldRef": "w_ps"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_wedding",
+      "type": "ordinary",
+      "label": "Wedding day; Nyles already looping",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "Nov 9 #N"
+      },
+      "agents": ["nyles", "misty"]
+    },
+    {
+      "id": "e_cave",
+      "type": "departure",
+      "label": "Sarah pulled into time cave with Nyles",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "night"
+      },
+      "agents": ["nyles", "sarah"],
+      "payload": {"travelMode": "other"}
+    },
+    {
+      "id": "e_reset_s",
+      "type": "loop_reset",
+      "label": "Sarah wakes looping too",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "Nov 9 #N+1"
+      },
+      "agents": ["sarah", "nyles"],
+      "payload": {"memoryRetained": true}
+    },
+    {
+      "id": "e_roy",
+      "type": "ordinary",
+      "label": "Roy tortures Nyles across loops",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "many"
+      },
+      "agents": ["roy", "nyles"]
+    },
+    {
+      "id": "e_thesis",
+      "type": "observation",
+      "label": "Quantum cave / bomb-exit theory",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "research days"
+      },
+      "agents": ["sarah", "nyles"]
+    },
+    {
+      "id": "e_bomb",
+      "type": "intervention",
+      "label": "Enter cave with explosives together",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "exit attempt"
+      },
+      "agents": ["sarah", "nyles"],
+      "payload": {"exitCondition": "die in cave with blast"}
+    },
+    {
+      "id": "e_exit",
+      "type": "arrival",
+      "label": "Wake Nov 10 — loop broken",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "Nov 10"
+      },
+      "agents": ["sarah", "nyles"],
+      "payload": {"exitCondition": "cave blast"}
+    },
+    {
+      "id": "e_pool",
+      "type": "ordinary",
+      "label": "Morning after; choose each other forward",
+      "at": {
+        "worldRef": "w_ps",
+        "timeLabel": "Nov 10 morning"
+      },
+      "agents": ["sarah", "nyles"]
+    }
+  ],
+  "edges": [
+    {"id": "c1", "kind": "causal", "from": "e_wedding", "to": "e_cave"},
+    {"id": "c2", "kind": "causal", "from": "e_cave", "to": "e_reset_s"},
+    {"id": "c3", "kind": "temporal", "from": "e_reset_s", "to": "e_roy"},
+    {"id": "c4", "kind": "causal", "from": "e_roy", "to": "e_thesis"},
+    {"id": "c5", "kind": "intervention", "from": "e_thesis", "to": "e_bomb"},
+    {"id": "c6", "kind": "causal", "from": "e_bomb", "to": "e_exit"},
+    {"id": "c7", "kind": "temporal", "from": "e_exit", "to": "e_pool"}
+  ],
+  "interventions": [
+    {
+      "id": "iv_blast",
+      "eventId": "e_bomb",
+      "ruleEffects": [
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Shared cave death/blast satisfies exit for both"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Shared wedding-day loop broken via cave blast; Nyles and Sarah continue into Nov 10.",
+    "endWorldRefs": ["w_ps"]
+  }
+}
