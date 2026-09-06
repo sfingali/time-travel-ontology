@@ -2,7 +2,7 @@ import type { TopologyPattern } from "../schema/topology.js";
 import { TopologyPatternSchema } from "../schema/topology.js";
 
 /** Reusable world-topology patterns (distinct from rule sets). */
-export const TOPOLOGY_PATTERNS: TopologyPattern[] = [
+const TOPOLOGY_PATTERNS_RAW: TopologyPattern[] = [
   {
     id: "single_fixed_timeline",
     label: "Single fixed timeline",
@@ -73,6 +73,12 @@ export const TOPOLOGY_PATTERNS: TopologyPattern[] = [
   },
 ];
 
+// Freeze the catalogue so consumers cannot mutate shared state (review
+// finding #13). The declared type stays `TopologyPattern[]` for stability.
+export const TOPOLOGY_PATTERNS: TopologyPattern[] = Object.freeze(
+  TOPOLOGY_PATTERNS_RAW.map((t) => Object.freeze(t)),
+) as unknown as TopologyPattern[];
+
 export const TOPOLOGY_BY_ID: ReadonlyMap<string, TopologyPattern> = new Map(
   TOPOLOGY_PATTERNS.map((t) => [t.id, t]),
 );
@@ -84,7 +90,12 @@ export function getTopologyPattern(id: string): TopologyPattern {
 }
 
 export function assertTopologiesValid(): void {
+  const seen = new Set<string>();
   for (const t of TOPOLOGY_PATTERNS) {
+    if (seen.has(t.id)) {
+      throw new Error(`duplicate topology pattern id: ${t.id}`);
+    }
+    seen.add(t.id);
     TopologyPatternSchema.parse(t);
   }
 }

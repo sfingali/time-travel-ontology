@@ -4,7 +4,7 @@ import { RuleSetSchema } from "../schema/rules.js";
 /**
  * Named reusable law variants. IDs are stable contract strings for encodings.
  */
-export const RULE_SETS: RuleSet[] = [
+const RULE_SETS_RAW: RuleSet[] = [
   {
     id: "fixed_novikov",
     label: "Fixed timeline (Novikov self-consistency)",
@@ -200,6 +200,12 @@ export const RULE_SETS: RuleSet[] = [
   },
 ];
 
+// Freeze the catalogue so consumers cannot mutate shared state (review
+// finding #13). The declared type stays `RuleSet[]` for downstream stability.
+export const RULE_SETS: RuleSet[] = Object.freeze(
+  RULE_SETS_RAW.map((r) => Object.freeze(r)),
+) as unknown as RuleSet[];
+
 export const RULE_SET_BY_ID: ReadonlyMap<string, RuleSet> = new Map(
   RULE_SETS.map((r) => [r.id, r]),
 );
@@ -211,7 +217,12 @@ export function getRuleSet(id: string): RuleSet {
 }
 
 export function assertRuleSetsValid(): void {
+  const seen = new Set<string>();
   for (const r of RULE_SETS) {
+    if (seen.has(r.id)) {
+      throw new Error(`duplicate rule set id: ${r.id}`);
+    }
+    seen.add(r.id);
     RuleSetSchema.parse(r);
   }
 }

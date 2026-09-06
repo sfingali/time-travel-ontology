@@ -3,8 +3,12 @@ import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { describe, it } from "node:test";
 import { fileURLToPath } from "node:url";
-import { StoryEncodingSchema } from "../schema/story.js";
-import { RULE_SETS, assertRuleSetsValid, RULE_SET_BY_ID } from "../catalog/rules.js";
+import { validateStoryEncoding } from "../validate.js";
+import {
+  RULE_SETS,
+  assertRuleSetsValid,
+  RULE_SET_BY_ID,
+} from "../catalog/rules.js";
 import {
   TOPOLOGY_PATTERNS,
   assertTopologiesValid,
@@ -48,46 +52,80 @@ describe("catalogues", () => {
 });
 
 describe("instances", () => {
-  it("all instances/*.json validate", async () => {
+  it("all instances/*.json validate via the semantic validator", async () => {
     const dir = path.join(root, "instances");
     const files = (await readdir(dir)).filter((f) => f.endsWith(".json"));
     assert.ok(files.length >= 20, "expected at least 20 instances");
     for (const f of files) {
       const raw = JSON.parse(await readFile(path.join(dir, f), "utf8"));
-      const result = StoryEncodingSchema.safeParse(raw);
+      const result = validateStoryEncoding(raw);
       assert.ok(
         result.success,
-        `${f} should validate: ${JSON.stringify(result.success ? null : result.error.issues)}`,
+        `${f} should validate: ${JSON.stringify(result.errors)}`,
       );
-      if (result.success) {
-        for (const id of result.data.ruleSetIds) {
-          assert.ok(RULE_SET_BY_ID.has(id), `${f} unknown rule ${id}`);
-        }
-        assert.ok(
-          TOPOLOGY_BY_ID.has(result.data.topologyPatternId),
-          `${f} unknown topology`,
-        );
-        assert.ok(result.data.primaryRuleSetId, `${f} missing primaryRuleSetId`);
-        assert.ok(
-          result.data.ruleSetIds.includes(result.data.primaryRuleSetId),
-          `${f} primary not in ruleSetIds`,
-        );
-      }
     }
   });
 });
 
 describe("invalid fixtures", () => {
-  it("rejects at least one invalid fixture", async () => {
+  it("every invalid fixture fails the semantic validator", async () => {
     const dir = path.join(root, "fixtures", "invalid");
     const files = (await readdir(dir)).filter((f) => f.endsWith(".json"));
     assert.ok(files.length >= 1, "need at least one invalid fixture");
-    let sawFailure = false;
     for (const f of files) {
       const raw = JSON.parse(await readFile(path.join(dir, f), "utf8"));
-      const result = StoryEncodingSchema.safeParse(raw);
-      if (!result.success) sawFailure = true;
+      const result = validateStoryEncoding(raw);
+      assert.ok(
+        !result.success,
+        `${f} should fail validation but passed`,
+      );
     }
-    assert.ok(sawFailure, "expected at least one fixture to fail schema");
+  });
+
+  it("a structurally valid story with an unknown ruleSetId is rejected", async () => {
+    // Clean structural shape (passes Zod) but references a rule absent from the
+    // catalogue — this hits the catalogue-membership lane (review findings #2/#6),
+    // which the multi-defect fixture never reaches.
+    const bogusRule = {
+      meta: { id: "bogus", title: "Bogus Rule", medium: "film" },
+      ruleSetIds: ["not_a_real_rule"],
+      primaryRuleSetId: "not_a_real_rule",
+      topologyPatternId: "single_fixed_timeline",
+      worlds: [{ kind: "timeline", id: "w1", label: "World" }],
+      events: [
+        { id: "e1", type: "ordinary", label: "Event", at: { worldRef: "w1" } },
+      ],
+      outcome: { summary: "x", endWorldRefs: ["w1"] },
+    };
+    const result = validateStoryEncoding(bogusRule);
+    assert.ok(!result.success);
+    assert.match(result.errors.join("\n"), /not_a_real_rule/);
+  });
+
+  it("an intervention ruleEffect naming a non-active rule is rejected", async () => {
+    // Structurally valid, but the intervention attributes an effect to a law that
+    // is neither in the catalogue nor active in this encoding (review #2).
+    const badEffect = {
+      meta: { id: "bad-effect", title: "Bad Effect", medium: "film" },
+      ruleSetIds: ["fixed_novikov"],
+      primaryRuleSetId: "fixed_novikov",
+      topologyPatternId: "single_fixed_timeline",
+      worlds: [{ kind: "timeline", id: "w1", label: "World" }],
+      events: [
+        { id: "e1", type: "intervention", label: "Event", at: { worldRef: "w1" } },
+      ],
+      interventions: [
+        {
+          id: "iv1",
+          eventId: "e1",
+          ruleEffects: [{ ruleSetId: "entropy_inversion", effect: "flips arrow" }],
+        },
+      ],
+      outcome: { summary: "x", endWorldRefs: ["w1"] },
+    };
+    const result = validateStoryEncoding(badEffect);
+    assert.ok(!result.success);
+    assert.match(result.errors.join("\n"), /entropy_inversion/);
+    assert.match(result.errors.join("\n"), /not in the active ruleSetIds/);
   });
 });

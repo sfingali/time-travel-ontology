@@ -448,7 +448,6 @@ function buildStub(meta, blurb) {
         payload: {
           note: "Draft only",
           tags: [...meta.mechanismTags, ...meta.paradoxTags].slice(0, 12),
-          mappingConfidence: meta.confidence,
         },
       },
     ],
