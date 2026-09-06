@@ -1,5 +1,6 @@
-# Diagram assets note
+# Diagram assets notes
 
-- Image count at publish time: 71 (PNG/JPG/SVG under `diagrams/assets/`).
-- Staging recompressions documented for GitHub publish path.
-- Six large variants recompressed under 1.5MB; then all rasters further compressed to <=60KB for MCP sidecar transport (see ASSETS_NOTE full file on disk).
+- Source sync: full `reference-archive/` tree from staging (83M), including `diagrams/assets/**`.
+- Image count: 71 files (png/jpg/jpeg/gif/webp/svg) under `diagrams/assets/`.
+- Recompression: none required. No single image exceeded 50MB (largest ~29MB: `variants/dark/dark-v3.png`).
+- Storage: images tracked with Git LFS via `.gitattributes` patterns under `reference-archive/diagrams/assets/`.

@@ -1,0 +1,86 @@
+Wikimedia Commons downloads — free-licensed time-travel / paradox diagrams
+Harvest: 2026-09-06 (UTC) / secondary Reddit+Imgur+Commons pass
+All files below are clearly free-licensed on Commons; keep attribution.
+
+NOTE: Several files are Wikimedia thumbnail PNG renders (iiurlwidth≈3840) because
+original full-resolution endpoints returned HTTP 429 during harvest. Prefer the
+Commons page URL for the canonical SVG/JPG when re-downloading.
+Failed originals this pass (URL-listed only in index): Time_Travel_Method.jpg,
+Predestination_paradox.png, Predestinatieparadox_biljartbal.png,
+Grootvaderparadox_biljartbal.png.
+
+FILE: All_you_zombies_timeline.png
+  Commons page: https://commons.wikimedia.org/wiki/File:All_you_zombies_timeline.png
+  Direct URL:   https://upload.wikimedia.org/wikipedia/commons/c/cd/All_you_zombies_timeline.png
+  License:      CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+  Artist:       Johnstoo
+  Bytes:        147054
+
+FILE: Bilele_de_biliard_in_paradoxul_bunicului.svg
+  Commons page: https://commons.wikimedia.org/wiki/File:Bilele_de_biliard_%C3%AEn_paradoxul_bunicului.svg
+  Direct URL:   https://upload.wikimedia.org/wikipedia/commons/0/08/Bilele_de_biliard_%C3%AEn_paradoxul_bunicului.svg
+  License:      CC BY-SA 4.0
+  Artist:       BrightRoundCircle (RO derivative of grandfather paradox billiard)
+  Bytes:        47557
+
+FILE: Causal_loop_billiard_ball.svg
+  Commons page: https://commons.wikimedia.org/wiki/File:Causal_loop_billiard_ball.svg
+  Direct URL:   https://upload.wikimedia.org/wikipedia/commons/3/37/Causal_loop_billiard_ball.svg
+  License:      CC BY-SA 3.0
+  Artist:       BrightRoundCircle
+  Bytes:        54663
+
+FILE: Predestinatieparadox.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Predestinatieparadox.png
+  Direct URL:   https://upload.wikimedia.org/wikipedia/commons/5/5e/Predestinatieparadox.png
+  License:      CC BY-SA 4.0
+  Artist:       S. Perquin (Dutch predestination paradox diagram)
+  Bytes:        237138
+
+FILE: Dark_TV_Series_Family_Tree.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Dark_(TV_Series)_Family_Tree.svg
+  Direct URL:   https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Dark_%28TV_Series%29_Family_Tree.svg/3840px-Dark_%28TV_Series%29_Family_Tree.svg.png
+  License:      CC BY-SA 4.0
+  Artist:       AfflictedHorror
+  Note:         Rasterized thumb of SVG (429 on original)
+  Bytes:        252839
+
+FILE: Dark_TV_Series_Family_Tree_zh-tw.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Dark_(TV_Series)_Family_Tree_zh-tw.svg
+  Direct URL:   https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Dark_%28TV_Series%29_Family_Tree_zh-tw.svg/3840px-Dark_%28TV_Series%29_Family_Tree_zh-tw.svg.png
+  License:      CC BY-SA 4.0
+  Artist:       AfflictedHorror / Austin Chang (zh-TW labels)
+  Note:         Rasterized thumb of SVG
+  Bytes:        433674
+
+FILE: Dark_family_tree_season_3_version_1.jpg
+  Commons page: https://commons.wikimedia.org/wiki/File:Dark_family_tree_season_3_-_version_1.jpg
+  Direct URL:   https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Dark_family_tree_season_3_-_version_1.jpg/3840px-Dark_family_tree_season_3_-_version_1.jpg
+  License:      CC BY-SA 4.0
+  Artist:       Christianlorenz97 (Italian S3 tree; high-res original on Commons)
+  Note:         3840px thumb (429 on 15k-wide original)
+  Bytes:        235433
+
+FILE: Grandfather_paradox_billiard_ball.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Grandfather_paradox_billiard_ball.svg
+  Direct URL:   https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Grandfather_paradox_billiard_ball.svg/3840px-Grandfather_paradox_billiard_ball.svg.png
+  License:      CC BY-SA 4.0
+  Artist:       BrightRoundCircle
+  Note:         Rasterized thumb of SVG
+  Bytes:        390245
+
+FILE: Star_Trek_Timelines.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Star_Trek_Timelines.png
+  Direct URL:   https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Star_Trek_Timelines.png/3840px-Star_Trek_Timelines.png
+  License:      CC BY 3.0
+  Artist:       CellarDoor85 (Robert Aehnelt)
+  Note:         3840px thumb
+  Bytes:        346845
+
+FILE: Time_Travel_Method-2.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Time_Travel_Method-2.svg
+  Direct URL:   https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Time_Travel_Method-2.svg/3840px-Time_Travel_Method-2.svg.png
+  License:      CC BY-SA 3.0
+  Artist:       Tom-b (derivative of William lee0 / MJL Primer method)
+  Note:         Rasterized thumb of SVG
+  Bytes:        708162
