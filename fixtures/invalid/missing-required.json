@@ -9,7 +9,7 @@
   "worlds": [],
   "events": [],
   "outcome": {
-    "summary": "Missing worlds and events should fail",
+    "summary": "Missing primary and worlds/events should fail",
     "endWorldRefs": ["nowhere"]
   },
   "extraForbiddenField": true
