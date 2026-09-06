@@ -1,0 +1,402 @@
+{
+  "meta": {
+    "id": "project-almanac",
+    "title": "Project Almanac",
+    "year": 2015,
+    "medium": "film",
+    "sources": [
+      "Dean Israelite (2015)",
+      "time-travel-archive/films/project-almanac.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "mutable_ripple",
+    "bootstrap_ontological",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "mutable_ripple",
+  "mixinRuleSetIds": [
+    "bootstrap_ontological",
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_present",
+      "label": "Initial teen present",
+      "spanLabel": "2010s"
+    },
+    {
+      "kind": "branch",
+      "id": "w_alt",
+      "label": "Butterfly-damaged present",
+      "parentRef": "w_present",
+      "forkLabel": "solo romance jump"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_birthday",
+      "label": "7th birthday burn moment",
+      "spanLabel": "childhood"
+    },
+    {
+      "kind": "branch",
+      "id": "w_present2",
+      "label": "Post-burn present (dual cameras)",
+      "parentRef": "w_present",
+      "forkLabel": "plans destroyed"
+    }
+  ],
+  "agents": [
+    {
+      "id": "david",
+      "label": "David Raskin",
+      "identityGroup": "david",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_present"
+    },
+    {
+      "id": "christina",
+      "label": "Christina",
+      "homeWorldRef": "w_present"
+    },
+    {
+      "id": "adam",
+      "label": "Adam",
+      "homeWorldRef": "w_present"
+    },
+    {
+      "id": "quinn",
+      "label": "Quinn",
+      "homeWorldRef": "w_present"
+    },
+    {
+      "id": "jessie",
+      "label": "Jessie Pierce",
+      "homeWorldRef": "w_present"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_tape",
+      "type": "observation",
+      "label": "Birthday tape shows future David in mirror",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "discovery"
+      },
+      "agents": [
+        "david"
+      ],
+      "payload": {
+        "bootstrapEntity": "mirror image",
+        "artifactKind": "other"
+      }
+    },
+    {
+      "id": "e_plans",
+      "type": "ordinary",
+      "label": "Find DARPA Almanac plans in late father's basement",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "build"
+      },
+      "agents": [
+        "david",
+        "christina",
+        "adam",
+        "quinn"
+      ]
+    },
+    {
+      "id": "e_toy",
+      "type": "departure",
+      "label": "Toy-car proof send; neighborhood blackout",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "test"
+      },
+      "agents": [
+        "david",
+        "jessie"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "travelDelta": "seconds"
+      }
+    },
+    {
+      "id": "e_feedback",
+      "type": "ordinary",
+      "label": "Quinn past-self feedback nearly erases both",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "rule learn"
+      },
+      "agents": [
+        "quinn"
+      ],
+      "payload": {
+        "note": "no solo / no past-self contact"
+      }
+    },
+    {
+      "id": "e_lottery",
+      "type": "intervention",
+      "label": "Lottery and wish-fulfillment hops",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "fun phase"
+      },
+      "agents": [
+        "david",
+        "adam",
+        "quinn",
+        "jessie"
+      ]
+    },
+    {
+      "id": "e_lolla",
+      "type": "departure",
+      "label": "Lollapalooza three months back",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "concert"
+      },
+      "agents": [
+        "david",
+        "jessie"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "travelDelta": "-3 months"
+      }
+    },
+    {
+      "id": "e_romance",
+      "type": "intervention",
+      "label": "David solo-jumps to fix Jessie confession",
+      "at": {
+        "worldRef": "w_alt",
+        "timeLabel": "romance rewrite"
+      },
+      "agents": [
+        "david",
+        "jessie"
+      ]
+    },
+    {
+      "id": "e_disasters",
+      "type": "ordinary",
+      "label": "Plane crash and news disasters escalate",
+      "at": {
+        "worldRef": "w_alt",
+        "timeLabel": "butterfly"
+      },
+      "agents": [
+        "david"
+      ]
+    },
+    {
+      "id": "e_breakup",
+      "type": "ordinary",
+      "label": "Jessie learns truth; friendship fractures",
+      "at": {
+        "worldRef": "w_alt",
+        "timeLabel": "cost"
+      },
+      "agents": [
+        "david",
+        "jessie"
+      ]
+    },
+    {
+      "id": "e_burn",
+      "type": "intervention",
+      "label": "Jump to 7th birthday; burn plans and materials",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "age 7"
+      },
+      "agents": [
+        "david"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "destinationTimeLabel": "childhood"
+      }
+    },
+    {
+      "id": "e_vanish",
+      "type": "collapse",
+      "label": "Camera: future David vanishes as timeline rewrites",
+      "at": {
+        "worldRef": "w_birthday",
+        "timeLabel": "burn"
+      },
+      "agents": [
+        "david"
+      ]
+    },
+    {
+      "id": "e_dual_cam",
+      "type": "bootstrap_origin",
+      "label": "Attic: two cameras \u2014 party tape + full travel chronicle",
+      "at": {
+        "worldRef": "w_present2",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "christina"
+      ],
+      "payload": {
+        "artifactKind": "other",
+        "bootstrapEntity": "travel camera"
+      }
+    },
+    {
+      "id": "e_remeet",
+      "type": "ordinary",
+      "label": "Future-knowing David reintroduces to Jessie",
+      "at": {
+        "worldRef": "w_present2",
+        "timeLabel": "epilogue"
+      },
+      "agents": [
+        "david",
+        "jessie"
+      ],
+      "payload": {
+        "memoryRetained": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_tape",
+      "to": "e_plans"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_plans",
+      "to": "e_toy"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_toy",
+      "to": "e_feedback"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_feedback",
+      "to": "e_lottery"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_lottery",
+      "to": "e_lolla"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_lolla",
+      "to": "e_romance"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_romance",
+      "to": "e_disasters"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_disasters",
+      "to": "e_breakup"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_breakup",
+      "to": "e_burn"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_burn",
+      "to": "e_vanish"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_vanish",
+      "to": "e_dual_cam"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_dual_cam",
+      "to": "e_remeet"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_present",
+      "to": "w_alt",
+      "relation": "supersedes",
+      "label": "romance/butterfly rewrite"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_present",
+      "to": "w_present2",
+      "relation": "supersedes",
+      "label": "machine never built?"
+    },
+    {
+      "id": "w3",
+      "kind": "world_relation",
+      "from": "w_birthday",
+      "to": "w_present",
+      "relation": "originatesFrom"
+    },
+    {
+      "id": "loop1",
+      "kind": "causal",
+      "from": "e_dual_cam",
+      "to": "e_tape",
+      "label": "residual chronicle / lure"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_burn",
+      "eventId": "e_burn",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Destroying plans erases machine-using future from birthday tape"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Travel chronicle camera remains as residual bootstrap artifact"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Machine unmade; dual-camera coda and knowing flirt imply knowledge or cycle persists.",
+    "endWorldRefs": [
+      "w_present2"
+    ]
+  }
+}

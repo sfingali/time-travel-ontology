@@ -78,3 +78,30 @@ Edge of Tomorrow; Happy Death Day / 2U; Primer; Boss Level; Triangle; Source Cod
 ## Cast & production breadcrumbs
 
 Robbie Amell (Renton); Rachael Taylor (Hannah/Mother); Shaun Benson (Sonny); Gray Powell (Father/Grimm); Jacob Neayem (Brother); Adam Butcher (Cuz). Elliott’s script dates to ~2008 and helped get him *Orphan Black*; after option limbo, Netflix revived it under Lost City / XYZ. TIFF Discovery premiere 9 Sep 2016; global Netflix 16 Sep. DeFore (THR): “tricky little time twister” that “knows how to wrap its paradoxes.” Under-$2M / 19-day Toronto shoot remains a model for constrained loop cinema.
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/arq.json` with primary rule `temporal_loop_exit` and mixins `death_checkpoint_rewrite` + `mutable_ripple`. Topology: single fixed timeline (house volume) plus a spatial “outside” branch marking exit from the battery’s bound.
+
+Event spine models: invasion wake → first death reset → Hannah Bloc reveal → ARQ theory → memory bleed to Hannah then Sonny → Cuz recovery → house-boundary test → nested nine-cycle reveal → message-in-a-bottle → robot cliffhanger / outer reset.
+
+Public sources for structure: Wikipedia plot synopsis; THR TIFF review (DeFore) on paradox wrap-up; TV Tropes Film/ARQ loop layers. No proprietary scripts used.
+
+Teaching pairings: *Edge of Tomorrow* (enemy learns loop), *The Endless* (nested pods), *Happy Death Day 2U* (others learn the loop), *Boss Level* (game-continue grammar).
+
+### Formal loop table (archive sync)
+
+| Pass awareness | Who remembers | Typical failure |
+|---|---|---|
+| 1–few | Renton only | Raid / cyanide / trust |
+| Mid | + Hannah | Faction betrayal |
+| Late | + Sonny / Cuz | Torus capture of ARQ |
+| Outer wipe | Almost none | Nine-pack memory erase |
+
+### Production breadcrumbs (public)
+
+Netflix global release 16 Sep 2016 after TIFF Discovery 9 Sep; Toronto 19-day shoot; Elliott’s *Orphan Black* room credited for faction density. Runtime 88 minutes; sparse RT sample historically ~40s%.
+
+### Why ≥ exhaustive sync
+
+True-deep archive expansion pairs the hand-crafted ontology instance with narrative beats sufficient for later visual engines (loop iterations as `payload.iteration`, spatial bound as world edge).

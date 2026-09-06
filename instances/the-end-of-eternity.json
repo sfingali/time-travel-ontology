@@ -1,0 +1,400 @@
+{
+  "meta": {
+    "id": "the-end-of-eternity",
+    "title": "The End of Eternity",
+    "year": 1955,
+    "medium": "novel",
+    "sources": [
+      "Isaac Asimov (1955)",
+      "time-travel-archive/novels/the-end-of-eternity.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "branch_bureaucracy_prune",
+    "bootstrap_ontological",
+    "mutable_ripple"
+  ],
+  "primaryRuleSetId": "branch_bureaucracy_prune",
+  "mixinRuleSetIds": [
+    "bootstrap_ontological",
+    "mutable_ripple"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_eternity",
+      "label": "Eternity (outside physio-time)",
+      "spanLabel": "27th\u2013Hidden Centuries"
+    },
+    {
+      "kind": "branch",
+      "id": "w_hidden",
+      "label": "Hidden Centuries refuge",
+      "parentRef": "w_eternity",
+      "forkLabel": "beyond kettle norm",
+      "nestsWithinRef": "w_eternity"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_1932",
+      "label": "1932 Primitive",
+      "spanLabel": "1932"
+    },
+    {
+      "kind": "branch",
+      "id": "w_infinity",
+      "label": "Infinity timeline (no Eternity)",
+      "parentRef": "w_1932",
+      "forkLabel": "founding prevented"
+    }
+  ],
+  "agents": [
+    {
+      "id": "harlan",
+      "label": "Andrew Harlan",
+      "identityGroup": "harlan",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_eternity"
+    },
+    {
+      "id": "noys",
+      "label": "No\u00ffs Lambent",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_hidden"
+    },
+    {
+      "id": "twissell",
+      "label": "Laban Twissell",
+      "homeWorldRef": "w_eternity"
+    },
+    {
+      "id": "cooper",
+      "label": "Brinsley Cooper / Mallansohn",
+      "identityGroup": "mallansohn",
+      "continuityRole": "bootstrap_sink",
+      "homeWorldRef": "w_eternity"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_eternity",
+      "type": "ordinary",
+      "label": "Eternity corridor outside physio-time; M.N.C. reality edits",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "institutional"
+      },
+      "agents": [
+        "harlan",
+        "twissell"
+      ],
+      "payload": {
+        "pruneAuthority": "Eternity"
+      }
+    },
+    {
+      "id": "e_tutor",
+      "type": "ordinary",
+      "label": "Harlan tutors Cooper; assigned week with No\u00ffs in 482nd",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "plot start"
+      },
+      "agents": [
+        "harlan",
+        "cooper",
+        "noys"
+      ]
+    },
+    {
+      "id": "e_love",
+      "type": "ordinary",
+      "label": "Harlan falls for No\u00ffs; hides her from reality change",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "harlan",
+        "noys"
+      ]
+    },
+    {
+      "id": "e_hidden",
+      "type": "departure",
+      "label": "Hides No\u00ffs in Hidden Centuries sections",
+      "at": {
+        "worldRef": "w_hidden",
+        "timeLabel": "refuge"
+      },
+      "agents": [
+        "harlan",
+        "noys"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_block",
+      "type": "ordinary",
+      "label": "Kettle block at 100,000th century",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "crisis"
+      },
+      "agents": [
+        "harlan"
+      ]
+    },
+    {
+      "id": "e_mallansohn",
+      "type": "reveal",
+      "label": "Cooper is Mallansohn \u2014 bootstrap inventor of temporal field",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "reveal"
+      },
+      "agents": [
+        "harlan",
+        "twissell",
+        "cooper"
+      ],
+      "payload": {
+        "bootstrapEntity": "temporal field"
+      }
+    },
+    {
+      "id": "e_send_cooper",
+      "type": "departure",
+      "label": "Twissell forces Cooper send; Harlan sabotages \u2192 early 20th",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "send"
+      },
+      "agents": [
+        "harlan",
+        "cooper"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "destinationTimeLabel": "1932"
+      }
+    },
+    {
+      "id": "e_atom_ad",
+      "type": "observation",
+      "label": "1932 ATOM acrostic ad marks Cooper",
+      "at": {
+        "worldRef": "w_1932",
+        "timeLabel": "1932"
+      },
+      "agents": [
+        "harlan",
+        "cooper"
+      ],
+      "payload": {
+        "signal": "ATOM ad",
+        "artifactKind": "other"
+      }
+    },
+    {
+      "id": "e_noys_truth",
+      "type": "reveal",
+      "label": "No\u00ffs from Hidden Centuries; Eternity dooms humanity to Earthbound extinction",
+      "at": {
+        "worldRef": "w_1932",
+        "timeLabel": "1932"
+      },
+      "agents": [
+        "noys",
+        "harlan"
+      ]
+    },
+    {
+      "id": "e_spare",
+      "type": "intervention",
+      "label": "Harlan spares No\u00ffs; allows prevention of Eternity's founding",
+      "at": {
+        "worldRef": "w_1932",
+        "timeLabel": "choice"
+      },
+      "agents": [
+        "harlan",
+        "noys"
+      ]
+    },
+    {
+      "id": "e_end",
+      "type": "collapse",
+      "label": "Reality changes; kettle vanishes \u2014 end of Eternity",
+      "at": {
+        "worldRef": "w_infinity",
+        "timeLabel": "rewrite"
+      },
+      "agents": [
+        "harlan",
+        "noys"
+      ]
+    },
+    {
+      "id": "e_infinity",
+      "type": "branch_fork",
+      "label": "Beginning of Infinity \u2014 galactic humanity path",
+      "at": {
+        "worldRef": "w_infinity",
+        "timeLabel": "new history"
+      },
+      "agents": [
+        "harlan",
+        "noys"
+      ]
+    },
+    {
+      "id": "e_mnc",
+      "type": "branch_prune",
+      "label": "Prior M.N.C. edits erased with the institution",
+      "at": {
+        "worldRef": "w_eternity",
+        "timeLabel": "unmade"
+      },
+      "agents": [
+        "twissell"
+      ],
+      "payload": {
+        "pruneAuthority": "Hidden Centuries"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_eternity",
+      "to": "e_tutor"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_tutor",
+      "to": "e_love"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_love",
+      "to": "e_hidden"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_hidden",
+      "to": "e_block"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_block",
+      "to": "e_mallansohn"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_mallansohn",
+      "to": "e_send_cooper"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_send_cooper",
+      "to": "e_atom_ad"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_atom_ad",
+      "to": "e_noys_truth"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_noys_truth",
+      "to": "e_spare"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_spare",
+      "to": "e_end"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_end",
+      "to": "e_infinity"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_infinity",
+      "to": "e_mnc"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_eternity",
+      "to": "w_1932",
+      "relation": "originatesFrom"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_eternity",
+      "to": "w_infinity",
+      "relation": "supersedes",
+      "label": "Eternity erased"
+    },
+    {
+      "id": "w3",
+      "kind": "world_relation",
+      "from": "w_hidden",
+      "to": "w_eternity",
+      "relation": "nestsWithin"
+    },
+    {
+      "id": "loop1",
+      "kind": "causal",
+      "from": "e_mallansohn",
+      "to": "e_send_cooper",
+      "label": "bootstrap founding"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_spare",
+      "eventId": "e_spare",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_bureaucracy_prune",
+          "effect": "Meta-prune: destroy the pruning agency itself"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Mallansohn loop unmade with Eternity"
+        },
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Physio-history overwritten toward Infinity"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Harlan and No\u00ffs end Eternity; humanity freed toward galactic Infinity.",
+    "endWorldRefs": [
+      "w_infinity"
+    ]
+  }
+}

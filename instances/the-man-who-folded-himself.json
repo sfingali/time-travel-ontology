@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "id": "the-man-who-folded-himself",
+    "title": "The Man Who Folded Himself",
+    "year": 1973,
+    "medium": "novel",
+    "sources": [
+      "David Gerrold (1973)",
+      "time-travel-archive/novels/the-man-who-folded-himself.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "bootstrap_ontological",
+    "branch_on_intervention",
+    "predestination_closed_loop"
+  ],
+  "primaryRuleSetId": "bootstrap_ontological",
+  "mixinRuleSetIds": [
+    "branch_on_intervention",
+    "predestination_closed_loop"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_prime",
+      "label": "Daniel's primary life line",
+      "spanLabel": "1975\u2013"
+    },
+    {
+      "kind": "branch",
+      "id": "w_swarm",
+      "label": "Personal multiverse of Daniels",
+      "parentRef": "w_prime",
+      "forkLabel": "belt multiplicity"
+    },
+    {
+      "kind": "branch",
+      "id": "w_diane",
+      "label": "Diane female-loop branch",
+      "parentRef": "w_prime",
+      "forkLabel": "sex-selected child split"
+    }
+  ],
+  "agents": [
+    {
+      "id": "danny",
+      "label": "Daniel Eakins",
+      "identityGroup": "daniel",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_prime"
+    },
+    {
+      "id": "don",
+      "label": "Don (future Daniel)",
+      "identityGroup": "daniel",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_prime",
+      "continuedFrom": "danny"
+    },
+    {
+      "id": "jim",
+      "label": "Uncle Jim (old Daniel)",
+      "identityGroup": "daniel",
+      "continuityRole": "bootstrap_source",
+      "homeWorldRef": "w_prime",
+      "continuedFrom": "danny"
+    },
+    {
+      "id": "diane",
+      "label": "Diane",
+      "identityGroup": "diane",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_diane"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_jim",
+      "type": "ordinary",
+      "label": "Uncle Jim raises allowance for diary; dies",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "1975"
+      },
+      "agents": [
+        "danny",
+        "jim"
+      ]
+    },
+    {
+      "id": "e_belt",
+      "type": "ordinary",
+      "label": "Danny inherits Time-belt",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "inheritance"
+      },
+      "agents": [
+        "danny"
+      ],
+      "payload": {
+        "artifactKind": "device",
+        "artifactId": "time-belt"
+      }
+    },
+    {
+      "id": "e_don",
+      "type": "contact",
+      "label": "Meets future self Don; races win",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "first loops"
+      },
+      "agents": [
+        "danny",
+        "don"
+      ],
+      "payload": {
+        "identityNote": "don=future danny"
+      }
+    },
+    {
+      "id": "e_become_don",
+      "type": "ordinary",
+      "label": "Danny becomes Don guiding yesterday's self",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "role rotation"
+      },
+      "agents": [
+        "danny",
+        "don"
+      ]
+    },
+    {
+      "id": "e_swarm",
+      "type": "contact",
+      "label": "Ever more alternate Daniels (ultra-Don\u2026)",
+      "at": {
+        "worldRef": "w_swarm",
+        "timeLabel": "multiplicity"
+      },
+      "agents": [
+        "danny"
+      ],
+      "payload": {
+        "iteration": 12
+      }
+    },
+    {
+      "id": "e_erase_child",
+      "type": "intervention",
+      "label": "Changes erase traces of childhood",
+      "at": {
+        "worldRef": "w_swarm",
+        "timeLabel": "edits"
+      },
+      "agents": [
+        "danny"
+      ]
+    },
+    {
+      "id": "e_diane",
+      "type": "contact",
+      "label": "Meets female counterpart Diane / Donna mirrors",
+      "at": {
+        "worldRef": "w_diane",
+        "timeLabel": "deep past"
+      },
+      "agents": [
+        "danny",
+        "diane"
+      ]
+    },
+    {
+      "id": "e_pregnancy",
+      "type": "birth",
+      "label": "Diane pregnant; each forces child's sex \u2192 closed parental loops",
+      "at": {
+        "worldRef": "w_diane",
+        "timeLabel": "parent loop"
+      },
+      "agents": [
+        "danny",
+        "diane"
+      ],
+      "payload": {
+        "bootstrapEntity": "son=young Danny"
+      }
+    },
+    {
+      "id": "e_is_jim",
+      "type": "reveal",
+      "label": "Aging Daniel realizes he is Uncle Jim",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "late"
+      },
+      "agents": [
+        "danny",
+        "jim"
+      ],
+      "payload": {
+        "identityNote": "jim=old daniel"
+      }
+    },
+    {
+      "id": "e_inherit_setup",
+      "type": "bootstrap_origin",
+      "label": "Arranges inheritance so diary and belt restart experience",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "setup"
+      },
+      "agents": [
+        "jim",
+        "danny"
+      ],
+      "payload": {
+        "bootstrapEntity": "time-belt"
+      }
+    },
+    {
+      "id": "e_party",
+      "type": "contact",
+      "label": "1999 house party of dozens of ages of Daniel",
+      "at": {
+        "worldRef": "w_swarm",
+        "timeLabel": "1999"
+      },
+      "agents": [
+        "danny"
+      ]
+    },
+    {
+      "id": "e_mortality",
+      "type": "death",
+      "label": "Elderly jump-death confronts mortality",
+      "at": {
+        "worldRef": "w_swarm",
+        "timeLabel": "late"
+      },
+      "agents": [
+        "danny"
+      ]
+    },
+    {
+      "id": "e_choice",
+      "type": "ordinary",
+      "label": "Young Daniel, diary complete, must choose whether to use belt",
+      "at": {
+        "worldRef": "w_prime",
+        "timeLabel": "ending"
+      },
+      "agents": [
+        "danny"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_jim",
+      "to": "e_belt"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_belt",
+      "to": "e_don"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_don",
+      "to": "e_become_don"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_become_don",
+      "to": "e_swarm"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_swarm",
+      "to": "e_erase_child"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_erase_child",
+      "to": "e_diane"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_diane",
+      "to": "e_pregnancy"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_pregnancy",
+      "to": "e_is_jim"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_is_jim",
+      "to": "e_inherit_setup"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_inherit_setup",
+      "to": "e_party"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_party",
+      "to": "e_mortality"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_mortality",
+      "to": "e_choice"
+    },
+    {
+      "id": "id1",
+      "kind": "identity",
+      "from": "danny",
+      "to": "don",
+      "label": "same continuum"
+    },
+    {
+      "id": "id2",
+      "kind": "identity",
+      "from": "danny",
+      "to": "jim",
+      "label": "Danny becomes Jim"
+    },
+    {
+      "id": "loop1",
+      "kind": "causal",
+      "from": "e_inherit_setup",
+      "to": "e_belt",
+      "label": "bootstrap inheritance"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_prime",
+      "to": "w_swarm",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_prime",
+      "to": "w_diane",
+      "relation": "forksFrom"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_belt",
+      "eventId": "e_inherit_setup",
+      "ruleEffects": [
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Belt, diary, Uncle Jim, and son all lack external origin outside Daniel loops"
+        },
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Role rotation forces each Daniel to enact the meetings he remembers"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Extreme self-society via Time-belt; parental and uncle bootstraps close; young Daniel faces the choice to begin.",
+    "endWorldRefs": [
+      "w_prime",
+      "w_swarm"
+    ]
+  }
+}

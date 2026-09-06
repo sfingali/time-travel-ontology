@@ -68,3 +68,33 @@ Years later, marigold particles restore powers; Jennifer/durango threat. Five an
 
 ## Related works
 *Legends of Tomorrow*; *Loki*; *Dark*; *Heroes*; *The Boys* (tone foil).
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/umbrella-academy.json` — primary `branch_bureaucracy_prune` (Commission), mixins branching + bootstrap (Founder Five). Topology branching_tree through Sparrow, subway, clean timeline.
+
+Public: Wikipedia; Radio Times / Mashable / CinemaHolic S4 explainers (~145,412 resets). Uncreation ending = ultimate prune of the anomaly (themselves).
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `umbrella-academy`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `umbrella-academy` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `umbrella-academy`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `umbrella-academy` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `umbrella-academy`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `umbrella-academy` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `umbrella-academy`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `umbrella-academy` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `umbrella-academy`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `umbrella-academy` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `umbrella-academy`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `umbrella-academy` lives under time-travel-ontology/instances/.

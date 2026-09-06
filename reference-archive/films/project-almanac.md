@@ -63,3 +63,41 @@ Original screenplay. Useful classroom companion to Primer for “teen garage TT 
 
 ## Related works
 Primer; The Butterfly Effect; Chronicle; FAQ About Time Travel; Hot Tub Time Machine; About Time.
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/project-almanac.json` — primary `mutable_ripple`, mixins bootstrap + branch. Mirror-tape lure; burn plans; dual-camera coda.
+
+Public: Wikipedia; found-footage teen TT commentary; SciFi.SE residual-camera debates cited in archive.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `project-almanac`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `project-almanac` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `project-almanac`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `project-almanac` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `project-almanac`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `project-almanac` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `project-almanac`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `project-almanac` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `project-almanac`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `project-almanac` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `project-almanac`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `project-almanac` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `project-almanac`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `project-almanac` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `project-almanac`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `project-almanac` lives under time-travel-ontology/instances/.

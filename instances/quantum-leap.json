@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "id": "quantum-leap",
+    "title": "Quantum Leap",
+    "year": 1989,
+    "medium": "tv",
+    "sources": [
+      "Donald P. Bellisario (1989\u20131993)",
+      "time-travel-archive/tv/quantum-leap.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "mutable_ripple",
+    "fixed_novikov",
+    "perception_nonlinear"
+  ],
+  "primaryRuleSetId": "mutable_ripple",
+  "mixinRuleSetIds": [
+    "fixed_novikov",
+    "perception_nonlinear"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_project",
+      "label": "Project Quantum Leap present",
+      "spanLabel": "1990s"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_past",
+      "label": "Host eras (mutable personal histories)",
+      "spanLabel": "mid-20th c."
+    },
+    {
+      "kind": "branch",
+      "id": "w_liminal",
+      "label": "Mirror Image liminal leap",
+      "parentRef": "w_past",
+      "forkLabel": "finale metaphysics"
+    }
+  ],
+  "agents": [
+    {
+      "id": "sam",
+      "label": "Sam Beckett",
+      "identityGroup": "sam",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_project"
+    },
+    {
+      "id": "al",
+      "label": "Al Calavicci (hologram)",
+      "homeWorldRef": "w_project"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_accelerator",
+      "type": "departure",
+      "label": "Sam steps into Quantum Accelerator",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "1995"
+      },
+      "agents": [
+        "sam"
+      ],
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_first_leap",
+      "type": "arrival",
+      "label": "First leap into host body; mirror shock",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "host era"
+      },
+      "agents": [
+        "sam"
+      ],
+      "payload": {
+        "travelMode": "body_swap"
+      }
+    },
+    {
+      "id": "e_al",
+      "type": "contact",
+      "label": "Hologram Al and Ziggy guide the mission",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "leap"
+      },
+      "agents": [
+        "sam",
+        "al"
+      ],
+      "payload": {
+        "perceptionMode": "hologram"
+      }
+    },
+    {
+      "id": "e_put_right",
+      "type": "intervention",
+      "label": "Put right what once went wrong for the host",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "leap"
+      },
+      "agents": [
+        "sam"
+      ],
+      "payload": {
+        "note": "series pattern"
+      }
+    },
+    {
+      "id": "e_leap_out",
+      "type": "departure",
+      "label": "Leap out after success; next host",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "resolution"
+      },
+      "agents": [
+        "sam"
+      ],
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_many_leaps",
+      "type": "ordinary",
+      "label": "Years of leaps across mid-century America",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "1989\u20131993 air"
+      },
+      "agents": [
+        "sam",
+        "al"
+      ],
+      "payload": {
+        "iteration": 100
+      }
+    },
+    {
+      "id": "e_mirror_image",
+      "type": "arrival",
+      "label": "Finale Mirror Image: leap into a bar that is himself/God?",
+      "at": {
+        "worldRef": "w_liminal",
+        "timeLabel": "finale"
+      },
+      "agents": [
+        "sam"
+      ],
+      "payload": {
+        "note": "metaphysical leap"
+      }
+    },
+    {
+      "id": "e_choice",
+      "type": "intervention",
+      "label": "Sam chooses to continue leaping to help others",
+      "at": {
+        "worldRef": "w_liminal",
+        "timeLabel": "finale"
+      },
+      "agents": [
+        "sam"
+      ]
+    },
+    {
+      "id": "e_al_home",
+      "type": "ordinary",
+      "label": "Al's personal timeline improved (Beth waits)",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "home"
+      },
+      "agents": [
+        "al"
+      ],
+      "payload": {
+        "note": "ripple for Al"
+      }
+    },
+    {
+      "id": "e_never_home",
+      "type": "observation",
+      "label": "Title card: Sam Beckett never returned home",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "sam"
+      ],
+      "payload": {
+        "exitFailed": true
+      }
+    },
+    {
+      "id": "e_string_theory",
+      "type": "reveal",
+      "label": "Leaping framed as string/God/conscience mechanism",
+      "at": {
+        "worldRef": "w_liminal",
+        "timeLabel": "finale"
+      },
+      "agents": [
+        "sam"
+      ],
+      "payload": {
+        "perceptionMode": "theology"
+      }
+    },
+    {
+      "id": "e_host_life",
+      "type": "ordinary",
+      "label": "Host lives corrected life after Sam leaps out",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "post-leap"
+      },
+      "agents": [
+        "sam"
+      ]
+    },
+    {
+      "id": "e_project_obs",
+      "type": "observation",
+      "label": "Project observes from imaging chamber",
+      "at": {
+        "worldRef": "w_project",
+        "timeLabel": "ongoing"
+      },
+      "agents": [
+        "al"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_accelerator",
+      "to": "e_first_leap"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_first_leap",
+      "to": "e_al"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_al",
+      "to": "e_put_right"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_put_right",
+      "to": "e_leap_out"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_leap_out",
+      "to": "e_many_leaps"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_many_leaps",
+      "to": "e_mirror_image"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_mirror_image",
+      "to": "e_choice"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_choice",
+      "to": "e_al_home"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_al_home",
+      "to": "e_never_home"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_never_home",
+      "to": "e_string_theory"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_string_theory",
+      "to": "e_host_life"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_host_life",
+      "to": "e_project_obs"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_project",
+      "to": "w_past",
+      "relation": "originatesFrom",
+      "label": "accelerator casts into past"
+    },
+    {
+      "id": "loop1",
+      "kind": "temporal",
+      "from": "e_leap_out",
+      "to": "e_first_leap",
+      "label": "series leap cycle"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_right",
+      "eventId": "e_put_right",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Correcting host history ripples outcomes (Al's marriage etc.)"
+        },
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Sam's own return home is withheld \u2014 leap destiny closed against homecoming"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Sam never returns; continues leaping by choice; Al's life improved; theological Mirror Image coda.",
+    "endWorldRefs": [
+      "w_past",
+      "w_liminal"
+    ]
+  }
+}

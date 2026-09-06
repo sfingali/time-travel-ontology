@@ -1,0 +1,426 @@
+{
+  "meta": {
+    "id": "umbrella-academy",
+    "title": "The Umbrella Academy",
+    "year": 2019,
+    "medium": "tv",
+    "sources": [
+      "Steve Blackman; Way & B\u00e1 (2019\u20132024)",
+      "time-travel-archive/tv/umbrella-academy.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "branch_bureaucracy_prune",
+    "branch_on_intervention",
+    "bootstrap_ontological"
+  ],
+  "primaryRuleSetId": "branch_bureaucracy_prune",
+  "mixinRuleSetIds": [
+    "branch_on_intervention",
+    "bootstrap_ontological"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_main",
+      "label": "Umbrella original timeline",
+      "spanLabel": "S1"
+    },
+    {
+      "kind": "branch",
+      "id": "w_1960s",
+      "label": "1960s Dallas sojourn",
+      "parentRef": "w_main",
+      "forkLabel": "Five jump"
+    },
+    {
+      "kind": "branch",
+      "id": "w_sparrow",
+      "label": "Sparrow Academy timeline",
+      "parentRef": "w_main",
+      "forkLabel": "S2 return rewrite"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_commission",
+      "label": "Temps Commission outside",
+      "spanLabel": "bureaucracy"
+    },
+    {
+      "kind": "branch",
+      "id": "w_subway",
+      "label": "Multiverse subway / deli",
+      "parentRef": "w_sparrow",
+      "forkLabel": "S4 subway"
+    },
+    {
+      "kind": "branch",
+      "id": "w_clean",
+      "label": "Clean timeline without Umbrellas",
+      "parentRef": "w_sparrow",
+      "forkLabel": "uncreation"
+    }
+  ],
+  "agents": [
+    {
+      "id": "five",
+      "label": "Number Five",
+      "identityGroup": "five",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_main"
+    },
+    {
+      "id": "viktor",
+      "label": "Viktor Hargreeves",
+      "homeWorldRef": "w_main"
+    },
+    {
+      "id": "reginald",
+      "label": "Reginald Hargreeves",
+      "homeWorldRef": "w_main"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_birth",
+      "type": "birth",
+      "label": "43 children born same day; seven adopted by Reginald",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "1989"
+      },
+      "agents": [
+        "five",
+        "viktor",
+        "reginald"
+      ]
+    },
+    {
+      "id": "e_five_jump",
+      "type": "departure",
+      "label": "Five jumps to apocalyptic future wasteland",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "youth"
+      },
+      "agents": [
+        "five"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_commission",
+      "type": "ordinary",
+      "label": "Five works as Commission assassin across time",
+      "at": {
+        "worldRef": "w_commission",
+        "timeLabel": "decades"
+      },
+      "agents": [
+        "five"
+      ],
+      "payload": {
+        "pruneAuthority": "Temps Commission"
+      }
+    },
+    {
+      "id": "e_s1_warn",
+      "type": "arrival",
+      "label": "Five returns warning of 2019 apocalypse",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "2019"
+      },
+      "agents": [
+        "five"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_moon",
+      "type": "ordinary",
+      "label": "Viktor's power + Commission \u2192 Moon apocalypse",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "S1 end"
+      },
+      "agents": [
+        "viktor",
+        "five"
+      ]
+    },
+    {
+      "id": "e_dallas",
+      "type": "departure",
+      "label": "Five jumps siblings to 1960s Dallas",
+      "at": {
+        "worldRef": "w_main",
+        "timeLabel": "S1\u2192S2"
+      },
+      "agents": [
+        "five"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "destinationTimeLabel": "1960s"
+      }
+    },
+    {
+      "id": "e_s2",
+      "type": "intervention",
+      "label": "Avert 1960s apocalypse; briefcase home to rewritten present",
+      "at": {
+        "worldRef": "w_1960s",
+        "timeLabel": "S2"
+      },
+      "agents": [
+        "five"
+      ]
+    },
+    {
+      "id": "e_sparrow",
+      "type": "branch_fork",
+      "label": "Home replaced by Sparrow Academy timeline",
+      "at": {
+        "worldRef": "w_sparrow",
+        "timeLabel": "S3"
+      },
+      "agents": [
+        "five",
+        "reginald"
+      ]
+    },
+    {
+      "id": "e_kugelblitz",
+      "type": "ordinary",
+      "label": "Paradox Umbrellas \u2192 Kugelblitz eats universe",
+      "at": {
+        "worldRef": "w_sparrow",
+        "timeLabel": "S3"
+      },
+      "agents": [
+        "five"
+      ]
+    },
+    {
+      "id": "e_founder",
+      "type": "reveal",
+      "label": "Commission Founder is elderly alternate Five",
+      "at": {
+        "worldRef": "w_commission",
+        "timeLabel": "S3"
+      },
+      "agents": [
+        "five"
+      ],
+      "payload": {
+        "bootstrapEntity": "Commission",
+        "identityNote": "Five founded Commission"
+      }
+    },
+    {
+      "id": "e_subway",
+      "type": "departure",
+      "label": "Five & Lila lost years in multiverse subway",
+      "at": {
+        "worldRef": "w_subway",
+        "timeLabel": "S4"
+      },
+      "agents": [
+        "five"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_deli",
+      "type": "contact",
+      "label": "Max's Deli: ~145412 variant Fives; Umbrellas always end worlds",
+      "at": {
+        "worldRef": "w_subway",
+        "timeLabel": "S4"
+      },
+      "agents": [
+        "five"
+      ],
+      "payload": {
+        "iteration": 145412
+      }
+    },
+    {
+      "id": "e_erase",
+      "type": "intervention",
+      "label": "Marigold+durango cancel \u2014 erase Umbrellas from history",
+      "at": {
+        "worldRef": "w_clean",
+        "timeLabel": "S4 end"
+      },
+      "agents": [
+        "five",
+        "viktor"
+      ],
+      "payload": {
+        "exitCondition": "uncreate anomaly"
+      }
+    },
+    {
+      "id": "e_peaceful",
+      "type": "ordinary",
+      "label": "Clean timeline; strangers live peaceful lives",
+      "at": {
+        "worldRef": "w_clean",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "reginald"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_birth",
+      "to": "e_five_jump"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_five_jump",
+      "to": "e_commission"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_commission",
+      "to": "e_s1_warn"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_s1_warn",
+      "to": "e_moon"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_moon",
+      "to": "e_dallas"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_dallas",
+      "to": "e_s2"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_s2",
+      "to": "e_sparrow"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_sparrow",
+      "to": "e_kugelblitz"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_kugelblitz",
+      "to": "e_founder"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_founder",
+      "to": "e_subway"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_subway",
+      "to": "e_deli"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_deli",
+      "to": "e_erase"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_erase",
+      "to": "e_peaceful"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_main",
+      "to": "w_sparrow",
+      "relation": "supersedes",
+      "label": "Sparrow rewrite"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_main",
+      "to": "w_1960s",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "w3",
+      "kind": "world_relation",
+      "from": "w_sparrow",
+      "to": "w_clean",
+      "relation": "supersedes",
+      "label": "uncreation"
+    },
+    {
+      "id": "w4",
+      "kind": "world_relation",
+      "from": "w_commission",
+      "to": "w_main",
+      "relation": "prunes",
+      "label": "Commission prune attempts"
+    },
+    {
+      "id": "id1",
+      "kind": "identity",
+      "from": "five",
+      "to": "five",
+      "label": "Founder Five = bootstrap"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_erase",
+      "eventId": "e_erase",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_bureaucracy_prune",
+          "effect": "Ultimate prune: remove the anomaly (themselves) rather than trim branches"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Commission was founded by a Five \u2014 erased with them"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Siblings erase themselves; clean timeline without Umbrella/Commission apocalypse engine.",
+    "endWorldRefs": [
+      "w_clean"
+    ]
+  }
+}

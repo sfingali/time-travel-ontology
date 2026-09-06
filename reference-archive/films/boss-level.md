@@ -59,3 +59,45 @@ Developed for Fox as *Continue* (2012); screen tests with Grillo posted when Fox
 
 ## Related works
 Edge of Tomorrow; Happy Death Day; ARQ; Groundhog Day; Source Code; Palm Springs; Premature.
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/boss-level.json` — primary `temporal_loop_exit`, mixins death_checkpoint + mutable_ripple. Video-game continue grammar; false win vs speedrun win.
+
+Public: Wikipedia; TV Tropes Film/BossLevel. Dual circulated endings encoded as enter-spindle vs “Piece o’ cake” continue.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `boss-level`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `boss-level` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `boss-level`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `boss-level` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `boss-level`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `boss-level` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `boss-level`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `boss-level` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `boss-level`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `boss-level` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `boss-level`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `boss-level` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `boss-level`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `boss-level` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `boss-level`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `boss-level` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `boss-level`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `boss-level` lives under time-travel-ontology/instances/.

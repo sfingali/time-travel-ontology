@@ -1,0 +1,342 @@
+{
+  "meta": {
+    "id": "hot-tub-time-machine",
+    "title": "Hot Tub Time Machine",
+    "year": 2010,
+    "medium": "film",
+    "sources": [
+      "Steve Pink (2010)",
+      "time-travel-archive/films/hot-tub-time-machine.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "mutable_ripple",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "mutable_ripple",
+  "mixinRuleSetIds": [
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_2010",
+      "label": "Original miserable 2010",
+      "spanLabel": "2010"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_1986",
+      "label": "1986 ski weekend playground",
+      "spanLabel": "1986"
+    },
+    {
+      "kind": "branch",
+      "id": "w_2010b",
+      "label": "Rewritten successful 2010",
+      "parentRef": "w_2010",
+      "forkLabel": "Lou stays / changes"
+    }
+  ],
+  "agents": [
+    {
+      "id": "adam",
+      "label": "Adam",
+      "homeWorldRef": "w_2010"
+    },
+    {
+      "id": "nick",
+      "label": "Nick",
+      "homeWorldRef": "w_2010"
+    },
+    {
+      "id": "lou",
+      "label": "Lou",
+      "identityGroup": "lou",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_2010"
+    },
+    {
+      "id": "jacob",
+      "label": "Jacob",
+      "homeWorldRef": "w_2010"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_misery",
+      "type": "ordinary",
+      "label": "Adult friends miserable; ski-trip escape after Jacob's crisis",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "2010"
+      },
+      "agents": [
+        "adam",
+        "nick",
+        "lou",
+        "jacob"
+      ]
+    },
+    {
+      "id": "e_tub",
+      "type": "departure",
+      "label": "Hot tub + Russian energy drink \u2192 1986",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "tub"
+      },
+      "agents": [
+        "adam",
+        "nick",
+        "lou",
+        "jacob"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "destinationTimeLabel": "1986"
+      }
+    },
+    {
+      "id": "e_arrive86",
+      "type": "arrival",
+      "label": "Arrive 1986 ski resort; bodies young (Jacob still 2010)",
+      "at": {
+        "worldRef": "w_1986",
+        "timeLabel": "1986"
+      },
+      "agents": [
+        "adam",
+        "nick",
+        "lou",
+        "jacob"
+      ]
+    },
+    {
+      "id": "e_rules",
+      "type": "observation",
+      "label": "Must avoid breaking past; Lou ignores and parties",
+      "at": {
+        "worldRef": "w_1986",
+        "timeLabel": "1986"
+      },
+      "agents": [
+        "lou",
+        "adam"
+      ]
+    },
+    {
+      "id": "e_nick_sing",
+      "type": "intervention",
+      "label": "Interventions: songs, relationships, injuries cascade",
+      "at": {
+        "worldRef": "w_1986",
+        "timeLabel": "weekend"
+      },
+      "agents": [
+        "nick",
+        "adam",
+        "lou"
+      ]
+    },
+    {
+      "id": "e_photo_fade",
+      "type": "observation",
+      "label": "Present ripples \u2014 photos/phones show changed futures",
+      "at": {
+        "worldRef": "w_1986",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "adam",
+        "jacob"
+      ],
+      "payload": {
+        "signal": "phone photos rewrite"
+      }
+    },
+    {
+      "id": "e_lou_stay",
+      "type": "intervention",
+      "label": "Lou chooses to stay in 1986 and live differently",
+      "at": {
+        "worldRef": "w_1986",
+        "timeLabel": "choice"
+      },
+      "agents": [
+        "lou"
+      ]
+    },
+    {
+      "id": "e_fork",
+      "type": "branch_fork",
+      "label": "Actions fork improved 2010 for remaining friends",
+      "at": {
+        "worldRef": "w_2010b",
+        "timeLabel": "rewrite"
+      },
+      "agents": [
+        "adam",
+        "nick",
+        "jacob"
+      ]
+    },
+    {
+      "id": "e_return",
+      "type": "arrival",
+      "label": "Adam/Nick/Jacob return to rewritten present",
+      "at": {
+        "worldRef": "w_2010b",
+        "timeLabel": "2010"
+      },
+      "agents": [
+        "adam",
+        "nick",
+        "jacob"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_lou_rich",
+      "type": "reveal",
+      "label": "Lou is now rich/famous from 1986 path",
+      "at": {
+        "worldRef": "w_2010b",
+        "timeLabel": "2010"
+      },
+      "agents": [
+        "lou",
+        "adam"
+      ]
+    },
+    {
+      "id": "e_jacob_ok",
+      "type": "ordinary",
+      "label": "Jacob's life stabilized in new present",
+      "at": {
+        "worldRef": "w_2010b",
+        "timeLabel": "2010"
+      },
+      "agents": [
+        "jacob"
+      ]
+    },
+    {
+      "id": "e_sequel_hook",
+      "type": "ordinary",
+      "label": "Hot tub remains a chaotic mutable device",
+      "at": {
+        "worldRef": "w_2010b",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "adam"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_misery",
+      "to": "e_tub"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_tub",
+      "to": "e_arrive86"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_arrive86",
+      "to": "e_rules"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_rules",
+      "to": "e_nick_sing"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_nick_sing",
+      "to": "e_photo_fade"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_photo_fade",
+      "to": "e_lou_stay"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_lou_stay",
+      "to": "e_fork"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_fork",
+      "to": "e_return"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_return",
+      "to": "e_lou_rich"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_lou_rich",
+      "to": "e_jacob_ok"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_jacob_ok",
+      "to": "e_sequel_hook"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_2010",
+      "to": "w_2010b",
+      "relation": "supersedes",
+      "label": "1986 changes overwrite present"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_1986",
+      "to": "w_2010",
+      "relation": "originatesFrom"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_lou",
+      "eventId": "e_lou_stay",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Staying and altering 1986 overwrites friends' 2010 fortunes"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Comedy overwrite: Lou's 1986 life remakes 2010 into success; tub remains dangerous.",
+    "endWorldRefs": [
+      "w_2010b"
+    ]
+  }
+}

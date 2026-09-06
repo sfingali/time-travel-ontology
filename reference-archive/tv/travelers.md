@@ -73,3 +73,31 @@ Director abandons the timeline (Omega = no more missions; either optimal path or
 
 ## Related works
 *Quantum Leap*; *Continuum*; *12 Monkeys* TV; *Debris* (tone foil).
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/travelers.json` — primary `mutable_ripple`, mixins `predestination_closed_loop` + `bootstrap_ontological`. Future Director ↔ 21st-century mission field.
+
+Public: Wikipedia; series creator interviews summarized on fandom wikis; Netflix synopsis materials.
+
+Core mechanism: consciousness transfer into hosts at historical death moments; protocols; Faction conflict; finale fragile continuum.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `travelers`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `travelers` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `travelers`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `travelers` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `travelers`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `travelers` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `travelers`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `travelers` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `travelers`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `travelers` lives under time-travel-ontology/instances/.

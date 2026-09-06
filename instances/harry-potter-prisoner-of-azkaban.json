@@ -1,0 +1,402 @@
+{
+  "meta": {
+    "id": "harry-potter-prisoner-of-azkaban",
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "year": 2004,
+    "medium": "film",
+    "sources": [
+      "Alfonso Cuar\u00f3n; J.K. Rowling (2004)",
+      "time-travel-archive/films/harry-potter-prisoner-of-azkaban.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "fixed_novikov",
+    "predestination_closed_loop",
+    "bootstrap_ontological"
+  ],
+  "primaryRuleSetId": "fixed_novikov",
+  "mixinRuleSetIds": [
+    "predestination_closed_loop",
+    "bootstrap_ontological"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_year3",
+      "label": "Hogwarts Year 3 single evening loop",
+      "spanLabel": "1993\u201394"
+    }
+  ],
+  "agents": [
+    {
+      "id": "harry",
+      "label": "Harry Potter",
+      "identityGroup": "harry",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_year3"
+    },
+    {
+      "id": "hermione",
+      "label": "Hermione Granger",
+      "homeWorldRef": "w_year3"
+    },
+    {
+      "id": "ron",
+      "label": "Ron Weasley",
+      "homeWorldRef": "w_year3"
+    },
+    {
+      "id": "sirius",
+      "label": "Sirius Black",
+      "homeWorldRef": "w_year3"
+    },
+    {
+      "id": "lupin",
+      "label": "Remus Lupin",
+      "homeWorldRef": "w_year3"
+    },
+    {
+      "id": "pettigrew",
+      "label": "Peter Pettigrew",
+      "homeWorldRef": "w_year3"
+    },
+    {
+      "id": "dumbledore",
+      "label": "Albus Dumbledore",
+      "homeWorldRef": "w_year3"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_turner_classes",
+      "type": "ordinary",
+      "label": "Hermione uses Time-Turner to stack classes",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "term"
+      },
+      "agents": [
+        "hermione"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "artifactKind": "device"
+      }
+    },
+    {
+      "id": "e_shack",
+      "type": "ordinary",
+      "label": "Shrieking Shack: Pettigrew exposed; Sirius innocent",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "evening"
+      },
+      "agents": [
+        "harry",
+        "hermione",
+        "ron",
+        "sirius",
+        "lupin",
+        "pettigrew"
+      ]
+    },
+    {
+      "id": "e_pettigrew_flees",
+      "type": "ordinary",
+      "label": "Pettigrew flees as Lupin transforms",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "evening"
+      },
+      "agents": [
+        "pettigrew",
+        "lupin"
+      ]
+    },
+    {
+      "id": "e_dementors",
+      "type": "ordinary",
+      "label": "Dementors overwhelm Harry and Sirius by the lake",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "lake"
+      },
+      "agents": [
+        "harry",
+        "sirius"
+      ]
+    },
+    {
+      "id": "e_mystery_patronus",
+      "type": "observation",
+      "label": "Mysterious stag Patronus drives Dementors off; Harry thinks it is his father",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "lake"
+      },
+      "agents": [
+        "harry"
+      ],
+      "payload": {
+        "signal": "future Harry"
+      }
+    },
+    {
+      "id": "e_hospital",
+      "type": "ordinary",
+      "label": "Hospital wing; Dumbledore prompts the one thing",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "night"
+      },
+      "agents": [
+        "harry",
+        "hermione",
+        "dumbledore"
+      ]
+    },
+    {
+      "id": "e_rewind",
+      "type": "departure",
+      "label": "Three Time-Turner turns; rewind three hours",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "hospital"
+      },
+      "agents": [
+        "harry",
+        "hermione"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "travelDelta": "-3 hours",
+        "artifactId": "time-turner"
+      }
+    },
+    {
+      "id": "e_arrive_past",
+      "type": "arrival",
+      "label": "Harry and Hermione arrive three hours earlier",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "evening-3h"
+      },
+      "agents": [
+        "harry",
+        "hermione"
+      ]
+    },
+    {
+      "id": "e_buckbeak",
+      "type": "intervention",
+      "label": "Free Buckbeak before execution (axe hits pumpkin)",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "execution hour"
+      },
+      "agents": [
+        "harry",
+        "hermione"
+      ],
+      "payload": {
+        "note": "were always the helpers"
+      }
+    },
+    {
+      "id": "e_signal",
+      "type": "intervention",
+      "label": "Hermione signals to avoid past-Harry noticing too soon",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "woods"
+      },
+      "agents": [
+        "hermione",
+        "harry"
+      ]
+    },
+    {
+      "id": "e_cast_patronus",
+      "type": "intervention",
+      "label": "Harry casts the stag Patronus that saved them",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "lake"
+      },
+      "agents": [
+        "harry"
+      ],
+      "payload": {
+        "bootstrapEntity": "patronus"
+      }
+    },
+    {
+      "id": "e_free_sirius",
+      "type": "intervention",
+      "label": "Free Sirius via Buckbeak flight from tower",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "tower"
+      },
+      "agents": [
+        "harry",
+        "hermione",
+        "sirius"
+      ]
+    },
+    {
+      "id": "e_return",
+      "type": "arrival",
+      "label": "Return to hospital wing moments after leaving",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "night"
+      },
+      "agents": [
+        "harry",
+        "hermione"
+      ]
+    },
+    {
+      "id": "e_surrender",
+      "type": "ordinary",
+      "label": "Hermione surrenders Time-Turner; loop closed",
+      "at": {
+        "worldRef": "w_year3",
+        "timeLabel": "aftermath"
+      },
+      "agents": [
+        "hermione"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_turner_classes",
+      "to": "e_shack"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_shack",
+      "to": "e_pettigrew_flees"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_pettigrew_flees",
+      "to": "e_dementors"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_dementors",
+      "to": "e_mystery_patronus"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_mystery_patronus",
+      "to": "e_hospital"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_hospital",
+      "to": "e_rewind"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_rewind",
+      "to": "e_arrive_past"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_arrive_past",
+      "to": "e_buckbeak"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_buckbeak",
+      "to": "e_signal"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_signal",
+      "to": "e_cast_patronus"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_cast_patronus",
+      "to": "e_free_sirius"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_free_sirius",
+      "to": "e_return"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_return",
+      "to": "e_surrender"
+    },
+    {
+      "id": "loop1",
+      "kind": "causal",
+      "from": "e_cast_patronus",
+      "to": "e_mystery_patronus",
+      "label": "future self was always the savior"
+    },
+    {
+      "id": "loop2",
+      "kind": "causal",
+      "from": "e_buckbeak",
+      "to": "e_shack",
+      "label": "Buckbeak already free when heard"
+    },
+    {
+      "id": "id1",
+      "kind": "identity",
+      "from": "harry",
+      "to": "harry",
+      "label": "same Harry both passes"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_turner",
+      "eventId": "e_cast_patronus",
+      "ruleEffects": [
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Second pass fulfills events already observed; no rewrite"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Patronus has no external caster other than future Harry"
+        },
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "You already changed the past \u2014 by becoming it"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Buckbeak and Sirius saved by actions that were always part of the evening; Time-Turner later removed from circulation.",
+    "endWorldRefs": [
+      "w_year3"
+    ]
+  }
+}

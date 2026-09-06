@@ -1,0 +1,433 @@
+{
+  "meta": {
+    "id": "the-endless",
+    "title": "The Endless",
+    "year": 2017,
+    "medium": "film",
+    "sources": [
+      "Justin Benson & Aaron Moorhead (2017)",
+      "time-travel-archive/films/the-endless.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "tangent_universe",
+    "temporal_loop_exit",
+    "fixed_novikov"
+  ],
+  "primaryRuleSetId": "tangent_universe",
+  "mixinRuleSetIds": [
+    "temporal_loop_exit",
+    "fixed_novikov"
+  ],
+  "topologyPatternId": "tangent_bubble",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_outside",
+      "label": "Ordinary world (brothers' jobs)",
+      "spanLabel": "present"
+    },
+    {
+      "kind": "branch",
+      "id": "w_arcadia",
+      "label": "Camp Arcadia ~10-year pod",
+      "parentRef": "w_outside",
+      "forkLabel": "Entity region",
+      "nestsWithinRef": "w_outside"
+    },
+    {
+      "kind": "branch",
+      "id": "w_scream",
+      "label": "Scream tent seconds pod",
+      "parentRef": "w_arcadia",
+      "nestsWithinRef": "w_arcadia",
+      "forkLabel": "seconds"
+    },
+    {
+      "kind": "branch",
+      "id": "w_carl",
+      "label": "Carl trailer ~3h pod",
+      "parentRef": "w_arcadia",
+      "nestsWithinRef": "w_arcadia",
+      "forkLabel": "3h"
+    },
+    {
+      "kind": "branch",
+      "id": "w_week",
+      "label": "Chris & Mike week pod",
+      "parentRef": "w_arcadia",
+      "nestsWithinRef": "w_arcadia",
+      "forkLabel": "week"
+    }
+  ],
+  "agents": [
+    {
+      "id": "justin",
+      "label": "Justin",
+      "identityGroup": "justin",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_outside"
+    },
+    {
+      "id": "aaron",
+      "label": "Aaron",
+      "identityGroup": "aaron",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_outside"
+    },
+    {
+      "id": "hal",
+      "label": "Hal",
+      "homeWorldRef": "w_arcadia"
+    },
+    {
+      "id": "chris",
+      "label": "Chris (Resolution)",
+      "homeWorldRef": "w_week"
+    },
+    {
+      "id": "mike",
+      "label": "Mike (Resolution)",
+      "homeWorldRef": "w_week"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_vhs",
+      "type": "ordinary",
+      "label": "VHS from Camp Arcadia claims ascension",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "present"
+      },
+      "agents": [
+        "justin",
+        "aaron"
+      ]
+    },
+    {
+      "id": "e_return",
+      "type": "arrival",
+      "label": "Brothers return to Camp Arcadia for one day",
+      "at": {
+        "worldRef": "w_arcadia",
+        "timeLabel": "day 0"
+      },
+      "agents": [
+        "justin",
+        "aaron"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_unaged",
+      "type": "observation",
+      "label": "Members look unaged; twin moons; locked tapes",
+      "at": {
+        "worldRef": "w_arcadia",
+        "timeLabel": "day 0"
+      },
+      "agents": [
+        "justin",
+        "aaron",
+        "hal"
+      ]
+    },
+    {
+      "id": "e_scream_pod",
+      "type": "observation",
+      "label": "Seconds-long scream loop at perimeter",
+      "at": {
+        "worldRef": "w_scream",
+        "timeLabel": "explore"
+      },
+      "agents": [
+        "justin"
+      ],
+      "payload": {
+        "note": "~seconds pod"
+      }
+    },
+    {
+      "id": "e_carl",
+      "type": "observation",
+      "label": "Shitty Carl in ~3-hour trailer hell",
+      "at": {
+        "worldRef": "w_carl",
+        "timeLabel": "explore"
+      },
+      "agents": [
+        "justin"
+      ],
+      "payload": {
+        "note": "~3h pod"
+      }
+    },
+    {
+      "id": "e_resolution",
+      "type": "contact",
+      "label": "Chris & Mike still trapped in ~week pod (Resolution crossover)",
+      "at": {
+        "worldRef": "w_week",
+        "timeLabel": "explore"
+      },
+      "agents": [
+        "justin",
+        "chris",
+        "mike"
+      ]
+    },
+    {
+      "id": "e_markers",
+      "type": "ordinary",
+      "label": "Wooden markers bounce travelers back into pods",
+      "at": {
+        "worldRef": "w_arcadia",
+        "timeLabel": "perimeter"
+      },
+      "agents": [
+        "justin"
+      ]
+    },
+    {
+      "id": "e_entity",
+      "type": "reveal",
+      "label": "Hal/monoliths: Entity runs variable-length death-reset pods",
+      "at": {
+        "worldRef": "w_arcadia",
+        "timeLabel": "night"
+      },
+      "agents": [
+        "justin",
+        "hal",
+        "aaron"
+      ],
+      "payload": {
+        "note": "ascension = sacred death-by-Entity"
+      }
+    },
+    {
+      "id": "e_aaron_stay",
+      "type": "ordinary",
+      "label": "Aaron wants immortality-with-community over menial loneliness",
+      "at": {
+        "worldRef": "w_arcadia",
+        "timeLabel": "conflict"
+      },
+      "agents": [
+        "aaron",
+        "justin"
+      ]
+    },
+    {
+      "id": "e_confess",
+      "type": "intervention",
+      "label": "Justin confesses dominating Aaron; Aaron agrees to leave",
+      "at": {
+        "worldRef": "w_arcadia",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "justin",
+        "aaron"
+      ]
+    },
+    {
+      "id": "e_flee",
+      "type": "departure",
+      "label": "Car jump-start; barely flee as Entity manifests",
+      "at": {
+        "worldRef": "w_arcadia",
+        "timeLabel": "reset imminent"
+      },
+      "agents": [
+        "justin",
+        "aaron"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_camp_reset",
+      "type": "loop_reset",
+      "label": "Camp Arcadia ~10-year pod resets; members look wistful",
+      "at": {
+        "worldRef": "w_arcadia",
+        "timeLabel": "decade cycle"
+      },
+      "agents": [
+        "hal"
+      ],
+      "payload": {
+        "iteration": 1,
+        "exitCondition": "leave before third moon / reset"
+      }
+    },
+    {
+      "id": "e_escape",
+      "type": "arrival",
+      "label": "Brothers reach outside; larger unnoticed loop left open",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "aftermath"
+      },
+      "agents": [
+        "justin",
+        "aaron"
+      ]
+    },
+    {
+      "id": "e_meta",
+      "type": "observation",
+      "label": "Interpersonal submission framed as private endless cycle",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "justin",
+        "aaron"
+      ],
+      "payload": {
+        "note": "ambiguous outer loop"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_vhs",
+      "to": "e_return"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_return",
+      "to": "e_unaged"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_unaged",
+      "to": "e_scream_pod"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_scream_pod",
+      "to": "e_carl"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_carl",
+      "to": "e_resolution"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_resolution",
+      "to": "e_markers"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_markers",
+      "to": "e_entity"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_entity",
+      "to": "e_aaron_stay"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_aaron_stay",
+      "to": "e_confess"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_confess",
+      "to": "e_flee"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_flee",
+      "to": "e_camp_reset"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_camp_reset",
+      "to": "e_escape"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_escape",
+      "to": "e_meta"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_scream",
+      "to": "w_arcadia",
+      "relation": "nestsWithin",
+      "label": "seconds pod nested in region"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_carl",
+      "to": "w_arcadia",
+      "relation": "nestsWithin"
+    },
+    {
+      "id": "w3",
+      "kind": "world_relation",
+      "from": "w_week",
+      "to": "w_arcadia",
+      "relation": "nestsWithin"
+    },
+    {
+      "id": "w4",
+      "kind": "world_relation",
+      "from": "w_arcadia",
+      "to": "w_outside",
+      "relation": "nestsWithin",
+      "label": "camp region under Entity"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_leave",
+      "eventId": "e_confess",
+      "ruleEffects": [
+        {
+          "ruleSetId": "tangent_universe",
+          "effect": "Exit before Arcadia decade reset collapses them into Entity cycle"
+        },
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Leaving the region is the exit condition; suicide only restarts pod"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Brothers flee Camp Arcadia as the decade pod resets; Entity region and possible outer loop remain.",
+    "endWorldRefs": [
+      "w_outside",
+      "w_arcadia"
+    ]
+  }
+}

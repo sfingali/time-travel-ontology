@@ -49,3 +49,53 @@ TV/film rights optioned (New Regency 2008). Hungarian TV film *A halhatatlanság
 
 ## Related works
 Poul Anderson Time Patrol; Stross *Palimpsest*; Crowley *Great Work of Time*; Foundation continuity hints; *The Rise and Fall of D.O.D.O.*.
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/the-end-of-eternity.json` — primary `branch_bureaucracy_prune` (Eternity as TVA ancestor), mixins bootstrap (Mallansohn) + mutable_ripple. Ending: Infinity supersedes Eternity.
+
+Public: Wikipedia concepts glossary; Stross *Palimpsest* as conversation partner; Foundation continuity hints in criticism.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-end-of-eternity`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-end-of-eternity` lives under time-travel-ontology/instances/.

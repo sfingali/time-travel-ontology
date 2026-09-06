@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "id": "erased",
+    "title": "Erased (Boku dake ga Inai Machi)",
+    "year": 2016,
+    "medium": "tv",
+    "sources": [
+      "Sanaimura; anime 2016",
+      "time-travel-archive/tv/erased.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "death_checkpoint_rewrite",
+    "mutable_ripple",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "death_checkpoint_rewrite",
+  "mixinRuleSetIds": [
+    "mutable_ripple",
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_2006",
+      "label": "Adult trigger present",
+      "spanLabel": "2006"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_1988",
+      "label": "Childhood Revival field",
+      "spanLabel": "1988"
+    },
+    {
+      "kind": "branch",
+      "id": "w_1988b",
+      "label": "Saved-children 1988",
+      "parentRef": "w_1988",
+      "forkLabel": "successful Revival"
+    },
+    {
+      "kind": "branch",
+      "id": "w_2003",
+      "label": "Coma-wake 2003",
+      "parentRef": "w_1988b",
+      "forkLabel": "15y coma bridge"
+    },
+    {
+      "kind": "branch",
+      "id": "w_2010",
+      "label": "2010 aftermath",
+      "parentRef": "w_2003",
+      "forkLabel": "career future"
+    }
+  ],
+  "agents": [
+    {
+      "id": "satoru",
+      "label": "Satoru Fujinuma",
+      "identityGroup": "satoru",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_2006"
+    },
+    {
+      "id": "sachiko",
+      "label": "Sachiko",
+      "homeWorldRef": "w_1988"
+    },
+    {
+      "id": "kayo",
+      "label": "Kayo Hinazuki",
+      "homeWorldRef": "w_1988"
+    },
+    {
+      "id": "yashiro",
+      "label": "Yashiro / Nishizono",
+      "homeWorldRef": "w_1988"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_2006",
+      "type": "ordinary",
+      "label": "2016? / 2006 adult Satoru sees mother's death; Revival triggers",
+      "at": {
+        "worldRef": "w_2006",
+        "timeLabel": "2006"
+      },
+      "agents": [
+        "satoru"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_revival_long",
+      "type": "loop_reset",
+      "label": "Long Revival: wakes as child in 1988",
+      "at": {
+        "worldRef": "w_1988",
+        "timeLabel": "1988"
+      },
+      "agents": [
+        "satoru"
+      ],
+      "payload": {
+        "memoryRetained": true,
+        "travelDelta": "-18 years",
+        "checkpointId": "childhood"
+      }
+    },
+    {
+      "id": "e_mother",
+      "type": "ordinary",
+      "label": "Lives with mother Sachiko; investigates child killings",
+      "at": {
+        "worldRef": "w_1988",
+        "timeLabel": "1988"
+      },
+      "agents": [
+        "satoru",
+        "sachiko"
+      ]
+    },
+    {
+      "id": "e_short",
+      "type": "loop_reset",
+      "label": "Short Revivals (minutes) avert immediate deaths",
+      "at": {
+        "worldRef": "w_1988",
+        "timeLabel": "micro"
+      },
+      "agents": [
+        "satoru"
+      ],
+      "payload": {
+        "iteration": 3,
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_kayo",
+      "type": "intervention",
+      "label": "Works to save Kayo and other children",
+      "at": {
+        "worldRef": "w_1988",
+        "timeLabel": "investigation"
+      },
+      "agents": [
+        "satoru",
+        "kayo"
+      ]
+    },
+    {
+      "id": "e_yashiro",
+      "type": "reveal",
+      "label": "Teacher Yashiro is the killer",
+      "at": {
+        "worldRef": "w_1988",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "satoru",
+        "yashiro"
+      ]
+    },
+    {
+      "id": "e_fail",
+      "type": "death",
+      "label": "Failures / lake incidents; butterfly omens",
+      "at": {
+        "worldRef": "w_1988",
+        "timeLabel": "setbacks"
+      },
+      "agents": [
+        "satoru"
+      ],
+      "payload": {
+        "signal": "butterfly",
+        "exitFailed": true
+      }
+    },
+    {
+      "id": "e_adapt",
+      "type": "ordinary",
+      "label": "Killer adapts across loops \u2014 adversarial looping",
+      "at": {
+        "worldRef": "w_1988",
+        "timeLabel": "arms race"
+      },
+      "agents": [
+        "yashiro",
+        "satoru"
+      ]
+    },
+    {
+      "id": "e_save",
+      "type": "intervention",
+      "label": "Successful prevention path; coma cost bridge",
+      "at": {
+        "worldRef": "w_1988b",
+        "timeLabel": "success"
+      },
+      "agents": [
+        "satoru",
+        "kayo",
+        "sachiko"
+      ]
+    },
+    {
+      "id": "e_2003",
+      "type": "arrival",
+      "label": "2003 wake from 15-year coma; friends visit",
+      "at": {
+        "worldRef": "w_2003",
+        "timeLabel": "2003"
+      },
+      "agents": [
+        "satoru",
+        "kayo"
+      ]
+    },
+    {
+      "id": "e_rooftop",
+      "type": "intervention",
+      "label": "Yashiro (Nishizono) rooftop murder attempt foiled",
+      "at": {
+        "worldRef": "w_2003",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "satoru",
+        "yashiro"
+      ]
+    },
+    {
+      "id": "e_arrest",
+      "type": "ordinary",
+      "label": "Arrest for new crime; old crimes timed out",
+      "at": {
+        "worldRef": "w_2003",
+        "timeLabel": "justice"
+      },
+      "agents": [
+        "yashiro"
+      ]
+    },
+    {
+      "id": "e_2010",
+      "type": "ordinary",
+      "label": "2010 mangaka Satoru; Airi; butterfly stirs",
+      "at": {
+        "worldRef": "w_2010",
+        "timeLabel": "2010"
+      },
+      "agents": [
+        "satoru"
+      ],
+      "payload": {
+        "signal": "butterfly"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_2006",
+      "to": "e_revival_long"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_revival_long",
+      "to": "e_mother"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_mother",
+      "to": "e_short"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_short",
+      "to": "e_kayo"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_kayo",
+      "to": "e_yashiro"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_yashiro",
+      "to": "e_fail"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_fail",
+      "to": "e_adapt"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_adapt",
+      "to": "e_save"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_save",
+      "to": "e_2003"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_2003",
+      "to": "e_rooftop"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_rooftop",
+      "to": "e_arrest"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_arrest",
+      "to": "e_2010"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_2006",
+      "to": "w_1988",
+      "relation": "originatesFrom"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_1988",
+      "to": "w_1988b",
+      "relation": "supersedes",
+      "label": "children saved"
+    },
+    {
+      "id": "w3",
+      "kind": "world_relation",
+      "from": "w_1988b",
+      "to": "w_2003",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "w4",
+      "kind": "world_relation",
+      "from": "w_2003",
+      "to": "w_2010",
+      "relation": "forksFrom"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_save",
+      "eventId": "e_save",
+      "ruleEffects": [
+        {
+          "ruleSetId": "death_checkpoint_rewrite",
+          "effect": "Revival rewrites from childhood checkpoint with retained knowledge"
+        },
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "2006/2010 futures mutate (coma, careers, marriages)"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Children saved at coma cost; killer caught on new crime; butterfly omen in 2010.",
+    "endWorldRefs": [
+      "w_2010",
+      "w_2003"
+    ]
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "id": "la-jetee",
+    "title": "La Jet\u00e9e",
+    "year": 1962,
+    "medium": "film",
+    "sources": [
+      "Chris Marker (1962)",
+      "time-travel-archive/films/la-jetee.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "predestination_closed_loop",
+    "bootstrap_ontological",
+    "fixed_novikov"
+  ],
+  "primaryRuleSetId": "predestination_closed_loop",
+  "mixinRuleSetIds": [
+    "bootstrap_ontological",
+    "fixed_novikov"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_future",
+      "label": "Post-war underground",
+      "spanLabel": "aftermath"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_past",
+      "label": "Pre-war Orly / pier",
+      "spanLabel": "memory era"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_far",
+      "label": "Far future offer",
+      "spanLabel": "escape era"
+    }
+  ],
+  "agents": [
+    {
+      "id": "man",
+      "label": "The Man",
+      "identityGroup": "man",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_future"
+    },
+    {
+      "id": "woman",
+      "label": "The Woman",
+      "homeWorldRef": "w_past"
+    },
+    {
+      "id": "scientists",
+      "label": "Camp scientists",
+      "homeWorldRef": "w_future"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_war",
+      "type": "ordinary",
+      "label": "Post-apocalyptic underground; prisoners experimented on",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "post-war"
+      },
+      "agents": [
+        "man",
+        "scientists"
+      ]
+    },
+    {
+      "id": "e_memory",
+      "type": "observation",
+      "label": "Man fixated on childhood pier image \u2014 woman's face",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "prep"
+      },
+      "agents": [
+        "man"
+      ],
+      "payload": {
+        "perceptionMode": "memory",
+        "artifactKind": "other"
+      }
+    },
+    {
+      "id": "e_send_past",
+      "type": "departure",
+      "label": "Scientists send him to past via memory anchor",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "experiment"
+      },
+      "agents": [
+        "man",
+        "scientists"
+      ],
+      "payload": {
+        "travelMode": "perception",
+        "destinationTimeLabel": "pre-war"
+      }
+    },
+    {
+      "id": "e_meet",
+      "type": "arrival",
+      "label": "Meets the woman repeatedly in the past",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "pre-war"
+      },
+      "agents": [
+        "man",
+        "woman"
+      ],
+      "payload": {
+        "travelMode": "perception"
+      }
+    },
+    {
+      "id": "e_love",
+      "type": "ordinary",
+      "label": "Relationship forms across visits",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "visits"
+      },
+      "agents": [
+        "man",
+        "woman"
+      ]
+    },
+    {
+      "id": "e_future_offer",
+      "type": "departure",
+      "label": "Sent to far future; offered escape",
+      "at": {
+        "worldRef": "w_far",
+        "timeLabel": "far future"
+      },
+      "agents": [
+        "man"
+      ],
+      "payload": {
+        "travelMode": "perception"
+      }
+    },
+    {
+      "id": "e_refuse",
+      "type": "intervention",
+      "label": "Chooses return to the pier / woman over future exile",
+      "at": {
+        "worldRef": "w_far",
+        "timeLabel": "choice"
+      },
+      "agents": [
+        "man"
+      ]
+    },
+    {
+      "id": "e_return_pier",
+      "type": "arrival",
+      "label": "Returns to Orly pier of the memory",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "pier"
+      },
+      "agents": [
+        "man",
+        "woman"
+      ]
+    },
+    {
+      "id": "e_death",
+      "type": "death",
+      "label": "Killed on the pier \u2014 childhood memory was his own death",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "pier"
+      },
+      "agents": [
+        "man"
+      ],
+      "payload": {
+        "bootstrapEntity": "memory of death"
+      }
+    },
+    {
+      "id": "e_child",
+      "type": "observation",
+      "label": "Child witness is the same man seeing his future death",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "childhood"
+      },
+      "agents": [
+        "man"
+      ],
+      "payload": {
+        "identityNote": "child=dying man"
+      }
+    },
+    {
+      "id": "e_photo_roman",
+      "type": "ordinary",
+      "label": "Narrative told almost entirely in still photographs",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "form"
+      },
+      "agents": [
+        "man"
+      ],
+      "payload": {
+        "note": "formal fatalism"
+      }
+    },
+    {
+      "id": "e_loop_close",
+      "type": "bootstrap_origin",
+      "label": "Memory that enables travel is the death it causes",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "closure"
+      },
+      "agents": [
+        "man",
+        "scientists"
+      ],
+      "payload": {
+        "bootstrapEntity": "pier memory"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_war",
+      "to": "e_memory"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_memory",
+      "to": "e_send_past"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_send_past",
+      "to": "e_meet"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_meet",
+      "to": "e_love"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_love",
+      "to": "e_future_offer"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_future_offer",
+      "to": "e_refuse"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_refuse",
+      "to": "e_return_pier"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_return_pier",
+      "to": "e_death"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_death",
+      "to": "e_child"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_child",
+      "to": "e_photo_roman"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_photo_roman",
+      "to": "e_loop_close"
+    },
+    {
+      "id": "loop1",
+      "kind": "causal",
+      "from": "e_death",
+      "to": "e_memory",
+      "label": "death creates the memory"
+    },
+    {
+      "id": "loop2",
+      "kind": "causal",
+      "from": "e_memory",
+      "to": "e_send_past",
+      "label": "memory enables travel"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_future",
+      "to": "w_past",
+      "relation": "originatesFrom"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_choice",
+      "eventId": "e_refuse",
+      "ruleEffects": [
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Choosing the pier fulfills the death that made the experiment possible"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Pier memory has no origin outside the death loop"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Pure fatalism: the childhood pier memory is the man's own assassination; 12 Monkeys ancestor.",
+    "endWorldRefs": [
+      "w_past"
+    ]
+  }
+}

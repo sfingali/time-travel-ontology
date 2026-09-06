@@ -1,0 +1,363 @@
+{
+  "meta": {
+    "id": "x-men-days-of-future-past",
+    "title": "X-Men: Days of Future Past",
+    "year": 2014,
+    "medium": "film",
+    "sources": [
+      "Bryan Singer (2014); Claremont/Byrne comics",
+      "time-travel-archive/films/x-men-days-of-future-past.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "mutable_ripple",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "mutable_ripple",
+  "mixinRuleSetIds": [
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_future_bad",
+      "label": "Sentinel apocalypse future",
+      "spanLabel": "2023"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_1973",
+      "label": "1973 hinge year",
+      "spanLabel": "1973"
+    },
+    {
+      "kind": "branch",
+      "id": "w_future_good",
+      "label": "Healed classroom future",
+      "parentRef": "w_1973",
+      "forkLabel": "assassination prevented"
+    }
+  ],
+  "agents": [
+    {
+      "id": "logan",
+      "label": "Logan / Wolverine",
+      "identityGroup": "logan",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_future_bad"
+    },
+    {
+      "id": "xavier_old",
+      "label": "Old Xavier",
+      "identityGroup": "xavier",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_future_bad"
+    },
+    {
+      "id": "xavier_young",
+      "label": "Young Xavier",
+      "identityGroup": "xavier",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_1973"
+    },
+    {
+      "id": "magneto_old",
+      "label": "Old Magneto",
+      "identityGroup": "magneto",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_future_bad"
+    },
+    {
+      "id": "magneto_young",
+      "label": "Young Magneto",
+      "identityGroup": "magneto",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_1973"
+    },
+    {
+      "id": "mystique",
+      "label": "Mystique",
+      "homeWorldRef": "w_1973"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_future_war",
+      "type": "ordinary",
+      "label": "Sentinel-ravaged future; mutants hunted",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "2023"
+      },
+      "agents": [
+        "logan",
+        "xavier_old",
+        "magneto_old"
+      ]
+    },
+    {
+      "id": "e_plan",
+      "type": "ordinary",
+      "label": "Kitty will send Logan's mind to 1973 body",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "plan"
+      },
+      "agents": [
+        "logan"
+      ],
+      "payload": {
+        "travelMode": "perception"
+      }
+    },
+    {
+      "id": "e_send",
+      "type": "departure",
+      "label": "Consciousness projected to 1973 Logan",
+      "at": {
+        "worldRef": "w_future_bad",
+        "timeLabel": "send"
+      },
+      "agents": [
+        "logan"
+      ],
+      "payload": {
+        "travelMode": "perception",
+        "destinationTimeLabel": "1973"
+      }
+    },
+    {
+      "id": "e_1973",
+      "type": "arrival",
+      "label": "Logan wakes in 1973; must stop Mystique",
+      "at": {
+        "worldRef": "w_1973",
+        "timeLabel": "1973"
+      },
+      "agents": [
+        "logan"
+      ]
+    },
+    {
+      "id": "e_xavier_young",
+      "type": "ordinary",
+      "label": "Recruit broken young Xavier; spring Magneto",
+      "at": {
+        "worldRef": "w_1973",
+        "timeLabel": "recruit"
+      },
+      "agents": [
+        "logan",
+        "xavier_young",
+        "magneto_young"
+      ]
+    },
+    {
+      "id": "e_quicksilver",
+      "type": "ordinary",
+      "label": "Pentagon kitchen rescue (Quicksilver)",
+      "at": {
+        "worldRef": "w_1973",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "logan",
+        "magneto_young"
+      ]
+    },
+    {
+      "id": "e_trask",
+      "type": "ordinary",
+      "label": "Trask unveils anti-mutant tech; Mystique hunts him",
+      "at": {
+        "worldRef": "w_1973",
+        "timeLabel": "chase"
+      },
+      "agents": [
+        "mystique"
+      ]
+    },
+    {
+      "id": "e_prevent",
+      "type": "intervention",
+      "label": "Prevent public assassination of Trask",
+      "at": {
+        "worldRef": "w_1973",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "logan",
+        "xavier_young",
+        "mystique"
+      ]
+    },
+    {
+      "id": "e_fork",
+      "type": "branch_fork",
+      "label": "Sentinel program cascade averted",
+      "at": {
+        "worldRef": "w_future_good",
+        "timeLabel": "fork"
+      },
+      "agents": [
+        "logan",
+        "xavier_young"
+      ]
+    },
+    {
+      "id": "e_classroom",
+      "type": "arrival",
+      "label": "Logan wakes in healed future classroom",
+      "at": {
+        "worldRef": "w_future_good",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "logan",
+        "xavier_old"
+      ],
+      "payload": {
+        "travelMode": "perception"
+      }
+    },
+    {
+      "id": "e_reboot",
+      "type": "ordinary",
+      "label": "Soft franchise reboot \u2014 inconvenient deaths erased",
+      "at": {
+        "worldRef": "w_future_good",
+        "timeLabel": "meta"
+      },
+      "agents": [
+        "logan"
+      ]
+    },
+    {
+      "id": "e_hope",
+      "type": "reveal",
+      "label": "Xavier's hope treated as condition for good future",
+      "at": {
+        "worldRef": "w_1973",
+        "timeLabel": "theme"
+      },
+      "agents": [
+        "xavier_young",
+        "logan"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_future_war",
+      "to": "e_plan"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_plan",
+      "to": "e_send"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_send",
+      "to": "e_1973"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_1973",
+      "to": "e_xavier_young"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_xavier_young",
+      "to": "e_quicksilver"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_quicksilver",
+      "to": "e_trask"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_trask",
+      "to": "e_prevent"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_prevent",
+      "to": "e_fork"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_fork",
+      "to": "e_classroom"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_classroom",
+      "to": "e_reboot"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_reboot",
+      "to": "e_hope"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_future_bad",
+      "to": "w_1973",
+      "relation": "originatesFrom"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_1973",
+      "to": "w_future_good",
+      "relation": "forksFrom",
+      "label": "Trask assassination prevented"
+    },
+    {
+      "id": "w3",
+      "kind": "world_relation",
+      "from": "w_future_bad",
+      "to": "w_future_good",
+      "relation": "supersedes"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_prevent",
+      "eventId": "e_prevent",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Preventing Trask kill overwrites Sentinel future into classroom peace"
+        },
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Franchise treats as successful branch/reboot of continuity"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Logan wakes among living students; Sentinel future overwritten; soft reboot achieved.",
+    "endWorldRefs": [
+      "w_future_good"
+    ]
+  }
+}

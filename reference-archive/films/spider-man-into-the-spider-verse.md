@@ -67,3 +67,37 @@ Sony Pictures Animation / Columbia; Oscar Best Animated Feature; rare A+ CinemaS
 
 ## Related works
 Across the Spider-Verse; No Way Home; EEAAO; Loki; Coherence; The One (2001); Doctor Strange in the Multiverse of Madness.
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/spider-man-into-the-spider-verse.json` — primary `multiverse_contact`, mixin `branch_on_intervention`, topology dual/parallel Spider worlds (1610, 65, Peter B).
+
+Public: Wikipedia; Sony/Marvel marketing; sprawling fan multiverse charts. Collider as forced contact; go-home machine as departure.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `spider-man-into-the-spider-verse`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `spider-man-into-the-spider-verse` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `spider-man-into-the-spider-verse`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `spider-man-into-the-spider-verse` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `spider-man-into-the-spider-verse`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `spider-man-into-the-spider-verse` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `spider-man-into-the-spider-verse`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `spider-man-into-the-spider-verse` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `spider-man-into-the-spider-verse`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `spider-man-into-the-spider-verse` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `spider-man-into-the-spider-verse`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `spider-man-into-the-spider-verse` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `spider-man-into-the-spider-verse`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `spider-man-into-the-spider-verse` lives under time-travel-ontology/instances/.

@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "id": "triangle",
+    "title": "Triangle",
+    "year": 2009,
+    "medium": "film",
+    "sources": [
+      "Christopher Smith (2009)",
+      "time-travel-archive/films/triangle.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "predestination_closed_loop",
+    "temporal_loop_exit",
+    "bootstrap_ontological"
+  ],
+  "primaryRuleSetId": "predestination_closed_loop",
+  "mixinRuleSetIds": [
+    "temporal_loop_exit",
+    "bootstrap_ontological"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_loop",
+      "label": "Aeolus murder loop",
+      "spanLabel": "one cursed day"
+    }
+  ],
+  "agents": [
+    {
+      "id": "jess",
+      "label": "Jess",
+      "identityGroup": "jess",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_loop"
+    },
+    {
+      "id": "masked",
+      "label": "Masked shooter (Jess iteration)",
+      "identityGroup": "jess",
+      "continuityRole": "iteration",
+      "homeWorldRef": "w_loop",
+      "continuedFrom": "jess"
+    },
+    {
+      "id": "friends",
+      "label": "Sailing party",
+      "homeWorldRef": "w_loop"
+    },
+    {
+      "id": "son",
+      "label": "Jess's son",
+      "homeWorldRef": "w_loop"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_sail",
+      "type": "ordinary",
+      "label": "Jess and friends sail into storm",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "morning"
+      },
+      "agents": [
+        "jess",
+        "friends"
+      ]
+    },
+    {
+      "id": "e_aeolus",
+      "type": "arrival",
+      "label": "Board deserted ocean liner Aeolus",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "storm"
+      },
+      "agents": [
+        "jess",
+        "friends"
+      ]
+    },
+    {
+      "id": "e_masked",
+      "type": "ordinary",
+      "label": "Masked shooter attacks the party",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "deck"
+      },
+      "agents": [
+        "jess",
+        "masked"
+      ]
+    },
+    {
+      "id": "e_realize",
+      "type": "reveal",
+      "label": "Jess realizes she is looping; seagulls/repeats",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "jess"
+      ],
+      "payload": {
+        "iteration": 2
+      }
+    },
+    {
+      "id": "e_kill_copies",
+      "type": "intervention",
+      "label": "Jess kills versions of friends to 'reset'",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "loop n"
+      },
+      "agents": [
+        "jess",
+        "friends"
+      ]
+    },
+    {
+      "id": "e_become_mask",
+      "type": "ordinary",
+      "label": "Jess becomes the masked killer for next iteration",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "loop n+1"
+      },
+      "agents": [
+        "jess",
+        "masked"
+      ],
+      "payload": {
+        "identityNote": "jess=masked"
+      }
+    },
+    {
+      "id": "e_wreck",
+      "type": "ordinary",
+      "label": "Survives wreck; returns home",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "escape attempt"
+      },
+      "agents": [
+        "jess"
+      ]
+    },
+    {
+      "id": "e_double",
+      "type": "contact",
+      "label": "Finds double at home; kills her and takes place",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "home"
+      },
+      "agents": [
+        "jess"
+      ],
+      "payload": {
+        "identityNote": "replacement"
+      }
+    },
+    {
+      "id": "e_hitch",
+      "type": "departure",
+      "label": "Hitches to harbor to restart sailing trip",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "morning again"
+      },
+      "agents": [
+        "jess"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_grief",
+      "type": "reveal",
+      "label": "Grief over disabled son fuels the loop",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "motif"
+      },
+      "agents": [
+        "jess",
+        "son"
+      ]
+    },
+    {
+      "id": "e_aeolus_name",
+      "type": "observation",
+      "label": "Ship Aeolus \u2014 circular wandering / wind god",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "theme"
+      },
+      "agents": [
+        "jess"
+      ],
+      "payload": {
+        "note": "mythic closed path"
+      }
+    },
+    {
+      "id": "e_no_exit",
+      "type": "loop_reset",
+      "label": "Loop continues; no external exit shown",
+      "at": {
+        "worldRef": "w_loop",
+        "timeLabel": "cycle"
+      },
+      "agents": [
+        "jess"
+      ],
+      "payload": {
+        "exitFailed": true,
+        "iteration": 99
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_sail",
+      "to": "e_aeolus"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_aeolus",
+      "to": "e_masked"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_masked",
+      "to": "e_realize"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_realize",
+      "to": "e_kill_copies"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_kill_copies",
+      "to": "e_become_mask"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_become_mask",
+      "to": "e_wreck"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_wreck",
+      "to": "e_double"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_double",
+      "to": "e_hitch"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_hitch",
+      "to": "e_grief"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_grief",
+      "to": "e_aeolus_name"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_aeolus_name",
+      "to": "e_no_exit"
+    },
+    {
+      "id": "loop1",
+      "kind": "causal",
+      "from": "e_become_mask",
+      "to": "e_masked",
+      "label": "future Jess is the shooter"
+    },
+    {
+      "id": "loop2",
+      "kind": "temporal",
+      "from": "e_hitch",
+      "to": "e_sail",
+      "label": "restarts sail"
+    },
+    {
+      "id": "id1",
+      "kind": "identity",
+      "from": "jess",
+      "to": "masked",
+      "label": "Jess becomes masked"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_kill",
+      "eventId": "e_kill_copies",
+      "ruleEffects": [
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Attempts to reset by murder fulfill the next loop's attacker role"
+        },
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Apparent home escape only reloads the harbor departure"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Jess is trapped in identity-replacement murder loop aboard Aeolus; grief locks the cycle.",
+    "endWorldRefs": [
+      "w_loop"
+    ]
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "id": "night-watch-discworld",
+    "title": "Night Watch (Discworld)",
+    "year": 2002,
+    "medium": "novel",
+    "sources": [
+      "Terry Pratchett (2002)",
+      "time-travel-archive/novels/night-watch-discworld.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "predestination_closed_loop",
+    "bootstrap_ontological",
+    "fixed_novikov"
+  ],
+  "primaryRuleSetId": "predestination_closed_loop",
+  "mixinRuleSetIds": [
+    "bootstrap_ontological",
+    "fixed_novikov"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_present",
+      "label": "Ankh-Morpork present",
+      "spanLabel": "Vimes present"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_past",
+      "label": "Glorious 25th of May past",
+      "spanLabel": "revolution"
+    }
+  ],
+  "agents": [
+    {
+      "id": "vimes",
+      "label": "Sam Vimes / John Keel",
+      "identityGroup": "vimes",
+      "continuityRole": "older_self",
+      "homeWorldRef": "w_present"
+    },
+    {
+      "id": "young_sam",
+      "label": "Young Sam Vimes",
+      "identityGroup": "vimes",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_past"
+    },
+    {
+      "id": "carcer",
+      "label": "Carcer Dun",
+      "homeWorldRef": "w_present"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_chase",
+      "type": "ordinary",
+      "label": "Sam Vimes chases Carcer across rooftops in storm",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "present"
+      },
+      "agents": [
+        "vimes",
+        "carcer"
+      ]
+    },
+    {
+      "id": "e_lightning",
+      "type": "departure",
+      "label": "Magical storm flings both back to Glorious 25th of May past",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "storm"
+      },
+      "agents": [
+        "vimes",
+        "carcer"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "destinationTimeLabel": "Glorious Revolution eve"
+      }
+    },
+    {
+      "id": "e_past",
+      "type": "arrival",
+      "label": "Arrive days before Treacle Mine Road uprising",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "past"
+      },
+      "agents": [
+        "vimes",
+        "carcer"
+      ]
+    },
+    {
+      "id": "e_young_sam",
+      "type": "contact",
+      "label": "Meets young Sam Vimes \u2014 must mentor his own past",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "watch"
+      },
+      "agents": [
+        "vimes",
+        "young_sam"
+      ],
+      "payload": {
+        "identityNote": "keel=future vimes"
+      }
+    },
+    {
+      "id": "e_keel",
+      "type": "ordinary",
+      "label": "Vimes assumes identity of John Keel",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "cover"
+      },
+      "agents": [
+        "vimes"
+      ],
+      "payload": {
+        "bootstrapEntity": "Keel legend"
+      }
+    },
+    {
+      "id": "e_carcer_chaos",
+      "type": "intervention",
+      "label": "Carcer accelerates chaos; tries to remake history worse",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "carcer"
+      ]
+    },
+    {
+      "id": "e_train",
+      "type": "ordinary",
+      "label": "Trains young Sam and Night Watch into better men",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "training"
+      },
+      "agents": [
+        "vimes",
+        "young_sam"
+      ]
+    },
+    {
+      "id": "e_barricade",
+      "type": "intervention",
+      "label": "Treacle Mine Road barricade; keeps history on rails",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "25 May"
+      },
+      "agents": [
+        "vimes",
+        "young_sam",
+        "carcer"
+      ]
+    },
+    {
+      "id": "e_die_keel",
+      "type": "death",
+      "label": "History requires Keel's death \u2014 Vimes fulfills then escapes timing",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "revolution"
+      },
+      "agents": [
+        "vimes"
+      ],
+      "payload": {
+        "note": "closed: Keel always was Vimes"
+      }
+    },
+    {
+      "id": "e_return",
+      "type": "arrival",
+      "label": "Returns to present with Carcer for trial",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "return"
+      },
+      "agents": [
+        "vimes",
+        "carcer"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_lilac",
+      "type": "observation",
+      "label": "Lilac remembrance \u2014 Vimes was always his own mentor",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "aftermath"
+      },
+      "agents": [
+        "vimes",
+        "young_sam"
+      ],
+      "payload": {
+        "bootstrapEntity": "Keel teachings"
+      }
+    },
+    {
+      "id": "e_son",
+      "type": "birth",
+      "label": "Present: birth of Young Sam (son) rhymes the loop",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "coda"
+      },
+      "agents": [
+        "vimes"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_chase",
+      "to": "e_lightning"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_lightning",
+      "to": "e_past"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_past",
+      "to": "e_young_sam"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_young_sam",
+      "to": "e_keel"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_keel",
+      "to": "e_carcer_chaos"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_carcer_chaos",
+      "to": "e_train"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_train",
+      "to": "e_barricade"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_barricade",
+      "to": "e_die_keel"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_die_keel",
+      "to": "e_return"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_return",
+      "to": "e_lilac"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_lilac",
+      "to": "e_son"
+    },
+    {
+      "id": "loop1",
+      "kind": "causal",
+      "from": "e_train",
+      "to": "e_lilac",
+      "label": "mentor bootstrap"
+    },
+    {
+      "id": "id1",
+      "kind": "identity",
+      "from": "vimes",
+      "to": "young_sam",
+      "label": "same man decades apart"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_present",
+      "to": "w_past",
+      "relation": "originatesFrom"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_barricade",
+      "eventId": "e_barricade",
+      "ruleEffects": [
+        {
+          "ruleSetId": "predestination_closed_loop",
+          "effect": "Keeping revolution 'on rails' fulfills the history Vimes remembers"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Keel's teachings have no teacher but future Vimes"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Vimes was always Keel; Carcer returned for justice; lilac and newborn son close the rhyme.",
+    "endWorldRefs": [
+      "w_present"
+    ]
+  }
+}

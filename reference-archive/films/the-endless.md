@@ -73,3 +73,31 @@ Original. Pair with ARQ / Happy Death Day 2U for nested loops; with *Dark* for c
 
 ## Related works
 Resolution; ARQ; Happy Death Day 2U; Triangle; Coherence; Dark (TV); Russian Doll.
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/the-endless.json` — primary `tangent_universe`, mixins `temporal_loop_exit` + `fixed_novikov`, topology `tangent_bubble`. Worlds nest scream/Carl/week pods inside Camp Arcadia inside the ordinary outside.
+
+Public explainers: Astronomy Trek nested-pod charts; Wikipedia; Digital Spy ending notes. *Resolution* crossover (Chris & Mike) encoded as contact in the week pod.
+
+Key formal claim: suicide restarts the local pod; leaving the Entity region is the only exit. Directors leave open a still-larger unnoticed loop — modeled as coda observation, not an extra world.
+
+### Pod duration reference
+
+Seconds (scream) → ~3h (Carl) → ~1 week (Resolution) → ~10 years (Arcadia). Third moon folklore = permanent trapping signal in camp dialogue.
+
+### Comparative grammar
+
+Pairs with *ARQ* (nested resets), *Russian Doll* (death loops), *Triangle* (identity hell), cult-time readings of *Midsummer* / folk horror without claiming shared canon.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-endless`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-endless` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-endless`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-endless` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `the-endless`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `the-endless` lives under time-travel-ontology/instances/.

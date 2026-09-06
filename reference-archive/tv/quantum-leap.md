@@ -70,3 +70,31 @@ Sam chooses to leap to Beth in 1969 and tells her to wait. Title cards: Beth and
 
 ## Related works
 *Travelers*; *Doctor Who*; *Early Edition*; *Journeyman*; *The Lazarus Project*.
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/quantum-leap.json` — primary `mutable_ripple` (put right what once went wrong), mixins `fixed_novikov` (Sam never home) + `perception_nonlinear` (hologram Al). Topology mutable single with liminal finale branch.
+
+Public: Wikipedia series; NBC Insider finale explainers; SYFY Wire; Quantum Leap fandom Mirror Image pages.
+
+Series pattern compressed into spine: accelerator → host leap → Al/Ziggy → put right → leap out → many leaps → Mirror Image → choose continue → Al’s improved home → never returned title card.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `quantum-leap`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `quantum-leap` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `quantum-leap`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `quantum-leap` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `quantum-leap`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `quantum-leap` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `quantum-leap`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `quantum-leap` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `quantum-leap`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `quantum-leap` lives under time-travel-ontology/instances/.

@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "id": "boss-level",
+    "title": "Boss Level",
+    "year": 2020,
+    "medium": "film",
+    "sources": [
+      "Joe Carnahan (2020)",
+      "time-travel-archive/films/boss-level.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "temporal_loop_exit",
+    "death_checkpoint_rewrite",
+    "mutable_ripple"
+  ],
+  "primaryRuleSetId": "temporal_loop_exit",
+  "mixinRuleSetIds": [
+    "death_checkpoint_rewrite",
+    "mutable_ripple"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_day",
+      "label": "Osiris Spindle day loop",
+      "spanLabel": "~07:00\u201312:47 \u00d7 140"
+    }
+  ],
+  "agents": [
+    {
+      "id": "roy",
+      "label": "Roy Pulver",
+      "identityGroup": "roy",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_day",
+      "iterationIndex": 140
+    },
+    {
+      "id": "jemma",
+      "label": "Jemma",
+      "homeWorldRef": "w_day"
+    },
+    {
+      "id": "joe",
+      "label": "Joe",
+      "homeWorldRef": "w_day"
+    },
+    {
+      "id": "ventor",
+      "label": "Col. Clive Ventor",
+      "homeWorldRef": "w_day"
+    },
+    {
+      "id": "dai",
+      "label": "Dai Feng",
+      "homeWorldRef": "w_day"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_wake",
+      "type": "ordinary",
+      "label": "Roy wakes 07:00; apartment assassins",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "07:00"
+      },
+      "agents": [
+        "roy"
+      ],
+      "payload": {
+        "iteration": 1
+      }
+    },
+    {
+      "id": "e_chopper",
+      "type": "ordinary",
+      "label": "Helicopter gunner; building explodes",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "morning"
+      },
+      "agents": [
+        "roy"
+      ]
+    },
+    {
+      "id": "e_die_1247",
+      "type": "death",
+      "label": "Dies ~12:47 \u2014 hard fail learned over ~140 loops",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "12:47"
+      },
+      "agents": [
+        "roy"
+      ],
+      "payload": {
+        "iteration": 140
+      }
+    },
+    {
+      "id": "e_reset",
+      "type": "loop_reset",
+      "label": "Osiris Spindle resets Roy to morning",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "reset"
+      },
+      "agents": [
+        "roy",
+        "jemma"
+      ],
+      "payload": {
+        "memoryRetained": true,
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_joe",
+      "type": "ordinary",
+      "label": "Bonds with son Joe at gaming tournament",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "midday"
+      },
+      "agents": [
+        "roy",
+        "joe"
+      ]
+    },
+    {
+      "id": "e_father",
+      "type": "death",
+      "label": "Dies protecting Joe; reveals he is father",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "tournament"
+      },
+      "agents": [
+        "roy",
+        "joe"
+      ]
+    },
+    {
+      "id": "e_tracker",
+      "type": "intervention",
+      "label": "Removes Alice tracker across trial loops",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "optimize"
+      },
+      "agents": [
+        "roy"
+      ]
+    },
+    {
+      "id": "e_ventor",
+      "type": "reveal",
+      "label": "Ventor: Spindle is quantum history rewriter; killed Jemma",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "Dynow"
+      },
+      "agents": [
+        "roy",
+        "ventor"
+      ]
+    },
+    {
+      "id": "e_sword",
+      "type": "ordinary",
+      "label": "Trains sword work with Dai Feng loop-by-loop",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "training"
+      },
+      "agents": [
+        "roy",
+        "dai"
+      ]
+    },
+    {
+      "id": "e_false_win",
+      "type": "death",
+      "label": "Kills Ventor but Joe dies; Spindle apocalypse",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "fail state"
+      },
+      "agents": [
+        "roy",
+        "joe",
+        "ventor"
+      ],
+      "payload": {
+        "exitFailed": true
+      }
+    },
+    {
+      "id": "e_phone",
+      "type": "observation",
+      "label": "Jemma phoned Joe after supposed murder \u2014 still alive AM",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "research loops"
+      },
+      "agents": [
+        "roy",
+        "jemma"
+      ],
+      "payload": {
+        "signal": "phone call"
+      }
+    },
+    {
+      "id": "e_speedrun",
+      "type": "intervention",
+      "label": "Chopper speedrun; save Jemma in 14 minutes",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "winning run"
+      },
+      "agents": [
+        "roy",
+        "jemma",
+        "ventor"
+      ]
+    },
+    {
+      "id": "e_enter",
+      "type": "departure",
+      "label": "Roy enters Spindle to reset \u2014 ambiguous continue",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "ending"
+      },
+      "agents": [
+        "roy",
+        "jemma"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "exitCondition": "reset spindle"
+      }
+    },
+    {
+      "id": "e_cake",
+      "type": "loop_reset",
+      "label": "Alt ending: faces morning attacker \u2014 'Piece o cake'",
+      "at": {
+        "worldRef": "w_day",
+        "timeLabel": "alt continue"
+      },
+      "agents": [
+        "roy"
+      ],
+      "payload": {
+        "iteration": 141
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_wake",
+      "to": "e_chopper"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_chopper",
+      "to": "e_die_1247"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_die_1247",
+      "to": "e_reset"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_reset",
+      "to": "e_joe"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_joe",
+      "to": "e_father"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_father",
+      "to": "e_tracker"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_tracker",
+      "to": "e_ventor"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_ventor",
+      "to": "e_sword"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_sword",
+      "to": "e_false_win"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_false_win",
+      "to": "e_phone"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_phone",
+      "to": "e_speedrun"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_speedrun",
+      "to": "e_enter"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_enter",
+      "to": "e_cake"
+    },
+    {
+      "id": "loop1",
+      "kind": "temporal",
+      "from": "e_reset",
+      "to": "e_wake",
+      "label": "death loop"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_speed",
+      "eventId": "e_speedrun",
+      "ruleEffects": [
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "True win condition is save Jemma early, not kill Ventor late"
+        },
+        {
+          "ruleSetId": "death_checkpoint_rewrite",
+          "effect": "Each death rewinds to 07:00 with retained skill/memory"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Roy learns the speedrun; enters Spindle for reset with ambiguous continue endings.",
+    "endWorldRefs": [
+      "w_day"
+    ]
+  }
+}

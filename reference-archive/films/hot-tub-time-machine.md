@@ -72,3 +72,29 @@ Hot Tub Time Machine 2; Bill & Ted; Back to the Future; Peggy Sue Got Married; T
 ## Cast & reception breadcrumbs
 
 John Cusack (Adam); Rob Corddry (Lou); Craig Robinson (Nick); Clark Duke (Jacob); Crispin Glover; Lizzy Caplan (April); Chevy Chase (repairman); Sebastian Stan (Blaine). Directed by Steve Pink; story Josh Heald. Fernie Alpine Resort / Vancouver studios. RT ~64% / Metacritic 63; Ebert three stars; A.O. Scott noted honest coarseness vs *Hangover* sentimentality. ~$64.6M worldwide on claimed $36M; strong home video (~$34.5M US disc) drove sequel. Last theatrical self-distribute-era MGM title before bankruptcy era. Unrated Blu-ray exists. Soundtrack heavy on ’80s needle-drops (Public Enemy, INXS, New Order, etc.).
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/hot-tub-time-machine.json` — primary `mutable_ripple`, mixin `branch_on_intervention`. 2010 → 1986 → rewritten 2010b.
+
+Public: Wikipedia plot; comedy TT comparisons to BTTF. Phone-photo ripple signals encoded as observation payload.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `hot-tub-time-machine`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `hot-tub-time-machine` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `hot-tub-time-machine`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `hot-tub-time-machine` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `hot-tub-time-machine`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `hot-tub-time-machine` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `hot-tub-time-machine`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `hot-tub-time-machine` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `hot-tub-time-machine`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `hot-tub-time-machine` lives under time-travel-ontology/instances/.

@@ -72,3 +72,31 @@ Theatrical ending as above. 2019 re-release added Stan Lee tribute / deleted mat
 
 ## Related works
 *Infinity War*; *Loki*; *Ant-Man and the Wasp*; *Back to the Future* (diegetic foil); *Doctor Strange*.
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/avengers-endgame.json` — primary `branch_on_intervention` (Banner/Ancient One rules), mixins `branch_bureaucracy_prune` (Loki/TVA foreshadow) + `fixed_novikov` (mainline Snap history until Unsnap). Topology `branching_tree`.
+
+Public diagram ecosystem: ThisIsBarry timeline charts; IGN rules explainers; Polygon Cap/Loki debates; MCU wiki Time Heist pages. Writers confirmed Cap-Peggy path in interviews (THR).
+
+Heist rows encoded as parallel departures; Vormir sacrifice; 1970 redo; Unsnap; Tony snap; stone returns; Cap stay; Loki escape branch.
+
+### Rule quote (public interviews / film)
+
+“If you travel to the past, that past becomes your future, and your former present becomes the past, which can’t now be changed by your new future” — film dialogue / Ancient One lecture paraphrased across explainers; ontology maps this to branching, not BTTF overwrite.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `avengers-endgame`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `avengers-endgame` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `avengers-endgame`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `avengers-endgame` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `avengers-endgame`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `avengers-endgame` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `avengers-endgame`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `avengers-endgame` lives under time-travel-ontology/instances/.

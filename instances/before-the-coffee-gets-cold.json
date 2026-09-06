@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "id": "before-the-coffee-gets-cold",
+    "title": "Before the Coffee Gets Cold",
+    "year": 2015,
+    "medium": "novel",
+    "sources": [
+      "Toshikazu Kawaguchi (2015)",
+      "time-travel-archive/novels/before-the-coffee-gets-cold.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "fixed_novikov",
+    "perception_nonlinear"
+  ],
+  "primaryRuleSetId": "fixed_novikov",
+  "mixinRuleSetIds": [
+    "perception_nonlinear"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_cafe",
+      "label": "Caf\u00e9 Funiculi Funicula (seat portal)",
+      "spanLabel": "present\u00b1visits"
+    }
+  ],
+  "agents": [
+    {
+      "id": "kazu",
+      "label": "Kazu",
+      "homeWorldRef": "w_cafe"
+    },
+    {
+      "id": "fumiko",
+      "label": "Fumiko",
+      "homeWorldRef": "w_cafe"
+    },
+    {
+      "id": "kohtake",
+      "label": "Kohtake",
+      "homeWorldRef": "w_cafe"
+    },
+    {
+      "id": "hirai",
+      "label": "Hirai",
+      "homeWorldRef": "w_cafe"
+    },
+    {
+      "id": "kei",
+      "label": "Kei",
+      "homeWorldRef": "w_cafe"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_cafe",
+      "type": "ordinary",
+      "label": "Funiculi Funicula caf\u00e9; ghost occupies the seat",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "present"
+      },
+      "agents": [
+        "kazu"
+      ]
+    },
+    {
+      "id": "e_rules",
+      "type": "reveal",
+      "label": "Rules: one seat; cannot leave; caf\u00e9 visitors only; present immutable; coffee timer",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "rules"
+      },
+      "agents": [
+        "kazu"
+      ],
+      "payload": {
+        "note": "hard constraints",
+        "exitCondition": "return before coffee cools"
+      }
+    },
+    {
+      "id": "e_fumiko",
+      "type": "departure",
+      "label": "Fumiko travels to confront boyfriend before US job",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story1"
+      },
+      "agents": [
+        "fumiko"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "travelDelta": "days"
+      }
+    },
+    {
+      "id": "e_fumiko_back",
+      "type": "arrival",
+      "label": "Fumiko returns; present unchanged; resolve reframed",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story1 end"
+      },
+      "agents": [
+        "fumiko"
+      ]
+    },
+    {
+      "id": "e_kohtake",
+      "type": "departure",
+      "label": "Kohtake seeks letter from Alzheimer husband",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story2"
+      },
+      "agents": [
+        "kohtake"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_kohtake_back",
+      "type": "arrival",
+      "label": "Letter visit; present unchanged; care transformed",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story2 end"
+      },
+      "agents": [
+        "kohtake"
+      ]
+    },
+    {
+      "id": "e_hirai",
+      "type": "departure",
+      "label": "Hirai confronts estranged sister",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story3"
+      },
+      "agents": [
+        "hirai"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_hirai_back",
+      "type": "arrival",
+      "label": "Sister visit; present unchanged; reconciliation begins",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story3 end"
+      },
+      "agents": [
+        "hirai"
+      ]
+    },
+    {
+      "id": "e_kei",
+      "type": "departure",
+      "label": "Kei travels to future to meet yet-unborn daughter",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story4"
+      },
+      "agents": [
+        "kei"
+      ],
+      "payload": {
+        "travelMode": "other",
+        "destinationTimeLabel": "future"
+      }
+    },
+    {
+      "id": "e_kei_back",
+      "type": "arrival",
+      "label": "Future meeting strengthens Kei's will to live",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "story4 end"
+      },
+      "agents": [
+        "kei"
+      ]
+    },
+    {
+      "id": "e_ghost_risk",
+      "type": "ordinary",
+      "label": "Overstay coffee \u2192 become ghost in the seat",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "rule cost"
+      },
+      "agents": [
+        "kazu"
+      ],
+      "payload": {
+        "exitFailed": true
+      }
+    },
+    {
+      "id": "e_theme",
+      "type": "observation",
+      "label": "Past unalterable in outcome; conversations change how one faces future",
+      "at": {
+        "worldRef": "w_cafe",
+        "timeLabel": "theme"
+      },
+      "agents": [
+        "kazu"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_cafe",
+      "to": "e_rules"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_rules",
+      "to": "e_fumiko"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_fumiko",
+      "to": "e_fumiko_back"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_fumiko_back",
+      "to": "e_kohtake"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_kohtake",
+      "to": "e_kohtake_back"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_kohtake_back",
+      "to": "e_hirai"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_hirai",
+      "to": "e_hirai_back"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_hirai_back",
+      "to": "e_kei"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_kei",
+      "to": "e_kei_back"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_kei_back",
+      "to": "e_ghost_risk"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_ghost_risk",
+      "to": "e_theme"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_rules",
+      "eventId": "e_rules",
+      "ruleEffects": [
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Explicitly: whatever happens in the past, the present does not change"
+        },
+        {
+          "ruleSetId": "perception_nonlinear",
+          "effect": "Emotional/knowledge change without causal overwrite of present facts"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Four rule-bound visits; present unchanged; characters transformed in how they face open futures.",
+    "endWorldRefs": [
+      "w_cafe"
+    ]
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "meta": {
+    "id": "replay",
+    "title": "Replay",
+    "year": 1986,
+    "medium": "novel",
+    "sources": [
+      "Ken Grimwood (1986)",
+      "time-travel-archive/novels/replay.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "temporal_loop_exit",
+    "death_checkpoint_rewrite",
+    "multiverse_contact"
+  ],
+  "primaryRuleSetId": "temporal_loop_exit",
+  "mixinRuleSetIds": [
+    "death_checkpoint_rewrite",
+    "multiverse_contact"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_life",
+      "label": "Jeff's replay span 1963\u20131988",
+      "spanLabel": "1963\u20131988"
+    },
+    {
+      "kind": "branch",
+      "id": "w_public",
+      "label": "Public oracle / captivity path",
+      "parentRef": "w_life",
+      "forkLabel": "going public"
+    },
+    {
+      "kind": "branch",
+      "id": "w_exit",
+      "label": "Post-replay open future",
+      "parentRef": "w_life",
+      "forkLabel": "survive 1988"
+    }
+  ],
+  "agents": [
+    {
+      "id": "jeff",
+      "label": "Jeff Winston",
+      "identityGroup": "jeff",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_life"
+    },
+    {
+      "id": "pamela",
+      "label": "Pamela Phillips",
+      "identityGroup": "pamela",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_life"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_die88",
+      "type": "death",
+      "label": "Jeff Winston dies of heart attack 1988",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "1988"
+      },
+      "agents": [
+        "jeff"
+      ]
+    },
+    {
+      "id": "e_wake63",
+      "type": "loop_reset",
+      "label": "Wakes as 18-year-old in 1963 with full memories",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "1963"
+      },
+      "agents": [
+        "jeff"
+      ],
+      "payload": {
+        "memoryRetained": true,
+        "travelDelta": "-25 years",
+        "iteration": 1
+      }
+    },
+    {
+      "id": "e_wealth",
+      "type": "intervention",
+      "label": "Replay for wealth via future knowledge",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "replay A"
+      },
+      "agents": [
+        "jeff"
+      ]
+    },
+    {
+      "id": "e_die_again",
+      "type": "death",
+      "label": "Always dies 1988; reboot with later start offset",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "1988"
+      },
+      "agents": [
+        "jeff"
+      ],
+      "payload": {
+        "iteration": 2
+      }
+    },
+    {
+      "id": "e_shorten",
+      "type": "loop_reset",
+      "label": "Restart windows shorten each cycle",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "later replays"
+      },
+      "agents": [
+        "jeff"
+      ],
+      "payload": {
+        "iteration": 5,
+        "note": "hours\u2192days\u2192years offset"
+      }
+    },
+    {
+      "id": "e_starsea",
+      "type": "observation",
+      "label": "Notices film Starsea that never existed before",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "1974"
+      },
+      "agents": [
+        "jeff"
+      ],
+      "payload": {
+        "signal": "other replayer"
+      }
+    },
+    {
+      "id": "e_pamela",
+      "type": "contact",
+      "label": "Meets Pamela Phillips \u2014 fellow replayer",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "meet"
+      },
+      "agents": [
+        "jeff",
+        "pamela"
+      ]
+    },
+    {
+      "id": "e_desync",
+      "type": "observation",
+      "label": "Restart windows desynchronize between them",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "jeff",
+        "pamela"
+      ]
+    },
+    {
+      "id": "e_public",
+      "type": "intervention",
+      "label": "Go public as oracles; government conscripts them",
+      "at": {
+        "worldRef": "w_public",
+        "timeLabel": "public branch"
+      },
+      "agents": [
+        "jeff",
+        "pamela"
+      ]
+    },
+    {
+      "id": "e_prison",
+      "type": "ordinary",
+      "label": "Imprisoned when geopolitics diverge",
+      "at": {
+        "worldRef": "w_public",
+        "timeLabel": "capture"
+      },
+      "agents": [
+        "jeff",
+        "pamela"
+      ]
+    },
+    {
+      "id": "e_final_deaths",
+      "type": "loop_reset",
+      "label": "Loops shrink to repeatedly reliving original deaths",
+      "at": {
+        "worldRef": "w_life",
+        "timeLabel": "late"
+      },
+      "agents": [
+        "jeff",
+        "pamela"
+      ],
+      "payload": {
+        "iteration": 20
+      }
+    },
+    {
+      "id": "e_survive",
+      "type": "ordinary",
+      "label": "Jeff survives 1988 heart attack; Pamela too",
+      "at": {
+        "worldRef": "w_exit",
+        "timeLabel": "1988 exit"
+      },
+      "agents": [
+        "jeff",
+        "pamela"
+      ],
+      "payload": {
+        "exitCondition": "survive death"
+      }
+    },
+    {
+      "id": "e_epilogue",
+      "type": "arrival",
+      "label": "Norwegian man wakes young in 1988 with memories to 2017",
+      "at": {
+        "worldRef": "w_exit",
+        "timeLabel": "epilogue"
+      },
+      "agents": [
+        "jeff"
+      ],
+      "payload": {
+        "note": "phenomenon continues for others"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_die88",
+      "to": "e_wake63"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_wake63",
+      "to": "e_wealth"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_wealth",
+      "to": "e_die_again"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_die_again",
+      "to": "e_shorten"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_shorten",
+      "to": "e_starsea"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_starsea",
+      "to": "e_pamela"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_pamela",
+      "to": "e_desync"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_desync",
+      "to": "e_public"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_public",
+      "to": "e_prison"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_prison",
+      "to": "e_final_deaths"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_final_deaths",
+      "to": "e_survive"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_survive",
+      "to": "e_epilogue"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_life",
+      "to": "w_public",
+      "relation": "forksFrom",
+      "label": "public oracle path"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_life",
+      "to": "w_exit",
+      "relation": "supersedes",
+      "label": "survive exit"
+    },
+    {
+      "id": "loop1",
+      "kind": "temporal",
+      "from": "e_die_again",
+      "to": "e_wake63",
+      "label": "replay cycle"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_public",
+      "eventId": "e_public",
+      "ruleEffects": [
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Exit ultimately requires surviving the terminal death, not gaming wealth"
+        },
+        {
+          "ruleSetId": "multiverse_contact",
+          "effect": "Other replayers share the phenomenon across overlapping windows"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Shortening life-replays end when Jeff and Pamela survive 1988; epilogue shows others still replaying.",
+    "endWorldRefs": [
+      "w_exit"
+    ]
+  }
+}

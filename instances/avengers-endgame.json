@@ -1,0 +1,490 @@
+{
+  "meta": {
+    "id": "avengers-endgame",
+    "title": "Avengers: Endgame",
+    "year": 2019,
+    "medium": "film",
+    "sources": [
+      "Russo brothers; Markus & McFeely (2019)",
+      "time-travel-archive/films/avengers-endgame.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "branch_on_intervention",
+    "branch_bureaucracy_prune",
+    "fixed_novikov"
+  ],
+  "primaryRuleSetId": "branch_on_intervention",
+  "mixinRuleSetIds": [
+    "branch_bureaucracy_prune",
+    "fixed_novikov"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_2023",
+      "label": "Main MCU present (post-Snap 2023)",
+      "spanLabel": "2018\u20132023"
+    },
+    {
+      "kind": "branch",
+      "id": "w_2012",
+      "label": "2012 NY heist visit",
+      "parentRef": "w_2023",
+      "forkLabel": "Time Heist NY"
+    },
+    {
+      "kind": "branch",
+      "id": "w_2014",
+      "label": "2014 Morag/Vormir visit",
+      "parentRef": "w_2023",
+      "forkLabel": "Time Heist 2014"
+    },
+    {
+      "kind": "branch",
+      "id": "w_loki_branch",
+      "label": "Loki-escapes branch (TVA)",
+      "parentRef": "w_2012",
+      "forkLabel": "Tesseract escape"
+    },
+    {
+      "kind": "branch",
+      "id": "w_cap_life",
+      "label": "Cap+Peggy life branch",
+      "parentRef": "w_2023",
+      "forkLabel": "Cap stays"
+    }
+  ],
+  "agents": [
+    {
+      "id": "tony",
+      "label": "Tony Stark",
+      "identityGroup": "tony",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_2023"
+    },
+    {
+      "id": "steve",
+      "label": "Steve Rogers",
+      "identityGroup": "steve",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_2023"
+    },
+    {
+      "id": "banner",
+      "label": "Bruce Banner / Hulk",
+      "homeWorldRef": "w_2023"
+    },
+    {
+      "id": "scott",
+      "label": "Scott Lang",
+      "homeWorldRef": "w_2023"
+    },
+    {
+      "id": "natasha",
+      "label": "Natasha Romanoff",
+      "homeWorldRef": "w_2023"
+    },
+    {
+      "id": "clint",
+      "label": "Clint Barton",
+      "homeWorldRef": "w_2023"
+    },
+    {
+      "id": "thor",
+      "label": "Thor",
+      "homeWorldRef": "w_2023"
+    },
+    {
+      "id": "thanos",
+      "label": "Thanos (past invader)",
+      "identityGroup": "thanos",
+      "continuityRole": "variant",
+      "homeWorldRef": "w_2014"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_snap_fail",
+      "type": "ordinary",
+      "label": "2018: Stones destroyed; Thor kills Thanos; Snap stands",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "2018"
+      },
+      "agents": [
+        "thor",
+        "thanos"
+      ]
+    },
+    {
+      "id": "e_scott",
+      "type": "arrival",
+      "label": "2023: Scott exits Quantum Realm (5h\u21925y)",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "2023"
+      },
+      "agents": [
+        "scott"
+      ],
+      "payload": {
+        "travelMode": "quantum",
+        "travelDelta": "5 years outside"
+      }
+    },
+    {
+      "id": "e_rules",
+      "type": "reveal",
+      "label": "Banner: changing past branches; does not overwrite 2023",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "2023"
+      },
+      "agents": [
+        "banner",
+        "tony",
+        "steve"
+      ],
+      "payload": {
+        "note": "Ancient One branching lecture"
+      }
+    },
+    {
+      "id": "e_suits",
+      "type": "ordinary",
+      "label": "Stark builds time GPS suits; Time Heist planned",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "2023"
+      },
+      "agents": [
+        "tony"
+      ]
+    },
+    {
+      "id": "e_ny2012",
+      "type": "departure",
+      "label": "Team to 2012 NY for Time/Mind/Space stones",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "heist"
+      },
+      "agents": [
+        "banner",
+        "scott",
+        "steve",
+        "tony"
+      ],
+      "payload": {
+        "travelMode": "quantum",
+        "destinationTimeLabel": "2012"
+      }
+    },
+    {
+      "id": "e_asgard",
+      "type": "departure",
+      "label": "Thor & Rocket to 2013 Asgard for Reality (Aether)",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "heist"
+      },
+      "agents": [
+        "thor"
+      ],
+      "payload": {
+        "travelMode": "quantum",
+        "destinationTimeLabel": "2013"
+      }
+    },
+    {
+      "id": "e_vormir",
+      "type": "departure",
+      "label": "Barton/Romanoff to 2014 Vormir for Soul Stone",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "heist"
+      },
+      "agents": [
+        "natasha",
+        "clint"
+      ],
+      "payload": {
+        "travelMode": "quantum",
+        "destinationTimeLabel": "2014"
+      }
+    },
+    {
+      "id": "e_nat_dies",
+      "type": "death",
+      "label": "Romanoff sacrifices so Barton can take Soul Stone",
+      "at": {
+        "worldRef": "w_2014",
+        "timeLabel": "2014 Vormir"
+      },
+      "agents": [
+        "natasha",
+        "clint"
+      ]
+    },
+    {
+      "id": "e_1970",
+      "type": "departure",
+      "label": "Space Stone fail \u2192 1970 Camp Lehigh redo",
+      "at": {
+        "worldRef": "w_2012",
+        "timeLabel": "2012\u21921970"
+      },
+      "agents": [
+        "tony",
+        "steve"
+      ],
+      "payload": {
+        "travelMode": "quantum",
+        "destinationTimeLabel": "1970"
+      }
+    },
+    {
+      "id": "e_branch_warn",
+      "type": "branch_fork",
+      "label": "Ancient One: removing Stone without return forks defenseless branch",
+      "at": {
+        "worldRef": "w_2012",
+        "timeLabel": "2012"
+      },
+      "agents": [
+        "banner"
+      ],
+      "payload": {
+        "note": "return stones to exact moment"
+      }
+    },
+    {
+      "id": "e_unsnap",
+      "type": "intervention",
+      "label": "2023: Hulk snaps dusted back; battlefield with past-Thanos",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "2023"
+      },
+      "agents": [
+        "banner",
+        "tony",
+        "steve",
+        "thor",
+        "thanos"
+      ]
+    },
+    {
+      "id": "e_tony_snap",
+      "type": "death",
+      "label": "Tony wields Stones; past-Thanos army erased; Tony dies",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "final battle"
+      },
+      "agents": [
+        "tony",
+        "thanos"
+      ]
+    },
+    {
+      "id": "e_return_stones",
+      "type": "intervention",
+      "label": "Cap returns Stones to exact take-moments",
+      "at": {
+        "worldRef": "w_2023",
+        "timeLabel": "aftermath"
+      },
+      "agents": [
+        "steve"
+      ],
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_cap_stay",
+      "type": "branch_fork",
+      "label": "Cap stays in past with Peggy; old Cap returns on bench",
+      "at": {
+        "worldRef": "w_cap_life",
+        "timeLabel": "post-war life"
+      },
+      "agents": [
+        "steve"
+      ],
+      "payload": {
+        "note": "debated closed vs branch"
+      }
+    },
+    {
+      "id": "e_loki_escape",
+      "type": "branch_fork",
+      "label": "2012 Loki escapes with Tesseract \u2192 TVA/Loki series branch",
+      "at": {
+        "worldRef": "w_loki_branch",
+        "timeLabel": "2012"
+      },
+      "agents": [
+        "tony"
+      ],
+      "payload": {
+        "variantId": "loki-2012"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_snap_fail",
+      "to": "e_scott"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_scott",
+      "to": "e_rules"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_rules",
+      "to": "e_suits"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_suits",
+      "to": "e_ny2012"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_ny2012",
+      "to": "e_asgard"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_asgard",
+      "to": "e_vormir"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_vormir",
+      "to": "e_nat_dies"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_nat_dies",
+      "to": "e_1970"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_1970",
+      "to": "e_branch_warn"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_branch_warn",
+      "to": "e_unsnap"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_unsnap",
+      "to": "e_tony_snap"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_tony_snap",
+      "to": "e_return_stones"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_return_stones",
+      "to": "e_cap_stay"
+    },
+    {
+      "id": "c14",
+      "kind": "causal",
+      "from": "e_cap_stay",
+      "to": "e_loki_escape"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_2023",
+      "to": "w_2012",
+      "relation": "forksFrom",
+      "label": "heist visit"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_2023",
+      "to": "w_2014",
+      "relation": "forksFrom"
+    },
+    {
+      "id": "w3",
+      "kind": "world_relation",
+      "from": "w_2023",
+      "to": "w_loki_branch",
+      "relation": "forksFrom",
+      "label": "Loki escape nexus"
+    },
+    {
+      "id": "w4",
+      "kind": "world_relation",
+      "from": "w_2023",
+      "to": "w_cap_life",
+      "relation": "forksFrom",
+      "label": "Cap chooses past"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_heist",
+      "eventId": "e_unsnap",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Past visits fork branches; returning Stones heals those branches"
+        },
+        {
+          "ruleSetId": "fixed_novikov",
+          "effect": "Main 2023 line keeps Snap history until present-tense Unsnap"
+        }
+      ]
+    },
+    {
+      "id": "iv_loki",
+      "eventId": "e_loki_escape",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_bureaucracy_prune",
+          "effect": "Escaped Loki becomes TVA Variant nexus (series)"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Dusted restored in 2023; Tony dead; Stones returned; Cap lives a past life; Loki branch feeds TVA mythos.",
+    "endWorldRefs": [
+      "w_2023",
+      "w_cap_life",
+      "w_loki_branch"
+    ]
+  }
+}

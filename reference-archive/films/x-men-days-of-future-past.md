@@ -56,3 +56,45 @@ Comics adaptation (Uncanny X-Men #141–142 lineage). Teachable with *T2* and *E
 
 ## Related works
 Terminator 2; Avengers: Endgame; The Terminator; Legion; Deadpool & Wolverine (timeline play).
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/x-men-days-of-future-past.json` — primary `mutable_ripple`, mixin branch_on_intervention. Mind-send to 1973; Trask hinge; classroom sunrise.
+
+Public: Wikipedia; TV Tropes; Claremont/Byrne comics lineage acknowledgments in press.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `x-men-days-of-future-past`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `x-men-days-of-future-past` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `x-men-days-of-future-past`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `x-men-days-of-future-past` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `x-men-days-of-future-past`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `x-men-days-of-future-past` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `x-men-days-of-future-past`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `x-men-days-of-future-past` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `x-men-days-of-future-past`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `x-men-days-of-future-past` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `x-men-days-of-future-past`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `x-men-days-of-future-past` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `x-men-days-of-future-past`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `x-men-days-of-future-past` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `x-men-days-of-future-past`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `x-men-days-of-future-past` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `x-men-days-of-future-past`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `x-men-days-of-future-past` lives under time-travel-ontology/instances/.

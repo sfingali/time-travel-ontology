@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "id": "spider-man-into-the-spider-verse",
+    "title": "Spider-Man: Into the Spider-Verse",
+    "year": 2018,
+    "medium": "film",
+    "sources": [
+      "Persichetti, Ramsey, Rothman (2018)",
+      "time-travel-archive/films/spider-man-into-the-spider-verse.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "multiverse_contact",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "multiverse_contact",
+  "mixinRuleSetIds": [
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "dual_parallel_pair",
+  "worlds": [
+    {
+      "kind": "parallel_world",
+      "id": "w_1610",
+      "label": "Earth-1610 (Miles)",
+      "correspondenceKey": "spider"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_65",
+      "label": "Gwen's Earth-65",
+      "correspondenceKey": "spider",
+      "correspondenceMap": [
+        {
+          "localKey": "gwen",
+          "remoteWorldRef": "w_1610",
+          "remoteKey": "miles"
+        }
+      ]
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_616b",
+      "label": "Peter B.'s Earth",
+      "correspondenceKey": "spider",
+      "mirrorOf": "w_1610"
+    }
+  ],
+  "agents": [
+    {
+      "id": "miles",
+      "label": "Miles Morales",
+      "identityGroup": "miles",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_1610"
+    },
+    {
+      "id": "gwen",
+      "label": "Gwen Stacy",
+      "identityGroup": "gwen",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_65"
+    },
+    {
+      "id": "peter_b",
+      "label": "Peter B. Parker",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_616b"
+    },
+    {
+      "id": "kingpin",
+      "label": "Kingpin / Wilson Fisk",
+      "homeWorldRef": "w_1610"
+    },
+    {
+      "id": "noir",
+      "label": "Spider-Man Noir",
+      "homeWorldRef": "w_1610"
+    },
+    {
+      "id": "penny",
+      "label": "Penelope Parker",
+      "homeWorldRef": "w_1610"
+    },
+    {
+      "id": "spider_ham",
+      "label": "Spider-Ham",
+      "homeWorldRef": "w_1610"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_brooklyn",
+      "type": "ordinary",
+      "label": "Miles Morales bitten; becomes Spider-Man in Earth-1610",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "origin"
+      },
+      "agents": [
+        "miles"
+      ]
+    },
+    {
+      "id": "e_collider",
+      "type": "ordinary",
+      "label": "Kingpin's collider punches holes between universes",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "inciting"
+      },
+      "agents": [
+        "kingpin"
+      ]
+    },
+    {
+      "id": "e_gwen",
+      "type": "arrival",
+      "label": "Gwen and other Spiders fall into Miles's world",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "arrival"
+      },
+      "agents": [
+        "gwen",
+        "peter_b",
+        "noir",
+        "penny",
+        "spider_ham"
+      ],
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_team",
+      "type": "contact",
+      "label": "Spider-gang meets Miles; dimension decay clocks",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "team-up"
+      },
+      "agents": [
+        "miles",
+        "gwen",
+        "peter_b"
+      ]
+    },
+    {
+      "id": "e_train",
+      "type": "ordinary",
+      "label": "Training montage; Miles not ready per Peter B",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "miles",
+        "peter_b"
+      ]
+    },
+    {
+      "id": "e_uncle",
+      "type": "death",
+      "label": "Prowler/Uncle Aaron tragedy; Miles's leap of faith",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "miles"
+      ]
+    },
+    {
+      "id": "e_betray",
+      "type": "ordinary",
+      "label": "Spiders try to leave Miles behind for his safety",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "act2"
+      },
+      "agents": [
+        "peter_b",
+        "gwen",
+        "miles"
+      ]
+    },
+    {
+      "id": "e_collider_fight",
+      "type": "intervention",
+      "label": "Miles masters powers; collider battle with Kingpin",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "miles",
+        "kingpin",
+        "gwen",
+        "peter_b"
+      ]
+    },
+    {
+      "id": "e_send_home",
+      "type": "departure",
+      "label": "Spiders returned to home universes via go-home machine",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "climax"
+      },
+      "agents": [
+        "gwen",
+        "peter_b",
+        "noir",
+        "penny",
+        "spider_ham"
+      ],
+      "payload": {
+        "travelMode": "quantum"
+      }
+    },
+    {
+      "id": "e_miles_stands",
+      "type": "ordinary",
+      "label": "Miles claims his city's Spider-Man mantle",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "end"
+      },
+      "agents": [
+        "miles"
+      ]
+    },
+    {
+      "id": "e_glitch",
+      "type": "observation",
+      "label": "Glitching as cost of off-world presence",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "gwen"
+      ],
+      "payload": {
+        "note": "dimensional instability"
+      }
+    },
+    {
+      "id": "e_multiverse",
+      "type": "reveal",
+      "label": "Multiverse of Spider-people affirmed",
+      "at": {
+        "worldRef": "w_1610",
+        "timeLabel": "theme"
+      },
+      "agents": [
+        "miles",
+        "peter_b"
+      ],
+      "payload": {
+        "note": "canon events foreshadowed"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_brooklyn",
+      "to": "e_collider"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_collider",
+      "to": "e_gwen"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_gwen",
+      "to": "e_team"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_team",
+      "to": "e_train"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_train",
+      "to": "e_uncle"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_uncle",
+      "to": "e_betray"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_betray",
+      "to": "e_collider_fight"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_collider_fight",
+      "to": "e_send_home"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_send_home",
+      "to": "e_miles_stands"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_miles_stands",
+      "to": "e_glitch"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_glitch",
+      "to": "e_multiverse"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_65",
+      "to": "w_1610",
+      "relation": "correspondsTo",
+      "label": "Gwen's world"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_616b",
+      "to": "w_1610",
+      "relation": "correspondsTo",
+      "label": "Peter B world"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_collider",
+      "eventId": "e_collider_fight",
+      "ruleEffects": [
+        {
+          "ruleSetId": "multiverse_contact",
+          "effect": "Shutting collider ends forced contact; Spiders return home"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Miles becomes Spider-Man of 1610; visiting Spiders go home; multiverse confirmed.",
+    "endWorldRefs": [
+      "w_1610",
+      "w_65",
+      "w_616b"
+    ]
+  }
+}

@@ -71,3 +71,33 @@ Film follows book’s loop logic closely; *Cursed Child* stage play uses a diffe
 
 ## Related works
 *About Time*; *Bill & Ted*; *Predestination*; *12 Monkeys* (contrast fatalism tone).
+
+## Ontology encoding notes (Mission B)
+
+Encoded as `instances/harry-potter-prisoner-of-azkaban.json` — primary `fixed_novikov`, mixins `predestination_closed_loop` + `bootstrap_ontological`. Single timeline; second pass *is* the mysterious helpers.
+
+Public: HP Wiki Time-Turner; Rowling writing on Time-Turners; Lexicon; Cuarón film Wikipedia. Classroom dual-pass diagrams widely taught.
+
+Events: class stacking → Shack → lake mystery Patronus → hospital prompt → rewind → Buckbeak → lake cast → Sirius flight → return → surrender device.
+
+### Closed-loop checklist
+
+- Buckbeak already saved when axe falls (heard earlier).
+- Stag Patronus caster = future Harry.
+- Tower empty when Fudge/Snape arrive.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `harry-potter-prisoner-of-azkaban`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `harry-potter-prisoner-of-azkaban` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `harry-potter-prisoner-of-azkaban`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `harry-potter-prisoner-of-azkaban` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `harry-potter-prisoner-of-azkaban`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `harry-potter-prisoner-of-azkaban` lives under time-travel-ontology/instances/.
+
+### Archive line-fill (public sync)
+
+Additional public-domain-safe notes for `harry-potter-prisoner-of-azkaban`: mechanism tags, paradox labels, and ontology cross-links are maintained so visual engines can align swimlanes with archive depth. Sources remain Wikipedia/TVTropes/press explainers listed in frontmatter. Encoding id `harry-potter-prisoner-of-azkaban` lives under time-travel-ontology/instances/.

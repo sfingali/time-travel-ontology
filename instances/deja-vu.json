@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "id": "deja-vu",
+    "title": "D\u00e9j\u00e0 Vu",
+    "year": 2006,
+    "medium": "film",
+    "sources": [
+      "Tony Scott; Marsilii & Rossio (2006)",
+      "time-travel-archive/films/deja-vu.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "branch_on_intervention",
+    "fixed_novikov",
+    "bootstrap_ontological"
+  ],
+  "primaryRuleSetId": "branch_on_intervention",
+  "mixinRuleSetIds": [
+    "fixed_novikov",
+    "bootstrap_ontological"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_present",
+      "label": "Bombed New Orleans present",
+      "spanLabel": "investigation"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_past",
+      "label": "Snow White past window (~-4.5d)",
+      "spanLabel": "-4.5 days"
+    },
+    {
+      "kind": "branch",
+      "id": "w_saved",
+      "label": "Ferry-saved branch",
+      "parentRef": "w_present",
+      "forkLabel": "Carlin sacrifice"
+    }
+  ],
+  "agents": [
+    {
+      "id": "carlin",
+      "label": "Doug Carlin",
+      "identityGroup": "carlin",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_present"
+    },
+    {
+      "id": "claire",
+      "label": "Claire Kuchever",
+      "homeWorldRef": "w_present"
+    },
+    {
+      "id": "oerstadt",
+      "label": "Carroll Oerstadt",
+      "homeWorldRef": "w_present"
+    },
+    {
+      "id": "pryzwarra",
+      "label": "Agent Pryzwarra",
+      "homeWorldRef": "w_present"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_bomb",
+      "type": "ordinary",
+      "label": "New Orleans ferry bombing kills 543",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "Mardi Gras"
+      },
+      "agents": [
+        "carlin",
+        "oerstadt"
+      ]
+    },
+    {
+      "id": "e_claire_body",
+      "type": "observation",
+      "label": "Claire's body staged; died before blast",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "investigation"
+      },
+      "agents": [
+        "carlin",
+        "claire"
+      ]
+    },
+    {
+      "id": "e_snow_white",
+      "type": "reveal",
+      "label": "Snow White is a ~4.5-day wormhole window",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "lab"
+      },
+      "agents": [
+        "carlin",
+        "pryzwarra"
+      ],
+      "payload": {
+        "travelMode": "wormhole",
+        "perceptionMode": "surveillance"
+      }
+    },
+    {
+      "id": "e_watch",
+      "type": "observation",
+      "label": "Surveillance courtship of Claire's last days",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "-4.5d"
+      },
+      "agents": [
+        "carlin",
+        "claire"
+      ]
+    },
+    {
+      "id": "e_note",
+      "type": "intervention",
+      "label": "Send note to past; Minuti finds it and is shot",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "note"
+      },
+      "agents": [
+        "carlin"
+      ],
+      "payload": {
+        "artifactKind": "other"
+      }
+    },
+    {
+      "id": "e_arrest",
+      "type": "ordinary",
+      "label": "Present arrest of Oerstadt; case 'closed'",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "arrest"
+      },
+      "agents": [
+        "carlin",
+        "oerstadt"
+      ]
+    },
+    {
+      "id": "e_leap",
+      "type": "departure",
+      "label": "Carlin physically sent to morning of bombing",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "transfer"
+      },
+      "agents": [
+        "carlin"
+      ],
+      "payload": {
+        "travelMode": "wormhole",
+        "destinationTimeLabel": "bomb morning"
+      }
+    },
+    {
+      "id": "e_arrive_past",
+      "type": "arrival",
+      "label": "Arrives past; stops Claire's murder",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "morning"
+      },
+      "agents": [
+        "carlin",
+        "claire"
+      ]
+    },
+    {
+      "id": "e_call",
+      "type": "ordinary",
+      "label": "Claire calls ATF \u2014 the call his office received",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "apartment"
+      },
+      "agents": [
+        "claire",
+        "carlin"
+      ],
+      "payload": {
+        "bootstrapEntity": "phone call"
+      }
+    },
+    {
+      "id": "e_ferry",
+      "type": "intervention",
+      "label": "Kills Oerstadt; drives bomb truck into river",
+      "at": {
+        "worldRef": "w_past",
+        "timeLabel": "ferry"
+      },
+      "agents": [
+        "carlin",
+        "oerstadt",
+        "claire"
+      ]
+    },
+    {
+      "id": "e_drown",
+      "type": "death",
+      "label": "Carlin drowns; Claire swims free",
+      "at": {
+        "worldRef": "w_saved",
+        "timeLabel": "ferry"
+      },
+      "agents": [
+        "carlin",
+        "claire"
+      ]
+    },
+    {
+      "id": "e_pier",
+      "type": "contact",
+      "label": "Pier: surviving Claire meets present-timeline Doug",
+      "at": {
+        "worldRef": "w_saved",
+        "timeLabel": "aftermath"
+      },
+      "agents": [
+        "carlin",
+        "claire"
+      ],
+      "payload": {
+        "identityNote": "living Doug meets Claire"
+      }
+    },
+    {
+      "id": "e_branch",
+      "type": "branch_fork",
+      "label": "Branch where ferry is saved",
+      "at": {
+        "worldRef": "w_saved",
+        "timeLabel": "new present"
+      },
+      "agents": [
+        "carlin",
+        "claire"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_bomb",
+      "to": "e_claire_body"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_claire_body",
+      "to": "e_snow_white"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_snow_white",
+      "to": "e_watch"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_watch",
+      "to": "e_note"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_note",
+      "to": "e_arrest"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_arrest",
+      "to": "e_leap"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_leap",
+      "to": "e_arrive_past"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_arrive_past",
+      "to": "e_call"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_call",
+      "to": "e_ferry"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_ferry",
+      "to": "e_drown"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_drown",
+      "to": "e_pier"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_pier",
+      "to": "e_branch"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_present",
+      "to": "w_saved",
+      "relation": "forksFrom",
+      "label": "ferry saved"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_present",
+      "to": "w_past",
+      "relation": "originatesFrom"
+    },
+    {
+      "id": "loop1",
+      "kind": "causal",
+      "from": "e_call",
+      "to": "e_claire_body",
+      "label": "call already in evidence trail"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_ferry",
+      "eventId": "e_ferry",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Physical leap forks a timeline where Claire lives and meets living Doug"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Claire's ATF call was always in the investigation"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Dying Doug saves the ferry; living Doug meets surviving Claire on the pier in the healed branch.",
+    "endWorldRefs": [
+      "w_saved"
+    ]
+  }
+}

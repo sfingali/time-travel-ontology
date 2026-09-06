@@ -1,0 +1,425 @@
+{
+  "meta": {
+    "id": "arq",
+    "title": "ARQ",
+    "year": 2016,
+    "medium": "film",
+    "sources": [
+      "Tony Elliott, ARQ (2016)",
+      "time-travel-archive/films/arq.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "temporal_loop_exit",
+    "death_checkpoint_rewrite",
+    "mutable_ripple"
+  ],
+  "primaryRuleSetId": "temporal_loop_exit",
+  "mixinRuleSetIds": [
+    "death_checkpoint_rewrite",
+    "mutable_ripple"
+  ],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_house",
+      "label": "ARQ house loop volume",
+      "spanLabel": "~hours nested in nine-packs",
+      "description": "Localized temporal battery; memory bleed escalates"
+    },
+    {
+      "kind": "branch",
+      "id": "w_outside",
+      "label": "Outside house (exits loop)",
+      "parentRef": "w_house",
+      "forkLabel": "leave property"
+    }
+  ],
+  "agents": [
+    {
+      "id": "renton",
+      "label": "Renton",
+      "identityGroup": "renton",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_house"
+    },
+    {
+      "id": "hannah",
+      "label": "Hannah / Mother",
+      "identityGroup": "hannah",
+      "continuityRole": "iteration",
+      "homeWorldRef": "w_house"
+    },
+    {
+      "id": "sonny",
+      "label": "Sonny (Torus mole)",
+      "identityGroup": "sonny",
+      "continuityRole": "iteration",
+      "homeWorldRef": "w_house"
+    },
+    {
+      "id": "father",
+      "label": "Father / Grimm",
+      "homeWorldRef": "w_house"
+    },
+    {
+      "id": "brother",
+      "label": "Brother",
+      "homeWorldRef": "w_house"
+    },
+    {
+      "id": "cuz",
+      "label": "Cuz",
+      "homeWorldRef": "w_house"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_wake1",
+      "type": "ordinary",
+      "label": "Renton wakes with Hannah; Bloc raid begins",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "loop morning"
+      },
+      "agents": [
+        "renton",
+        "hannah",
+        "father",
+        "sonny",
+        "brother"
+      ]
+    },
+    {
+      "id": "e_death1",
+      "type": "death",
+      "label": "Renton dies escaping; first reset",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "loop morning"
+      },
+      "agents": [
+        "renton"
+      ],
+      "payload": {
+        "iteration": 1
+      }
+    },
+    {
+      "id": "e_reset1",
+      "type": "loop_reset",
+      "label": "ARQ resets interval; Renton retains memory",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "reset"
+      },
+      "agents": [
+        "renton"
+      ],
+      "payload": {
+        "memoryRetained": true,
+        "iteration": 2,
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_hannah_bloc",
+      "type": "reveal",
+      "label": "Hannah revealed as Bloc Mother; trust fractures",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "mid-loop"
+      },
+      "agents": [
+        "renton",
+        "hannah"
+      ]
+    },
+    {
+      "id": "e_arq_theory",
+      "type": "observation",
+      "label": "Renton theorizes ARQ loops house volume as temporal battery",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "mid-loop"
+      },
+      "agents": [
+        "renton",
+        "hannah"
+      ],
+      "payload": {
+        "note": "not free energy \u2014 localized loop"
+      }
+    },
+    {
+      "id": "e_hannah_remembers",
+      "type": "loop_reset",
+      "label": "Hannah retains memory across reset",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "later loop"
+      },
+      "agents": [
+        "hannah",
+        "renton"
+      ],
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_sonny_mole",
+      "type": "reveal",
+      "label": "Sonny exposed as Torus mole",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "later loop"
+      },
+      "agents": [
+        "sonny",
+        "renton",
+        "hannah"
+      ]
+    },
+    {
+      "id": "e_sonny_remembers",
+      "type": "loop_reset",
+      "label": "Sonny retains memory; arms-race loops",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "aware loops"
+      },
+      "agents": [
+        "sonny"
+      ],
+      "payload": {
+        "memoryRetained": true
+      }
+    },
+    {
+      "id": "e_cuz_saved",
+      "type": "intervention",
+      "label": "Aware Sonny saves Cuz from ARQ electrocution",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "aware loops"
+      },
+      "agents": [
+        "sonny",
+        "cuz"
+      ]
+    },
+    {
+      "id": "e_boundary",
+      "type": "observation",
+      "label": "Escape proves loop is house-bounded",
+      "at": {
+        "worldRef": "w_outside",
+        "timeLabel": "boundary test"
+      },
+      "agents": [
+        "renton",
+        "hannah"
+      ],
+      "payload": {
+        "note": "leaving exits loop volume"
+      }
+    },
+    {
+      "id": "e_nested",
+      "type": "reveal",
+      "label": "Logs reveal outer nine-cycle wipe nesting inner loops",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "late"
+      },
+      "agents": [
+        "renton",
+        "hannah"
+      ],
+      "payload": {
+        "iteration": 9,
+        "note": "thousands of nine-packs"
+      }
+    },
+    {
+      "id": "e_message",
+      "type": "intervention",
+      "label": "Record message for future iterations; hope to deliver ARQ to Bloc",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "ninth inner"
+      },
+      "agents": [
+        "renton",
+        "hannah"
+      ],
+      "payload": {
+        "artifactKind": "other",
+        "signal": "message bottle"
+      }
+    },
+    {
+      "id": "e_robot",
+      "type": "death",
+      "label": "Torus robot kills them; Hannah gasps awake",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "cliffhanger"
+      },
+      "agents": [
+        "renton",
+        "hannah"
+      ],
+      "payload": {
+        "exitFailed": true
+      }
+    },
+    {
+      "id": "e_outer_reset",
+      "type": "loop_reset",
+      "label": "Implied outer/nested cycle continues",
+      "at": {
+        "worldRef": "w_house",
+        "timeLabel": "outer wipe"
+      },
+      "agents": [
+        "hannah"
+      ],
+      "payload": {
+        "memoryRetained": true,
+        "exitCondition": "deliver ARQ before Torus"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_wake1",
+      "to": "e_death1"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_death1",
+      "to": "e_reset1"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_reset1",
+      "to": "e_hannah_bloc"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_hannah_bloc",
+      "to": "e_arq_theory"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_arq_theory",
+      "to": "e_hannah_remembers"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_hannah_remembers",
+      "to": "e_sonny_mole"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_sonny_mole",
+      "to": "e_sonny_remembers"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_sonny_remembers",
+      "to": "e_cuz_saved"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_cuz_saved",
+      "to": "e_boundary"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_boundary",
+      "to": "e_nested"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_nested",
+      "to": "e_message"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_message",
+      "to": "e_robot"
+    },
+    {
+      "id": "c13",
+      "kind": "causal",
+      "from": "e_robot",
+      "to": "e_outer_reset"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_house",
+      "to": "w_outside",
+      "relation": "forksFrom",
+      "label": "spatial exit from loop volume"
+    },
+    {
+      "id": "iv_link",
+      "kind": "intervention",
+      "from": "e_message",
+      "to": "e_outer_reset",
+      "label": "informational hope across wipe"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_arq",
+      "eventId": "e_arq_theory",
+      "ruleEffects": [
+        {
+          "ruleSetId": "temporal_loop_exit",
+          "effect": "Device loops a bounded volume until energy/strategy exit"
+        },
+        {
+          "ruleSetId": "death_checkpoint_rewrite",
+          "effect": "Death returns to bedroom checkpoint with growing memory cohort"
+        }
+      ],
+      "notes": "Nested nine-cycle wipe adds outer checkpoint"
+    },
+    {
+      "id": "iv_msg",
+      "eventId": "e_message",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Informational artifact aims to change future iterations' strategy"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "No clean exit on screen; nested loops and Torus robot cliffhanger leave hope as a message to future iterations.",
+    "endWorldRefs": [
+      "w_house"
+    ]
+  }
+}

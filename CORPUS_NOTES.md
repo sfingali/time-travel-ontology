@@ -39,7 +39,7 @@ branching_timeline, destiny_manipulation, closed_loop, reality_rewrite, bootstra
 - Rich enough for a later visual engine (events, causal links, forks, world identities) — do NOT implement the visual engine
 
 
-## Hand-crafted instance inventory (37)
+## Hand-crafted instance inventory (59)
 
 Encoded under `instances/*.json` (excludes `instances/generated/` stubs).
 
@@ -49,8 +49,13 @@ about-time, arrival, back-to-the-future, dark, donnie-darko, edge-of-tomorrow, e
 ### Expansion batch (16)
 11-22-63, bill-and-ted, coherence, counterpart, fringe, happy-death-day, interstellar, mr-nobody, outlander, run-lola-run, russian-doll, sliding-doors, terminator, the-time-machine-1960, timecrimes, your-name
 
+### Mission B batch (22)
+arq, avengers-endgame, before-the-coffee-gets-cold, boss-level, continuum, deja-vu, erased, harry-potter-prisoner-of-azkaban, hot-tub-time-machine, la-jetee, night-watch-discworld, project-almanac, quantum-leap, replay, spider-man-into-the-spider-verse, the-end-of-eternity, the-endless, the-man-who-folded-himself, travelers, triangle, umbrella-academy, x-men-days-of-future-past
+
 ### Coverage targets
 - **Rule sets (each appears as primary ≥1):** fixed_novikov, mutable_ripple, branch_on_intervention, bootstrap_ontological, predestination_closed_loop, temporal_loop_exit, worldline_attractor, entropy_inversion, tangent_universe, multiverse_contact, branch_bureaucracy_prune, death_checkpoint_rewrite, perception_nonlinear
 - **Topology patterns (each ≥1):** single_fixed_timeline, mutable_single_with_ripples, branching_tree, dual_parallel_pair, worldline_bundle, tangent_bubble, inverted_single_timeline, origin_plus_twins
 
 Stubs remain in `instances/generated/` for import drafts; promoted titles above are dense hand-crafted encodings sourced from `/workspace/time-travel-archive/`.
+
+Mission B also true-deep-synced matching `reference-archive` markdown toward ≥100 lines (public sources only).

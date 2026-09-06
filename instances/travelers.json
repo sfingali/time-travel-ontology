@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "id": "travelers",
+    "title": "Travelers",
+    "year": 2016,
+    "medium": "tv",
+    "sources": [
+      "Brad Wright (2016\u20132018)",
+      "time-travel-archive/tv/travelers.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "mutable_ripple",
+    "predestination_closed_loop",
+    "bootstrap_ontological"
+  ],
+  "primaryRuleSetId": "mutable_ripple",
+  "mixinRuleSetIds": [
+    "predestination_closed_loop",
+    "bootstrap_ontological"
+  ],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_future",
+      "label": "Director's post-collapse future",
+      "spanLabel": "far future"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_present",
+      "label": "21st-century mission field",
+      "spanLabel": "2010s"
+    }
+  ],
+  "agents": [
+    {
+      "id": "grant",
+      "label": "Grant MacLaren (Traveler 3468)",
+      "identityGroup": "grant",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_future"
+    },
+    {
+      "id": "marcy",
+      "label": "Marcy Warton",
+      "homeWorldRef": "w_future"
+    },
+    {
+      "id": "carly",
+      "label": "Carly Shannon",
+      "homeWorldRef": "w_future"
+    },
+    {
+      "id": "trevor",
+      "label": "Trevor Holden",
+      "homeWorldRef": "w_future"
+    },
+    {
+      "id": "philip",
+      "label": "Philip Pearson",
+      "homeWorldRef": "w_future"
+    },
+    {
+      "id": "director",
+      "label": "The Director (AI)",
+      "continuityRole": "observer_persistent",
+      "homeWorldRef": "w_future"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_future_war",
+      "type": "ordinary",
+      "label": "Post-collapse future Director governs remnant humanity",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "far future"
+      },
+      "agents": [
+        "director"
+      ]
+    },
+    {
+      "id": "e_protocol",
+      "type": "reveal",
+      "label": "Consciousness transfer into historical hosts at death moments",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "mission brief"
+      },
+      "agents": [
+        "director"
+      ],
+      "payload": {
+        "travelMode": "perception",
+        "note": "host body takeover"
+      }
+    },
+    {
+      "id": "e_team_arrive",
+      "type": "arrival",
+      "label": "Team 3412 arrives in 21st-century host bodies",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "series start"
+      },
+      "agents": [
+        "grant",
+        "marcy",
+        "carly",
+        "trevor",
+        "philip"
+      ],
+      "payload": {
+        "travelMode": "other"
+      }
+    },
+    {
+      "id": "e_missions",
+      "type": "intervention",
+      "label": "Missions avert disasters per Director protocols",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "S1\u2013S2"
+      },
+      "agents": [
+        "grant",
+        "marcy",
+        "carly",
+        "trevor",
+        "philip"
+      ]
+    },
+    {
+      "id": "e_faction",
+      "type": "ordinary",
+      "label": "Faction seeks to rewrite future against Director",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "mid"
+      },
+      "agents": [
+        "grant"
+      ]
+    },
+    {
+      "id": "e_host_lives",
+      "type": "observation",
+      "label": "Host families complicate Traveler ethics",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "ongoing"
+      },
+      "agents": [
+        "grant",
+        "marcy"
+      ]
+    },
+    {
+      "id": "e_override",
+      "type": "intervention",
+      "label": "Protocol overrides and Helo/antiviral stakes escalate",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "S2\u2013S3"
+      },
+      "agents": [
+        "director",
+        "grant"
+      ]
+    },
+    {
+      "id": "e_director_threat",
+      "type": "reveal",
+      "label": "Director's continuity vs human agency conflict",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "S3"
+      },
+      "agents": [
+        "director",
+        "grant"
+      ]
+    },
+    {
+      "id": "e_grand_plan",
+      "type": "intervention",
+      "label": "Final missions attempt to stabilize best available future",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "finale"
+      },
+      "agents": [
+        "grant",
+        "marcy",
+        "carly",
+        "trevor",
+        "philip"
+      ]
+    },
+    {
+      "id": "e_transfer_cost",
+      "type": "death",
+      "label": "Host deaths / Traveler losses as transfer cost",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "series"
+      },
+      "agents": [
+        "grant"
+      ]
+    },
+    {
+      "id": "e_message_back",
+      "type": "bootstrap_origin",
+      "label": "Future updates based on mission outcomes (bootstrap intel)",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "updates"
+      },
+      "agents": [
+        "director"
+      ],
+      "payload": {
+        "bootstrapEntity": "mission data"
+      }
+    },
+    {
+      "id": "e_ambiguous",
+      "type": "ordinary",
+      "label": "Series ends with hard-won, still-fragile continuum",
+      "at": {
+        "worldRef": "w_present",
+        "timeLabel": "end"
+      },
+      "agents": [
+        "grant",
+        "philip"
+      ]
+    },
+    {
+      "id": "e_historians",
+      "type": "observation",
+      "label": "Historians in future monitor divergence",
+      "at": {
+        "worldRef": "w_future",
+        "timeLabel": "monitor"
+      },
+      "agents": [
+        "director"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_future_war",
+      "to": "e_protocol"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_protocol",
+      "to": "e_team_arrive"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_team_arrive",
+      "to": "e_missions"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_missions",
+      "to": "e_faction"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_faction",
+      "to": "e_host_lives"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_host_lives",
+      "to": "e_override"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_override",
+      "to": "e_director_threat"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_director_threat",
+      "to": "e_grand_plan"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_grand_plan",
+      "to": "e_transfer_cost"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_transfer_cost",
+      "to": "e_message_back"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_message_back",
+      "to": "e_ambiguous"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_ambiguous",
+      "to": "e_historians"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_future",
+      "to": "w_present",
+      "relation": "originatesFrom",
+      "label": "consciousness transfer"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_missions",
+      "eventId": "e_missions",
+      "ruleEffects": [
+        {
+          "ruleSetId": "mutable_ripple",
+          "effect": "Past interventions rewrite future conditions the Director updates against"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Mission intel and programs bootstrap from outcomes they create"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Travelers rewrite collapse trajectory under Director protocols; ethics of host lives and AI governance remain central; continuum fragile but improved.",
+    "endWorldRefs": [
+      "w_present",
+      "w_future"
+    ]
+  }
+}

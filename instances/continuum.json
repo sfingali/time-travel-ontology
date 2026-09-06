@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "id": "continuum",
+    "title": "Continuum",
+    "year": 2012,
+    "medium": "tv",
+    "sources": [
+      "Simon Barry (2012\u20132015)",
+      "time-travel-archive/tv/continuum.md",
+      "time-travel-archive true-deep wave 2026-09-06 (Mission B)"
+    ]
+  },
+  "ruleSetIds": [
+    "branch_on_intervention",
+    "mutable_ripple",
+    "bootstrap_ontological"
+  ],
+  "primaryRuleSetId": "branch_on_intervention",
+  "mixinRuleSetIds": [
+    "mutable_ripple",
+    "bootstrap_ontological"
+  ],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_2077a",
+      "label": "Original corporate 2077",
+      "spanLabel": "2077"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_2012",
+      "label": "2012 Vancouver mission field",
+      "spanLabel": "2012\u2013"
+    },
+    {
+      "kind": "branch",
+      "id": "w_2012b",
+      "label": "Emily-saved divergence",
+      "parentRef": "w_2012",
+      "forkLabel": "Alec saves Emily"
+    },
+    {
+      "kind": "branch",
+      "id": "w_2077b",
+      "label": "Improved 2077 (Kiera arrives)",
+      "parentRef": "w_2012",
+      "forkLabel": "finale changes"
+    }
+  ],
+  "agents": [
+    {
+      "id": "kiera",
+      "label": "Kiera Cameron",
+      "identityGroup": "kiera",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_2077a"
+    },
+    {
+      "id": "alec",
+      "label": "Alec Sadler",
+      "identityGroup": "alec",
+      "continuityRole": "younger_self",
+      "homeWorldRef": "w_2012"
+    },
+    {
+      "id": "kagame",
+      "label": "Kagame / Liber8",
+      "homeWorldRef": "w_2077a"
+    },
+    {
+      "id": "kellog",
+      "label": "Kellog",
+      "homeWorldRef": "w_2077a"
+    }
+  ],
+  "events": [
+    {
+      "id": "e_2077",
+      "type": "ordinary",
+      "label": "2077 corporate-state; Liber8 terrorists sentenced",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "2077"
+      },
+      "agents": [
+        "kiera",
+        "kagame"
+      ]
+    },
+    {
+      "id": "e_send_back",
+      "type": "departure",
+      "label": "Liber8 time-travel escape; Kiera pulled along",
+      "at": {
+        "worldRef": "w_2077a",
+        "timeLabel": "2077"
+      },
+      "agents": [
+        "kiera",
+        "kagame"
+      ],
+      "payload": {
+        "travelMode": "machine",
+        "destinationTimeLabel": "2012"
+      }
+    },
+    {
+      "id": "e_2012",
+      "type": "arrival",
+      "label": "Arrive Vancouver 2012; Kiera joins VPD via CSC",
+      "at": {
+        "worldRef": "w_2012",
+        "timeLabel": "2012"
+      },
+      "agents": [
+        "kiera"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_alec",
+      "type": "contact",
+      "label": "Meet young Alec Sadler \u2014 future corporate architect",
+      "at": {
+        "worldRef": "w_2012",
+        "timeLabel": "2012"
+      },
+      "agents": [
+        "kiera",
+        "alec"
+      ]
+    },
+    {
+      "id": "e_liber8",
+      "type": "intervention",
+      "label": "Liber8 attacks reshape tech/politics toward their future",
+      "at": {
+        "worldRef": "w_2012",
+        "timeLabel": "S1"
+      },
+      "agents": [
+        "kagame"
+      ]
+    },
+    {
+      "id": "e_kellog",
+      "type": "ordinary",
+      "label": "Kellog plays markets for personal empire",
+      "at": {
+        "worldRef": "w_2012",
+        "timeLabel": "S1\u2013S2"
+      },
+      "agents": [
+        "kellog"
+      ]
+    },
+    {
+      "id": "e_duplicate",
+      "type": "arrival",
+      "label": "Multiple time jumps create duplicate Alecs/Kieras",
+      "at": {
+        "worldRef": "w_2012b",
+        "timeLabel": "S2\u2013S3"
+      },
+      "agents": [
+        "alec",
+        "kiera"
+      ],
+      "payload": {
+        "variantId": "alec-dup"
+      }
+    },
+    {
+      "id": "e_save_emily",
+      "type": "branch_fork",
+      "label": "Alec saves Emily; aborts one future path",
+      "at": {
+        "worldRef": "w_2012b",
+        "timeLabel": "S2"
+      },
+      "agents": [
+        "alec"
+      ],
+      "payload": {
+        "note": "personal fork"
+      }
+    },
+    {
+      "id": "e_invasion",
+      "type": "intervention",
+      "label": "Finale: stop darker path / future soldiers portal",
+      "at": {
+        "worldRef": "w_2012",
+        "timeLabel": "Final Hour"
+      },
+      "agents": [
+        "kiera",
+        "alec",
+        "kellog"
+      ]
+    },
+    {
+      "id": "e_sabotage",
+      "type": "intervention",
+      "label": "Alec sabotages keys; invasion collapses",
+      "at": {
+        "worldRef": "w_2012",
+        "timeLabel": "finale"
+      },
+      "agents": [
+        "alec"
+      ]
+    },
+    {
+      "id": "e_better_2077",
+      "type": "arrival",
+      "label": "Kiera reaches better 2077",
+      "at": {
+        "worldRef": "w_2077b",
+        "timeLabel": "2077b"
+      },
+      "agents": [
+        "kiera"
+      ],
+      "payload": {
+        "travelMode": "machine"
+      }
+    },
+    {
+      "id": "e_other_kiera",
+      "type": "reveal",
+      "label": "Variant Kiera already exists as Sam's mother",
+      "at": {
+        "worldRef": "w_2077b",
+        "timeLabel": "2077b"
+      },
+      "agents": [
+        "kiera"
+      ],
+      "payload": {
+        "identityNote": "cannot reclaim exact family"
+      }
+    },
+    {
+      "id": "e_accept",
+      "type": "ordinary",
+      "label": "Bittersweet acceptance of changed future she cannot fully rejoin",
+      "at": {
+        "worldRef": "w_2077b",
+        "timeLabel": "end"
+      },
+      "agents": [
+        "kiera"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "kind": "causal",
+      "from": "e_2077",
+      "to": "e_send_back"
+    },
+    {
+      "id": "c2",
+      "kind": "causal",
+      "from": "e_send_back",
+      "to": "e_2012"
+    },
+    {
+      "id": "c3",
+      "kind": "causal",
+      "from": "e_2012",
+      "to": "e_alec"
+    },
+    {
+      "id": "c4",
+      "kind": "causal",
+      "from": "e_alec",
+      "to": "e_liber8"
+    },
+    {
+      "id": "c5",
+      "kind": "causal",
+      "from": "e_liber8",
+      "to": "e_kellog"
+    },
+    {
+      "id": "c6",
+      "kind": "causal",
+      "from": "e_kellog",
+      "to": "e_duplicate"
+    },
+    {
+      "id": "c7",
+      "kind": "causal",
+      "from": "e_duplicate",
+      "to": "e_save_emily"
+    },
+    {
+      "id": "c8",
+      "kind": "causal",
+      "from": "e_save_emily",
+      "to": "e_invasion"
+    },
+    {
+      "id": "c9",
+      "kind": "causal",
+      "from": "e_invasion",
+      "to": "e_sabotage"
+    },
+    {
+      "id": "c10",
+      "kind": "causal",
+      "from": "e_sabotage",
+      "to": "e_better_2077"
+    },
+    {
+      "id": "c11",
+      "kind": "causal",
+      "from": "e_better_2077",
+      "to": "e_other_kiera"
+    },
+    {
+      "id": "c12",
+      "kind": "causal",
+      "from": "e_other_kiera",
+      "to": "e_accept"
+    },
+    {
+      "id": "w1",
+      "kind": "world_relation",
+      "from": "w_2077a",
+      "to": "w_2012",
+      "relation": "originatesFrom"
+    },
+    {
+      "id": "w2",
+      "kind": "world_relation",
+      "from": "w_2012",
+      "to": "w_2012b",
+      "relation": "forksFrom",
+      "label": "Emily save"
+    },
+    {
+      "id": "w3",
+      "kind": "world_relation",
+      "from": "w_2012",
+      "to": "w_2077b",
+      "relation": "forksFrom",
+      "label": "improved future"
+    },
+    {
+      "id": "w4",
+      "kind": "world_relation",
+      "from": "w_2077a",
+      "to": "w_2077b",
+      "relation": "supersedes"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_fin",
+      "eventId": "e_invasion",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Finale forks a better 2077 Kiera cannot fully reclaim"
+        },
+        {
+          "ruleSetId": "bootstrap_ontological",
+          "effect": "Young Alec still seeds the tech future travelers depend on"
+        }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Kiera reaches a better 2077 already inhabited by a variant self; Liber8/corporate war rewritten; bittersweet closure.",
+    "endWorldRefs": [
+      "w_2077b",
+      "w_2012"
+    ]
+  }
+}
