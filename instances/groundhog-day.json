@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "id": "groundhog-day",
+    "title": "Groundhog Day",
+    "year": 1993,
+    "medium": "film",
+    "sources": ["Harold Ramis, Groundhog Day (1993)"]
+  },
+  "ruleSetIds": ["temporal_loop_exit"],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_punxsutawney",
+      "label": "Punxsutawney loop day",
+      "spanLabel": "February 2 repeating"
+    }
+  ],
+  "agents": [
+    { "id": "phil", "label": "Phil Connors", "identityGroup": "phil" },
+    { "id": "rita", "label": "Rita Hanson" },
+    { "id": "larry", "label": "Larry" },
+    { "id": "ned", "label": "Ned Ryerson" }
+  ],
+  "events": [
+    {
+      "id": "e_first_day",
+      "type": "ordinary",
+      "label": "Phil covers Groundhog Day; dismissive",
+      "at": { "worldRef": "w_punxsutawney", "timeLabel": "Feb 2 iteration 1" },
+      "agents": ["phil", "rita", "larry"]
+    },
+    {
+      "id": "e_reset_1",
+      "type": "loop_reset",
+      "label": "Wake to same morning",
+      "at": { "worldRef": "w_punxsutawney", "timeLabel": "iteration 2+" },
+      "agents": ["phil"],
+      "payload": { "iteration": "early" }
+    },
+    {
+      "id": "e_hedonism",
+      "type": "intervention",
+      "label": "Phil exploits loop (theft, risks, seduction scripts)",
+      "at": { "worldRef": "w_punxsutawney", "timeLabel": "mid iterations" },
+      "agents": ["phil"]
+    },
+    {
+      "id": "e_despair",
+      "type": "death",
+      "label": "Phil attempts suicide / despair resets",
+      "at": { "worldRef": "w_punxsutawney", "timeLabel": "dark iterations" },
+      "agents": ["phil"],
+      "payload": { "exitFailed": true }
+    },
+    {
+      "id": "e_learn",
+      "type": "ordinary",
+      "label": "Phil learns piano, ice sculpture, townspeople's needs",
+      "at": { "worldRef": "w_punxsutawney", "timeLabel": "growth iterations" },
+      "agents": ["phil", "ned"]
+    },
+    {
+      "id": "e_perfect_day",
+      "type": "intervention",
+      "label": "Phil lives altruistic perfect day with Rita",
+      "at": { "worldRef": "w_punxsutawney", "timeLabel": "final loop day" },
+      "agents": ["phil", "rita"]
+    },
+    {
+      "id": "e_exit",
+      "type": "arrival",
+      "label": "Morning of February 3 — loop exits",
+      "at": { "worldRef": "w_punxsutawney", "timeLabel": "Feb 3" },
+      "agents": ["phil", "rita"],
+      "payload": { "exitCondition": "genuine_care_and_growth" }
+    }
+  ],
+  "edges": [
+    { "id": "c1", "kind": "temporal", "from": "e_first_day", "to": "e_reset_1" },
+    { "id": "c2", "kind": "causal", "from": "e_reset_1", "to": "e_hedonism" },
+    { "id": "c3", "kind": "causal", "from": "e_hedonism", "to": "e_despair" },
+    { "id": "c4", "kind": "temporal", "from": "e_despair", "to": "e_reset_1", "label": "death does not exit" },
+    { "id": "c5", "kind": "causal", "from": "e_learn", "to": "e_perfect_day" },
+    { "id": "c6", "kind": "intervention", "from": "e_perfect_day", "to": "e_exit" },
+    { "id": "c7", "kind": "identity", "from": "phil", "to": "e_exit", "label": "transformed self" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_perfect",
+      "eventId": "e_perfect_day",
+      "ruleEffects": [
+        { "ruleSetId": "temporal_loop_exit", "effect": "Satisfies exit condition via moral/emotional growth" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Day loop ends when Phil genuinely changes; February 3 arrives on the same Punxsutawney timeline.",
+    "endWorldRefs": ["w_punxsutawney"]
+  }
+}

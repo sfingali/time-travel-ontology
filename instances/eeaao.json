@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "id": "eeaao",
+    "title": "Everything Everywhere All at Once",
+    "year": 2022,
+    "medium": "film",
+    "sources": ["Daniels, Everything Everywhere All at Once (2022)"]
+  },
+  "ruleSetIds": ["multiverse_contact"],
+  "topologyPatternId": "dual_parallel_pair",
+  "worlds": [
+    {
+      "kind": "parallel_world",
+      "id": "w_alpha_verse",
+      "label": "Alphaverse hub",
+      "correspondenceKey": "wang_family"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_laundromat",
+      "label": "Laundromat / IRS home verse",
+      "correspondenceKey": "wang_family"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_hotdog_hands",
+      "label": "Hot-dog hands verse",
+      "correspondenceKey": "wang_family"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_rock",
+      "label": "Rock / nihilist cliff verse",
+      "correspondenceKey": "wang_family"
+    },
+    {
+      "kind": "parallel_world",
+      "id": "w_bagel",
+      "label": "Everything Bagel threatscape",
+      "correspondenceKey": "wang_family"
+    }
+  ],
+  "agents": [
+    { "id": "evelyn", "label": "Evelyn Wang", "identityGroup": "evelyn" },
+    { "id": "waymond", "label": "Waymond Wang", "identityGroup": "waymond" },
+    { "id": "joy_jobu", "label": "Joy / Jobu Tupaki", "identityGroup": "joy" },
+    { "id": "gong_gong", "label": "Gong Gong" },
+    { "id": "deirdre", "label": "Deirdre Beaubeirdre" }
+  ],
+  "events": [
+    {
+      "id": "e_irs",
+      "type": "ordinary",
+      "label": "IRS audit; Alpha Waymond contacts Evelyn",
+      "at": { "worldRef": "w_laundromat", "timeLabel": "audit day" },
+      "agents": ["evelyn", "waymond", "deirdre"]
+    },
+    {
+      "id": "e_verse_jump",
+      "type": "departure",
+      "label": "Evelyn verse-jumps via absurd actions",
+      "at": { "worldRef": "w_laundromat", "timeLabel": "elevator" },
+      "agents": ["evelyn", "waymond"]
+    },
+    {
+      "id": "e_alpha_brief",
+      "type": "contact",
+      "label": "Alphaverse briefs Jobu threat",
+      "at": { "worldRef": "w_alpha_verse", "timeLabel": "hub" },
+      "agents": ["evelyn", "waymond", "joy_jobu"]
+    },
+    {
+      "id": "e_hotdog",
+      "type": "arrival",
+      "label": "Hot-dog hands encounter",
+      "at": { "worldRef": "w_hotdog_hands", "timeLabel": "jump" },
+      "agents": ["evelyn", "waymond"]
+    },
+    {
+      "id": "e_bagel",
+      "type": "reveal",
+      "label": "Everything Bagel / Jobu's nihilism",
+      "at": { "worldRef": "w_bagel", "timeLabel": "confrontation" },
+      "agents": ["joy_jobu", "evelyn"]
+    },
+    {
+      "id": "e_kindness",
+      "type": "intervention",
+      "label": "Evelyn chooses kindness across verses",
+      "at": { "worldRef": "w_laundromat", "timeLabel": "climax" },
+      "agents": ["evelyn", "joy_jobu", "waymond", "gong_gong"]
+    },
+    {
+      "id": "e_reconcile",
+      "type": "ordinary",
+      "label": "Family reconciles in home verse",
+      "at": { "worldRef": "w_laundromat", "timeLabel": "aftermath" },
+      "agents": ["evelyn", "waymond", "joy_jobu"]
+    }
+  ],
+  "edges": [
+    { "id": "wr1", "kind": "world_relation", "from": "w_laundromat", "to": "w_alpha_verse", "relation": "correspondsTo" },
+    { "id": "wr2", "kind": "world_relation", "from": "w_hotdog_hands", "to": "w_laundromat", "relation": "correspondsTo" },
+    { "id": "wr3", "kind": "world_relation", "from": "w_rock", "to": "w_laundromat", "relation": "mirrors" },
+    { "id": "wr4", "kind": "world_relation", "from": "w_bagel", "to": "w_alpha_verse", "relation": "correspondsTo" },
+    { "id": "c1", "kind": "causal", "from": "e_irs", "to": "e_verse_jump" },
+    { "id": "c2", "kind": "causal", "from": "e_verse_jump", "to": "e_alpha_brief" },
+    { "id": "c3", "kind": "temporal", "from": "e_alpha_brief", "to": "e_hotdog" },
+    { "id": "c4", "kind": "causal", "from": "e_bagel", "to": "e_kindness" },
+    { "id": "c5", "kind": "identity", "from": "joy_jobu", "to": "e_bagel", "label": "Jobu = Joy verse-jumped to exhaustion" },
+    { "id": "c6", "kind": "intervention", "from": "e_kindness", "to": "e_reconcile" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_kindness",
+      "eventId": "e_kindness",
+      "ruleEffects": [
+        { "ruleSetId": "multiverse_contact", "effect": "Contact across verses resolved by care rather than domination" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Verse-jumping multiverse contact; Evelyn rejects nihilism of the Bagel and restores family bonds in the home verse while acknowledging other selves.",
+    "endWorldRefs": ["w_laundromat"]
+  }
+}

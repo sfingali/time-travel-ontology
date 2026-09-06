@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "id": "loki",
+    "title": "Loki",
+    "year": 2021,
+    "medium": "tv",
+    "sources": ["Marvel Studios, Loki (Disney+, S1 abstraction)"]
+  },
+  "ruleSetIds": ["branch_bureaucracy_prune", "branch_on_intervention"],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_sacred",
+      "label": "Sacred Timeline",
+      "spanLabel": "TVA-enforced"
+    },
+    {
+      "kind": "branch",
+      "id": "w_variant_loki",
+      "label": "Loki variant branch (Avengers heist nexus)",
+      "parentRef": "w_sacred",
+      "forkLabel": "Tesseract escape nexus",
+      "pruned": false
+    },
+    {
+      "kind": "branch",
+      "id": "w_pruned_example",
+      "label": "Pruned nexus branch (example)",
+      "parentRef": "w_sacred",
+      "forkLabel": "generic nexus event",
+      "pruned": true
+    },
+    {
+      "kind": "branch",
+      "id": "w_void",
+      "label": "The Void (end of time dump)",
+      "parentRef": "w_sacred",
+      "forkLabel": "prune destination"
+    }
+  ],
+  "agents": [
+    { "id": "loki_variant", "label": "Loki (Variant L1130)", "identityGroup": "loki" },
+    { "id": "mobius", "label": "Mobius M. Mobius" },
+    { "id": "sylvie", "label": "Sylvie", "identityGroup": "loki" },
+    { "id": "ravonna", "label": "Ravonna Renslayer" },
+    { "id": "he_who_remains", "label": "He Who Remains" }
+  ],
+  "events": [
+    {
+      "id": "e_nexus",
+      "type": "branch_fork",
+      "label": "Nexus event: Loki escapes with Tesseract",
+      "at": { "worldRef": "w_variant_loki", "timeLabel": "2012 variant" },
+      "agents": ["loki_variant"]
+    },
+    {
+      "id": "e_arrest",
+      "type": "arrival",
+      "label": "TVA arrests Variant Loki",
+      "at": { "worldRef": "w_sacred", "timeLabel": "TVA now" },
+      "agents": ["loki_variant", "mobius"]
+    },
+    {
+      "id": "e_prune_demo",
+      "type": "branch_prune",
+      "label": "Minutemen prune a branched timeline",
+      "at": { "worldRef": "w_pruned_example", "timeLabel": "reset charge" },
+      "agents": ["ravonna"]
+    },
+    {
+      "id": "e_sylvie_hunt",
+      "type": "intervention",
+      "label": "Hunt for Sylvie across branched apocalypses",
+      "at": { "worldRef": "w_variant_loki", "timeLabel": "mission" },
+      "agents": ["loki_variant", "sylvie", "mobius"]
+    },
+    {
+      "id": "e_void",
+      "type": "arrival",
+      "label": "Pruned to the Void",
+      "at": { "worldRef": "w_void", "timeLabel": "end of time" },
+      "agents": ["loki_variant", "sylvie"]
+    },
+    {
+      "id": "e_citadel",
+      "type": "reveal",
+      "label": "He Who Remains explains Sacred Timeline",
+      "at": { "worldRef": "w_void", "timeLabel": "Citadel at the End of Time" },
+      "agents": ["he_who_remains", "loki_variant", "sylvie"]
+    },
+    {
+      "id": "e_kill_hwa",
+      "type": "intervention",
+      "label": "Sylvie kills He Who Remains; timeline freefall",
+      "at": { "worldRef": "w_void", "timeLabel": "citadel climax" },
+      "agents": ["sylvie", "he_who_remains", "loki_variant"]
+    }
+  ],
+  "edges": [
+    { "id": "wr1", "kind": "world_relation", "from": "w_variant_loki", "to": "w_sacred", "relation": "forksFrom" },
+    { "id": "wr2", "kind": "world_relation", "from": "w_pruned_example", "to": "w_sacred", "relation": "forksFrom" },
+    { "id": "wr3", "kind": "world_relation", "from": "e_prune_demo", "to": "w_pruned_example", "relation": "prunes", "label": "reset charge" },
+    { "id": "c1", "kind": "causal", "from": "e_nexus", "to": "e_arrest" },
+    { "id": "c2", "kind": "causal", "from": "e_sylvie_hunt", "to": "e_void" },
+    { "id": "c3", "kind": "identity", "from": "loki_variant", "to": "sylvie", "label": "variant selves" },
+    { "id": "c4", "kind": "intervention", "from": "e_kill_hwa", "to": "e_citadel", "label": "unravels enforcement" },
+    { "id": "c5", "kind": "temporal", "from": "e_arrest", "to": "e_sylvie_hunt" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_prune",
+      "eventId": "e_prune_demo",
+      "ruleEffects": [
+        { "ruleSetId": "branch_bureaucracy_prune", "effect": "TVA resets branch to protect Sacred Timeline" }
+      ]
+    },
+    {
+      "id": "iv_kill",
+      "eventId": "e_kill_hwa",
+      "ruleEffects": [
+        { "ruleSetId": "branch_on_intervention", "effect": "Killing He Who Remains allows uncontrolled branching" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Sacred Timeline bureaucracy exposed; killing He Who Remains unleashes multiversal branching beyond TVA prune control.",
+    "endWorldRefs": ["w_sacred", "w_void"]
+  }
+}
