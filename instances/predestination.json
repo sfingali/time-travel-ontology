@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "id": "predestination",
+    "title": "Predestination",
+    "year": 2014,
+    "medium": "film",
+    "sources": ["Spierig brothers, Predestination (2014)", "Heinlein, —All You Zombies—"]
+  },
+  "ruleSetIds": ["predestination_closed_loop", "bootstrap_ontological", "fixed_novikov"],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_loop",
+      "label": "Closed recruitment loop timeline",
+      "spanLabel": "1945–1990s+"
+    }
+  ],
+  "agents": [
+    { "id": "unmarried_mother", "label": "Unmarried Mother / Jane", "identityGroup": "john_jane" },
+    { "id": "john", "label": "John", "identityGroup": "john_jane" },
+    { "id": "bartender", "label": "Bartender / Temporal Agent", "identityGroup": "john_jane" },
+    { "id": "fizzle_bomber", "label": "Fizzle Bomber", "identityGroup": "john_jane" },
+    { "id": "baby_jane", "label": "Infant Jane", "identityGroup": "john_jane" }
+  ],
+  "events": [
+    {
+      "id": "e_birth",
+      "type": "birth",
+      "label": "Baby left at orphanage",
+      "at": { "worldRef": "w_loop", "timeLabel": "1945" },
+      "agents": ["baby_jane"]
+    },
+    {
+      "id": "e_seduction",
+      "type": "intervention",
+      "label": "John seduces Jane (engineered)",
+      "at": { "worldRef": "w_loop", "timeLabel": "1963" },
+      "agents": ["john", "unmarried_mother"]
+    },
+    {
+      "id": "e_reveal_surgery",
+      "type": "reveal",
+      "label": "Jane learns identity / becomes John",
+      "at": { "worldRef": "w_loop", "timeLabel": "post-birth" },
+      "agents": ["unmarried_mother", "john"]
+    },
+    {
+      "id": "e_recruit",
+      "type": "departure",
+      "label": "Bartender recruits John into Temporal Agency",
+      "at": { "worldRef": "w_loop", "timeLabel": "1970s bar" },
+      "agents": ["bartender", "john"]
+    },
+    {
+      "id": "e_baby_delivery",
+      "type": "bootstrap_origin",
+      "label": "Agent delivers infant to orphanage (self)",
+      "at": { "worldRef": "w_loop", "timeLabel": "1945 delivery" },
+      "agents": ["bartender", "baby_jane"]
+    },
+    {
+      "id": "e_bomber_face",
+      "type": "reveal",
+      "label": "Agent confronts Fizzle Bomber — older self",
+      "at": { "worldRef": "w_loop", "timeLabel": "1990s laundromat" },
+      "agents": ["bartender", "fizzle_bomber"]
+    },
+    {
+      "id": "e_kill_bomber",
+      "type": "death",
+      "label": "Agent kills bomber; loop continues",
+      "at": { "worldRef": "w_loop", "timeLabel": "climactic" },
+      "agents": ["bartender", "fizzle_bomber"]
+    }
+  ],
+  "edges": [
+    { "id": "e_id1", "kind": "identity", "from": "baby_jane", "to": "unmarried_mother", "label": "grows into" },
+    { "id": "e_id2", "kind": "identity", "from": "unmarried_mother", "to": "john", "label": "transition" },
+    { "id": "e_id3", "kind": "identity", "from": "john", "to": "bartender", "label": "recruited self" },
+    { "id": "e_id4", "kind": "identity", "from": "bartender", "to": "fizzle_bomber", "label": "older self" },
+    { "id": "e_c1", "kind": "causal", "from": "e_seduction", "to": "e_birth", "label": "pregnancy" },
+    { "id": "e_c2", "kind": "causal", "from": "e_recruit", "to": "e_seduction", "label": "mission orders" },
+    { "id": "e_c3", "kind": "causal", "from": "e_baby_delivery", "to": "e_birth", "label": "bootstrap placement" },
+    { "id": "e_c4", "kind": "causal", "from": "e_bomber_face", "to": "e_kill_bomber" },
+    { "id": "e_loop", "kind": "temporal", "from": "e_kill_bomber", "to": "e_recruit", "label": "agency career closes loop" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_seduction",
+      "eventId": "e_seduction",
+      "ruleEffects": [
+        { "ruleSetId": "predestination_closed_loop", "effect": "Ensures own conception" },
+        { "ruleSetId": "bootstrap_ontological", "effect": "Parent and child are the same person" }
+      ]
+    },
+    {
+      "id": "iv_delivery",
+      "eventId": "e_baby_delivery",
+      "ruleEffects": [
+        { "ruleSetId": "bootstrap_ontological", "effect": "Infant has no external genetic origin outside the loop" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Complete ontological bootstrap: one person is mother, father, child, recruiter, and bomber on a single fixed loop.",
+    "endWorldRefs": ["w_loop"]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "id": "looper",
+    "title": "Looper",
+    "year": 2012,
+    "medium": "film",
+    "sources": ["Rian Johnson, Looper (2012)"]
+  },
+  "ruleSetIds": ["mutable_ripple", "predestination_closed_loop", "branch_on_intervention"],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_2044",
+      "label": "2044 Kansas loop city",
+      "spanLabel": "2044"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_2074",
+      "label": "2074 future crime era",
+      "spanLabel": "2074"
+    },
+    {
+      "kind": "branch",
+      "id": "w_rainmaker_path",
+      "label": "Rainmaker rise path",
+      "parentRef": "w_2044",
+      "forkLabel": "Joe choices around Sara/Cid"
+    },
+    {
+      "kind": "branch",
+      "id": "w_averted",
+      "label": "Rainmaker averted path",
+      "parentRef": "w_2044",
+      "forkLabel": "Young Joe suicide closes loop"
+    }
+  ],
+  "agents": [
+    { "id": "young_joe", "label": "Young Joe", "identityGroup": "joe" },
+    { "id": "old_joe", "label": "Old Joe", "identityGroup": "joe" },
+    { "id": "sara", "label": "Sara" },
+    { "id": "cid", "label": "Cid", "identityGroup": "rainmaker" },
+    { "id": "seth", "label": "Seth" }
+  ],
+  "events": [
+    {
+      "id": "e_loop_job",
+      "type": "ordinary",
+      "label": "Young Joe works as looper",
+      "at": { "worldRef": "w_2044", "timeLabel": "2044" },
+      "agents": ["young_joe"]
+    },
+    {
+      "id": "e_old_sent",
+      "type": "departure",
+      "label": "Old Joe sent back for closing loop",
+      "at": { "worldRef": "w_2074", "timeLabel": "2074" },
+      "agents": ["old_joe"]
+    },
+    {
+      "id": "e_escape",
+      "type": "intervention",
+      "label": "Old Joe escapes execution",
+      "at": { "worldRef": "w_2044", "timeLabel": "cornfield" },
+      "agents": ["young_joe", "old_joe"]
+    },
+    {
+      "id": "e_seth_mutate",
+      "type": "observation",
+      "label": "Seth mutilation ripples onto future body",
+      "at": { "worldRef": "w_2044", "timeLabel": "warning" },
+      "agents": ["seth"],
+      "payload": { "signal": "body_rewrite" }
+    },
+    {
+      "id": "e_farm",
+      "type": "ordinary",
+      "label": "Joes converge on Sara and Cid farm",
+      "at": { "worldRef": "w_rainmaker_path", "timeLabel": "farm siege" },
+      "agents": ["young_joe", "old_joe", "sara", "cid"]
+    },
+    {
+      "id": "e_suicide",
+      "type": "death",
+      "label": "Young Joe kills himself; Old Joe vanishes",
+      "at": { "worldRef": "w_averted", "timeLabel": "field" },
+      "agents": ["young_joe", "old_joe"]
+    },
+    {
+      "id": "e_cid_safe",
+      "type": "ordinary",
+      "label": "Cid/Sara survive; Rainmaker path altered",
+      "at": { "worldRef": "w_averted", "timeLabel": "aftermath" },
+      "agents": ["sara", "cid"]
+    }
+  ],
+  "edges": [
+    { "id": "wr1", "kind": "world_relation", "from": "w_rainmaker_path", "to": "w_2044", "relation": "forksFrom" },
+    { "id": "wr2", "kind": "world_relation", "from": "w_averted", "to": "w_2044", "relation": "supersedes" },
+    { "id": "c1", "kind": "causal", "from": "e_old_sent", "to": "e_escape" },
+    { "id": "c2", "kind": "identity", "from": "young_joe", "to": "old_joe" },
+    { "id": "c3", "kind": "causal", "from": "e_seth_mutate", "to": "e_escape", "label": "mutable body warning" },
+    { "id": "c4", "kind": "causal", "from": "e_farm", "to": "e_suicide" },
+    { "id": "c5", "kind": "intervention", "from": "e_suicide", "to": "e_cid_safe" },
+    { "id": "c6", "kind": "temporal", "from": "e_loop_job", "to": "e_old_sent" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_escape",
+      "eventId": "e_escape",
+      "ruleEffects": [
+        { "ruleSetId": "mutable_ripple", "effect": "Present actions rewrite future Joe body/history" }
+      ]
+    },
+    {
+      "id": "iv_suicide",
+      "eventId": "e_suicide",
+      "ruleEffects": [
+        { "ruleSetId": "predestination_closed_loop", "effect": "Self-sacrifice closes Old Joe causal presence" },
+        { "ruleSetId": "branch_on_intervention", "effect": "Averts Rainmaker path via farm survival" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Young Joe suicide erases Old Joe and steers Cid away from the Rainmaker trajectory on a rewritten path.",
+    "endWorldRefs": ["w_averted"]
+  }
+}

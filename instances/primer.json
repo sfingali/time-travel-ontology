@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "id": "primer",
+    "title": "Primer",
+    "year": 2004,
+    "medium": "film",
+    "sources": ["Shane Carruth, Primer (2004)"]
+  },
+  "ruleSetIds": ["branch_on_intervention", "bootstrap_ontological", "fixed_novikov"],
+  "topologyPatternId": "branching_tree",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_prime",
+      "label": "Original garage timeline",
+      "spanLabel": "pre-box experiments"
+    },
+    {
+      "kind": "branch",
+      "id": "w_ab_overlap",
+      "label": "Abe/Aaron overlapping box histories",
+      "parentRef": "w_prime",
+      "forkLabel": "first recursive box use"
+    },
+    {
+      "kind": "branch",
+      "id": "w_failsafe",
+      "label": "Failsafe-preempted timeline",
+      "parentRef": "w_ab_overlap",
+      "forkLabel": "Aaron failsafe"
+    },
+    {
+      "kind": "branch",
+      "id": "w_aaron_exit",
+      "label": "Aaron's later exit / other city",
+      "parentRef": "w_failsafe",
+      "forkLabel": "broken trust / separate projects"
+    }
+  ],
+  "agents": [
+    { "id": "abe", "label": "Abe", "identityGroup": "abe_selves" },
+    { "id": "aaron", "label": "Aaron", "identityGroup": "aaron_selves" },
+    { "id": "aaron_failsafe", "label": "Aaron (failsafe)", "identityGroup": "aaron_selves" },
+    { "id": "thomas_granger", "label": "Thomas Granger" }
+  ],
+  "events": [
+    {
+      "id": "e_box_invented",
+      "type": "ordinary",
+      "label": "Box discovered to enable time displacement",
+      "at": { "worldRef": "w_prime", "timeLabel": "garage week 0" },
+      "agents": ["abe", "aaron"]
+    },
+    {
+      "id": "e_abe_first_trip",
+      "type": "departure",
+      "label": "Abe's first controlled trip",
+      "at": { "worldRef": "w_prime", "timeLabel": "hotel start" },
+      "agents": ["abe"]
+    },
+    {
+      "id": "e_stock_trades",
+      "type": "intervention",
+      "label": "Stock trades using foreknowledge",
+      "at": { "worldRef": "w_ab_overlap", "timeLabel": "market days" },
+      "agents": ["abe", "aaron"]
+    },
+    {
+      "id": "e_party_revise",
+      "type": "intervention",
+      "label": "Party / personal revisions via recursive boxes",
+      "at": { "worldRef": "w_ab_overlap", "timeLabel": "party night" },
+      "agents": ["aaron"]
+    },
+    {
+      "id": "e_granger",
+      "type": "arrival",
+      "label": "Thomas Granger appears from downstream",
+      "at": { "worldRef": "w_ab_overlap", "timeLabel": "unexpected" },
+      "agents": ["thomas_granger"]
+    },
+    {
+      "id": "e_failsafe",
+      "type": "branch_fork",
+      "label": "Aaron activates failsafe preemption",
+      "at": { "worldRef": "w_failsafe", "timeLabel": "preempt" },
+      "agents": ["aaron_failsafe"]
+    },
+    {
+      "id": "e_confrontation",
+      "type": "reveal",
+      "label": "Abe confronts overlapping Aarons; trust breaks",
+      "at": { "worldRef": "w_failsafe", "timeLabel": "airport / hangar" },
+      "agents": ["abe", "aaron", "aaron_failsafe"]
+    },
+    {
+      "id": "e_exit",
+      "type": "departure",
+      "label": "Aaron leaves to build larger project elsewhere",
+      "at": { "worldRef": "w_aaron_exit", "timeLabel": "coda" },
+      "agents": ["aaron"]
+    }
+  ],
+  "edges": [
+    { "id": "edge_fork1", "kind": "world_relation", "from": "w_ab_overlap", "to": "w_prime", "relation": "forksFrom", "label": "recursive use" },
+    { "id": "edge_fork2", "kind": "world_relation", "from": "w_failsafe", "to": "w_ab_overlap", "relation": "forksFrom", "label": "failsafe" },
+    { "id": "edge_fork3", "kind": "world_relation", "from": "w_aaron_exit", "to": "w_failsafe", "relation": "forksFrom" },
+    { "id": "edge_c1", "kind": "causal", "from": "e_box_invented", "to": "e_abe_first_trip" },
+    { "id": "edge_c2", "kind": "causal", "from": "e_abe_first_trip", "to": "e_stock_trades" },
+    { "id": "edge_c3", "kind": "causal", "from": "e_stock_trades", "to": "e_party_revise" },
+    { "id": "edge_c4", "kind": "causal", "from": "e_party_revise", "to": "e_granger" },
+    { "id": "edge_c5", "kind": "intervention", "from": "e_failsafe", "to": "e_confrontation" },
+    { "id": "edge_id_aaron", "kind": "identity", "from": "aaron", "to": "aaron_failsafe", "label": "same identity group" },
+    { "id": "edge_t1", "kind": "temporal", "from": "e_confrontation", "to": "e_exit" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_failsafe",
+      "eventId": "e_failsafe",
+      "ruleEffects": [
+        { "ruleSetId": "branch_on_intervention", "effect": "Preempts prior box usage; forks failsafe branch" },
+        { "ruleSetId": "bootstrap_ontological", "effect": "Multiple Aarons coexist with tangled provenance" }
+      ]
+    },
+    {
+      "id": "iv_party",
+      "eventId": "e_party_revise",
+      "ruleEffects": [
+        { "ruleSetId": "branch_on_intervention", "effect": "Personal history revised via overlap" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Broken symmetry: Abe and Aaron split; overlapping histories and failsafes leave no single clean original; Aaron pursues a larger independent project.",
+    "endWorldRefs": ["w_failsafe", "w_aaron_exit"]
+  }
+}
