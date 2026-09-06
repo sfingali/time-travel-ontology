@@ -68,7 +68,7 @@ export const TOPOLOGY_PATTERNS: TopologyPattern[] = [
     description:
       "Interlocking family/bootstrap loops across eras; may include origin world and twin/mirror worlds feeding a knot.",
     typicalWorldKinds: ["timeline", "parallel_world", "branch"],
-    typicalRelations: ["correspondsTo", "nestsWithin", "forksFrom"],
+    typicalRelations: ["correspondsTo", "nestsWithin", "forksFrom", "originatesFrom"],
     notes: "Series-level abstraction: eras as timeLabels on one or few worlds.",
   },
 ];
