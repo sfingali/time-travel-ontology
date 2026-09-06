@@ -616,13 +616,15 @@
       "kind": "identity",
       "from": "martha",
       "to": "martha_eva_w",
-      "label": "counterpart"
+      "label": "counterpart",
+      "identityRelation": "counterpart"
     },
     {
       "id": "id3",
       "kind": "identity",
       "from": "claudia",
-      "to": "claudia_alt"
+      "to": "claudia_alt",
+      "identityRelation": "counterpart"
     },
     {
       "id": "boot1",

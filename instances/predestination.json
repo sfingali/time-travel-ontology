@@ -520,7 +520,7 @@
     },
     {
       "id": "rep_5",
-      "kind": "identity",
+      "kind": "causal",
       "from": "ev_bomber",
       "to": "ev_orphanage",
       "label": "bootstrap_causes"

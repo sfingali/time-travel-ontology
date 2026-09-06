@@ -809,7 +809,8 @@
       "kind": "temporal",
       "from": "e_invert_protagonist",
       "to": "e_oslo_freeport_inv",
-      "label": "living backward to Freeport"
+      "label": "living backward to Freeport",
+      "orderKind": "experienced"
     },
     {
       "id": "tp2",
@@ -830,7 +831,8 @@
       "kind": "temporal",
       "from": "e_stalsk_blue",
       "to": "e_stalsk_red",
-      "label": "war pincer simultaneous"
+      "label": "war pincer simultaneous",
+      "orderKind": "simultaneity"
     },
     {
       "id": "tp5",

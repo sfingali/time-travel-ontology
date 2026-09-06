@@ -19,7 +19,7 @@
   "mixinRuleSetIds": [
     "branch_on_intervention"
   ],
-  "topologyPatternId": "dual_parallel_pair",
+  "topologyPatternId": "parallel_world_network",
   "worlds": [
     {
       "kind": "parallel_world",
