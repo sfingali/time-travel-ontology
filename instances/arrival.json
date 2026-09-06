@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "id": "arrival",
+    "title": "Arrival",
+    "year": 2016,
+    "medium": "film",
+    "sources": ["Denis Villeneuve, Arrival (2016)", "Ted Chiang, Story of Your Life"]
+  },
+  "ruleSetIds": ["perception_nonlinear", "bootstrap_ontological"],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_earth",
+      "label": "Human linear / Heptapod simultaneous Earth",
+      "spanLabel": "contact era + Louise lifespan"
+    }
+  ],
+  "agents": [
+    { "id": "louise", "label": "Louise Banks", "identityGroup": "louise" },
+    { "id": "ian", "label": "Ian Donnelly" },
+    { "id": "hannah", "label": "Hannah", "identityGroup": "hannah" },
+    { "id": "heptapods", "label": "Heptapods (Abbott & Costello)" },
+    { "id": "general_shang", "label": "General Shang" }
+  ],
+  "events": [
+    {
+      "id": "e_ships",
+      "type": "contact",
+      "label": "Twelve ships arrive",
+      "at": { "worldRef": "w_earth", "timeLabel": "Day 1" },
+      "agents": ["heptapods"]
+    },
+    {
+      "id": "e_learn_language",
+      "type": "ordinary",
+      "label": "Louise learns Heptapod B",
+      "at": { "worldRef": "w_earth", "timeLabel": "weeks of contact" },
+      "agents": ["louise", "heptapods", "ian"]
+    },
+    {
+      "id": "e_nonlinear_mind",
+      "type": "observation",
+      "label": "Louise experiences future memories as present",
+      "at": { "worldRef": "w_earth", "timeLabel": "perception shift" },
+      "agents": ["louise"],
+      "payload": { "perception": "simultaneous" }
+    },
+    {
+      "id": "e_shang_call",
+      "type": "intervention",
+      "label": "Louise calls Shang with future-gifted private words",
+      "at": { "worldRef": "w_earth", "timeLabel": "crisis peak" },
+      "agents": ["louise", "general_shang"]
+    },
+    {
+      "id": "e_weapon_gift",
+      "type": "reveal",
+      "label": "Heptapods gift language / weapon across 3000 years",
+      "at": { "worldRef": "w_earth", "timeLabel": "departure" },
+      "agents": ["heptapods", "louise"]
+    },
+    {
+      "id": "e_hannah_life",
+      "type": "birth",
+      "label": "Louise chooses life with Hannah knowing her death",
+      "at": { "worldRef": "w_earth", "timeLabel": "future/past simultaneous" },
+      "agents": ["louise", "ian", "hannah"]
+    },
+    {
+      "id": "e_hannah_death",
+      "type": "death",
+      "label": "Hannah dies young (foreknown)",
+      "at": { "worldRef": "w_earth", "timeLabel": "future remembered" },
+      "agents": ["hannah", "louise"]
+    }
+  ],
+  "edges": [
+    { "id": "c1", "kind": "causal", "from": "e_ships", "to": "e_learn_language" },
+    { "id": "c2", "kind": "causal", "from": "e_learn_language", "to": "e_nonlinear_mind" },
+    { "id": "c3", "kind": "intervention", "from": "e_nonlinear_mind", "to": "e_shang_call" },
+    { "id": "c4", "kind": "causal", "from": "e_shang_call", "to": "e_weapon_gift", "label": "knowledge loop" },
+    { "id": "c5", "kind": "identity", "from": "louise", "to": "e_hannah_life" },
+    { "id": "c6", "kind": "temporal", "from": "e_hannah_life", "to": "e_hannah_death", "label": "foreknown order" },
+    { "id": "c7", "kind": "causal", "from": "e_weapon_gift", "to": "e_shang_call", "label": "future knowledge enables present" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_call",
+      "eventId": "e_shang_call",
+      "ruleEffects": [
+        { "ruleSetId": "perception_nonlinear", "effect": "Future memory used without physical time travel" },
+        { "ruleSetId": "bootstrap_ontological", "effect": "Shang's words have circular provenance via Louise" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "No physical time travel; Louise's nonlinear perception closes a knowledge bootstrap that averts war and affirms a foreknown personal life.",
+    "endWorldRefs": ["w_earth"]
+  }
+}

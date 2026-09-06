@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "id": "bad-story",
+    "title": "Invalid Fixture",
+    "medium": "film"
+  },
+  "ruleSetIds": ["not_a_real_rule"],
+  "topologyPatternId": "single_fixed_timeline",
+  "worlds": [],
+  "events": [],
+  "outcome": {
+    "summary": "Missing worlds and events should fail",
+    "endWorldRefs": ["nowhere"]
+  },
+  "extraForbiddenField": true
+}

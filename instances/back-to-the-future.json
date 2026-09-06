@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "id": "back-to-the-future",
+    "title": "Back to the Future",
+    "year": 1985,
+    "medium": "film",
+    "sources": ["Robert Zemeckis, Back to the Future (1985)"]
+  },
+  "ruleSetIds": ["mutable_ripple", "branch_on_intervention"],
+  "topologyPatternId": "mutable_single_with_ripples",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_1985",
+      "label": "1985 Hill Valley (starting)",
+      "spanLabel": "1985"
+    },
+    {
+      "kind": "timeline",
+      "id": "w_1955",
+      "label": "1955 Hill Valley",
+      "spanLabel": "1955"
+    },
+    {
+      "kind": "branch",
+      "id": "w_1985_erased",
+      "label": "Threatened erased 1985 (parents never couple)",
+      "parentRef": "w_1985",
+      "forkLabel": "Marty interferes with parents meeting"
+    },
+    {
+      "kind": "branch",
+      "id": "w_1985_improved",
+      "label": "Improved 1985 after course correction",
+      "parentRef": "w_1985",
+      "forkLabel": "Enchantment Under the Sea success"
+    }
+  ],
+  "agents": [
+    { "id": "marty", "label": "Marty McFly", "identityGroup": "marty" },
+    { "id": "doc", "label": "Doc Brown", "identityGroup": "doc" },
+    { "id": "george", "label": "George McFly", "identityGroup": "george" },
+    { "id": "lorraine", "label": "Lorraine Baines", "identityGroup": "lorraine" },
+    { "id": "biff", "label": "Biff Tannen" }
+  ],
+  "events": [
+    {
+      "id": "e_lightning_plan",
+      "type": "ordinary",
+      "label": "Doc shows DeLorean; Libyans attack",
+      "at": { "worldRef": "w_1985", "timeLabel": "1985-10-26 night" },
+      "agents": ["doc", "marty"]
+    },
+    {
+      "id": "e_depart_1955",
+      "type": "departure",
+      "label": "Marty flees to 1955",
+      "at": { "worldRef": "w_1985", "timeLabel": "1985-10-26" },
+      "agents": ["marty"]
+    },
+    {
+      "id": "e_arrive_1955",
+      "type": "arrival",
+      "label": "Marty arrives 1955",
+      "at": { "worldRef": "w_1955", "timeLabel": "1955-11-05" },
+      "agents": ["marty"]
+    },
+    {
+      "id": "e_interfere",
+      "type": "intervention",
+      "label": "Marty prevents George/Lorraine first meeting",
+      "at": { "worldRef": "w_1955", "timeLabel": "1955 cafe" },
+      "agents": ["marty", "george", "lorraine"]
+    },
+    {
+      "id": "e_fade",
+      "type": "observation",
+      "label": "Family photo fades — erasure threat",
+      "at": { "worldRef": "w_1985_erased", "timeLabel": "ripple signal" },
+      "agents": ["marty"],
+      "payload": { "signal": "fading_photograph" }
+    },
+    {
+      "id": "e_dance",
+      "type": "intervention",
+      "label": "George punches Biff; couples with Lorraine at dance",
+      "at": { "worldRef": "w_1955", "timeLabel": "Enchantment Under the Sea" },
+      "agents": ["george", "lorraine", "marty", "biff"]
+    },
+    {
+      "id": "e_lightning_return",
+      "type": "departure",
+      "label": "Clock tower lightning returns Marty to 1985",
+      "at": { "worldRef": "w_1955", "timeLabel": "1955-11-12" },
+      "agents": ["marty", "doc"]
+    },
+    {
+      "id": "e_improved_home",
+      "type": "arrival",
+      "label": "Marty finds improved 1985 family",
+      "at": { "worldRef": "w_1985_improved", "timeLabel": "1985-10-26 morning" },
+      "agents": ["marty", "george", "lorraine"]
+    }
+  ],
+  "edges": [
+    { "id": "wr1", "kind": "world_relation", "from": "w_1985_erased", "to": "w_1985", "relation": "forksFrom", "label": "threatened overwrite" },
+    { "id": "wr2", "kind": "world_relation", "from": "w_1985_improved", "to": "w_1985", "relation": "supersedes", "label": "ripple consolidation" },
+    { "id": "c1", "kind": "causal", "from": "e_depart_1955", "to": "e_arrive_1955" },
+    { "id": "c2", "kind": "causal", "from": "e_interfere", "to": "e_fade" },
+    { "id": "c3", "kind": "intervention", "from": "e_dance", "to": "e_improved_home" },
+    { "id": "c4", "kind": "temporal", "from": "e_lightning_return", "to": "e_improved_home" },
+    { "id": "c5", "kind": "causal", "from": "e_lightning_plan", "to": "e_depart_1955" }
+  ],
+  "interventions": [
+    {
+      "id": "iv_interfere",
+      "eventId": "e_interfere",
+      "ruleEffects": [
+        { "ruleSetId": "mutable_ripple", "effect": "Threatens to erase Marty via parental non-coupling" }
+      ]
+    },
+    {
+      "id": "iv_dance",
+      "eventId": "e_dance",
+      "ruleEffects": [
+        { "ruleSetId": "mutable_ripple", "effect": "Restores and upgrades 1985 outcome" }
+      ]
+    }
+  ],
+  "outcome": {
+    "summary": "Marty returns to a rippled-improved 1985; Doc survives; past interventions overwrite rather than permanently fork.",
+    "endWorldRefs": ["w_1985_improved"]
+  }
+}
