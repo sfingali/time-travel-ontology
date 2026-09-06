@@ -1,15 +1,15 @@
 # Import quality report
 
-Generated: 2026-09-06T18:38:17.680Z
-Archive root: `/workspace/time-travel-ontology/reference-archive`
+Generated: 2026-09-06T18:41:20.069Z
+Archive root: `/workspace/tt-ontology-push/reference-archive`
 
 ## Counts
 
 | Metric | Count |
 |--------|------:|
 | Archive entries scanned | 461 |
-| Generated stubs written | 0 |
-| Generated stubs skipped (exists, no --force-generated) | 383 |
+| Generated stubs written | 383 |
+| Generated stubs skipped (exists, no --force-generated) | 0 |
 | Skipped (hand-crafted instance present) | 78 |
 | Exhaustive without hand-crafted instance | 102 |
 | Diagram-flagged without hand-crafted instance | 202 |
