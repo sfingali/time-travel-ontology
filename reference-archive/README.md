@@ -1,43 +1,46 @@
 # Time Travel Meta-Archive
 
-Collated public metadata, plot summaries, and diagram/timeline references for time-travel **and interacting parallel-universe / alternate-timeline** films, TV, and (separately) novels.
-**No original media files** — summaries, links, and structural notes only.
+Companion narrative corpus for [time-travel-ontology](../README.md): public plot summaries, structure notes, and diagram/timeline sources for **time travel** and **interacting parallel / alternate universes**.
 
-## Counts (current)
-- Films: **203**
-- TV / major arcs: **119**
-- Films index: [`films/_index.md`](films/_index.md)
-- TV index: [`tv/_index.md`](tv/_index.md)
-- Anglophone AV candidates: **270** → [`candidates/anglophone-av.md`](candidates/anglophone-av.md)
-- Stream 1 log: [`logs/stream1-anglophone-av.md`](logs/stream1-anglophone-av.md)
-- Novels: **120** → [`novels/_index.md`](novels/_index.md) (if present)
-- Entries with `original_language` YAML: **48**
-- Non-English AV candidates: [`candidates/non-english-av.md`](candidates/non-english-av.md)
-- AV diagram URL index: [`diagrams/av-diagram-index.md`](diagrams/av-diagram-index.md)
-- Sources: [`sources/bibliography.md`](sources/bibliography.md)
-- Wave A CORE→DEEP log: [`logs/wave-a-promote.md`](logs/wave-a-promote.md)
-- Stream 2 log: [`logs/stream2-non-english-av.md`](logs/stream2-non-english-av.md)
+**No original media.** Spoilers throughout. Summaries are paraphrased from public sources (Wikipedia, fandom wikis, editorial explainers, local-language pages) — not a claim of first-hand viewing.
+
+## Live corpus
+
+| Section | Entries |
+|---------|--------:|
+| Films | **203** |
+| TV / major arcs | **119** |
+| Novels & major shorts | **139** |
+| Diagram work-pages | **26** |
+| Exhaustive deep entries | **168** |
+| **Catalogued works** | **461** |
+| Diagram images (Git LFS) | **71** under [`diagrams/assets/`](diagrams/assets/) |
 
 ## Layout
-- `films/` — one entry per film (YAML frontmatter + summary)
-- `tv/` — series / notable arcs
-- `novels/` — prose fiction entries
-- `diagrams/` — indexes of timelines, causality graphs, explainers
-- `candidates/` — harvest lists for expansion streams
-- `sources/` — bibliography of cited URLs
-- `logs/` — burn-stream progress notes
 
-## Entry schema (AV)
+| Path | Contents |
+|------|----------|
+| [`films/`](films/) | One entry per film (YAML + summary) |
+| [`tv/`](tv/) | Series / major arcs |
+| [`novels/`](novels/) | Prose fiction |
+| [`diagrams/`](diagrams/) | URL indexes, hunt logs, **local diagram captures** |
+| [`candidates/`](candidates/) | Harvest lists for expansion |
+| [`sources/`](sources/) | Bibliography |
+| [`logs/`](logs/) | Stream / wave progress notes |
+| [`index.md`](index.md) | Master catalog |
+
+## Entry frontmatter (AV)
+
 ```yaml
 title:
 year:
 medium: film | tv
 creators:
-original_title: # optional; non-English preferred
+original_title:        # optional
 languages:
 original_language:
 country:
-mechanism:
+mechanism:             # pipe-separated tags
 paradox_type:
 summary_depth: brief | detailed | exhaustive
 diagram_refs: []
@@ -45,9 +48,12 @@ plot_summary_sources: []
 flag_diagrams: true
 ```
 
-## Scope note
-Includes classic machine time travel **and** parallel/alternate stories where universes or timelines **interact**.
+These tags feed `npm run import` in the ontology package (draft stubs only; hand-crafted `instances/*.json` are never overwritten).
 
-## Method
-Public sources only (Wikipedia, Fandom wikis, TVTropes, editorial explainers, local-language pages when fetchable). Spoilers intentional. Does not claim first-hand viewing.
-- Wave E2 non-EN AV log: [`logs/wave-e2-non-en.md`](logs/wave-e2-non-en.md)
+## Diagram assets
+
+Public, spoiler-heavy timeline/infographic captures and free-licensed Commons files. See [`diagrams/DIAGRAM_HUNT_SUMMARY.md`](diagrams/DIAGRAM_HUNT_SUMMARY.md) and [`diagrams/ASSETS_NOTE.md`](diagrams/ASSETS_NOTE.md). Large binaries are stored with **Git LFS**.
+
+## Scope
+
+Classic machine time travel **and** parallel/alternate stories where universes or timelines **interact** (e.g. *Donnie Darko*, *Coherence*, *Everything Everywhere All at Once*).
