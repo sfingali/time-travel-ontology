@@ -137,10 +137,13 @@ function schemaValidStory(): any {
     primaryRuleSetId: "fixed_novikov",
     topologyPatternId: "single_fixed_timeline",
     worlds: [{ kind: "timeline", id: "w1", label: "World" }],
+    agents: [],
     events: [
       { id: "e1", type: "ordinary", label: "Event", at: { worldRef: "w1" } },
       { id: "e2", type: "checkpoint", label: "CP", at: { worldRef: "w1" } },
     ],
+    edges: [],
+    interventions: [],
     outcome: { summary: "x", endWorldRefs: ["w1"] },
   };
 }
@@ -190,5 +193,39 @@ describe("schema hard-validity (review findings #1/#3/#5)", () => {
     // mixinRuleSetIds omitted -> mutable_ripple is an implicit mixin (allowed)
     const result = validateStoryEncoding(s);
     assert.ok(result.success, JSON.stringify(result.errors));
+  });
+});
+
+describe("design-tier decisions (Astra rulings B,B,B,B,B,A,B,B)", () => {
+  it("accepts a root schemaVersion (decision #7)", () => {
+    const s = schemaValidStory();
+    s.schemaVersion = "1.0";
+    const result = validateStoryEncoding(s);
+    assert.ok(result.success, JSON.stringify(result.errors));
+  });
+
+  it("accepts identityRelation on identity edges (decision #1)", () => {
+    const s = schemaValidStory();
+    s.agents.push({ id: "protagonist", label: "Hero" });
+    s.agents.push({ id: "a2", label: "Other" });
+    s.edges.push({
+      id: "id-a", kind: "identity", from: "protagonist", to: "a2",
+      identityRelation: "counterpart",
+    });
+    const result = validateStoryEncoding(s);
+    assert.ok(result.success, JSON.stringify(result.errors));
+  });
+
+  it("accepts orderKind on a temporal edge (decision #5)", () => {
+    const s = schemaValidStory();
+    s.edges.push({
+      id: "t-a", kind: "temporal", from: "e1", to: "e2", orderKind: "experienced",
+    });
+    const result = validateStoryEncoding(s);
+    assert.ok(result.success, JSON.stringify(result.errors));
+  });
+
+  it("adds the parallel_world_network pattern (decision #4)", () => {
+    assert.ok(TOPOLOGY_BY_ID.has("parallel_world_network"));
   });
 });

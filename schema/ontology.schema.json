@@ -181,6 +181,10 @@
           ],
           "additionalProperties": false
         },
+        "schemaVersion": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$"
+        },
         "ruleSetIds": {
           "type": "array",
           "items": {
@@ -282,8 +286,16 @@
                     "minLength": 1,
                     "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
                   },
+                  "forkEventRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
                   "forkLabel": {
                     "type": "string"
+                  },
+                  "draft": {
+                    "type": "boolean"
                   },
                   "pruned": {
                     "type": "boolean"
@@ -730,6 +742,26 @@
                   "mirrors",
                   "supersedes",
                   "originatesFrom"
+                ]
+              },
+              "identityRelation": {
+                "type": "string",
+                "enum": [
+                  "personal_continuity",
+                  "counterpart",
+                  "loop_iteration",
+                  "participation",
+                  "other"
+                ]
+              },
+              "orderKind": {
+                "type": "string",
+                "enum": [
+                  "chronological",
+                  "experienced",
+                  "presentation",
+                  "simultaneity",
+                  "unspecified"
                 ]
               }
             },

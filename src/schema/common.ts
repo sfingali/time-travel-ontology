@@ -40,6 +40,36 @@ export const ContinuityRoleSchema = z.enum([
   "other",
 ]);
 
+/**
+ * Meaning of a relationship between two agent records (Astra design decision #1).
+ * Distinct from the world-relation `relation` enum:
+ *  - personal_continuity: one person across time / inverted stages
+ *  - counterpart: a related version in another world, NOT one continuous life
+ *  - loop_iteration: an appearance in a loop; whether memory continues is separate
+ *  - participation: an event participant, not an identity claim
+ *  - other: unambiguous fallback requiring interpretation
+ */
+export const IdentityRelationKindSchema = z.enum([
+  "personal_continuity",
+  "counterpart",
+  "loop_iteration",
+  "participation",
+  "other",
+]);
+
+/**
+ * Which sense of "before/after" an ordering relation describes (design decision #5).
+ * Chronological (within a frame), experienced (a named agent/journey), presentation
+ * (a telling/edition), simultaneity (same frame, no direction), or unspecified.
+ */
+export const OrderingKindSchema = z.enum([
+  "chronological",
+  "experienced",
+  "presentation",
+  "simultaneity",
+  "unspecified",
+]);
+
 export type Id = z.infer<typeof IdSchema>;
 export type PastMutability = z.infer<typeof PastMutabilitySchema>;
 export type ParadoxHandling = z.infer<typeof ParadoxHandlingSchema>;

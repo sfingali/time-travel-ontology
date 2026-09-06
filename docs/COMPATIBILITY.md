@@ -51,4 +51,28 @@ Prefer catalogue topology patterns that match the primary:
 - `tangent_universe` -> `tangent_bubble`
 - `multiverse_contact` -> `dual_parallel_pair`
 
+## Composition semantics
+
+A rule catalogue boolean such as `createsBranches: false` means **"this rule does not
+supply that capability"**, not "the story forbids it." Genuine prohibitions are
+represented separately (and reported as warnings), so a mixin can add a capability its
+primary does not supply (e.g. entropy inversion + bootstrap is allowed; the primary just
+doesn't supply it). Incompatible same-scope policies produce a warning, not an automatic
+primary-rule override.
+
+## JSON Schema vs the validator
+
+`schema/ontology.schema.json` is a **structural** schema. It does not carry Zod's
+semantic checks (ID uniqueness, reference resolution, rule-list agreement, catalogue
+membership, active rule-effect membership, checkpoint/entropy consistency). Passing
+JSON Schema is **not** equivalent to passing `npm run validate`. Use the exported
+`validateStoryEncoding()` (TypeScript) as the reference; other-language consumers must
+re-implement those checks to match. See `docs/DESIGN_DECISIONS.md`.
+
+## Versioning
+
+Root `schemaVersion` (e.g. `"1.0"`) is optional; omitted = legacy input, accepted by
+the compatibility reader. New encodings should stamp it; the reader rejects unsupported
+future versions clearly. See `docs/DESIGN_DECISIONS.md`.
+
 See `docs/ENCODING-GUIDE.md` for the encoding checklist.

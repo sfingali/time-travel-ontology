@@ -91,6 +91,74 @@ export function validateStoryEncoding(data: unknown): ValidationResult {
     }
   }
 
+  // Identity semantics (decision #1): an identity link should say what it means.
+  for (const edge of enc.edges) {
+    if (edge.kind === "identity") {
+      if (edge.identityRelation === undefined) {
+        warnings.push(
+          `Edge ${edge.id}: identity edge lacks identityRelation (personal_continuity | counterpart | loop_iteration | participation)`,
+        );
+      }
+    } else if (edge.identityRelation !== undefined) {
+      warnings.push(`Edge ${edge.id}: identityRelation set on a ${edge.kind} edge (expected on identity only)`);
+    }
+    if (edge.kind === "temporal") {
+      if (edge.orderKind === undefined) {
+        warnings.push(
+          `Edge ${edge.id}: temporal edge lacks orderKind (chronological | experienced | presentation | simultaneity)`,
+        );
+      }
+    } else if (edge.orderKind !== undefined && edge.kind !== "causal") {
+      warnings.push(`Edge ${edge.id}: orderKind set on a ${edge.kind} edge (expected on temporal/causal)`);
+    }
+  }
+
+  // Branch full-vs-draft (decision #2): a non-draft branch should name its parent
+  // and fork event. Advisory — a draft can mark the fork point as unknown.
+  for (const w of enc.worlds) {
+    if (w.kind !== "branch") continue;
+    if (w.draft !== true) {
+      if (w.parentRef === undefined) {
+        warnings.push(`Branch ${w.id}: not marked draft but has no parentRef`);
+      }
+      if (w.forkEventRef === undefined) {
+        warnings.push(`Branch ${w.id}: not marked draft but has no forkEventRef`);
+      }
+    }
+  }
+
+  // Rule-set evidence (decision #3): a few structural prerequisites a graph CAN
+  // check. Absence is an incomplete-evidence notice, not a rejection.
+  const RULE_EVIDENCE: Record<string, string[]> = {
+    entropy_inversion: ["inversion"],
+    bootstrap_ontological: ["bootstrap_origin"],
+    temporal_loop_exit: ["loop_reset"],
+  };
+  const eventTypes = new Set<string>(enc.events.map((e) => e.type));
+  for (const id of enc.ruleSetIds) {
+    const needed = RULE_EVIDENCE[id];
+    if (needed) {
+      for (const t of needed) {
+        if (!eventTypes.has(t)) {
+          warnings.push(`Rule "${id}" selected but no ${t} event present (incomplete evidence)`);
+        }
+      }
+    }
+  }
+
+  // Topology conformance (decision #4): advisory, not a rejection.
+  const parallelCount = enc.worlds.filter((w) => w.kind === "parallel_world").length;
+  if (enc.topologyPatternId === "dual_parallel_pair" && parallelCount !== 2) {
+    warnings.push(
+      `Topology "dual_parallel_pair" but ${parallelCount} parallel world(s) present (expected exactly two)`,
+    );
+  }
+  if (enc.topologyPatternId === "parallel_world_network" && parallelCount < 2) {
+    warnings.push(
+      `Topology "parallel_world_network" but ${parallelCount} parallel world(s) present (expected two or more)`,
+    );
+  }
+
   return { success: errors.length === 0, errors, warnings };
 }
 

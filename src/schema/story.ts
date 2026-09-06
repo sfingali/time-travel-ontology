@@ -24,6 +24,8 @@ import { WorldDescriptorSchema } from "./topology.js";
 export const StoryEncodingSchema = z
   .object({
     meta: StoryMetaSchema,
+    /** Format version (e.g. "1.0"). Omitted = legacy input (decision #7). */
+    schemaVersion: z.string().regex(/^\d+\.\d+$/).optional(),
     /** Catalogue rule set ids — include primary + mixins */
     ruleSetIds: z.array(IdSchema).min(1),
     /** Dominant law; must appear in ruleSetIds */

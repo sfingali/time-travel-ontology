@@ -38,6 +38,16 @@ const TOPOLOGY_PATTERNS_RAW: TopologyPattern[] = [
     typicalRelations: ["correspondsTo", "mirrors"],
   },
   {
+    id: "parallel_world_network",
+    label: "Parallel worlds network",
+    description:
+      "Two or more coexisting parallel worlds without requiring an all-to-all correspondence. A general alternative to dual_parallel_pair for larger multiverses (EEAAO-style).",
+    typicalWorldKinds: ["parallel_world"],
+    typicalRelations: ["correspondsTo", "mirrors"],
+    notes:
+      "Conformance is advisory; a focal pair (where relevant) may be declared per world. Avoids stretching dual_parallel_pair beyond exactly two worlds.",
+  },
+  {
     id: "worldline_bundle",
     label: "Worldline bundle with attractors",
     description:

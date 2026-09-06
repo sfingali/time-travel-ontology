@@ -54,8 +54,12 @@ export const BranchSchema = z
     kind: z.literal("branch"),
     /** Parent world this branch forked from */
     parentRef: IdSchema.optional(),
+    /** Event at which the branch diverged from its parent (design decision #2) */
+    forkEventRef: IdSchema.optional(),
     /** Divergence point label */
     forkLabel: z.string().optional(),
+    /** True when the branch is a draft whose fork point is not yet pinned down (#2) */
+    draft: z.boolean().optional(),
     pruned: z.boolean().optional(),
     /** Nesting parent for tangent bubbles (distinct from fork parentRef) */
     nestsWithinRef: IdSchema.optional(),
