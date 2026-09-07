@@ -7,9 +7,9 @@ mechanism: psychic_mind_send | wolverine_consciousness_to_1973
 paradox_type: branching_timeline | set_right_what_once_went_wrong | continuity_reboot
 summary_depth: exhaustive
 diagram_refs:
-  - "https://en.wikipedia.org/wiki/X-Men:_Days_of_Future_Past
+  - https://en.wikipedia.org/wiki/X-Men:_Days_of_Future_Past
 plot_summary_sources:
-  - "https://en.wikipedia.org/wiki/X-Men:_Days_of_Future_Past
+  - https://en.wikipedia.org/wiki/X-Men:_Days_of_Future_Past
   - "https://tvtropes.org/pmwiki/pmwiki.php/Film/XMenDaysOfFuturePast"
 flag_diagrams: false
 ---
