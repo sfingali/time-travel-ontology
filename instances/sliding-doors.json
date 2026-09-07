@@ -571,5 +571,15 @@
       "w_root",
       "w_catch"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): c4/x4; semantic duplication UNKNOWN"
+    }
+  ]
 }

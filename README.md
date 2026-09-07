@@ -89,7 +89,7 @@ YAML `mechanism` / `paradox_type` tags are the bridge into this ontology (`npm r
 | Doc | |
 |-----|--|
 | [OVERVIEW](docs/OVERVIEW.md) · [RULES](docs/RULES.md) · [TOPOLOGY](docs/TOPOLOGY.md) | Model |
-| [NARRATIVE](docs/NARRATIVE.md) · [ENCODING-GUIDE](docs/ENCODING-GUIDE.md) · [COMPATIBILITY](docs/COMPATIBILITY.md) · [IMPORT](docs/IMPORT.md) · [VALIDATION](docs/VALIDATION.md) | Practice |
+| [NARRATIVE](docs/NARRATIVE.md) · [ENCODING-GUIDE](docs/ENCODING-GUIDE.md) · [COMPATIBILITY](docs/COMPATIBILITY.md) · [IMPORT](docs/IMPORT.md) · [VALIDATION](docs/VALIDATION.md) · [SEMANTIC-CONTRACT](docs/SEMANTIC_CONTRACT.md) | Practice |
 
 A future renderer should read `worlds[]`, `agents[]`, `events[]`, and `edges[]` (`causal` · `temporal` · `identity` · `world_relation` · `family` · `intervention`) plus `interventions[]` / `outcome`. **No layout or graphics are prescribed here.**
 

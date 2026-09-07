@@ -604,5 +604,15 @@
       "w_prime",
       "w_echo"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): c2/x4, c5/x5; semantic duplication UNKNOWN"
+    }
+  ]
 }

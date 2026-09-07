@@ -516,5 +516,23 @@
     "endWorldRefs": [
       "w_ps"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): npal10/px3; semantic duplication UNKNOWN"
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "event_identity",
+      "status": "INCOMPLETE",
+      "note": "Summary/padding event-id candidates present; granularity UNKNOWN"
+    }
+  ]
 }

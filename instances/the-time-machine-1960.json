@@ -547,5 +547,15 @@
     "endWorldRefs": [
       "w_wells"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): c16/x4; semantic duplication UNKNOWN"
+    }
+  ]
 }

@@ -580,5 +580,15 @@
     "endWorldRefs": [
       "w_birthday"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): c10/x2, c15/x4, c9/x7; semantic duplication UNKNOWN"
+    }
+  ]
 }

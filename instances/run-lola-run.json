@@ -592,5 +592,15 @@
     "endWorldRefs": [
       "w_run2"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): c12/x6; semantic duplication UNKNOWN"
+    }
+  ]
 }

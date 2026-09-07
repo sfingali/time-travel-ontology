@@ -203,6 +203,68 @@ export function validateStoryEncoding(data: unknown): ValidationResult {
     warnings.push(`Topology "origin_plus_twins" but no origin world (isOriginWorld) is declared`);
   }
 
+  // Branch completeness + ancestry (Astra review rec #2/#3): advisory, never reject.
+  for (const w of enc.worlds) {
+    if (w.kind !== "branch") continue;
+    if (w.branchSpecification === "COMPLETE") {
+      if (w.parentRef === undefined || w.forkEventRef === undefined) {
+        warnings.push(
+          `Branch ${w.id}: declared COMPLETE but lacks a parentRef/forkEventRef (effective INCOMPLETE)`,
+        );
+      }
+    }
+    let cur = w.parentRef;
+    const seen = new Set<string>();
+    while (cur !== undefined) {
+      if (cur === w.id) {
+        warnings.push(`Branch ${w.id}: ancestry cycle (parent chain returns to itself)`);
+        break;
+      }
+      if (seen.has(cur)) break;
+      seen.add(cur);
+      const parent = enc.worlds.find((x) => x.id === cur);
+      cur = parent?.kind === "branch" ? parent.parentRef : undefined;
+    }
+  }
+
+  // Abstraction annotations (Astra review rec #7): advisory reference checks.
+  const eventIdsSet = new Set(enc.events.map((e) => e.id));
+  const edgeIdsSet = new Set(enc.edges.map((e) => e.id));
+  for (const e of enc.events) {
+    if (e.duplicateOf !== undefined) {
+      if (e.duplicateOf === e.id) warnings.push(`Event ${e.id}: duplicateOf references itself`);
+      else if (!eventIdsSet.has(e.duplicateOf)) warnings.push(`Event ${e.id}: duplicateOf ${e.duplicateOf} is not an event`);
+    }
+    for (const ref of e.summaryOf ?? []) {
+      if (ref === e.id) warnings.push(`Event ${e.id}: summaryOf references itself`);
+      else if (!eventIdsSet.has(ref)) warnings.push(`Event ${e.id}: summaryOf ${ref} is not an event`);
+    }
+  }
+  for (const ed of enc.edges) {
+    if (ed.duplicateOf !== undefined) {
+      if (ed.duplicateOf === ed.id) warnings.push(`Edge ${ed.id}: duplicateOf references itself`);
+      else if (!edgeIdsSet.has(ed.duplicateOf)) warnings.push(`Edge ${ed.id}: duplicateOf ${ed.duplicateOf} is not an edge`);
+    }
+    for (const ref of ed.summaryOf ?? []) {
+      if (!edgeIdsSet.has(ref)) warnings.push(`Edge ${ed.id}: summaryOf ${ref} is not an edge`);
+    }
+  }
+
+  // semanticReview target references (Astra review rec #2/#6): advisory.
+  for (const rev of enc.semanticReview ?? []) {
+    if (rev.target.kind === "story") continue;
+    const id = rev.target.id;
+    const ok =
+      rev.target.kind === "world"
+        ? worldIds.has(id)
+        : rev.target.kind === "event"
+          ? eventIdsSet.has(id)
+          : edgeIdsSet.has(id);
+    if (!ok) {
+      warnings.push(`semanticReview target ${rev.target.kind}/${id} is not a declared ${rev.target.kind}`);
+    }
+  }
+
   return { success: errors.length === 0, errors, warnings };
 }
 

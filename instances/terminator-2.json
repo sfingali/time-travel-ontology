@@ -517,5 +517,15 @@
       "w_no_jd",
       "w_1991"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "topology",
+      "status": "INCOMPLETE",
+      "note": "Topology conformance unresolved (count-level mismatch); classification UNKNOWN pending inspection"
+    }
+  ]
 }

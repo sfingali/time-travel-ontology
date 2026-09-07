@@ -60,6 +60,9 @@ export const BranchSchema = z
     forkLabel: z.string().optional(),
     /** True when the branch is a draft whose fork point is not yet pinned down (#2) */
     draft: z.boolean().optional(),
+    /** Declared completeness of the branch origin (Astra review rec #3): missing = UNKNOWN.
+     *  A COMPLETE assertion lacking origin evidence is an advisory INCOMPLETE, not a rejection. */
+    branchSpecification: z.enum(["INCOMPLETE", "DRAFT", "COMPLETE"]).optional(),
     pruned: z.boolean().optional(),
     /** Nesting parent for tangent bubbles (distinct from fork parentRef) */
     nestsWithinRef: IdSchema.optional(),

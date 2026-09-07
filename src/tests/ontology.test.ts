@@ -288,3 +288,55 @@ describe("typed loop exit + rule-effect scope", () => {
     }
   });
 });
+
+describe("advisory semantic annotations (Astra review — never reject)", () => {
+  it("accepts a semanticReview entry", () => {
+    const s = schemaValidStory();
+    s.semanticReview = [{
+      target: { kind: "story" }, dimension: "topology", status: "INCOMPLETE",
+      note: "count-level mismatch; UNKNOWN",
+    }];
+    const r = validateStoryEncoding(s);
+    assert.ok(r.success, JSON.stringify(r.errors));
+  });
+
+  it("warns (not rejects) a branch declared COMPLETE without origin", () => {
+    const s = schemaValidStory();
+    s.worlds.push({ kind: "branch", id: "b1", label: "Branch", branchSpecification: "COMPLETE" });
+    const r = validateStoryEncoding(s);
+    assert.ok(r.success, JSON.stringify(r.errors));
+    assert.ok((r.warnings ?? []).some((w) => w.includes("declared COMPLETE")));
+  });
+
+  it("warns (not rejects) a self-referential duplicateOf", () => {
+    const s = schemaValidStory();
+    s.events.push({ id: "e_dup", type: "ordinary", label: "D", at: { worldRef: "w1" }, duplicateOf: "e_dup" });
+    const r = validateStoryEncoding(s);
+    assert.ok(r.success, JSON.stringify(r.errors));
+    assert.ok((r.warnings ?? []).some((w) => w.includes("duplicateOf references itself")));
+  });
+
+  it("warns (not rejects) a semanticReview target that is not declared", () => {
+    const s = schemaValidStory();
+    s.semanticReview = [{
+      target: { kind: "edge", id: "nope" }, dimension: "edge_identity",
+      status: "INCOMPLETE", note: "unresolved",
+    }];
+    const r = validateStoryEncoding(s);
+    assert.ok(r.success, JSON.stringify(r.errors));
+    assert.ok((r.warnings ?? []).some((w) => w.includes("semanticReview target edge/nope")));
+  });
+});
+
+describe("corpus regression (Astra review — 59/59 must hold)", () => {
+  it("every instance in instances/ validates", async () => {
+    const dir = path.join(root, "instances");
+    const files = (await readdir(dir)).filter((f) => f.endsWith(".json")).sort();
+    assert.ok(files.length >= 59, `expected >=59 instance files, got ${files.length}`);
+    for (const f of files) {
+      const data = JSON.parse(await readFile(path.join(dir, f), "utf8"));
+      const r = validateStoryEncoding(data);
+      assert.ok(r.success, `${f}: ${JSON.stringify(r.errors)}`);
+    }
+  });
+});

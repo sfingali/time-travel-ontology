@@ -180,6 +180,41 @@ export const EventPayloadSchema = z
     }
   });
 
+/** Modeling granularity of an event/edge: atomic detail, a summary of others, or unspecified. */
+export const AbstractionLevelSchema = z.enum(["atomic", "summary", "unspecified"]);
+
+/** Review status of a semantic dimension (Astra: missing entry = UNKNOWN). */
+export const SemanticReviewStatusSchema = z.enum(["INCOMPLETE", "DRAFT", "REVIEWED"]);
+
+/** Which semantic dimension a review entry addresses. */
+export const SemanticReviewDimensionSchema = z.enum([
+  "topology",
+  "branch_origin",
+  "rule_composition",
+  "event_identity",
+  "edge_identity",
+  "world_placement",
+  "relation_semantics",
+  "mechanism_completeness",
+]);
+
+/** What a review entry targets. */
+export const SemanticReviewTargetSchema = z.union([
+  z.object({ kind: z.literal("story") }),
+  z.object({ kind: z.enum(["world", "event", "edge"]), id: IdSchema }),
+]);
+
+/** A reviewable incomplete/draft/evidence statement, not a correctness claim. */
+export const SemanticReviewEntrySchema = z
+  .object({
+    target: SemanticReviewTargetSchema,
+    dimension: SemanticReviewDimensionSchema,
+    status: SemanticReviewStatusSchema,
+    note: z.string().min(1),
+    evidence: z.array(z.string()).optional(),
+  })
+  .strict();
+
 export const EventSchema = z
   .object({
     id: IdSchema,
@@ -188,6 +223,12 @@ export const EventSchema = z
     at: EventAtSchema,
     agents: z.array(IdSchema).optional(),
     payload: EventPayloadSchema.optional(),
+    /** This event asserts the same semantic occurrence as the target (same granularity). */
+    duplicateOf: IdSchema.optional(),
+    /** This event summarizes the listed events; it does not assert identity with them. */
+    summaryOf: z.array(IdSchema).optional(),
+    /** Declared modeling granularity only; does not establish equivalence. */
+    abstractionLevel: AbstractionLevelSchema.optional(),
   })
   .strict();
 
@@ -227,6 +268,12 @@ export const EdgeSchema = z
     identityRelation: IdentityRelationKindSchema.optional(),
     /** Which sense of "before/after" a temporal/causal edge expresses (#5). */
     orderKind: OrderingKindSchema.optional(),
+    /** This edge asserts the same semantic connection as the target (same granularity). */
+    duplicateOf: IdSchema.optional(),
+    /** This edge summarizes the listed edges; it does not assert identity with them. */
+    summaryOf: z.array(IdSchema).optional(),
+    /** Declared modeling granularity only; does not establish equivalence. */
+    abstractionLevel: AbstractionLevelSchema.optional(),
   })
   .strict();
 

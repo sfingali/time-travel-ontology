@@ -297,6 +297,14 @@
                   "draft": {
                     "type": "boolean"
                   },
+                  "branchSpecification": {
+                    "type": "string",
+                    "enum": [
+                      "INCOMPLETE",
+                      "DRAFT",
+                      "COMPLETE"
+                    ]
+                  },
                   "pruned": {
                     "type": "boolean"
                   },
@@ -685,6 +693,27 @@
                   }
                 },
                 "additionalProperties": false
+              },
+              "duplicateOf": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "summaryOf": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                }
+              },
+              "abstractionLevel": {
+                "type": "string",
+                "enum": [
+                  "atomic",
+                  "summary",
+                  "unspecified"
+                ]
               }
             },
             "required": [
@@ -763,6 +792,27 @@
                   "experienced",
                   "presentation",
                   "simultaneity",
+                  "unspecified"
+                ]
+              },
+              "duplicateOf": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+              },
+              "summaryOf": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                }
+              },
+              "abstractionLevel": {
+                "type": "string",
+                "enum": [
+                  "atomic",
+                  "summary",
                   "unspecified"
                 ]
               }
@@ -854,6 +904,92 @@
             "endWorldRefs"
           ],
           "additionalProperties": false
+        },
+        "semanticReview": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "target": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "story"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "enum": [
+                          "world",
+                          "event",
+                          "edge"
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "topology",
+                  "branch_origin",
+                  "rule_composition",
+                  "event_identity",
+                  "edge_identity",
+                  "world_placement",
+                  "relation_semantics",
+                  "mechanism_completeness"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "INCOMPLETE",
+                  "DRAFT",
+                  "REVIEWED"
+                ]
+              },
+              "note": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "target",
+              "dimension",
+              "status",
+              "note"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [

@@ -550,5 +550,15 @@
     "endWorldRefs": [
       "w_eot"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "event_identity",
+      "status": "INCOMPLETE",
+      "note": "Summary/padding event-id candidates present; granularity UNKNOWN"
+    }
+  ]
 }

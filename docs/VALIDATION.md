@@ -39,6 +39,15 @@ so a story is not rejected just because its evidence is still being gathered:
 - A `world_relation` edge without a `relation`, or with non-world endpoints.
 - Topology conformance, e.g. `dual_parallel_pair` declaring a number of parallel worlds
   other than exactly two, or `parallel_world_network` declaring fewer than two.
+- Branch origin: a branch declared `branchSpecification: COMPLETE` that lacks a
+  `parentRef`/`forkEventRef` (effective INCOMPLETE), or a branch ancestry cycle.
+- Abstraction references on events/edges (`duplicateOf` / `summaryOf`) that
+  self-reference or point at a non-existent/cross-type target.
+- `semanticReview` entries whose target does not resolve to a declared
+  world/event/edge.
+
+See [`SEMANTIC_CONTRACT.md`](SEMANTIC_CONTRACT.md) for the interpretation rules and
+composition semantics, and the evidence-obligation table.
 
 ## Documented but not enforced (known limits)
 

@@ -569,5 +569,23 @@
       "w_1743",
       "w_stones"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "topology",
+      "status": "INCOMPLETE",
+      "note": "Topology conformance unresolved (count-level mismatch); classification UNKNOWN pending inspection"
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): c12/x5; semantic duplication UNKNOWN"
+    }
+  ]
 }

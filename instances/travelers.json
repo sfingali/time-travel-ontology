@@ -491,5 +491,15 @@
       "w_present",
       "w_future"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "topology",
+      "status": "INCOMPLETE",
+      "note": "Topology conformance unresolved (count-level mismatch); classification UNKNOWN pending inspection"
+    }
+  ]
 }

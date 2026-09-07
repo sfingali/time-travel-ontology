@@ -546,5 +546,31 @@
       "w_evacuated",
       "w_2016"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "topology",
+      "status": "INCOMPLETE",
+      "note": "Topology conformance unresolved (count-level mismatch); classification UNKNOWN pending inspection"
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): nyou4/yx1; semantic duplication UNKNOWN"
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "event_identity",
+      "status": "INCOMPLETE",
+      "note": "Summary/padding event-id candidates present; granularity UNKNOWN"
+    }
+  ]
 }

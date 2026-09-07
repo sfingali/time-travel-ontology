@@ -529,5 +529,15 @@
     "endWorldRefs": [
       "w_infinity"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): c6/loop1; semantic duplication UNKNOWN"
+    }
+  ]
 }

@@ -7,6 +7,7 @@ import {
   InterventionSchema,
   OutcomeSchema,
   StoryMetaSchema,
+  SemanticReviewEntrySchema,
 } from "./narrative.js";
 import { WorldDescriptorSchema } from "./topology.js";
 
@@ -43,6 +44,9 @@ export const StoryEncodingSchema = z
     edges: z.array(EdgeSchema).default([]),
     interventions: z.array(InterventionSchema).default([]),
     outcome: OutcomeSchema,
+    /** Advisory review entries (Astra review rec #2/#6/#7): optional, never reject.
+     *  A missing entry for a dimension means UNKNOWN, not "reviewed and fine". */
+    semanticReview: z.array(SemanticReviewEntrySchema).optional(),
   })
   .strict()
   .superRefine((data, ctx) => {

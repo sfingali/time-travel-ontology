@@ -481,5 +481,23 @@
     "endWorldRefs": [
       "w_past"
     ]
-  }
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "topology",
+      "status": "INCOMPLETE",
+      "note": "Topology conformance unresolved (count-level mismatch); classification UNKNOWN pending inspection"
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "edge_identity",
+      "status": "INCOMPLETE",
+      "note": "Duplicate causal edge signature(s): c2/loop2; semantic duplication UNKNOWN"
+    }
+  ]
 }
