@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml/badge.svg)](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml)
 
-**13** rule sets · **9** topology patterns · **59** validated instances · **461** archive works · **71** diagram images
+**13** rule sets · **9** topology patterns · **59** validated instances · **461** archive works · **52** diagram images (13 works + 6 concept diagrams)
 
 Encode a plotline as typed JSON: which **laws** apply, how **worlds** relate, and a **narrative graph** (agents, events, edges). Comparable across the corpus; consumable by a later visual engine. Zod is the source of truth; `schema/ontology.schema.json` is exported for everyone else.
 
@@ -78,7 +78,7 @@ reference-archive/      # narrative corpus + diagram assets
 
 ## Reference archive
 
-Public spoilers, **no original media**: **203** films · **119** TV · **139** novels (**461** total) · **71** diagram images under `reference-archive/diagrams/assets/` (real committed blobs — no Git LFS).
+Public spoilers, **no original media**: **203** films · **119** TV · **139** novels (**461** total) · **52** diagram images under `reference-archive/diagrams/assets/` — one folder per work, real committed blobs, no Git LFS.
 
 YAML `mechanism` / `paradox_type` tags are the bridge into this ontology (`npm run import` → stubs; deepen by hand into `instances/`). Mapping + skip policy: [docs/IMPORT.md](docs/IMPORT.md). Corpus notes: [reference-archive/README.md](reference-archive/README.md).
 

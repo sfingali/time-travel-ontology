@@ -16,7 +16,7 @@ The ontology turns these entries into validated rule/topology/narrative encoding
 | Diagram work-pages | **26** |
 | Exhaustive deep entries | **168** |
 | **Catalogued works** | **461** |
-| Diagram images (Git LFS) | **71** in [`diagrams/assets/`](diagrams/assets/) |
+| Diagram images (committed blobs, no LFS) | **52** in [`diagrams/assets/`](diagrams/assets/) — one folder per work |
 
 Indexes: [`films/_index.md`](films/_index.md) · [`tv/_index.md`](tv/_index.md) · [`novels/_index.md`](novels/_index.md) · [`index.md`](index.md)
 
@@ -25,7 +25,7 @@ Indexes: [`films/_index.md`](films/_index.md) · [`tv/_index.md`](tv/_index.md) 
 | Path | Contents |
 |------|----------|
 | [`films/`](films/) [`tv/`](tv/) [`novels/`](novels/) | One markdown entry per work |
-| [`diagrams/`](diagrams/) | URL indexes, hunt logs, **local captures** (LFS) |
+| [`diagrams/`](diagrams/) | URL indexes, hunt logs, **per-work diagram captures** (committed blobs, no LFS) |
 | [`candidates/`](candidates/) | Expansion harvest lists |
 | [`sources/`](sources/) | Bibliography |
 | [`logs/`](logs/) | Stream / wave notes |

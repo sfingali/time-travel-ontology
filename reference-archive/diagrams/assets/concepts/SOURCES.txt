@@ -1,0 +1,55 @@
+Wikimedia Commons downloads — free-licensed time-travel / paradox diagrams
+Harvest: 2026-09-06 (UTC) / secondary Reddit+Imgur+Commons pass
+All files below are clearly free-licensed on Commons; keep attribution.
+Restructured 2026-09-07: general concept/paradox diagrams moved from
+`assets/commons/` → `assets/concepts/`; work-specific trees (Dark, All You
+Zombies) folded into their work folder. Attribution/URLs unchanged.
+
+NOTE: Several files are Wikimedia thumbnail PNG renders (iiurlwidth≈3840) because
+original full-resolution endpoints returned HTTP 429 during harvest. Prefer the
+Commons page URL for the canonical SVG/JPG when re-downloading.
+
+FILE: Bilele_de_biliard_in_paradoxul_bunicului.svg
+  Commons page: https://commons.wikimedia.org/wiki/File:Bilele_de_biliard_%C3%AEn_paradoxul_bunicului.svg
+  Direct URL:   https://upload.wikimedia.org/wikipedia/commons/0/08/Bilele_de_biliard_%C3%AEn_paradoxul_bunicului.svg
+  License:      CC BY-SA 4.0
+  Artist:       BrightRoundCircle (RO derivative of grandfather paradox billiard)
+
+FILE: Causal_loop_billiard_ball.svg
+  Commons page: https://commons.wikimedia.org/wiki/File:Causal_loop_billiard_ball.svg
+  Direct URL:   https://upload.wikimedia.org/wikipedia/commons/3/37/Causal_loop_billiard_ball.svg
+  License:      CC BY-SA 3.0
+  Artist:       BrightRoundCircle
+
+FILE: Grandfather_paradox_billiard_ball.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Grandfather_paradox_billiard_ball.svg
+  Direct URL:   https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Grandfather_paradox_billiard_ball.svg/3840px-Grandfather_paradox_billiard_ball.svg.png
+  License:      CC BY-SA 4.0
+  Artist:       BrightRoundCircle
+  Note:         Rasterized thumb of SVG
+
+FILE: Predestinatieparadox.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Predestinatieparadox.png
+  Direct URL:   https://upload.wikimedia.org/wikipedia/commons/5/5e/Predestinatieparadox.png
+  License:      CC BY-SA 4.0
+  Artist:       S. Perquin (Dutch predestination paradox diagram)
+
+FILE: Star_Trek_Timelines.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Star_Trek_Timelines.png
+  Direct URL:   https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Star_Trek_Timelines.png/3840px-Star_Trek_Timelines.png
+  License:      CC BY 3.0
+  Artist:       CellarDoor85 (Robert Aehnelt)
+  Note:         3840px thumb
+
+FILE: Time_Travel_Method-2.png
+  Commons page: https://commons.wikimedia.org/wiki/File:Time_Travel_Method-2.svg
+  Direct URL:   https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Time_Travel_Method-2.svg/3840px-Time_Travel_Method-2.svg.png
+  License:      CC BY-SA 3.0
+  Artist:       Tom-b (derivative of William lee0 / MJL Primer method)
+  Note:         Rasterized thumb of SVG
+
+-- FOLDED INTO WORK FOLDERS (2026-09-07) --
+FILE: All_you_zombies_timeline.png  -> assets/all-you-zombies/ (CC BY-SA 4.0, Johnstoo)
+FILE: Dark_TV_Series_Family_Tree.png -> assets/dark/ (CC BY-SA 4.0, AfflictedHorror)
+FILE: Dark_TV_Series_Family_Tree_zh-tw.png -> assets/dark/ (CC BY-SA 4.0, AfflictedHorror / Austin Chang)
+FILE: Dark_family_tree_season_3_version_1.jpg -> assets/dark/ (CC BY-SA 4.0, Christianlorenz97)

@@ -13,7 +13,7 @@
 ## Outputs
 - Appended **84** unique URLs to `diagrams/MASTER-DIAGRAM-INDEX.md` (secondary harvest section)
 - Created `diagrams/sources-reddit-imgur.md` (annotated)
-- Downloaded Commons assets → `diagrams/assets/commons/` + `SOURCES.txt`
+- Downloaded Commons assets → `diagrams/assets/` (work trees into `assets/<work>/`, concepts into `assets/concepts/`) + `SOURCES.txt`
 - Local Commons file count: 10
 
 ## Highlights

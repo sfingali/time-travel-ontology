@@ -550,4 +550,4 @@ User-variation diagrams and multilingual mirrors. Reddit permalinks verified via
 | Commons Category: Fiction about time travel | https://commons.wikimedia.org/wiki/Category:Fiction_about_time_travel | explainer | en | ★★ | Fiction TT media category |
 
 **Secondary pass new unique URLs appended:** 84
-**Commons local assets this pass:** see [`assets/commons/SOURCES.txt`](assets/commons/SOURCES.txt) (10 files).
+**Commons local assets this pass:** concept diagrams now in [`assets/concepts/SOURCES.txt`](assets/concepts/SOURCES.txt); work trees folded into their work folders (see [`DIAGRAM-CLASSIFICATION.md`](DIAGRAM-CLASSIFICATION.md)).

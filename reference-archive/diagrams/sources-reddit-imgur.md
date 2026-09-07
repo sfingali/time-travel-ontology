@@ -57,7 +57,7 @@
   - Note: DE native diagram culture for Dark
 - **Commons AfflictedHorror / Christianlorenz97** — Free-licensed family trees
   - https://commons.wikimedia.org/wiki/File:Dark_(TV_Series)_Family_Tree.svg
-  - Note: EN + zh-tw SVG; S3 JPG; local under assets/commons/
+  - Note: EN + zh-tw SVG; S3 JPG; folded into `assets/dark/` (restructured 2026-09-07).
 
 ## Tenet (Reddit diagrams + Imgur + ES)
 - **r/tenet users (il4xew, il97xs, kbtsel, ii38sl, ikk4ov, iln6rl, j13qoy)** — Inversion / pincer / character timeline diagrams

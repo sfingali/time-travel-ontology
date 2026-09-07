@@ -26,7 +26,7 @@ Meta-archive of **public** plot summaries, structure notes, and diagram/timeline
 ## Indexes
 - [Films](films/_index.md) · [TV](tv/_index.md) · [Novels](novels/_index.md)
 - [Master diagram URLs](diagrams/MASTER-DIAGRAM-INDEX.md)
-- [Browser harvest log](diagrams/browser-harvest.md) · [assets](diagrams/assets/browser-harvest/)
+- [Diagram assets — one folder per work](diagrams/assets/) · [classification](diagrams/DIAGRAM-CLASSIFICATION.md)
 - [AV diagrams](diagrams/av-diagram-index.md) · [Novel diagrams](diagrams/novel-diagram-index.md)
 - [Stream / wave logs](logs/) · [Full burn report](FULL_BURN_REPORT.md) · [README](README.md)
 
