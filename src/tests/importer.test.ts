@@ -88,6 +88,17 @@ describe("importer round-trip", () => {
       // is a genuinely valid story encoding as an extra guard.
       const result = validateStoryEncoding(stub);
       assert.ok(result.success, JSON.stringify(result.errors));
+
+      // The tag-mapping should be recorded as a reviewable hypothesis with
+      // traceable provenance + an explicit unknown state (review rec #6).
+      const indexPath = path.join(generatedDir, "_index.json");
+      assert.ok(existsSync(indexPath), `expected index at ${indexPath}`);
+      const index = JSON.parse(await readFile(indexPath, "utf8"));
+      const rec = index.stubs.find((s: { id: string }) => s.id === "ripple-fixture");
+      assert.ok(rec, "expected a record for ripple-fixture in the index");
+      assert.equal(rec.reviewStatus, "hypothesis");
+      assert.equal(typeof rec.mappingVersion, "string");
+      assert.ok(Array.isArray(rec.unmappedTags));
     } finally {
       await rm(tmp, { recursive: true, force: true });
     }

@@ -159,6 +159,50 @@ export function validateStoryEncoding(data: unknown): ValidationResult {
     );
   }
 
+  // Extend conformance to the remaining patterns (review Logic #5). All advisory:
+  // the presence of a defining relation/feature is a structural expectation, not
+  // a narrative-truth claim.
+  const worldRelationKinds = new Set<string>();
+  for (const e of enc.edges) {
+    if (e.kind === "world_relation" && e.relation !== undefined) {
+      worldRelationKinds.add(e.relation);
+    }
+  }
+  const hasFork =
+    worldRelationKinds.has("forksFrom") ||
+    enc.worlds.some((w) => w.kind === "branch" && w.parentRef !== undefined);
+  const hasAttract = worldRelationKinds.has("attractsToward");
+  const hasCollapse =
+    worldRelationKinds.has("collapsesInto") || worldRelationKinds.has("nestsWithin");
+  const hasOrigin = enc.worlds.some(
+    (w) => (w as { isOriginWorld?: boolean }).isOriginWorld === true,
+  );
+
+  if (
+    (enc.topologyPatternId === "single_fixed_timeline" ||
+      enc.topologyPatternId === "inverted_single_timeline") &&
+    enc.worlds.length > 1
+  ) {
+    warnings.push(
+      `Topology "${enc.topologyPatternId}" implies a single world but ${enc.worlds.length} world(s) are declared`,
+    );
+  }
+  if (enc.topologyPatternId === "mutable_single_with_ripples" && !hasFork && !worldRelationKinds.has("supersedes")) {
+    warnings.push(`Topology "mutable_single_with_ripples" but no forksFrom/supersedes rewrite relation present`);
+  }
+  if (enc.topologyPatternId === "branching_tree" && !hasFork) {
+    warnings.push(`Topology "branching_tree" but no forksFrom fork relationship present`);
+  }
+  if (enc.topologyPatternId === "worldline_bundle" && !hasAttract) {
+    warnings.push(`Topology "worldline_bundle" but no attractsToward attractor relation present`);
+  }
+  if (enc.topologyPatternId === "tangent_bubble" && !hasCollapse) {
+    warnings.push(`Topology "tangent_bubble" but no collapsesInto/nestsWithin tangent relation present`);
+  }
+  if (enc.topologyPatternId === "origin_plus_twins" && !hasOrigin) {
+    warnings.push(`Topology "origin_plus_twins" but no origin world (isOriginWorld) is declared`);
+  }
+
   return { success: errors.length === 0, errors, warnings };
 }
 

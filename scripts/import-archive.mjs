@@ -62,6 +62,10 @@ const SECTION_ID_PREFIX = { films: "film", tv: "tv", novels: "novel" };
  *
  * mechanism / paradox_type → primary candidates (higher weight = more decisive)
  */
+/** Version of the tag→rule-set mapping rules. Bump when EXACT_TAG_RULES /
+ *  RULE_HINTS / TOPOLOGY_FOR_PRIMARY change, so generated provenance is traceable. */
+const IMPORTER_MAPPER_VERSION = "0.1.0";
+
 const EXACT_TAG_RULES = {
   // Entropy / Tenet
   entropy_inversion: ["entropy_inversion", 6],
@@ -936,6 +940,9 @@ async function main() {
       topologyPatternId,
       confidence: mapped.confidence,
       mappingScores: mapped.scores,
+      mappingVersion: IMPORTER_MAPPER_VERSION,
+      reviewStatus: "hypothesis",
+      matchedTags: mapped.matchedTags,
       unmappedTags: mapped.unmapped,
       exhaustive,
       diagramFlagged,
@@ -1111,6 +1118,9 @@ async function main() {
       archivePath: s.archivePath,
       confidence: s.confidence,
       unmappedTags: s.unmappedTags,
+      mappingVersion: s.mappingVersion,
+      reviewStatus: s.reviewStatus,
+      matchedTags: s.matchedTags,
       writtenThisRun: s.writtenThisRun,
     })),
     retainedFiles,
