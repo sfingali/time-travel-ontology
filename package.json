@@ -18,6 +18,7 @@
   "keywords": ["ontology", "time-travel", "multiverse", "zod", "narrative"],
   "license": "MIT",
   "dependencies": {
+    "yaml": "^2.5.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {

@@ -12,6 +12,29 @@
  *   --force-generated is passed (refresh stubs).
  * - Always regenerates instances/generated/_index.json and the quality report.
  *
+ * Output planning (planOutputs)
+ * -----------------------------
+ * - Archive slugs are only unique per section, so a slug used by more than one
+ *   section is namespaced (films→film, tv→tv, novels→novel): `film-<slug>`,
+ *   `tv-<slug>`, … Those are reported as `namespaceCollisions`.
+ * - If two archive entries still want the same output file (e.g. a literal
+ *   `film-foo` slug meeting a namespaced `film-foo`), BOTH are blocked rather
+ *   than silently overwriting one another, and reported as `outputCollisions`.
+ * - Generated files on disk are inventoried as retained / superseded (now owned
+ *   by a hand-crafted instance or by a namespaced id) / orphaned (nothing in the
+ *   archive maps to them any more). Nothing is deleted; the report names them.
+ *
+ * Self-validation
+ * ---------------
+ * Every stub is validated with dist/validate.js (`validateStoryEncoding`) before
+ * being written. A stub that fails is reported as a file error and NOT written,
+ * so the generated corpus can never contain schema-invalid encodings. When
+ * dist/validate.js is missing (no `npm run build` yet) validation is skipped
+ * with a single warning.
+ *
+ * Exit code is 1 when there are file errors, output collisions or ambiguous
+ * hand matches.
+ *
  * Archive root resolution (first hit wins)
  * ----------------------------------------
  * 1. --archive <path>
@@ -23,12 +46,15 @@
  */
 import { mkdir, readdir, readFile, writeFile, access } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { constants as fsConstants } from "node:fs";
+import { parse as parseYaml } from "yaml";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const SECTIONS = ["films", "tv", "novels"];
+/** Section → id prefix used when the same slug appears in more than one section. */
+const SECTION_ID_PREFIX = { films: "film", tv: "tv", novels: "novel" };
 
 /**
  * Exact (case-insensitive) archive tag → ruleSetId weights.
@@ -292,41 +318,33 @@ function splitTags(raw) {
     .filter(Boolean);
 }
 
+/**
+ * `---` … `---` frontmatter block, tolerating CRLF and trailing spaces on the
+ * fences, and an empty block (`---\n---`). Anchored at the start of the file so
+ * a `---` rule inside the markdown body can never be mistaken for a fence.
+ */
+const FRONTMATTER_RE = /^---[ \t]*\r?\n([\s\S]*?)(?:\r?\n)?---[ \t]*(?:\r?\n|$)/;
+
+/**
+ * Parse archive frontmatter with a real YAML parser (block lists, quoted and
+ * multi-line scalars, inline comments, typed scalars). A leading BOM is
+ * stripped first, since it would otherwise hide the opening fence.
+ *
+ * `mechanism` / `paradox_type` stay pipe-delimited plain scalars in the archive
+ * ("a | b" is a string in YAML, not a list) — splitTags() still splits them.
+ *
+ * @returns {{ fm: Record<string, unknown>, body: string }} `fm` is `{}` when the
+ *   file has no frontmatter block. Throws on malformed YAML; callers record
+ *   that as a per-file error.
+ */
 function parseFrontmatter(md) {
-  if (!md.startsWith("---")) return { fm: {}, body: md };
-  const end = md.indexOf("\n---", 3);
-  if (end < 0) return { fm: {}, body: md };
-  const block = md.slice(3, end).replace(/^\n/, "");
-  const body = md.slice(end + 4).replace(/^\n/, "");
-  const fm = {};
-  let listKey = null;
-  for (const line of block.split("\n")) {
-    if (!line.trim() || line.trimStart().startsWith("#")) continue;
-    const listItem = line.match(/^\s+-\s+(.*)$/);
-    if (listItem && listKey) {
-      if (!Array.isArray(fm[listKey])) fm[listKey] = [];
-      let v = listItem[1].trim();
-      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
-      fm[listKey].push(v);
-      continue;
-    }
-    listKey = null;
-    const m = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
-    if (!m) continue;
-    const key = m[1];
-    let val = m[2].trim();
-    if (val === "" || val === "|" || val === ">") {
-      listKey = key;
-      fm[key] = fm[key] ?? [];
-      continue;
-    }
-    if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) val = val.slice(1, -1);
-    if (key === "year" && /^-?\d+$/.test(val)) fm.year = Number(val);
-    else if (val === "true" || val === "false") fm[key] = val === "true";
-    else if (val === "[]") fm[key] = [];
-    else fm[key] = val;
-  }
-  return { fm, body };
+  const text = md.charCodeAt(0) === 0xfeff ? md.slice(1) : md;
+  const match = FRONTMATTER_RE.exec(text);
+  if (!match) return { fm: {}, body: text };
+  const parsed = parseYaml(match[1]);
+  const fm =
+    parsed !== null && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  return { fm, body: text.slice(match[0].length).replace(/^\r?\n/, "") };
 }
 
 function mapRules(mechanismTags, paradoxTags) {
@@ -590,6 +608,97 @@ function storedStubMetadata(data, file) {
   };
 }
 
+/**
+ * Assign one output id per scanned entry and flag the two ways ids can clash.
+ *
+ * 1. Archive slugs are unique per section only. A slug used by more than one
+ *    section is namespaced with the section prefix (`film-`, `tv-`, `novel-`)
+ *    so films/outlander.md and tv/outlander.md stop overwriting each other.
+ * 2. Whatever the ids end up being, two entries may still target the same file
+ *    (a literal `film-foo.md` next to a namespaced `film-foo`, or slugs that
+ *    differ only by case on a case-insensitive filesystem). Both entries are
+ *    blocked — silently picking a winner is what this function exists to stop.
+ *
+ * Mutates each entry with `outputId` and `blocked`.
+ *
+ * @returns {{ namespaceCollisions: object[], outputCollisions: object[] }}
+ */
+function planOutputs(entries) {
+  const groupBy = (items, key) => {
+    const map = new Map();
+    for (const item of items) {
+      const k = key(item);
+      if (!map.has(k)) map.set(k, []);
+      map.get(k).push(item);
+    }
+    return [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  };
+
+  const namespaceCollisions = [];
+  for (const [slug, group] of groupBy(entries, (e) => e.baseSlug.toLowerCase())) {
+    const sections = [...new Set(group.map((e) => e.section))].sort();
+    const namespaced = sections.length > 1;
+    for (const e of group) {
+      e.outputId = namespaced
+        ? `${SECTION_ID_PREFIX[e.section] ?? e.section}-${e.baseSlug}`
+        : e.baseSlug;
+      e.blocked = false;
+    }
+    if (namespaced) {
+      namespaceCollisions.push({
+        slug,
+        sections,
+        entries: group
+          .map((e) => ({ section: e.section, archivePath: e.archivePath, outputId: e.outputId }))
+          .sort((a, b) => a.outputId.localeCompare(b.outputId)),
+      });
+    }
+  }
+
+  const outputCollisions = [];
+  for (const [key, group] of groupBy(entries, (e) => e.outputId.toLowerCase())) {
+    if (group.length < 2) continue;
+    for (const e of group) e.blocked = true;
+    outputCollisions.push({
+      outputId: key,
+      blocked: true,
+      entries: group
+        .map((e) => ({ section: e.section, archivePath: e.archivePath, outputId: e.outputId }))
+        .sort((a, b) => a.archivePath.localeCompare(b.archivePath)),
+    });
+  }
+
+  return { namespaceCollisions, outputCollisions };
+}
+
+/**
+ * Load the compiled semantic validator so the importer can refuse to emit
+ * schema-invalid stubs. Missing/unusable build → one warning, validation off
+ * (importing from a fresh checkout must not be a hard failure).
+ *
+ * @returns {Promise<{ validateStoryEncoding: Function } | null>}
+ */
+async function loadValidator() {
+  const validatorPath = path.join(root, "dist", "validate.js");
+  if (!(await exists(validatorPath))) {
+    console.warn(
+      `WARN dist/validate.js not found — stub self-validation SKIPPED. Run "npm run build" first.`,
+    );
+    return null;
+  }
+  try {
+    const V = await import(pathToFileURL(validatorPath).href);
+    if (typeof V.validateStoryEncoding !== "function") {
+      console.warn("WARN dist/validate.js exports no validateStoryEncoding — self-validation SKIPPED.");
+      return null;
+    }
+    return V;
+  } catch (error) {
+    console.warn(`WARN could not load dist/validate.js (${String(error)}) — self-validation SKIPPED.`);
+    return null;
+  }
+}
+
 function renderMarkdownReport(report) {
   const lines = [];
   lines.push("# Import quality report");
@@ -606,9 +715,18 @@ function renderMarkdownReport(report) {
   lines.push(`| Generated stubs written | ${c.written} |`);
   lines.push(`| Generated stubs skipped (exists, no --force-generated) | ${c.skippedExistingGenerated} |`);
   lines.push(`| Skipped (hand-crafted instance present) | ${c.skippedHandCrafted} |`);
+  lines.push(`| Skipped (blocked output collision) | ${c.skippedOutputCollision} |`);
+  lines.push(`| Skipped (stub failed self-validation) | ${c.skippedInvalidStub} |`);
   lines.push(`| Exhaustive without hand-crafted instance | ${c.exhaustiveGaps} |`);
   lines.push(`| Diagram-flagged without hand-crafted instance | ${c.diagramGaps} |`);
   lines.push(`| Unique unmapped tags | ${c.unmappedTagTypes} |`);
+  lines.push(`| Generated files retained | ${c.retainedFiles} |`);
+  lines.push(`| Generated files superseded | ${c.supersededFiles} |`);
+  lines.push(`| Generated files orphaned | ${c.orphanedFiles} |`);
+  lines.push(`| Slugs namespaced by section | ${c.namespaceCollisions} |`);
+  lines.push(`| Output collisions (blocked) | ${c.outputCollisions} |`);
+  lines.push(`| Ambiguous hand matches | ${c.ambiguousMatches} |`);
+  lines.push(`| File errors | ${c.fileErrors} |`);
   lines.push("");
   lines.push("## Mapping confidence");
   lines.push("");
@@ -687,7 +805,7 @@ async function main() {
 
   const existingGenerated = new Set(
     (await readdir(outDir))
-      .filter((f) => f.endsWith(".json") && f !== "_index.json")
+      .filter((f) => f.endsWith(".json") && f !== "_index.json" && f !== "IMPORT_REPORT.json")
       .map((f) => f.replace(/\.json$/, "")),
   );
   // Read stored stub metadata so the index reflects what is actually on disk,
@@ -703,6 +821,8 @@ async function main() {
     }
   }
 
+  const validator = await loadValidator();
+
   const index = [];
   const gaps = [];
   const ambiguousMatches = [];
@@ -711,107 +831,218 @@ async function main() {
   let written = 0;
   let skippedHand = 0;
   let skippedExistingGenerated = 0;
+  let skippedOutputCollision = 0;
+  let skippedInvalidStub = 0;
   let scanned = 0;
 
+  // Phase 1 — scan every archive entry. Frontmatter that will not parse is a
+  // per-file error, never a crash.
+  const scannedEntries = [];
   for (const section of SECTIONS) {
     const dir = path.join(archiveRoot, section);
     if (!(await exists(dir))) continue;
     const files = (await readdir(dir)).filter((f) => f.endsWith(".md") && !f.startsWith("_")).sort();
     for (const file of files) {
       scanned += 1;
-      const baseSlug = file.replace(/\.md$/, "");
-      const raw = await readFile(path.join(dir, file), "utf8");
-      const { fm, body } = parseFrontmatter(raw);
-      const title = String(fm.title ?? baseSlug);
-      const medium = mediumFrom(section, fm);
-      const mechanismTags = splitTags(fm.mechanism);
-      const paradoxTags = splitTags(fm.paradox_type);
-      const mapped = mapRules(mechanismTags, paradoxTags);
-      const topologyPatternId = mapTopology(mapped.primary, paradoxTags, mechanismTags);
-      const exhaustive = String(fm.summary_depth || "").toLowerCase() === "exhaustive";
-      const diagramFlagged = hasDiagramSignal(fm);
-      const handMatch = findHandMatch(baseSlug, title, medium, fm, handEntries);
-      const handCraftedId = typeof handMatch === "string" ? handMatch : null;
-      const ambiguous = handMatch !== null && typeof handMatch === "object";
       const relArchive = path.relative(root, path.join(dir, file)).replace(/\\/g, "/");
       const archivePath = relArchive.startsWith("..")
         ? `time-travel-archive/${section}/${file}`
         : relArchive;
-
-      for (const t of mapped.unmapped) {
-        unmappedCounter.set(t, (unmappedCounter.get(t) ?? 0) + 1);
+      try {
+        const raw = await readFile(path.join(dir, file), "utf8");
+        const { fm, body } = parseFrontmatter(raw);
+        scannedEntries.push({
+          section,
+          file,
+          archivePath,
+          baseSlug: file.replace(/\.md$/, ""),
+          fm,
+          body,
+        });
+      } catch (error) {
+        fileErrors.push({ file: archivePath, kind: "frontmatter", error: String(error) });
       }
+    }
+  }
 
-      const meta = {
-        id: baseSlug,
+  // Phase 2 — decide output ids (section namespacing) and block real clashes.
+  const { namespaceCollisions, outputCollisions } = planOutputs(scannedEntries);
+  for (const collision of namespaceCollisions) {
+    console.warn(
+      `WARN slug "${collision.slug}" appears in ${collision.sections.join(" + ")}; namespaced to ${collision.entries
+        .map((e) => e.outputId)
+        .join(", ")}`,
+    );
+  }
+  for (const collision of outputCollisions) {
+    console.error(
+      `ERROR output collision on "${collision.outputId}": ${collision.entries
+        .map((e) => e.archivePath)
+        .join(", ")} — all blocked (no file written)`,
+    );
+  }
+
+  // Which output ids the current archive still claims, and which generated
+  // files the archive has moved away from (hand-crafted / namespaced elsewhere).
+  const claimedOutputIds = new Set();
+  const handSupersededIds = new Map(); // outputId -> hand-crafted instance id
+  const namespacedAwayIds = new Map(); // old baseSlug -> [new outputIds]
+
+  // Phase 3 — emit.
+  for (const entry of scannedEntries) {
+    const { section, archivePath, baseSlug, outputId, blocked, fm, body } = entry;
+    const title = String(fm.title ?? baseSlug);
+    const medium = mediumFrom(section, fm);
+    const mechanismTags = splitTags(fm.mechanism);
+    const paradoxTags = splitTags(fm.paradox_type);
+    const mapped = mapRules(mechanismTags, paradoxTags);
+    const topologyPatternId = mapTopology(mapped.primary, paradoxTags, mechanismTags);
+    const exhaustive = String(fm.summary_depth || "").toLowerCase() === "exhaustive";
+    const diagramFlagged = hasDiagramSignal(fm);
+    // Hand-match identity is still keyed on the archive slug: hand-crafted ids
+    // are never section-namespaced.
+    const handMatch = findHandMatch(baseSlug, title, medium, fm, handEntries);
+    const handCraftedId = typeof handMatch === "string" ? handMatch : null;
+    const ambiguous = handMatch !== null && typeof handMatch === "object";
+
+    for (const t of mapped.unmapped) {
+      unmappedCounter.set(t, (unmappedCounter.get(t) ?? 0) + 1);
+    }
+
+    const meta = {
+      id: outputId,
+      baseSlug,
+      title,
+      year: fm.year,
+      medium,
+      archivePath,
+      section,
+      namespaced: outputId !== baseSlug,
+      mechanismTags,
+      paradoxTags,
+      primaryRuleSetId: mapped.primary,
+      mixinRuleSetIds: mapped.mixins,
+      ruleSetIds: mapped.all,
+      topologyPatternId,
+      confidence: mapped.confidence,
+      mappingScores: mapped.scores,
+      unmappedTags: mapped.unmapped,
+      exhaustive,
+      diagramFlagged,
+      handCraftedId,
+    };
+
+    if (outputId !== baseSlug) {
+      if (!namespacedAwayIds.has(baseSlug)) namespacedAwayIds.set(baseSlug, []);
+      namespacedAwayIds.get(baseSlug).push(outputId);
+    }
+
+    if (!handCraftedId && (exhaustive || diagramFlagged)) {
+      gaps.push({
+        id: outputId,
         title,
-        year: fm.year,
-        medium,
-        archivePath,
         section,
-        mechanismTags,
-        paradoxTags,
-        primaryRuleSetId: mapped.primary,
-        mixinRuleSetIds: mapped.mixins,
-        ruleSetIds: mapped.all,
-        topologyPatternId,
-        confidence: mapped.confidence,
-        mappingScores: mapped.scores,
-        unmappedTags: mapped.unmapped,
         exhaustive,
         diagramFlagged,
-        handCraftedId,
-      };
+        hasGeneratedStub: storedFiles.has(outputId),
+        primaryRuleSetId: mapped.primary,
+        confidence: mapped.confidence,
+      });
+    }
 
-      if (!handCraftedId && (exhaustive || diagramFlagged)) {
-        gaps.push({
-          id: baseSlug,
-          title,
-          section,
-          exhaustive,
-          diagramFlagged,
-          hasGeneratedStub: storedFiles.has(baseSlug),
-          primaryRuleSetId: mapped.primary,
-          confidence: mapped.confidence,
-        });
-      }
+    if (ambiguous) {
+      // Identity is undecided, so the archive still claims this id — never treat
+      // an existing file for it as an orphan.
+      claimedOutputIds.add(outputId);
+      ambiguousMatches.push({
+        archivePath,
+        title,
+        medium,
+        outputId,
+        candidates: handMatch.candidates,
+      });
+      continue;
+    }
 
-      if (ambiguous) {
-        ambiguousMatches.push({
-          archivePath,
-          title,
-          medium,
-          candidates: handMatch.candidates,
-        });
-        continue;
-      }
+    if (handCraftedId) {
+      skippedHand += 1;
+      handSupersededIds.set(outputId, handCraftedId);
+      continue;
+    }
 
-      if (handCraftedId) {
-        skippedHand += 1;
-        continue;
-      }
+    claimedOutputIds.add(outputId);
 
-      confidenceCounts[mapped.confidence] = (confidenceCounts[mapped.confidence] ?? 0) + 1;
+    if (blocked) {
+      // Reported via outputCollisions; writing either entry would clobber the other.
+      skippedOutputCollision += 1;
+      continue;
+    }
 
-      const outPath = path.join(outDir, meta.id + ".json");
-      const already = existingGenerated.has(meta.id);
-      const stored = storedFiles.get(meta.id);
-      if (already && !forceGenerated) {
-        skippedExistingGenerated += 1;
-        index.push(stored ? { ...stored, writtenThisRun: false } : { ...meta, writtenThisRun: false });
-        const g = gaps.find((x) => x.id === meta.id);
-        if (g) g.hasGeneratedStub = true;
-        continue;
-      }
+    confidenceCounts[mapped.confidence] = (confidenceCounts[mapped.confidence] ?? 0) + 1;
 
-      const stub = buildStub(meta, blurbFromBody(body));
-      await writeFile(outPath, JSON.stringify(stub, null, 2) + "\n", "utf8");
-      written += 1;
-      existingGenerated.add(meta.id);
-      storedFiles.set(meta.id, { ...storedStubMetadata(stub, meta.id + ".json"), writtenThisRun: true });
-      index.push({ ...meta, writtenThisRun: true });
+    const outPath = path.join(outDir, meta.id + ".json");
+    const already = existingGenerated.has(meta.id);
+    const stored = storedFiles.get(meta.id);
+    if (already && !forceGenerated) {
+      skippedExistingGenerated += 1;
+      index.push(stored ? { ...stored, writtenThisRun: false } : { ...meta, writtenThisRun: false });
       const g = gaps.find((x) => x.id === meta.id);
       if (g) g.hasGeneratedStub = true;
+      continue;
+    }
+
+    const stub = buildStub(meta, blurbFromBody(body));
+
+    // Self-validation: an invalid stub is a file error, not a file on disk.
+    if (validator) {
+      const result = validator.validateStoryEncoding(stub);
+      if (result.success === false) {
+        skippedInvalidStub += 1;
+        console.error(
+          `ERROR ${archivePath} → ${meta.id}.json rejected by validateStoryEncoding (not written):`,
+        );
+        for (const err of result.errors) console.error(`  ${err}`);
+        fileErrors.push({
+          file: archivePath,
+          kind: "schema-invalid-stub",
+          outputId: meta.id,
+          error: `stub failed validateStoryEncoding: ${result.errors.join("; ")}`,
+        });
+        continue;
+      }
+    }
+
+    await writeFile(outPath, JSON.stringify(stub, null, 2) + "\n", "utf8");
+    written += 1;
+    existingGenerated.add(meta.id);
+    storedFiles.set(meta.id, { ...storedStubMetadata(stub, meta.id + ".json"), writtenThisRun: true });
+    index.push({ ...meta, writtenThisRun: true });
+    const g = gaps.find((x) => x.id === meta.id);
+    if (g) g.hasGeneratedStub = true;
+  }
+
+  // Phase 4 — inventory instances/generated/ against what the archive now claims.
+  const retainedFiles = [];
+  const supersededFiles = [];
+  const orphanedFiles = [];
+  for (const [id, stored] of [...storedFiles.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+    const record = { file: stored.file, id, title: stored.title, archivePath: stored.archivePath };
+    if (claimedOutputIds.has(id)) {
+      retainedFiles.push({ ...record, writtenThisRun: stored.writtenThisRun === true });
+    } else if (handSupersededIds.has(id)) {
+      supersededFiles.push({
+        ...record,
+        reason: "hand_crafted_instance",
+        supersededBy: `instances/${handSupersededIds.get(id)}.json`,
+      });
+    } else if (namespacedAwayIds.has(id)) {
+      supersededFiles.push({
+        ...record,
+        reason: "section_namespaced",
+        supersededBy: [...namespacedAwayIds.get(id)].sort(),
+      });
+    } else {
+      orphanedFiles.push({ ...record, reason: "no archive entry maps to this output id" });
     }
   }
 
@@ -832,11 +1063,19 @@ async function main() {
     written,
     skippedExistingGenerated,
     skippedHandCrafted: skippedHand,
+    skippedOutputCollision,
+    skippedInvalidStub,
     totalIndexed: index.length,
     exhaustiveGaps: gaps.filter((g) => g.exhaustive).length,
     diagramGaps: gaps.filter((g) => g.diagramFlagged).length,
     unmappedTagTypes: unmappedTags.length,
+    retainedFiles: retainedFiles.length,
+    orphanedFiles: orphanedFiles.length,
+    supersededFiles: supersededFiles.length,
+    ambiguousMatches: ambiguousMatches.length,
     ambiguousHandMatches: ambiguousMatches.length,
+    namespaceCollisions: namespaceCollisions.length,
+    outputCollisions: outputCollisions.length,
     fileErrors: fileErrors.length,
   };
 
@@ -864,7 +1103,12 @@ async function main() {
       unmappedTags: s.unmappedTags,
       writtenThisRun: s.writtenThisRun,
     })),
+    retainedFiles,
+    orphanedFiles,
+    supersededFiles,
     ambiguousMatches,
+    namespaceCollisions,
+    outputCollisions,
     fileErrors,
   };
 
@@ -878,7 +1122,12 @@ async function main() {
     gaps,
     unmappedTags,
     stubs: indexPayload.stubs,
+    retainedFiles,
+    orphanedFiles,
+    supersededFiles,
     ambiguousMatches,
+    namespaceCollisions,
+    outputCollisions,
     fileErrors,
   };
 
@@ -897,8 +1146,16 @@ async function main() {
   );
   console.log(`Quality report: ${reportFormat === "json" ? jsonPath : mdPath}`);
   console.log(`Gaps: ${counts.exhaustiveGaps} exhaustive, ${counts.diagramGaps} diagram-flagged without hand-crafted instance; ${counts.unmappedTagTypes} unmapped tag types.`);
-  console.log(`Identity: ${ambiguousMatches.length} AMBIGUOUS hand match(es); ${fileErrors.length} file error(s).`);
-  if (fileErrors.length || ambiguousMatches.length) {
+  console.log(
+    `Ids: ${namespaceCollisions.length} slug(s) namespaced across sections; ${outputCollisions.length} output collision(s) blocked (${skippedOutputCollision} entr(y/ies) skipped).`,
+  );
+  console.log(
+    `Files: ${retainedFiles.length} retained, ${supersededFiles.length} superseded, ${orphanedFiles.length} orphaned (nothing deleted).`,
+  );
+  console.log(
+    `Identity: ${ambiguousMatches.length} AMBIGUOUS hand match(es); ${fileErrors.length} file error(s) including ${skippedInvalidStub} schema-invalid stub(s) not written.`,
+  );
+  if (fileErrors.length || outputCollisions.length || ambiguousMatches.length) {
     process.exitCode = 1;
   }
 }
