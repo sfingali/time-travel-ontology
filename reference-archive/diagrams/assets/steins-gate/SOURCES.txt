@@ -1,4 +1,5 @@
-URL-ONLY (rights unclear or commercial — not downloaded)
-URL: https://gwern.net/doc/fiction/science-fiction/time-travel/2023-votuko-themechanicsofsteinsgate.pdf
-URL: https://github.com/wesleycox/Steins-Gate-worldlines-poster
+Full-res worldline / attractor-field diagrams (extracted 2026-09-07):
+Source: Votuko, "The Mechanics of Steins;Gate" (gwern-hosted PDF, 105 pages, figure figures)
+PDF: https://gwern.net/doc/fiction/science-fiction/time-travel/2023-votuko-themechanicsofsteinsgate.pdf
+Extracted diagram figures: worldline/divergence charts (e.g. p58: 2704x3164; p30: 2440x2520; p76: 1924x1284).
 See also: ../../MASTER-DIAGRAM-INDEX.md

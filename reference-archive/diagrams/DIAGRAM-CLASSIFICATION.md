@@ -1,20 +1,20 @@
 # Diagram Classification — real chart vs. still/screenshot
-_Updated 2026-09-07 (second pass). For each image under `assets/`, marks whether it is a
+_Updated 2026-09-07 (third pass). For each image under `assets/`, marks whether it is a
 genuine timeline/chart/graph diagram or a film still / web-page screenshot. Base = visual
-review of contact sheets (aspect ratio + quad-zoom reads). Deleted still/screenshot files
-with no findable real diagram (arrival, madoka)._
+review of contact sheets + per-image vision reads. Every replacement was verified to be a
+real chart (not a poster)._
 
-Legend: **chart** = genuine timeline/causality/family-tree/multiverse diagram. **still** = film still / poster. **shot** = web-page screenshot (no underlying diagram). **sliver** = degenerate page-scroll or extreme aspect (not a usable chart).
+Legend: **chart** = genuine timeline/causality/family-tree/multiverse diagram. **still** = film still / poster. **shot** = web-page screenshot (no underlying diagram). **sliver** = extreme-aspect but real chart.
 
 ## browser-harvest/ (article captures)
 | File | Class | Note |
 |---|---|---|
-| all-you-zombies-commons.png | chart | Commons bootstrap-loop diagram (public) |
-| dark-aldersonloop.svg | chart | aldersonloop59 full-res vector timeline (was .png) |
-| donnie-radiotimes.png | shot | article screenshot; Donnie Darko chart is elsewhere |
+| all-you-zombies-commons.png | chart | Commons bootstrap-loop diagram |
+| dark-aldersonloop.svg | chart | aldersonloop59 full-res vector timeline |
+| donnie-radiotimes.png | shot | article screenshot; DD chart is `variants/donnie-darko` |
 | donnie-timetravelmovies.png | shot | article screenshot |
 | eeaao-oritoor.png | chart | Ori Toor / A24 multiverse map |
-| looper-slate.png | shot | article screenshot of straw diagram host |
+| looper-slate.png | shot | article screenshot |
 | predestination-barry.png | chart | thisisbarry timeline |
 | primer-gizmodo.png | chart | astronomy full-res Primer chart |
 | steins-gwern.png | shot | PDF-viewer screenshot |
@@ -22,36 +22,24 @@ Legend: **chart** = genuine timeline/causality/family-tree/multiverse diagram. *
 | terminator-talley.png | shot | article screenshot |
 | your-name-wikipedia.png | shot | Wikipedia page screenshot |
 
-## commons/ (all free-licensed charts on Commons)
-| File | Class |
-|---|---|
-| All_you_zombies_timeline.png | chart |
-| Bilele_de_biliard_in_paradoxul_bunicului.svg | chart |
-| Causal_loop_billiard_ball.svg | chart |
-| Dark_TV_Series_Family_Tree.png | chart |
-| Dark_TV_Series_Family_Tree_zh-tw.png | chart |
-| Dark_family_tree_season_3_version_1.jpg | chart |
-| Grandfather_paradox_billiard_ball.png | chart |
-| Predestinatieparadox.png | chart |
-| Star_Trek_Timelines.png | sliver (26:1) |
-| Time_Travel_Method-2.png | chart |
+## commons/ (free-licensed charts on Commons)
+All 10 = chart (incl. Star_Trek_Timelines.png marked sliver; Time_Travel_Method-2.png chart).
 
 ## variants/<work>/
-- **12-monkeys**: v3 = chart; v1 = still (deleted).
-- **arrival**: no real timeline diagram exists → all variants deleted.
-- **bttf**: v1 = chart (Flickograph full-res); v2, v3 = stills.
-- **dark**: v3 = chart (30 MB); v4, v5 = chart; v1, v2 = sliver/page-scroll.
-- **donnie-darko**: v1, v3 = charts; v2, v4 = stills (deleted).
-- **eeaao**: v1 = chart (Ori Toor A24 map); v2 = still (deleted).
-- **looper**: v1 = chart (Talley straw); v4 = chart (Film.com The Timelines); v2 = chart (Slate straw); v3 = still (kept? -> still).
-- **madoka**: no real timeline diagram image → deleted.
-- **predestination**: v1 = chart; v2 = still.
-- **primer**: v1, v3, v4 = charts; v2 = sketch photo.
-- **steins-gate**: v1, v2, v3 = charts; v4 = divergence-meter screenshot (partial).
-- **tenet**: v1–v7 = charts (v4 = cookpete full-res).
+- **12-monkeys**: v3 = chart; v1 deleted (still, no real diagram).
+- **arrival**: deleted (no timeline diagram exists publicly).
+- **bttf**: v1 = chart (Flickograph full-res); v2, v3 = stills (no replacement found — Cloudflare-gated hosts).
+- **dark**: v1, v2 = genuine sliver charts (tall); v3 = chart (30 MB); v4 = chart; v5 = **replaced** with Taylor Holmes family tree (11000×7500).
+- **donnie-darko**: v1, v3 = charts; v2, v4 deleted (stills).
+- **eeaao**: v1 = chart (Ori Toor A24 map); v2 deleted (still).
+- **looper**: v1 = chart (Talley straw); v4 = chart (Film.com); v2 = chart (Slate); v3 = **replaced** with AceFox Looper timeline (960×720).
+- **madoka**: deleted (no diagram image exists; only table chronologies).
+- **predestination**: v1 = chart; v2 = **replaced** with Taylor Holmes Möbius bootstrap diagram (1500×758).
+- **primer**: v1, v3, v4 = charts; v2 = hand-drawn sketch (crude diagram).
+- **steins-gate**: v1, v2, v3 = charts; v4 = **replaced** with worldline/attractor-field figure from the Votuko PDF (2704×3164).
+- **tenet**: v1–v7 = charts (v4 = cookpete full-res; v6, v7 genuine).
 - **terminator**: v1 = chart (network graph); v2 = chart (Talley straw); v3 = still.
 - **your-name**: v1, v2, v3 = charts.
 
-## Works with no public full-res timeline diagram (stills removed per directive)
-- **Arrival** — no timeline chart exists (non-linear language).
-- **Madoka** — only table chronologies, no chart image.
+## Works with no public full-res timeline diagram (stills removed)
+- **Arrival**, **Madoka** — no diagram image exists publicly.

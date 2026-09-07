@@ -1,5 +1,6 @@
 Full-res charts (downloaded 2026-09-07):
-Dark full-res vector timeline (aldersonloop59): https://aldersonloop59.github.io/dark-timeline/img/dark-netflix-visual-timeline.svg  (20596x10080 vector)
-This SVG is the source of the 30MB variants/dark/dark-v3.png render.
-Dark S3 family tree (Taylor Holmes, 2560x1456): https://taylorholmes.com/2020/07/07/the-definitive-netflix-dark-season-3-family-tree/
+Dark family tree (Taylor Holmes, full - 11000x7500): https://taylorholmes.com/dark/dark-tree1.jpg
+Dark family trees (Taylor Holmes): https://taylorholmes.com/dark/dark-tree2.jpg  dark-tree3.jpg  (dark-tree1 used for dark-v5)
+Dark S3 family tree full (2560x1456): https://taylorholmes.com/2020/07/07/the-definitive-netflix-dark-season-3-family-tree/
+Dark full-res vector timeline (aldersonloop59): https://aldersonloop59.github.io/dark-timeline/img/dark-netflix-visual-timeline.svg (20596x10080; source of dark-v3)
 See also: ../../MASTER-DIAGRAM-INDEX.md
