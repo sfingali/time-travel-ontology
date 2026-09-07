@@ -6,7 +6,7 @@
 3. Agents with identityGroup as needed. Identity edges should set `identityRelation` (personal_continuity | counterpart | loop_iteration | participation).
 4. Events spine with timeLabel and typed payload.
 5. Edges: causal/temporal/identity/world_relation/intervention/family. Temporal edges should set `orderKind` (chronological | experienced | presentation | simultaneity). Use `family` for kinship (parenthood, siblinghood) between two distinct agents — it never implies sameness or counterparting, so never encode it as an `identity` edge.
-6. Interventions with ruleEffects.
+6. Interventions with ruleEffects. Use `loop_exit` (not `loop_reset`) for the event where a time loop ends; use the optional `scope` on a ruleEffect when an effect applies only in a special context (e.g. `outside_the_knot`).
 7. Outcome with endWorldRefs (the focal ending worlds).
 8. Add `schemaVersion: "1.0"` on new encodings.
 9. Save instances/id.json; validate.

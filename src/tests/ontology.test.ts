@@ -259,3 +259,32 @@ describe("design-tier decisions (Astra rulings B,B,B,B,B,A,B,B)", () => {
     assert.match(rejected.errors.join("\n"), /identityRelation/);
   });
 });
+
+describe("typed loop exit + rule-effect scope", () => {
+  it("accepts a loop_exit event and a scoped rule effect", () => {
+    const s = schemaValidStory();
+    s.events.push({
+      id: "e_exit", type: "loop_exit", label: "the loop ends",
+      at: { worldRef: "w1", timeLabel: "Feb 3" },
+      payload: { exitCondition: "growth", iteration: 0, memoryRetained: true },
+    });
+    s.interventions.push({
+      id: "iv1", eventId: "e_exit",
+      ruleEffects: [
+        { ruleSetId: "fixed_novikov", effect: "effect", scope: "outside_the_knot" },
+      ],
+    });
+    const result = validateStoryEncoding(s);
+    assert.ok(result.success, JSON.stringify(result.errors));
+  });
+
+  it("keeps the updated groundhog and dark instances valid", async () => {
+    for (const file of ["groundhog-day.json", "dark.json"]) {
+      const data = JSON.parse(
+        await readFile(path.join(root, "instances", file), "utf8"),
+      );
+      const result = validateStoryEncoding(data);
+      assert.ok(result.success, `${file}: ${JSON.stringify(result.errors)}`);
+    }
+  });
+});

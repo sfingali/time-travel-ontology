@@ -489,6 +489,7 @@
                   "death",
                   "birth",
                   "loop_reset",
+                  "loop_exit",
                   "branch_fork",
                   "branch_prune",
                   "collapse",
@@ -802,6 +803,10 @@
                       "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
                     },
                     "effect": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "scope": {
                       "type": "string",
                       "minLength": 1
                     }

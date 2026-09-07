@@ -199,7 +199,7 @@
     },
     {
       "id": "e_exit",
-      "type": "loop_reset",
+      "type": "loop_exit",
       "label": "Wake to Feb 3 \u2014 loop exits",
       "at": {
         "worldRef": "w_punx",

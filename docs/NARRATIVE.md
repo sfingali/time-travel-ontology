@@ -17,7 +17,7 @@ Root type: **StoryEncoding** (`src/schema/story.ts`).
 
 ## Event types
 
-`ordinary`, `departure`, `arrival`, `intervention`, `observation`, `death`, `birth`, `loop_reset`, `branch_fork`, `branch_prune`, `collapse`, `contact`, `bootstrap_origin`, `reveal`, `other`.
+`ordinary`, `departure`, `arrival`, `intervention`, `observation`, `death`, `birth`, `loop_reset`, `loop_exit`, `branch_fork`, `branch_prune`, `collapse`, `contact`, `bootstrap_origin`, `reveal`, `other`.
 
 ## Edge kinds
 

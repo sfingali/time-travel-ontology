@@ -60,6 +60,7 @@ export const EventTypeSchema = z.enum([
   "death",
   "birth",
   "loop_reset",
+  "loop_exit",
   "branch_fork",
   "branch_prune",
   "collapse",
@@ -233,6 +234,9 @@ export const RuleEffectSchema = z
   .object({
     ruleSetId: IdSchema,
     effect: z.string().min(1),
+    /** When a rule effect applies (e.g. "outside_the_knot"): formalises the
+     *  scope of an effect that would not follow from the rule's default law. */
+    scope: z.string().min(1).optional(),
   })
   .strict();
 

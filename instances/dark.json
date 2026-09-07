@@ -719,7 +719,8 @@
       "ruleEffects": [
         {
           "ruleSetId": "fixed_novikov",
-          "effect": "Outside the knot, preventing the accident removes both derived worlds"
+          "effect": "Outside the knot, preventing the accident removes both derived worlds",
+          "scope": "outside_the_knot"
         }
       ],
       "notes": "Finale: origin remains"
