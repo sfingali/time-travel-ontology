@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml/badge.svg)](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml)
 
-**13** rule sets · **8** topology patterns · **59** validated instances · **461** archive works · **71** diagram images (LFS)
+**13** rule sets · **9** topology patterns · **59** validated instances · **461** archive works · **71** diagram images (LFS)
 
 Encode a plotline as typed JSON: which **laws** apply, how **worlds** relate, and a **narrative graph** (agents, events, edges). Comparable across the corpus; consumable by a later visual engine. Zod is the source of truth; `schema/ontology.schema.json` is exported for everyone else.
 
@@ -53,7 +53,7 @@ Every encoding needs **`primaryRuleSetId`**; optional **`mixinRuleSetIds`** for 
 
 | File | Why |
 |------|-----|
-| [`instances/tenet.json`](instances/tenet.json) | Entropy inversion, single timeline, pincers — **27** events / **39** edges |
+| [`instances/tenet.json`](instances/tenet.json) | Entropy inversion, single timeline, pincers — **32** events / **44** edges |
 | [`instances/primer.json`](instances/primer.json) | Failsafe preemption / overlapping selves |
 | [`instances/dark.json`](instances/dark.json) | Bootstrap knot + origin/twin worlds |
 | [`instances/steins-gate.json`](instances/steins-gate.json) | Worldlines / attractors |
@@ -91,7 +91,7 @@ YAML `mechanism` / `paradox_type` tags are the bridge into this ontology (`npm r
 | [OVERVIEW](docs/OVERVIEW.md) · [RULES](docs/RULES.md) · [TOPOLOGY](docs/TOPOLOGY.md) | Model |
 | [NARRATIVE](docs/NARRATIVE.md) · [ENCODING-GUIDE](docs/ENCODING-GUIDE.md) · [COMPATIBILITY](docs/COMPATIBILITY.md) · [IMPORT](docs/IMPORT.md) | Practice |
 
-A future renderer should read `worlds[]`, `agents[]`, `events[]`, and `edges[]` (`causal` · `temporal` · `identity` · `world_relation` · `intervention`) plus `interventions[]` / `outcome`. **No layout or graphics are prescribed here.**
+A future renderer should read `worlds[]`, `agents[]`, `events[]`, and `edges[]` (`causal` · `temporal` · `identity` · `world_relation` · `family` · `intervention`) plus `interventions[]` / `outcome`. **No layout or graphics are prescribed here.**
 
 ---
 

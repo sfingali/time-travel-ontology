@@ -7,7 +7,10 @@ import { RuleSetSchema } from "./schema/rules.js";
 import { TopologyPatternSchema } from "./schema/topology.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const outPath = path.resolve(__dirname, "..", "schema", "ontology.schema.json");
+// Optional CLI arg: write the export to a given path. Default is the committed schema.
+const outPath = process.argv[2]
+  ? path.resolve(process.argv[2])
+  : path.resolve(__dirname, "..", "schema", "ontology.schema.json");
 
 async function main(): Promise<void> {
   const schema = zodToJsonSchema(StoryEncodingSchema, {

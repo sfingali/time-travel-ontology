@@ -9,6 +9,7 @@
     "build": "tsc && node dist/export-json-schema.js",
     "export-schema": "tsc && node dist/export-json-schema.js",
     "validate": "tsc && node dist/validate.js",
+    "check:schema": "tsc && node dist/check-schema.js",
     "test": "tsc && node --test dist/tests/*.js",
     "import": "node scripts/import-archive.mjs"
   },
