@@ -228,4 +228,34 @@ describe("design-tier decisions (Astra rulings B,B,B,B,B,A,B,B)", () => {
   it("adds the parallel_world_network pattern (decision #4)", () => {
     assert.ok(TOPOLOGY_BY_ID.has("parallel_world_network"));
   });
+
+  it("encodes kinship as a family edge, never as identity", async () => {
+    // Dark's id1 (Jonas & Martha as parents of Unknown) is a kinship link between
+    // two distinct people: it is neither personal continuity nor a counterpart.
+    const dark = JSON.parse(
+      await readFile(path.join(root, "instances", "dark.json"), "utf8"),
+    );
+    const id1 = dark.edges.find((e: { id: string }) => e.id === "id1");
+    assert.equal(id1.kind, "family");
+
+    const result = validateStoryEncoding(dark);
+    assert.ok(result.success, JSON.stringify(result.errors));
+    // The identity-edge warning that used to fire on id1 is gone.
+    assert.ok(
+      !(result.warnings ?? []).some((w) => w.startsWith("Edge id1:")),
+      JSON.stringify(result.warnings),
+    );
+
+    // "family" is not a kind of identity, so it is not an identityRelation value.
+    const s = schemaValidStory();
+    s.agents.push({ id: "parent", label: "Parent" });
+    s.agents.push({ id: "child", label: "Child" });
+    s.edges.push({
+      id: "id-fam", kind: "identity", from: "parent", to: "child",
+      identityRelation: "family",
+    });
+    const rejected = validateStoryEncoding(s);
+    assert.ok(!rejected.success);
+    assert.match(rejected.errors.join("\n"), /identityRelation/);
+  });
 });

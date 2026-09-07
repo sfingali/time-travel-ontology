@@ -26,12 +26,16 @@ Root type: **StoryEncoding** (`src/schema/story.ts`).
 | `causal` | Event A causes event B |
 | `temporal` | Ordering / succession (set `orderKind`) |
 | `identity` | Agent/object relationship (set `identityRelation`) |
+| `family` | Kinship between two distinct agents (parenthood, siblinghood) |
 | `world_relation` | Topology link; set `relation` |
 | `intervention` | Deliberate change linking events |
 
 ## Note on semantics
 - `identityRelation` on an identity edge distinguishes same-person / counterpart /
   loop-iteration / participation (see `DESIGN_DECISIONS.md`).
+- A `family` edge never implies sameness or counterparting: kinship relates two
+  distinct agents, so parenthood/siblinghood is encoded as `family`, never as
+  `identity` (and `family` is not an `identityRelation` value).
 - `orderKind` on a temporal/causal edge distinguishes chronological / experienced /
   presentation / simultaneity.
 - A branch world may use `forkEventRef` and `draft` (full vs draft).

@@ -196,6 +196,8 @@ export const EdgeKindSchema = z.enum([
   "identity",
   "world_relation",
   "intervention",
+  /** Kinship link (parenthood, siblinghood) between two distinct agents. */
+  "family",
 ]);
 
 export const EdgeSchema = z

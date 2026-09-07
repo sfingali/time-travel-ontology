@@ -5,7 +5,7 @@
 2. Pick topology; declare worlds. For branches, set `parentRef` + `forkEventRef` (or `draft: true` if the fork point is unknown).
 3. Agents with identityGroup as needed. Identity edges should set `identityRelation` (personal_continuity | counterpart | loop_iteration | participation).
 4. Events spine with timeLabel and typed payload.
-5. Edges: causal/temporal/identity/world_relation/intervention. Temporal edges should set `orderKind` (chronological | experienced | presentation | simultaneity).
+5. Edges: causal/temporal/identity/world_relation/intervention/family. Temporal edges should set `orderKind` (chronological | experienced | presentation | simultaneity). Use `family` for kinship (parenthood, siblinghood) between two distinct agents — it never implies sameness or counterparting, so never encode it as an `identity` edge.
 6. Interventions with ruleEffects.
 7. Outcome with endWorldRefs (the focal ending worlds).
 8. Add `schemaVersion: "1.0"` on new encodings.

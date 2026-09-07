@@ -606,7 +606,7 @@
     },
     {
       "id": "id1",
-      "kind": "identity",
+      "kind": "family",
       "from": "jonas",
       "to": "martha",
       "label": "parents of Unknown"
