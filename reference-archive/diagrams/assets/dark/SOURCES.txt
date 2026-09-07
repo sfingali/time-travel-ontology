@@ -1,7 +1,5 @@
-Dark_TV_Series_Family_Tree.svg
-URL: https://upload.wikimedia.org/wikipedia/commons/9/9e/Dark_%28TV_Series%29_Family_Tree.svg
-Page: https://commons.wikimedia.org/wiki/File:Dark_(TV_Series)_Family_Tree.svg
-Author: AfflictedHorror
-License: CC BY-SA 4.0
-Status: DOWNLOAD BLOCKED (Wikimedia 429 rate limit at harvest time) — URL verified public/hotlinkable
-Note: Family tree for Doppler, Nielsen, Kahnwald, Tiedemann families through Dark S1–S2.
+Full-res charts (downloaded 2026-09-07):
+Dark full-res vector timeline (aldersonloop59): https://aldersonloop59.github.io/dark-timeline/img/dark-netflix-visual-timeline.svg  (20596x10080 vector)
+This SVG is the source of the 30MB variants/dark/dark-v3.png render.
+Dark S3 family tree (Taylor Holmes, 2560x1456): https://taylorholmes.com/2020/07/07/the-definitive-netflix-dark-season-3-family-tree/
+See also: ../../MASTER-DIAGRAM-INDEX.md

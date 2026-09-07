@@ -1,5 +1,5 @@
-URL-ONLY (rights unclear or commercial — not downloaded)
-URL: https://www.thisisbarry.com/film/tenet-explained-in-detail-with-timeline-diagrams/
-URL: https://taylorholmes.com/2020/10/16/the-definitive-tenet-timeline-infographic/
-URL: https://aibaranov.github.io/tenet2/
+Full-res charts (verified genuine, downloaded 2026-09-07):
+Tenet (cookpete, full-res timeline): https://scifiempire.net/wordpress/wp-content/uploads/2020/09/Tenet-timeline-explained-2000x1275.png
+Tenet (aibaranov hand-reconstruction scenes): https://aibaranov.github.io/tenet2/  -> /images/Tenet2_1.jpg..6.jpg
+Tenet (pincer/timeline diagrams): https://www.thisisbarry.com/film/tenet-explained-in-detail-with-timeline-diagrams/
 See also: ../../MASTER-DIAGRAM-INDEX.md
