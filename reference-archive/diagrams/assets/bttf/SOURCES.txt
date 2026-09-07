@@ -1,5 +1,6 @@
-Full-res chart (verified genuine, downloaded 2026-09-07):
-Back to the Future — The DeLorean Travels (Flickographic / Matt Isherwood):
-https://mattish.com/flickographics/post/the-delorean-travels
-Image: https://mattish.com/images/flickographics/12006-back-to-future-2.jpg  (2000x1080)
+Full-res charts (downloaded 2026-09-07):
+Back to the Future "Timelines 1-8" (Futurepedia) - provided by user: image of TL1-TL8 1885/1955/1985/2015 grid.
+Back to the Future "Tannen Family Through the Years" (1008x792): https://static.wikia.nocookie.net/bttf/images/4/47/Tannen-timeline-web.jpg/revision/latest?cb=20151114023928
+Back to the Future "The DeLorean Travels" (Flickographic / Matt Isherwood): https://mattish.com/flickographics/post/the-delorean-travels
+Futurepedia timeline article (charts live on static.wikia CDN): https://backtothefuture.fandom.com/wiki/Back_to_the_Future_timeline
 See also: ../../MASTER-DIAGRAM-INDEX.md

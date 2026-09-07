@@ -28,17 +28,17 @@ All 10 = chart (incl. Star_Trek_Timelines.png marked sliver; Time_Travel_Method-
 ## variants/<work>/
 - **12-monkeys**: v3 = chart; v1 deleted (still, no real diagram).
 - **arrival**: deleted (no timeline diagram exists publicly).
-- **bttf**: v1 = chart (Flickograph full-res); v2, v3 = stills (no replacement found — Cloudflare-gated hosts).
-- **dark**: v1, v2 = genuine sliver charts (tall); v3 = chart (30 MB); v4 = chart; v5 = **replaced** with Taylor Holmes family tree (11000×7500).
+- **bttf**: v1 = chart (DeLorean Travels, Flickograph); v2 = **replaced** with "Timelines 1-8" chart (user-provided); v3 = **replaced** with "Tannen Family Through the Years" chart.
+- **dark**: v1, v2 = genuine sliver charts (tall); v3 = chart (30 MB); v4 = chart; v5 = **replaced** with Taylor Holmes family tree (11000×7500, downscaled 4095×2792).
 - **donnie-darko**: v1, v3 = charts; v2, v4 deleted (stills).
 - **eeaao**: v1 = chart (Ori Toor A24 map); v2 deleted (still).
-- **looper**: v1 = chart (Talley straw); v4 = chart (Film.com); v2 = chart (Slate); v3 = **replaced** with AceFox Looper timeline (960×720).
+- **looper**: v1 = chart (Talley straw); v4 = chart (Film.com); v2 = chart (Slate); v3 = chart (AceFox Looper timeline).
 - **madoka**: deleted (no diagram image exists; only table chronologies).
 - **predestination**: v1 = chart; v2 = **replaced** with Taylor Holmes Möbius bootstrap diagram (1500×758).
-- **primer**: v1, v3, v4 = charts; v2 = hand-drawn sketch (crude diagram).
+- **primer**: v1, v3, v4 = charts; v2 = **replaced** with Astronomy Trek time-travel chart (1536×1024).
 - **steins-gate**: v1, v2, v3 = charts; v4 = **replaced** with worldline/attractor-field figure from the Votuko PDF (2704×3164).
 - **tenet**: v1–v7 = charts (v4 = cookpete full-res; v6, v7 genuine).
-- **terminator**: v1 = chart (network graph); v2 = chart (Talley straw); v3 = still.
+- **terminator**: v1 = chart (network graph); v2 = chart (Talley straw); v2/v3 = **replaced** with Terminator straw (user-provided 1280×843).
 - **your-name**: v1, v2, v3 = charts.
 
 ## Works with no public full-res timeline diagram (stills removed)
