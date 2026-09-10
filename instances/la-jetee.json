@@ -1,7 +1,7 @@
 {
   "meta": {
     "id": "la-jetee",
-    "title": "La Jet\u00e9e",
+    "title": "La Jetée",
     "year": 1962,
     "medium": "film",
     "sources": [
@@ -66,6 +66,7 @@
       "id": "e_war",
       "type": "ordinary",
       "label": "Post-apocalyptic underground; prisoners experimented on",
+      "description": "After a war has poisoned the surface of the Earth, survivors live in underground galleries beneath Paris, where prisoners are chosen for strange experiments.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "post-war"
@@ -78,7 +79,8 @@
     {
       "id": "e_memory",
       "type": "observation",
-      "label": "Man fixated on childhood pier image \u2014 woman's face",
+      "label": "Man fixated on childhood pier image — woman's face",
+      "description": "One prisoner is chosen because of the image that has haunted him since childhood: a man dying on a pier at Orly airport, and a woman's face he cannot forget.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "prep"
@@ -95,6 +97,7 @@
       "id": "e_send_past",
       "type": "departure",
       "label": "Scientists send him to past via memory anchor",
+      "description": "The experimenters realise a strong memory can anchor a living mind in the past, and they begin sending the man back to the moment his obsession was born.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "experiment"
@@ -112,6 +115,7 @@
       "id": "e_meet",
       "type": "arrival",
       "label": "Meets the woman repeatedly in the past",
+      "description": "In the past he meets the woman from the image, again and again, walking the same sunny Paris she lived in.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "pre-war"
@@ -128,6 +132,7 @@
       "id": "e_love",
       "type": "ordinary",
       "label": "Relationship forms across visits",
+      "description": "Visit by visit the two fall in love across a gap he cannot explain to her - a man with no future courting a woman in the past.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "visits"
@@ -141,6 +146,7 @@
       "id": "e_future_offer",
       "type": "departure",
       "label": "Sent to far future; offered escape",
+      "description": "The scientists push him further, to the far future - where the people there, knowing his story, offer him a place among them.",
       "at": {
         "worldRef": "w_far",
         "timeLabel": "far future"
@@ -156,6 +162,7 @@
       "id": "e_refuse",
       "type": "intervention",
       "label": "Chooses return to the pier / woman over future exile",
+      "description": "He refuses the future and asks instead to be sent back to the pier - to the woman, to the moment he has loved all his life.",
       "at": {
         "worldRef": "w_far",
         "timeLabel": "choice"
@@ -168,6 +175,7 @@
       "id": "e_return_pier",
       "type": "arrival",
       "label": "Returns to Orly pier of the memory",
+      "description": "He arrives on the Orly pier of his memory, walking toward the woman waiting at the end of it.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "pier"
@@ -180,7 +188,8 @@
     {
       "id": "e_death",
       "type": "death",
-      "label": "Killed on the pier \u2014 childhood memory was his own death",
+      "label": "Killed on the pier — childhood memory was his own death",
+      "description": "As he reaches her, an agent of the underground who followed him through time shoots him dead - the image that defined his life was his own death all along.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "pier"
@@ -196,6 +205,7 @@
       "id": "e_child",
       "type": "observation",
       "label": "Child witness is the same man seeing his future death",
+      "description": "The boy who witnessed the man's death on the pier, and carried the woman's face through his life, was the dying man himself as a child.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "childhood"
@@ -211,6 +221,7 @@
       "id": "e_photo_roman",
       "type": "ordinary",
       "label": "Narrative told almost entirely in still photographs",
+      "description": "The story is told almost entirely in still photographs, with only one fleeting moment of live motion - a woman waking in bed.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "form"
@@ -226,6 +237,7 @@
       "id": "e_loop_close",
       "type": "bootstrap_origin",
       "label": "Memory that enables travel is the death it causes",
+      "description": "The loop closes on itself: the memory that let him travel back is the death that travel leads him to.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "closure"
@@ -242,6 +254,7 @@
       "id": "e_x_pier",
       "type": "ordinary",
       "label": "Child sees woman and death at Orly",
+      "description": "A child stands at Orly and sees a man die and a woman cry out - the image that will shape a life.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "memory"
@@ -251,6 +264,7 @@
       "id": "e_x_war",
       "type": "ordinary",
       "label": "WWIII underground experiments",
+      "description": "The Third World War, and the underground experiments that followed it.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "future"
@@ -260,6 +274,7 @@
       "id": "e_x_send",
       "type": "departure",
       "label": "Prisoner sent to past via memory",
+      "description": "The prisoner sent into the past on the anchor of his own memory.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "mid"
@@ -269,6 +284,7 @@
       "id": "e_x_woman",
       "type": "ordinary",
       "label": "Meets woman in past",
+      "description": "The meetings with the woman in the past, scene by still scene.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "mid"
@@ -278,6 +294,7 @@
       "id": "e_x_future",
       "type": "arrival",
       "label": "Visit future beings",
+      "description": "The visit to the people of the far future, and their offer.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "late"
@@ -287,6 +304,7 @@
       "id": "e_x_return",
       "type": "ordinary",
       "label": "Return to pier moment",
+      "description": "The return to the pier, chosen over sanctuary in the future.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "climax"
@@ -296,6 +314,7 @@
       "id": "e_x_death",
       "type": "death",
       "label": "He is the dying man he saw",
+      "description": "He is the dying man he has always remembered seeing.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "climax"
@@ -305,6 +324,7 @@
       "id": "e_x_loop",
       "type": "bootstrap_origin",
       "label": "Memory was own death",
+      "description": "The memory was his own death - the beginning and the end of the same image.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "reveal"

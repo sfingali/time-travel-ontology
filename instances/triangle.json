@@ -62,6 +62,7 @@
       "id": "e_sail",
       "type": "ordinary",
       "label": "Jess and friends sail into storm",
+      "description": "Jess, a worn-down mother with a disabled son, joins friends on a yacht trip - and the weekend runs into a ferocious storm that capsizes the boat.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "morning"
@@ -75,6 +76,7 @@
       "id": "e_aeolus",
       "type": "arrival",
       "label": "Board deserted ocean liner Aeolus",
+      "description": "Clinging to the hull, the survivors are picked up by an enormous deserted ocean liner - the Aeolus - drifting silently in the grey.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "storm"
@@ -88,6 +90,7 @@
       "id": "e_masked",
       "type": "ordinary",
       "label": "Masked shooter attacks the party",
+      "description": "Aboard the empty liner, someone in a sackcloth mask hunts them through the corridors, killing the party one by one.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "deck"
@@ -101,6 +104,7 @@
       "id": "e_realize",
       "type": "reveal",
       "label": "Jess realizes she is looping; seagulls/repeats",
+      "description": "Jess starts noticing the film's seams: piles of her own discarded jackets, a trail of identical lockets, dead gulls in the same spot - she has been on this ship before, many times.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "mid"
@@ -116,6 +120,7 @@
       "id": "e_kill_copies",
       "type": "intervention",
       "label": "Jess kills versions of friends to 'reset'",
+      "description": "Working out that the ship resets, Jess turns executioner - killing the other versions of herself and her friends to steer the loop toward a version where she can get home.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "loop n"
@@ -129,6 +134,7 @@
       "id": "e_become_mask",
       "type": "ordinary",
       "label": "Jess becomes the masked killer for next iteration",
+      "description": "The loop's punchline: wounded, stripped of everything, she puts on the mask herself and becomes the killer who hunts the next group of survivors coming aboard.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "loop n+1"
@@ -145,6 +151,7 @@
       "id": "e_wreck",
       "type": "ordinary",
       "label": "Survives wreck; returns home",
+      "description": "The ship's cycle breaks and Jess washes ashore - back in the city, ahead of the storm, with one chance to stop the yacht ever leaving.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "escape attempt"
@@ -157,6 +164,7 @@
       "id": "e_double",
       "type": "contact",
       "label": "Finds double at home; kills her and takes place",
+      "description": "She reaches home in time to see herself - the Jess who stayed - abusing her son; she kills her double and takes her place, choosing the loop's door again.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "home"
@@ -172,6 +180,7 @@
       "id": "e_hitch",
       "type": "departure",
       "label": "Hitches to harbor to restart sailing trip",
+      "description": "The film ends where it began: Jess, driving to the harbour to board the yacht - the whole tragedy lining up to happen again.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "morning again"
@@ -187,6 +196,7 @@
       "id": "e_grief",
       "type": "reveal",
       "label": "Grief over disabled son fuels the loop",
+      "description": "Underneath every reset is the same wound: her son, autistic and demanding, and the mother whose exhaustion and guilt the loop turns into a machine.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "motif"
@@ -199,7 +209,8 @@
     {
       "id": "e_aeolus_name",
       "type": "observation",
-      "label": "Ship Aeolus \u2014 circular wandering / wind god",
+      "label": "Ship Aeolus — circular wandering / wind god",
+      "description": "The ship's name is the key: Aeolus, the keeper of the winds - the father of the Sisyphus the myth condemns to roll his stone forever.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "theme"
@@ -215,6 +226,7 @@
       "id": "e_no_exit",
       "type": "loop_reset",
       "label": "Loop continues; no external exit shown",
+      "description": "No version of the story shows the way out - the loop has no external exit, only roles that rotate: victim, killer, witness.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "cycle"
@@ -231,6 +243,7 @@
       "id": "e_x_boat",
       "type": "ordinary",
       "label": "Yachtsmen find deserted liner",
+      "description": "The yacht survivors who find the silent liner are the loop's raw material.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "open"
@@ -240,6 +253,7 @@
       "id": "e_x_loop",
       "type": "loop_reset",
       "label": "Aeolus loop of murders",
+      "description": "Aboard the Aeolus, the murders repeat in exact sequence - a script the ship performs on every pass.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "mid"
@@ -249,6 +263,7 @@
       "id": "e_x_jess",
       "type": "ordinary",
       "label": "Jess iterations try to break",
+      "description": "Every iteration of Jess reaches the same crossroads - flee, fight, or become.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "mid"
@@ -258,6 +273,7 @@
       "id": "e_x_kill",
       "type": "death",
       "label": "Forced killings to 'save' son",
+      "description": "The killings the loop forces: each Jess kills to save her son, and damns the next pass.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "mid"
@@ -267,6 +283,7 @@
       "id": "e_x_shore",
       "type": "ordinary",
       "label": "Shore / taxi returns to start",
+      "description": "The taxi driver who takes Jess to the harbour - a silent figure who has made this journey with her before.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "late"
@@ -276,6 +293,7 @@
       "id": "e_x_crash",
       "type": "ordinary",
       "label": "Car crash resets emotional loop",
+      "description": "The car crash at the story's hinge - the accident that kills the child and makes the loop personal.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "end"
@@ -285,6 +303,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Closed narrative loop",
+      "description": "The ship's grammar: die aboard and wake at the mooring; leave the ship and the world outside keeps its own, crueler count.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "rules"
@@ -294,6 +313,7 @@
       "id": "e_x_guilt",
       "type": "observation",
       "label": "Guilt as engine",
+      "description": "The engine of the whole loop: a mother's guilt, turned into a ship that never lets her finish paying it.",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "theme"

@@ -26,7 +26,7 @@
       "kind": "timeline",
       "id": "w_1991",
       "label": "1991 present (pre-JD rewrite attempt)",
-      "spanLabel": "1991\u20131997"
+      "spanLabel": "1991–1997"
     },
     {
       "kind": "branch",
@@ -83,6 +83,7 @@
       "id": "e_send_t1000",
       "type": "departure",
       "label": "Skynet sends T-1000 to 1991",
+      "description": "In the future war's last act, Skynet sends a terminator - the liquid-metal T-1000 - back to 1991 to kill John Connor as a boy.",
       "at": {
         "worldRef": "w_2029_skynet",
         "timeLabel": "2029"
@@ -98,6 +99,7 @@
       "id": "e_send_t800",
       "type": "departure",
       "label": "Resistance sends reprogrammed T-800",
+      "description": "The human resistance captures the time vault and answers with the same move in reverse: a reprogrammed T-800, the machine that once hunted Sarah, sent back to protect her son.",
       "at": {
         "worldRef": "w_2029_skynet",
         "timeLabel": "2029"
@@ -113,6 +115,7 @@
       "id": "e_arrive_t1000",
       "type": "arrival",
       "label": "T-1000 arrives 1991",
+      "description": "The T-1000 arrives naked in a street of fire - and takes its first human shape from a passing policeman.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "1991"
@@ -125,6 +128,7 @@
       "id": "e_arrive_t800",
       "type": "arrival",
       "label": "T-800 arrives 1991",
+      "description": "The T-800 arrives in the same weekend, acquires leathers and a shotgun, and sets out to find the boy first.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "1991"
@@ -137,6 +141,7 @@
       "id": "e_rescue_john",
       "type": "intervention",
       "label": "T-800 rescues John from T-1000",
+      "description": "The T-800 rescues John from the T-1000 in a shopping-mall chase - the killing machine becoming, step by step, the boy's guardian.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "1991 mall"
@@ -151,6 +156,7 @@
       "id": "e_break_sarah",
       "type": "ordinary",
       "label": "Sarah broken out of Pescadero",
+      "description": "John learns his mother is locked in the Pescadero mental hospital, and the machines spring her - Sarah Connor fighting out of the ward that wants her silent.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "1991"
@@ -165,6 +171,7 @@
       "id": "e_dyson",
       "type": "intervention",
       "label": "Dyson allies; Cyberdyne raid planned",
+      "description": "Sarah tracks the future's roots to Miles Dyson, the Cyberdyne engineer building the chip that becomes Skynet - and, wounded and reluctant, he comes to understand what his work will do.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "1991"
@@ -180,6 +187,7 @@
       "id": "e_destroy_lab",
       "type": "intervention",
       "label": "Cyberdyne destroyed; chip/arm melted",
+      "description": "They raid Cyberdyne, destroy the research, and melt the recovered chip and robot arm - striking Judgment Day off the calendar at its root.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "1991 night"
@@ -195,6 +203,7 @@
       "id": "e_fork_no_jd",
       "type": "branch_fork",
       "label": "Hoped fork: Judgment Day averted",
+      "description": "The hoped-for fork: no chip, no Skynet, no war - the future they came from quietly cancelled by the people who would have suffered it.",
       "at": {
         "worldRef": "w_no_jd",
         "timeLabel": "post-raid"
@@ -208,6 +217,7 @@
       "id": "e_steel_mill",
       "type": "death",
       "label": "T-1000 destroyed; T-800 self-terminates",
+      "description": "The T-1000 is finally destroyed in a steel mill's molten metal - and the T-800, having done his job, lowers himself into the same fire.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "steel mill"
@@ -222,7 +232,8 @@
     {
       "id": "e_road",
       "type": "ordinary",
-      "label": "Open road \u2014 uncertain future",
+      "label": "Open road — uncertain future",
+      "description": "Sarah drives the open road with the boy she has learned to mother again, the future unwritten - hopeful, and watchful.",
       "at": {
         "worldRef": "w_no_jd",
         "timeLabel": "dawn"
@@ -236,6 +247,7 @@
       "id": "e_t800_arrive",
       "type": "arrival",
       "label": "T-800 sent to protect John",
+      "description": "The reprogrammed machine is sent to stand between John and Skynet's assassin.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "1995"
@@ -248,6 +260,7 @@
       "id": "e_t1000",
       "type": "arrival",
       "label": "T-1000 sent to kill John",
+      "description": "The T-1000 comes for the boy who will one day lead humanity.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "1995"
@@ -260,6 +273,7 @@
       "id": "e_psych",
       "type": "ordinary",
       "label": "Sarah in Pescadero",
+      "description": "Sarah, disbelieved and committed, arms herself in her mind while the system calls her mad.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "early"
@@ -269,6 +283,7 @@
       "id": "e_rescue",
       "type": "intervention",
       "label": "Rescue Sarah; escape",
+      "description": "The escape from Pescadero - mother, son and machine reunited on the run.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "mid"
@@ -278,6 +293,7 @@
       "id": "e_miles",
       "type": "ordinary",
       "label": "Find Miles Dyson",
+      "description": "Finding Miles Dyson - the gentle man whose evening research will one day end the world.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "mid"
@@ -287,6 +303,7 @@
       "id": "e_cyberdyne",
       "type": "intervention",
       "label": "Destroy Cyberdyne lab",
+      "description": "The Cyberdyne raid - police, gunfire, and the office where the future was being invented.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "climax"
@@ -296,6 +313,7 @@
       "id": "e_highway",
       "type": "ordinary",
       "label": "Highway / steel mill chase",
+      "description": "The chase to the steel mill - truck, Harley, and liquid nitrogen.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "climax"
@@ -305,6 +323,7 @@
       "id": "e_t1000_end",
       "type": "death",
       "label": "T-1000 destroyed in molten steel",
+      "description": "The liquid metal assassin breaks apart and sinks, still reaching, in the mill's fire.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "finale"
@@ -314,6 +333,7 @@
       "id": "e_t800_sacrifice",
       "type": "death",
       "label": "T-800 lowers into steel to remove chip/arm future",
+      "description": "The T-800's last act: lowering itself into the molten steel to make sure its own chip can never start the war it was built to prevent.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "finale"
@@ -323,6 +343,7 @@
       "id": "e_hope",
       "type": "ordinary",
       "label": "Sarah hope for future without Judgment Day",
+      "description": "Sarah's closing words: if a machine can learn the value of human life, maybe the future isn't written after all.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "epilogue"
@@ -332,6 +353,7 @@
       "id": "e_alt",
       "type": "observation",
       "label": "Future war still threatened but deferred",
+      "description": "The asterisk the film leaves: the war is only deferred - the storm clouds on the road ahead are a warning, not a promise.",
       "at": {
         "worldRef": "w_1991",
         "timeLabel": "theme"

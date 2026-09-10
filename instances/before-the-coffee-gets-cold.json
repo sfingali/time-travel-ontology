@@ -24,8 +24,8 @@
     {
       "kind": "timeline",
       "id": "w_cafe",
-      "label": "Caf\u00e9 Funiculi Funicula (seat portal)",
-      "spanLabel": "present\u00b1visits"
+      "label": "Café Funiculi Funicula (seat portal)",
+      "spanLabel": "present±visits"
     }
   ],
   "agents": [
@@ -59,7 +59,8 @@
     {
       "id": "e_cafe",
       "type": "ordinary",
-      "label": "Funiculi Funicula caf\u00e9; ghost occupies the seat",
+      "label": "Funiculi Funicula café; ghost occupies the seat",
+      "description": "In a basement Tokyo café, Funiculi Funicula, one particular chair lets a visitor travel through time - when the seat is free of the ghost who haunts it.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "present"
@@ -71,7 +72,8 @@
     {
       "id": "e_rules",
       "type": "reveal",
-      "label": "Rules: one seat; cannot leave; caf\u00e9 visitors only; present immutable; coffee timer",
+      "label": "Rules: one seat; cannot leave; café visitors only; present immutable; coffee timer",
+      "description": "The rules are strict: travel only to times the café has existed, only to meet people who have visited it, nothing can change the present, and you must return before your coffee goes cold.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "rules"
@@ -88,6 +90,7 @@
       "id": "e_fumiko",
       "type": "departure",
       "label": "Fumiko travels to confront boyfriend before US job",
+      "description": "Fumiko travels back to confront the boyfriend who left for America without telling her he was going.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story1"
@@ -104,6 +107,7 @@
       "id": "e_fumiko_back",
       "type": "arrival",
       "label": "Fumiko returns; present unchanged; resolve reframed",
+      "description": "She returns with nothing changed except herself: the past stays fixed, but she leaves the café ready to face her future differently.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story1 end"
@@ -116,6 +120,7 @@
       "id": "e_kohtake",
       "type": "departure",
       "label": "Kohtake seeks letter from Alzheimer husband",
+      "description": "Nurse Kohtake travels to read the letter her husband, losing himself to Alzheimer's, wrote her while he could still remember who she was.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story2"
@@ -131,6 +136,7 @@
       "id": "e_kohtake_back",
       "type": "arrival",
       "label": "Letter visit; present unchanged; care transformed",
+      "description": "The present refuses to change - his illness remains - but she comes back able to love the man he still is, memory and all.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story2 end"
@@ -143,6 +149,7 @@
       "id": "e_hirai",
       "type": "departure",
       "label": "Hirai confronts estranged sister",
+      "description": "Hirai, the café owner's sister, travels to speak to the younger sister who ran from the family business and from her.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story3"
@@ -158,6 +165,7 @@
       "id": "e_hirai_back",
       "type": "arrival",
       "label": "Sister visit; present unchanged; reconciliation begins",
+      "description": "Nothing in the past moves, but the visit cracks open the estrangement, and the two sisters begin again.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story3 end"
@@ -170,6 +178,7 @@
       "id": "e_kei",
       "type": "departure",
       "label": "Kei travels to future to meet yet-unborn daughter",
+      "description": "Barmaid Kei travels far forward to meet the daughter she will not live to raise, as an adult.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story4"
@@ -186,6 +195,7 @@
       "id": "e_kei_back",
       "type": "arrival",
       "label": "Future meeting strengthens Kei's will to live",
+      "description": "Meeting the grown daughter - and reading her heart - gives Kei the strength to choose the life she was afraid to begin.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story4 end"
@@ -197,7 +207,8 @@
     {
       "id": "e_ghost_risk",
       "type": "ordinary",
-      "label": "Overstay coffee \u2192 become ghost in the seat",
+      "label": "Overstay coffee → become ghost in the seat",
+      "description": "The rule's edge: stay past the last sip and you become the café's ghost - the figure who waits forever in the seat.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "rule cost"
@@ -213,6 +224,7 @@
       "id": "e_theme",
       "type": "observation",
       "label": "Past unalterable in outcome; conversations change how one faces future",
+      "description": "The café cannot change one second of the present - only the heart of the person who makes the trip, which turns out to be enough.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "theme"
@@ -225,6 +237,7 @@
       "id": "e_x_cafe",
       "type": "ordinary",
       "label": "Cafe rules explained",
+      "description": "The café's peculiar rules, laid out by its unsmiling staff.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "open"
@@ -234,6 +247,7 @@
       "id": "e_x_seat",
       "type": "departure",
       "label": "Sit in ghost seat; travel",
+      "description": "Sit in the ghost's chair and the journey begins.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "inciting"
@@ -243,6 +257,7 @@
       "id": "e_x_coffee",
       "type": "observation",
       "label": "Must return before coffee cools",
+      "description": "The cup on the table is the clock: come back before it cools, or stay forever.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "rules"
@@ -252,6 +267,7 @@
       "id": "e_x_letter",
       "type": "ordinary",
       "label": "Woman seeks letter from lover",
+      "description": "A visitor seeks a letter from a lover, long gone.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story1"
@@ -261,6 +277,7 @@
       "id": "e_x_nurse",
       "type": "ordinary",
       "label": "Nurse visits sister",
+      "description": "The nurse crosses time to visit her sister.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story2"
@@ -270,6 +287,7 @@
       "id": "e_x_couple",
       "type": "ordinary",
       "label": "Couple reconciliation visit",
+      "description": "A couple arrives to say what they never said.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story3"
@@ -279,6 +297,7 @@
       "id": "e_x_mother",
       "type": "ordinary",
       "label": "Mother-daughter visit",
+      "description": "A mother takes the seat to meet her daughter.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "story4"
@@ -288,6 +307,7 @@
       "id": "e_x_limit",
       "type": "observation",
       "label": "Cannot change present; only feelings",
+      "description": "The limit everyone learns: the present cannot be changed - only the person who travels.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "rules2"
@@ -297,6 +317,7 @@
       "id": "e_x_close",
       "type": "ordinary",
       "label": "Cafe continues receiving seekers",
+      "description": "The café goes on, pouring coffee and receiving whoever needs the seat next.",
       "at": {
         "worldRef": "w_cafe",
         "timeLabel": "close"

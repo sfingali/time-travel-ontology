@@ -5,7 +5,7 @@
     "year": 2014,
     "medium": "tv",
     "sources": [
-      "Ronald D. Moore adapting Diana Gabaldon (2014\u2013)",
+      "Ronald D. Moore adapting Diana Gabaldon (2014–)",
       "time-travel-archive/tv/outlander.md",
       "tenet-class deepen 2026-09-06"
     ]
@@ -24,7 +24,7 @@
       "kind": "timeline",
       "id": "w_stones",
       "label": "Claire/Jamie continuum via standing stones",
-      "spanLabel": "1743\u21941945\u21941968\u21941770s",
+      "spanLabel": "1743↔1945↔1968↔1770s",
       "description": "Soft Novikov: big history resists; personal lives contingent"
     },
     {
@@ -78,6 +78,7 @@
       "id": "e_honeymoon",
       "type": "ordinary",
       "label": "Claire and Frank honeymoon in Highlands",
+      "description": "In 1945, former combat nurse Claire Randall honeymoon in the Scottish Highlands with the husband she was separated from by the war.",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "1945"
@@ -91,6 +92,7 @@
       "id": "e_stones",
       "type": "departure",
       "label": "Craigh na Dun stones displace Claire to 1743",
+      "description": "At the stone circle of Craigh na Dun, Claire touches the standing stones - and is thrown through two hundred years into the Scotland of 1743.",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "1945"
@@ -106,6 +108,7 @@
       "id": "e_arrive1743",
       "type": "arrival",
       "label": "Arrives 1743 Scotland",
+      "description": "Claire wakes in the middle of the eighteenth century, a woman out of time in a country at war with itself.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "1743"
@@ -121,6 +124,7 @@
       "id": "e_jamie_meet",
       "type": "ordinary",
       "label": "Meets Jamie Fraser",
+      "description": "She meets Jamie Fraser, a young Highlander who shelters her from the hands of a brutal English officer - the beginning of the bond the whole story turns on.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "1743"
@@ -134,6 +138,7 @@
       "id": "e_marry",
       "type": "ordinary",
       "label": "Marries Jamie for protection",
+      "description": "To keep her from that officer's clutches, Claire marries Jamie - a marriage of convenience that stops being convenient as real love takes root.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "1743"
@@ -147,6 +152,7 @@
       "id": "e_frank_search",
       "type": "ordinary",
       "label": "Frank searches in 1940s",
+      "description": "In 1945 and after, Frank searches for his vanished wife through years that never explain her.",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "1945+"
@@ -159,6 +165,7 @@
       "id": "e_culloden_foreknowledge",
       "type": "observation",
       "label": "Claire's history knowledge of Culloden",
+      "description": "Claire carries the future in her head: she knows the Jacobite cause dies at Culloden in 1746, and knows the history books' verdict in advance.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "pre-1746"
@@ -171,6 +178,7 @@
       "id": "e_try_change",
       "type": "intervention",
       "label": "Attempts to alter Jacobite outcomes",
+      "description": "She tries to use that knowledge - to warn, to change, to save - and finds two centuries of recorded history a heavy thing to push against.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "politics"
@@ -187,6 +195,7 @@
       "id": "e_sep",
       "type": "ordinary",
       "label": "Separations / return stones temptation",
+      "description": "Across the story, the pull of the stones never stops: Claire is repeatedly torn between two centuries and the two lives she has in them.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "mid"
@@ -200,6 +209,7 @@
       "id": "e_return20",
       "type": "arrival",
       "label": "Claire returns to 20th century pregnant",
+      "description": "Pregnant and despairing, Claire returns through the stones to the twentieth century - to Frank, and to a life spent half elsewhere.",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "1948"
@@ -216,6 +226,7 @@
       "id": "e_brianna_born",
       "type": "birth",
       "label": "Brianna born; raised with Frank",
+      "description": "She gives birth to Jamie's daughter, Brianna, and raises her with Frank in the centuries between.",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "1948+"
@@ -230,6 +241,7 @@
       "id": "e_research",
       "type": "ordinary",
       "label": "Years later research Jamie survival",
+      "description": "Twenty years on, Claire - now a doctor - finds historical proof that Jamie survived Culloden.",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "1960s+"
@@ -243,6 +255,7 @@
       "id": "e_return18",
       "type": "departure",
       "label": "Claire returns to 18th c. to Jamie",
+      "description": "With Brianna grown, Claire goes back through the stones again - to 1766 and the man she left.",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "1968"
@@ -258,6 +271,7 @@
       "id": "e_reunion",
       "type": "ordinary",
       "label": "Reunion with Jamie",
+      "description": "The reunion: Jamie the printer, alive, grey-streaked - and the two of them picking up a marriage two hundred interrupted years old.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "1760s"
@@ -271,6 +285,7 @@
       "id": "e_brianna_roger",
       "type": "departure",
       "label": "Brianna and Roger also travel via stones",
+      "description": "Brianna and Roger follow her parents into the past through the same stones, adding their own thread to the family's time-crossed story.",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "1970s"
@@ -287,6 +302,7 @@
       "id": "e_family",
       "type": "ordinary",
       "label": "Multi-generational Fraser timeline entanglement",
+      "description": "The saga's spine: one family, scattered across three centuries, holding together by letters, names and stones.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "later books/show"
@@ -302,6 +318,7 @@
       "id": "e_fixedish",
       "type": "observation",
       "label": "History resists large changes; personal mutable",
+      "description": "The rule as the story learns it: great history holds its shape - battles happen, plagues come - but private lives have room to bend.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "rules"
@@ -314,6 +331,7 @@
       "id": "e_geillis",
       "type": "ordinary",
       "label": "Other travelers (Geillis) confirm mechanism",
+      "description": "Another traveller, Geillis Duncan, proves to Claire she is not alone - and that the stones have been moving people for centuries.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "mid"
@@ -326,6 +344,7 @@
       "id": "e_voyage",
       "type": "ordinary",
       "label": "New World arcs continue displacement theme",
+      "description": "The story crosses to the New World, where the Fraser family's American chapters begin - displacement by ocean now, not just by stone.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "later"
@@ -339,6 +358,7 @@
       "id": "e_letters",
       "type": "ordinary",
       "label": "Cross-time letters / evidence bridges eras",
+      "description": "Letters and records across the centuries become the family's bridge - evidence posted between eras by people who know where the post-boxes really are.",
       "at": {
         "worldRef": "w_stones",
         "timeLabel": "research"
@@ -352,6 +372,7 @@
       "id": "e_destiny",
       "type": "ordinary",
       "label": "Love as reason to stay despite paradox risk",
+      "description": "The choice the story keeps making concrete: Claire chooses the past, and Jamie, over the safety of her own century - love as the reason to stay.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "theme"
@@ -365,6 +386,7 @@
       "id": "e_close",
       "type": "ordinary",
       "label": "Ongoing stone-travel family saga",
+      "description": "The saga continues as it always has: a family living out of order, bound by stones, love and two hundred years of proof.",
       "at": {
         "worldRef": "w_1743",
         "timeLabel": "open end"

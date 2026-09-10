@@ -25,7 +25,7 @@
     {
       "kind": "timeline",
       "id": "w_san_dimas",
-      "label": "San Dimas \u2194 utopian future",
+      "label": "San Dimas ↔ utopian future",
       "spanLabel": "1988 / far future",
       "description": "San Dimas time runs while they travel; utopia depends on report"
     }
@@ -97,6 +97,7 @@
       "id": "e_failing",
       "type": "ordinary",
       "label": "Bill and Ted failing history; band dream",
+      "description": "Two airheaded San Dimas teenagers, Bill and Ted, are failing history class - and their band, Wyld Stallyns, cannot survive if they are separated.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "San Dimas"
@@ -110,6 +111,7 @@
       "id": "e_rufus",
       "type": "arrival",
       "label": "Rufus arrives from future utopia with phone booth",
+      "description": "A man called Rufus arrives in a phone booth that is also a time machine, sent from a future their music will one day create.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "present"
@@ -127,6 +129,7 @@
       "id": "e_mission",
       "type": "reveal",
       "label": "Must pass history report or future Wyld Stallyns utopia fails",
+      "description": "The stakes: if Bill and Ted fail their history report, they will be sent to separate schools, the band dies, and the utopian future never happens.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "briefing"
@@ -141,6 +144,7 @@
       "id": "e_booth",
       "type": "departure",
       "label": "First phone-booth departure",
+      "description": "The boys take their first trip in the booth, spinning wildly through history.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "present"
@@ -158,6 +162,7 @@
       "id": "e_napoleon",
       "type": "intervention",
       "label": "Retrieve Napoleon from exile era",
+      "description": "They bring back Napoleon from 1805, plucking him out of exile as their first historical figure.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "past Europe"
@@ -175,6 +180,7 @@
       "id": "e_water_park",
       "type": "ordinary",
       "label": "Napoleon at water park chaos in present",
+      "description": "Napoleon is left at a water park, where the little emperor dominates the wave pool and delights the crowds.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "San Dimas"
@@ -189,6 +195,7 @@
       "id": "e_tour",
       "type": "departure",
       "label": "Historical figure collecting circuit",
+      "description": "The booth makes its circuit through history, picking up figures along the way.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "various eras"
@@ -205,6 +212,7 @@
       "id": "e_socrates",
       "type": "arrival",
       "label": "Socrates joins the party",
+      "description": "Socrates joins the crew - 'So-crates', as the boys say - plucked from ancient Athens.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "ancient Greece"
@@ -219,6 +227,7 @@
       "id": "e_babysit",
       "type": "ordinary",
       "label": "Babysitting historical figures overnight",
+      "description": "The historical figures are left to fend for themselves in 1988 San Dimas, where Napoleon plays soldier and the rest cause polite chaos.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "present night"
@@ -234,6 +243,7 @@
       "id": "e_keys",
       "type": "bootstrap_origin",
       "label": "Future selves leave keys / tips (most excellent bootstrap)",
+      "description": "The boys discover keys and helpful notes left for them by their future selves - help that will one day be theirs to give.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "present"
@@ -250,6 +260,7 @@
       "id": "e_jail",
       "type": "ordinary",
       "label": "Figures arrested; need rescue",
+      "description": "The figures are arrested, and the report they are needed for is tomorrow morning.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "police station"
@@ -263,6 +274,7 @@
       "id": "e_rescue_plan",
       "type": "intervention",
       "label": "Use booth to stage own jailbreak via timed arrivals",
+      "description": "Bill and Ted use the booth's precision timing to stage a jailbreak, arranging their own arrival to set the figures free.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "time circuit"
@@ -279,6 +291,7 @@
       "id": "e_report",
       "type": "ordinary",
       "label": "History report with live figures succeeds",
+      "description": "The history report becomes a stage show - each figure presenting himself - and the school is duly dazzled. They pass.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "school"
@@ -294,6 +307,7 @@
       "id": "e_guitar",
       "type": "ordinary",
       "label": "Good luck / guitar gift from Rufus",
+      "description": "Rufus leaves the boys the guitar that will make Wyld Stallyns great - the luck their future depends on.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "after report"
@@ -308,6 +322,7 @@
       "id": "e_princesses",
       "type": "departure",
       "label": "Travel to fetch medieval princesses (setup)",
+      "description": "The boys plan trips to medieval England, where two princesses await rescue - the next chapter of their story.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "medieval"
@@ -324,6 +339,7 @@
       "id": "e_future_ok",
       "type": "observation",
       "label": "Future utopia secured by report success",
+      "description": "With the report passed, the utopia that depends on their music is secure.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "future implication"
@@ -338,6 +354,7 @@
       "id": "e_death",
       "type": "ordinary",
       "label": "Ted's dad threat subplot resolved without murder plan",
+      "description": "Ted's father's threat to ship him to military school is defused without anyone having to resort to the boys' worst plans.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "present"
@@ -351,6 +368,7 @@
       "id": "e_circle",
       "type": "reveal",
       "label": "Realize they will become the helpers they met",
+      "description": "The boys realise the helpful stranger who left them keys and advice is themselves - they have met their own future.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "bootstrap beat"
@@ -364,6 +382,7 @@
       "id": "e_credits_band",
       "type": "ordinary",
       "label": "Band path toward destiny begins",
+      "description": "Wyld Stallyns plugs in and plays - badly, but the future is patient.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "epilogue"
@@ -377,6 +396,7 @@
       "id": "e_booth_return",
       "type": "arrival",
       "label": "Booth returns figures toward homes / containment",
+      "description": "The booth carries the historical figures back toward their own times.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "wrap"
@@ -394,6 +414,7 @@
       "id": "e_excellent",
       "type": "ordinary",
       "label": "Most excellent farewell; destiny affirmed",
+      "description": "Farewells all round: the future is assured, and it is most excellent.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "close"
@@ -408,6 +429,7 @@
       "id": "e_loop_close",
       "type": "bootstrap_origin",
       "label": "Closed helpful loop: future them already intervened",
+      "description": "The loop closes: the future selves who helped the boys at the start are the boys themselves, once the report is done.",
       "at": {
         "worldRef": "w_san_dimas",
         "timeLabel": "meta close"

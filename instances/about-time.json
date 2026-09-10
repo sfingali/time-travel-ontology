@@ -88,6 +88,7 @@
       "id": "e_nye",
       "type": "ordinary",
       "label": "Disappointing New Year party",
+      "description": "At a dull New Year's Eve party, the teenagers kiss strangers at midnight because the family tradition says to - and Tim comes away feeling embarrassed and empty.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "Cornwall NYE"
@@ -102,6 +103,7 @@
       "id": "e_reveal",
       "type": "reveal",
       "label": "Dad reveals hereditary male-line travel",
+      "description": "Tim's father sits him down and explains the family secret: the men of the family can walk back into moments of their own past and live them again.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "21st birthday morning"
@@ -118,6 +120,7 @@
       "id": "e_charlotte",
       "type": "intervention",
       "label": "Charlotte confessions still fail",
+      "description": "Tim goes back to the summer before to try his luck with his sister's visiting friend, Charlotte - but even with second chances, she tells him she is not interested.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "summer loops"
@@ -134,6 +137,7 @@
       "id": "e_london",
       "type": "ordinary",
       "label": "Tim moves to London; rooms with Harry",
+      "description": "Tim leaves the family home in Cornwall to work as a lawyer in London, moving in with a volatile but endearing playwright roommate, Harry.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "London"
@@ -147,6 +151,7 @@
       "id": "e_dans_noir",
       "type": "ordinary",
       "label": "Meets Mary at Dans le Noir",
+      "description": "At a restaurant where everyone eats in complete darkness, Tim falls into easy, laughing conversation with a young American called Mary, and is smitten.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "first meet"
@@ -160,6 +165,7 @@
       "id": "e_harry_play",
       "type": "intervention",
       "label": "Rewinds to save Harry play; Mary night erased",
+      "description": "Tim rewinds to fix his friend Harry's disastrous opening night - but undoing the evening wipes out the night he first met Mary, who now has never known him.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "play night"
@@ -174,6 +180,7 @@
       "id": "e_exhibition",
       "type": "intervention",
       "label": "Re-meets Mary at Kate Moss exhibition",
+      "description": "After losing Mary to his own do-over, Tim learns where she will be and arranges to bump into her again at a photography exhibition.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "exhibition"
@@ -187,6 +194,7 @@
       "id": "e_boyfriend",
       "type": "intervention",
       "label": "Arrives before rival boyfriend",
+      "description": "Tim uses one more jump to reach Mary's flat before another man can win her heart, and the two begin the relationship he has been chasing.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "preemption"
@@ -200,6 +208,7 @@
       "id": "e_wedding",
       "type": "ordinary",
       "label": "Marries Mary; declines later Charlotte",
+      "description": "Tim and Mary marry in a small, rain-soaked church service that goes joyfully wrong, and he turns down a last chance with his old crush, Charlotte.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "wedding"
@@ -214,6 +223,7 @@
       "id": "e_posy",
       "type": "birth",
       "label": "Daughter Posy born",
+      "description": "Tim and Mary have their first child, a baby daughter they name Posy, and family life begins in earnest.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "parenthood"
@@ -228,6 +238,7 @@
       "id": "e_kitkat_crash",
       "type": "intervention",
       "label": "Prevents Kit Kat crash on Posy birthday",
+      "description": "On Posy's birthday, Tim's sister Kit Kat is hurt in a car crash after a party, and Tim races back in time to stop it happening.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "Posy birthday"
@@ -242,6 +253,7 @@
       "id": "e_posy_erased",
       "type": "branch_fork",
       "label": "Pre-conception edit replaces Posy with a son",
+      "description": "Tim learns the hard rule of his gift: change anything before a child is conceived, and that child is never born - Posy vanishes, replaced by a stranger son.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "after rewrite"
@@ -259,6 +271,7 @@
       "id": "e_restore_crash",
       "type": "intervention",
       "label": "Restores crash timeline so Posy exists",
+      "description": "To get his daughter back, Tim lets the car crash stand as history and instead helps Kit Kat recover in the present, accepting the accident happened.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "restore"
@@ -274,6 +287,7 @@
       "id": "e_kitkat_present",
       "type": "ordinary",
       "label": "Helps Kit Kat in present",
+      "description": "Rather than rewriting the past, Tim supports his sister in the here and now, steering her away from the boyfriend who set the crash in motion.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "present tense"
@@ -287,6 +301,7 @@
       "id": "e_son",
       "type": "birth",
       "label": "Second child (son) born",
+      "description": "Tim and Mary's second child, a baby boy, is born - and from this point his existence locks the family's past in place.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "later"
@@ -300,6 +315,7 @@
       "id": "e_cancer",
       "type": "observation",
       "label": "James terminal; cannot undo smoking without erasing kids",
+      "description": "Tim's father is dying of cancer, and Tim discovers he cannot go back and stop the smoking that caused it, because undoing it would wipe out his children.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "illness"
@@ -313,6 +329,7 @@
       "id": "e_day_double",
       "type": "ordinary",
       "label": "James teaches live-each-day-twice ethic",
+      "description": "Tim's father shares his trick for happiness: live each ordinary day twice - once with all the tension and worry, and once noticing how sweet it really is.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "advice"
@@ -326,6 +343,7 @@
       "id": "e_dad_last",
       "type": "ordinary",
       "label": "Last shared memory travels with Dad",
+      "description": "Father and son take their final walks together into the past, replaying a beach day from Tim's childhood before the chance is gone forever.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "Dad end"
@@ -339,6 +357,7 @@
       "id": "e_dad_death",
       "type": "death",
       "label": "Dad dies; Tim stops rewinding grief",
+      "description": "Tim's father dies, and Tim resists the urge to keep revisiting him by jumping backwards, learning instead to sit with his grief.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "later"
@@ -352,6 +371,7 @@
       "id": "e_third_cutoff",
       "type": "observation",
       "label": "Third child conception cuts off Dad visits",
+      "description": "When Mary falls pregnant with their third child, the family's past becomes fixed forever - Tim can never visit his late father again after the birth.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "third child"
@@ -366,6 +386,7 @@
       "id": "e_live_forward",
       "type": "intervention",
       "label": "Chooses to live each day once",
+      "description": "Tim makes peace with it, choosing to live every day just once, treasuring the small ordinary moments instead of endlessly re-running them.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "resolution"
@@ -382,6 +403,7 @@
       "id": "e_ordinary",
       "type": "ordinary",
       "label": "Ordinary happiness without constant reset",
+      "description": "The story closes on Tim's quiet realisation: life does not need fixing so much as it needs noticing - the loveliest days are the ordinary ones.",
       "at": {
         "worldRef": "w_about",
         "timeLabel": "epilogue"

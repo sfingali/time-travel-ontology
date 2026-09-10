@@ -20,8 +20,8 @@
     {
       "kind": "timeline",
       "id": "w_wells",
-      "label": "Victorian\u2192802,701 continuum",
-      "spanLabel": "1899\u20131900 / wars / 802701",
+      "label": "Victorian→802,701 continuum",
+      "spanLabel": "1899–1900 / wars / 802701",
       "description": "Tourism not rewrite of historical wars; personal exit to civilize Eloi"
     }
   ],
@@ -71,6 +71,7 @@
       "id": "e_dinner",
       "type": "ordinary",
       "label": "Victorian dinner; inventor claims time travel",
+      "description": "At an after-dinner gathering in Victorian London, an eccentric inventor tells his sceptical friends that he has built a machine that can carry a person through the years.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "1899"
@@ -85,6 +86,7 @@
       "id": "e_demo",
       "type": "reveal",
       "label": "Model machine demo vanishes",
+      "description": "To prove it, he sends a small model of the machine spinning into the future before their eyes - it simply vanishes, leaving them startled and half convinced.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "dinner"
@@ -101,6 +103,7 @@
       "id": "e_depart",
       "type": "departure",
       "label": "Full-size machine departure",
+      "description": "The inventor climbs aboard the full-sized machine that same night, throws the lever, and watches the hands of the world whirl forward as decades flash past.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "lab"
@@ -116,6 +119,7 @@
       "id": "e_war",
       "type": "observation",
       "label": "War montage tourism through 20th c.",
+      "description": "As he speeds ahead he sees the world outside change: wars come and go, fashion and buildings transform, and war itself never quite leaves the century.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "1914-1966"
@@ -131,6 +135,7 @@
       "id": "e_nuke",
       "type": "ordinary",
       "label": "Nuclear / war devastation stop",
+      "description": "He makes a stop further on and finds the world shattered by a terrible new weapon - cities in ruins and people fleeing underground, so he hurries onward.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "1966"
@@ -143,6 +148,7 @@
       "id": "e_far",
       "type": "arrival",
       "label": "Arrival 802,701",
+      "description": "The machine halts at last in the year 802,701, where he finds a garden world of graceful buildings and gentle, childlike people in fine clothes.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "802701"
@@ -158,6 +164,7 @@
       "id": "e_eloi",
       "type": "ordinary",
       "label": "Eloi idyll; Weena",
+      "description": "The beautiful, idle people of this far future, the Eloi, greet him warmly but seem oddly passive and dim, and a young woman named Weena becomes especially attached to him.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "802701 day"
@@ -171,6 +178,7 @@
       "id": "e_books",
       "type": "observation",
       "label": "Ruined libraries; knowledge decay",
+      "description": "He discovers the great libraries empty and crumbling, their books turned to dust - explaining why these people of the future can no longer read or think for themselves.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "802701"
@@ -183,6 +191,7 @@
       "id": "e_morlock",
       "type": "reveal",
       "label": "Morlocks as subterranean predators/farmers",
+      "description": "Beneath the surface live the Morlocks, pale, apelike creatures who creep out only at night - and it slowly dawns on him that they are the ones who feed and clothe the Eloi, and that the Eloi are the food.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "night"
@@ -196,6 +205,7 @@
       "id": "e_weena_threat",
       "type": "ordinary",
       "label": "Weena endangered",
+      "description": "Weena is swept away in a river while the time traveller fights off night creatures, and the Eloi around her simply watch, too placid and hopeless to try to save her.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "night raid"
@@ -209,6 +219,7 @@
       "id": "e_sphinx",
       "type": "ordinary",
       "label": "Sphinx panels / machine trapped",
+      "description": "When the traveller returns to his machine, he finds it shut inside the great stone Sphinx building by its hidden doors, deliberately trapped - the Morlocks have taken it.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "sphinx"
@@ -221,6 +232,7 @@
       "id": "e_fight",
       "type": "intervention",
       "label": "Fights Morlocks; rescues Weena/Eloi",
+      "description": "Armed with a crowbar and a torch, he fights his way through the underground creatures to rescue Weena and any Eloi he can reach.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "underground"
@@ -237,6 +249,7 @@
       "id": "e_fire",
       "type": "ordinary",
       "label": "Morlock caves fired",
+      "description": "To hold the creatures back he sets the dry forest where their lairs lie ablaze - a fire that does the Eloi more harm than good when the smoke and flames spread.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "climax"
@@ -249,6 +262,7 @@
       "id": "e_return",
       "type": "departure",
       "label": "Returns briefly to Victorian era",
+      "description": "After barely escaping the underground fight, the traveller gets his machine back and leaps out of that age, first touching down briefly in his own year of 1899.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "return"
@@ -264,6 +278,7 @@
       "id": "e_filby_talk",
       "type": "ordinary",
       "label": "Filby finds wilted flower; understands",
+      "description": "His old friend Filby is the only one left who heard his story; when Filby finds a strange flower in the empty lab - a bloom that belongs to no known age - he finally believes him.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "1899 coda"
@@ -277,6 +292,7 @@
       "id": "e_books_take",
       "type": "ordinary",
       "label": "Takes three books back for Eloi",
+      "description": "Before leaving again, the traveller pockets three small books from his shelf to take with him, the only tools he can offer the simple people of the future.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "prep"
@@ -290,6 +306,7 @@
       "id": "e_second",
       "type": "departure",
       "label": "Second departure to rebuild Eloi future",
+      "description": "The inventor climbs aboard once more and vanishes again into the future - this time to live among the Eloi and try to teach and rebuild them.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "final"
@@ -305,6 +322,7 @@
       "id": "e_open_end",
       "type": "ordinary",
       "label": "Open civilizing mission ending",
+      "description": "The film ends with his friends still hoping he will come home, while he presses onward to a far future he means to make kinder - the ending left open.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "802701 future"
@@ -317,7 +335,8 @@
     {
       "id": "e_fixed",
       "type": "observation",
-      "label": "Past wars observed not prevented\u2014tourism",
+      "label": "Past wars observed not prevented—tourism",
+      "description": "Looking down on the wars of the 20th century, he is a spectator only: the machine shows him history but lets him change nothing of the past he watches.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "theme"
@@ -330,6 +349,7 @@
       "id": "e_class",
       "type": "observation",
       "label": "Eloi/Morlock as class/evolution allegory",
+      "description": "The film's far future is a warning drawn from Victorian fears: the pampered rich decayed into the helpless Eloi, while the workers they ground down became the savage Morlocks below.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "theme2"
@@ -342,6 +362,7 @@
       "id": "e_machine_rules",
       "type": "reveal",
       "label": "Machine as stage-magic time vehicle",
+      "description": "The machine works like stage magic: the traveller pulls a lever, the world outside blurs and ages around him, and only a nudge on the lever stops the rush of years.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "rules"
@@ -357,6 +378,7 @@
       "id": "e_novikov",
       "type": "ordinary",
       "label": "No grandfather change attempted; future exploration",
+      "description": "The traveller never tries to alter his own past - the film's only rule is that history he passes through simply happens, and his adventures all lie in the future instead.",
       "at": {
         "worldRef": "w_wells",
         "timeLabel": "rules2"

@@ -88,7 +88,8 @@
     {
       "id": "e_loop_job",
       "type": "ordinary",
-      "label": "Joe works as looper \u2014 executes men from future",
+      "label": "Joe works as looper — executes men from future",
+      "description": "In 2044, Joe works as a looper: the future's crime bosses send their enemies back in time bound and hooded, and loopers shoot them on arrival for silver.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "2044 cane field"
@@ -105,6 +106,7 @@
       "id": "e_seth_fail",
       "type": "intervention",
       "label": "Seth lets Old Seth escape; body mutilation rewrite",
+      "description": "Joe's friend Seth lets his own older self escape - and the syndicate mutilates young Seth's body piece by piece to force old Seth toward the waiting killers.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "Seth arc"
@@ -121,6 +123,7 @@
       "id": "e_old_joe_arrive",
       "type": "arrival",
       "label": "Old Joe arrives; Young Joe hesitates",
+      "description": "Joe's own future self arrives bound and hooded - and hesitates a half-second too long, letting the older man break free.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "Joe's loop close"
@@ -138,6 +141,7 @@
       "id": "e_escape",
       "type": "departure",
       "label": "Old Joe escapes execution",
+      "description": "Old Joe escapes the execution his younger self was supposed to carry out, and vanishes into 2044 with thirty years of grudges.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "escape"
@@ -151,6 +155,7 @@
       "id": "e_hunt",
       "type": "intervention",
       "label": "Old Joe hunts child Rainmaker candidates",
+      "description": "Old Joe has a mission of his own: find and kill the child who will one day rule the city's underworld as the Rainmaker - before that child can erase his wife's life.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "city hunt"
@@ -163,6 +168,7 @@
       "id": "e_farm",
       "type": "contact",
       "label": "Young Joe meets Sara and Cid on farm",
+      "description": "Young Joe, wounded and hiding, lands on a farm where a mother, Sara, and her strange, powerful young son Cid live quietly.",
       "at": {
         "worldRef": "w_farm",
         "timeLabel": "farm"
@@ -176,7 +182,8 @@
     {
       "id": "e_cid_power",
       "type": "reveal",
-      "label": "Cid's TK \u2014 future Rainmaker",
+      "label": "Cid's TK — future Rainmaker",
+      "description": "Cid's telekinetic rages reveal what he is - the boy the whole future fears - and young Joe realises the child he has come to love is the Rainmaker.",
       "at": {
         "worldRef": "w_farm",
         "timeLabel": "barn"
@@ -191,6 +198,7 @@
       "id": "e_showdown",
       "type": "intervention",
       "label": "Old Joe attacks farm to kill Cid",
+      "description": "Old Joe comes to the farm to kill the boy, and young Joe must stand between his own future self and the child.",
       "at": {
         "worldRef": "w_farm",
         "timeLabel": "climax"
@@ -205,7 +213,8 @@
     {
       "id": "e_suicide",
       "type": "death",
-      "label": "Young Joe kills himself \u2014 erases Old Joe",
+      "label": "Young Joe kills himself — erases Old Joe",
+      "description": "Seeing what his future will do, young Joe turns the gun on himself - and as he dies, the older man fades from existence with him.",
       "at": {
         "worldRef": "w_farm",
         "timeLabel": "sacrifice"
@@ -223,6 +232,7 @@
       "id": "e_future_open",
       "type": "ordinary",
       "label": "Sara/Cid survive; Rainmaker path altered",
+      "description": "Sara and Cid survive, the future left unwritten - the Rainmaker made, or not, by the love shown him on this one day.",
       "at": {
         "worldRef": "w_farm",
         "timeLabel": "aftermath"
@@ -236,6 +246,7 @@
       "id": "ev_old_joe",
       "type": "ordinary",
       "label": "Old Joe arrives / escapes",
+      "description": "The moment the hood comes off and young Joe is looking at himself, thirty years older.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "2044"
@@ -251,6 +262,7 @@
       "id": "ev_cid",
       "type": "ordinary",
       "label": "Cid TK revealed as Rainmaker seed",
+      "description": "The boy's terrible power surfaces - and with it, the truth of who he will become.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "farm"
@@ -266,6 +278,7 @@
       "id": "ev_suicide_cut",
       "type": "ordinary",
       "label": "Young Joe suicide erases Old Joe threat",
+      "description": "One bullet, one death, two men - the act that erases the older version before he can finish.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "climax"
@@ -281,6 +294,7 @@
       "id": "e_job",
       "type": "ordinary",
       "label": "Joe as looper in 2044",
+      "description": "The daily work of a looper in 2044: the gold, the silver, the body count, and the knowledge that every contract ends with your own older self.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "2044"
@@ -290,6 +304,7 @@
       "id": "e_close",
       "type": "ordinary",
       "label": "Closing loop: future self sent",
+      "description": "The loop that every looper dreads finally arrives for Joe: his own man, sent back, on his own gun.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "mid"
@@ -299,6 +314,7 @@
       "id": "e_old_joe",
       "type": "arrival",
       "label": "Old Joe escapes execution",
+      "description": "Old Joe slips the trap, and becomes the most dangerous man in 2044.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "inciting"
@@ -311,6 +327,7 @@
       "id": "e_rainmaker",
       "type": "ordinary",
       "label": "Hunt for Rainmaker child",
+      "description": "The hunt for the child who will one day burn through the city's crime bosses - a list of candidates getting shorter and crueler.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "mid"
@@ -320,6 +337,7 @@
       "id": "e_sara",
       "type": "ordinary",
       "label": "Sara and Cid farm",
+      "description": "Sara and Cid's farm - the quiet place where the future's most feared man is still a boy who needs his mother.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "mid"
@@ -329,6 +347,7 @@
       "id": "e_sacrifice",
       "type": "death",
       "label": "Young Joe kills self to stop Old Joe path",
+      "description": "Young Joe's final choice: stop the man he will become by ending the man he is.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "climax"
@@ -338,6 +357,7 @@
       "id": "e_future_unmake",
       "type": "collapse",
       "label": "Old Joe path unmade",
+      "description": "With young Joe dead, the older man's thirty years unmake themselves - the path to the Rainmaker's war dissolving mid-stride.",
       "at": {
         "worldRef": "w_2044",
         "timeLabel": "end"

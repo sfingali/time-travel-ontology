@@ -119,6 +119,7 @@
       "id": "e_irs",
       "type": "ordinary",
       "label": "IRS audit day chaos",
+      "description": "Evelyn and her family rush to a tax office for an audit that could sink their struggling laundromat. The same visit brings her gentle husband handing her divorce papers.",
       "at": {
         "worldRef": "w_irs",
         "timeLabel": "morning"
@@ -134,6 +135,7 @@
       "id": "e_contact",
       "type": "contact",
       "label": "Alpha Waymond verse-jumps into Waymond",
+      "description": "Her husband suddenly changes - it is really a braver version of him from another of his lives, borrowing his body to warn Evelyn that their worlds are in danger.",
       "at": {
         "worldRef": "w_irs",
         "timeLabel": "elevator"
@@ -150,6 +152,7 @@
       "id": "e_jump",
       "type": "departure",
       "label": "Evelyn learns verse-jumping via absurd acts",
+      "description": "To borrow skills and memories from her other lives, Evelyn must first do something ridiculous in this one - like fighting security guards armed with nothing but a lip balm.",
       "at": {
         "worldRef": "w_irs",
         "timeLabel": "office"
@@ -165,6 +168,7 @@
       "id": "e_hotdog",
       "type": "arrival",
       "label": "Visit hot-dog fingers world",
+      "description": "Evelyn is pulled into a strange parallel life where everyone has sausages for fingers - and finds an unexpectedly tender love story hiding in the absurdity.",
       "at": {
         "worldRef": "w_hotdog",
         "timeLabel": "jump"
@@ -181,6 +185,7 @@
       "id": "e_movie",
       "type": "arrival",
       "label": "Movie-star life glimpse",
+      "description": "In another life she never married or opened the laundry, and became a famous film star instead. Evelyn gets to feel how glamorous that life is, and how lonely.",
       "at": {
         "worldRef": "w_movie",
         "timeLabel": "jump"
@@ -195,7 +200,8 @@
     {
       "id": "e_jobu",
       "type": "reveal",
-      "label": "Jobu Tupaki \u2014 Joy who verse-jumped too far",
+      "label": "Jobu Tupaki — Joy who verse-jumped too far",
+      "description": "The powerful, chaotic figure hunting Evelyn turns out to be her own daughter. Pushed by her father in another world to experience every possible life at once, Joy has lost all sense of what anything means.",
       "at": {
         "worldRef": "w_bagel",
         "timeLabel": "confrontation"
@@ -212,7 +218,8 @@
     {
       "id": "e_bagel",
       "type": "collapse",
-      "label": "Everything Bagel \u2014 nihilist attractor",
+      "label": "Everything Bagel — nihilist attractor",
+      "description": "Joy carries a swirling black ring - shaped like an everything bagel - that pulls everything in and crushes it. She means to walk into it and end it all.",
       "at": {
         "worldRef": "w_bagel",
         "timeLabel": "climax"
@@ -229,9 +236,10 @@
       "id": "e_kindness",
       "type": "intervention",
       "label": "Evelyn chooses kindness across verses",
+      "description": "Rather than fight fire with fire, Evelyn answers the chaos by being kind to people in every life she touches - defusing her enemies with small acts of care.",
       "at": {
         "worldRef": "w_irs",
-        "timeLabel": "fight\u2192hug"
+        "timeLabel": "fight→hug"
       },
       "agents": [
         "evelyn",
@@ -245,6 +253,7 @@
       "id": "e_rock",
       "type": "contact",
       "label": "Rock universe reconciliation moment",
+      "description": "In a dead world with no people, mother and daughter exist as two silent rocks with googly eyes on a hillside, and still manage to talk things through.",
       "at": {
         "worldRef": "w_rock",
         "timeLabel": "quiet"
@@ -258,6 +267,7 @@
       "id": "e_stay",
       "type": "ordinary",
       "label": "Stay present with family in home verse",
+      "description": "Evelyn stops chasing every other life she could have lived and chooses the one she already has - her husband, her daughter, her laundry - exactly as it is.",
       "at": {
         "worldRef": "w_irs",
         "timeLabel": "epilogue"
@@ -272,6 +282,7 @@
       "id": "ev_alpha",
       "type": "ordinary",
       "label": "Alpha Waymond recruits Evelyn",
+      "description": "A tougher version of her husband arrives from another world and tells Evelyn she is the one person who can save all their worlds from a spreading threat.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "IRS"
@@ -287,6 +298,7 @@
       "id": "ev_jobu",
       "type": "ordinary",
       "label": "Jobu/bagel nihilism confrontation",
+      "description": "Evelyn faces her daughter at the edge of the all-destroying bagel and refuses to give up on her, however far gone Joy claims to be.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "multiverse"
@@ -302,6 +314,7 @@
       "id": "ev_kindness",
       "type": "ordinary",
       "label": "Kindness wins; Joy reached",
+      "description": "By meeting her daughter with honesty and warmth instead of force, Evelyn pulls Joy back from ending everything.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "climax"
@@ -317,6 +330,7 @@
       "id": "e_versejump",
       "type": "contact",
       "label": "Waymond verse-jump bags",
+      "description": "Her husband calmly fights off a room full of security guards with just his handbag, borrowing a trained fighter's moves from another of his lives.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "inciting"
@@ -329,6 +343,7 @@
       "id": "e_alpha_waymond",
       "type": "ordinary",
       "label": "Alpha Waymond recruits Evelyn",
+      "description": "A braver version of her husband, from a world where he became a warrior scientist, seeks Evelyn out and begs for her help against a danger spreading across every world.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "early"
@@ -338,6 +353,7 @@
       "id": "e_family",
       "type": "ordinary",
       "label": "Family reconciling across verses",
+      "description": "Whatever life they land in, Evelyn, Waymond and Joy keep finding their way back to each other and making peace with the versions of themselves they have been.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "end"
@@ -347,6 +363,7 @@
       "id": "e_pad_irs",
       "type": "ordinary",
       "label": "IRS audit pressure cooker",
+      "description": "Everything hangs on one tense meeting at the tax office, with the family's laundry at stake and tempers fraying before they even get through the door.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "open"
@@ -356,6 +373,7 @@
       "id": "e_pad_jump",
       "type": "contact",
       "label": "Verse-jump technology explained",
+      "description": "The odd rules of borrowing from your parallel selves, explained plainly: do something unlikely in this world, and another life's skills and memories flood in.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "inciting"
@@ -368,6 +386,7 @@
       "id": "e_pad_jobu",
       "type": "reveal",
       "label": "Jobu and everything bagel nihilism",
+      "description": "A daughter who has seen every possible life concludes that nothing matters - and builds the bagel-shaped void as the answer to it.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "mid"
@@ -377,6 +396,7 @@
       "id": "e_pad_alpha",
       "type": "ordinary",
       "label": "Alpha-verse Waymond mission",
+      "description": "In the world where her husband became a warrior scientist, his mission is finding the one Evelyn strong enough to hold every life at once.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "early"
@@ -386,6 +406,7 @@
       "id": "e_pad_rock",
       "type": "ordinary",
       "label": "Rocks with googly eyes verse",
+      "description": "One far-off life has no people at all - just two silent rocks with googly eyes sitting on a cliff, keeping each other company.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "mid"
@@ -395,6 +416,7 @@
       "id": "e_pad_kungfu",
       "type": "ordinary",
       "label": "Martial skills stacked via jumps",
+      "description": "Each borrowed life gives Evelyn new abilities, until a shy laundromat owner can suddenly fight like a kung-fu master.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "mid"
@@ -404,6 +426,7 @@
       "id": "e_pad_kind",
       "type": "intervention",
       "label": "Kindness as multiversal glue",
+      "description": "What holds all these overlapping lives together turns out to be kindness - small acts of care that reach a person in any version of themselves.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "climax"
@@ -413,6 +436,7 @@
       "id": "e_pad_bagel",
       "type": "collapse",
       "label": "Bagel confrontation",
+      "description": "Mother and daughter meet at the swirling void that could erase everything, and their fight is really an argument about whether life is worth living.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "climax"
@@ -422,6 +446,7 @@
       "id": "e_pad_family",
       "type": "ordinary",
       "label": "Family chooses each other",
+      "description": "Offered every possible life, the family chooses this imperfect one - and each other.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "end"
@@ -431,6 +456,7 @@
       "id": "e_pad_laundry",
       "type": "ordinary",
       "label": "Return to mundane laundry joy",
+      "description": "The story ends where it began, back at the laundromat - but Evelyn now sees that the ordinary life she wanted to escape is worth living.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "epilogue"

@@ -26,8 +26,8 @@
     {
       "kind": "timeline",
       "id": "w_earth",
-      "label": "Blight Earth \u2192 Cooper Station continuum",
-      "spanLabel": "near future \u2192 decades later",
+      "label": "Blight Earth → Cooper Station continuum",
+      "spanLabel": "near future → decades later",
       "description": "One history; anomalies always included Cooper's messages"
     }
   ],
@@ -85,6 +85,7 @@
       "id": "e_dust",
       "type": "ordinary",
       "label": "Blight Earth; gravitational anomalies in Murph's room",
+      "description": "On a dying, dust-choked Earth, Cooper's daughter Murph insists a 'ghost' in her bedroom is pushing books off her shelves - strange gravitational goings-on no one can explain.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "departure eve"
@@ -97,7 +98,8 @@
     {
       "id": "e_coords",
       "type": "bootstrap_origin",
-      "label": "Dust/binary coordinates lead to NASA \u2014 Cooper was the ghost",
+      "label": "Dust/binary coordinates lead to NASA — Cooper was the ghost",
+      "description": "The 'ghost' has left coordinates in the dust, leading Cooper and Murph to a hidden NASA base. Cooper later realises the ghost was himself, reaching back across time.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "bookshelf"
@@ -116,6 +118,7 @@
       "id": "e_depart",
       "type": "departure",
       "label": "Endurance launches through Saturn wormhole",
+      "description": "Cooper leaves his family and blasts off with a small crew through the wormhole near Saturn, carrying humanity's last hopes on the ship Endurance.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "mission start"
@@ -132,7 +135,8 @@
     {
       "id": "e_miller",
       "type": "ordinary",
-      "label": "Miller's planet: 1 hour \u2248 7 years; Doyle dies; +23 years Earth",
+      "label": "Miller's planet: 1 hour ≈ 7 years; Doyle dies; +23 years Earth",
+      "description": "On the first candidate world, oceans waist-deep and a beached shipwreck, every hour costs seven years back home. A giant wave kills Doyle, and decades have passed on Earth by the time they escape.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "Miller"
@@ -146,6 +150,7 @@
       "id": "e_mann",
       "type": "intervention",
       "label": "Mann betrayal; Endurance damaged; Mann dies",
+      "description": "Dr Mann, the cowardly 'best of us', fakes his data and tries to seize the ship; the docking accident that follows cripples the Endurance and kills him.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "Mann planet"
@@ -160,6 +165,7 @@
       "id": "e_slingshot",
       "type": "ordinary",
       "label": "Gargantua slingshot; Cooper and TARS eject",
+      "description": "To escape the black hole Gargantua, Cooper slingshots the ship using its gravity, then ejects himself and the robot TARS into the dark so Amelia can go on alone.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "slingshot"
@@ -174,6 +180,7 @@
       "id": "e_tesseract",
       "type": "arrival",
       "label": "Fall into tesseract: infinite Murph bedrooms across time",
+      "description": "Falling into Gargantua, Cooper finds himself inside a strange space where his daughter's bedroom stretches out in every direction across the years - a place built to let him touch the past.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "tesseract"
@@ -192,9 +199,10 @@
       "id": "e_ghost",
       "type": "intervention",
       "label": "Cooper pushes gravity messages into past (books, dust, watch)",
+      "description": "Inside that impossible space, Cooper becomes the 'ghost' of Murph's childhood: he shoves the books, rakes the dust into lines, and desperately taps out messages across time.",
       "at": {
         "worldRef": "w_earth",
-        "timeLabel": "Murph childhood\u2194adult"
+        "timeLabel": "Murph childhood↔adult"
       },
       "agents": [
         "cooper",
@@ -209,6 +217,7 @@
       "id": "e_watch",
       "type": "bootstrap_origin",
       "label": "Watch Morse delivers quantum data; Murph solves gravity",
+      "description": "In one last gesture, Cooper encodes the quantum data TARS gathered inside the second hand of his daughter's watch, ticking it out in Morse code across the years.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "adult Murph"
@@ -228,6 +237,7 @@
       "id": "e_plan_a",
       "type": "ordinary",
       "label": "Plan A habitats; humanity evacuates",
+      "description": "With the quantum data, Murph finishes Professor Brand's equation and lifts humanity off the dying Earth into space habitats - the plan everyone was told was a lie.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "exodus"
@@ -241,6 +251,7 @@
       "id": "e_station",
       "type": "ordinary",
       "label": "Cooper wakes on Cooper Station; reunites with elderly Murph",
+      "description": "Cooper is rescued and wakes aboard a huge space station named after him, where he is reunited with Murph - now an old woman surrounded by her family - on her deathbed.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "Cooper Station"
@@ -254,6 +265,7 @@
       "id": "e_edmunds",
       "type": "departure",
       "label": "Cooper leaves to find Amelia on Edmunds's world",
+      "description": "Having said goodbye to his daughter, Cooper takes a small ship and sets off alone across the stars to find Amelia Brand on the world she was trying to reach.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "coda"
@@ -267,6 +279,7 @@
       "id": "ev_miller",
       "type": "ordinary",
       "label": "Miller planet dilation loss",
+      "description": "A few hours spent splashing around on the water world cost Cooper twenty-three years back on Earth - his children grow up without him in what feels like moments.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "Gargantua"
@@ -282,6 +295,7 @@
       "id": "ev_tesseract",
       "type": "ordinary",
       "label": "Tesseract bookshelf messages",
+      "description": "Cooper, caught beyond the black hole, reaches back through his daughter's bedroom wall across the years, nudging books and dust to guide his family.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "inside BH"
@@ -297,6 +311,7 @@
       "id": "ev_plan_a",
       "type": "ordinary",
       "label": "Murph solves gravity with watch data",
+      "description": "The watch's ticking message lets Murph crack the gravity equation, and the plan to move humanity off Earth finally works.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "Earth"
@@ -312,6 +327,7 @@
       "id": "e_farm",
       "type": "ordinary",
       "label": "Cooper farm; dust bowl Earth",
+      "description": "Cooper is a widowed former pilot turned farmer in a world slowly suffocating in dust storms, raising his son and clever daughter on a failing corn farm.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "near future"
@@ -321,6 +337,7 @@
       "id": "e_nasa",
       "type": "ordinary",
       "label": "Secret NASA mission",
+      "description": "Cooper and Murph discover a secret, officially defunct NASA still working to save humanity - and its leader wants Cooper to pilot the mission through the wormhole.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "early"
@@ -330,6 +347,7 @@
       "id": "e_wormhole",
       "type": "departure",
       "label": "Enter wormhole near Saturn",
+      "description": "The crew steer the Endurance through the wormhole that appeared near Saturn, a shortcut across the galaxy placed there by something unknown.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "transit"
@@ -342,6 +360,7 @@
       "id": "e_blackhole",
       "type": "arrival",
       "label": "Cooper falls into Gargantua",
+      "description": "Alone in a damaged lander, Cooper lets himself be pulled over the edge of the black hole Gargantua - and falls out of the universe as he knew it.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "climax"
@@ -354,6 +373,7 @@
       "id": "e_murph_solve",
       "type": "ordinary",
       "label": "Murph solves gravity with data",
+      "description": "Using the data her father sent her through the watch, Murph completes the equation that lets humanity leave Earth.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "Earth"
@@ -363,6 +383,7 @@
       "id": "e_cooper_station",
       "type": "ordinary",
       "label": "Wake on Cooper Station",
+      "description": "Cooper wakes in a hospital bed on the orbital station that bears his name, where an elderly Murph tells him no parent should outlive their child - and sends him off to find Brand.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "far future"

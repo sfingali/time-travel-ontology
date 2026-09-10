@@ -1,7 +1,7 @@
 {
   "meta": {
     "id": "timecrimes",
-    "title": "Timecrimes (Los Cronocr\u00edmenes)",
+    "title": "Timecrimes (Los Cronocrímenes)",
     "year": 2007,
     "medium": "film",
     "sources": [
@@ -28,13 +28,13 @@
       "id": "w_afternoon",
       "label": "Single afternoon causal knot",
       "spanLabel": "one evening",
-      "description": "Triple H\u00e9ctor overlap; forced self-consistency"
+      "description": "Triple Héctor overlap; forced self-consistency"
     }
   ],
   "agents": [
     {
       "id": "hector1",
-      "label": "H\u00e9ctor-1 (first)",
+      "label": "Héctor-1 (first)",
       "identityGroup": "hector",
       "continuityRole": "younger_self",
       "homeWorldRef": "w_afternoon",
@@ -42,7 +42,7 @@
     },
     {
       "id": "hector2",
-      "label": "H\u00e9ctor-2 (bandaged)",
+      "label": "Héctor-2 (bandaged)",
       "identityGroup": "hector",
       "continuityRole": "iteration",
       "homeWorldRef": "w_afternoon",
@@ -50,7 +50,7 @@
     },
     {
       "id": "hector3",
-      "label": "H\u00e9ctor-3 (third)",
+      "label": "Héctor-3 (third)",
       "identityGroup": "hector",
       "continuityRole": "older_self",
       "homeWorldRef": "w_afternoon",
@@ -76,7 +76,8 @@
     {
       "id": "e_glimpse",
       "type": "observation",
-      "label": "H\u00e9ctor-1 glimpses nude woman in woods",
+      "label": "Héctor-1 glimpses nude woman in woods",
+      "description": "Héctor, settling into his new country house with his wife Clara, scans the woods with binoculars - and sees a woman undressing in the trees.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "afternoon"
@@ -89,7 +90,8 @@
     {
       "id": "e_chase",
       "type": "ordinary",
-      "label": "Bandaged figure stabs/chases H\u00e9ctor-1",
+      "label": "Bandaged figure stabs/chases Héctor-1",
+      "description": "He walks in to investigate and finds her dead, then is attacked by a figure with its head wrapped in pink bandages - chased through the woods for his life.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "afternoon"
@@ -102,7 +104,8 @@
     {
       "id": "e_lab",
       "type": "arrival",
-      "label": "H\u00e9ctor-1 flees to lab with time machine",
+      "label": "Héctor-1 flees to lab with time machine",
+      "description": "Fleeing across a fence, Héctor stumbles into a research facility where a lone scientist shoves him into an enormous tank - a time machine - to hide him from the attacker.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "lab"
@@ -118,7 +121,8 @@
     {
       "id": "e_jump1",
       "type": "departure",
-      "label": "H\u00e9ctor-1 enters machine; emerges ~1 hour earlier as H\u00e9ctor-2",
+      "label": "Héctor-1 enters machine; emerges ~1 hour earlier as Héctor-2",
+      "description": "The tank sends him one hour back: Héctor steps out as a second version of himself into a morning where his first self is still in the house.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "machine"
@@ -134,7 +138,8 @@
     {
       "id": "e_become_bandage",
       "type": "intervention",
-      "label": "H\u00e9ctor-2 recreates bandage attacker from own wound",
+      "label": "Héctor-2 recreates bandage attacker from own wound",
+      "description": "Knocked down in the woods, Héctor wraps his own bleeding head in the pink bandages - and understands: the attacker who chased him was always himself.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "woods"
@@ -150,7 +155,8 @@
     {
       "id": "e_preserve",
       "type": "intervention",
-      "label": "H\u00e9ctor-2 forces events to preserve the loop",
+      "label": "Héctor-2 forces events to preserve the loop",
+      "description": "Now terrified of breaking the loop that keeps him alive, Héctor-2 spends the hour forcing events to match what he already remembers - scaring, herding and luring his earlier self through the same afternoon.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "overlap"
@@ -164,7 +170,8 @@
     {
       "id": "e_jump2",
       "type": "departure",
-      "label": "Second jump produces H\u00e9ctor-3",
+      "label": "Second jump produces Héctor-3",
+      "description": "A second journey through the tank produces Héctor-3, each pass leaving a new man inside the same small hour.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "machine again"
@@ -179,7 +186,8 @@
     {
       "id": "e_van",
       "type": "intervention",
-      "label": "H\u00e9ctor-3 corrections involving deadly van crash",
+      "label": "Héctor-3 corrections involving deadly van crash",
+      "description": "The corrections turn lethal: a van on the road, a girl in the forest, and the crashes that the loop demands in every one of its tellings.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "road"
@@ -194,6 +202,7 @@
       "id": "e_clara_threat",
       "type": "ordinary",
       "label": "Threat to Clara drives final self-consistent choices",
+      "description": "When the stakes reach his wife, Héctor makes the choices that close the circle - including the rooftop lie and the hand that guides the fall.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "home"
@@ -206,7 +215,8 @@
     {
       "id": "e_close",
       "type": "reveal",
-      "label": "Afternoon closes: each H\u00e9ctor role was always filled by himself",
+      "label": "Afternoon closes: each Héctor role was always filled by himself",
+      "description": "The hour ends where it began: every role in the afternoon - attacker, victim, witness, rescuer - was always Héctor, and always had been.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "night"
@@ -223,7 +233,8 @@
     {
       "id": "ev_h1",
       "type": "ordinary",
-      "label": "H\u00e9ctor 1 enters machine",
+      "label": "Héctor 1 enters machine",
+      "description": "Héctor's first hour: the ordinary man who becomes the story's first victim.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "T0"
@@ -238,7 +249,8 @@
     {
       "id": "ev_h2",
       "type": "ordinary",
-      "label": "H\u00e9ctor 2 becomes bandaged man",
+      "label": "Héctor 2 becomes bandaged man",
+      "description": "Héctor-2, bandaged and desperate, keeping the afternoon on the rails he remembers.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "T-1h"
@@ -253,7 +265,8 @@
     {
       "id": "ev_h3",
       "type": "ordinary",
-      "label": "H\u00e9ctor 3 closes loop / body swap",
+      "label": "Héctor 3 closes loop / body swap",
+      "description": "Héctor-3 closes the loop - the last pass through the machine that makes the day whole.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "T-1h-"
@@ -269,6 +282,7 @@
       "id": "e_binoculars",
       "type": "ordinary",
       "label": "Hector sees woods incident",
+      "description": "The glimpse through the binoculars - the moment that starts the entire fatal hour.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "afternoon"
@@ -278,6 +292,7 @@
       "id": "e_hector2",
       "type": "ordinary",
       "label": "Becomes Hector2 interfering",
+      "description": "The man who steps out of the tank an hour early and finds his own life already happening without him.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "loop"
@@ -287,6 +302,7 @@
       "id": "e_bandage",
       "type": "ordinary",
       "label": "Bandaged Hector3 terror",
+      "description": "The bandaged figure in the woods - the film's monster, and a man with his own reasons.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "mid"
@@ -296,6 +312,7 @@
       "id": "e_force",
       "type": "intervention",
       "label": "Events forced to match what he saw",
+      "description": "The loop's tyranny: everything he saw, he must now cause - or he and the afternoon both come apart.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "closing"
@@ -305,6 +322,7 @@
       "id": "e_wife",
       "type": "ordinary",
       "label": "Wife stakes / roof fall setup",
+      "description": "Clara, the wife in the house, never told that the afternoon's tragedies are being arranged around her.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "climax"
@@ -314,6 +332,7 @@
       "id": "e_closed",
       "type": "collapse",
       "label": "Closed causal loop completed",
+      "description": "The circle completes with no gap: nothing in the hour was ever caused by anyone but Héctor himself.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "end"
@@ -323,6 +342,7 @@
       "id": "e_scientist",
       "type": "ordinary",
       "label": "Scientist facilitates loops",
+      "description": "The calm scientist who keeps the tank running - accommodating every loop with the patience of a man who has seen this hour before.",
       "at": {
         "worldRef": "w_afternoon",
         "timeLabel": "lab"
@@ -567,17 +587,17 @@
         },
         {
           "ruleSetId": "bootstrap_ontological",
-          "effect": "Bandaged pursuer has no origin outside H\u00e9ctor's own wound"
+          "effect": "Bandaged pursuer has no origin outside Héctor's own wound"
         },
         {
           "ruleSetId": "fixed_novikov",
-          "effect": "Events self-consistently fill all three H\u00e9ctor slots"
+          "effect": "Events self-consistently fill all three Héctor slots"
         }
       ]
     }
   ],
   "outcome": {
-    "summary": "Compact causal knot: H\u00e9ctor becomes each role in a single afternoon\u2014glimpse, pursuer, corrector\u2014forced into self-consistency.",
+    "summary": "Compact causal knot: Héctor becomes each role in a single afternoon—glimpse, pursuer, corrector—forced into self-consistency.",
     "endWorldRefs": [
       "w_afternoon"
     ]

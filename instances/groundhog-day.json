@@ -54,6 +54,7 @@
       "id": "e_arrive",
       "type": "ordinary",
       "label": "Phil arrives to cover Groundhog Day",
+      "description": "Grumpy weatherman Phil Connors grudgingly travels to the small town of Punxsutawney to film the annual Groundhog Day report, a job he openly scorns.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 1 evening"
@@ -68,6 +69,7 @@
       "id": "e_day1",
       "type": "ordinary",
       "label": "First Feb 2 broadcast day",
+      "description": "On the morning of 2nd February, Phil films the ceremony, gets snubbed, and can't wait to leave town - never suspecting this ordinary day is about to become his whole world.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 #1"
@@ -80,7 +82,8 @@
     {
       "id": "e_reset1",
       "type": "loop_reset",
-      "label": "Wake to same morning \u2014 loop begins",
+      "label": "Wake to same morning — loop begins",
+      "description": "Phil wakes to his clock radio playing the same song and the same morning as the day before. The 2nd of February is happening all over again, and only he remembers it.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 #2"
@@ -98,6 +101,7 @@
       "id": "e_hedonism",
       "type": "ordinary",
       "label": "Hedonism / consequences-free phase",
+      "description": "Once Phil realises nothing carries over, he does whatever he likes - eating, drinking, driving recklessly - because tomorrow never comes to hold him to it.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 hedonist"
@@ -113,6 +117,7 @@
       "id": "e_robbery",
       "type": "intervention",
       "label": "Bank robbery / joyrides",
+      "description": "Phil's consequence-free phase turns ugly: he pockets money from an armoured van and takes joyrides with the police, since no one remembers his crimes by morning.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 chaos"
@@ -125,6 +130,7 @@
       "id": "e_suicide",
       "type": "death",
       "label": "Suicide attempts; still resets",
+      "description": "Trapped in the same day over and over, Phil becomes despairing and tries to end it - jumping from rooftops, driving into oncoming trucks - yet every time he simply wakes again at 6 a.m.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 despair"
@@ -141,6 +147,7 @@
       "id": "e_reset_s",
       "type": "loop_reset",
       "label": "Reset after suicide",
+      "description": "No matter how Phil ends the day, even by dying, the morning always resets and he finds himself back in his bed at the start of the 2nd of February.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 after death"
@@ -158,6 +165,7 @@
       "id": "e_learn",
       "type": "ordinary",
       "label": "Learning piano, French, ice sculpting, kindness",
+      "description": "Phil turns the endless repetition into practice and becomes genuinely good at things - the piano, French, ice sculpting - filling his days with learning instead of escapism.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 growth"
@@ -174,6 +182,7 @@
       "id": "e_save_day",
       "type": "intervention",
       "label": "Perfect day: saves boy, helps townsfolk, concert",
+      "description": "Phil spends one day helping everyone he can: catching a boy falling from a tree, fixing a tyre for grannies, and playing piano at the evening dance.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 perfected"
@@ -188,6 +197,7 @@
       "id": "e_rita_night",
       "type": "ordinary",
       "label": "Rita stays; genuine connection",
+      "description": "Producer Rita, moved by how the town adores Phil after all his good deeds, stays the night with him, and for the first time he is truly loved for who he has become.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2 night"
@@ -200,7 +210,8 @@
     {
       "id": "e_exit",
       "type": "loop_exit",
-      "label": "Wake to Feb 3 \u2014 loop exits",
+      "label": "Wake to Feb 3 — loop exits",
+      "description": "Phil wakes to find the clock radio playing something new - it is finally the 3rd of February. The loop is over, and he steps out into the world with Rita at his side.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 3"
@@ -219,6 +230,7 @@
       "id": "ev_loop_start",
       "type": "ordinary",
       "label": "Phil first repeated Feb 2",
+      "description": "Phil wakes up and the same February day begins all over again - the first repeat of his perfect prison.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 2"
@@ -234,6 +246,7 @@
       "id": "ev_despair",
       "type": "ordinary",
       "label": "Suicide attempts fail to exit",
+      "description": "Phil tries dying to escape the loop, but death offers no exit and he simply wakes to repeat the day once more.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "mid loops"
@@ -249,6 +262,7 @@
       "id": "ev_virtue",
       "type": "ordinary",
       "label": "Learning/altruism phase",
+      "description": "Phil fills his repeated days with learning and quiet kindness to others, slowly turning a curse into a better version of himself.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "late loops"
@@ -264,6 +278,7 @@
       "id": "ev_exit",
       "type": "ordinary",
       "label": "Wake on Feb 3 with Rita",
+      "description": "The endless day finally gives way and Phil wakes to the 3rd of February, a changed man, with Rita beside him.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 3"
@@ -279,6 +294,7 @@
       "id": "e_arrive_punx",
       "type": "ordinary",
       "label": "Phil arrives Punxsutawney",
+      "description": "Phil arrives in Punxsutawney with his crew for the Groundhog Day festivities, treating the whole town and its traditions with open contempt.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "Feb 1"
@@ -288,6 +304,7 @@
       "id": "e_loop_realize",
       "type": "loop_reset",
       "label": "Realizes day repeats",
+      "description": "Phil works out that the same day keeps repeating: everyone else resets, only he carries memories forward.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "early loops"
@@ -300,6 +317,7 @@
       "id": "e_despair",
       "type": "death",
       "label": "Suicides fail to exit",
+      "description": "Suicide after suicide fails to free Phil from the loop - he always wakes up again at the start of the same morning.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "despair"
@@ -312,6 +330,7 @@
       "id": "e_rita_learn",
       "type": "intervention",
       "label": "Learns Rita's preferences across loops",
+      "description": "Over countless repeated days, Phil learns everything about Rita - her drink, her tastes, her loves - until he knows her better than anyone alive could.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "growth"
@@ -324,6 +343,7 @@
       "id": "e_skills",
       "type": "ordinary",
       "label": "Piano, French, ice sculpture mastery",
+      "description": "Through sheer repetition Phil masters the piano, the French language and ice sculpture, talents no one can explain in a single day.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "later loops"
@@ -333,6 +353,7 @@
       "id": "e_good_day",
       "type": "ordinary",
       "label": "Perfect altruistic day",
+      "description": "Phil gives one flawless, selfless day: every stranger helped, every need met, and the whole town celebrating his kindness at the evening dance.",
       "at": {
         "worldRef": "w_punx",
         "timeLabel": "penultimate"

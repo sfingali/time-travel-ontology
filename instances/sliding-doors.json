@@ -91,6 +91,7 @@
       "id": "e_fired",
       "type": "ordinary",
       "label": "Helen loses PR job",
+      "description": "Helen Quilley is sacked from her PR job - and the film's hinge waits for her on the Tube platform.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "morning"
@@ -103,6 +104,7 @@
       "id": "e_split",
       "type": "branch_fork",
       "label": "Catches vs misses Tube train",
+      "description": "Running down the escalator, Helen either catches her train or the doors close in her face - and the film splits into both of her lives at once.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "station"
@@ -118,6 +120,7 @@
       "id": "e_a_catch",
       "type": "arrival",
       "label": "A: catches train; arrives home early",
+      "description": "In life A she catches it - sits beside the charming James, and gets home early enough to catch her boyfriend Gerry in bed with another woman.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "A path"
@@ -130,6 +133,7 @@
       "id": "e_a_affair",
       "type": "observation",
       "label": "A: discovers Gerry's affair with Lydia",
+      "description": "Helen A discovers Gerry's affair with Lydia - the truth her other self will take months to learn.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "A home"
@@ -143,6 +147,7 @@
       "id": "e_a_leave",
       "type": "intervention",
       "label": "A: leaves Gerry",
+      "description": "She leaves Gerry on the spot, and the life she builds starts from that hard, clean break.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "A"
@@ -156,6 +161,7 @@
       "id": "e_a_james",
       "type": "ordinary",
       "label": "A: relationship with James develops",
+      "description": "With James, Helen A finds a second chance at love - banter first, then something real.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "A"
@@ -169,6 +175,7 @@
       "id": "e_a_newlife",
       "type": "ordinary",
       "label": "A: new work / confidence arc",
+      "description": "Helen A goes into business for herself, and the confidence that comes with it - her new life turns out better than the one she lost.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "A mid"
@@ -182,6 +189,7 @@
       "id": "e_b_miss",
       "type": "ordinary",
       "label": "B: misses train; delayed home",
+      "description": "In life B the doors closed - she takes the long way home, misses the discovery, and keeps living the lie.",
       "at": {
         "worldRef": "w_catch",
         "timeLabel": "B path"
@@ -194,6 +202,7 @@
       "id": "e_b_unaware",
       "type": "ordinary",
       "label": "B: remains with Gerry unaware longer",
+      "description": "Helen B works two jobs to support Gerry, unaware he is spending her money on Lydia.",
       "at": {
         "worldRef": "w_catch",
         "timeLabel": "B"
@@ -207,6 +216,7 @@
       "id": "e_b_lydia",
       "type": "ordinary",
       "label": "B: Lydia affair continues covertly",
+      "description": "The affair continues in secret - Lydia creeping through the background of Helen B's home life, wearing her dressing gown.",
       "at": {
         "worldRef": "w_catch",
         "timeLabel": "B"
@@ -220,6 +230,7 @@
       "id": "e_b_trap",
       "type": "ordinary",
       "label": "B: Helen stuck enabling Gerry's lies",
+      "description": "Helen B is stuck: the man she loves is bleeding her dry, and only the audience can see it.",
       "at": {
         "worldRef": "w_catch",
         "timeLabel": "B mid"
@@ -233,6 +244,7 @@
       "id": "e_mirror",
       "type": "observation",
       "label": "Mirrored motifs: elevators, drinks, timing",
+      "description": "The film rhymes constantly between the two lives - the same lifts, the same drinks, the same lines arriving seconds apart in each world.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "montage"
@@ -246,6 +258,7 @@
       "id": "e_a_pregnant",
       "type": "ordinary",
       "label": "A: pregnancy / life stakes with James",
+      "description": "Helen A falls pregnant by James - the future she is building finally has stakes.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "A late"
@@ -259,6 +272,7 @@
       "id": "e_a_fall",
       "type": "death",
       "label": "A: stairs fall / hemorrhage crisis",
+      "description": "On the stairs, Helen A falls and haemorrhages - the life that had everything loses it in a single moment.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "A climax"
@@ -272,6 +286,7 @@
       "id": "e_b_confront",
       "type": "intervention",
       "label": "B: finally confronts betrayal",
+      "description": "Helen B finally catches Gerry and Lydia out - and is hit by a car in the chaos of the revelation.",
       "at": {
         "worldRef": "w_catch",
         "timeLabel": "B late"
@@ -286,6 +301,7 @@
       "id": "e_b_hospital",
       "type": "ordinary",
       "label": "B: hospital rhyme after violence/accident beat",
+      "description": "Helen B is rushed to hospital - and the two lives arrive, for one moment, in the same room.",
       "at": {
         "worldRef": "w_catch",
         "timeLabel": "B climax"
@@ -298,6 +314,7 @@
       "id": "e_a_survive",
       "type": "ordinary",
       "label": "A: survives; wake toward James",
+      "description": "Helen A survives on the operating table - pulled back toward James and the child.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "A end"
@@ -311,6 +328,7 @@
       "id": "e_b_ambig",
       "type": "ordinary",
       "label": "B: aftermath with Gerry path unresolved/bitter",
+      "description": "Helen B's story ends in the operating theatre - the film leaves her fate hanging between the two worlds.",
       "at": {
         "worldRef": "w_catch",
         "timeLabel": "B end"
@@ -324,6 +342,7 @@
       "id": "e_elevator",
       "type": "contact",
       "label": "Final elevator / James meet rhyme across worlds",
+      "description": "The closing rhyme: a lift, a chance meeting - the echo of James finding Helen, whichever Helen she is.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "epilogue rhyme"
@@ -337,6 +356,7 @@
       "id": "e_theme",
       "type": "observation",
       "label": "Chance bifurcation without travel machine",
+      "description": "A story about hinge moments - how one train door assigns a whole life - with no machine and no traveller, just the two roads.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "theme"
@@ -350,6 +370,7 @@
       "id": "e_merge_hint",
       "type": "collapse",
       "label": "Ambiguous merge suggestion in closing rhyme",
+      "description": "The ending hints the two lives lean together - that some meetings happen in every version, whoever we become.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "close"
@@ -362,7 +383,8 @@
     {
       "id": "e_no_travel",
       "type": "ordinary",
-      "label": "No literal time travel\u2014counterfactual branch film",
+      "label": "No literal time travel—counterfactual branch film",
+      "description": "Nobody travels through time in this film - the two lives simply exist, side by side, from one missed train.",
       "at": {
         "worldRef": "w_root",
         "timeLabel": "meta"

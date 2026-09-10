@@ -86,6 +86,7 @@
       "id": "e_2006",
       "type": "ordinary",
       "label": "2016? / 2006 adult Satoru sees mother's death; Revival triggers",
+      "description": "Adult Satoru Fujinuma finds his mother murdered in their flat - and his strange ability, Revival, throws him back in time to stop it.",
       "at": {
         "worldRef": "w_2006",
         "timeLabel": "2006"
@@ -101,6 +102,7 @@
       "id": "e_revival_long",
       "type": "loop_reset",
       "label": "Long Revival: wakes as child in 1988",
+      "description": "Instead of minutes, this Revival is huge: Satoru wakes in his ten-year-old body in 1988, eighteen years before the murder, with every memory intact.",
       "at": {
         "worldRef": "w_1988",
         "timeLabel": "1988"
@@ -118,6 +120,7 @@
       "id": "e_mother",
       "type": "ordinary",
       "label": "Lives with mother Sachiko; investigates child killings",
+      "description": "Living again as a child beside his mother Sachiko, Satoru quietly investigates the child kidnappings of 1988 - the case he now believes is connected to her death.",
       "at": {
         "worldRef": "w_1988",
         "timeLabel": "1988"
@@ -131,6 +134,7 @@
       "id": "e_short",
       "type": "loop_reset",
       "label": "Short Revivals (minutes) avert immediate deaths",
+      "description": "The small version of his gift: short Revivals of a minute or so that yank him back whenever disaster is about to strike - a warning system he has never controlled.",
       "at": {
         "worldRef": "w_1988",
         "timeLabel": "micro"
@@ -147,6 +151,7 @@
       "id": "e_kayo",
       "type": "intervention",
       "label": "Works to save Kayo and other children",
+      "description": "Satoru focuses on Kayo Hinazuki, the quiet classmate the killer will take first - keeping her safe means changing a winter that history has already recorded.",
       "at": {
         "worldRef": "w_1988",
         "timeLabel": "investigation"
@@ -160,6 +165,7 @@
       "id": "e_yashiro",
       "type": "reveal",
       "label": "Teacher Yashiro is the killer",
+      "description": "The killer is closer than anyone guesses: Satoru's own primary-school teacher, Yashiro, hiding in plain sight.",
       "at": {
         "worldRef": "w_1988",
         "timeLabel": "mid"
@@ -173,6 +179,7 @@
       "id": "e_fail",
       "type": "death",
       "label": "Failures / lake incidents; butterfly omens",
+      "description": "First attempts fail badly - a lake rescue nearly kills Kayo, and strange omens follow, as if time itself objects to the changes.",
       "at": {
         "worldRef": "w_1988",
         "timeLabel": "setbacks"
@@ -188,7 +195,8 @@
     {
       "id": "e_adapt",
       "type": "ordinary",
-      "label": "Killer adapts across loops \u2014 adversarial looping",
+      "label": "Killer adapts across loops — adversarial looping",
+      "description": "The killer adapts to every move Satoru makes - a mind working across the same eighteen years, aware that someone is hunting him through time.",
       "at": {
         "worldRef": "w_1988",
         "timeLabel": "arms race"
@@ -202,6 +210,7 @@
       "id": "e_save",
       "type": "intervention",
       "label": "Successful prevention path; coma cost bridge",
+      "description": "Satoru gets the children saved and the pattern broken - but the price is fifteen years unconscious, the bridge between the child who changed everything and the adult who wakes to it.",
       "at": {
         "worldRef": "w_1988b",
         "timeLabel": "success"
@@ -216,6 +225,7 @@
       "id": "e_2003",
       "type": "arrival",
       "label": "2003 wake from 15-year coma; friends visit",
+      "description": "Satoru wakes in 2003, fifteen years after the winter that changed - his body grown, his memories whole, the murders averted in a present that moved on without him.",
       "at": {
         "worldRef": "w_2003",
         "timeLabel": "2003"
@@ -229,6 +239,7 @@
       "id": "e_rooftop",
       "type": "intervention",
       "label": "Yashiro (Nishizono) rooftop murder attempt foiled",
+      "description": "Yashiro - living now under a new name - comes for Satoru on a school rooftop, and the old cat-and-mouse ends with the teacher finally caught.",
       "at": {
         "worldRef": "w_2003",
         "timeLabel": "climax"
@@ -242,6 +253,7 @@
       "id": "e_arrest",
       "type": "ordinary",
       "label": "Arrest for new crime; old crimes timed out",
+      "description": "Yashiro is arrested for the new murder he committed in this timeline; the crimes of the erased one have run out past the clock.",
       "at": {
         "worldRef": "w_2003",
         "timeLabel": "justice"
@@ -254,6 +266,7 @@
       "id": "e_2010",
       "type": "ordinary",
       "label": "2010 mangaka Satoru; Airi; butterfly stirs",
+      "description": "By 2010 Satoru is a manga artist, and with Airi - the girl whose life echoes Kayo's - the story lets the future breathe again.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "2010"
@@ -269,6 +282,7 @@
       "id": "e_x_jump",
       "type": "arrival",
       "label": "Satoru leaps to child body 1988",
+      "description": "The leap itself: adult mind, child body, 1988.",
       "at": {
         "worldRef": "w_2006",
         "timeLabel": "inciting"
@@ -278,6 +292,7 @@
       "id": "e_x_killer",
       "type": "ordinary",
       "label": "Serial killer threatens mother/classmates",
+      "description": "The serial killer working his way toward Satoru's classmates and mother.",
       "at": {
         "worldRef": "w_2006",
         "timeLabel": "stakes"
@@ -287,6 +302,7 @@
       "id": "e_x_friends",
       "type": "intervention",
       "label": "Save friends across investigations",
+      "description": "Round by round, the friends are saved - each rescue rewriting the small history of their town.",
       "at": {
         "worldRef": "w_2006",
         "timeLabel": "mid"
@@ -296,6 +312,7 @@
       "id": "e_x_mother",
       "type": "ordinary",
       "label": "Mother death/prevention arc",
+      "description": "His mother's murder, prevented at the root by everything the child Satoru sets in motion.",
       "at": {
         "worldRef": "w_2006",
         "timeLabel": "mid"
@@ -305,6 +322,7 @@
       "id": "e_x_adult",
       "type": "arrival",
       "label": "Return toward present",
+      "description": "The long road back up to the present the changes created.",
       "at": {
         "worldRef": "w_2006",
         "timeLabel": "late"
@@ -314,6 +332,7 @@
       "id": "e_x_truth",
       "type": "reveal",
       "label": "Culprit identity",
+      "description": "The culprit unmasked - the teacher who was there all along.",
       "at": {
         "worldRef": "w_2006",
         "timeLabel": "climax"
@@ -323,6 +342,7 @@
       "id": "e_x_save",
       "type": "checkpoint",
       "label": "Rewritten present",
+      "description": "The present, rewritten: the people who died are alive, though the saver slept through the world he made.",
       "at": {
         "worldRef": "w_2006",
         "timeLabel": "end"
@@ -332,6 +352,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Revival-leap style return",
+      "description": "The shape of the gift: Revival returns Satoru to just before a tragedy - and the biggest tragedy of all returns him eighteen years.",
       "at": {
         "worldRef": "w_2006",
         "timeLabel": "rules"

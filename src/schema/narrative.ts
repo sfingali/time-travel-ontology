@@ -220,6 +220,13 @@ export const EventSchema = z
     id: IdSchema,
     type: EventTypeSchema,
     label: z.string().min(1),
+    /**
+     * Plain-English description of what happens, written for a reader who has
+     * not seen the film and knows no ontology vocabulary. Diagram renderers
+     * show this as the node's primary text (above the label); the label stays
+     * the short name. No jargon: no "bootstrap", "misjump", "ripple", no ids.
+     */
+    description: z.string().optional(),
     at: EventAtSchema,
     agents: z.array(IdSchema).optional(),
     payload: EventPayloadSchema.optional(),

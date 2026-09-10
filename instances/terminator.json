@@ -26,7 +26,7 @@
     {
       "kind": "timeline",
       "id": "w_t1",
-      "label": "1984\u21942029 closed war timeline",
+      "label": "1984↔2029 closed war timeline",
       "spanLabel": "1984 / 2029",
       "description": "John's existence bootstrapped; Judgment Day tone inevitable"
     }
@@ -71,6 +71,7 @@
       "id": "e_send_t800",
       "type": "departure",
       "label": "Skynet sends T-800 to kill Sarah Connor",
+      "description": "In a future ruled by killer machines, the machine network sends a ruthless cyborg assassin back to 1984. Its target: an ordinary young woman named Sarah Connor, before her child is even born.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "2029"
@@ -87,6 +88,7 @@
       "id": "e_send_reese",
       "type": "departure",
       "label": "Resistance (John) sends Kyle Reese",
+      "description": "The human resistance sends one of its own soldiers, Kyle Reese, back through time after the cyborg. His mission is simply to keep Sarah alive.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "2029"
@@ -103,6 +105,7 @@
       "id": "e_arrive_la",
       "type": "arrival",
       "label": "Naked cyborg and Reese arrive 1984 LA",
+      "description": "Both travellers land in 1984 Los Angeles. The cyborg arrives naked, unharmed and unstoppable; the soldier arrives naked, human and with almost nothing to work with.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "1984"
@@ -116,6 +119,7 @@
       "id": "e_hunt",
       "type": "ordinary",
       "label": "Phone-book hunt; Sarah targeted",
+      "description": "The cyborg works down a phone book, killing every Sarah Connor in the city one by one. The real Sarah realises too late that she is being hunted.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "1984"
@@ -129,6 +133,7 @@
       "id": "e_rescue",
       "type": "intervention",
       "label": "Reese rescues Sarah; explains Judgment Day 1997",
+      "description": "Kyle snatches Sarah from the killer's grip and tells her the impossible truth: a machine uprising will one day devastate the world, and her unborn son will lead what's left of humanity.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "Tech-Noir"
@@ -143,6 +148,7 @@
       "id": "e_love",
       "type": "bootstrap_origin",
       "label": "Reese and Sarah conceive John Connor",
+      "description": "Hunted and running for their lives, Sarah and Kyle spend one night together in hiding - and that night is when her son, the future leader of humanity, is conceived.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "1984 night"
@@ -161,6 +167,7 @@
       "id": "e_factory",
       "type": "death",
       "label": "Factory climax: Reese dies; T-800 crushed",
+      "description": "In a robot factory the two men fight to the end: Kyle is killed in the explosion and the cyborg is torn apart - though the machine's torso still crawls after Sarah.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "factory"
@@ -175,6 +182,7 @@
       "id": "e_cpu_left",
       "type": "ordinary",
       "label": "Arm/CPU left behind (Cyberdyne seed in sequels)",
+      "description": "Amid the wreckage are the cyborg's crushed arm and computer brain. Instead of being destroyed, they are collected and studied - the very research that one day builds the machines.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "aftermath"
@@ -192,6 +200,7 @@
       "id": "e_pregnant",
       "type": "ordinary",
       "label": "Pregnant Sarah drives toward storm; records tapes for John",
+      "description": "Alone and pregnant, Sarah drives through the desert recording tape messages of advice and warning for the son she will raise to be a soldier.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "coda"
@@ -205,6 +214,7 @@
       "id": "e_loop_note",
       "type": "reveal",
       "label": "John's leadership depends on Reese whom John sent",
+      "description": "Sarah's son only becomes a leader because Kyle trained and loved her - and Kyle was sent back by that very son. The story closes on itself.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "structural"
@@ -221,6 +231,7 @@
       "id": "ev_arrive",
       "type": "ordinary",
       "label": "T-800 and Reese arrive 1984",
+      "description": "The killer cyborg and its human pursuer both arrive in 1984, seconds apart in the same city, and the hunt begins.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "1984"
@@ -235,7 +246,8 @@
     {
       "id": "ev_conceive",
       "type": "ordinary",
-      "label": "John conceived \u2014 paternal bootstrap",
+      "label": "John conceived — paternal bootstrap",
+      "description": "The child who grows up to send his own protector back through time is conceived during that rescue - his father came from the future to save his mother.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "motel"
@@ -251,6 +263,7 @@
       "id": "ev_factory",
       "type": "ordinary",
       "label": "Factory destruction; Reese dies",
+      "description": "The last battle happens in a factory: Kyle dies destroying the cyborg, and Sarah finishes the job by crushing what is left of it.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "climax"
@@ -266,6 +279,7 @@
       "id": "e_t800_1984",
       "type": "arrival",
       "label": "T-800 arrives 1984 to kill Sarah",
+      "description": "The cyborg assassin lands in 1984 with one instruction: kill Sarah Connor so that her future son is never born.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "1984"
@@ -278,6 +292,7 @@
       "id": "e_kyle",
       "type": "arrival",
       "label": "Kyle Reese sent to protect Sarah",
+      "description": "Kyle Reese volunteers to travel back and guard Sarah, knowing the man who sent him is the child he is protecting.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "1984"
@@ -290,6 +305,7 @@
       "id": "e_chase",
       "type": "ordinary",
       "label": "Police station massacre / chase",
+      "description": "Sarah runs to the police, but the cyborg drives a car straight through the wall and kills nearly every officer in the building - so Kyle has to spring her from the chaos.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "mid"
@@ -299,6 +315,7 @@
       "id": "e_motel",
       "type": "ordinary",
       "label": "Kyle tells Sarah of future war",
+      "description": "In a motel hideout, Kyle paints Sarah a picture of the future: cities in ruins, machines hunting people, and her son leading the survivors from broadcasts made after the war.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "mid"
@@ -308,6 +325,7 @@
       "id": "e_conceive",
       "type": "birth",
       "label": "John Connor conceived (bootstrap)",
+      "description": "During their one night of shelter, Sarah and Kyle conceive her son - a child whose father and protector came from the future for this exact purpose.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "night"
@@ -320,6 +338,7 @@
       "id": "e_kyle_die",
       "type": "death",
       "label": "Kyle dies fighting T-800",
+      "description": "Kyle blows up the cyborg with a truckload of explosives and dies in the blast, dying the way he always knew he would: protecting Sarah.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "climax"
@@ -329,6 +348,7 @@
       "id": "e_crush",
       "type": "death",
       "label": "Sarah crushes T-800 in press",
+      "description": "The shattered cyborg's torso still crawls after Sarah; she lures it into a giant factory press and crushes it flat.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "climax"
@@ -337,7 +357,8 @@
     {
       "id": "e_photo",
       "type": "bootstrap_origin",
-      "label": "Polaroid photo Kyle carried \u2014 origin loop",
+      "label": "Polaroid photo Kyle carried — origin loop",
+      "description": "Kyle has carried a photograph of Sarah through the whole future war - she gave it to him long after this night, because this night is when he first told her about it.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "coda"
@@ -350,6 +371,7 @@
       "id": "e_drive",
       "type": "ordinary",
       "label": "Sarah drives toward storm / future",
+      "description": "Battered but tougher, Sarah drives toward dark clouds gathering on the horizon, towards the war she now knows is coming.",
       "at": {
         "worldRef": "w_t1",
         "timeLabel": "ending"
@@ -417,7 +439,7 @@
       "kind": "identity",
       "from": "reese",
       "to": "john",
-      "label": "father\u2192son bootstrap"
+      "label": "father→son bootstrap"
     },
     {
       "id": "rep_1",

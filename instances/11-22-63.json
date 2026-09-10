@@ -90,6 +90,7 @@
       "id": "e_diner",
       "type": "reveal",
       "label": "Al shows Jake the diner portal to 1960",
+      "description": "Dying Al shows Jake the strange pantry in his diner, where a staircase leading down comes out in the year 1960, and asks his young friend to finish the job he can no longer do.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "2011"
@@ -106,6 +107,7 @@
       "id": "e_rules",
       "type": "observation",
       "label": "Land always Sep 1960; minutes present vs years past; reset on re-entry",
+      "description": "The doorway has peculiar habits: no matter when you step out of it, you always arrive in September 1960, the past never seems to move on while you are away, and every fresh trip starts the world of the past over again.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "rules"
@@ -119,6 +121,7 @@
       "id": "e_test",
       "type": "intervention",
       "label": "Test change: save Harry's family",
+      "description": "Before committing to anything, Jake tries a small change, saving the family of a pupil's father who was murdered in front of him, to see whether the past can really be altered.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "1960 test"
@@ -132,6 +135,7 @@
       "id": "e_test_cost",
       "type": "observation",
       "label": "Present ripples show cost/objections of past",
+      "description": "When Jake returns to the present he finds that history has shifted - and not entirely for the better - teaching him that even good deeds in the past carry a price.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "after test"
@@ -145,6 +149,7 @@
       "id": "e_commit",
       "type": "departure",
       "label": "Jake commits to stop JFK assassination",
+      "description": "Convinced the door works, Jake agrees to Al's great cause: go back and stop Lee Harvey Oswald from shooting President Kennedy.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "mission"
@@ -161,6 +166,7 @@
       "id": "e_land",
       "type": "arrival",
       "label": "Lands 1960; builds identity",
+      "description": "Jake walks into 1958 (the door still opens into 1960 each trip), settles into the past under a false name and builds himself a life to wait out the years until 1963.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "1960"
@@ -176,6 +182,7 @@
       "id": "e_teach",
       "type": "ordinary",
       "label": "Teaching job; meets Sadie",
+      "description": "He takes a job as a schoolteacher in a small Texas town, which is how he comes to know the lovely, damaged librarian Sadie Dunhill.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "1960-61"
@@ -189,6 +196,7 @@
       "id": "e_romance",
       "type": "ordinary",
       "label": "Romance with Sadie deepens",
+      "description": "Jake and Sadie fall genuinely in love, and his pretend life in 1960 starts to feel more real to him than the world he came from.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "1961-63"
@@ -202,6 +210,7 @@
       "id": "e_immune",
       "type": "observation",
       "label": "Past pushes back as Jake nears Oswald",
+      "description": "As Jake gets closer to Oswald, the past itself seems to push back - freak accidents, bad luck and hostile crowds keep trying to throw him off course.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "escalation"
@@ -217,6 +226,7 @@
       "id": "e_oswald_watch",
       "type": "ordinary",
       "label": "Surveillance of Oswald",
+      "description": "Jake moves close to Lee Harvey Oswald and his unhappy wife, shadowing the couple for months to be sure of what Oswald is planning before he acts.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "1963"
@@ -230,6 +240,7 @@
       "id": "e_book_depository",
       "type": "intervention",
       "label": "Dealey Plaza intervention attempt",
+      "description": "On the fateful November day in Dallas, Jake positions himself to intervene at the moment the shots are fired at the president's motorcade.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "22 Nov 1963"
@@ -243,6 +254,7 @@
       "id": "e_success",
       "type": "ordinary",
       "label": "JFK survives in this run",
+      "description": "Jake succeeds - the president is not killed that day, and the crowd's screams turn to relief as history takes a different turn.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "22 Nov 1963"
@@ -255,6 +267,7 @@
       "id": "e_return",
       "type": "arrival",
       "label": "Return to present",
+      "description": "With the deed done, Jake steps back through the doorway to his own time to see what kind of world he has made.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "present"
@@ -270,6 +283,7 @@
       "id": "e_dystopia",
       "type": "collapse",
       "label": "Present dystopia from butterfly cascades",
+      "description": "The present he returns to is a wreck: the saved president's legacy set off a chain of disasters - earthquakes, nuclear trouble and social collapse - that made everything far worse.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "altered present"
@@ -282,6 +296,7 @@
       "id": "e_undo",
       "type": "intervention",
       "label": "Re-enter to reset past / undo assassination stop",
+      "description": "Horror-struck, Jake goes back into the doorway one last time to put history right, deliberately letting the assassination happen again.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "reset"
@@ -297,6 +312,7 @@
       "id": "e_accept",
       "type": "ordinary",
       "label": "Accept imperfect history; leave JFK fate",
+      "description": "Jake finally accepts the hard lesson: some events are so deeply rooted in history that changing them only breeds disaster, so he leaves the past to keep its wounds.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "resolution"
@@ -309,6 +325,7 @@
       "id": "e_sadie_loss",
       "type": "ordinary",
       "label": "Cost to Sadie relationship across resets",
+      "description": "Every time the past resets, Jake's life with Sadie is wiped out along with it - the price of the mission is losing her again and again.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "emotional"
@@ -322,6 +339,7 @@
       "id": "e_final_dance",
       "type": "ordinary",
       "label": "Final bittersweet Sadie coda (adaptations vary)",
+      "description": "The story closes with a bittersweet scene: Jake, now old, seeks out the aged Sadie and shares one last dance with the woman he could not keep.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "epilogue"
@@ -335,6 +353,7 @@
       "id": "e_al_die",
       "type": "death",
       "label": "Al's cancer frames urgency",
+      "description": "Al's terminal illness is what makes the whole scheme urgent - he discovered the doorway, spent years plotting in the past, and now must hand the mission over before he dies.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "framing"
@@ -348,6 +367,7 @@
       "id": "e_beacon",
       "type": "ordinary",
       "label": "Yellow card / anomalies as warning signs",
+      "description": "Al teaches Jake the warning signs: certain odd sights - a yellow card, a silent payphone, a ringing phone with no one there - mean the past is pushing back and danger is near.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "warnings"
@@ -360,6 +380,7 @@
       "id": "e_theme",
       "type": "observation",
       "label": "Big history resists; personal love vs mission",
+      "description": "At its heart the story argues that great history fights any attempt to redirect it, and weighs the mission's grand cause against one man's plain, honest love.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "theme"
@@ -372,6 +393,7 @@
       "id": "e_close",
       "type": "ordinary",
       "label": "Leaves past; lives with consequences",
+      "description": "In the end Jake walks away from the doorway and the past altogether, settling down to live with what he did and what it cost him.",
       "at": {
         "worldRef": "w_2015",
         "timeLabel": "close"

@@ -27,7 +27,7 @@
       "kind": "timeline",
       "id": "w_2023",
       "label": "Main MCU present (post-Snap 2023)",
-      "spanLabel": "2018\u20132023"
+      "spanLabel": "2018–2023"
     },
     {
       "kind": "branch",
@@ -111,6 +111,7 @@
       "id": "e_snap_fail",
       "type": "ordinary",
       "label": "2018: Stones destroyed; Thor kills Thanos; Snap stands",
+      "description": "Thanos has already wiped out half of all life with the six stones, and when the surviving heroes finally catch him it is too late to undo it - Thor kills him, but the loss stands.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "2018"
@@ -123,7 +124,8 @@
     {
       "id": "e_scott",
       "type": "arrival",
-      "label": "2023: Scott exits Quantum Realm (5h\u21925y)",
+      "label": "2023: Scott exits Quantum Realm (5h→5y)",
+      "description": "Five years after half of humanity vanished, Scott Lang walks out of the strange shrinking world he was lost inside and discovers that the few hours he spent there were five years outside.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "2023"
@@ -140,6 +142,7 @@
       "id": "e_rules",
       "type": "reveal",
       "label": "Banner: changing past branches; does not overwrite 2023",
+      "description": "Bruce Banner spells out the rule their plan rests on: changing something in the past does not rewrite their own ruined present, it simply creates a new, separate history.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "2023"
@@ -157,6 +160,7 @@
       "id": "e_suits",
       "type": "ordinary",
       "label": "Stark builds time GPS suits; Time Heist planned",
+      "description": "Tony Stark builds special protective suits with a guidance device to steer the trips, and the team plots a raid to borrow the stones from points in the past.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "2023"
@@ -169,6 +173,7 @@
       "id": "e_ny2012",
       "type": "departure",
       "label": "Team to 2012 NY for Time/Mind/Space stones",
+      "description": "The first raid sends a team back to the New York battle of 2012, where three of the stones were all in one place, to snatch them while their younger selves are busy fighting.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "heist"
@@ -188,6 +193,7 @@
       "id": "e_asgard",
       "type": "departure",
       "label": "Thor & Rocket to 2013 Asgard for Reality (Aether)",
+      "description": "Thor and Rocket slip into Asgard in 2013 to take back the dark, liquid stone that was still hidden inside Jane Foster in those days.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "heist"
@@ -204,6 +210,7 @@
       "id": "e_vormir",
       "type": "departure",
       "label": "Barton/Romanoff to 2014 Vormir for Soul Stone",
+      "description": "Hawkeye and Black Widow travel to a bleak, remote world where the soul stone demands a terrible price: a soul for a soul.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "heist"
@@ -221,6 +228,7 @@
       "id": "e_nat_dies",
       "type": "death",
       "label": "Romanoff sacrifices so Barton can take Soul Stone",
+      "description": "Black Widow realises that someone she loves must die on that cliff, and she throws herself off so that Hawkeye can go home with the stone.",
       "at": {
         "worldRef": "w_2014",
         "timeLabel": "2014 Vormir"
@@ -233,10 +241,11 @@
     {
       "id": "e_1970",
       "type": "departure",
-      "label": "Space Stone fail \u2192 1970 Camp Lehigh redo",
+      "label": "Space Stone fail → 1970 Camp Lehigh redo",
+      "description": "Having come up empty-handed for the space stone in 2012, Tony and Steve try again in 1970 at the old military base where the stone was first kept and studied.",
       "at": {
         "worldRef": "w_2012",
-        "timeLabel": "2012\u21921970"
+        "timeLabel": "2012→1970"
       },
       "agents": [
         "tony",
@@ -251,6 +260,7 @@
       "id": "e_branch_warn",
       "type": "branch_fork",
       "label": "Ancient One: removing Stone without return forks defenseless branch",
+      "description": "The Ancient One warns that if her stone is taken and never brought back, that version of history is left defenceless against its own darkness.",
       "at": {
         "worldRef": "w_2012",
         "timeLabel": "2012"
@@ -266,6 +276,7 @@
       "id": "e_unsnap",
       "type": "intervention",
       "label": "2023: Hulk snaps dusted back; battlefield with past-Thanos",
+      "description": "Back in the present, the Hulk uses the gathered stones to bring back everyone who vanished - just as the Thanos of the past arrives to take the stones for himself.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "2023"
@@ -282,6 +293,7 @@
       "id": "e_tony_snap",
       "type": "death",
       "label": "Tony wields Stones; past-Thanos army erased; Tony dies",
+      "description": "In the final battle Tony Stark seizes the stones and wipes out Thanos and his whole army, though the effort of using them kills him.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "final battle"
@@ -295,6 +307,7 @@
       "id": "e_return_stones",
       "type": "intervention",
       "label": "Cap returns Stones to exact take-moments",
+      "description": "With the danger past, Captain America sets off to put each stone back at the exact moment it was taken, so that no version of history is left exposed.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "aftermath"
@@ -310,6 +323,7 @@
       "id": "e_cap_stay",
       "type": "branch_fork",
       "label": "Cap stays in past with Peggy; old Cap returns on bench",
+      "description": "Instead of coming straight home, Cap chooses to live out his life quietly in the past with his lost love Peggy Carter, and only turns up again as an old man on a bench.",
       "at": {
         "worldRef": "w_cap_life",
         "timeLabel": "post-war life"
@@ -324,7 +338,8 @@
     {
       "id": "e_loki_escape",
       "type": "branch_fork",
-      "label": "2012 Loki escapes with Tesseract \u2192 TVA/Loki series branch",
+      "label": "2012 Loki escapes with Tesseract → TVA/Loki series branch",
+      "description": "In the confusion of the 2012 raid, Loki grabs the space cube and vanishes with it - a loose thread that grows into its own separate story.",
       "at": {
         "worldRef": "w_loki_branch",
         "timeLabel": "2012"
@@ -340,6 +355,7 @@
       "id": "e_x_plan",
       "type": "ordinary",
       "label": "Time heist plan at Avengers compound",
+      "description": "The whole rescue mission is sketched out at the Avengers' base: split into small teams, each one sent to a different year to fetch a single stone.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "mid"
@@ -349,6 +365,7 @@
       "id": "e_x_quantum",
       "type": "departure",
       "label": "Quantum realm time travel",
+      "description": "The heroes' way of reaching the past is to shrink down into the tiny subatomic realm Scott Lang was trapped in, and use it as a tunnel between years.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "heist"
@@ -358,6 +375,7 @@
       "id": "e_x_2012",
       "type": "arrival",
       "label": "2012 New York retrieval",
+      "description": "One team lands in the middle of the heroes' own past victory in New York, trying to lift three stones while their younger selves are busy fighting the invasion.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "2012"
@@ -367,6 +385,7 @@
       "id": "e_x_2013",
       "type": "arrival",
       "label": "2013 Asgard / Reality Stone",
+      "description": "Thor's stop is the golden city of Asgard shortly before its fall, where the reality stone lies hidden inside his former girlfriend.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "2013"
@@ -376,6 +395,7 @@
       "id": "e_x_2014",
       "type": "arrival",
       "label": "2014 Morag/Vormir; Thanos learns",
+      "description": "The deepest cut of the mission reaches 2014, to a dead planet where an orb holds a stone - but a captured soldier's memories travel back and warn that year's Thanos of everything to come.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "2014"
@@ -385,6 +405,7 @@
       "id": "e_x_2019",
       "type": "ordinary",
       "label": "Return stones; Tony sacrifice",
+      "description": "The story's last act: the stolen stones are used to undo the vanishing, Tony gives his life to destroy the enemy, and the stones are then returned to their rightful moments.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "climax"
@@ -394,6 +415,7 @@
       "id": "e_x_cap",
       "type": "ordinary",
       "label": "Cap returns stones; stays in past",
+      "description": "At the very end Captain America is sent back to put the stones home, but he stays in the past to share a life with Peggy Carter and returns only as an old man.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "epilogue"
@@ -403,6 +425,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Changing past branches rather than overwrites",
+      "description": "The film sets one clear ground rule for its travels: altering the past does not erase what already happened - it grows a new, separate world alongside it.",
       "at": {
         "worldRef": "w_2023",
         "timeLabel": "rules"

@@ -109,6 +109,7 @@
       "id": "e_frame",
       "type": "ordinary",
       "label": "Elderly last-mortal Nemo interviewed before universal rebirth",
+      "description": "In 2092, Nemo Nobody - the last mortal human alive, 118 years old - is interviewed as the stars ship out for a new home, and he remembers lives that may never have happened.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "2092"
@@ -121,6 +122,7 @@
       "id": "e_station",
       "type": "branch_fork",
       "label": "Childhood station: choose mother or father",
+      "description": "It begins at a train station in his childhood, when the train pulls away and Nemo must choose: run after his mother, or stay with his father.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "childhood"
@@ -135,6 +137,7 @@
       "id": "e_mom_path",
       "type": "ordinary",
       "label": "Life path with mother begins",
+      "description": "The life where he chose his mother - and the boy who never stopped wondering about the father left behind.",
       "at": {
         "worldRef": "w_mom",
         "timeLabel": "youth"
@@ -148,6 +151,7 @@
       "id": "e_dad_path",
       "type": "ordinary",
       "label": "Life path with father begins",
+      "description": "The life where he stayed - a different childhood, a different sorrow, the same unanswered question in reverse.",
       "at": {
         "worldRef": "w_dad",
         "timeLabel": "youth"
@@ -161,6 +165,7 @@
       "id": "e_anna_life",
       "type": "ordinary",
       "label": "Possible adulthood with Anna (missed reunions, pool)",
+      "description": "The life with Anna - the girl he loved as a teenager; in some versions they find each other again, in others he watches her from a distance his whole life.",
       "at": {
         "worldRef": "w_anna",
         "timeLabel": "adulthood"
@@ -174,6 +179,7 @@
       "id": "e_elise_life",
       "type": "ordinary",
       "label": "Possible adulthood with Elise (depression, accidents)",
+      "description": "The life with Elise - loving a woman broken by depression; marriage, children, and the accident that leaves him visiting her in a care home.",
       "at": {
         "worldRef": "w_elise",
         "timeLabel": "adulthood"
@@ -187,6 +193,7 @@
       "id": "e_jean_life",
       "type": "ordinary",
       "label": "Possible adulthood with Jean (loveless wealth)",
+      "description": "The life with Jean - money, order, a beautiful house, and the slow realisation that he does not love her.",
       "at": {
         "worldRef": "w_jean",
         "timeLabel": "adulthood"
@@ -200,6 +207,7 @@
       "id": "e_mars",
       "type": "ordinary",
       "label": "Mars / disaster variants across branches",
+      "description": "Other versions reach further: journeys to Mars, disasters, deaths - the possibility space of a biography branching past all telling.",
       "at": {
         "worldRef": "w_elise",
         "timeLabel": "midlife"
@@ -212,6 +220,7 @@
       "id": "e_observer",
       "type": "observation",
       "label": "Framing: every unlived path exists in possibility space",
+      "description": "The film's conceit is that all of these lives exist - every path a life might take, lived somewhere by someone who is still the same man.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "interview"
@@ -228,6 +237,7 @@
       "id": "e_choice_thesis",
       "type": "reveal",
       "label": "Argument that every choice forks a lived biography",
+      "description": "The argument underneath: choice is the illusion of one road - every decision forks a whole biography, and the man remembers them all.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "climax talk"
@@ -240,6 +250,7 @@
       "id": "e_rebirth",
       "type": "ordinary",
       "label": "Universal rebirth approaches; last mortal recounts",
+      "description": "As the last mortal, Nemo's death approaches with the Earth's - and with the colonists gone, the universe itself prepares to begin again.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "2092 end"
@@ -252,6 +263,7 @@
       "id": "ev_station",
       "type": "ordinary",
       "label": "Child Nemo train-station fork",
+      "description": "The platform, the departing train, a child's impossible choice.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "childhood"
@@ -267,6 +279,7 @@
       "id": "ev_lives",
       "type": "ordinary",
       "label": "Parallel adult lives with Anna/Elise/Jean",
+      "description": "The three great lives - Anna, Elise, Jean - each real in its own telling.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "adulthood"
@@ -282,6 +295,7 @@
       "id": "ev_2092",
       "type": "ordinary",
       "label": "2092 last-mortal interview frame",
+      "description": "The 2092 interview room, where an old man remembers forward and backward at once.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "2092"
@@ -297,6 +311,7 @@
       "id": "e_nemo_old",
       "type": "ordinary",
       "label": "118-year-old Nemo interviewed",
+      "description": "Nemo at 118, the last man who will die on Earth, telling his story to a journalist who may not be real.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "2092"
@@ -306,6 +321,7 @@
       "id": "e_anna",
       "type": "ordinary",
       "label": "Life path with Anna",
+      "description": "The path with Anna - the one his heart keeps returning to across every version.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "branch A"
@@ -315,6 +331,7 @@
       "id": "e_elise",
       "type": "ordinary",
       "label": "Life path with Elise",
+      "description": "The path with Elise - the hardest love, the one he stays in and stays in.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "branch B"
@@ -324,6 +341,7 @@
       "id": "e_jean",
       "type": "ordinary",
       "label": "Life path with Jean",
+      "description": "The path with Jean - the comfortable life that fits like a borrowed suit.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "branch C"
@@ -333,6 +351,7 @@
       "id": "e_observe",
       "type": "observation",
       "label": "All lives experienced in superposition",
+      "description": "He experiences every one of his possible lives at once - the man for whom nothing was ever decided.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "meta"
@@ -345,6 +364,7 @@
       "id": "e_choose",
       "type": "intervention",
       "label": "Child chooses / unchooses",
+      "description": "In the end it returns to the child on the platform - and to the suggestion that he chose, and unchose, and chose again.",
       "at": {
         "worldRef": "w_frame",
         "timeLabel": "crux"

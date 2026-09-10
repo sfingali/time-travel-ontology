@@ -27,7 +27,7 @@
       "kind": "timeline",
       "id": "w_eternity",
       "label": "Eternity (outside physio-time)",
-      "spanLabel": "27th\u2013Hidden Centuries"
+      "spanLabel": "27th–Hidden Centuries"
     },
     {
       "kind": "branch",
@@ -61,7 +61,7 @@
     },
     {
       "id": "noys",
-      "label": "No\u00ffs Lambent",
+      "label": "Noÿs Lambent",
       "continuityRole": "observer_persistent",
       "homeWorldRef": "w_hidden"
     },
@@ -83,6 +83,7 @@
       "id": "e_eternity",
       "type": "ordinary",
       "label": "Eternity corridor outside physio-time; M.N.C. reality edits",
+      "description": "Outside ordinary time stands Eternity, a place outside the centuries where an organisation of men can step into any era of history - and edit reality itself with a few quiet adjustments.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "institutional"
@@ -98,7 +99,8 @@
     {
       "id": "e_tutor",
       "type": "ordinary",
-      "label": "Harlan tutors Cooper; assigned week with No\u00ffs in 482nd",
+      "label": "Harlan tutors Cooper; assigned week with Noÿs in 482nd",
+      "description": "Senior technician Andrew Harlan, the best 'technician' Eternity has, is made tutor to a young recruit called Cooper - and is granted an unusual favour: a week with the mysterious Noÿs in the 482nd century.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "plot start"
@@ -112,7 +114,8 @@
     {
       "id": "e_love",
       "type": "ordinary",
-      "label": "Harlan falls for No\u00ffs; hides her from reality change",
+      "label": "Harlan falls for Noÿs; hides her from reality change",
+      "description": "Harlan falls in love with Noÿs, a woman from a far century, and when her century is slated to be rewritten out from under her, he breaks the rules to keep her safe.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "mid"
@@ -125,7 +128,8 @@
     {
       "id": "e_hidden",
       "type": "departure",
-      "label": "Hides No\u00ffs in Hidden Centuries sections",
+      "label": "Hides Noÿs in Hidden Centuries sections",
+      "description": "Harlan smuggles Noÿs into the Hidden Centuries - the stretch of time Eternity is forbidden to enter or even observe - hiding her where no one would think to look.",
       "at": {
         "worldRef": "w_hidden",
         "timeLabel": "refuge"
@@ -142,6 +146,7 @@
       "id": "e_block",
       "type": "ordinary",
       "label": "Kettle block at 100,000th century",
+      "description": "A kettle (the capsule that rides Eternity's corridors through time) comes back blocked at the 100,000th century - a sign that something or someone up in the far centuries is cutting Eternity off.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "crisis"
@@ -153,7 +158,8 @@
     {
       "id": "e_mallansohn",
       "type": "reveal",
-      "label": "Cooper is Mallansohn \u2014 bootstrap inventor of temporal field",
+      "label": "Cooper is Mallansohn — bootstrap inventor of temporal field",
+      "description": "The young recruit Cooper turns out to be Vikkor Mallansohn, the man whose notes taught Eternity to build its time field in the first place - the founder was always its own student, sent back.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "reveal"
@@ -170,7 +176,8 @@
     {
       "id": "e_send_cooper",
       "type": "departure",
-      "label": "Twissell forces Cooper send; Harlan sabotages \u2192 early 20th",
+      "label": "Twissell forces Cooper send; Harlan sabotages → early 20th",
+      "description": "The old Computer Twissell forces Harlan to send Cooper back into the far past to found Eternity, but Harlan, in fury and fear, sabotages the send and lands them both in the 20th century instead.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "send"
@@ -188,6 +195,7 @@
       "id": "e_atom_ad",
       "type": "observation",
       "label": "1932 ATOM acrostic ad marks Cooper",
+      "description": "In a 1932 magazine, Harlan finds an advertisement whose first letters spell ATOM - a marker left by Cooper, proving where and when the boy ended up.",
       "at": {
         "worldRef": "w_1932",
         "timeLabel": "1932"
@@ -204,7 +212,8 @@
     {
       "id": "e_noys_truth",
       "type": "reveal",
-      "label": "No\u00ffs from Hidden Centuries; Eternity dooms humanity to Earthbound extinction",
+      "label": "Noÿs from Hidden Centuries; Eternity dooms humanity to Earthbound extinction",
+      "description": "Noÿs reveals the truth she comes from the Hidden Centuries to deliver: every tidy 'improvement' Eternity made kept humanity timid and homebound, and in the end mankind dies with the Earth, never reaching the stars.",
       "at": {
         "worldRef": "w_1932",
         "timeLabel": "1932"
@@ -217,7 +226,8 @@
     {
       "id": "e_spare",
       "type": "intervention",
-      "label": "Harlan spares No\u00ffs; allows prevention of Eternity's founding",
+      "label": "Harlan spares Noÿs; allows prevention of Eternity's founding",
+      "description": "Given the choice between killing Noÿs and letting Eternity never be founded, Harlan chooses her - and lets the experiment that would erase Eternity run its course.",
       "at": {
         "worldRef": "w_1932",
         "timeLabel": "choice"
@@ -230,7 +240,8 @@
     {
       "id": "e_end",
       "type": "collapse",
-      "label": "Reality changes; kettle vanishes \u2014 end of Eternity",
+      "label": "Reality changes; kettle vanishes — end of Eternity",
+      "description": "Reality shudders, the kettle in its corridor vanishes into thin air - and Eternity simply ceases ever to have existed.",
       "at": {
         "worldRef": "w_infinity",
         "timeLabel": "rewrite"
@@ -243,7 +254,8 @@
     {
       "id": "e_infinity",
       "type": "branch_fork",
-      "label": "Beginning of Infinity \u2014 galactic humanity path",
+      "label": "Beginning of Infinity — galactic humanity path",
+      "description": "What replaces Eternity is Infinity: humanity spreading out among the stars, for better and worse, with history left open and unedited for the first time.",
       "at": {
         "worldRef": "w_infinity",
         "timeLabel": "new history"
@@ -257,6 +269,7 @@
       "id": "e_mnc",
       "type": "branch_prune",
       "label": "Prior M.N.C. edits erased with the institution",
+      "description": "With Eternity gone, the thousands of Reality Changes it imposed - erased people, cancelled inventions, 'safer' histories - are undone, and every life they quietly rewrote is restored.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "unmade"
@@ -272,6 +285,7 @@
       "id": "e_x_eternity",
       "type": "ordinary",
       "label": "Eternity organization across centuries",
+      "description": "Eternity is a whole organisation standing outside time: observers, computers, sociologists and technicians, all living in its endless corridors between the centuries.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "open"
@@ -281,6 +295,7 @@
       "id": "e_x_tech",
       "type": "ordinary",
       "label": "Reality Changes as policy",
+      "description": "Eternity's trade is the Reality Change - a small edit in a primitive century that 'improves' the far future, always at the price of erasing whole ways of life.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "mid"
@@ -289,7 +304,8 @@
     {
       "id": "e_x_harlan",
       "type": "ordinary",
-      "label": "Harlan forbidden love No\u00ffs",
+      "label": "Harlan forbidden love Noÿs",
+      "description": "Andrew Harlan, the lonely master technician, risks everything - his career, Eternity itself - for his forbidden love for a woman from a different century.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "mid"
@@ -299,6 +315,7 @@
       "id": "e_x_hidden",
       "type": "reveal",
       "label": "Hidden centuries / plot against Eternity",
+      "description": "The Hidden Centuries, which Eternity can neither enter nor watch, turn out to hold people with plans of their own for the organisation's future.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "late"
@@ -308,6 +325,7 @@
       "id": "e_x_choice",
       "type": "intervention",
       "label": "Choose infinity of open history",
+      "description": "In the end Harlan must choose between a managed, comfortable history and the wild, dangerous possibility of mankind among the stars - and chooses the stars.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "climax"
@@ -317,6 +335,7 @@
       "id": "e_x_end",
       "type": "collapse",
       "label": "Eternity undone",
+      "description": "Eternity is undone before it began: its founders' plan collapses, and the organisation passes out of history altogether.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "end"
@@ -326,6 +345,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Change vs tradeoff morality",
+      "description": "The book weighs every Reality Change: what looks like an improvement for one century is erasure for someone else, and no one in Eternity ever has the right to choose for all humanity.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "theme"
@@ -334,7 +354,8 @@
     {
       "id": "e_x_bootstrap",
       "type": "bootstrap_origin",
-      "label": "No\u00ffs from future guides",
+      "label": "Noÿs from future guides",
+      "description": "Noÿs was sent from the far future to guide events, and Cooper's own knowledge becomes the notes that found Eternity - the organisation's existence carries its own cause inside it.",
       "at": {
         "worldRef": "w_eternity",
         "timeLabel": "reveal"
@@ -525,7 +546,7 @@
     }
   ],
   "outcome": {
-    "summary": "Harlan and No\u00ffs end Eternity; humanity freed toward galactic Infinity.",
+    "summary": "Harlan and Noÿs end Eternity; humanity freed toward galactic Infinity.",
     "endWorldRefs": [
       "w_infinity"
     ]

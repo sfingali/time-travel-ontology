@@ -26,8 +26,8 @@
     {
       "kind": "timeline",
       "id": "w_life",
-      "label": "Jeff's replay span 1963\u20131988",
-      "spanLabel": "1963\u20131988"
+      "label": "Jeff's replay span 1963–1988",
+      "spanLabel": "1963–1988"
     },
     {
       "kind": "branch",
@@ -65,6 +65,7 @@
       "id": "e_die88",
       "type": "death",
       "label": "Jeff Winston dies of heart attack 1988",
+      "description": "Jeff Winston, a 43-year-old radio producer stuck in a failing marriage and a dead-end job, drops dead of a heart attack in 1988.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "1988"
@@ -77,6 +78,7 @@
       "id": "e_wake63",
       "type": "loop_reset",
       "label": "Wakes as 18-year-old in 1963 with full memories",
+      "description": "Instead of dying, Jeff opens his eyes as his 18-year-old self in 1963, an Atlanta college student - with every memory of the forty-odd years to come still intact.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "1963"
@@ -94,6 +96,7 @@
       "id": "e_wealth",
       "type": "intervention",
       "label": "Replay for wealth via future knowledge",
+      "description": "Armed with knowledge of the future, Jeff makes a fortune - betting on horse races and stock market rises he remembers - and lives the rich life he never had.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "replay A"
@@ -106,6 +109,7 @@
       "id": "e_die_again",
       "type": "death",
       "label": "Always dies 1988; reboot with later start offset",
+      "description": "No matter what Jeff changes, his heart gives out at the same age every time, and each death throws him back into his young body again - a little later each time.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "1988"
@@ -121,6 +125,7 @@
       "id": "e_shorten",
       "type": "loop_reset",
       "label": "Restart windows shorten each cycle",
+      "description": "With every replay, the stretch of life Jeff gets to relive grows shorter, as if the universe is rationing out his second chances.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "later replays"
@@ -130,13 +135,14 @@
       ],
       "payload": {
         "iteration": 5,
-        "note": "hours\u2192days\u2192years offset"
+        "note": "hours→days→years offset"
       }
     },
     {
       "id": "e_starsea",
       "type": "observation",
       "label": "Notices film Starsea that never existed before",
+      "description": "Jeff notices a film called Starsea that he has no memory of from his first life - proof that the world is subtly shifting under his changes.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "1974"
@@ -151,7 +157,8 @@
     {
       "id": "e_pamela",
       "type": "contact",
-      "label": "Meets Pamela Phillips \u2014 fellow replayer",
+      "label": "Meets Pamela Phillips — fellow replayer",
+      "description": "Jeff finds Pamela Phillips, a woman who calls the radio station knowing things she shouldn't - because she is a replayer too, reliving her own life with memories of the future.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "meet"
@@ -165,6 +172,7 @@
       "id": "e_desync",
       "type": "observation",
       "label": "Restart windows desynchronize between them",
+      "description": "Jeff and Pamela's replays fall out of step - each returns to a different year and a different age - so even lovers separated by time itself cannot stay together.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "mid"
@@ -178,6 +186,7 @@
       "id": "e_public",
       "type": "intervention",
       "label": "Go public as oracles; government conscripts them",
+      "description": "The two go public as oracles, predicting disasters and events, until the government steps in and takes control of their gift.",
       "at": {
         "worldRef": "w_public",
         "timeLabel": "public branch"
@@ -191,6 +200,7 @@
       "id": "e_prison",
       "type": "ordinary",
       "label": "Imprisoned when geopolitics diverge",
+      "description": "When their predictions start to change the future they remembered, their foreknowledge fails and the authorities hold them responsible, locking them away.",
       "at": {
         "worldRef": "w_public",
         "timeLabel": "capture"
@@ -204,6 +214,7 @@
       "id": "e_final_deaths",
       "type": "loop_reset",
       "label": "Loops shrink to repeatedly reliving original deaths",
+      "description": "In the last replays, Jeff and Pamela find themselves forced to relive the very deaths that started it all, over and over, as the windows shrink to nothing.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "late"
@@ -220,6 +231,7 @@
       "id": "e_survive",
       "type": "ordinary",
       "label": "Jeff survives 1988 heart attack; Pamela too",
+      "description": "In the final cycle Jeff survives the 1988 heart attack - he simply lives on through it, and Pamela survives hers too, breaking the pattern at last.",
       "at": {
         "worldRef": "w_exit",
         "timeLabel": "1988 exit"
@@ -236,6 +248,7 @@
       "id": "e_epilogue",
       "type": "arrival",
       "label": "Norwegian man wakes young in 1988 with memories to 2017",
+      "description": "The book closes with an epilogue: a Norwegian man wakes young in 1988 carrying memories all the way to 2017, telling us the replays continue beyond Jeff's story.",
       "at": {
         "worldRef": "w_exit",
         "timeLabel": "epilogue"
@@ -251,6 +264,7 @@
       "id": "e_x_die",
       "type": "death",
       "label": "Jeff dies 43; wakes 18",
+      "description": "Jeff Winston dies at 43 and comes round as his 18-year-old self decades earlier, memories intact - the opening premise of the whole story.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "inciting"
@@ -260,6 +274,7 @@
       "id": "e_x_replay",
       "type": "loop_reset",
       "label": "Life replay with memory",
+      "description": "Given his life to live again with full knowledge, Jeff gets to try out different ways of being alive each time round.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "rules"
@@ -272,6 +287,7 @@
       "id": "e_x_wealth",
       "type": "ordinary",
       "label": "Different life strategies",
+      "description": "Each replay Jeff plays the game differently - grabbing riches, seeking love, chasing meaning - and each strategy brings its own unexpected costs.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "mid"
@@ -281,6 +297,7 @@
       "id": "e_x_pamela",
       "type": "contact",
       "label": "Meets other replayers",
+      "description": "Jeff discovers he is not alone: other replayers are out there, most importantly Pamela, the woman who becomes his great love across lifetimes.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "mid"
@@ -290,6 +307,7 @@
       "id": "e_x_abuse",
       "type": "ordinary",
       "label": "Power abuse temptations",
+      "description": "The story keeps asking what a person would do with unlimited second chances - and watches Jeff and others flirt with using their foreknowledge selfishly and cruelly.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "mid"
@@ -299,6 +317,7 @@
       "id": "e_x_exit",
       "type": "observation",
       "label": "Replays end at death age",
+      "description": "The replays always end at the same fateful age of death, with each cycle picking up a little further into Jeff's original life.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "rules2"
@@ -308,6 +327,7 @@
       "id": "e_x_choice",
       "type": "intervention",
       "label": "How to live a replay well",
+      "description": "At its heart the book asks how to live a replayed life well - with love and openness rather than greed - and Jeff only learns it late.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "theme"
@@ -317,6 +337,7 @@
       "id": "e_x_close",
       "type": "ordinary",
       "label": "Final acceptance",
+      "description": "The story ends with acceptance: Jeff and Pamela stop fighting the pattern and simply live the life they have, together, while it lasts.",
       "at": {
         "worldRef": "w_life",
         "timeLabel": "end"

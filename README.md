@@ -12,7 +12,7 @@ Encode a plotline as typed JSON: which **laws** apply, how **worlds** relate, an
 |-------|----------|
 | **Rule sets** | Named fictional physics (Novikov, mutable ripple, branching, bootstrap, loops, worldlines, entropy inversion, tangent universes, multiverse contact, …) |
 | **World topology** | **Timeline**, **branch**, and **parallel world** — related, **not** synonyms |
-| **Narrative** | Agents (identity continuity), events, interventions, edges, outcomes |
+| **Narrative** | Agents (identity continuity), events (short `label` + plain-English `description`), interventions, edges, outcomes |
 
 **In scope:** formalisation, validation, archive→stub import, docs for encoders/renderers.  
 **Out of scope:** drawing diagrams, literary scoring, ad-hoc fields.
@@ -91,7 +91,11 @@ YAML `mechanism` / `paradox_type` tags are the bridge into this ontology (`npm r
 | [OVERVIEW](docs/OVERVIEW.md) · [RULES](docs/RULES.md) · [TOPOLOGY](docs/TOPOLOGY.md) | Model |
 | [NARRATIVE](docs/NARRATIVE.md) · [ENCODING-GUIDE](docs/ENCODING-GUIDE.md) · [COMPATIBILITY](docs/COMPATIBILITY.md) · [IMPORT](docs/IMPORT.md) · [VALIDATION](docs/VALIDATION.md) · [SEMANTIC-CONTRACT](docs/SEMANTIC_CONTRACT.md) · **[DESIGN-ATLAS](docs/DESIGN-ATLAS.md)** | Practice |
 
-A future renderer should read `worlds[]`, `agents[]`, `events[]`, and `edges[]` (`causal` · `temporal` · `identity` · `world_relation` · `family` · `intervention`) plus `interventions[]` / `outcome`. **No layout or graphics are prescribed here.**
+A renderer reads `worlds[]`, `agents[]`, `events[]`, and `edges[]` (`causal` · `temporal` · `identity` · `world_relation` · `family` · `intervention`) plus `interventions[]` / `outcome`. **No layout or graphics are prescribed here.**
+
+One exists: **[tt-ont-render](https://github.com/sfingali/tt-ont-render)** — a deterministic visual compiler with a design-agnostic engine and four aesthetic profiles (2D score, 2D terraces, 2.5D section, 3D loom). It implements [DESIGN-ATLAS](docs/DESIGN-ATLAS.md) §2/§8 and treats this schema as authoritative.
+
+Every event carries a plain-English `description` alongside its short `label` — written for a reader who has not seen the work and knows no ontology vocabulary. Renderers show the description as the node's primary text; see [NARRATIVE](docs/NARRATIVE.md).
 
 ---
 

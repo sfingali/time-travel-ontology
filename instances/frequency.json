@@ -73,7 +73,8 @@
     {
       "id": "e_aurora",
       "type": "contact",
-      "label": "Aurora + ham radio links 1969\u21941999",
+      "label": "Aurora + ham radio links 1969↔1999",
+      "description": "An unusual aurora over New York lets a ham radio in 1999 reach the same room in 1969, putting a grown son on the air with his firefighter father thirty years apart.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "1999 night"
@@ -91,6 +92,7 @@
       "id": "e_warn_fire",
       "type": "intervention",
       "label": "John warns Frank about warehouse fire",
+      "description": "John, talking across thirty years, warns his father Frank about a warehouse fire that will trap and kill him tomorrow.",
       "at": {
         "worldRef": "w_1969",
         "timeLabel": "1969"
@@ -104,6 +106,7 @@
       "id": "e_frank_lives",
       "type": "branch_fork",
       "label": "Frank survives; photos/riples update",
+      "description": "Frank steps out of the fire alive, and history bends: photographs change, memories shift, and John wakes to a life where his father never died.",
       "at": {
         "worldRef": "w_saved",
         "timeLabel": "ripple"
@@ -120,9 +123,10 @@
       "id": "e_mother_risk",
       "type": "ordinary",
       "label": "Ripple endangers Julia via serial killer path",
+      "description": "Saving Frank lets something worse through: the Nightingale killer who died unsolved in 1969 now claims more victims, and John's mother Julia is in his path.",
       "at": {
         "worldRef": "w_saved",
-        "timeLabel": "1969\u201399"
+        "timeLabel": "1969–99"
       },
       "agents": [
         "julia",
@@ -133,6 +137,7 @@
       "id": "e_catch_killer",
       "type": "intervention",
       "label": "Father-son coordination stops Nightingale",
+      "description": "Father and son work the same murder case thirty years apart, passing evidence across the radio, and together they put the Nightingale killer away before he can reach Julia.",
       "at": {
         "worldRef": "w_1969",
         "timeLabel": "1969"
@@ -147,6 +152,7 @@
       "id": "e_share_life",
       "type": "ordinary",
       "label": "Shared baseball / life across link",
+      "description": "Through it all the two talk like father and son again - a baseball game called play by play across three decades, a life caught up on in a single night.",
       "at": {
         "worldRef": "w_saved",
         "timeLabel": "ongoing"
@@ -160,6 +166,7 @@
       "id": "e_final_present",
       "type": "arrival",
       "label": "1999 present consolidated with Frank alive",
+      "description": "In the settled 1999 that results, John's family reunion includes the father who should have been dead for thirty years.",
       "at": {
         "worldRef": "w_saved",
         "timeLabel": "1999"
@@ -173,7 +180,8 @@
     {
       "id": "e_tension",
       "type": "reveal",
-      "label": "Saving father creates new threats \u2014 ripple tension",
+      "label": "Saving father creates new threats — ripple tension",
+      "description": "Every change cuts both ways: fixing one tragedy unleases another, and the two learn their link saves no one without cost.",
       "at": {
         "worldRef": "w_saved",
         "timeLabel": "mid"
@@ -185,7 +193,8 @@
     {
       "id": "ev_radio",
       "type": "ordinary",
-      "label": "HAM radio link 1969\u21941999",
+      "label": "HAM radio link 1969↔1999",
+      "description": "The ham radio that connects 1969 to 1999 whenever the aurora allows.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "solar max"
@@ -201,6 +210,7 @@
       "id": "ev_save_frank",
       "type": "ordinary",
       "label": "Frank survives fire",
+      "description": "Warned in time, Frank walks out of the warehouse fire that killed him in every earlier telling.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "1969"
@@ -216,6 +226,7 @@
       "id": "ev_killer",
       "type": "ordinary",
       "label": "Nightingale case butterfly",
+      "description": "The Nightingale murders, unspooling differently once history starts being edited from the future.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "both eras"
@@ -231,6 +242,7 @@
       "id": "ev_stable",
       "type": "ordinary",
       "label": "Stabilized happier 1999",
+      "description": "The final version of 1999: Frank alive, the family whole, the killer caught thirty years early.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "1999"
@@ -246,6 +258,7 @@
       "id": "e_father_talk",
       "type": "ordinary",
       "label": "John talks to young Frank",
+      "description": "John sits down at the old radio and, half disbelieving, finds himself talking to his father as a young man.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "first contact"
@@ -255,6 +268,7 @@
       "id": "e_nightingale",
       "type": "ordinary",
       "label": "Nightingale killer thread activates",
+      "description": "The radio conversation touches the unsolved Nightingale murders - and sets history on a darker track.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "mid"
@@ -264,6 +278,7 @@
       "id": "e_julia",
       "type": "ordinary",
       "label": "Mother Julia timeline shifts",
+      "description": "As the past is rewritten, John's mother Julia stands directly in the changed killer's path.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "ripples"
@@ -273,6 +288,7 @@
       "id": "e_share_clues",
       "type": "intervention",
       "label": "Father-son share clues across time",
+      "description": "Sketches, addresses and hunches travel between 1969 and 1999 as the pair close in on the killer together.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "investigation"
@@ -282,6 +298,7 @@
       "id": "e_confront",
       "type": "intervention",
       "label": "Stop Nightingale",
+      "description": "The two halves of the family corner the Nightingale killer, in the past and in the present at once.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "climax"
@@ -291,6 +308,7 @@
       "id": "e_stable",
       "type": "checkpoint",
       "label": "Present stabilizes with Frank alive",
+      "description": "The present settles at last with Frank alive and the family intact.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "end"
@@ -300,6 +318,7 @@
       "id": "e_catch",
       "type": "ordinary",
       "label": "Baseball catch coda across years",
+      "description": "On the lawn, a baseball thrown in 1969 is caught in 1999 - father and son finally playing catch across the years.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "epilogue"
@@ -309,6 +328,7 @@
       "id": "e_radio_physics",
       "type": "observation",
       "label": "Sunspot/aurora physics enables crosstime radio",
+      "description": "A sunspot storm charges the sky and lets a radio signal reach thirty years across - the story's one concession to physics.",
       "at": {
         "worldRef": "w_1999",
         "timeLabel": "rules"

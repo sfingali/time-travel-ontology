@@ -84,6 +84,7 @@
       "id": "e_tape",
       "type": "observation",
       "label": "Birthday tape shows future David in mirror",
+      "description": "At his 17th birthday party, David finds his father's old camcorder, and when he plays the tape of the party there is a impossible glimpse of his future self standing in a mirror behind the room.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "discovery"
@@ -100,6 +101,7 @@
       "id": "e_plans",
       "type": "ordinary",
       "label": "Find DARPA Almanac plans in late father's basement",
+      "description": "Digging in their late father's basement workshop, David and his friends uncover blueprints for a government time machine, complete with all the notes needed to build it.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "build"
@@ -115,6 +117,7 @@
       "id": "e_toy",
       "type": "departure",
       "label": "Toy-car proof send; neighborhood blackout",
+      "description": "The teens test their homemade device on a toy car, and it vanishes into the past - the power surge blacks out the whole neighbourhood and nearly burns down the basement.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "test"
@@ -132,6 +135,7 @@
       "id": "e_feedback",
       "type": "ordinary",
       "label": "Quinn past-self feedback nearly erases both",
+      "description": "David hops back a few minutes to stop himself touching the machine, and the two versions of him meeting nearly rip him apart - the same body can't be in two places safely.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "rule learn"
@@ -147,6 +151,7 @@
       "id": "e_lottery",
       "type": "intervention",
       "label": "Lottery and wish-fulfillment hops",
+      "description": "Using knowledge of the future, the friends win the lottery and live out wishes they could never afford, jumping back days at a time to cash in.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "fun phase"
@@ -162,6 +167,7 @@
       "id": "e_lolla",
       "type": "departure",
       "label": "Lollapalooza three months back",
+      "description": "The group jumps back three months to attend Lollapalooza, living it up in the past with secret knowledge of everything to come.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "concert"
@@ -179,6 +185,7 @@
       "id": "e_romance",
       "type": "intervention",
       "label": "David solo-jumps to fix Jessie confession",
+      "description": "David jumps back alone to undo the moment he confessed to Jessie - and in rewriting that night, breaks her heart all over again from her point of view.",
       "at": {
         "worldRef": "w_alt",
         "timeLabel": "romance rewrite"
@@ -192,6 +199,7 @@
       "id": "e_disasters",
       "type": "ordinary",
       "label": "Plane crash and news disasters escalate",
+      "description": "The kids' meddling starts to show in the news: a plane crashes that never crashed before, and disasters begin mounting wherever their selfish little edits touched.",
       "at": {
         "worldRef": "w_alt",
         "timeLabel": "butterfly"
@@ -204,6 +212,7 @@
       "id": "e_breakup",
       "type": "ordinary",
       "label": "Jessie learns truth; friendship fractures",
+      "description": "When Jessie learns David has been secretly rewriting their time together, the trust between the friends shatters and the group starts falling apart.",
       "at": {
         "worldRef": "w_alt",
         "timeLabel": "cost"
@@ -217,6 +226,7 @@
       "id": "e_burn",
       "type": "intervention",
       "label": "Jump to 7th birthday; burn plans and materials",
+      "description": "To undo everything, David jumps back to his 7th birthday and burns his father's plans - stopping the machine ever being built, at the cost of his friendship's history.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "age 7"
@@ -233,6 +243,7 @@
       "id": "e_vanish",
       "type": "collapse",
       "label": "Camera: future David vanishes as timeline rewrites",
+      "description": "On the old camcorder footage, the mysterious future David standing in the mirror fades away - proof that the timeline has finally been rewritten for good.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "burn"
@@ -244,7 +255,8 @@
     {
       "id": "e_dual_cam",
       "type": "bootstrap_origin",
-      "label": "Attic: two cameras \u2014 party tape + full travel chronicle",
+      "label": "Attic: two cameras — party tape + full travel chronicle",
+      "description": "In the attic, David finds two recordings of his birthday: his father's tape, and a full chronicle of the time travels - evidence his older self made it back.",
       "at": {
         "worldRef": "w_present2",
         "timeLabel": "coda"
@@ -261,6 +273,7 @@
       "id": "e_remeet",
       "type": "ordinary",
       "label": "Future-knowing David reintroduces to Jessie",
+      "description": "The tape ends with a message from the David who survived: the future-knowing boy reintroduces himself to Jessie, hoping to get it right this time.",
       "at": {
         "worldRef": "w_present2",
         "timeLabel": "epilogue"
@@ -277,6 +290,7 @@
       "id": "e_x_find",
       "type": "ordinary",
       "label": "Teens find Almanac device",
+      "description": "The teenagers discover the blueprints for the 'Project Almanac' time machine and start building it from spare parts.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "open"
@@ -286,6 +300,7 @@
       "id": "e_x_party",
       "type": "intervention",
       "label": "Fix parties / lottery / romance",
+      "description": "With the machine working, the friends use it for small fixes: party do-overs, lottery wins and mended romances.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"
@@ -295,6 +310,7 @@
       "id": "e_x_ripple",
       "type": "branch_fork",
       "label": "Present photographs/reality glitch",
+      "description": "Small edits start to bleed into the present - photographs and memories shift, and reality itself begins to glitch around the travellers.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"
@@ -304,6 +320,7 @@
       "id": "e_x_fight",
       "type": "ordinary",
       "label": "Friendship collapse",
+      "description": "The friends turn on each other as the consequences pile up, and their friendship collapses under the weight of everything they've changed.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "late"
@@ -313,6 +330,7 @@
       "id": "e_x_undo",
       "type": "intervention",
       "label": "Attempt to destroy Almanac",
+      "description": "David makes a final desperate jump to his own seventh birthday to destroy the machine and the plans before any of it can happen.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "climax"
@@ -322,6 +340,7 @@
       "id": "e_x_end",
       "type": "collapse",
       "label": "Timeline fracture ending",
+      "description": "The story ends with the timeline rewritten: the machine never existed, and only the double camera recording remembers it all.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "end"
@@ -331,6 +350,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Youtube-era butterfly cascade",
+      "description": "Every small change the teens make snowballs - the film plays the 'butterfly effect' out in an age of cameras, phones and online video.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "rules"
@@ -340,6 +360,7 @@
       "id": "e_x_love",
       "type": "ordinary",
       "label": "Jessie romance thread",
+      "description": "Woven through the chaos is David's feelings for Jessie, which his time-hopping keeps accidentally ruining.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"

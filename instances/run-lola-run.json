@@ -29,21 +29,21 @@
     {
       "kind": "branch",
       "id": "w_run1",
-      "label": "Run 1 \u2014 Lola shot",
+      "label": "Run 1 — Lola shot",
       "parentRef": "w_call",
       "forkLabel": "stumble / father refuse"
     },
     {
       "kind": "branch",
       "id": "w_run2",
-      "label": "Run 2 \u2014 Manni killed",
+      "label": "Run 2 — Manni killed",
       "parentRef": "w_call",
       "forkLabel": "gun / bank heist"
     },
     {
       "kind": "branch",
       "id": "w_run3",
-      "label": "Run 3 \u2014 double win",
+      "label": "Run 3 — double win",
       "parentRef": "w_call",
       "forkLabel": "casino scream + Manni recovers cash"
     }
@@ -89,6 +89,7 @@
       "id": "e_call",
       "type": "ordinary",
       "label": "Manni calls: lost 100k bag; 20 minutes to deliver",
+      "description": "Manni calls Lola in panic: he lost a bag with 100,000 marks on the U-Bahn, and his boss will kill him if it isn't delivered in twenty minutes.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "phone"
@@ -102,6 +103,7 @@
       "id": "e_run1_start",
       "type": "departure",
       "label": "Run 1 begins",
+      "description": "Lola hangs up and starts running - the first pass through the twenty minutes, everything decided by doors and seconds.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "t0"
@@ -114,6 +116,7 @@
       "id": "e_run1_father",
       "type": "ordinary",
       "label": "Father refuses / bank confrontation run1",
+      "description": "Lola runs to her father's bank for money; he refuses her, and the confrontation spirals into a robbery - the run ending with a police shot.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "mid1"
@@ -127,6 +130,7 @@
       "id": "e_run1_market",
       "type": "ordinary",
       "label": "Butterfly collisions (mailman etc.)",
+      "description": "On her run, small collisions - a dog on a stair, a passing courier - set strangers' lives on new courses; the film follows them in flashes.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "street1"
@@ -140,6 +144,7 @@
       "id": "e_run1_fail",
       "type": "death",
       "label": "Run 1 ends in death (Lola or Manni shot)",
+      "description": "The first run ends with Lola or Manni shot dead on the pavement - and the film snaps back to the beginning of the phone call.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "end1"
@@ -153,6 +158,7 @@
       "id": "e_reset2",
       "type": "loop_reset",
       "label": "Flash reset to run 2",
+      "description": "A flash of red, a voice, and the twenty minutes start again from the same phone - the same day, replayed with tiny differences.",
       "at": {
         "worldRef": "w_run1",
         "timeLabel": "t0'"
@@ -170,6 +176,7 @@
       "id": "e_run2_start",
       "type": "departure",
       "label": "Run 2 altered micro-choices",
+      "description": "Run two: Lola trips on the stairwell dog, a few seconds lost, and every downstream event bends differently.",
       "at": {
         "worldRef": "w_run1",
         "timeLabel": "t0"
@@ -182,6 +189,7 @@
       "id": "e_run2_robbery",
       "type": "intervention",
       "label": "Lola robs father's bank",
+      "description": "With her father refusing her again, Lola walks into his bank with a guard's gun and robs it herself - 100,000 marks in a sports bag.",
       "at": {
         "worldRef": "w_run1",
         "timeLabel": "bank"
@@ -195,6 +203,7 @@
       "id": "e_run2_manni",
       "type": "death",
       "label": "Manni hit by ambulance; Lola screams",
+      "description": "The robbery's delay costs Manni everything: crossing the street to meet her, he steps in front of an ambulance as she arrives with the money.",
       "at": {
         "worldRef": "w_run1",
         "timeLabel": "end2"
@@ -208,6 +217,7 @@
       "id": "e_reset3",
       "type": "loop_reset",
       "label": "Reset to run 3",
+      "description": "Manni dies in Lola's arms and the film jerks back one more time - the day refuses to settle.",
       "at": {
         "worldRef": "w_run2",
         "timeLabel": "t0''"
@@ -225,6 +235,7 @@
       "id": "e_run3_casino",
       "type": "intervention",
       "label": "Lola casino / chance wins money",
+      "description": "In the third run, Lola runs past everything she knew, into a casino - and wins, twice, on pure instinct: 100,000 marks on two spins.",
       "at": {
         "worldRef": "w_run2",
         "timeLabel": "casino"
@@ -237,6 +248,7 @@
       "id": "e_run3_manni_bag",
       "type": "ordinary",
       "label": "Manni recovers bag from homeless man",
+      "description": "Meanwhile Manni finds the lost bag after all - the homeless man who took it rides past on a bicycle, and the 100,000 comes back to him.",
       "at": {
         "worldRef": "w_run2",
         "timeLabel": "parallel"
@@ -249,6 +261,7 @@
       "id": "e_run3_success",
       "type": "ordinary",
       "label": "Money delivered; both survive",
+      "description": "The third pass: both halves of the money arrive, the debt is paid, and Lola and Manni walk away from the phone booth alive.",
       "at": {
         "worldRef": "w_run2",
         "timeLabel": "end3"
@@ -262,6 +275,7 @@
       "id": "e_flash",
       "type": "observation",
       "label": "Red-hair flash / bed talk interstitial memory",
+      "description": "Between runs, Lola and Manni lie in bed talking - the quiet interludes where each tries to imagine the other's death.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "between runs"
@@ -278,6 +292,7 @@
       "id": "e_snapshots",
       "type": "observation",
       "label": "Passerby future snapshots change per run",
+      "description": "As Lola passes strangers, freeze-frame snapshots show their entire futures - and the futures differ with every run, her seconds rewriting their lives.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "montage"
@@ -291,6 +306,7 @@
       "id": "e_time_pressure",
       "type": "ordinary",
       "label": "Twenty-minute clock as hard constraint",
+      "description": "The film is a clock: twenty minutes, a bag of money, a fixed deadline - everything else is variable.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "rules"
@@ -304,6 +320,7 @@
       "id": "e_father_arc",
       "type": "ordinary",
       "label": "Father's affair/exit varies by run",
+      "description": "Her father's story shifts between runs - the affair, the other woman, the refusal or the compliance - each version of the man a few seconds produces.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "father variants"
@@ -317,6 +334,7 @@
       "id": "e_spiral",
       "type": "ordinary",
       "label": "Spiral staircase motif / agency theme",
+      "description": "The spiral staircase Lola storms down at every start - the film's image of a life winding through the same moments.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "motif"
@@ -329,6 +347,7 @@
       "id": "e_exit",
       "type": "checkpoint",
       "label": "Run 3 exits need for further resets",
+      "description": "The third run's success ends the need for any more: the day finally lands where it can hold.",
       "at": {
         "worldRef": "w_run2",
         "timeLabel": "resolution"
@@ -345,6 +364,7 @@
       "id": "e_theme",
       "type": "observation",
       "label": "Tiny timing deltas rewrite fates",
+      "description": "The thesis, stated in flashes: minutes and seconds are not small - a few of them reassign every life they touch.",
       "at": {
         "worldRef": "w_run2",
         "timeLabel": "theme"
@@ -358,6 +378,7 @@
       "id": "e_love",
       "type": "ordinary",
       "label": "Love as persistence across runs",
+      "description": "What persists through every reset: Lola runs for Manni, and the running itself is the love.",
       "at": {
         "worldRef": "w_run2",
         "timeLabel": "close"
@@ -370,7 +391,8 @@
     {
       "id": "e_no_machine",
       "type": "ordinary",
-      "label": "No device\u2014narrational replay / quantum vibe",
+      "label": "No device—narrational replay / quantum vibe",
+      "description": "No device explains the replays - no machine, no spell: just a story insisting that this day, like any day, contains all its versions.",
       "at": {
         "worldRef": "w_call",
         "timeLabel": "meta"

@@ -5,7 +5,7 @@
     "year": 1989,
     "medium": "tv",
     "sources": [
-      "Donald P. Bellisario (1989\u20131993)",
+      "Donald P. Bellisario (1989–1993)",
       "time-travel-archive/tv/quantum-leap.md",
       "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
       "tenet-class deepen 2026-09-06"
@@ -62,6 +62,7 @@
       "id": "e_accelerator",
       "type": "departure",
       "label": "Sam steps into Quantum Accelerator",
+      "description": "Scientist Sam Beckett steps into his own unfinished time-travel machine, the Quantum Leap Accelerator, and vanishes from his present without any way to steer it.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "1995"
@@ -77,6 +78,7 @@
       "id": "e_first_leap",
       "type": "arrival",
       "label": "First leap into host body; mirror shock",
+      "description": "Sam wakes up in 1956 as a test pilot, someone else entirely - and when he looks in a mirror he sees a stranger's face staring back at him, not his own.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "host era"
@@ -92,6 +94,7 @@
       "id": "e_al",
       "type": "contact",
       "label": "Hologram Al and Ziggy guide the mission",
+      "description": "Sam's best friend Al appears as a hologram only Sam can see, with the project's supercomputer Ziggy feeding them guesses about why Sam is there and how to help.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "leap"
@@ -108,6 +111,7 @@
       "id": "e_put_right",
       "type": "intervention",
       "label": "Put right what once went wrong for the host",
+      "description": "Whatever life Sam lands in, his job is the same: put right what once went wrong for the person he has become, then move on.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "leap"
@@ -123,6 +127,7 @@
       "id": "e_leap_out",
       "type": "departure",
       "label": "Leap out after success; next host",
+      "description": "Once the wrong is put right, Sam leaps out in a flash of light - straight into the next stranger's life, never knowing where or when he'll land.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "resolution"
@@ -138,9 +143,10 @@
       "id": "e_many_leaps",
       "type": "ordinary",
       "label": "Years of leaps across mid-century America",
+      "description": "Year after year, Sam drifts through mid-century America - a rodeo rider, a secretary, a black man in the segregated South - quietly fixing broken lives wherever he lands.",
       "at": {
         "worldRef": "w_past",
-        "timeLabel": "1989\u20131993 air"
+        "timeLabel": "1989–1993 air"
       },
       "agents": [
         "sam",
@@ -154,6 +160,7 @@
       "id": "e_mirror_image",
       "type": "arrival",
       "label": "Finale Mirror Image: leap into a bar that is himself/God?",
+      "description": "In the final episode Sam walks into a dingy bar on the night he was born, where every soul inside looks like someone he has met on his journeys - including a bartender who may be more than a bartender, and who may be himself.",
       "at": {
         "worldRef": "w_liminal",
         "timeLabel": "finale"
@@ -169,6 +176,7 @@
       "id": "e_choice",
       "type": "intervention",
       "label": "Sam chooses to continue leaping to help others",
+      "description": "Told he could stop and go home if he wished, Sam instead chooses to keep leaping - one more stranger's life to set right, and then another.",
       "at": {
         "worldRef": "w_liminal",
         "timeLabel": "finale"
@@ -181,6 +189,7 @@
       "id": "e_al_home",
       "type": "ordinary",
       "label": "Al's personal timeline improved (Beth waits)",
+      "description": "Sam's very last leap changes Al's own past: he tells Al's wife Beth that her husband is coming home, so she waits for him all those years instead of moving on.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "home"
@@ -196,6 +205,7 @@
       "id": "e_never_home",
       "type": "observation",
       "label": "Title card: Sam Beckett never returned home",
+      "description": "The closing title card delivers the show's bittersweet verdict: Dr Sam Beckett never returned home.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "coda"
@@ -211,6 +221,7 @@
       "id": "e_string_theory",
       "type": "reveal",
       "label": "Leaping framed as string/God/conscience mechanism",
+      "description": "The show wraps its time-hopping in talk of string theory, and leaves room for stranger answers - that Sam's leaps might be guided by God, fate, or his own conscience.",
       "at": {
         "worldRef": "w_liminal",
         "timeLabel": "finale"
@@ -226,6 +237,7 @@
       "id": "e_host_life",
       "type": "ordinary",
       "label": "Host lives corrected life after Sam leaps out",
+      "description": "When Sam leaps away, the person he was inhabiting wakes up in their own body again - living on with a life Sam has quietly put back on track.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "post-leap"
@@ -238,6 +250,7 @@
       "id": "e_project_obs",
       "type": "observation",
       "label": "Project observes from imaging chamber",
+      "description": "Back home, the team at Project Quantum Leap watch Sam's journey through the Imaging Chamber, guessing at history's plans since they can't always see what he faces.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "ongoing"
@@ -250,6 +263,7 @@
       "id": "e_x_leap",
       "type": "arrival",
       "label": "Sam leaps into another life",
+      "description": "Sam Beckett steps out of his own time and wakes in the body of another person, somewhere in the past.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "open"
@@ -259,6 +273,7 @@
       "id": "e_x_al",
       "type": "ordinary",
       "label": "Al hologram guidance",
+      "description": "Only Sam can see Al, his rakish hologram sidekick, who pops in with advice, gadgets from the future and a car he shouldn't have.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "ongoing"
@@ -268,6 +283,7 @@
       "id": "e_x_ziggy",
       "type": "observation",
       "label": "Ziggy probability calculations",
+      "description": "The project's snarky supercomputer Ziggy crunches the odds, telling Sam and Al what probably went wrong and what Sam probably needs to fix.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "rules"
@@ -277,6 +293,7 @@
       "id": "e_x_put_right",
       "type": "intervention",
       "label": "Put right what once went wrong",
+      "description": "Each leap hands Sam a simple, human mission: find the moment someone's life went wrong and set it right before he can move on.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "episode"
@@ -286,6 +303,7 @@
       "id": "e_x_leapout",
       "type": "departure",
       "label": "Leap out when mirror shows next",
+      "description": "When the job is done, Sam vanishes in blue light and lands in someone new - and the person he helped never quite remembers him.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "ongoing"
@@ -295,6 +313,7 @@
       "id": "e_x_home",
       "type": "ordinary",
       "label": "Never quite home arc",
+      "description": "Across five seasons Sam keeps hoping the next leap will take him home, but the road never bends back to his own front door.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "theme"
@@ -304,6 +323,7 @@
       "id": "e_x_evil",
       "type": "ordinary",
       "label": "Evil leaper arcs",
+      "description": "Lurking through the later series is the shadow of an evil leaper - another traveller, and an Al-like guide, who leap through time making things worse.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "mid"
@@ -313,6 +333,7 @@
       "id": "e_x_finale",
       "type": "ordinary",
       "label": "Series finale revelations",
+      "description": "The final episode reveals the bar, the bartender and the stakes of Sam's journey - and ends with his choice to leap on, never going home.",
       "at": {
         "worldRef": "w_project",
         "timeLabel": "end"
@@ -479,7 +500,7 @@
         },
         {
           "ruleSetId": "fixed_novikov",
-          "effect": "Sam's own return home is withheld \u2014 leap destiny closed against homecoming"
+          "effect": "Sam's own return home is withheld — leap destiny closed against homecoming"
         }
       ]
     }

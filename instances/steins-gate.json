@@ -106,6 +106,7 @@
       "id": "e_radio",
       "type": "ordinary",
       "label": "Radio Hall / Kurisu stab vision",
+      "description": "Okabe and friends attend a time-machine lecture; when he later returns to the hall he finds a pool of blood and Kurisu seemingly stabbed - and sends a frantic text about it.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "July 28"
@@ -119,6 +120,7 @@
       "id": "e_dmail0",
       "type": "departure",
       "label": "First D-mail to past phone",
+      "description": "The 'phone microwave' they built as a joke sent that text into the past - the first D-mail - and when Okabe returns to the hall, the blood is gone and Kurisu is alive.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "lab"
@@ -137,6 +139,7 @@
       "id": "e_shift_alpha",
       "type": "branch_fork",
       "label": "Worldline shifts into Alpha attractor",
+      "description": "The message changed more than the scene: the world has quietly slipped onto a different track of history, its grain now running a different way.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "post D-mail"
@@ -155,6 +158,7 @@
       "id": "e_mayuri_deaths",
       "type": "death",
       "label": "Mayuri dies repeatedly under Alpha attractor",
+      "description": "On this track of history, Okabe's childhood friend Mayuri keeps dying - no matter what he fixes, the world finds a way, and each death rewinds him to find out it will happen again.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "many iterations"
@@ -172,6 +176,7 @@
       "id": "e_undo_dmails",
       "type": "intervention",
       "label": "Undo D-mails (Faris, Luka, etc.)",
+      "description": "Okabe works out the chain: each message moved the world onto a different track, so he must undo them one by one - Faris's, Luka's, Suzuha's - to get back.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "undo arc"
@@ -190,6 +195,7 @@
       "id": "e_sern",
       "type": "observation",
       "label": "SERN / dystopia future revealed",
+      "description": "Beneath it all lies the reason the path must change: this history ends in SERN's dystopia - a future where the company that cracked time rules a broken world.",
       "at": {
         "worldRef": "w_alpha",
         "timeLabel": "Alpha future"
@@ -203,6 +209,7 @@
       "id": "e_to_beta",
       "type": "branch_fork",
       "label": "Cross to Beta: Mayuri lives, Kurisu dies",
+      "description": "Undoing the last message takes Okabe to the Beta track: Mayuri lives - but on Beta, Kurisu's death is the fixed point.",
       "at": {
         "worldRef": "w_beta",
         "timeLabel": "divergence ~1%"
@@ -221,6 +228,7 @@
       "id": "e_kurisu_dead",
       "type": "death",
       "label": "Kurisu death fixed on Beta",
+      "description": "The cruel bargain of Beta: to save Mayuri, Okabe must leave the woman he loves dead in the pool of blood where he first found her.",
       "at": {
         "worldRef": "w_beta",
         "timeLabel": "Radio Hall Beta"
@@ -236,6 +244,7 @@
       "id": "e_time_leap",
       "type": "departure",
       "label": "Time leap machine iterations",
+      "description": "Suzuha brings the time-leap machine - a way to send memory upstream - and Okabe uses it to test, again and again, whether Kurisu's death can ever be avoided.",
       "at": {
         "worldRef": "w_beta",
         "timeLabel": "lab leaps"
@@ -253,6 +262,7 @@
       "id": "e_suzuha_cg",
       "type": "arrival",
       "label": "Suzuha from CG future / WWIII warning",
+      "description": "Suzuha Amane travelled from 2036: her future is the third world war, triggered by the time-travel arms race that grew out of Beta.",
       "at": {
         "worldRef": "w_beta",
         "timeLabel": "Beta future link"
@@ -269,6 +279,7 @@
       "id": "e_video",
       "type": "bootstrap_origin",
       "label": "Okabe's video d-mail plan (Reading Steiner cue)",
+      "description": "The plan that resolves it: a video message sent to Okabe's own past self, convincing him he saw Kurisu die - a lie to make the past hold its shape.",
       "at": {
         "worldRef": "w_beta",
         "timeLabel": "video message"
@@ -286,6 +297,7 @@
       "id": "e_fake_stab",
       "type": "intervention",
       "label": "Fake Kurisu death; deceive Okabe past",
+      "description": "The deception staged in blood and acting: past Okabe must believe Kurisu is dead, while the real one lives on hidden from both him and SERN.",
       "at": {
         "worldRef": "w_beta",
         "timeLabel": "Radio Hall op"
@@ -303,6 +315,7 @@
       "id": "e_steins",
       "type": "branch_fork",
       "label": "Reach Steins Gate worldline",
+      "description": "Past the fixed points of both histories lies a third grain - the Steins Gate line - where neither Mayuri nor Kurisu is fated to die, and SERN never rises.",
       "at": {
         "worldRef": "w_steins",
         "timeLabel": "divergence 1.048596%"
@@ -323,6 +336,7 @@
       "id": "e_peace",
       "type": "ordinary",
       "label": "Mayuri and Kurisu both alive; no SERN dystopia",
+      "description": "On Steins Gate: both women alive, no dystopia coming, and Okabe the only person who remembers the price of getting there.",
       "at": {
         "worldRef": "w_steins",
         "timeLabel": "epilogue"
@@ -338,6 +352,7 @@
       "id": "ev_dmail",
       "type": "ordinary",
       "label": "D-Mail world-line shifts begin",
+      "description": "The first D-mail, the harmless-seeming text that shifted the world under their feet.",
       "at": {
         "worldRef": "w_alpha_root",
         "timeLabel": "lab"
@@ -353,6 +368,7 @@
       "id": "ev_mayuri",
       "type": "ordinary",
       "label": "Mayuri attractor deaths on alpha",
+      "description": "Mayuri's deaths on the Alpha line - the pocket watch that stops, again and again, in Okabe's arms.",
       "at": {
         "worldRef": "w_alpha_root",
         "timeLabel": "alpha"
@@ -368,6 +384,7 @@
       "id": "ev_steins",
       "type": "ordinary",
       "label": "Reach Steins Gate world line",
+      "description": "The arrival on the Steins Gate line - the one road where the future is merely unwritten.",
       "at": {
         "worldRef": "w_alpha_root",
         "timeLabel": "true end"
@@ -383,6 +400,7 @@
       "id": "e_pad_phone",
       "type": "ordinary",
       "label": "Phone microwave D-mails",
+      "description": "The phone microwave - a joke appliance that turned out to send messages to the past.",
       "at": {
         "worldRef": "w_alpha_root",
         "timeLabel": "early"
@@ -395,6 +413,7 @@
       "id": "e_pad_mayuri",
       "type": "death",
       "label": "Mayuri deaths across worldlines",
+      "description": "Mayuri across the shifting histories - the friend whose deaths taught Okabe what the shifts cost.",
       "at": {
         "worldRef": "w_alpha_root",
         "timeLabel": "mid"
@@ -404,6 +423,7 @@
       "id": "e_pad_steiner",
       "type": "observation",
       "label": "Okabe Reading Steiner retains memory",
+      "description": "Reading Steiner - Okabe's alone: the ability to remember histories that the rest of the world has forgotten.",
       "at": {
         "worldRef": "w_alpha_root",
         "timeLabel": "rules"
@@ -416,6 +436,7 @@
       "id": "e_pad_sern",
       "type": "ordinary",
       "label": "SERN dystopia worldline",
+      "description": "SERN, the research giant whose machine will one day own every history that lets it.",
       "at": {
         "worldRef": "w_alpha_root",
         "timeLabel": "alpha"
@@ -425,6 +446,7 @@
       "id": "e_pad_beta",
       "type": "ordinary",
       "label": "World War III beta attractor",
+      "description": "Beta's war: the third world war that the time race ignites if Kurisu's research survives unguarded.",
       "at": {
         "worldRef": "w_alpha_root",
         "timeLabel": "beta"
@@ -434,6 +456,7 @@
       "id": "e_pad_sg",
       "type": "checkpoint",
       "label": "Steins Gate worldline reached",
+      "description": "The Steins Gate line itself - the world that only exists because Okabe chose to deceive himself to save everyone.",
       "at": {
         "worldRef": "w_alpha_root",
         "timeLabel": "end"

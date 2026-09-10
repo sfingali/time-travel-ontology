@@ -88,6 +88,7 @@
       "id": "e_future_war",
       "type": "ordinary",
       "label": "Sentinel-ravaged future; mutants hunted",
+      "description": "In the near future, the Sentinels - mutant-hunting machines - have all but won: the last X-Men fight in the ruins of a world that learned to fear them.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "2023"
@@ -102,6 +103,7 @@
       "id": "e_plan",
       "type": "ordinary",
       "label": "Kitty will send Logan's mind to 1973 body",
+      "description": "The survivors' one plan: use Kitty Pryde's phasing power - which can send a mind days back through time - to carry someone's consciousness much further, into their own past body.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "plan"
@@ -117,6 +119,7 @@
       "id": "e_send",
       "type": "departure",
       "label": "Consciousness projected to 1973 Logan",
+      "description": "Logan volunteers: his healing factor can survive the crossing, and his mind is thrown fifty years upstream into his 1973 self.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "send"
@@ -133,6 +136,7 @@
       "id": "e_1973",
       "type": "arrival",
       "label": "Logan wakes in 1973; must stop Mystique",
+      "description": "Logan wakes in 1973 with the future in his head: he has days to stop the event that starts the whole war - Mystique's assassination of Bolivar Trask.",
       "at": {
         "worldRef": "w_1973",
         "timeLabel": "1973"
@@ -145,6 +149,7 @@
       "id": "e_xavier_young",
       "type": "ordinary",
       "label": "Recruit broken young Xavier; spring Magneto",
+      "description": "He finds a wrecked, disillusioned young Charles Xavier hiding in his school's ruins, and needs him - and the imprisoned Magneto - to have any chance.",
       "at": {
         "worldRef": "w_1973",
         "timeLabel": "recruit"
@@ -159,6 +164,7 @@
       "id": "e_quicksilver",
       "type": "ordinary",
       "label": "Pentagon kitchen rescue (Quicksilver)",
+      "description": "The Pentagon breakout: Quicksilver walks the walls of a kitchen at super-speed, turning a guards' firefight into a ballet, and springs Magneto free.",
       "at": {
         "worldRef": "w_1973",
         "timeLabel": "mid"
@@ -172,6 +178,7 @@
       "id": "e_trask",
       "type": "ordinary",
       "label": "Trask unveils anti-mutant tech; Mystique hunts him",
+      "description": "Bolivar Trask sells the Sentinel program on mutant-hunting machines while Mystique - shaping her own war - works her way toward him with murder in mind.",
       "at": {
         "worldRef": "w_1973",
         "timeLabel": "chase"
@@ -184,6 +191,7 @@
       "id": "e_prevent",
       "type": "intervention",
       "label": "Prevent public assassination of Trask",
+      "description": "Everything narrows to the Paris summit and the White House: keep Mystique from killing Trask on camera, or the future that made Logan keeps happening.",
       "at": {
         "worldRef": "w_1973",
         "timeLabel": "climax"
@@ -198,6 +206,7 @@
       "id": "e_fork",
       "type": "branch_fork",
       "label": "Sentinel program cascade averted",
+      "description": "The assassination is stopped - Mystique spares Trask, the Sentinel program loses its pretext, and the dark future begins to come apart.",
       "at": {
         "worldRef": "w_future_good",
         "timeLabel": "fork"
@@ -211,6 +220,7 @@
       "id": "e_classroom",
       "type": "arrival",
       "label": "Logan wakes in healed future classroom",
+      "description": "Logan wakes where the future was - in the rebuilt school, among students, with faces around him that the other history killed.",
       "at": {
         "worldRef": "w_future_good",
         "timeLabel": "coda"
@@ -226,7 +236,8 @@
     {
       "id": "e_reboot",
       "type": "ordinary",
-      "label": "Soft franchise reboot \u2014 inconvenient deaths erased",
+      "label": "Soft franchise reboot — inconvenient deaths erased",
+      "description": "The restored timeline quietly rewrites the films' earlier losses - the dead alive, the school whole - a fresh page drawn over fifty years.",
       "at": {
         "worldRef": "w_future_good",
         "timeLabel": "meta"
@@ -239,6 +250,7 @@
       "id": "e_hope",
       "type": "reveal",
       "label": "Xavier's hope treated as condition for good future",
+      "description": "The principle that changes the future: Xavier, in the end, choosing hope over fear - the decision the whole timeline hangs from.",
       "at": {
         "worldRef": "w_1973",
         "timeLabel": "theme"
@@ -252,6 +264,7 @@
       "id": "e_x_future",
       "type": "ordinary",
       "label": "Sentinel future war",
+      "description": "The Sentinel war in the ruins - the future the story is trying to unwrite.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "future"
@@ -261,6 +274,7 @@
       "id": "e_x_send",
       "type": "departure",
       "label": "Wolverine mind sent to 1973",
+      "description": "The mind sent fifty years upstream - one consciousness carried across half a century into a younger body.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "inciting"
@@ -270,6 +284,7 @@
       "id": "e_x_1973",
       "type": "arrival",
       "label": "Wake in young Logan",
+      "description": "Logan in 1973: sideburns, bad habits, and a mission no one else can remember needing.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "1973"
@@ -279,6 +294,7 @@
       "id": "e_x_paris",
       "type": "intervention",
       "label": "Prevent Trask/Mystique assassination path",
+      "description": "The Paris summit, where the knife was to fall - and instead the future was refused.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "mid"
@@ -288,6 +304,7 @@
       "id": "e_x_xavier",
       "type": "ordinary",
       "label": "Young Xavier growth",
+      "description": "Young Xavier finding his way back to being the professor - the telepath who lost his gift and rebuilt his faith.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "mid"
@@ -297,6 +314,7 @@
       "id": "e_x_stadium",
       "type": "ordinary",
       "label": "RFK stadium climax",
+      "description": "The RFK Stadium climax - Magneto rips the stadium from its foundations and flies it around the White House lawn.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "climax"
@@ -306,6 +324,7 @@
       "id": "e_x_future_fix",
       "type": "checkpoint",
       "label": "Future war erased",
+      "description": "The future war, unravelling in real time as the past is changed - the Sentinels' victory dissolving mid-battle.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "end"
@@ -315,6 +334,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Mind-travel alters history ripples",
+      "description": "The film's rules: only a mind can cross, the body stays behind, and history is altered by changing people - not by killing them.",
       "at": {
         "worldRef": "w_future_bad",
         "timeLabel": "rules"

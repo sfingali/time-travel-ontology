@@ -27,7 +27,7 @@
       "kind": "timeline",
       "id": "w_prime",
       "label": "Daniel's primary life line",
-      "spanLabel": "1975\u2013"
+      "spanLabel": "1975–"
     },
     {
       "kind": "branch",
@@ -81,6 +81,7 @@
       "id": "e_jim",
       "type": "ordinary",
       "label": "Uncle Jim raises allowance for diary; dies",
+      "description": "Danny's mysterious Uncle Jim, who always had money and time for the boy, pays him a small allowance on condition he keeps a diary - then dies, leaving the way clear.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "1975"
@@ -94,6 +95,7 @@
       "id": "e_belt",
       "type": "ordinary",
       "label": "Danny inherits Time-belt",
+      "description": "Among his inheritance, young Danny finds a strange, clunky device: a Time-belt that can throw its wearer anywhere in time he pleases.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "inheritance"
@@ -110,6 +112,7 @@
       "id": "e_don",
       "type": "contact",
       "label": "Meets future self Don; races win",
+      "description": "Using the belt, Danny runs into a confident older stranger called Don - who is Danny himself, grown up, come back to walk his younger self through the ropes.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "first loops"
@@ -126,6 +129,7 @@
       "id": "e_become_don",
       "type": "ordinary",
       "label": "Danny becomes Don guiding yesterday's self",
+      "description": "In time Danny grows into Don himself and returns to guide the boy he used to be, an endless circle of elder self teaching younger self.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "role rotation"
@@ -138,7 +142,8 @@
     {
       "id": "e_swarm",
       "type": "contact",
-      "label": "Ever more alternate Daniels (ultra-Don\u2026)",
+      "label": "Ever more alternate Daniels (ultra-Don…)",
+      "description": "The time-hopping multiplies: more and more Daniels at every age appear, from adolescents to the ancient ultra-Don, until the boy's life is crowded with versions of himself.",
       "at": {
         "worldRef": "w_swarm",
         "timeLabel": "multiplicity"
@@ -154,6 +159,7 @@
       "id": "e_erase_child",
       "type": "intervention",
       "label": "Changes erase traces of childhood",
+      "description": "As the Daniels reshuffle their own history, Danny finds his childhood softly slipping away - his mother now remembers a daughter, and the boy he was is fading from the record.",
       "at": {
         "worldRef": "w_swarm",
         "timeLabel": "edits"
@@ -166,6 +172,7 @@
       "id": "e_diane",
       "type": "contact",
       "label": "Meets female counterpart Diane / Donna mirrors",
+      "description": "Danny meets Diane, a female counterpart from another branch of possibilities - another child of the same experiment, living the mirror version of his life.",
       "at": {
         "worldRef": "w_diane",
         "timeLabel": "deep past"
@@ -178,7 +185,8 @@
     {
       "id": "e_pregnancy",
       "type": "birth",
-      "label": "Diane pregnant; each forces child's sex \u2192 closed parental loops",
+      "label": "Diane pregnant; each forces child's sex → closed parental loops",
+      "description": "Diane becomes pregnant by one of the Daniels; with time travel they can choose the child's parentage and sex, so Daniel and Diane end up as the child's mother and father both.",
       "at": {
         "worldRef": "w_diane",
         "timeLabel": "parent loop"
@@ -195,6 +203,7 @@
       "id": "e_is_jim",
       "type": "reveal",
       "label": "Aging Daniel realizes he is Uncle Jim",
+      "description": "Aging Daniel finally understands the truth he has been circling all along: Uncle Jim, the benefactor who started it all, is himself, come back old.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "late"
@@ -211,6 +220,7 @@
       "id": "e_inherit_setup",
       "type": "bootstrap_origin",
       "label": "Arranges inheritance so diary and belt restart experience",
+      "description": "As Uncle Jim, Daniel arranges his own inheritance - the money, the allowance, the diary - so that the boy he was will start the whole journey again.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "setup"
@@ -227,6 +237,7 @@
       "id": "e_party",
       "type": "contact",
       "label": "1999 house party of dozens of ages of Daniel",
+      "description": "In 1999 the Daniels throw themselves a party: dozens of versions of one man, every age from teenager to ancient, drinking and arguing under one roof.",
       "at": {
         "worldRef": "w_swarm",
         "timeLabel": "1999"
@@ -239,6 +250,7 @@
       "id": "e_mortality",
       "type": "death",
       "label": "Elderly jump-death confronts mortality",
+      "description": "When one aged Daniel dies during a leap, the others come face to face with the fact that, however many of them there are, each one dies alone.",
       "at": {
         "worldRef": "w_swarm",
         "timeLabel": "late"
@@ -251,6 +263,7 @@
       "id": "e_choice",
       "type": "ordinary",
       "label": "Young Daniel, diary complete, must choose whether to use belt",
+      "description": "Young Daniel, diary complete, stands at the beginning of everything and must decide whether to put the belt on at all - knowing full well what it will make of his life.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "ending"
@@ -263,6 +276,7 @@
       "id": "e_x_belt",
       "type": "departure",
       "label": "Time belt inheritance",
+      "description": "A boy inherits a time belt from a mysterious uncle, and a single twist of the buckle can send him to any when he likes.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "open"
@@ -272,6 +286,7 @@
       "id": "e_x_meet",
       "type": "contact",
       "label": "Meets other selves",
+      "description": "With the belt, Daniel keeps meeting himself - friendly Don, wild alternate Daniels, a whole family of one.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "mid"
@@ -281,6 +296,7 @@
       "id": "e_x_love",
       "type": "ordinary",
       "label": "Relationships with variants",
+      "description": "Among the many selves, Daniel finds love with Diane, his female counterpart - a romance only time travel could arrange, and only time travel could complicate.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "mid"
@@ -290,6 +306,7 @@
       "id": "e_x_war",
       "type": "ordinary",
       "label": "Time wars among selves",
+      "description": "The Daniels don't always agree; factions and fights break out among the versions, 'time wars' of one man against his own many selves.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "late"
@@ -299,6 +316,7 @@
       "id": "e_x_origin",
       "type": "bootstrap_origin",
       "label": "Belt origin paradox",
+      "description": "The belt itself has no maker: it was passed on from self to self, an object whose origin is swallowed by the loop it creates.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "reveal"
@@ -308,6 +326,7 @@
       "id": "e_x_old",
       "type": "ordinary",
       "label": "Aging continuum of selves",
+      "description": "From boy to elder, the Daniels form a whole continuum of ages, each looking forward or backward at the others like rungs on a ladder.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "late"
@@ -317,6 +336,7 @@
       "id": "e_x_identity",
       "type": "observation",
       "label": "Identity multiplicity theme",
+      "description": "When every companion is yourself, the book asks who 'you' even is - Daniel's identity spreads thin across a crowd of Daniels.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "theme"
@@ -326,6 +346,7 @@
       "id": "e_x_close",
       "type": "ordinary",
       "label": "Final solitude among selves",
+      "description": "For all the crowd of selves, the story closes on solitude: in the end, Daniel is alone with the only company he ever really had - himself.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "end"

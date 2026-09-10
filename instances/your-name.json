@@ -79,6 +79,7 @@
       "id": "e_swaps",
       "type": "ordinary",
       "label": "Intermittent body swaps; notes left for each other",
+      "description": "Taki, a Tokyo boy, and Mitsuha, a girl from a mountain town, start waking up in each other's bodies a few days a week - leaving notes and phone diaries to manage each other's lives.",
       "at": {
         "worldRef": "w_2016",
         "timeLabel": "swap period"
@@ -95,6 +96,7 @@
       "id": "e_swaps_stop",
       "type": "ordinary",
       "label": "Swaps stop; Taki seeks Mitsuha",
+      "description": "The swaps stop as abruptly as they began - and Taki, unable to explain his restlessness, sets out for Mitsuha's town to find her in person.",
       "at": {
         "worldRef": "w_2016",
         "timeLabel": "2016 search"
@@ -107,6 +109,7 @@
       "id": "e_destroyed",
       "type": "observation",
       "label": "Taki learns Itomori destroyed by Comet Tiamat in 2013",
+      "description": "On the train to Itomori, Taki learns the town no longer exists: it was destroyed three years ago when the comet Tiamat broke apart overhead.",
       "at": {
         "worldRef": "w_2016",
         "timeLabel": "2016 discovery"
@@ -122,6 +125,7 @@
       "id": "e_sake",
       "type": "departure",
       "label": "Taki drinks kuchikamizake at Goshintai; returns to Mitsuha's body",
+      "description": "On the mountain shrine, Taki drinks Mitsuha's kuchikamizake - her ritual sake - and falls through her memories into her body one more time, on the morning of the comet three years ago.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "festival morning 2013"
@@ -140,6 +144,7 @@
       "id": "e_evac_plan",
       "type": "intervention",
       "label": "In Mitsuha's body: substation sabotage and emergency broadcast with Tessie and Sayaka",
+      "description": "In Mitsuha's body, Taki drafts a rescue: blow the substation, trigger a false emergency broadcast, and drive the whole town up the mountain beyond the comet's path - with her friends Tessie and Sayaka.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "festival day"
@@ -154,6 +159,7 @@
       "id": "e_kataware",
       "type": "contact",
       "label": "Kataware-doki twilight: timelines meet; braid returned; palms written",
+      "description": "At kataware-doki, the moment of twilight, the two cross the impossible divide and meet on the crater's rim - two times touching at sunset - where she returns the braided cord and they write their names on each other's palms.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "twilight"
@@ -172,6 +178,7 @@
       "id": "e_persuade",
       "type": "intervention",
       "label": "Mitsuha persuades mayor-father to evacuate town",
+      "description": "Mitsuha - back in her own body and time - faces her estranged father, the mayor, and persuades him to order the evacuation.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "pre-impact"
@@ -185,6 +192,7 @@
       "id": "e_fork_save",
       "type": "branch_fork",
       "label": "Evacuation rewrites comet-disaster outcome",
+      "description": "The town empties up the hill, the comet falls where the town was, and Itomori's eight hundred people live - the disaster rewritten by a girl's stubbornness.",
       "at": {
         "worldRef": "w_evacuated",
         "timeLabel": "impact night"
@@ -198,6 +206,7 @@
       "id": "e_memory_fade",
       "type": "ordinary",
       "label": "Memories fade as timelines realign",
+      "description": "As the timelines settle, the miracle drains away: the names they wrote are smudged or missing, and both forget the other - knowing only that someone important is gone.",
       "at": {
         "worldRef": "w_2016",
         "timeLabel": "post-rewrite"
@@ -214,6 +223,7 @@
       "id": "e_reunion",
       "type": "ordinary",
       "label": "Five years later near-amnesiac adults reunite on Suga Shrine steps",
+      "description": "Years later in Tokyo - his five years, her three - two strangers keep feeling for someone they cannot remember, until a passing train and a staircase bring them face to face.",
       "at": {
         "worldRef": "w_evacuated",
         "timeLabel": "five years later"
@@ -227,6 +237,7 @@
       "id": "e_names",
       "type": "reveal",
       "label": "They ask each other's names",
+      "description": "On the shrine steps, crying without knowing why, they finally ask each other the question the whole story was saving: what is your name?",
       "at": {
         "worldRef": "w_evacuated",
         "timeLabel": "reunion"
@@ -240,6 +251,7 @@
       "id": "ev_swap",
       "type": "ordinary",
       "label": "Body swaps begin",
+      "description": "The first swap: waking as someone else, in a town neither can place.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "early"
@@ -255,6 +267,7 @@
       "id": "ev_offset",
       "type": "ordinary",
       "label": "Taki learns 3-year disaster offset",
+      "description": "The reveal of the three-year offset - the day Taki kept trying to reach was three years gone.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "mid"
@@ -270,6 +283,7 @@
       "id": "ev_evacuate",
       "type": "ordinary",
       "label": "Itomori evacuation succeeds",
+      "description": "The evacuation that saves Itomori - the town's whole history turned by one morning's work.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "comet"
@@ -285,6 +299,7 @@
       "id": "ev_reunion",
       "type": "ordinary",
       "label": "Adult name reunion",
+      "description": "The staircase reunion, where two half-memories finally meet.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "years later"
@@ -300,6 +315,7 @@
       "id": "e_swap_start",
       "type": "ordinary",
       "label": "Taki/Mitsuha body-swap begins",
+      "description": "Taki and Mitsuha's body-swapping begins - two lives quietly borrowed.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "early"
@@ -312,6 +328,7 @@
       "id": "e_comet",
       "type": "ordinary",
       "label": "Comet Tiamat approaches",
+      "description": "The comet Tiamat, returning every twelve hundred years - and about to split.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "stakes"
@@ -321,6 +338,7 @@
       "id": "e_diary",
       "type": "ordinary",
       "label": "Notes / phone diaries across swaps",
+      "description": "The notes and diaries across the swaps - the only way two swapped lives can leave each other instructions.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "mid"
@@ -330,6 +348,7 @@
       "id": "e_realize_dead",
       "type": "reveal",
       "label": "Taki realizes Mitsuha's town already destroyed years prior",
+      "description": "Taki's discovery that Mitsuha died three years before they ever met.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "mid"
@@ -339,6 +358,7 @@
       "id": "e_twilight",
       "type": "intervention",
       "label": "Kataware-doki meet; he gives her ribbon/name",
+      "description": "The twilight meeting on the rim - the braid, the names on palms, and the promise to find each other.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "climax"
@@ -348,6 +368,7 @@
       "id": "e_evacuate",
       "type": "intervention",
       "label": "Mitsuha's side evacuates Itomori",
+      "description": "Mitsuha's side of the save: her body, her town, her father - the evacuation she makes happen.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "2013"
@@ -357,6 +378,7 @@
       "id": "e_forget",
       "type": "ordinary",
       "label": "Memories fade after save",
+      "description": "The forgetting that follows the save - the price of two timelines realigning.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "aftermath"
@@ -366,6 +388,7 @@
       "id": "e_stairs",
       "type": "ordinary",
       "label": "Years later stairs reunion",
+      "description": "The years-later reunion on the shrine steps - the film's last, held breath.",
       "at": {
         "worldRef": "w_2013",
         "timeLabel": "epilogue"

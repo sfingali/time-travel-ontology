@@ -62,6 +62,7 @@
       "id": "e_chase",
       "type": "ordinary",
       "label": "Sam Vimes chases Carcer across rooftops in storm",
+      "description": "Commander Sam Vimes, holding a murderer's collar in a lightning storm, chases the killer Carcer across the rooftops of Ankh-Morpork - and both are struck.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "present"
@@ -75,6 +76,7 @@
       "id": "e_lightning",
       "type": "departure",
       "label": "Magical storm flings both back to Glorious 25th of May past",
+      "description": "The storm does something impossible: it throws Vimes and Carcer thirty years back into the city's past, to the week of the Revolution he remembers.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "storm"
@@ -92,6 +94,7 @@
       "id": "e_past",
       "type": "arrival",
       "label": "Arrive days before Treacle Mine Road uprising",
+      "description": "Vimes lands days before the uprising on Treacle Mine Road - the same rebellion whose failure he grew up in the shadow of.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "past"
@@ -104,7 +107,8 @@
     {
       "id": "e_young_sam",
       "type": "contact",
-      "label": "Meets young Sam Vimes \u2014 must mentor his own past",
+      "label": "Meets young Sam Vimes — must mentor his own past",
+      "description": "He meets the young, idealistic, hopeless constable he used to be - and realises he must teach his younger self how to be a policeman without ever saying who he is.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "watch"
@@ -121,6 +125,7 @@
       "id": "e_keel",
       "type": "ordinary",
       "label": "Vimes assumes identity of John Keel",
+      "description": "With the real sergeant John Keel dead by Carcer's hand, Vimes takes the dead man's name - becoming, for one week, his own sergeant and teacher.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "cover"
@@ -136,6 +141,7 @@
       "id": "e_carcer_chaos",
       "type": "intervention",
       "label": "Carcer accelerates chaos; tries to remake history worse",
+      "description": "Carcer aligns with the city's worst men and works to make the Revolution bloodier and the future darker - the history Vimes remembers is now only one possibility.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "mid"
@@ -148,6 +154,7 @@
       "id": "e_train",
       "type": "ordinary",
       "label": "Trains young Sam and Night Watch into better men",
+      "description": "Sergeant Keel - Vimes in disguise - drills the young Watch into something better: how to stand, how to look, how to be the line that holds.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "training"
@@ -161,6 +168,7 @@
       "id": "e_barricade",
       "type": "intervention",
       "label": "Treacle Mine Road barricade; keeps history on rails",
+      "description": "The barricades go up on Treacle Mine Road, and for a few shining days the little republic of the Watch holds its patch of the city honest.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "25 May"
@@ -174,7 +182,8 @@
     {
       "id": "e_die_keel",
       "type": "death",
-      "label": "History requires Keel's death \u2014 Vimes fulfills then escapes timing",
+      "label": "History requires Keel's death — Vimes fulfills then escapes timing",
+      "description": "History demands John Keel die in the fighting - and Vimes, playing Keel, walks into it knowing, then slips loose of the moment at the last breath.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "revolution"
@@ -190,6 +199,7 @@
       "id": "e_return",
       "type": "arrival",
       "label": "Returns to present with Carcer for trial",
+      "description": "The storm returns him to his own time with Carcer in tow - delivered, at last, to a trial the city can hold.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "return"
@@ -205,7 +215,8 @@
     {
       "id": "e_lilac",
       "type": "observation",
-      "label": "Lilac remembrance \u2014 Vimes was always his own mentor",
+      "label": "Lilac remembrance — Vimes was always his own mentor",
+      "description": "Every year Vimes wears a sprig of lilac for the men of the Revolution - and now he knows why he always felt he owed them: he was there, he was one of them.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "aftermath"
@@ -222,6 +233,7 @@
       "id": "e_son",
       "type": "birth",
       "label": "Present: birth of Young Sam (son) rhymes the loop",
+      "description": "In the present, his son is born - young Sam, named for a father who is still, in a way that no one else can be, his own teacher.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "coda"
@@ -234,6 +246,7 @@
       "id": "e_x_storm",
       "type": "departure",
       "label": "Vimes thrown back to past Watch days",
+      "description": "The storm that tore Vimes out of his own time and into the Watch's history.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "inciting"
@@ -243,6 +256,7 @@
       "id": "e_x_young",
       "type": "ordinary",
       "label": "Meets young Vetinari / young Vimes path",
+      "description": "The young men of the past Watch - a young Vimes, a cool and dangerous young Vetinari - seen before they became themselves.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"
@@ -252,6 +266,7 @@
       "id": "e_x_history",
       "type": "intervention",
       "label": "Must preserve Revolution history",
+      "description": "The burden of the week: history must come out as remembered, or the city he loves will never exist.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"
@@ -261,6 +276,7 @@
       "id": "e_x_keel",
       "type": "ordinary",
       "label": "Assumes John Keel identity",
+      "description": "The stolen identity - Sergeant Keel, the man whose name Vimes will honour for the rest of his life.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"
@@ -270,6 +286,7 @@
       "id": "e_x_teach",
       "type": "ordinary",
       "label": "Trains young Vimes",
+      "description": "Teaching the young Watch what he learned the hard way - and learning it again by teaching it.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"
@@ -279,6 +296,7 @@
       "id": "e_x_close_loop",
       "type": "bootstrap_origin",
       "label": "Becomes the mentor he remembered",
+      "description": "The closed circle: the sergeant who made Vimes was Vimes, all along.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "reveal"
@@ -288,6 +306,7 @@
       "id": "e_x_return",
       "type": "arrival",
       "label": "Returns to present altered slightly",
+      "description": "A return to the present that is one good man's memory better than it was.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "end"
@@ -297,6 +316,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "History has inertia; personal bootstrap",
+      "description": "The rule of Discworld time: history is elastic but stubborn - it fights for its shape, and people are how it wins.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "rules"

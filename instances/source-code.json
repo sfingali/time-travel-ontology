@@ -73,6 +73,7 @@
       "id": "e_wake",
       "type": "loop_reset",
       "label": "Colter wakes as Sean on train",
+      "description": "Soldier Colter Stevens jolts awake on a Chicago commuter train, sitting opposite a woman who greets him warmly - but she knows him as a teacher called Sean, and he has no memory of the man.",
       "at": {
         "worldRef": "w_train_sim",
         "timeLabel": "T-8min"
@@ -90,6 +91,7 @@
       "id": "e_bomb",
       "type": "death",
       "label": "Train bomb; Colter reset",
+      "description": "The train explodes in a fireball, killing everyone aboard - and Colter instantly wakes up somewhere else entirely, discovering he can be sent back to those eight minutes again and again.",
       "at": {
         "worldRef": "w_train_sim",
         "timeLabel": "T-0"
@@ -102,6 +104,7 @@
       "id": "e_brief",
       "type": "ordinary",
       "label": "Goodwin briefs: find bomber for real world",
+      "description": "Air Force captain Goodwin, speaking over a screen, explains the mission: the train has already blown up, and Colter must ride it repeatedly to discover who planted the bomb before a bigger one goes off.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "between"
@@ -116,6 +119,7 @@
       "id": "e_id_bomber",
       "type": "observation",
       "label": "Bomber identified after N loops",
+      "description": "After repeated runs aboard the doomed train, Colter pieces together the clues and works out exactly which passenger planted the device.",
       "at": {
         "worldRef": "w_train_sim",
         "timeLabel": "loop N"
@@ -128,6 +132,7 @@
       "id": "e_real_stop",
       "type": "intervention",
       "label": "Real-world bomber stopped (mission success)",
+      "description": "With a name and a face, the authorities in the real world track the bomber down and arrest him, stopping the threatened second attack.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "mission"
@@ -140,6 +145,7 @@
       "id": "e_last_run",
       "type": "intervention",
       "label": "Unauthorized last run: defuse on-train",
+      "description": "Colter is supposed to just gather information, but on his final trip he disobeys orders and instead tries to save everyone on the train, defusing the bomb rather than merely identifying its owner.",
       "at": {
         "worldRef": "w_train_sim",
         "timeLabel": "final 8min"
@@ -153,6 +159,7 @@
       "id": "e_fork_alt",
       "type": "branch_fork",
       "label": "Alt continuum continues; Colter remains",
+      "description": "In doing so Colter creates a reality that runs on after the original bombing - a world in which the train never exploded, with Sean's body and Colter's mind still riding it.",
       "at": {
         "worldRef": "w_alt_chicago",
         "timeLabel": "after defusal"
@@ -165,7 +172,8 @@
     {
       "id": "e_text",
       "type": "ordinary",
-      "label": "Alt Colter texts Goodwin \u2014 worlds diverge",
+      "label": "Alt Colter texts Goodwin — worlds diverge",
+      "description": "From that continuing world, Colter sends a message to Goodwin - who has only just received the mission - proof that his gamble opened a place he can still live in.",
       "at": {
         "worldRef": "w_alt_chicago",
         "timeLabel": "afternoon"
@@ -179,6 +187,7 @@
       "id": "e_shell",
       "type": "death",
       "label": "Capsule body ended; mind persists in alt",
+      "description": "In the real world, what remains of Colter's broken body is allowed to die, while his mind carries on in the reality where the train was saved.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "shutdown"
@@ -192,6 +201,7 @@
       "id": "ev_eight",
       "type": "ordinary",
       "label": "Eight-minute train iterations",
+      "description": "Colter lives the same eight minutes of the train ride over and over, each attempt teaching him something new about the passengers and the bomb.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "runs"
@@ -207,6 +217,7 @@
       "id": "ev_bomber",
       "type": "ordinary",
       "label": "Bomber identified/stopped",
+      "description": "Across his repeated rides, Colter works out who the bomber is, and the man is finally caught before he can strike again.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "solution"
@@ -222,6 +233,7 @@
       "id": "ev_branch_email",
       "type": "ordinary",
       "label": "Final jump continuum + Goodwin email",
+      "description": "After his final, unsanctioned ride, Colter sends Goodwin an email from a world where the train survived - a world the mission never expected to create.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "ending"
@@ -237,6 +249,7 @@
       "id": "e_awake",
       "type": "ordinary",
       "label": "Colter wakes as Sean on train",
+      "description": "Colter wakes with no warning in another man's seat on a crowded commuter train, face to face with a woman who seems to know him - and he does not know her at all.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "Source Code run"
@@ -249,6 +262,7 @@
       "id": "e_handler",
       "type": "ordinary",
       "label": "Goodwin/Rutledge brief: find bomber",
+      "description": "Goodwin and her superior Dr Rutledge explain the job to Colter: identify the bomber on a train that has already been destroyed, to stop a far worse attack.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "capsule"
@@ -258,6 +272,7 @@
       "id": "e_rules",
       "type": "observation",
       "label": "Source Code is quantum re-creation not true past",
+      "description": "Rutledge insists the exercise is only a simulation rebuilt from records - a faithful eight-minute replay of the past, not the real past itself - though Colter comes to doubt this.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "rules"
@@ -270,6 +285,7 @@
       "id": "e_bomber",
       "type": "intervention",
       "label": "Identifies bomber Derek Frost",
+      "description": "Run after run, Colter narrows the suspects and finally identifies the killer: Derek Frost, a bitter ex-pilot sitting calmly among the passengers.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "success run"
@@ -279,6 +295,7 @@
       "id": "e_second_bomb",
       "type": "ordinary",
       "label": "City bomb threat beyond train",
+      "description": "Beyond the train itself, Frost has planted a larger device in crowded downtown Chicago, and the clock is ticking to stop that one too.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "stakes"
@@ -288,6 +305,7 @@
       "id": "e_defy",
       "type": "intervention",
       "label": "Defies orders to save train worldline",
+      "description": "Ordered only to report back and let history stand, Colter instead uses his last run to save the passengers - defusing the bomb and confronting Frost aboard the train.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "climax"
@@ -297,6 +315,7 @@
       "id": "e_freeze",
       "type": "checkpoint",
       "label": "Last seconds frozen; life in alternate thread",
+      "description": "As the eight minutes run out, the world aboard the saved train seems to hold its breath - the carriage slows, everyone smiles, and the moment stretches into a life of its own.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "ending"
@@ -309,6 +328,7 @@
       "id": "e_ethics",
       "type": "observation",
       "label": "Mind of dying soldier reused",
+      "description": "Beneath the mission lies an uncomfortable fact: Colter is a mortally wounded pilot whose mind is being borrowed, and the programme is using a dying man without his full consent.",
       "at": {
         "worldRef": "w_capsule",
         "timeLabel": "theme"

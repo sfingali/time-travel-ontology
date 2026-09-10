@@ -129,9 +129,10 @@
       "id": "e_opera",
       "type": "ordinary",
       "label": "Kyiv opera siege / CIA extraction",
+      "description": "Armed men seize the Kyiv opera house during a performance. An American agent, the Protagonist, joins a undercover rescue team to get a hidden operative out.",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th \u2014 Kyiv opera"
+        "timeLabel": "14th — Kyiv opera"
       },
       "agents": [
         "protagonist",
@@ -149,6 +150,7 @@
       "id": "e_suicide_pill",
       "type": "ordinary",
       "label": "Protagonist captured; cyanide; revived by Tenet",
+      "description": "Captured and interrogated, the Protagonist bites a suicide pill rather than talk. He survives - the pill was a loyalty test - and wakes to a second chance.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "post-opera"
@@ -161,6 +163,7 @@
       "id": "e_recruit",
       "type": "reveal",
       "label": "Recruited into Tenet; word TENET test",
+      "description": "The Protagonist joins a secret organisation called Tenet and learns its recruitment handshake: the word 'TENET'.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "recruitment"
@@ -176,6 +179,7 @@
       "id": "e_barbara_demo",
       "type": "observation",
       "label": "Barbara demonstrates inverted bullet / entropy",
+      "description": "A scientist named Barbara shows him bullets that move backwards through time - fired out of the world rather than into it. The technology comes from the future, and someone is waging a quiet war with it.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "lab"
@@ -194,6 +198,7 @@
       "id": "e_neil_meet",
       "type": "contact",
       "label": "Protagonist partners with Neil",
+      "description": "The Protagonist is paired with Neil, a capable partner who seems to have known him for years - though the Protagonist cannot remember when.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "early mission"
@@ -210,6 +215,7 @@
       "id": "e_mumbai_priya",
       "type": "reveal",
       "label": "Priya briefs: Sator, Algorithm, future war",
+      "description": "In Mumbai, a fixer named Priya explains the threat: a Russian oligarch called Sator is collecting pieces of a device sent back from a future war, one that could end everything.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Mumbai"
@@ -228,6 +234,7 @@
       "id": "e_goya_plot",
       "type": "ordinary",
       "label": "Forged Goya used to blackmail Kat",
+      "description": "Sator holds his wife Kat in the marriage with a forged Goya painting she once sold him - proof of a fraud that would destroy her life if it surfaced.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "art world"
@@ -242,6 +249,7 @@
       "id": "e_amalfi",
       "type": "ordinary",
       "label": "Amalfi yacht approach; Kat / Sator marriage trap",
+      "description": "To get close to Sator the team uses Kat, approaching him on his Amalfi yacht - and walking straight into the suspicion of a man who trusts nothing.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Amalfi"
@@ -256,7 +264,8 @@
     {
       "id": "e_oslo_freeport_fwd",
       "type": "arrival",
-      "label": "Oslo Freeport \u2014 forward team enters",
+      "label": "Oslo Freeport — forward team enters",
+      "description": "The Protagonist and Neil break into an art freeport in Oslo, crashing a plane to crack the vault where Sator stores his treasures.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Oslo Freeport (forward)"
@@ -275,6 +284,7 @@
       "id": "e_turnstile_oslo_seen",
       "type": "reveal",
       "label": "Turnstile discovered; fight with inverted selves",
+      "description": "In the vault they fight a masked stranger who seems to be fighting from the other direction of time - and find the machinery that makes that possible.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Oslo Freeport"
@@ -295,6 +305,7 @@
       "id": "e_priya_algorithm",
       "type": "reveal",
       "label": "Algorithm: nine-section device; bury past",
+      "description": "Priya names the prize: the Algorithm, nine pieces that together could turn the whole world backwards. Sator means to hide it where no one can ever unmake what he does with it.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "briefing"
@@ -312,7 +323,8 @@
     {
       "id": "e_tallinn_heist",
       "type": "intervention",
-      "label": "Tallinn highway \u2014 plutonium/Algorithm piece heist",
+      "label": "Tallinn highway — plutonium/Algorithm piece heist",
+      "description": "In Tallinn the team ambushes an armoured convoy to steal what they believe is plutonium - in truth a piece of the Algorithm - and Sator takes Kat hostage in return.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Tallinn"
@@ -335,6 +347,7 @@
       "id": "e_tallinn_pincer",
       "type": "inversion",
       "label": "Teaching temporal pincer: forward vs inverted cars",
+      "description": "Sator's men fight in both directions of time at once: cars charging forwards while others drive in reverse alongside them. The Protagonist lives the same ambush first one way, then the other.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Tallinn highway"
@@ -356,6 +369,7 @@
       "id": "e_kat_inverted_bullet",
       "type": "death",
       "label": "Kat shot with inverted bullet (near-death)",
+      "description": "Kat is wounded by a bullet moving backwards through time - a wound the normal world cannot heal, because for her body the damage has not happened yet.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Tallinn aftermath"
@@ -373,6 +387,7 @@
       "id": "e_invert_protagonist",
       "type": "inversion",
       "label": "Protagonist inverts via turnstile to go back",
+      "description": "To save Kat and undo the failed heist, the Protagonist passes through the machinery himself and begins living the battle's last hours backwards.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "turnstile post-Tallinn"
@@ -392,6 +407,7 @@
       "id": "e_oslo_freeport_inv",
       "type": "intervention",
       "label": "Inverted Protagonist re-fights Oslo Freeport (past self)",
+      "description": "Still living in reverse, the Protagonist and Neil re-enter the Oslo freeport a week earlier to turn themselves around again - and the Protagonist fights the masked man who attacked the vault: himself, days before.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Oslo Freeport (inverted pass)"
@@ -411,6 +427,7 @@
       "id": "e_kat_care_invert",
       "type": "ordinary",
       "label": "Kat medically inverted then restored",
+      "description": "Kat is sent backwards through the machinery so her wound can finally heal in reversed time, then restored to live forwards once more.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "medical inversion"
@@ -427,6 +444,7 @@
       "id": "e_stalsk_plan",
       "type": "ordinary",
       "label": "Plan Stalsk-12 war pincer; red/blue teams",
+      "description": "The final plan: a full assault on a buried Soviet city, with one army fighting forwards through the battle and another fighting the same battle in reverse, each protecting the other.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "pre-Stalsk"
@@ -448,9 +466,10 @@
       "id": "e_vietnam_kat",
       "type": "intervention",
       "label": "Kat poses as past self on yacht (Vietnam) to hold Sator",
+      "description": "Kat returns to the day she was unhappiest - a yacht holiday in Vietnam - and moves through it posing as her past self, staying close to Sator through what must be his last hours.",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th \u2014 yacht Vietnam"
+        "timeLabel": "14th — yacht Vietnam"
       },
       "agents": [
         "kat",
@@ -467,9 +486,10 @@
       "id": "e_stalsk_red",
       "type": "intervention",
       "label": "Red team (forward) assaults Stalsk-12 hypocenter",
+      "description": "The red team storms the buried city fighting forwards, their job to open the way for everything the other team is already doing in reverse.",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th \u2014 Stalsk-12 forward"
+        "timeLabel": "14th — Stalsk-12 forward"
       },
       "agents": [
         "protagonist",
@@ -486,9 +506,10 @@
       "id": "e_stalsk_blue",
       "type": "inversion",
       "label": "Blue team (inverted) assaults from after",
+      "description": "The blue team fights the same battle backwards, launched from the battle's end - to them the explosions undo themselves as they push towards the beginning.",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th \u2014 Stalsk-12 inverted"
+        "timeLabel": "14th — Stalsk-12 inverted"
       },
       "agents": [
         "wheeler",
@@ -504,9 +525,10 @@
       "id": "e_neil_unlock",
       "type": "death",
       "label": "Inverted Neil unlocks gate; dies (orange cord)",
+      "description": "Deep under the rubble a locked gate bars the way. Neil, already living backwards, unlocks it knowing it will cost his life - the orange cord on his pack the last thing the Protagonist sees of him.",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th \u2014 hypocenter gate"
+        "timeLabel": "14th — hypocenter gate"
       },
       "agents": [
         "neil_inverted",
@@ -521,9 +543,10 @@
       "id": "e_algorithm_secure",
       "type": "intervention",
       "label": "Algorithm pieces recovered / separated",
+      "description": "The Algorithm is recovered and split apart so it can never be assembled again, each piece hidden with someone the Protagonist has learned to trust.",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th \u2014 hypocenter"
+        "timeLabel": "14th — hypocenter"
       },
       "agents": [
         "protagonist",
@@ -538,9 +561,10 @@
       "id": "e_sator_dead",
       "type": "death",
       "label": "Kat kills Sator on yacht; dead-man switch race ends",
+      "description": "Kat kills Sator on the yacht, and the dead-man switch that would have ended the world with him stops counting.",
       "at": {
         "worldRef": "w_tenet",
-        "timeLabel": "14th \u2014 yacht sync"
+        "timeLabel": "14th — yacht sync"
       },
       "agents": [
         "kat",
@@ -556,6 +580,7 @@
       "id": "e_neil_trinket",
       "type": "reveal",
       "label": "Neil's orange trinket / looped friendship revealed",
+      "description": "The Protagonist recognises the orange trinket from Neil's pack - the strap of the man who saved him at the opera all those years ago. Neil's friendship has been running the length of the story from both ends.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "coda"
@@ -572,6 +597,7 @@
       "id": "e_founder",
       "type": "bootstrap_origin",
       "label": "Protagonist will found Tenet; Neil recruited from future",
+      "description": "In the future, the Protagonist founds Tenet itself - and recruits Neil there, sending him back across the decades to be beside his younger self.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "future relative"
@@ -591,6 +617,7 @@
       "id": "e_spare_priya",
       "type": "intervention",
       "label": "Protagonist spares/ends threat to Kat; asserts agency inside loop",
+      "description": "The Protagonist shoots Priya before she can tidy away loose ends - Kat's life protected, and the organisation now quietly his.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "coda"
@@ -605,6 +632,7 @@
       "id": "ev_opera",
       "type": "ordinary",
       "label": "Kiev opera extraction / orange trinket",
+      "description": "The siege at the Kyiv opera where an unknown rescuer saved the Protagonist's life - a moment whose meaning the story spends its whole length revealing.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "the 14th"
@@ -620,6 +648,7 @@
       "id": "ev_turnstile_oslo",
       "type": "ordinary",
       "label": "Oslo Freeport turnstile fight",
+      "description": "Two masked men fight inside the Oslo freeport vault - the same man, meeting himself from opposite directions of time.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Oslo"
@@ -635,6 +664,7 @@
       "id": "ev_tallinn_pincer",
       "type": "ordinary",
       "label": "Tallinn highway temporal pincer",
+      "description": "The highway ambush in Tallinn, fought forwards and backwards at once: one convoy assaulted from both directions of time.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "Tallinn"
@@ -650,6 +680,7 @@
       "id": "ev_stalsk",
       "type": "ordinary",
       "label": "Stalsk-12 red/blue war pincer",
+      "description": "The last battle at the buried city of Stalsk-12, where two armies fight one battle - one moving forwards, one moving backwards - and each survives only because the other holds.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "the 14th"
@@ -665,6 +696,7 @@
       "id": "ev_neil_reveal",
       "type": "ordinary",
       "label": "Neil bootstrap friendship reveal",
+      "description": "Neil's farewell: he walks back into the battle that will kill him, because he has always known how his story ends - and the orange cord shows he was the rescuer at the opera all along.",
       "at": {
         "worldRef": "w_tenet",
         "timeLabel": "aftermath"

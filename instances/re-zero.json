@@ -1,7 +1,7 @@
 {
   "meta": {
     "id": "re-zero",
-    "title": "Re:Zero \u2212 Starting Life in Another World",
+    "title": "Re:Zero − Starting Life in Another World",
     "year": 2016,
     "medium": "tv",
     "sources": [
@@ -25,7 +25,7 @@
       "kind": "timeline",
       "id": "w_lugunica",
       "label": "Lugunica continuum (rewritten from checkpoints)",
-      "spanLabel": "arc 1\u20132 abstraction"
+      "spanLabel": "arc 1–2 abstraction"
     },
     {
       "kind": "branch",
@@ -86,6 +86,7 @@
       "id": "e_summon",
       "type": "arrival",
       "label": "Subaru summoned to Lugunica",
+      "description": "An ordinary shut-in, Subaru Natsuki, is abruptly summoned to a fantasy world with no powers, no sword skills and no idea why he was brought.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "T0"
@@ -97,7 +98,8 @@
     {
       "id": "e_cp1",
       "type": "checkpoint",
-      "label": "Checkpoint set \u2014 alley / loot house approach",
+      "label": "Checkpoint set — alley / loot house approach",
+      "description": "His first evening in the capital ends in an alley ambush - and each time he dies, time snaps back to this same starting point: his first checkpoint.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "CP1"
@@ -115,6 +117,7 @@
       "id": "e_death1",
       "type": "death",
       "label": "First death (thugs / Elsa arc)",
+      "description": "Subaru dies for the first time - murdered in the streets - and finds death itself is his only gift.",
       "at": {
         "worldRef": "w_iter",
         "timeLabel": "iter1"
@@ -131,6 +134,7 @@
       "id": "e_rbd1",
       "type": "loop_reset",
       "label": "Return by Death to CP1",
+      "description": "He wakes back at the alley with all his memories intact: Return by Death, working exactly once he understands what it is.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "RbD1"
@@ -149,6 +153,7 @@
       "id": "e_emilia_meet",
       "type": "contact",
       "label": "Meet Emilia properly with foreknowledge",
+      "description": "Armed now with foreknowledge, Subaru properly meets Emilia - the silver-haired half-elf whose stolen insignia set his first day's disasters in motion.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "loot house"
@@ -163,6 +168,7 @@
       "id": "e_elsa_fight",
       "type": "intervention",
       "label": "Survive Elsa with allies",
+      "description": "Using everything his deaths taught him, Subaru and allies finally survive the assassin Elsa and the night at the loot house.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "loot house fight"
@@ -176,7 +182,8 @@
     {
       "id": "e_cp2",
       "type": "checkpoint",
-      "label": "Checkpoint moves \u2014 mansion arc",
+      "label": "Checkpoint moves — mansion arc",
+      "description": "Surviving moves his checkpoint forward: the next anchor point for his deaths is Roswaal's mansion, deep in its own secrets.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "CP2"
@@ -193,6 +200,7 @@
       "id": "e_bowel",
       "type": "death",
       "label": "Mansion deaths (Rem/Ram/Beatrice routes)",
+      "description": "At the mansion, Subaru dies again and again - poisoned, slaughtered, hunted - in loops where Rem and Ram and the library's keeper all turn against him.",
       "at": {
         "worldRef": "w_iter",
         "timeLabel": "mansion iters"
@@ -211,6 +219,7 @@
       "id": "e_rbd2",
       "type": "loop_reset",
       "label": "Return by Death to mansion CP",
+      "description": "Each mansion death returns him to the same morning there, and he must deduce which of the seemingly impossible deaths was real.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "RbD mansion"
@@ -229,6 +238,7 @@
       "id": "e_curse",
       "type": "reveal",
       "label": "Cult curses / Rem truth",
+      "description": "The truth in the loops: a witch's curse marks Subaru, and Rem's hatred of witches - and of the thing inside him - drives her killings.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "mansion mystery"
@@ -243,6 +253,7 @@
       "id": "e_save_rem",
       "type": "intervention",
       "label": "Save Rem; confront cult threat",
+      "description": "Subaru breaks the mansion's cycle, saves Rem from her despair and her fate, and wins an ally who will love him across every loop after.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "resolution arc2"
@@ -258,6 +269,7 @@
       "id": "e_vow",
       "type": "ordinary",
       "label": "Subaru vows to save everyone without wasting RbD",
+      "description": "Scarred by the loops, Subaru vows to stop dying pointlessly - to carry each Return by Death as if it were the last.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "character turn"
@@ -271,6 +283,7 @@
       "id": "ev_rbd",
       "type": "ordinary",
       "label": "Return by Death discovered",
+      "description": "The discovery that his deaths rewind the world to a checkpoint - and that only he remembers any of it.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "early"
@@ -286,6 +299,7 @@
       "id": "ev_failed",
       "type": "ordinary",
       "label": "Failed loops / trauma accumulation",
+      "description": "The failed loops pile up in his memory alone: every torture, every death of friends, carried by the one person no one else can see suffering.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "ongoing"
@@ -301,6 +315,7 @@
       "id": "ev_checkpoint",
       "type": "ordinary",
       "label": "Checkpoint advances after major arcs",
+      "description": "After each major arc, the rewind point moves forward - the story's way of turning survival into progress.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "arc ends"
@@ -316,6 +331,7 @@
       "id": "e_rbd",
       "type": "death",
       "label": "Return by Death first trigger",
+      "description": "The first Return by Death - dying in an alley and waking to live the evening again.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "loop1"
@@ -329,6 +345,7 @@
       "id": "e_checkpoint",
       "type": "checkpoint",
       "label": "Checkpoint advances unpredictably",
+      "description": "The checkpoints shift unpredictably - Subaru never knows which moment his next death will return him to.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "rules"
@@ -341,6 +358,7 @@
       "id": "e_emilia",
       "type": "ordinary",
       "label": "Bond with Emilia",
+      "description": "Across every loop, the constant is Emilia - the person he keeps returning to save, and the reason he keeps standing up.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "arc1"
@@ -350,6 +368,7 @@
       "id": "e_witch",
       "type": "reveal",
       "label": "Satella / witch of envy link to RBD",
+      "description": "Return by Death is no free gift: it belongs to the Witch of Envy, who loves him, and whose hand he can feel taking his heart at every mention.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "mythology"
@@ -359,6 +378,7 @@
       "id": "e_forbid",
       "type": "observation",
       "label": "Cannot tell others about RBD",
+      "description": "The rule with teeth: tell anyone about the returns and the Witch punishes it - time freezes, or a loved one's heart is squeezed before his eyes.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "rules"
@@ -368,6 +388,7 @@
       "id": "e_arcs",
       "type": "intervention",
       "label": "Multiple arc resets (mansion, cult, etc.)",
+      "description": "The pattern of the story: each arc is a knot of deaths and deductions - mansion, cult, sanctuary - tightened and untied across repetitions.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "ongoing"
@@ -380,6 +401,7 @@
       "id": "e_growth",
       "type": "ordinary",
       "label": "Psychological cost and growth",
+      "description": "What the loops cost and give: Subaru breaks, learns, and grows into someone who can stand in a world that kills him to teach him.",
       "at": {
         "worldRef": "w_lugunica",
         "timeLabel": "theme"

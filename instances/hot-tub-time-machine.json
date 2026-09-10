@@ -70,6 +70,7 @@
       "id": "e_misery",
       "type": "ordinary",
       "label": "Adult friends miserable; ski-trip escape after Jacob's crisis",
+      "description": "Three middle-aged friends - Adam, Nick and Lou - are living failed versions of their lives, and a suicide scare plus a broken nose send them back to the ski lodge of their youth, dragging Adam's nephew Jacob along.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "2010"
@@ -84,7 +85,8 @@
     {
       "id": "e_tub",
       "type": "departure",
-      "label": "Hot tub + Russian energy drink \u2192 1986",
+      "label": "Hot tub + Russian energy drink → 1986",
+      "description": "A night of drinking in the lodge's hot tub, spiked with a leaked Russian energy drink, spills them out into 1986 - the same weekend, thirty years early.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "tub"
@@ -104,6 +106,7 @@
       "id": "e_arrive86",
       "type": "arrival",
       "label": "Arrive 1986 ski resort; bodies young (Jacob still 2010)",
+      "description": "They wake as their young selves at the resort - except Jacob, who still exists in the present he might now never be born into.",
       "at": {
         "worldRef": "w_1986",
         "timeLabel": "1986"
@@ -119,6 +122,7 @@
       "id": "e_rules",
       "type": "observation",
       "label": "Must avoid breaking past; Lou ignores and parties",
+      "description": "The one instruction the weekend has: do nothing differently, touch nothing, change nothing - or the future warps. Lou ignores every word and parties like it's 1986.",
       "at": {
         "worldRef": "w_1986",
         "timeLabel": "1986"
@@ -132,6 +136,7 @@
       "id": "e_nick_sing",
       "type": "intervention",
       "label": "Interventions: songs, relationships, injuries cascade",
+      "description": "Nick performs songs that haven't been written yet, claims a relationship, and sets off cascades - every small intervention bends what comes next.",
       "at": {
         "worldRef": "w_1986",
         "timeLabel": "weekend"
@@ -145,7 +150,8 @@
     {
       "id": "e_photo_fade",
       "type": "observation",
-      "label": "Present ripples \u2014 photos/phones show changed futures",
+      "label": "Present ripples — photos/phones show changed futures",
+      "description": "The present starts editing itself: Adam's phone shows a different life, scars vanish, and the future their changes are writing keeps revising itself in their pockets.",
       "at": {
         "worldRef": "w_1986",
         "timeLabel": "mid"
@@ -162,6 +168,7 @@
       "id": "e_lou_stay",
       "type": "intervention",
       "label": "Lou chooses to stay in 1986 and live differently",
+      "description": "Lou chooses to stay in 1986 - the decade that broke him is now the one where he can fix everything first - and invests, invents and lives deliberately from there.",
       "at": {
         "worldRef": "w_1986",
         "timeLabel": "choice"
@@ -174,6 +181,7 @@
       "id": "e_fork",
       "type": "branch_fork",
       "label": "Actions fork improved 2010 for remaining friends",
+      "description": "With Lou rewriting his own history, the remaining three return to a present their friend's choices have quietly improved.",
       "at": {
         "worldRef": "w_2010b",
         "timeLabel": "rewrite"
@@ -188,6 +196,7 @@
       "id": "e_return",
       "type": "arrival",
       "label": "Adam/Nick/Jacob return to rewritten present",
+      "description": "Adam, Nick and Jacob land back in 2010 - or a 2010 reshaped around Lou's new life.",
       "at": {
         "worldRef": "w_2010b",
         "timeLabel": "2010"
@@ -205,6 +214,7 @@
       "id": "e_lou_rich",
       "type": "reveal",
       "label": "Lou is now rich/famous from 1986 path",
+      "description": "Lou is now the wealthy, famous 'Loudermilk' - the man who cheated Chalet '86 into being his foundation, and won.",
       "at": {
         "worldRef": "w_2010b",
         "timeLabel": "2010"
@@ -218,6 +228,7 @@
       "id": "e_jacob_ok",
       "type": "ordinary",
       "label": "Jacob's life stabilized in new present",
+      "description": "Jacob - who was fading - is restored in the new present, Lou's solid family life having secured his birth all along.",
       "at": {
         "worldRef": "w_2010b",
         "timeLabel": "2010"
@@ -230,6 +241,7 @@
       "id": "e_sequel_hook",
       "type": "ordinary",
       "label": "Hot tub remains a chaotic mutable device",
+      "description": "The hot tub sits waiting with its Russian drink, still a chaotic door to anywhere its bathers bumble into.",
       "at": {
         "worldRef": "w_2010b",
         "timeLabel": "coda"
@@ -242,6 +254,7 @@
       "id": "e_x_tub",
       "type": "departure",
       "label": "Hot tub becomes time machine",
+      "description": "The hot tub becomes a time machine - by accident, chemical and electrical.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "inciting"
@@ -251,6 +264,7 @@
       "id": "e_x_1986",
       "type": "arrival",
       "label": "Arrive 1986 ski weekend",
+      "description": "The 1986 ski weekend where all their adult damage began.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "1986"
@@ -260,6 +274,7 @@
       "id": "e_x_fix",
       "type": "intervention",
       "label": "Avoid/reproduce past mistakes",
+      "description": "Trying to leave the past alone - and reproducing, then correcting, every mistake anyway.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "mid"
@@ -269,6 +284,7 @@
       "id": "e_x_lou",
       "type": "ordinary",
       "label": "Lou suicide threat alters",
+      "description": "Lou's dark knot - the night he was planning to end himself - is found and untied in person.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "mid"
@@ -278,6 +294,7 @@
       "id": "e_x_present",
       "type": "arrival",
       "label": "Return to altered present",
+      "description": "The return to a present reshaped by everything done in the tub.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "end"
@@ -287,6 +304,7 @@
       "id": "e_x_sequel",
       "type": "ordinary",
       "label": "Jacob existence ripple",
+      "description": "Jacob's existence becomes the thread that matters most - the nephew whose birth depends on the weekend going right.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "end"
@@ -296,6 +314,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Actions rewrite personal futures",
+      "description": "The rule this comedy runs on: whatever you do in 1986, your future rewrites to match.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "rules"
@@ -305,6 +324,7 @@
       "id": "e_x_party",
       "type": "ordinary",
       "label": "Party night setpieces",
+      "description": "The party night itself - the setpieces where past and present collide in hot water and neon.",
       "at": {
         "worldRef": "w_2010",
         "timeLabel": "mid"

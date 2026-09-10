@@ -59,6 +59,7 @@
       "id": "e_beach",
       "type": "ordinary",
       "label": "Cage dropped on Verdun beach assault",
+      "description": "Cage, a desk officer with no combat training, is thrown onto a beach in France as part of a massive human assault on the alien invasion - and the landing is a slaughter.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "Day 1"
@@ -73,6 +74,7 @@
       "id": "e_blood",
       "type": "death",
       "label": "Cage killed; alpha blood grants reset",
+      "description": "Dying on the beach, Cage is soaked in the blood of one of the special aliens he has just killed. The contact rewires him: every time he dies now, he wakes up the day before the battle.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "Day 1"
@@ -87,7 +89,8 @@
     {
       "id": "e_reset",
       "type": "loop_reset",
-      "label": "Wake at previous morning \u2014 loop",
+      "label": "Wake at previous morning — loop",
+      "description": "Each time Cage dies, he comes round back at the same military base on the same grey morning, with everyone else obliviously repeating themselves. Only he remembers what happens next.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "Day 0 morning"
@@ -105,6 +108,7 @@
       "id": "e_train",
       "type": "ordinary",
       "label": "Hundreds of loops training with Rita",
+      "description": "Rita, the famous war heroine, trains Cage across hundreds of repeated days, turning a coward who flinches at live rounds into a soldier who can fight his way off that beach.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "loops N"
@@ -121,6 +125,7 @@
       "id": "e_lose_power",
       "type": "ordinary",
       "label": "Transfusion: Cage loses reset power",
+      "description": "After a battlefield blood transfusion, Cage loses the ability: death stops restarting his day, so the next time he dies it will be final.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "late loops"
@@ -133,6 +138,7 @@
       "id": "e_find_omega",
       "type": "observation",
       "label": "Locate Omega under Louvre",
+      "description": "Cage follows strange visions that grow stronger with each death and finally pinpoints the source: the alien mastermind hiding beneath the Louvre in Paris.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "final day"
@@ -146,6 +152,7 @@
       "id": "e_kill_omega",
       "type": "intervention",
       "label": "Destroy Omega with grenade/blood",
+      "description": "Cage gets himself and Rita to Paris and blows the alien mastermind apart with grenades, ending its grip on the war in the only way left to him.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "Louvre"
@@ -158,7 +165,8 @@
     {
       "id": "e_exit",
       "type": "arrival",
-      "label": "General reset to pre-invasion briefing \u2014 victory state",
+      "label": "General reset to pre-invasion briefing — victory state",
+      "description": "With the alien core destroyed, Cage wakes not on the base but two days earlier still - before he was ever sent to the front - and this time the invasion itself is collapsing.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "new Day 0"
@@ -176,6 +184,7 @@
       "id": "e_smile",
       "type": "ordinary",
       "label": "Cage finds Rita alive; war flipped",
+      "description": "Cage makes his way to the military base and finds Rita alive and well, a stranger who has never met him. The war is turning, and for once she is smiling too.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "aftermath"
@@ -189,6 +198,7 @@
       "id": "ev_first_death",
       "type": "ordinary",
       "label": "Cage killed by Alpha; loop starts",
+      "description": "Cage dies on the battlefield just as he kills one of the aliens' elite hunters, and its blood gets into his wounds - starting the endless repeat of his final day.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "Day 1"
@@ -204,6 +214,7 @@
       "id": "ev_train_rita",
       "type": "ordinary",
       "label": "Training loops with Rita",
+      "description": "Rita drills Cage through the same deadly day again and again, and every reset makes him faster, sharper, and closer to surviving the beach.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "many days"
@@ -219,6 +230,7 @@
       "id": "ev_omega",
       "type": "ordinary",
       "label": "Omega destroyed; early wake victory",
+      "description": "By destroying the alien mastermind beneath the Louvre, Cage breaks the invasion's brain - and wakes up in a world where the war is all but won.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "finale"
@@ -234,6 +246,7 @@
       "id": "e_drop",
       "type": "ordinary",
       "label": "Invasion drop on French beach",
+      "description": "Raw recruits, Cage among them, are dropped onto the French coast for the big offensive against the aliens. It goes catastrophically wrong within minutes.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "Day 1"
@@ -243,6 +256,7 @@
       "id": "e_alpha_blood",
       "type": "death",
       "label": "Cage killed; alpha blood grants loop",
+      "description": "Killing one of the aliens' rare elite hunters costs Cage his own life - but its blood in his wounds passes the creatures' power to him: dying rewinds his day.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "Day 1 death"
@@ -256,6 +270,7 @@
       "id": "e_meet_rita",
       "type": "ordinary",
       "label": "Finds Rita who previously had power",
+      "description": "On the beach Cage finds Rita, the legendary soldier, and confesses what is happening to him. She recognises it instantly - she had the same power once and lost it.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "early loops"
@@ -265,6 +280,7 @@
       "id": "e_vision",
       "type": "observation",
       "label": "Visions toward Omega",
+      "description": "As the deaths pile up, Cage starts seeing disjointed visions of places he has never been - glimpses the alien core is leaking into his mind, pointing the way to it.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "mid"
@@ -274,6 +290,7 @@
       "id": "e_omega",
       "type": "intervention",
       "label": "Final push to destroy Omega",
+      "description": "The last plan is a desperate push: Cage must get to the alien mastermind's hidden chamber beneath the Louvre and destroy it, even though he can no longer survive his own mistakes.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "climax"
@@ -283,6 +300,7 @@
       "id": "e_reset_final",
       "type": "loop_reset",
       "label": "Omega death resets to helicopter earlier with power shifted",
+      "description": "The mastermind's death throws Cage back in time one last time - further than before, to a morning days earlier - but this time without his power, in a world where its death is already undoing the invasion.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "ending"
@@ -295,6 +313,7 @@
       "id": "e_new_morning",
       "type": "checkpoint",
       "label": "Cage awake on prior morning; Mira alive",
+      "description": "Cage wakes on a helicopter ride that happens days before the beach assault ever took place, in a world where none of it has happened yet - and where the tide of the war is already turning.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "epilogue dawn"
@@ -304,6 +323,7 @@
       "id": "e_know",
       "type": "ordinary",
       "label": "Approaches Rita with hard-won knowledge",
+      "description": "Cage tracks down Rita, a stranger to him now, and carries alone the memory of every one of those repeated days - and of her.",
       "at": {
         "worldRef": "w_eot",
         "timeLabel": "close"

@@ -1,7 +1,7 @@
 {
   "meta": {
     "id": "deja-vu",
-    "title": "D\u00e9j\u00e0 Vu",
+    "title": "Déjà Vu",
     "year": 2006,
     "medium": "film",
     "sources": [
@@ -72,6 +72,7 @@
       "id": "e_bomb",
       "type": "ordinary",
       "label": "New Orleans ferry bombing kills 543",
+      "description": "A terrorist bomb blows up a New Orleans ferry packed with sailors and their families - 543 dead, and ATF agent Doug Carlin is first on the scene.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "Mardi Gras"
@@ -85,6 +86,7 @@
       "id": "e_claire_body",
       "type": "observation",
       "label": "Claire's body staged; died before blast",
+      "description": "A woman's burned body washes up - Claire - and the forensics say she died hours before the bomb: she was killed, then used to plant it.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "investigation"
@@ -98,6 +100,7 @@
       "id": "e_snow_white",
       "type": "reveal",
       "label": "Snow White is a ~4.5-day wormhole window",
+      "description": "A secret government lab shows Doug 'Snow White': a window on the past, four and a half days wide - they can watch everything that happened, but not touch it.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "lab"
@@ -115,6 +118,7 @@
       "id": "e_watch",
       "type": "observation",
       "label": "Surveillance courtship of Claire's last days",
+      "description": "Doug watches Claire's last days through the window, following her lead on the bomber - and falls for the woman he knows is already dead.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "-4.5d"
@@ -128,6 +132,7 @@
       "id": "e_note",
       "type": "intervention",
       "label": "Send note to past; Minuti finds it and is shot",
+      "description": "Doug breaks the rules and sends a note into the past; the agent who receives it is shot dead within minutes - the past pushes back.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "note"
@@ -143,6 +148,7 @@
       "id": "e_arrest",
       "type": "ordinary",
       "label": "Present arrest of Oerstadt; case 'closed'",
+      "description": "Working the case in the present, Doug's team arrests the bomber, Carroll Oerstadt - but 543 people are still dead and the case closes unsatisfying.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "arrest"
@@ -156,6 +162,7 @@
       "id": "e_leap",
       "type": "departure",
       "label": "Carlin physically sent to morning of bombing",
+      "description": "The lab goes further than watching: they send Doug himself through the wormhole, into the morning of the bombing.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "transfer"
@@ -172,6 +179,7 @@
       "id": "e_arrive_past",
       "type": "arrival",
       "label": "Arrives past; stops Claire's murder",
+      "description": "Doug arrives in time to save Claire from Oerstadt's murder - the first change to a past everyone believed was fixed.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "morning"
@@ -184,7 +192,8 @@
     {
       "id": "e_call",
       "type": "ordinary",
-      "label": "Claire calls ATF \u2014 the call his office received",
+      "label": "Claire calls ATF — the call his office received",
+      "description": "Claire phones in the tip about the ferry - and Doug realises the anonymous call his own office received days ago was always her.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "apartment"
@@ -201,6 +210,7 @@
       "id": "e_ferry",
       "type": "intervention",
       "label": "Kills Oerstadt; drives bomb truck into river",
+      "description": "Doug kills Oerstadt, handcuffs him to the bomb's truck, and drives it off the ferry onto the river road, clearing the deck of the dead man's plan.",
       "at": {
         "worldRef": "w_past",
         "timeLabel": "ferry"
@@ -215,6 +225,7 @@
       "id": "e_drown",
       "type": "death",
       "label": "Carlin drowns; Claire swims free",
+      "description": "With the truck sinking, Doug drowns in the cab - the past takes its price - while Claire swims free.",
       "at": {
         "worldRef": "w_saved",
         "timeLabel": "ferry"
@@ -228,6 +239,7 @@
       "id": "e_pier",
       "type": "contact",
       "label": "Pier: surviving Claire meets present-timeline Doug",
+      "description": "On the pier, grieving in one timeline, Doug meets Claire - alive, pulled from the river, in a world where the ferry never blew.",
       "at": {
         "worldRef": "w_saved",
         "timeLabel": "aftermath"
@@ -244,6 +256,7 @@
       "id": "e_branch",
       "type": "branch_fork",
       "label": "Branch where ferry is saved",
+      "description": "The ending lands in the changed branch: the bombing undone, at the cost of the Doug who went back.",
       "at": {
         "worldRef": "w_saved",
         "timeLabel": "new present"
@@ -257,6 +270,7 @@
       "id": "e_x_ferry",
       "type": "ordinary",
       "label": "Ferry bombing investigation",
+      "description": "The investigation into the ferry bombing, 543 victims deep.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "open"
@@ -266,6 +280,7 @@
       "id": "e_x_trail",
       "type": "observation",
       "label": "Snow White surveillance past viewer",
+      "description": "Following the evidence through Snow White's window on the past.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"
@@ -275,6 +290,7 @@
       "id": "e_x_send",
       "type": "departure",
       "label": "Send objects then self into past",
+      "description": "First notes and objects cross into the past, then a living man.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "late"
@@ -284,6 +300,7 @@
       "id": "e_x_claire",
       "type": "ordinary",
       "label": "Claire relationship",
+      "description": "The relationship built through a window - Doug watching, then meeting her for real in the only place that matters.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"
@@ -293,6 +310,7 @@
       "id": "e_x_prevent",
       "type": "intervention",
       "label": "Attempt to prevent bombing",
+      "description": "The whole effort narrows to one aim: stop the bombing before it happens.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "climax"
@@ -302,6 +320,7 @@
       "id": "e_x_ambush",
       "type": "ordinary",
       "label": "Ambush / death beats",
+      "description": "The violent beats - the ambushes and deaths that the timeline exacts along the way.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "climax"
@@ -311,6 +330,7 @@
       "id": "e_x_survive",
       "type": "checkpoint",
       "label": "Altered outcome; Carlin lives in new line",
+      "description": "The altered outcome: in the branch where the ferry is saved, Carlin lives on in it.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "end"
@@ -320,6 +340,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Past writable with tech cost",
+      "description": "The lab's lesson: the past can be written, but the technology - and history - exact a cost.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "rules"

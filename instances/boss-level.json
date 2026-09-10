@@ -27,7 +27,7 @@
       "kind": "timeline",
       "id": "w_day",
       "label": "Osiris Spindle day loop",
-      "spanLabel": "~07:00\u201312:47 \u00d7 140"
+      "spanLabel": "~07:00–12:47 × 140"
     }
   ],
   "agents": [
@@ -65,6 +65,7 @@
       "id": "e_wake",
       "type": "ordinary",
       "label": "Roy wakes 07:00; apartment assassins",
+      "description": "Roy wakes at seven in the morning to assassins storming his apartment - the opening of a day he will live and die more than a hundred times.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "07:00"
@@ -80,6 +81,7 @@
       "id": "e_chopper",
       "type": "ordinary",
       "label": "Helicopter gunner; building explodes",
+      "description": "A helicopter gunship tears into the building and blows it apart - one of the many ways the day ends for him.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "morning"
@@ -91,7 +93,8 @@
     {
       "id": "e_die_1247",
       "type": "death",
-      "label": "Dies ~12:47 \u2014 hard fail learned over ~140 loops",
+      "label": "Dies ~12:47 — hard fail learned over ~140 loops",
+      "description": "No matter what he does, Roy dies at 12:47 - the day's hard limit, learned across roughly a hundred and forty repeats.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "12:47"
@@ -107,6 +110,7 @@
       "id": "e_reset",
       "type": "loop_reset",
       "label": "Osiris Spindle resets Roy to morning",
+      "description": "Death returns him to the same morning. The machine responsible - the Osiris Spindle - holds him in the repeating day.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "reset"
@@ -124,6 +128,7 @@
       "id": "e_joe",
       "type": "ordinary",
       "label": "Bonds with son Joe at gaming tournament",
+      "description": "Between deaths, Roy bonds with his son Joe at a gaming tournament - relearning how to be a father he barely was.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "midday"
@@ -137,6 +142,7 @@
       "id": "e_father",
       "type": "death",
       "label": "Dies protecting Joe; reveals he is father",
+      "description": "Roy dies shielding Joe, finally telling him the truth: he is his father, and he loves him.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "tournament"
@@ -150,6 +156,7 @@
       "id": "e_tracker",
       "type": "intervention",
       "label": "Removes Alice tracker across trial loops",
+      "description": "Across the loops, Roy works out how to remove the tracker that keeps finding him - one solved problem at a time.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "optimize"
@@ -162,6 +169,7 @@
       "id": "e_ventor",
       "type": "reveal",
       "label": "Ventor: Spindle is quantum history rewriter; killed Jemma",
+      "description": "Ventor, the scientist behind the Spindle, reveals what it is - a machine that rewrites history - and that he killed Jemma, Roy's ex-wife, to build it.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "Dynow"
@@ -175,6 +183,7 @@
       "id": "e_sword",
       "type": "ordinary",
       "label": "Trains sword work with Dai Feng loop-by-loop",
+      "description": "Loop by loop, Roy trains swordsmanship with master Dai Feng, arriving at the same lesson hundreds of times until he perfects it.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "training"
@@ -188,6 +197,7 @@
       "id": "e_false_win",
       "type": "death",
       "label": "Kills Ventor but Joe dies; Spindle apocalypse",
+      "description": "Roy finally kills Ventor - and Joe dies and the Spindle melts the world down: the one perfect-seeming loop that ends in apocalypse.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "fail state"
@@ -204,7 +214,8 @@
     {
       "id": "e_phone",
       "type": "observation",
-      "label": "Jemma phoned Joe after supposed murder \u2014 still alive AM",
+      "label": "Jemma phoned Joe after supposed murder — still alive AM",
+      "description": "A phone call proves Jemma alive after her supposed murder - the loop's timeline is not what Roy was told.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "research loops"
@@ -221,6 +232,7 @@
       "id": "e_speedrun",
       "type": "intervention",
       "label": "Chopper speedrun; save Jemma in 14 minutes",
+      "description": "Roy speedruns the day: helicopter hijack, rescue of Jemma in fourteen minutes flat, every hard-earned skill spent at once.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "winning run"
@@ -234,7 +246,8 @@
     {
       "id": "e_enter",
       "type": "departure",
-      "label": "Roy enters Spindle to reset \u2014 ambiguous continue",
+      "label": "Roy enters Spindle to reset — ambiguous continue",
+      "description": "Roy walks into the Spindle to reset everything one last time - and the film leaves him mid-loop, still fighting.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "ending"
@@ -251,7 +264,8 @@
     {
       "id": "e_cake",
       "type": "loop_reset",
-      "label": "Alt ending: faces morning attacker \u2014 'Piece o cake'",
+      "label": "Alt ending: faces morning attacker — 'Piece o cake'",
+      "description": "In the alternate ending, he wakes to the morning's first assassin and takes it in stride: piece of cake.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "alt continue"
@@ -267,6 +281,7 @@
       "id": "e_x_wake",
       "type": "loop_reset",
       "label": "Roy wakes to assassination day",
+      "description": "Roy wakes into the same assassination morning again.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "loop"
@@ -276,6 +291,7 @@
       "id": "e_x_wife",
       "type": "ordinary",
       "label": "Jemma / Guanite weapon plot",
+      "description": "Jemma's thread: her secret weapon work, and the Guanite plot around it.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "mid"
@@ -285,6 +301,7 @@
       "id": "e_x_child",
       "type": "ordinary",
       "label": "Son stakes",
+      "description": "Joe is the day's true stake - the son Roy keeps failing and finally learns to save.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "mid"
@@ -294,6 +311,7 @@
       "id": "e_x_skills",
       "type": "intervention",
       "label": "Attributes gains across deaths",
+      "description": "Each death is a lesson: skills banked across loops turn Roy into the man who can survive the day.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "growth"
@@ -303,6 +321,7 @@
       "id": "e_x_final",
       "type": "checkpoint",
       "label": "Escape loop confrontation",
+      "description": "The final confrontation, where everything learned across the loops is cashed in.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "end"
@@ -312,6 +331,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Death resets day",
+      "description": "The rule of the day: die, and it starts again at seven.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "rules"
@@ -321,6 +341,7 @@
       "id": "e_x_army",
       "type": "ordinary",
       "label": "Private army assaults",
+      "description": "A private army storms the day again and again - the same battle fought to perfection over many resets.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "mid"
@@ -330,6 +351,7 @@
       "id": "e_x_close",
       "type": "ordinary",
       "label": "Family aftermath",
+      "description": "After the loop, family - the aftermath the film has been earning.",
       "at": {
         "worldRef": "w_day",
         "timeLabel": "close"

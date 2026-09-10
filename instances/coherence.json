@@ -91,6 +91,7 @@
       "id": "e_dinner",
       "type": "ordinary",
       "label": "Dinner party begins; comet banter",
+      "description": "Eight friends gather for a dinner party on the night a comet called Miller passes close over the house, trading small talk and old grievances.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "comet night early"
@@ -107,6 +108,7 @@
       "id": "e_blackout",
       "type": "ordinary",
       "label": "Power fails; phones lose signal",
+      "description": "Mid-dinner the power cuts out across the neighbourhood and the phones go dead; the comet, someone half-jokes, might be doing stranger things than knocking out the lights.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "comet night"
@@ -120,6 +122,7 @@
       "id": "e_other_house",
       "type": "contact",
       "label": "Identical lit house spotted across dark street",
+      "description": "Someone ventures into the dark street for a phone and spots the only lit house in the distance - a house identical to the one they're in, where they seem to be having the very same dinner.",
       "at": {
         "worldRef": "w_house_b",
         "timeLabel": "comet night"
@@ -137,7 +140,8 @@
     {
       "id": "e_schrodinger",
       "type": "observation",
-      "label": "Schr\u00f6dinger / decoherence framing becomes literal",
+      "label": "Schrödinger / decoherence framing becomes literal",
+      "description": "The guests talk over dinner of Schrödinger's cat and quantum states, and the film makes the talk uncomfortably literal: tonight, every possibility of who they might be seems to be walking around.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "discussion"
@@ -151,6 +155,7 @@
       "id": "e_glowsticks",
       "type": "intervention",
       "label": "Glow sticks and notes label origin groups",
+      "description": "To keep straight who is who, groups mark themselves with glow sticks of different colours and leave each other notes - a fragile system of labels in a night with too many versions.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "mapping"
@@ -165,6 +170,7 @@
       "id": "e_split_groups",
       "type": "branch_fork",
       "label": "Groups split across dark streets into alternate copies",
+      "description": "Parties go out into the blacked-out street and come back different: the friends split into groups that are alternate copies of the same dinner, each believing they are the original.",
       "at": {
         "worldRef": "w_house_b",
         "timeLabel": "exploration"
@@ -179,6 +185,7 @@
       "id": "e_box_note",
       "type": "observation",
       "label": "Box of numbered photos / notes found",
+      "description": "Someone brings back a box holding photographs of each guest, numbered - snapshots of their own evening, taken by someone else's version of it.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "mid night"
@@ -192,6 +199,7 @@
       "id": "e_violence",
       "type": "intervention",
       "label": "Betrayals escalate; doubles replaced",
+      "description": "As the night goes on the doubles turn on each other: some guests decide to replace their happier counterparts, and betrayals spiral into threats and worse.",
       "at": {
         "worldRef": "w_house_b",
         "timeLabel": "late"
@@ -206,6 +214,7 @@
       "id": "e_emily_attack",
       "type": "intervention",
       "label": "Emily attacks another Emily to steal happier reality",
+      "description": "Emily, quietly the film's centre, attacks another version of herself - knocking her out and taking her place in the version of the evening where her life turns out well.",
       "at": {
         "worldRef": "w_house_happy",
         "timeLabel": "climax"
@@ -224,6 +233,7 @@
       "id": "e_phone",
       "type": "reveal",
       "label": "Morning phone call may expose the swap",
+      "description": "The next morning, Emily's phone rings: it is Kevin, the boyfriend of the Emily she replaced - and his greeting makes horribly clear which version of the night he survived.",
       "at": {
         "worldRef": "w_house_happy",
         "timeLabel": "next morning"
@@ -239,6 +249,7 @@
       "id": "ev_comet",
       "type": "ordinary",
       "label": "Miller's Comet dinner blackout",
+      "description": "The dinner party takes place under the passing of Miller's Comet, the night everything starts to come apart.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "night"
@@ -254,6 +265,7 @@
       "id": "ev_split",
       "type": "ordinary",
       "label": "Dark-path house multiples / glow sticks",
+      "description": "Out in the dark street, the house lights multiply - the guests find copies of themselves in copies of their own house.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "night"
@@ -269,6 +281,7 @@
       "id": "ev_emily_replace",
       "type": "ordinary",
       "label": "Emily replaces other-self",
+      "description": "Emily trades herself for a luckier Emily, knocking out her double and stepping into a life that isn't hers.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "climax"
@@ -284,6 +297,7 @@
       "id": "e_comet",
       "type": "ordinary",
       "label": "Dinner party during comet",
+      "description": "A group of old friends sit down to dinner on the night the comet passes, unaware of what the evening will become.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "night"
@@ -293,6 +307,7 @@
       "id": "e_dark",
       "type": "ordinary",
       "label": "Power dark; houses multiply",
+      "description": "The power fails and the street goes black, and in the dark the single house across the way becomes several - lights coming on where there were none.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "early"
@@ -302,6 +317,7 @@
       "id": "e_box",
       "type": "observation",
       "label": "Glowstick/numbered photos mark realities",
+      "description": "Glow sticks, numbered photographs and scribbled notes become the only way to tell the many versions of the evening apart.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "mid"
@@ -311,6 +327,7 @@
       "id": "e_doubles",
       "type": "contact",
       "label": "Duplicates from decohered houses",
+      "description": "Guests keep meeting themselves: duplicates from the other houses wander into the story, each one certain they are the real one.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "mid"
@@ -320,6 +337,7 @@
       "id": "e_em",
       "type": "intervention",
       "label": "Emily tries to replace another Emily",
+      "description": "Emily realises she can choose between her possible selves - and she chooses to take the place of a happier Emily.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "climax"
@@ -329,6 +347,7 @@
       "id": "e_car",
       "type": "ordinary",
       "label": "Morning: another Em already in car",
+      "description": "In the morning, Emily walks to a car where another Emily already sits, phone in hand - the swap may not be as clean as she thought.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "ending"
@@ -338,6 +357,7 @@
       "id": "e_decohere",
       "type": "observation",
       "label": "Comet-induced quantum decoherence premise",
+      "description": "The film's premise is quantum mechanics made domestic: as the comet passes, the friends' realities fall apart into many versions that all exist at once.",
       "at": {
         "worldRef": "w_house_a",
         "timeLabel": "rules"

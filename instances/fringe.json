@@ -5,7 +5,7 @@
     "year": 2008,
     "medium": "tv",
     "sources": [
-      "J.J. Abrams, Alex Kurtzman, Roberto Orci (2008\u20132013)",
+      "J.J. Abrams, Alex Kurtzman, Roberto Orci (2008–2013)",
       "time-travel-archive/tv/fringe.md",
       "tenet-class deepen 2026-09-06"
     ]
@@ -124,6 +124,7 @@
       "id": "e_pattern",
       "type": "ordinary",
       "label": "Fringe Pattern cases begin",
+      "description": "A run of impossible cases - a plane whose passengers all melted, a chemical that turns people inside out - pulls the FBI into a hidden war between two worlds.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S1"
@@ -139,6 +140,7 @@
       "id": "e_cortexiphan",
       "type": "reveal",
       "label": "Cortexiphan trials / Olivia abilities",
+      "description": "As a child Olivia was secretly dosed with an experimental drug that unlocked strange abilities in her - the government did it, and never told her.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "backstory"
@@ -152,6 +154,7 @@
       "id": "e_kidnap",
       "type": "intervention",
       "label": "Walter stole Peter from Over There as child",
+      "description": "In this world's version of 1985, the brilliant scientist Walter Bishop watched his son Peter die - and snatched the healthy Peter from the world next door to raise as his own.",
       "at": {
         "worldRef": "w_over_there",
         "timeLabel": "1985"
@@ -169,6 +172,7 @@
       "id": "e_bridge_cost",
       "type": "observation",
       "label": "Crossing damaged both universes",
+      "description": "Every trip between the two worlds leaves scars: the other side's air rots, its people sicken, and blame for the damage nearly starts a war.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "mythology"
@@ -182,6 +186,7 @@
       "id": "e_shapeshifters",
       "type": "contact",
       "label": "Shapeshifter incursions",
+      "description": "Killers from the other universe can take over a body and wear a person's life like a suit, and they keep slipping into this world on missions.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S2"
@@ -194,6 +199,7 @@
       "id": "e_over_there",
       "type": "arrival",
       "label": "Team contacts Over There",
+      "description": "The team finally makes contact with their own doubles on the other side - a world like ours but harder-edged, and just as frightened.",
       "at": {
         "worldRef": "w_over_there",
         "timeLabel": "S2-S3"
@@ -210,6 +216,7 @@
       "id": "e_swap_olivia",
       "type": "intervention",
       "label": "Olivia replaced by Fauxlivia",
+      "description": "The other side's agents swap their Olivia for ours: the real one is trapped in their world while an impostor lives her life at home, even falling in love with Peter.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S3"
@@ -223,6 +230,7 @@
       "id": "e_peter_erase",
       "type": "collapse",
       "label": "Peter erased from timeline briefly",
+      "description": "The man whose existence caused all the trouble, Peter, is removed from history entirely - and hardly anyone remembers he was ever alive at all.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S3 end"
@@ -235,6 +243,7 @@
       "id": "e_return_peter",
       "type": "arrival",
       "label": "Peter returns; memories uneven",
+      "description": "Peter fights his way back into a world that has forgotten him, finding friends who have no memory of their years together and a history that has reshaped itself around his absence.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S4"
@@ -249,6 +258,7 @@
       "id": "e_observers",
       "type": "reveal",
       "label": "Observers / invasion future",
+      "description": "Pale, bald men in suits who have always watched from the edges of history turn out to be invaders from the far future, who one day take over the world.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S4-S5"
@@ -263,6 +273,7 @@
       "id": "e_amber",
       "type": "intervention",
       "label": "Amber protocol vs Observer occupation",
+      "description": "When the invaders rule, resistance fighters trap whole city blocks in a hardening amber goo to smuggle people past them, freezing buildings and their occupants in time.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S5"
@@ -276,6 +287,7 @@
       "id": "e_invasion",
       "type": "ordinary",
       "label": "2036 Observer dystopia arc",
+      "description": "Decades from now the future belongs to the Observers: humanity reduced to survivors hiding in ruins and venting tunnels, hunted by their emotionless rulers.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S5"
@@ -289,6 +301,7 @@
       "id": "e_plan",
       "type": "intervention",
       "label": "Walter's plan to reset Observer future",
+      "description": "An old scientist's last scheme: gather everything needed to send one child back through time and change the future before the invasion ever happens.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S5 climax"
@@ -302,6 +315,7 @@
       "id": "e_sacrifice",
       "type": "ordinary",
       "label": "Walter/Michael sacrifice to remove Observers",
+      "description": "The plan only works if someone walks into the past and never comes back - Walter takes that price, erasing himself along with the invaders' future.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "finale"
@@ -314,6 +328,7 @@
       "id": "e_boy",
       "type": "ordinary",
       "label": "Michael anomaly child as key",
+      "description": "A strange, silent child who reads minds turns out to be the one being both worlds need - the key to undoing the future and the reason for the whole plan.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S5"
@@ -326,6 +341,7 @@
       "id": "e_letter",
       "type": "ordinary",
       "label": "White tulip / letters theme reprise",
+      "description": "Walter keeps and re-reads a letter containing a drawing of a white tulip - a sign of forgiveness - hoping the man he wronged would one day understand what he did.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "motif"
@@ -339,6 +355,7 @@
       "id": "e_two_worlds",
       "type": "observation",
       "label": "Dual world war over resources/tech",
+      "description": "Two Earths, nearly identical, slide toward open war: each blames the other for a crumbling world, and each quietly arms itself for invasion.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S3"
@@ -352,6 +369,7 @@
       "id": "e_dof",
       "type": "branch_fork",
       "label": "Soft reboot after Peter erase",
+      "description": "With Peter gone, the story resets around his absence: same people, same struggle, but a history with new shapes in it that no one can quite place.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "S4"
@@ -365,6 +383,7 @@
       "id": "e_harmony",
       "type": "ordinary",
       "label": "Bridge cooperation attempt",
+      "description": "For a while the two worlds stop fighting and build a bridge between them, working cases together and trying to heal the damage both sides caused.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "mid"
@@ -378,6 +397,7 @@
       "id": "e_end",
       "type": "ordinary",
       "label": "Family restored; Observer timeline undone",
+      "description": "The great reset leaves one world whole and free: Peter and Olivia are together again with their daughter, and the dark future never happens.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "series end"
@@ -392,6 +412,7 @@
       "id": "e_tech",
       "type": "ordinary",
       "label": "Massive Dynamic / cortex tech dual-use",
+      "description": "The powerful company Massive Dynamic harvests futuristic technology that heals and protects - and can just as easily be turned into weapons for the coming war.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "ongoing"
@@ -405,6 +426,7 @@
       "id": "e_love",
       "type": "ordinary",
       "label": "Olivia-Peter emotional continuity across rewrites",
+      "description": "No matter how many times the past is rewritten, Olivia and Peter keep finding each other and falling in love again - their bond survives even when memories do not.",
       "at": {
         "worldRef": "w_over_here",
         "timeLabel": "arc"

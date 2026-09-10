@@ -124,6 +124,7 @@
       "id": "e_garage",
       "type": "ordinary",
       "label": "Garage engineering / error-correcting box",
+      "description": "Four engineers spend nights and weekends building side projects in a garage - among them a device, the Box, that was meant to cancel gravity fields.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "week 0"
@@ -137,6 +138,7 @@
       "id": "e_box_found",
       "type": "reveal",
       "label": "Box enables time displacement",
+      "description": "A failsafe in the Box's error-correcting loop starts behaving impossibly - and Abe and Aaron discover the field inside it loops time: an object can sit in it for hours and emerge at the moment it entered.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "discovery"
@@ -154,6 +156,7 @@
       "id": "e_abe_hotel",
       "type": "departure",
       "label": "Abe's first controlled hotel start",
+      "description": "Abe secretly builds a big enough Box, turns it on in a storage unit, checks into a hotel, and waits - planning to step into the field at noon and walk out when it started.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "hotel T0"
@@ -172,6 +175,7 @@
       "id": "e_abe_exit",
       "type": "arrival",
       "label": "Abe exits box earlier same day",
+      "description": "It works: Abe exits a second Box that has been running since morning, emerging into a day where his earlier self is still out there living it.",
       "at": {
         "worldRef": "w_ab1",
         "timeLabel": "hotel T-delta"
@@ -188,6 +192,7 @@
       "id": "e_stocks",
       "type": "intervention",
       "label": "Stock trades via foreknowledge",
+      "description": "The two start using the loops for money - trading stocks with knowledge of the day's closes, then sleeping through the hours they already lived.",
       "at": {
         "worldRef": "w_overlap",
         "timeLabel": "market days"
@@ -204,6 +209,7 @@
       "id": "e_recordings",
       "type": "observation",
       "label": "Earpiece recordings guide revisions",
+      "description": "Aaron goes further, recording the day's conversations and wearing an earpiece inside the repeat - feeding himself his own lines so he can play every scene perfectly.",
       "at": {
         "worldRef": "w_overlap",
         "timeLabel": "overlap weeks"
@@ -219,6 +225,7 @@
       "id": "e_party",
       "type": "intervention",
       "label": "Party / Rachel revisions via recursive boxes",
+      "description": "At a birthday party, a guest is shot - and Aaron uses nested Boxes to go back again and again, replaying the afternoon until he engineers a version where no one dies.",
       "at": {
         "worldRef": "w_overlap",
         "timeLabel": "party night"
@@ -235,6 +242,7 @@
       "id": "e_granger",
       "type": "arrival",
       "label": "Thomas Granger appears from downstream",
+      "description": "Thomas Granger - the investor backing them - appears in their lives impossibly early, half-conscious and mute: a man who has been inside a Box far longer than any of them can account for.",
       "at": {
         "worldRef": "w_overlap",
         "timeLabel": "unexpected"
@@ -251,6 +259,7 @@
       "id": "e_failsafe_act",
       "type": "branch_fork",
       "label": "Aaron activates failsafe preemption",
+      "description": "Aaron reveals he secretly activated his failsafe Box days earlier - he has been living days that the others don't remember, rewinding further than anyone knew.",
       "at": {
         "worldRef": "w_failsafe",
         "timeLabel": "preempt"
@@ -268,6 +277,7 @@
       "id": "e_drugged",
       "type": "intervention",
       "label": "Drugged doubles / hanging-out containment",
+      "description": "To keep the day's earlier doubles out of the way, the two drug their own past selves - the story's queasy mark of how far they'll go to control their repeats.",
       "at": {
         "worldRef": "w_failsafe",
         "timeLabel": "gas / attic"
@@ -282,6 +292,7 @@
       "id": "e_confront",
       "type": "reveal",
       "label": "Abe confronts overlapping Aarons; trust breaks",
+      "description": "Aaron and Abe finally confront each other's hidden repeats - each discovering how many of the days they trusted were already second-hand - and the partnership breaks.",
       "at": {
         "worldRef": "w_failsafe",
         "timeLabel": "airport hangar"
@@ -296,6 +307,7 @@
       "id": "e_abe_plan",
       "type": "intervention",
       "label": "Abe tries to shut down further misuse",
+      "description": "Abe tries to contain the damage: shut the Boxes down, undo what can be undone, stop the technology before it swallows them.",
       "at": {
         "worldRef": "w_abe_reset",
         "timeLabel": "containment"
@@ -311,6 +323,7 @@
       "id": "e_exit",
       "type": "departure",
       "label": "Aaron leaves to build larger project",
+      "description": "Aaron refuses and leaves - off to build Boxes large enough for a man to live whole other years inside.",
       "at": {
         "worldRef": "w_aaron_exit",
         "timeLabel": "coda"
@@ -326,6 +339,7 @@
       "id": "e_phone",
       "type": "ordinary",
       "label": "Final phone call; irreconcilable",
+      "description": "Their last phone call, days or years down the line: two men who can no longer trust any version of each other's timeline.",
       "at": {
         "worldRef": "w_aaron_exit",
         "timeLabel": "coda call"
@@ -339,6 +353,7 @@
       "id": "ev_granger",
       "type": "ordinary",
       "label": "Granger appears / collapses",
+      "description": "Granger's impossible arrival - proof that someone else has found the Boxes, and used them in ways neither engineer planned.",
       "at": {
         "worldRef": "w_overlap",
         "timeLabel": "mid-week anomaly"
@@ -358,6 +373,7 @@
       "id": "ev_party_iter",
       "type": "ordinary",
       "label": "Aaron iterative party rewrite",
+      "description": "The party afternoon replayed again and again - each iteration nudging events away from the gunshot.",
       "at": {
         "worldRef": "w_failsafe",
         "timeLabel": "Robert party night"
@@ -376,6 +392,7 @@
       "id": "ev_stock_protocol",
       "type": "ordinary",
       "label": "Shared stock-loop protocol",
+      "description": "The shared ritual of the stock loops: phone trades placed with tomorrow's knowledge, profits laundered through ordinary days.",
       "at": {
         "worldRef": "w_ab1",
         "timeLabel": "early box days"
@@ -395,6 +412,7 @@
       "id": "e_pad_box",
       "type": "ordinary",
       "label": "Box discovered as time machine",
+      "description": "The garage device that turned out to fold hours back on themselves.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "garage"
@@ -407,6 +425,7 @@
       "id": "e_pad_hotel",
       "type": "departure",
       "label": "Abe hotel failsafe plan",
+      "description": "Abe's first careful loop: hotel, storage unit, and a morning spent inside his own past.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "early"
@@ -419,6 +438,7 @@
       "id": "e_pad_stocks",
       "type": "ordinary",
       "label": "Stock loop protocol",
+      "description": "The money protocol that made the loops feel safe - right up until everything else wasn't.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "mid"
@@ -428,6 +448,7 @@
       "id": "e_pad_trust",
       "type": "ordinary",
       "label": "Trust collapse Aaron/Abe",
+      "description": "The trust between them, spent like currency and finally gone - each man a secret to the other.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "late"
@@ -437,6 +458,7 @@
       "id": "e_pad_exit",
       "type": "ordinary",
       "label": "Aaron leaves to build larger boxes",
+      "description": "Aaron walking away from the friendship to build something vaster.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "end"
@@ -446,6 +468,7 @@
       "id": "e_pad_contain",
       "type": "intervention",
       "label": "Abe tries to contain proliferation",
+      "description": "Abe's instinct to shut it all down - the engineer who saw what proliferation means and wanted no part of it.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "end"

@@ -34,7 +34,7 @@
       "id": "w_variant_loki",
       "label": "Loki Variant branch (2012 escape)",
       "parentRef": "w_sacred",
-      "forkLabel": "nexus \u2014 Tesseract grab",
+      "forkLabel": "nexus — Tesseract grab",
       "pruneAuthority": "TVA"
     },
     {
@@ -102,7 +102,8 @@
     {
       "id": "e_nexus",
       "type": "branch_fork",
-      "label": "2012 Loki escapes with Tesseract \u2014 nexus",
+      "label": "2012 Loki escapes with Tesseract — nexus",
+      "description": "During the battle of New York, Loki grabs the glowing blue cube that lets him teleport, and slips away through a doorway - vanishing into history where he should never be.",
       "at": {
         "worldRef": "w_variant_loki",
         "timeLabel": "2012 NY"
@@ -119,6 +120,7 @@
       "id": "e_arrest",
       "type": "arrival",
       "label": "TVA arrests Variant Loki",
+      "description": "Officers from the Time Variance Authority, a grey bureaucracy that polices history, pluck Loki out of the past and arrest him for stepping off the path history was meant to follow.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "TVA"
@@ -136,6 +138,7 @@
       "id": "e_reset_demo",
       "type": "branch_prune",
       "label": "Reset charges prune minor branches",
+      "description": "The TVA shows Loki how it deals with unauthorised history: agents stamp small, stray branches of events out of existence with hand-held devices.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "TVA demo"
@@ -151,6 +154,7 @@
       "id": "e_hunt_sylvie",
       "type": "ordinary",
       "label": "Hunt for Sylvie across apocalypses",
+      "description": "Loki joins a TVA agent, Mobius, to track a fugitive who has been hiding at the ends of the world in moments just before civilisations are wiped out.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "missions"
@@ -165,6 +169,7 @@
       "id": "e_rox",
       "type": "branch_fork",
       "label": "Roxxcart / Lamentis nexus blooms",
+      "description": "The fugitive, a woman calling herself Sylvie, is cornered in a supermarket and then on a doomed moon - and in each desperate moment, new histories suddenly sprout around her and Loki.",
       "at": {
         "worldRef": "w_lava",
         "timeLabel": "Lamentis-1"
@@ -181,6 +186,7 @@
       "id": "e_prune_loki",
       "type": "branch_prune",
       "label": "Loki pruned to Void",
+      "description": "Betrayed and scattered, Loki is struck by a TVA weapon that erases its victim, and he wakes in a wasteland at the end of time rather than simply ceasing to be.",
       "at": {
         "worldRef": "w_void",
         "timeLabel": "TVA betrayal"
@@ -197,6 +203,7 @@
       "id": "e_void",
       "type": "arrival",
       "label": "Void: pruned variants / Alioth",
+      "description": "In the wasteland, Loki finds generations of other erased versions of himself, all hiding from a colossal smoke monster that devours everything it catches.",
       "at": {
         "worldRef": "w_void",
         "timeLabel": "end of time"
@@ -211,6 +218,7 @@
       "id": "e_enchant",
       "type": "intervention",
       "label": "Enchant Alioth; reach Citadel",
+      "description": "Sylvie joins Loki and uses her power to reach into the monster's mind, holding it still long enough for the two of them to slip past it to a distant citadel.",
       "at": {
         "worldRef": "w_citadel",
         "timeLabel": "Citadel"
@@ -225,6 +233,7 @@
       "id": "e_hewho",
       "type": "reveal",
       "label": "He Who Remains explains Sacred Timeline",
+      "description": "Beyond the monster waits a cheerful, unassuming man who reveals he has been quietly steering all of history along a single safe path to prevent a war among his own many selves.",
       "at": {
         "worldRef": "w_citadel",
         "timeLabel": "office"
@@ -242,6 +251,7 @@
       "id": "e_kill",
       "type": "death",
       "label": "Sylvie kills He Who Remains",
+      "description": "Against his warnings and Loki's protests, Sylvie shoots the man who kept history on one line, taking her revenge and letting every version of history loose at once.",
       "at": {
         "worldRef": "w_citadel",
         "timeLabel": "choice"
@@ -254,7 +264,8 @@
     {
       "id": "e_multiverse",
       "type": "branch_fork",
-      "label": "Multiverse unleashed \u2014 branches infinite",
+      "label": "Multiverse unleashed — branches infinite",
+      "description": "With the keeper gone, history splits endlessly at every turn - countless parallel versions of reality now grow unchecked from every choice.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "post-HWR"
@@ -271,6 +282,7 @@
       "id": "ev_tva",
       "type": "ordinary",
       "label": "Variant Loki captured by TVA",
+      "description": "The fugitive Loki of 2012 is caught by the Time Variance Authority, the strange office that insists his escape was never supposed to happen.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "S1"
@@ -286,6 +298,7 @@
       "id": "ev_hwr",
       "type": "ordinary",
       "label": "He Who Remains killed; branches unbound",
+      "description": "The hidden ruler of the timeline is killed, and the single authorised version of history breaks apart into countless free-growing branches.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "S1 end"
@@ -301,6 +314,7 @@
       "id": "ev_ygg",
       "type": "ordinary",
       "label": "Loki becomes living loom/Yggdrasil",
+      "description": "Loki takes it upon himself to hold every diverging version of history together personally, becoming a living tree whose branches are all the timelines that might be.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "S2 end"
@@ -316,6 +330,7 @@
       "id": "e_tva",
       "type": "arrival",
       "label": "Loki variant arrives at TVA",
+      "description": "Loki, on the run after the battle of New York, is captured by the Time Variance Authority and put on trial for crimes against the proper flow of history.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "S1"
@@ -325,6 +340,7 @@
       "id": "e_prune",
       "type": "branch_prune",
       "label": "Sacred Timeline pruning explained",
+      "description": "The TVA explains its creed: only one version of history is allowed, and agents erase any diverging version by cutting it off with their weapons.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "early"
@@ -337,6 +353,7 @@
       "id": "e_sylvie",
       "type": "ordinary",
       "label": "Sylvie counterpart alliance/romance",
+      "description": "Loki meets Sylvie, a woman who is another version of himself, and the two move from wary enemies to allies - and eventually fall in love.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "mid"
@@ -346,6 +363,7 @@
       "id": "e_alioth",
       "type": "ordinary",
       "label": "Alioth at End of Time",
+      "description": "At the very end of time, the erased are hunted by Alioth, a monstrous storm-cloud creature that consumes everything cut off from history.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "late S1"
@@ -355,6 +373,7 @@
       "id": "e_kill_hwr",
       "type": "intervention",
       "label": "Sylvie kills He Who Remains",
+      "description": "Sylvie kills the mysterious man behind the whole TVA, ignoring his warning that doing so will unleash a far worse fate on all of existence.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "S1 end"
@@ -364,6 +383,7 @@
       "id": "e_branch_war",
       "type": "branch_fork",
       "label": "Timeline branches explode",
+      "description": "With the one approved version of history gone, timelines multiply wildly and threaten to reignite a devastating multiverse war.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "aftermath"
@@ -373,6 +393,7 @@
       "id": "e_loom",
       "type": "ordinary",
       "label": "Temporal loom crisis S2",
+      "description": "In the second series, the machine that weaves history together begins to overload, and the TVA races to keep it from melting down and destroying every timeline.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "S2"
@@ -382,6 +403,7 @@
       "id": "e_loki_throne",
       "type": "intervention",
       "label": "Loki replaces loom; holds branches",
+      "description": "When the machine can no longer cope, Loki sacrifices his freedom: he sits at the centre of time, physically holding every world line together like a living tree, alone forever.",
       "at": {
         "worldRef": "w_sacred",
         "timeLabel": "S2 end"

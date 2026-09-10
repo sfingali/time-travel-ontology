@@ -81,6 +81,7 @@
       "id": "e_wake1",
       "type": "ordinary",
       "label": "Renton wakes with Hannah; Bloc raid begins",
+      "description": "Renton wakes beside his girlfriend Hannah in a house where time has just started over - and armed raiders burst in, beginning a morning he will live many times.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "loop morning"
@@ -97,6 +98,7 @@
       "id": "e_death1",
       "type": "death",
       "label": "Renton dies escaping; first reset",
+      "description": "Trying to flee the raiders, Renton is shot dead - and immediately wakes back in bed at the start of the same morning.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "loop morning"
@@ -112,6 +114,7 @@
       "id": "e_reset1",
       "type": "loop_reset",
       "label": "ARQ resets interval; Renton retains memory",
+      "description": "The house's mysterious machine, the ARQ, has restarted the day, but Renton alone carries his memories forward into the repeat.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "reset"
@@ -129,6 +132,7 @@
       "id": "e_hannah_bloc",
       "type": "reveal",
       "label": "Hannah revealed as Bloc Mother; trust fractures",
+      "description": "Hannah turns out to be an agent of the Bloc, the group after the ARQ - and Renton learns the woman beside him has been lying about who she is.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "mid-loop"
@@ -142,6 +146,7 @@
       "id": "e_arq_theory",
       "type": "observation",
       "label": "Renton theorizes ARQ loops house volume as temporal battery",
+      "description": "Renton works out what the ARQ is: a machine that traps the whole house in a repeating stretch of time, its endless restarts storing energy like a battery.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "mid-loop"
@@ -151,13 +156,14 @@
         "hannah"
       ],
       "payload": {
-        "note": "not free energy \u2014 localized loop"
+        "note": "not free energy — localized loop"
       }
     },
     {
       "id": "e_hannah_remembers",
       "type": "loop_reset",
       "label": "Hannah retains memory across reset",
+      "description": "After another reset Hannah starts remembering too - the two of them are now the only ones who know the day is repeating.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "later loop"
@@ -174,6 +180,7 @@
       "id": "e_sonny_mole",
       "type": "reveal",
       "label": "Sonny exposed as Torus mole",
+      "description": "Sonny, the raiders' leader, is exposed as a spy for Torus, the corporation that will one day own the ARQ's technology.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "later loop"
@@ -188,6 +195,7 @@
       "id": "e_sonny_remembers",
       "type": "loop_reset",
       "label": "Sonny retains memory; arms-race loops",
+      "description": "Sonny gains the same memory-carrying advantage, and the loops turn into an arms race - each reset lets the different sides scheme further.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "aware loops"
@@ -203,6 +211,7 @@
       "id": "e_cuz_saved",
       "type": "intervention",
       "label": "Aware Sonny saves Cuz from ARQ electrocution",
+      "description": "With his new foreknowledge, Sonny saves his man Cuz from the ARQ's electric trap - small proof of how much the repeats can be exploited.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "aware loops"
@@ -216,6 +225,7 @@
       "id": "e_boundary",
       "type": "observation",
       "label": "Escape proves loop is house-bounded",
+      "description": "An escape attempt proves the loop's edges: the day resets only for the house and everything inside it - step outside and you keep whatever you find.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "boundary test"
@@ -232,6 +242,7 @@
       "id": "e_nested",
       "type": "reveal",
       "label": "Logs reveal outer nine-cycle wipe nesting inner loops",
+      "description": "Hidden logs reveal worse news: this day-loop sits inside a larger cycle, nine repetitions wiped clean by something outside they cannot see.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "late"
@@ -249,6 +260,7 @@
       "id": "e_message",
       "type": "intervention",
       "label": "Record message for future iterations; hope to deliver ARQ to Bloc",
+      "description": "Renton and Hannah record a message for their future selves, hoping to finally hand the ARQ over to the Bloc and break the pattern.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "ninth inner"
@@ -266,6 +278,7 @@
       "id": "e_robot",
       "type": "death",
       "label": "Torus robot kills them; Hannah gasps awake",
+      "description": "A Torus robot cuts the plan short, killing them both - and Hannah's sharp gasp as she wakes suggests the loop has not finished with them.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "cliffhanger"
@@ -282,6 +295,7 @@
       "id": "e_outer_reset",
       "type": "loop_reset",
       "label": "Implied outer/nested cycle continues",
+      "description": "The implication hangs unspoken: the whole house-loop may itself be starting over from a point no one inside can remember.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "outer wipe"
@@ -298,6 +312,7 @@
       "id": "e_x_loop",
       "type": "loop_reset",
       "label": "Rentos wakes again in hijacked van",
+      "description": "In the wider story, Renton wakes once more in the hijacked van where his loops began.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "loop"
@@ -307,6 +322,7 @@
       "id": "e_x_wife",
       "type": "ordinary",
       "label": "Wife/hostage dynamics across iterations",
+      "description": "The hostages and captors shift roles across the repeats, each iteration rewriting who holds power in the van.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "mid"
@@ -316,6 +332,7 @@
       "id": "e_x_rent",
       "type": "ordinary",
       "label": "Corporate Renton antagonism",
+      "description": "A harder Renton - the corporate variant - stands across from the man we know as the story's antagonist in the repeats.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "mid"
@@ -325,6 +342,7 @@
       "id": "e_x_escape",
       "type": "intervention",
       "label": "Attempted escapes rewrite",
+      "description": "Escape attempts pile up, each one rewriting the morning differently.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "late"
@@ -334,6 +352,7 @@
       "id": "e_x_choice",
       "type": "checkpoint",
       "label": "Final choice about looping tech",
+      "description": "It ends on a choice about the looping technology itself - whether to use it, destroy it, or hand it on.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "end"
@@ -343,6 +362,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Blocking tech causes death-loop",
+      "description": "The rule that binds them: blocking the machine's cycle kills - the loop keeps its prisoners by death as much as by walls.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "rules"
@@ -352,6 +372,7 @@
       "id": "e_x_gas",
       "type": "ordinary",
       "label": "Gas/ventilation tactics",
+      "description": "Gas and ventilation become weapons across the iterations - controlling the air means controlling who wakes.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "mid"
@@ -361,6 +382,7 @@
       "id": "e_x_end",
       "type": "ordinary",
       "label": "Ambiguous exit",
+      "description": "The film closes on an ambiguous exit - out of the loop, perhaps, but into what is never shown.",
       "at": {
         "worldRef": "w_house",
         "timeLabel": "close"

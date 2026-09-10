@@ -5,7 +5,7 @@
     "year": 2012,
     "medium": "tv",
     "sources": [
-      "Simon Barry (2012\u20132015)",
+      "Simon Barry (2012–2015)",
       "time-travel-archive/tv/continuum.md",
       "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
       "tenet-class deepen 2026-09-06"
@@ -33,7 +33,7 @@
       "kind": "timeline",
       "id": "w_2012",
       "label": "2012 Vancouver mission field",
-      "spanLabel": "2012\u2013"
+      "spanLabel": "2012–"
     },
     {
       "kind": "branch",
@@ -81,6 +81,7 @@
       "id": "e_2077",
       "type": "ordinary",
       "label": "2077 corporate-state; Liber8 terrorists sentenced",
+      "description": "In 2077, corporations rule and everyone else lives under their control - City Protective Services officer Kiera Cameron guards a system she believes in.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "2077"
@@ -94,6 +95,7 @@
       "id": "e_send_back",
       "type": "departure",
       "label": "Liber8 time-travel escape; Kiera pulled along",
+      "description": "Sentenced terrorists, Liber8, escape their execution by jumping to 2012 - and Kiera is dragged along with them, stranded sixty-five years early.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "2077"
@@ -111,6 +113,7 @@
       "id": "e_2012",
       "type": "arrival",
       "label": "Arrive Vancouver 2012; Kiera joins VPD via CSC",
+      "description": "Kiera lands in Vancouver and, with the police force of this era unable to process the future, joins the VPD using a cover story from the last service standing.",
       "at": {
         "worldRef": "w_2012",
         "timeLabel": "2012"
@@ -125,7 +128,8 @@
     {
       "id": "e_alec",
       "type": "contact",
-      "label": "Meet young Alec Sadler \u2014 future corporate architect",
+      "label": "Meet young Alec Sadler — future corporate architect",
+      "description": "Kiera meets teenage Alec Sadler - a brilliant loner in 2012 who will grow up to build the very corporate world she served, and whose tech she already wears.",
       "at": {
         "worldRef": "w_2012",
         "timeLabel": "2012"
@@ -139,6 +143,7 @@
       "id": "e_liber8",
       "type": "intervention",
       "label": "Liber8 attacks reshape tech/politics toward their future",
+      "description": "Liber8's attacks on banks and corporations push this era's politics and technology along the road to the future they fled - the terrorists are shaping the timeline they came from.",
       "at": {
         "worldRef": "w_2012",
         "timeLabel": "S1"
@@ -151,9 +156,10 @@
       "id": "e_kellog",
       "type": "ordinary",
       "label": "Kellog plays markets for personal empire",
+      "description": "Alec's uncle Kellog plays the stock market with future knowledge and plays both sides of the conflict, quietly building his own empire.",
       "at": {
         "worldRef": "w_2012",
-        "timeLabel": "S1\u2013S2"
+        "timeLabel": "S1–S2"
       },
       "agents": [
         "kellog"
@@ -163,9 +169,10 @@
       "id": "e_duplicate",
       "type": "arrival",
       "label": "Multiple time jumps create duplicate Alecs/Kieras",
+      "description": "As more travellers jump through time, duplicates begin to pile up: two Alecs, two Kieras, each version with its own claim on the future.",
       "at": {
         "worldRef": "w_2012b",
-        "timeLabel": "S2\u2013S3"
+        "timeLabel": "S2–S3"
       },
       "agents": [
         "alec",
@@ -179,6 +186,7 @@
       "id": "e_save_emily",
       "type": "branch_fork",
       "label": "Alec saves Emily; aborts one future path",
+      "description": "Alec chooses to save Emily, and in doing so kills off one version of his own future - a path closed by a single decision.",
       "at": {
         "worldRef": "w_2012b",
         "timeLabel": "S2"
@@ -194,6 +202,7 @@
       "id": "e_invasion",
       "type": "intervention",
       "label": "Finale: stop darker path / future soldiers portal",
+      "description": "In the endgame, Liber8's darkest plan opens a doorway for soldiers from a worse 2077 - and Kiera faces the future she left coming back through.",
       "at": {
         "worldRef": "w_2012",
         "timeLabel": "Final Hour"
@@ -208,6 +217,7 @@
       "id": "e_sabotage",
       "type": "intervention",
       "label": "Alec sabotages keys; invasion collapses",
+      "description": "Alec sabotages the key that opens the doorway, and the invasion collapses before it can begin.",
       "at": {
         "worldRef": "w_2012",
         "timeLabel": "finale"
@@ -220,6 +230,7 @@
       "id": "e_better_2077",
       "type": "arrival",
       "label": "Kiera reaches better 2077",
+      "description": "Kiera finally reaches 2077 again - a kinder version of it, the one her actions in 2012 helped make possible.",
       "at": {
         "worldRef": "w_2077b",
         "timeLabel": "2077b"
@@ -235,6 +246,7 @@
       "id": "e_other_kiera",
       "type": "reveal",
       "label": "Variant Kiera already exists as Sam's mother",
+      "description": "There is already another Kiera here: a variant who lived these years first, and is the mother of young Sam.",
       "at": {
         "worldRef": "w_2077b",
         "timeLabel": "2077b"
@@ -250,6 +262,7 @@
       "id": "e_accept",
       "type": "ordinary",
       "label": "Bittersweet acceptance of changed future she cannot fully rejoin",
+      "description": "Kiera accepts the bittersweet ending - the future she returns to is better than the one she lost, but it is no longer quite hers.",
       "at": {
         "worldRef": "w_2077b",
         "timeLabel": "end"
@@ -262,6 +275,7 @@
       "id": "e_x_future",
       "type": "ordinary",
       "label": "2077 corporate future cops",
+      "description": "The corporate future of 2077, where police serve companies and freedom is a managed resource.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "future"
@@ -271,6 +285,7 @@
       "id": "e_x_jump",
       "type": "departure",
       "label": "Kiera jumps to 2012 with Liber8",
+      "description": "Kiera is thrown back to 2012 alongside the terrorists she was guarding.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "2012"
@@ -280,6 +295,7 @@
       "id": "e_x_vancouver",
       "type": "ordinary",
       "label": "Vancouver police embed",
+      "description": "Embedding with the Vancouver police of 2012, badge and lies in hand.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "mid"
@@ -289,6 +305,7 @@
       "id": "e_x_alec",
       "type": "ordinary",
       "label": "Young Alec Sadler nexus",
+      "description": "Young Alec - the boy genius whose inventions and future empire hang over every choice.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "mid"
@@ -298,6 +315,7 @@
       "id": "e_x_liber8",
       "type": "intervention",
       "label": "Stop/alter Liber8 attacks",
+      "description": "Fighting, out-manoeuvring and occasionally agreeing with the revolutionaries from her own time.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "ongoing"
@@ -307,6 +325,7 @@
       "id": "e_x_branch",
       "type": "branch_fork",
       "label": "Future messages rewrite",
+      "description": "Messages from the future keep rewriting what Kiera knows about how her story ends.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "late"
@@ -316,6 +335,7 @@
       "id": "e_x_tech",
       "type": "ordinary",
       "label": "CMR / time travel tech politics",
+      "description": "The politics of the future's technology in a past that hasn't learned to fear it yet.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "theme"
@@ -325,6 +345,7 @@
       "id": "e_x_end",
       "type": "ordinary",
       "label": "Series future renegotiation",
+      "description": "The series closes with the future renegotiated - not saved, not damned, changed.",
       "at": {
         "worldRef": "w_2077a",
         "timeLabel": "end"

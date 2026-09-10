@@ -5,7 +5,7 @@
     "year": 2019,
     "medium": "tv",
     "sources": [
-      "Steve Blackman; Way & B\u00e1 (2019\u20132024)",
+      "Steve Blackman; Way & Bá (2019–2024)",
       "time-travel-archive/tv/umbrella-academy.md",
       "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
       "tenet-class deepen 2026-09-06"
@@ -88,6 +88,7 @@
       "id": "e_birth",
       "type": "birth",
       "label": "43 children born same day; seven adopted by Reginald",
+      "description": "On the same day, forty-three babies are born to mothers who had shown no sign of pregnancy. An eccentric billionaire adopts seven of them and raises them to be a team of superheroes.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "1989"
@@ -102,6 +103,7 @@
       "id": "e_five_jump",
       "type": "departure",
       "label": "Five jumps to apocalyptic future wasteland",
+      "description": "The stubborn young Number Five, tired of waiting, throws himself forward in time and lands alone in a ruined future where the world has already ended.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "youth"
@@ -117,6 +119,7 @@
       "id": "e_commission",
       "type": "ordinary",
       "label": "Five works as Commission assassin across time",
+      "description": "Trapped in the wasteland, Five is recruited by a shadowy office called the Commission, which sends assassins across history to keep events on their intended course. He works for them for decades.",
       "at": {
         "worldRef": "w_commission",
         "timeLabel": "decades"
@@ -132,6 +135,7 @@
       "id": "e_s1_warn",
       "type": "arrival",
       "label": "Five returns warning of 2019 apocalypse",
+      "description": "Five finally finds his way back to his teenage years and delivers terrible news to his adopted brothers and sisters: the world ends in just over a week.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "2019"
@@ -146,7 +150,8 @@
     {
       "id": "e_moon",
       "type": "ordinary",
-      "label": "Viktor's power + Commission \u2192 Moon apocalypse",
+      "label": "Viktor's power + Commission → Moon apocalypse",
+      "description": "Viktor's enormous, long-suppressed powers are unleashed, and the family learns this is what destroys the world - setting off the very catastrophe Five warned about.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "S1 end"
@@ -160,9 +165,10 @@
       "id": "e_dallas",
       "type": "departure",
       "label": "Five jumps siblings to 1960s Dallas",
+      "description": "With the end of the world unstoppable in their own time, Five uses a stolen briefcase to drag all his siblings away - and they land scattered across 1960s Dallas.",
       "at": {
         "worldRef": "w_main",
-        "timeLabel": "S1\u2192S2"
+        "timeLabel": "S1→S2"
       },
       "agents": [
         "five"
@@ -176,6 +182,7 @@
       "id": "e_s2",
       "type": "intervention",
       "label": "Avert 1960s apocalypse; briefcase home to rewritten present",
+      "description": "The siblings settle into 1960s lives, stop a second doomsday, and squeeze back into their briefcase to return home - only to find the present has changed under them.",
       "at": {
         "worldRef": "w_1960s",
         "timeLabel": "S2"
@@ -188,6 +195,7 @@
       "id": "e_sparrow",
       "type": "branch_fork",
       "label": "Home replaced by Sparrow Academy timeline",
+      "description": "Back in the present, the siblings discover their mansion belongs to a different adopted family of super-powered strangers, the Sparrow Academy - because Reginald never took them in in this version of history.",
       "at": {
         "worldRef": "w_sparrow",
         "timeLabel": "S3"
@@ -200,7 +208,8 @@
     {
       "id": "e_kugelblitz",
       "type": "ordinary",
-      "label": "Paradox Umbrellas \u2192 Kugelblitz eats universe",
+      "label": "Paradox Umbrellas → Kugelblitz eats universe",
+      "description": "The two families' existences clash, tearing a hole in reality called a kugelblitz - a hungry ball of black hole that swallows the universe piece by piece.",
       "at": {
         "worldRef": "w_sparrow",
         "timeLabel": "S3"
@@ -213,6 +222,7 @@
       "id": "e_founder",
       "type": "reveal",
       "label": "Commission Founder is elderly alternate Five",
+      "description": "It emerges that the shadowy Commission was created and run by an elderly version of Five himself from another branch of history.",
       "at": {
         "worldRef": "w_commission",
         "timeLabel": "S3"
@@ -229,6 +239,7 @@
       "id": "e_subway",
       "type": "departure",
       "label": "Five & Lila lost years in multiverse subway",
+      "description": "Five and his sister-in-law Lila tumble through a labyrinth of secret stations beneath time itself, and wander them for years before finding a way back.",
       "at": {
         "worldRef": "w_subway",
         "timeLabel": "S4"
@@ -244,6 +255,7 @@
       "id": "e_deli",
       "type": "contact",
       "label": "Max's Deli: ~145412 variant Fives; Umbrellas always end worlds",
+      "description": "At a deli at the end of time, Five meets a whole population of alternate Fives, and learns the bitter truth: no matter what, his family always ends the world.",
       "at": {
         "worldRef": "w_subway",
         "timeLabel": "S4"
@@ -258,7 +270,8 @@
     {
       "id": "e_erase",
       "type": "intervention",
-      "label": "Marigold+durango cancel \u2014 erase Umbrellas from history",
+      "label": "Marigold+durango cancel — erase Umbrellas from history",
+      "description": "To save all of existence, the siblings give up their powers and let their unusual origins be undone - erasing themselves from history so a clean world can exist.",
       "at": {
         "worldRef": "w_clean",
         "timeLabel": "S4 end"
@@ -275,6 +288,7 @@
       "id": "e_peaceful",
       "type": "ordinary",
       "label": "Clean timeline; strangers live peaceful lives",
+      "description": "In the final world, with no powers and no Academy, the brothers and sisters live as ordinary strangers - but can still be seen crossing paths, alive and at peace.",
       "at": {
         "worldRef": "w_clean",
         "timeLabel": "coda"
@@ -287,6 +301,7 @@
       "id": "e_x_apocalypse",
       "type": "ordinary",
       "label": "Apocalypse countdown",
+      "description": "The countdown begins: the Hargreeves children learn the world is due to end within days, and their own choices are what set the clock ticking.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "open"
@@ -296,6 +311,7 @@
       "id": "e_x_five",
       "type": "arrival",
       "label": "Number Five time jumps",
+      "description": "Number Five can blink through time, though the jumps are wild and hard to control - they strand him for decades and shape his whole life.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "early"
@@ -305,6 +321,7 @@
       "id": "e_x_commission",
       "type": "ordinary",
       "label": "Temps Commission bureaucracy",
+      "description": "The Temps Commission is the faceless agency quietly managing history, sending agents up and down time to make sure the apocalypse it profits from happens as written.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "mid"
@@ -314,6 +331,7 @@
       "id": "e_x_1960s",
       "type": "departure",
       "label": "S2 1960s timeline",
+      "description": "Stranded separately in 1960s Dallas, each sibling builds a new life - until their presence there starts a fresh doomsday they must defuse together.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "S2"
@@ -323,6 +341,7 @@
       "id": "e_x_kugel",
       "type": "ordinary",
       "label": "Kugelblitz / S3 reset",
+      "description": "After the siblings return home and find history rewritten around them, rival families collide and a kugelblitz - a black hole devouring the universe - begins to grow.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "S3"
@@ -332,6 +351,7 @@
       "id": "e_x_sparrow",
       "type": "ordinary",
       "label": "Sparrow Academy variant family",
+      "description": "In the rewritten present, another version of the family exists: the Sparrow Academy, seven strangers with the same powers and none of the sibling history.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "S3"
@@ -341,6 +361,7 @@
       "id": "e_x_reset",
       "type": "collapse",
       "label": "Timeline resets / endings",
+      "description": "Each series ends with history rewritten or remade around the family - a new present, a new threat, and the siblings carrying the memories no one else has.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "late"
@@ -350,6 +371,7 @@
       "id": "e_x_family",
       "type": "ordinary",
       "label": "Sibling bonds across resets",
+      "description": "Whatever version of history they land in, the adopted siblings keep finding each other: the family bond survives every reset of the world.",
       "at": {
         "worldRef": "w_main",
         "timeLabel": "theme"
@@ -545,7 +567,7 @@
         },
         {
           "ruleSetId": "bootstrap_ontological",
-          "effect": "Commission was founded by a Five \u2014 erased with them"
+          "effect": "Commission was founded by a Five — erased with them"
         }
       ]
     }

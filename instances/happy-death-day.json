@@ -67,6 +67,7 @@
       "id": "e_birthday",
       "type": "ordinary",
       "label": "Tree wakes on birthday in Carter's dorm",
+      "description": "Tree Gelbman wakes on her birthday in the dorm room of a boy she barely knows, the morning after a drunken party.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "Day 1 morning"
@@ -80,6 +81,7 @@
       "id": "e_party",
       "type": "ordinary",
       "label": "Campus party; Tree cruel to peers",
+      "description": "At the campus party the night before, Tree treats the people around her badly - careless, cruel, and cheerfully friendless.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "night"
@@ -92,6 +94,7 @@
       "id": "e_tunnel_kill",
       "type": "death",
       "label": "Masked killer murders Tree in tunnel",
+      "description": "On her way to a birthday dinner she never reaches, a figure in a school mascot mask murders Tree in a campus tunnel.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "night 1"
@@ -107,6 +110,7 @@
       "id": "e_reset1",
       "type": "loop_reset",
       "label": "Wake reset to birthday morning",
+      "description": "Tree wakes with a start back in Carter's dorm on the morning of her birthday - the same morning, as if the murder never happened.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "Day 2"
@@ -124,6 +128,7 @@
       "id": "e_room_kill",
       "type": "death",
       "label": "Killed again in dorm path",
+      "description": "Dismissing the deja vu, Tree is killed again - this time in her own room - and wakes once more to the same birthday morning.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "night 2"
@@ -136,6 +141,7 @@
       "id": "e_investigate",
       "type": "intervention",
       "label": "Uses loops to map killer pattern / suspects",
+      "description": "Now taking it seriously, Tree uses each loop to map the killer's movements and draw up a list of who could be under the mask.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "mid loops"
@@ -152,6 +158,7 @@
       "id": "e_hospital",
       "type": "ordinary",
       "label": "Hospital chase / Tombs escape subplot",
+      "description": "Tree tries hiding in the hospital and is hunted through it by the mask - and picks up a promising suspect from a news report about a campus serial killer.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "hospital loop"
@@ -166,6 +173,7 @@
       "id": "e_suspect_trail",
       "type": "observation",
       "label": "Suspect trail through peers and exes",
+      "description": "Loop by loop she works through exes, lecturers and strangers, each candidate eliminated the hard way.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "investigation"
@@ -179,6 +187,7 @@
       "id": "e_tombs_frame",
       "type": "intervention",
       "label": "False solution: stop Tombs",
+      "description": "Tree becomes convinced the hospital killer, Tombs, is her murderer and plans a loop to stop him - the wrong answer, but an honest one.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "Tombs night"
@@ -193,6 +202,7 @@
       "id": "e_carter_dies",
       "type": "death",
       "label": "Carter dies in Tombs confrontation",
+      "description": "In the attempt to stop Tombs, Carter is killed - the one loss Tree cannot shrug off.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "failed solution"
@@ -207,6 +217,7 @@
       "id": "e_tree_suicide",
       "type": "death",
       "label": "Tree suicides to reset and save Carter",
+      "description": "Unable to accept a world without Carter, Tree ends her own life to force the day to start again and try to save him.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "moral reset"
@@ -222,6 +233,7 @@
       "id": "e_reset_carter",
       "type": "loop_reset",
       "label": "Loop restores Carter",
+      "description": "The loop restarts with Carter alive, and Tree sets out to keep him out of danger for good.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "after suicide"
@@ -238,6 +250,7 @@
       "id": "e_perfect_day",
       "type": "intervention",
       "label": "Kill Tombs and eat cupcake 'perfect day'",
+      "description": "Tree allows herself one flawless loop - humiliating her lecherous lecturer, helping her friends, killing Tombs - and celebrates with a cupcake.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "false exit"
@@ -254,7 +267,8 @@
     {
       "id": "e_still_loops",
       "type": "loop_reset",
-      "label": "Still resets \u2014 killer not solved",
+      "label": "Still resets — killer not solved",
+      "description": "Even with Tombs dead, Tree wakes to the same birthday again. The real killer is still out there.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "after perfect day"
@@ -270,6 +284,7 @@
       "id": "e_lori_reveal",
       "type": "reveal",
       "label": "Lori is true killer via poison cupcake",
+      "description": "The mask comes off: her roommate Lori - resentful over an affair with Tree's married lecturer - is the killer, and has poisoned the birthday cupcake.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "reveal"
@@ -283,6 +298,7 @@
       "id": "e_final_fight",
       "type": "intervention",
       "label": "Final confrontation with Lori",
+      "description": "Tree confronts Lori in a final struggle for her life.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "climax"
@@ -297,6 +313,7 @@
       "id": "e_lori_death",
       "type": "death",
       "label": "Lori defeated/killed",
+      "description": "Lori dies in the last confrontation, and with her the day that kept killing Tree finally lets go.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "climax"
@@ -310,6 +327,7 @@
       "id": "e_survive_night",
       "type": "ordinary",
       "label": "Tree survives the night with Carter",
+      "description": "Tree lives past the night for the first time since the loops began, waking up with Carter beside her.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "exit night"
@@ -323,6 +341,7 @@
       "id": "e_next_day",
       "type": "checkpoint",
       "label": "Next calendar morning confirms exit",
+      "description": "The calendar has moved on: it is now the 3rd of February. The loop is over.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "Day after"
@@ -339,6 +358,7 @@
       "id": "e_prank",
       "type": "ordinary",
       "label": "Prank beat proves date rolled forward",
+      "description": "A roommate's prank on the new morning proves the date truly rolled forward - the same joke would have been erased yesterday.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "epilogue"
@@ -352,6 +372,7 @@
       "id": "e_growth",
       "type": "ordinary",
       "label": "Tree kinder; loop trauma remains",
+      "description": "Tree comes out of the loops a kinder person, though the weight of all her deaths stays with her.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "close"
@@ -365,6 +386,7 @@
       "id": "e_rules",
       "type": "observation",
       "label": "Death-triggered birthday loop; memory retained",
+      "description": "How the loop works: every death sends Tree back to her birthday morning with her memories intact - she must break the day, or be broken by it.",
       "at": {
         "worldRef": "w_birthday",
         "timeLabel": "rules"

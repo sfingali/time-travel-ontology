@@ -10,7 +10,9 @@ Root type: **StoryEncoding** (`src/schema/story.ts`).
 - `topologyPatternId` — catalogue pattern id
 - `worlds` — Timeline | Branch | ParallelWorld descriptors
 - `agents` — id, label, identityGroup? (bootstrap/counterpart selves)
-- `events` — id, type, label, at.{worldRef,timeLabel?}, agents?, payload?
+- `events` — id, type, label, description?, at.{worldRef,timeLabel?}, agents?, payload?
+  - `description` is plain English for readers with no ontology vocabulary;
+    renderers show it as the node's primary text, above the short `label`.
 - `edges` — id, kind, from, to, label?, relation?, identityRelation?, orderKind?
 - `interventions` — id, eventId, ruleEffects[]
 - `outcome` — summary, endWorldRefs[]

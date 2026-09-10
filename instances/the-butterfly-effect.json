@@ -25,7 +25,7 @@
       "kind": "timeline",
       "id": "w_base",
       "label": "Baseline damaged adulthood",
-      "spanLabel": "childhood\u2192college"
+      "spanLabel": "childhood→college"
     },
     {
       "kind": "branch",
@@ -80,6 +80,7 @@
       "id": "e_blackouts",
       "type": "ordinary",
       "label": "Childhood blackouts / journals",
+      "description": "As a boy, Evan suffers blackouts that swallow whole stretches of time - and journals everything he can remember to fill the gaps.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "childhood"
@@ -93,7 +94,8 @@
     {
       "id": "e_read",
       "type": "departure",
-      "label": "College Evan reads journals \u2192 body past",
+      "label": "College Evan reads journals → body past",
+      "description": "Years later, reading his old journals throws Evan back into those lost moments, inside his childhood body, able to act.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "college"
@@ -110,6 +112,7 @@
       "id": "e_fix1",
       "type": "intervention",
       "label": "First childhood fix attempt",
+      "description": "Evan tries to repair the worst day of childhood - the day his friend Kayleigh's life was ruined - by changing what he did then.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "past"
@@ -123,6 +126,7 @@
       "id": "e_wake_prison",
       "type": "arrival",
       "label": "Wake into prison timeline",
+      "description": "He surfaces in a present where that fix made everything worse: imprisoned, feared, his friend destroyed in a new way.",
       "at": {
         "worldRef": "w_prison",
         "timeLabel": "adult"
@@ -135,6 +139,7 @@
       "id": "e_fix2",
       "type": "intervention",
       "label": "Further journal rewrites cascade",
+      "description": "Each rewrite aims at a smaller, safer correction - and each lands him in a present more damaged than the last.",
       "at": {
         "worldRef": "w_prison",
         "timeLabel": "past"
@@ -147,6 +152,7 @@
       "id": "e_wake_amp",
       "type": "arrival",
       "label": "Wake into amputee / frat timeline",
+      "description": "One attempt costs him both arms in the new present: hospitalised, dependent, his life's work gone.",
       "at": {
         "worldRef": "w_amputee",
         "timeLabel": "adult"
@@ -160,6 +166,7 @@
       "id": "e_final",
       "type": "intervention",
       "label": "In utero: strangle self with cord",
+      "description": "Out of options, Evan goes all the way back - to the womb - and ends his own life before it begins.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "birth"
@@ -172,6 +179,7 @@
       "id": "e_fork_never",
       "type": "branch_fork",
       "label": "Evan never born; Kayleigh spared",
+      "description": "With Evan never born, the abuses and disasters that trailed his childhood never happen, and Kayleigh grows up safe with her sister instead.",
       "at": {
         "worldRef": "w_neverborn",
         "timeLabel": "life without Evan"
@@ -184,6 +192,7 @@
       "id": "e_street",
       "type": "observation",
       "label": "Adult Kayleigh passes stranger Evan (alt cut) / absence",
+      "description": "In the theatrical ending's coda, a grown Kayleigh passes a stranger on the street - a face she half knows, a life that never touched hers.",
       "at": {
         "worldRef": "w_neverborn",
         "timeLabel": "years later"
@@ -195,7 +204,8 @@
     {
       "id": "e_cost",
       "type": "reveal",
-      "label": "Each fix harms someone else \u2014 butterfly cost",
+      "label": "Each fix harms someone else — butterfly cost",
+      "description": "The film's bitter rule: no fix is free. Every repaired life bills the damage to someone else.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "meta"
@@ -208,6 +218,7 @@
       "id": "ev_journal",
       "type": "ordinary",
       "label": "Journals enable past occupation",
+      "description": "The journals that let Evan travel - his own memories as doors back into his past.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "college"
@@ -223,6 +234,7 @@
       "id": "ev_branches",
       "type": "ordinary",
       "label": "Cascade of damaged timelines",
+      "description": "The cascade of damaged presents, each one a different childhood mended the wrong way.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "attempts"
@@ -238,6 +250,7 @@
       "id": "ev_terminal",
       "type": "ordinary",
       "label": "Theatrical exile OR Director in-utero erase",
+      "description": "Where it all lands: Evan gone, and the people he loved left in the one timeline where nothing ever touched them.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "ending fork"
@@ -253,6 +266,7 @@
       "id": "e_journals",
       "type": "ordinary",
       "label": "Evan journals blackouts",
+      "description": "Evan journals everything he can recall from the blackouts, not knowing what the pages will one day do.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "childhood/college"
@@ -262,6 +276,7 @@
       "id": "e_travel",
       "type": "departure",
       "label": "Reads journals; returns to past body",
+      "description": "Reading a journal entry carries him into his own past body, the present around him rewriting as he acts.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "inciting"
@@ -275,6 +290,7 @@
       "id": "e_kayleigh",
       "type": "intervention",
       "label": "Tries to save Kayleigh from abuse",
+      "description": "His first and deepest aim: spare Kayleigh the abuse that broke her childhood.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "first fix"
@@ -284,6 +300,7 @@
       "id": "e_worse",
       "type": "branch_fork",
       "label": "Each fix spawns worse present",
+      "description": "Time and again the corrected past produces a crueller present than the one he left.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "mid"
@@ -293,6 +310,7 @@
       "id": "e_prison",
       "type": "ordinary",
       "label": "Prison / amputation timelines",
+      "description": "The damaged presents pile up: a prison sentence, an amputation, friends lost in each new world.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "variants"
@@ -302,6 +320,7 @@
       "id": "e_kill_self",
       "type": "intervention",
       "label": "Strangles self in womb to erase harm",
+      "description": "In the director's ending, Evan chooses the only clean fix left - never having existed at all.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "theatrical ending"
@@ -314,6 +333,7 @@
       "id": "e_director",
       "type": "ordinary",
       "label": "Director ending: leaves Kayleigh alone",
+      "description": "The director's cut closes on Evan unmade, his loved ones safe in a world where he was never part of it.",
       "at": {
         "worldRef": "w_base",
         "timeLabel": "alt ending"

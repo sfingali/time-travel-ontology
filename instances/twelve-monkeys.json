@@ -8,6 +8,7 @@
       "Terry Gilliam; David & Janet Peoples (1995)",
       "time-travel-archive/films/twelve-monkeys.md",
       "time-travel-archive true-deep wave 2026-09-06",
+      "collated dates 2026-09-08: airport/release Dec 13 1996 (film line 'probably on December 13, 1996'); future = 2035 (film); 1990 stay year-only",
       "tenet-class deepen 2026-09-06"
     ]
   },
@@ -27,7 +28,7 @@
       "kind": "timeline",
       "id": "w_12m",
       "label": "Single plague timeline",
-      "spanLabel": "1990\u20131996\u20132035",
+      "spanLabel": "1990–1996–2035",
       "description": "Closed loop; mission fulfills the past it sought to study"
     }
   ],
@@ -66,7 +67,8 @@
     {
       "id": "e_plague",
       "type": "ordinary",
-      "label": "1996\u201397 viral apocalypse",
+      "label": "Virus released 1996-12-13 in Philadelphia; 99% of humanity dies",
+      "description": "A scientist's engineered virus wipes out almost everyone on Earth. The few survivors live underground for decades.",
       "at": {
         "worldRef": "w_12m",
         "timeLabel": "1996"
@@ -76,6 +78,7 @@
       "id": "e_send_cole",
       "type": "departure",
       "label": "2035: Cole sent to gather virus info",
+      "description": "The underground scientists pick a prisoner, James Cole, and send him back in time. He is told to find where the virus came from - not to stop it.",
       "at": {
         "worldRef": "w_12m",
         "timeLabel": "2035"
@@ -92,6 +95,7 @@
       "id": "e_wrong_1990",
       "type": "arrival",
       "label": "Cole arrives wrong year 1990; institutionalized",
+      "description": "The time machine misses its target by six years and drops Cole into 1990. The police think he is insane and lock him in a psychiatric hospital.",
       "at": {
         "worldRef": "w_12m",
         "timeLabel": "1990"
@@ -106,9 +110,10 @@
       "id": "e_1996",
       "type": "arrival",
       "label": "Cole returns to 1996 with Railly",
+      "description": "Sent back again, Cole lands in the right year. He picks up the psychiatrist who has come to believe him, and together they hunt for the virus.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "1996"
+        "timeLabel": "1996-12"
       },
       "agents": [
         "cole",
@@ -119,9 +124,10 @@
       "id": "e_army_red_herring",
       "type": "observation",
       "label": "Army of the Twelve Monkeys is animal-release red herring",
+      "description": "The trail points to a group called the Army of the Twelve Monkeys - but all they did was free the animals from the zoo. They had nothing to do with the virus.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "1996"
+        "timeLabel": "1996-12-13 zoo"
       },
       "agents": [
         "cole",
@@ -133,9 +139,10 @@
       "id": "e_airport",
       "type": "intervention",
       "label": "Airport: true bio-terrorist boards; Cole shot",
+      "description": "At the airport Cole finally spots the real carrier, a quiet scientist named Dr. Peters. Cole tries to stop him and the police shoot Cole dead.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "1996 airport"
+        "timeLabel": "1996-12-13 airport"
       },
       "agents": [
         "cole",
@@ -147,9 +154,10 @@
       "id": "e_death",
       "type": "death",
       "label": "Cole dies; boy Cole witnesses",
+      "description": "As a small boy, Cole stood in that airport and watched a man being shot. The man was his older self.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "1996 airport"
+        "timeLabel": "1996-12-13 airport"
       },
       "agents": [
         "cole",
@@ -161,9 +169,10 @@
       "id": "e_dream",
       "type": "bootstrap_origin",
       "label": "Cole's lifelong dream = his own death",
+      "description": "All his life Cole has been haunted by a dream of an airport shooting. It is not a dream - it is the memory of watching his own death.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "childhood\u21941996"
+        "timeLabel": "1996-12-13 airport (dreamed since childhood)"
       },
       "agents": [
         "cole",
@@ -178,9 +187,10 @@
       "id": "e_jose",
       "type": "ordinary",
       "label": "Jose present with future instructions",
+      "description": "Another traveler from the future, Jose, finds Cole at the airport and hands him a gun.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "1996 airport"
+        "timeLabel": "1996-12-13 airport"
       },
       "agents": [
         "scientist"
@@ -190,9 +200,10 @@
       "id": "e_loop_close",
       "type": "reveal",
       "label": "Mission was always part of the plague history",
+      "description": "Nothing is changed. The mission, Cole's death, the boy watching - it was all part of history from the start.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "1996"
+        "timeLabel": "1996-12-13 airport"
       },
       "agents": [
         "railly"
@@ -202,6 +213,7 @@
       "id": "ev_misjump",
       "type": "ordinary",
       "label": "Cole misjumps to asylum 1990",
+      "description": "Cole is thrown back to 1990 by mistake and ends up inside the asylum.",
       "at": {
         "worldRef": "w_12m",
         "timeLabel": "1990"
@@ -217,9 +229,10 @@
       "id": "ev_red_herring",
       "type": "ordinary",
       "label": "Army of Twelve Monkeys zoo release",
+      "description": "The Army of the Twelve Monkeys turns out to be animal-rights protesters who freed the zoo. Not the virus.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "1996"
+        "timeLabel": "1996-12-13 zoo"
       },
       "payload": {
         "note": "repaired from true-deep stub",
@@ -232,9 +245,10 @@
       "id": "ev_airport",
       "type": "ordinary",
       "label": "Airport death = childhood memory",
+      "description": "The airport shooting is the exact scene young Cole witnessed - his recurring dream is his own death.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "1996"
+        "timeLabel": "1996-12-13 airport"
       },
       "payload": {
         "note": "repaired from true-deep stub",
@@ -247,9 +261,10 @@
       "id": "e_sent",
       "type": "departure",
       "label": "Sent from future to find virus origin",
+      "description": "The scientists send Cole back in time to trace the virus to its source.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "future"
+        "timeLabel": "2035"
       },
       "payload": {
         "travelMode": "machine"
@@ -258,7 +273,8 @@
     {
       "id": "e_asylum",
       "type": "ordinary",
-      "label": "1990 asylum; meets Railly and Goines",
+      "label": "1990 asylum (months; month not stated); meets Railly and Goines",
+      "description": "Locked up in 1990, Cole meets two people who will shape everything: his future psychiatrist Kathryn Railly, and a wild patient named Jeffrey Goines.",
       "at": {
         "worldRef": "w_12m",
         "timeLabel": "1990"
@@ -268,18 +284,20 @@
       "id": "e_army",
       "type": "ordinary",
       "label": "Army of the Twelve Monkeys red herring",
+      "description": "Cole and Railly chase the Army of the Twelve Monkeys, convinced it released the virus.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "mid"
+        "timeLabel": "1996-12"
       }
     },
     {
       "id": "e_bootstrap",
       "type": "bootstrap_origin",
       "label": "Dream was witnessing own death",
+      "description": "Cole works out that the dream he has had since childhood is the memory of watching himself die.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "reveal"
+        "timeLabel": "1996-12-13 airport (revealed as dream)"
       },
       "payload": {
         "bootstrapEntity": "memory"
@@ -289,45 +307,63 @@
       "id": "e_virus_man",
       "type": "ordinary",
       "label": "True virus releaser boards plane",
+      "description": "The true carrier, Dr. Peters, calmly boards his flight carrying the virus. Nothing can stop him now.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "ending"
+        "timeLabel": "1996-12-13 airport"
       }
     },
     {
       "id": "e_pad_future",
       "type": "ordinary",
       "label": "Future underground survivors hierarchy",
+      "description": "Decades after the plague, what is left of humanity lives in grim underground colonies run by scientists.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "future"
+        "timeLabel": "2035"
       }
     },
     {
       "id": "e_pad_rail",
       "type": "ordinary",
       "label": "Railly becomes believer",
+      "description": "A bullet decades older than it should be convinces Railly that Cole really is a traveler from the future.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "1996"
+        "timeLabel": "1996-12"
       }
     },
     {
       "id": "e_pad_goines",
       "type": "ordinary",
       "label": "Jeffrey Goines / animal rights misdirection",
+      "description": "Everyone, including Cole, assumes the madman Jeffrey Goines unleashed the virus. He did not.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "mid"
+        "timeLabel": "1996-12"
       }
     },
     {
       "id": "e_pad_voice",
       "type": "ordinary",
       "label": "Scientist voices / mission briefing loops",
+      "description": "Cole keeps hearing recorded voices from the scientists - including a message Railly left in 1996, played back to him in the future.",
       "at": {
         "worldRef": "w_12m",
-        "timeLabel": "future"
+        "timeLabel": "2035"
+      }
+    },
+    {
+      "id": "e_peters_release",
+      "type": "ordinary",
+      "label": "Dr. Peters releases the virus in Philadelphia",
+      "description": "Dr. Peters walks through the airport with the virus and lets it loose. The end of the world is one man boarding a plane.",
+      "at": {
+        "worldRef": "w_12m",
+        "timeLabel": "1996-12-13"
+      },
+      "payload": {
+        "note": "added 2026-09-08: film line - released in Philadelphia, probably on December 13, 1996; airport boarding scene"
       }
     }
   ],
@@ -564,6 +600,12 @@
       "from": "e_airport",
       "to": "e_death",
       "label": "pressure"
+    },
+    {
+      "id": "c_peters",
+      "kind": "causal",
+      "from": "e_peters_release",
+      "to": "e_plague"
     }
   ],
   "interventions": [

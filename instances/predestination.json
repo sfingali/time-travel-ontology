@@ -27,7 +27,7 @@
       "kind": "timeline",
       "id": "w_loop",
       "label": "Closed predestination timeline",
-      "spanLabel": "orphanage\u2192bombings\u2192recruitment"
+      "spanLabel": "orphanage→bombings→recruitment"
     }
   ],
   "agents": [
@@ -71,8 +71,9 @@
   "events": [
     {
       "id": "e_orphan",
-      "type": "birth",
       "label": "Baby left at orphanage",
+      "description": "A baby girl is left at an orphanage in 1945. Nobody knows where she came from - because she was taken there from the future, by her own parent.",
+      "type": "birth",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "1945-ish orphanage"
@@ -86,8 +87,9 @@
     },
     {
       "id": "e_seduction",
-      "type": "ordinary",
       "label": "Jane seduced by mysterious lover",
+      "description": "As a young woman, Jane falls for a stranger who vanishes as suddenly as he appeared. The mysterious lover turns out to be her own older self.",
+      "type": "ordinary",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "college era"
@@ -99,8 +101,9 @@
     },
     {
       "id": "e_birth",
-      "type": "birth",
       "label": "Jane gives birth; baby stolen",
+      "description": "Jane gives birth after the lover walked out, and the baby is snatched from the hospital. The child will be raised in the very orphanage Jane came from - it is Jane herself.",
+      "type": "birth",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "maternity"
@@ -114,8 +117,9 @@
     },
     {
       "id": "e_transition",
+      "label": "Gender transition Jane→John",
+      "description": "After a difficult childbirth, Jane undergoes surgery and hormones that turn her into a man. She takes the name John and has to build a new life from scratch.",
       "type": "ordinary",
-      "label": "Gender transition Jane\u2192John",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "post-birth"
@@ -127,8 +131,9 @@
     },
     {
       "id": "e_bar_story",
-      "type": "reveal",
       "label": "John tells bartender the unbroken circle story",
+      "description": "John, now a bartender's regular, pours out his unbelievable life story to a passing agent. The story is how he gets noticed and pulled into the agency - and the listener is his own future self.",
+      "type": "reveal",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "bar 1970s"
@@ -140,8 +145,9 @@
     },
     {
       "id": "e_recruit",
-      "type": "departure",
       "label": "John recruited into Temporal Agency",
+      "description": "The agency offers John a job travelling back in time for them, since he has no family ties. He takes it, becoming the very agent who later listens to his own story.",
+      "type": "departure",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "recruitment"
@@ -157,8 +163,9 @@
     },
     {
       "id": "e_lover_trip",
-      "type": "departure",
       "label": "Agent ensures Jane meets lover (self)",
+      "description": "The agent travels back in time and makes sure Jane meets her lover - by posing as the lover himself. John, the man from the future, is the father of Jane's child.",
+      "type": "departure",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "college mission"
@@ -174,8 +181,9 @@
     },
     {
       "id": "e_baby_drop",
-      "type": "arrival",
       "label": "Agent returns baby to orphanage",
+      "description": "The agent takes the newborn from the hospital and leaves it at an orphanage in 1945. The baby grows up to be Jane, so the child raises itself.",
+      "type": "arrival",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "1945 drop"
@@ -190,8 +198,9 @@
     },
     {
       "id": "e_bomber_hunt",
-      "type": "intervention",
       "label": "Hunt for Fizzle Bomber across jumps",
+      "description": "The agent spends years chasing a bomber who leaves small explosions across the past. Each visit fails to catch him, and the chase eats away at the agent.",
+      "type": "intervention",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "multi-era"
@@ -206,8 +215,9 @@
     },
     {
       "id": "e_bomber_reveal",
-      "type": "reveal",
       "label": "Fizzle Bomber is aged agent self",
+      "description": "The agent finally corners the Fizzle Bomber and pulls off the mask: it is himself, older and worn out. The man he has hunted all this time is his own future.",
+      "type": "reveal",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "confrontation"
@@ -222,8 +232,9 @@
     },
     {
       "id": "e_kill_fail",
-      "type": "intervention",
       "label": "Agent cannot break loop; bomber continues",
+      "description": "The agent cannot bring himself to finish the bomber off properly, so the bombings keep happening. Try as he might, he cannot break the circle his life is stuck in.",
+      "type": "intervention",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "final"
@@ -235,8 +246,9 @@
     },
     {
       "id": "e_bootstrap_all",
-      "type": "bootstrap_origin",
       "label": "Entire biography is a closed causal unicycle",
+      "description": "In the end every person in this story - Jane, John, the baby, the agent, the bomber - is the same individual. Their whole life was caused by themselves, with no beginning and no end.",
+      "type": "bootstrap_origin",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "ontological"
@@ -253,8 +265,9 @@
     },
     {
       "id": "ev_orphanage",
-      "type": "ordinary",
       "label": "Baby left at 1945 orphanage",
+      "description": "A newborn is quietly left on the steps of an orphanage in 1945. That baby will grow up to be Jane, the woman whose life the whole story follows.",
+      "type": "ordinary",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "1945"
@@ -268,8 +281,9 @@
     },
     {
       "id": "ev_romance",
-      "type": "ordinary",
       "label": "John meets Jane / conceives",
+      "description": "John the time-travelling agent woos Jane as a stranger so that she will have a child. It is her own future self seducing her.",
+      "type": "ordinary",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "1963"
@@ -283,8 +297,9 @@
     },
     {
       "id": "ev_bar",
-      "type": "ordinary",
       "label": "Barkeeper hears Unmarried Mother story",
+      "description": "The bartender listens to an unmarried mother pour out an impossible life story. It is the moment the agency first hooks its recruit - and the drinker and barman are the same person years apart.",
+      "type": "ordinary",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "1970"
@@ -298,8 +313,9 @@
     },
     {
       "id": "ev_burn",
-      "type": "ordinary",
       "label": "Agent burned failing bomb disarm",
+      "description": "The agent is badly burned while trying to disarm one of the bomber's devices. The injuries and surgery leave his face changed, which is why he no longer looks like the man he was.",
+      "type": "ordinary",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "1975"
@@ -313,8 +329,9 @@
     },
     {
       "id": "ev_bomber",
-      "type": "ordinary",
       "label": "Agent confronts Fizzle Bomber self",
+      "description": "The agent tracks down the bomber and confronts him face to face, realising he is looking at himself grown old. The showdown is the hinge the whole story turns on.",
+      "type": "ordinary",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "1975+"
@@ -328,8 +345,9 @@
     },
     {
       "id": "e_pad_bar",
-      "type": "ordinary",
       "label": "Bartender/agent hears unmarried mother story",
+      "description": "A bartender hears the full strange story of the unmarried mother. The telling is deliberate: it is the recruitment interview for a man who will become an agent.",
+      "type": "ordinary",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "1970s"
@@ -337,8 +355,9 @@
     },
     {
       "id": "e_pad_baby",
-      "type": "birth",
       "label": "Baby stolen from hospital",
+      "description": "A newborn vanishes from the hospital and is carried back to an orphanage decades earlier. The stolen child is the same person who suffered the theft.",
+      "type": "birth",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "birth"
@@ -346,8 +365,9 @@
     },
     {
       "id": "e_pad_jane",
-      "type": "ordinary",
       "label": "Jane's life / Fizzle Bomber hunt",
+      "description": "The story follows Jane through orphanage, romance, motherhood and her change into John, all while the hunt for the bomber rumbles on. Every step of it was arranged by John himself.",
+      "type": "ordinary",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "arc"
@@ -355,8 +375,9 @@
     },
     {
       "id": "e_pad_reveal",
-      "type": "reveal",
       "label": "Agent, Jane, John, baby, bomber are one continuum",
+      "description": "The twist is that Jane, John, the baby, the agent and the bomber are all one single person living in a circle. There is no family here - just one life causing itself.",
+      "type": "reveal",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "reveal"
@@ -364,8 +385,9 @@
     },
     {
       "id": "e_pad_bomb",
-      "type": "ordinary",
       "label": "Fizzle Bomber confrontations",
+      "description": "The agent meets the Fizzle Bomber more than once and never cleanly wins. The confrontations pass the job on rather than end it.",
+      "type": "ordinary",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "climax"
@@ -373,8 +395,9 @@
     },
     {
       "id": "e_pad_loop",
-      "type": "bootstrap_origin",
       "label": "Ontological paradox closed",
+      "description": "The story ends where it begins, with nothing left unexplained and nothing left possible. Every event in the biography has itself as its cause.",
+      "type": "bootstrap_origin",
       "at": {
         "worldRef": "w_loop",
         "timeLabel": "close"
@@ -601,7 +624,7 @@
     }
   ],
   "outcome": {
-    "summary": "One person is mother, father, child, lover, agent, and bomber\u2014an ontological unicycle with no external origin.",
+    "summary": "One person is mother, father, child, lover, agent, and bomber—an ontological unicycle with no external origin.",
     "endWorldRefs": [
       "w_loop"
     ]

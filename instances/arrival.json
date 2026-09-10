@@ -27,7 +27,7 @@
       "kind": "timeline",
       "id": "w_earth",
       "label": "Earth contact continuum",
-      "spanLabel": "landing\u2192epilogue"
+      "spanLabel": "landing→epilogue"
     }
   ],
   "agents": [
@@ -66,6 +66,7 @@
       "id": "e_landing",
       "type": "arrival",
       "label": "Twelve vessels land worldwide",
+      "description": "Twelve enormous alien vessels settle down at sites across the Earth without warning or explanation, and the world holds its breath.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "Day 1"
@@ -78,6 +79,7 @@
       "id": "e_recruit",
       "type": "ordinary",
       "label": "Louise recruited to Montana site",
+      "description": "Linguist Louise Banks is recruited by the American military to make first contact at the Montana site - to learn what the visitors want by learning how they speak.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "early"
@@ -90,7 +92,8 @@
     {
       "id": "e_logograms",
       "type": "observation",
-      "label": "Learning heptapod logograms \u2014 nonlinear language",
+      "label": "Learning heptapod logograms — nonlinear language",
+      "description": "The aliens communicate in ink-black circular logograms, a written language with no beginning or end - a sign that those who write it experience time nothing like we do.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "sessions"
@@ -108,6 +111,7 @@
       "id": "e_weapon",
       "type": "reveal",
       "label": "Misread 'weapon' / gift of language",
+      "description": "A translated phrase is taken as 'offer weapon' and panic spreads - the word actually means a tool: the gift of their language itself.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "crisis"
@@ -122,6 +126,7 @@
       "id": "e_shang",
       "type": "intervention",
       "label": "Louise calls Shang with future-given private words",
+      "description": "Louise calls General Shang and recites his wife's dying words - words he gave her only in a future that, from inside her new sense of time, has already happened.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "war brink"
@@ -139,6 +144,7 @@
       "id": "e_unity",
       "type": "ordinary",
       "label": "Nations share data; vessels depart",
+      "description": "The twelve nations share what they have learned, the vessels rise together, and the crisis dissolves into the beginning of understanding.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "resolution"
@@ -152,6 +158,7 @@
       "id": "e_daughter_life",
       "type": "birth",
       "label": "Hannah's life (experienced nonlinearly)",
+      "description": "Louise's visions of her daughter Hannah are not memories of the past but knowledge of the future - a whole life seen from both ends at once.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "future relative"
@@ -166,6 +173,7 @@
       "id": "e_daughter_death",
       "type": "death",
       "label": "Hannah's illness/death known in advance",
+      "description": "In those same visions Louise knows Hannah will die young of a rare illness - grief she cannot avoid because it has not even begun.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "future relative"
@@ -179,6 +187,7 @@
       "id": "e_choice",
       "type": "reveal",
       "label": "Louise chooses life with Ian knowing the cost",
+      "description": "Knowing everything that awaits - the love and the loss both - Louise chooses to have her daughter anyway.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "epilogue=prologue"
@@ -195,6 +204,7 @@
       "id": "e_book",
       "type": "bootstrap_origin",
       "label": "Future knowledge enables present diplomacy",
+      "description": "The gift works: language learned outside time lets Louise act in the present with knowledge from the future, and that is what saves the standoff.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "ontological"
@@ -210,6 +220,7 @@
       "id": "ev_heptapod_b",
       "type": "ordinary",
       "label": "Louise learns Heptapod B",
+      "description": "Heptapod B, the aliens' circular script, rewires the mind that studies it until time itself starts running in both directions.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "contact"
@@ -225,6 +236,7 @@
       "id": "ev_shang",
       "type": "ordinary",
       "label": "Future phone call saves diplomacy",
+      "description": "The phone call that defuses the crisis: future knowledge passed backwards to change the present.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "crisis"
@@ -240,6 +252,7 @@
       "id": "ev_choose_hannah",
       "type": "ordinary",
       "label": "Chooses life with Hannah knowing grief",
+      "description": "Louise's decision to live Hannah's life - every moment of it, loss included - rather than refuse the grief.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "personal"
@@ -255,6 +268,7 @@
       "id": "e_team",
       "type": "ordinary",
       "label": "Louise and Ian join contact team",
+      "description": "Louise and physicist Ian join the small team shuttling into the alien shell, trying to bridge two completely different ways of being.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "early"
@@ -264,6 +278,7 @@
       "id": "e_weapon_fear",
       "type": "ordinary",
       "label": "China/US weapon misread crisis",
+      "description": "China and the United States edge toward attacking the vessels, each reading the aliens' gift as a threat.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "crisis"
@@ -273,6 +288,7 @@
       "id": "e_shang_call",
       "type": "bootstrap_origin",
       "label": "Future Louise's call to Shang saves diplomacy",
+      "description": "Using the private phone number she will one day be given, Louise talks General Shang down from an attack he has already ordered.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "crisis"
@@ -285,6 +301,7 @@
       "id": "e_hannah_arc",
       "type": "reveal",
       "label": "Daughter Hannah life known in advance",
+      "description": "Hannah's short life - birth to teenage death - runs through the film as memory and prophecy at once.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "personal"
@@ -294,6 +311,7 @@
       "id": "e_choose",
       "type": "intervention",
       "label": "Chooses to have Hannah despite grief foreknowledge",
+      "description": "Louise chooses to conceive Hannah, accepting in advance the illness and loss that her knowledge of the future has already shown her.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "decision"
@@ -303,6 +321,7 @@
       "id": "e_abbott_costello",
       "type": "ordinary",
       "label": "Names heptapods Abbott and Costello",
+      "description": "The scientists nickname their two aliens Abbott and Costello, after the comedy duo - one talkative, one silent.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "mid"
@@ -312,6 +331,7 @@
       "id": "e_nonlinearity",
       "type": "reveal",
       "label": "Language rewires Louise temporal cognition",
+      "description": "Studying the heptapod language reshapes Louise's mind until she stops experiencing time as a line and starts receiving it as a whole.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "mid"
@@ -324,6 +344,7 @@
       "id": "e_ian_father",
       "type": "ordinary",
       "label": "Ian as father in future memories",
+      "description": "In her visions, Ian is Hannah's father - the marriage she remembers ending is one she has not yet begun.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "personal"
@@ -333,6 +354,7 @@
       "id": "e_departure_ships",
       "type": "ordinary",
       "label": "Ships depart after gift of language",
+      "description": "Their work done and their gift left behind, the twelve vessels lift off and vanish as quietly as they came.",
       "at": {
         "worldRef": "w_earth",
         "timeLabel": "late"

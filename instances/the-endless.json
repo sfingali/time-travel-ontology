@@ -98,6 +98,7 @@
       "id": "e_vhs",
       "type": "ordinary",
       "label": "VHS from Camp Arcadia claims ascension",
+      "description": "A decade after escaping a UFO death cult, half-brothers Justin and Aaron receive a video tape from their old camp claiming its members have ascended.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "present"
@@ -111,6 +112,7 @@
       "id": "e_return",
       "type": "arrival",
       "label": "Brothers return to Camp Arcadia for one day",
+      "description": "Aaron misses the family they left behind, so the brothers agree to visit Camp Arcadia for a single day.",
       "at": {
         "worldRef": "w_arcadia",
         "timeLabel": "day 0"
@@ -127,6 +129,7 @@
       "id": "e_unaged",
       "type": "observation",
       "label": "Members look unaged; twin moons; locked tapes",
+      "description": "The camp's members look exactly as they did ten years ago, two moons hang in the night sky, and the brothers' old bedrooms are sealed with tape.",
       "at": {
         "worldRef": "w_arcadia",
         "timeLabel": "day 0"
@@ -141,6 +144,7 @@
       "id": "e_scream_pod",
       "type": "observation",
       "label": "Seconds-long scream loop at perimeter",
+      "description": "Two men run past into the dark, screaming - and seconds later run past again, caught in a tiny loop that repeats the same few seconds forever.",
       "at": {
         "worldRef": "w_scream",
         "timeLabel": "explore"
@@ -156,6 +160,7 @@
       "id": "e_carl",
       "type": "observation",
       "label": "Shitty Carl in ~3-hour trailer hell",
+      "description": "Carl is stuck inside a three-hour stretch around his trailer, doomed to relive his worst hours on repeat.",
       "at": {
         "worldRef": "w_carl",
         "timeLabel": "explore"
@@ -171,6 +176,7 @@
       "id": "e_resolution",
       "type": "contact",
       "label": "Chris & Mike still trapped in ~week pod (Resolution crossover)",
+      "description": "In the camp's lake house, two men - Chris and Mike, from the filmmakers' earlier story - remain caught in a loop about a week long, aware of their situation and living within it.",
       "at": {
         "worldRef": "w_week",
         "timeLabel": "explore"
@@ -185,6 +191,7 @@
       "id": "e_markers",
       "type": "ordinary",
       "label": "Wooden markers bounce travelers back into pods",
+      "description": "Wooden markers in the desert bounce anyone who wanders too far straight back into the camp - the boundary of each person's loop is invisible but absolute.",
       "at": {
         "worldRef": "w_arcadia",
         "timeLabel": "perimeter"
@@ -197,6 +204,7 @@
       "id": "e_entity",
       "type": "reveal",
       "label": "Hal/monoliths: Entity runs variable-length death-reset pods",
+      "description": "Hal explains the camp's truth: something unseen in the sky above runs the loops, each one shaped to its person and lasting exactly as long as they need it to.",
       "at": {
         "worldRef": "w_arcadia",
         "timeLabel": "night"
@@ -214,6 +222,7 @@
       "id": "e_aaron_stay",
       "type": "ordinary",
       "label": "Aaron wants immortality-with-community over menial loneliness",
+      "description": "Aaron wants to stay - inside the camp the lost family is warm and welcoming, and life outside is lonely and small. Justin sees only a trap.",
       "at": {
         "worldRef": "w_arcadia",
         "timeLabel": "conflict"
@@ -227,6 +236,7 @@
       "id": "e_confess",
       "type": "intervention",
       "label": "Justin confesses dominating Aaron; Aaron agrees to leave",
+      "description": "Justin admits he has spent years controlling Aaron out of fear of losing him; hearing it said honestly, Aaron chooses to leave with him.",
       "at": {
         "worldRef": "w_arcadia",
         "timeLabel": "climax"
@@ -240,6 +250,7 @@
       "id": "e_flee",
       "type": "departure",
       "label": "Car jump-start; barely flee as Entity manifests",
+      "description": "The brothers jump-start their car and drive for the fence as something enormous stirs in the sky above the camp.",
       "at": {
         "worldRef": "w_arcadia",
         "timeLabel": "reset imminent"
@@ -256,6 +267,7 @@
       "id": "e_camp_reset",
       "type": "loop_reset",
       "label": "Camp Arcadia ~10-year pod resets; members look wistful",
+      "description": "Behind them the camp's loop starts over - ten unaging years - and the members greet their new decade with the same serenity as the last.",
       "at": {
         "worldRef": "w_arcadia",
         "timeLabel": "decade cycle"
@@ -272,6 +284,7 @@
       "id": "e_escape",
       "type": "arrival",
       "label": "Brothers reach outside; larger unnoticed loop left open",
+      "description": "The brothers make it out onto the open road, changed - and unaware of the larger loop that may hold them all.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "aftermath"
@@ -285,6 +298,7 @@
       "id": "e_meta",
       "type": "observation",
       "label": "Interpersonal submission framed as private endless cycle",
+      "description": "The story's heart: the truest trap is not the cosmic loop but the patterns people submit to by choice - bad routines, bad faith, bad love, repeated forever.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "coda"
@@ -301,6 +315,7 @@
       "id": "e_x_return",
       "type": "ordinary",
       "label": "Brothers return to UFO cult",
+      "description": "The brothers go back to the UFO cult they once fled.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "open"
@@ -310,6 +325,7 @@
       "id": "e_x_time",
       "type": "observation",
       "label": "Different time rates in zones",
+      "description": "Different parts of the camp run on different clocks - some loops last seconds, others years.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "mid"
@@ -319,6 +335,7 @@
       "id": "e_x_entity",
       "type": "reveal",
       "label": "Entity trapping people in loops",
+      "description": "A presence above the camp holds people inside loops.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "mid"
@@ -328,6 +345,7 @@
       "id": "e_x_tape",
       "type": "ordinary",
       "label": "Arcane video tapes",
+      "description": "Strange video tapes hint at what the camp has become.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "mid"
@@ -337,6 +355,7 @@
       "id": "e_x_stay",
       "type": "intervention",
       "label": "One brother stays; one leaves",
+      "description": "One brother belongs inside; the other belongs out.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "climax"
@@ -346,6 +365,7 @@
       "id": "e_x_loop",
       "type": "loop_reset",
       "label": "Camp time loop implications",
+      "description": "The camp's whole existence bends back on itself.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "rules"
@@ -355,6 +375,7 @@
       "id": "e_x_ascend",
       "type": "ordinary",
       "label": "Ascension lore",
+      "description": "The cult preaches ascension - a rising to something higher.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "late"
@@ -364,6 +385,7 @@
       "id": "e_x_close",
       "type": "ordinary",
       "label": "Ambiguous freedom",
+      "description": "The story closes on a freedom that may not be freedom.",
       "at": {
         "worldRef": "w_outside",
         "timeLabel": "end"

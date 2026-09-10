@@ -5,7 +5,7 @@
     "year": 2017,
     "medium": "tv",
     "sources": [
-      "Justin Marks (2017\u20132019)",
+      "Justin Marks (2017–2019)",
       "time-travel-archive/tv/counterpart.md",
       "tenet-class deepen 2026-09-06"
     ]
@@ -125,6 +125,7 @@
       "id": "e_office",
       "type": "ordinary",
       "label": "Howard Alpha as low-level UN interface clerk",
+      "description": "Howard Silk has spent thirty years in the UN's basement as a low-level clerk, never told what the office actually does.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "Berlin present"
@@ -137,6 +138,7 @@
       "id": "e_crossing",
       "type": "contact",
       "label": "Crossing discovered: single city split worlds",
+      "description": "The secret: decades ago an experiment split one Berlin into two identical worlds, and the corridor between them - the Crossing - is guarded around the clock.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "Office of Interchange"
@@ -153,6 +155,7 @@
       "id": "e_prime_arrives",
       "type": "arrival",
       "label": "Howard Prime crosses to Alpha",
+      "description": "Howard's counterpart from the other world crosses over, and Howard learns his own life has a second author.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "inciting"
@@ -168,6 +171,7 @@
       "id": "e_swap",
       "type": "intervention",
       "label": "Prime assumes Alpha's life / mission",
+      "description": "The other Howard - harder, trained, dangerous - takes Howard's place in this world to hunt an assassin, leaving the quiet man to hold his life together.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "early"
@@ -181,6 +185,7 @@
       "id": "e_flu",
       "type": "observation",
       "label": "Prime world flu pandemic history divergence",
+      "description": "The two worlds diverged long ago: the other side was ravaged by a flu pandemic their medical histories record and this side's do not.",
       "at": {
         "worldRef": "w_echo",
         "timeLabel": "backstory"
@@ -193,6 +198,7 @@
       "id": "e_espionage",
       "type": "ordinary",
       "label": "Spy war across the Crossing",
+      "description": "Between the worlds runs a quiet war - spy against spy, each side's services convinced the other is preparing something worse.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "mid S1"
@@ -207,6 +213,7 @@
       "id": "e_emily_coma",
       "type": "ordinary",
       "label": "Emily Alpha medical stakes",
+      "description": "Howard's wife Emily lies in a coma after an attack, and both her self and her counterpart's past hold pieces of why.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "personal"
@@ -220,6 +227,7 @@
       "id": "e_mirror_map",
       "type": "observation",
       "label": "Correspondence of places/people across worlds",
+      "description": "Everyone has a counterpart - two Howards, two Emilys, two of everyone - and the tiny differences between them become the story's map of who people really are.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "tradecraft"
@@ -236,6 +244,7 @@
       "id": "e_indictment",
       "type": "reveal",
       "label": "Indictions / sleeper strategies revealed",
+      "description": "The services on each side carry out old standing plans against the other - betrayals set in motion by people long gone.",
       "at": {
         "worldRef": "w_echo",
         "timeLabel": "mid"
@@ -249,6 +258,7 @@
       "id": "e_alpha_agency",
       "type": "intervention",
       "label": "Howard Alpha grows into agency role",
+      "description": "The meek Howard grows a spine across the series, ending far tougher than the man who first shuffled through the office door.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "arc"
@@ -261,6 +271,7 @@
       "id": "e_management",
       "type": "ordinary",
       "label": "Management / Baldwin violence arcs",
+      "description": "Management - the small committee supervising the Crossing - plays both sides, and their enforcer Baldwin carries out its oldest debts in blood.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "mid"
@@ -273,6 +284,7 @@
       "id": "e_diplomacy",
       "type": "ordinary",
       "label": "Diplomacy vs hardline factions both sides",
+      "description": "Factions on both sides push for closure and confrontation, while a few fight to keep the two worlds talking at all.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "politics"
@@ -286,6 +298,7 @@
       "id": "e_crossing_threat",
       "type": "intervention",
       "label": "Crossing as existential chokepoint threatened",
+      "description": "The Crossing itself becomes the prize: whoever controls the corridor controls whether two worlds go to war.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "late"
@@ -299,6 +312,7 @@
       "id": "e_identity",
       "type": "reveal",
       "label": "Self vs counterpart ethics collide",
+      "description": "The series' spine: Howard facing what he might have been, and learning the other man's cruelty was always possible in him too.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "theme"
@@ -312,6 +326,7 @@
       "id": "e_emily_prime",
       "type": "ordinary",
       "label": "Emily Prime espionage entanglement",
+      "description": "Emily's counterpart is entangled in the espionage from the other side, her choices shaping this world's Emily fate.",
       "at": {
         "worldRef": "w_echo",
         "timeLabel": "S2"
@@ -324,6 +339,7 @@
       "id": "e_school",
       "type": "ordinary",
       "label": "School / Strategy cells (Indoctrinated)",
+      "description": "In the other world, schools quietly sort and train the next generation for the conflict - children raised as instruments of the divide.",
       "at": {
         "worldRef": "w_echo",
         "timeLabel": "backstory"
@@ -336,6 +352,7 @@
       "id": "e_echo",
       "type": "contact",
       "label": "Temporary alliances across mirrors",
+      "description": "People from both worlds keep choosing each other - marriages, alliances, friendships across the mirror - undercutting the war everyone expects.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "late"
@@ -349,6 +366,7 @@
       "id": "e_schism",
       "type": "branch_fork",
       "label": "World strategies diverge toward rupture",
+      "description": "The two worlds' strategies drift further apart, moving both toward a rupture nobody can take back.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "climax politics"
@@ -362,6 +380,7 @@
       "id": "e_sacrifice",
       "type": "ordinary",
       "label": "Personal sacrifices for Crossing stability",
+      "description": "People on both sides give up their lives, their loves, or their worlds to keep the corridor - and the peace it forces - alive.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "climax"
@@ -375,6 +394,7 @@
       "id": "e_status",
       "type": "observation",
       "label": "Cold-war dual Berlin equilibrium uneasy",
+      "description": "The series ends where it began: two worlds, uneasy, mirroring - a cold war in one city, held by people who chose to be better than their doubles.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "endgame"
@@ -388,6 +408,7 @@
       "id": "e_theme",
       "type": "ordinary",
       "label": "Other life as mirror not branch timeline",
+      "description": "The other life is not a branch to be corrected but a mirror to be faced - the person you are is the person you chose to be, not the one you were dealt.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "theme"
@@ -401,6 +422,7 @@
       "id": "e_close",
       "type": "ordinary",
       "label": "Series closes on agency and otherness",
+      "description": "The last note: Howard, changed, walking through a world where the other man's shadow no longer falls over his.",
       "at": {
         "worldRef": "w_prime",
         "timeLabel": "close"

@@ -76,6 +76,7 @@
       "id": "e_engine_fall",
       "type": "arrival",
       "label": "Jet engine falls on Darko house",
+      "description": "A jet engine falls from a clear sky and crushes the Darko house - into Donnie's empty bedroom, on a night when he should have been in it.",
       "at": {
         "worldRef": "w_tangent",
         "timeLabel": "Oct 2 night"
@@ -93,6 +94,7 @@
       "id": "e_miss",
       "type": "ordinary",
       "label": "Donnie lured out by Frank; survives engine",
+      "description": "Donnie wasn't in bed: a voice lured him out - Frank, a figure in a monstrous rabbit suit, who told him the world would end in twenty-eight days.",
       "at": {
         "worldRef": "w_tangent",
         "timeLabel": "Oct 2"
@@ -106,6 +108,7 @@
       "id": "e_tangent_form",
       "type": "branch_fork",
       "label": "Tangent universe forms around artifact",
+      "description": "The explanation the film circles: a broken offshoot of reality has formed around the fallen engine, and Donnie has twenty-eight days to close it.",
       "at": {
         "worldRef": "w_tangent",
         "timeLabel": "Oct 2"
@@ -121,6 +124,7 @@
       "id": "e_flood",
       "type": "intervention",
       "label": "Donnie floods school",
+      "description": "Donnie floods his school by breaking the water main - one of the acts the rabbit's countdown seems to be steering him toward.",
       "at": {
         "worldRef": "w_tangent",
         "timeLabel": "mid Oct"
@@ -134,6 +138,7 @@
       "id": "e_fire",
       "type": "intervention",
       "label": "Cinema / Jim Cunningham house fire chain",
+      "description": "A fire at the cinema forces a screening into Frank's house, and the blaze that follows burns down motivational speaker Jim Cunningham's home - the chain of chaos keeps growing.",
       "at": {
         "worldRef": "w_tangent",
         "timeLabel": "mid Oct"
@@ -146,6 +151,7 @@
       "id": "e_philosophy",
       "type": "observation",
       "label": "Philosophy of time travel / PoT book",
+      "description": "A book, The Philosophy of Time Travel, appears on Donnie's shelf - its half-mad chapters explain artifacts, receivers, and what must be done.",
       "at": {
         "worldRef": "w_tangent",
         "timeLabel": "school"
@@ -162,6 +168,7 @@
       "id": "e_gretchen_dead",
       "type": "death",
       "label": "Gretchen killed; Frank shot",
+      "description": "At the story's darkest turn, Frank's car kills Donnie's girlfriend Gretchen - and Donnie shoots Frank dead, unmasking the rabbit.",
       "at": {
         "worldRef": "w_tangent",
         "timeLabel": "Halloween"
@@ -176,6 +183,7 @@
       "id": "e_return_engine",
       "type": "departure",
       "label": "Donnie returns jet engine to primary through portal",
+      "description": "Donnie finally understands: the engine is the anomaly, and it must go back. He sends it through to the world where it came from.",
       "at": {
         "worldRef": "w_tangent",
         "timeLabel": "Oct 30 night"
@@ -193,6 +201,7 @@
       "id": "e_collapse",
       "type": "collapse",
       "label": "Tangent collapses into primary",
+      "description": "The broken offshoot of reality folds back into the world it split from - twenty-eight days erased as if they never ran.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "resolution"
@@ -208,6 +217,7 @@
       "id": "e_donnie_dies",
       "type": "death",
       "label": "Donnie dies in bed under engine in primary",
+      "description": "Back in the restored world, Donnie is in bed when the engine falls - laughing at the end, because he chose this to save Gretchen and everyone else.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "Oct 2 restored"
@@ -220,6 +230,7 @@
       "id": "e_wake_others",
       "type": "ordinary",
       "label": "Others wake with residual grief/laughter",
+      "description": "In the morning, people who never knew him wake weeping or laughing - carrying some residue of a boy who never existed for them.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "morning after"
@@ -233,6 +244,7 @@
       "id": "ev_jet",
       "type": "ordinary",
       "label": "Jet engine destroys bedroom; Donnie outside",
+      "description": "The engine through the roof, and Donnie's bed empty beneath it.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "Oct 2"
@@ -248,6 +260,7 @@
       "id": "ev_countdown",
       "type": "ordinary",
       "label": "Frank 28-day countdown",
+      "description": "Frank's warning stands over the whole story: twenty-eight days, six hours, forty-two minutes, twelve seconds.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "Oct"
@@ -263,6 +276,7 @@
       "id": "ev_artifact_return",
       "type": "ordinary",
       "label": "Engine returned; Donnie dies in bed",
+      "description": "The engine goes back where it belongs, and the story's two worlds fold into one.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "loop close"
@@ -278,6 +292,7 @@
       "id": "e_jet",
       "type": "ordinary",
       "label": "Jet engine falls; Donnie not in bed",
+      "description": "The engine falls on a night in October - and Donnie is not in his bed.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "Oct 2"
@@ -287,6 +302,7 @@
       "id": "e_frank",
       "type": "reveal",
       "label": "Frank rabbit guides Donnie",
+      "description": "Frank the rabbit steers Donnie through the weeks - hectoring, prophetic, and eventually unmasked as a boy Donnie knows.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "tangent nights"
@@ -296,6 +312,7 @@
       "id": "e_tangent",
       "type": "branch_fork",
       "label": "Tangent universe opens",
+      "description": "Reality splits around the fallen engine - a damaged copy of the world running alongside the real one.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "Oct"
@@ -305,6 +322,7 @@
       "id": "e_living",
       "type": "observation",
       "label": "Living Receiver role",
+      "description": "Donnie is the Receiver - the one person the broken world has chosen to fix it, whether he wants the job or not.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "mid"
@@ -314,6 +332,7 @@
       "id": "e_arthritis",
       "type": "ordinary",
       "label": "Manipulated people (Grandma Death etc.)",
+      "description": "Certain people are Manipulated - pulled by unseen strings toward the Receiver: Grandma Death, the teacher, Gretchen, Frank himself.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "mid"
@@ -323,6 +342,7 @@
       "id": "e_choose_die",
       "type": "intervention",
       "label": "Donnie returns to die in bed; close tangent",
+      "description": "Donnie's choice, made knowingly: die in the restored world so that the broken one never has to happen.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "Oct 2 end"
@@ -332,6 +352,7 @@
       "id": "e_primary",
       "type": "collapse",
       "label": "Primary universe restored; engine unexplained",
+      "description": "The real world carries on as if nothing happened - one jet engine, one dead boy, and no explanation that science will accept.",
       "at": {
         "worldRef": "w_primary",
         "timeLabel": "close"

@@ -5,7 +5,7 @@
     "year": 2016,
     "medium": "tv",
     "sources": [
-      "Brad Wright (2016\u20132018)",
+      "Brad Wright (2016–2018)",
       "time-travel-archive/tv/travelers.md",
       "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
       "tenet-class deepen 2026-09-06"
@@ -76,6 +76,7 @@
       "id": "e_future_war",
       "type": "ordinary",
       "label": "Post-collapse future Director governs remnant humanity",
+      "description": "Centuries from now, humanity's remnant huddles in grim bunkers after catastrophe, governed by an intelligence called the Director that rations everything, including hope.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "far future"
@@ -88,6 +89,7 @@
       "id": "e_protocol",
       "type": "reveal",
       "label": "Consciousness transfer into historical hosts at death moments",
+      "description": "The Director saves dying people of the past by overwriting a doomed host's mind with a traveller's consciousness at the instant of death - a transfer no one survives without a body to catch them.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "mission brief"
@@ -104,6 +106,7 @@
       "id": "e_team_arrive",
       "type": "arrival",
       "label": "Team 3412 arrives in 21st-century host bodies",
+      "description": "A five-person team arrives in 21st-century bodies - an FBI agent, a counsellor, a student, a young mother, and an opioid-addicted young man - and must find each other using coded phrases.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "series start"
@@ -123,9 +126,10 @@
       "id": "e_missions",
       "type": "intervention",
       "label": "Missions avert disasters per Director protocols",
+      "description": "Following numbered protocols, the team carries out missions that avert disasters - assassinations, outbreaks, catastrophes - each one nudging history away from the collapse they came from.",
       "at": {
         "worldRef": "w_present",
-        "timeLabel": "S1\u2013S2"
+        "timeLabel": "S1–S2"
       },
       "agents": [
         "grant",
@@ -139,6 +143,7 @@
       "id": "e_faction",
       "type": "ordinary",
       "label": "Faction seeks to rewrite future against Director",
+      "description": "A breakaway faction of travellers decides the Director's plans are wrong and works to rewrite the future on their own terms, turning time's refugees against each other.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "mid"
@@ -151,6 +156,7 @@
       "id": "e_host_lives",
       "type": "observation",
       "label": "Host families complicate Traveler ethics",
+      "description": "Every traveller inherits a host's unfinished life - a marriage, a baby, an addiction - and keeping those lives afloat while saving the world is the show's moral engine.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "ongoing"
@@ -164,9 +170,10 @@
       "id": "e_override",
       "type": "intervention",
       "label": "Protocol overrides and Helo/antiviral stakes escalate",
+      "description": "The Director can seize any traveller's body at any moment with an override, and as its schemes grow more ruthless - engineered viruses, impossible demands - obedience turns into resistance.",
       "at": {
         "worldRef": "w_present",
-        "timeLabel": "S2\u2013S3"
+        "timeLabel": "S2–S3"
       },
       "agents": [
         "director",
@@ -177,6 +184,7 @@
       "id": "e_director_threat",
       "type": "reveal",
       "label": "Director's continuity vs human agency conflict",
+      "description": "The conflict at the heart of the story: the Director's cold calculations versus the travellers' own conscience - is humanity's future worth humanity's freedom?",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "S3"
@@ -190,6 +198,7 @@
       "id": "e_grand_plan",
       "type": "intervention",
       "label": "Final missions attempt to stabilize best available future",
+      "description": "In the final series, the team runs out of clean options and makes desperate plays - new protocols, hard sacrifices - to land on the best future still within reach.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "finale"
@@ -206,6 +215,7 @@
       "id": "e_transfer_cost",
       "type": "death",
       "label": "Host deaths / Traveler losses as transfer cost",
+      "description": "The programme's price is human: hosts die so travellers can arrive, and travellers die on missions - every rescue in the past is paid for by someone.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "series"
@@ -218,6 +228,7 @@
       "id": "e_message_back",
       "type": "bootstrap_origin",
       "label": "Future updates based on mission outcomes (bootstrap intel)",
+      "description": "The future watches the present: historians record outcomes and send updates back, so each mission's results shape the next set of instructions - the past and future coaching each other.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "updates"
@@ -233,6 +244,7 @@
       "id": "e_ambiguous",
       "type": "ordinary",
       "label": "Series ends with hard-won, still-fragile continuum",
+      "description": "The series ends without a bow: the worst futures may be averted, but what remains is a fragile, hard-won world still full of damage - and the team simply carries on.",
       "at": {
         "worldRef": "w_present",
         "timeLabel": "end"
@@ -246,6 +258,7 @@
       "id": "e_historians",
       "type": "observation",
       "label": "Historians in future monitor divergence",
+      "description": "In the future, historians monitor how the past drifts from the record, flagging divergences so the Director can adjust its plans accordingly.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "monitor"
@@ -258,6 +271,7 @@
       "id": "e_x_transfer",
       "type": "arrival",
       "label": "Traveler consciousness into host",
+      "description": "A traveller's mind is beamed into the body of a person about to die, so the future can act in the past without changing its own birth.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "open"
@@ -267,6 +281,7 @@
       "id": "e_x_director",
       "type": "ordinary",
       "label": "Director AI missions",
+      "description": "The Director - part archive, part artificial intelligence - hands down numbered protocols and missions, managing the past like a garden it needs to survive.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "ongoing"
@@ -276,6 +291,7 @@
       "id": "e_x_team",
       "type": "ordinary",
       "label": "Team macros in present",
+      "description": "The team works in cells with codenames and macros, finding each other in the present with handshakes and coded phrases before taking on missions together.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "mid"
@@ -285,6 +301,7 @@
       "id": "e_x_faction",
       "type": "ordinary",
       "label": "Faction conflict",
+      "description": "Some travellers come to believe they know better than the Director, and their rebellion sets traveller against traveller across the present day.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "mid"
@@ -294,6 +311,7 @@
       "id": "e_x_host",
       "type": "observation",
       "label": "Host consciousness ethics",
+      "description": "Overwriting a host's mind with a traveller's raises the show's hardest question: whose life is it now, and what does the traveller owe the person they replaced?",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "theme"
@@ -303,6 +321,7 @@
       "id": "e_x_hist",
       "type": "intervention",
       "label": "Missions rewrite future disasters",
+      "description": "Every disaster the team averts rewrites the future they came from - saving the world, one catastrophe at a time, with no guarantee history will thank them.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "ongoing"
@@ -312,6 +331,7 @@
       "id": "e_x_grand",
       "type": "branch_fork",
       "label": "Grand plan revisions",
+      "description": "The Director's grand plan keeps shifting as outcomes come in, and the team must revise its loyalties each time the goalposts move.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "late"
@@ -321,6 +341,7 @@
       "id": "e_x_end",
       "type": "ordinary",
       "label": "Series end stakes",
+      "description": "By the end, the stakes are no longer one mission but the shape of the future itself - and the travellers, not the Director, are the ones holding it.",
       "at": {
         "worldRef": "w_future",
         "timeLabel": "end"

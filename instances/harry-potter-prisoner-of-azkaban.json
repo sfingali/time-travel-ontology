@@ -5,7 +5,7 @@
     "year": 2004,
     "medium": "film",
     "sources": [
-      "Alfonso Cuar\u00f3n; J.K. Rowling (2004)",
+      "Alfonso Cuarón; J.K. Rowling (2004)",
       "time-travel-archive/films/harry-potter-prisoner-of-azkaban.md",
       "time-travel-archive true-deep wave 2026-09-06 (Mission B)",
       "tenet-class deepen 2026-09-06"
@@ -27,7 +27,7 @@
       "kind": "timeline",
       "id": "w_year3",
       "label": "Hogwarts Year 3 single evening loop",
-      "spanLabel": "1993\u201394"
+      "spanLabel": "1993–94"
     }
   ],
   "agents": [
@@ -74,6 +74,7 @@
       "id": "e_turner_classes",
       "type": "ordinary",
       "label": "Hermione uses Time-Turner to stack classes",
+      "description": "Hermione has quietly been carrying a magic pendant that lets her step back a few hours at a time, so she can attend two lessons running at the same moment - and no one has noticed.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "term"
@@ -90,6 +91,7 @@
       "id": "e_shack",
       "type": "ordinary",
       "label": "Shrieking Shack: Pettigrew exposed; Sirius innocent",
+      "description": "In the old, boarded-up Shrieking Shack the truth comes out at last: the man everyone blamed for betraying Harry's parents was innocent, and the real traitor was hiding all along as Ron's pet rat.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "evening"
@@ -107,6 +109,7 @@
       "id": "e_pettigrew_flees",
       "type": "ordinary",
       "label": "Pettigrew flees as Lupin transforms",
+      "description": "Just as the traitor is about to be handed over, the full moon rises and turns their werewolf ally into a monster - and in the confusion the guilty man changes into a rat and scurries away.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "evening"
@@ -120,6 +123,7 @@
       "id": "e_dementors",
       "type": "ordinary",
       "label": "Dementors overwhelm Harry and Sirius by the lake",
+      "description": "Down by the lake, the hooded soul-drinking guards swarm around Harry and the wrongly accused man, draining every happy thought from them until Harry can barely stand.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "lake"
@@ -133,6 +137,7 @@
       "id": "e_mystery_patronus",
       "type": "observation",
       "label": "Mysterious stag Patronus drives Dementors off; Harry thinks it is his father",
+      "description": "At the last second a brilliant silver stag charges out of the darkness and scatters the guards - and Harry, half-conscious, is sure the creature looks exactly like his long-dead father.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "lake"
@@ -148,6 +153,7 @@
       "id": "e_hospital",
       "type": "ordinary",
       "label": "Hospital wing; Dumbledore prompts the one thing",
+      "description": "Back in the hospital wing, the headmaster, guessing what must be done, tells Harry and Hermione that they have one chance to change things - and warns them not to be seen.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "night"
@@ -162,6 +168,7 @@
       "id": "e_rewind",
       "type": "departure",
       "label": "Three Time-Turner turns; rewind three hours",
+      "description": "Hermione spins her pendant three times, and the whole evening begins again as the pair are thrown three hours into their own past.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "hospital"
@@ -180,6 +187,7 @@
       "id": "e_arrive_past",
       "type": "arrival",
       "label": "Harry and Hermione arrive three hours earlier",
+      "description": "Harry and Hermione find themselves standing in the entrance hall three hours before everything went wrong, watching events they remember unfold from the outside.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "evening-3h"
@@ -193,6 +201,7 @@
       "id": "e_buckbeak",
       "type": "intervention",
       "label": "Free Buckbeak before execution (axe hits pumpkin)",
+      "description": "They slip out to the grounds and rescue the doomed creature Hagrid loves - luring it away just before the executioner's axe falls, so the only sound it makes is chopping a pumpkin.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "execution hour"
@@ -209,6 +218,7 @@
       "id": "e_signal",
       "type": "intervention",
       "label": "Hermione signals to avoid past-Harry noticing too soon",
+      "description": "Hermione keeps their earlier selves from spotting them too soon, careful that the two versions of each of them never come face to face.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "woods"
@@ -222,6 +232,7 @@
       "id": "e_cast_patronus",
       "type": "intervention",
       "label": "Harry casts the stag Patronus that saved them",
+      "description": "Waiting by the lake, Harry suddenly understands: the magnificent stag he saw was no ghost of his father - it was himself, and now he must conjure it to save his past self.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "lake"
@@ -237,6 +248,7 @@
       "id": "e_free_sirius",
       "type": "intervention",
       "label": "Free Sirius via Buckbeak flight from tower",
+      "description": "With the guards closing in on the innocent man locked in the tower, Hermione whisks him out of a high window on the back of the rescued creature, and he flies off to freedom.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "tower"
@@ -251,6 +263,7 @@
       "id": "e_return",
       "type": "arrival",
       "label": "Return to hospital wing moments after leaving",
+      "description": "Having done everything in those borrowed hours, they hurry back to the hospital wing and slip in just seconds after their earlier selves left it.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "night"
@@ -264,6 +277,7 @@
       "id": "e_surrender",
       "type": "ordinary",
       "label": "Hermione surrenders Time-Turner; loop closed",
+      "description": "The evening closes neatly on itself: Hermione gives the pendant back, everything that happened that night had happened all along, and no timeline ever changed.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "aftermath"
@@ -276,6 +290,7 @@
       "id": "e_x_dementor",
       "type": "ordinary",
       "label": "Dementor attacks",
+      "description": "The prison guards' soul-draining attack by the lake leaves Harry and his godfather helpless and nearly lost for good.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "open"
@@ -285,6 +300,7 @@
       "id": "e_x_buckbeak",
       "type": "ordinary",
       "label": "Buckbeak execution threat",
+      "description": "A gentle hippogriff - a horse-eagle hybrid - is sentenced to death for wounding a spoiled student, and Hagrid can do nothing to save his beloved pet.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "mid"
@@ -294,6 +310,7 @@
       "id": "e_x_potter",
       "type": "ordinary",
       "label": "Sirius revealed innocent",
+      "description": "Harry learns that the man who betrayed his parents was not his godfather Sirius, but their old friend Peter Pettigrew, who has been hiding in plain sight for years.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "mid"
@@ -303,6 +320,7 @@
       "id": "e_x_hermione",
       "type": "departure",
       "label": "Time-Turner hours with Hermione",
+      "description": "Hermione reveals her secret device for borrowing hours, and lets Harry in on how she has been attending overlapping lessons all year.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "climax"
@@ -312,6 +330,7 @@
       "id": "e_x_save_buck",
       "type": "intervention",
       "label": "Save Buckbeak",
+      "description": "The rescue of the condemned creature is the first thing the pair do with their rewound hours, saving it from the executioner's blade.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "climax"
@@ -321,6 +340,7 @@
       "id": "e_x_patronus",
       "type": "intervention",
       "label": "Harry's Patronus saves self",
+      "description": "Standing alone by the dark lake, Harry casts a Patronus of breathtaking power - the silver stag - and realises with awe that the saviour he admired was himself all along.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "climax"
@@ -330,6 +350,7 @@
       "id": "e_x_sirius",
       "type": "ordinary",
       "label": "Sirius escapes",
+      "description": "Sirius Black, innocent of the crime he was imprisoned for, escapes the tower on the back of a flying creature and goes into hiding.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "end"
@@ -339,6 +360,7 @@
       "id": "e_x_rules",
       "type": "observation",
       "label": "Must not be seen; closed evening loop",
+      "description": "The pendant's magic has iron rules: no one must ever see their own other self, and what happened that night must unfold exactly as it did - it already has.",
       "at": {
         "worldRef": "w_year3",
         "timeLabel": "rules"
@@ -521,7 +543,7 @@
         },
         {
           "ruleSetId": "predestination_closed_loop",
-          "effect": "You already changed the past \u2014 by becoming it"
+          "effect": "You already changed the past — by becoming it"
         }
       ]
     }

@@ -5,7 +5,7 @@
     "year": 2019,
     "medium": "tv",
     "sources": [
-      "Natasha Lyonne, Leslye Headland, Amy Poehler (2019\u20132022)",
+      "Natasha Lyonne, Leslye Headland, Amy Poehler (2019–2022)",
       "time-travel-archive/tv/russian-doll.md",
       "time-travel-archive true-deep wave 2026-09-06",
       "tenet-class deepen 2026-09-06"
@@ -75,6 +75,7 @@
       "id": "e_party",
       "type": "ordinary",
       "label": "Nadia's 36th birthday party",
+      "description": "A hard-edged New York game designer, Nadia, arrives at her own 36th birthday party thrown in a friend's loft, all sharp eyeliner and sharper cigarettes.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "party start"
@@ -88,6 +89,7 @@
       "id": "e_death1",
       "type": "death",
       "label": "Nadia dies (stairs / street / etc.)",
+      "description": "Nadia steps out into the street to chase a stray cat, gets hit by a taxi - and instead of waking up dead, she wakes up alive.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "night"
@@ -99,7 +101,8 @@
     {
       "id": "e_reset1",
       "type": "loop_reset",
-      "label": "Reset to bathroom mirror at party \u2014 Kraken hardware store night",
+      "label": "Reset to bathroom mirror at party — Kraken hardware store night",
+      "description": "She comes round in her friend's bathroom, staring at the mirror while the party carries on outside, and the same night begins to unfold exactly as before.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "loop+1"
@@ -117,6 +120,7 @@
       "id": "e_many_deaths",
       "type": "loop_reset",
       "label": "Repeated deaths and resets while investigating",
+      "description": "Nadia keeps trying to survive the night - and keeps dying in new ways: stairs, a fall, cold, smoke - only to wake each time back at the party, trying to work out what on earth is happening to her.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "mid S1"
@@ -133,6 +137,7 @@
       "id": "e_meet_alan",
       "type": "contact",
       "label": "Nadia discovers Alan shares a death loop",
+      "description": "Nadia tracks down Alan Zaveri, a buttoned-up stranger she glimpsed at a hardware store, and discovers to her horror that he is dying and waking up on the same night too.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "mid S1"
@@ -146,6 +151,7 @@
       "id": "e_trauma",
       "type": "intervention",
       "label": "They confront trauma/guilt to find exit conditions",
+      "description": "To find a way out of their shared prison of a night, Nadia and Alan are forced to face the old wounds they have spent their lives avoiding - her childhood with her erratic mother, his failed proposal and shattered self-worth.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "late S1"
@@ -163,6 +169,7 @@
       "id": "e_exit_s1",
       "type": "ordinary",
       "label": "S1 exit: mutual help breaks the shared loop",
+      "description": "When the two of them finally help each other instead of just themselves, the cursed night lets go: Nadia and Alan walk out of it alive, into an ordinary, unrepeatable morning.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "S1 end"
@@ -180,6 +187,7 @@
       "id": "e_s2_subway",
       "type": "contact",
       "label": "S2: multiverse subway through mother/lineage timelines",
+      "description": "In season two the story deepens: a ride on the subway can carry a person into another era entirely, and Nadia's train drops her in the New York of 1982, the year her mother was her own age.",
       "at": {
         "worldRef": "w_s2_train",
         "timeLabel": "S2"
@@ -199,6 +207,7 @@
       "id": "e_s2_mother",
       "type": "ordinary",
       "label": "Nadia experiences mother-line nested identities",
+      "description": "Nadia slips into the past and finds herself living her mother's life from the inside, seeing with her mother's eyes how the family's patterns and wounds were handed down like heirlooms.",
       "at": {
         "worldRef": "w_s2_train",
         "timeLabel": "S2 mid"
@@ -212,6 +221,7 @@
       "id": "e_s2_resolve",
       "type": "reveal",
       "label": "Lineage dolls metaphor resolved across parallel contacts",
+      "description": "The season's title image comes true: like dolls within dolls, each generation holds a smaller copy of the last - and Nadia, having met her family across time, finally breaks the pattern instead of passing it on.",
       "at": {
         "worldRef": "w_s2_train",
         "timeLabel": "S2 end"
@@ -224,6 +234,7 @@
       "id": "ev_s1_loop",
       "type": "ordinary",
       "label": "S1 party death loop with Alan",
+      "description": "Nadia is trapped dying and waking on the same birthday night over and over - and so, she learns, is Alan, the two of them stuck in the same inescapable evening.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "S1"
@@ -239,6 +250,7 @@
       "id": "ev_s1_exit",
       "type": "ordinary",
       "label": "S1 linear morning exit",
+      "description": "The repeated night finally ends for good when Nadia and Alan manage to save each other, and time moves on to a fresh, ordinary morning.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "S1 end"
@@ -254,6 +266,7 @@
       "id": "ev_s2_subway",
       "type": "ordinary",
       "label": "S2 time subway / decades",
+      "description": "In the second season the subway becomes a strange passage through the years, letting characters drift between decades and even into other versions of their own lives.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "S2"
@@ -269,6 +282,7 @@
       "id": "ev_s2_family",
       "type": "ordinary",
       "label": "S2 ancestral confrontation",
+      "description": "Nadia and Alan both reach back into their family histories - her tangled mother and grandmother, his rigid parents - and confront the damage that shaped them.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "S2 end"
@@ -284,6 +298,7 @@
       "id": "e_alan",
       "type": "ordinary",
       "label": "Alan also looping",
+      "description": "Alan Zaveri, a neat, anxious man who had just been rejected by his girlfriend, is dying and waking on the same night as Nadia, though at first neither knows the other exists.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "mid"
@@ -293,6 +308,7 @@
       "id": "e_origin",
       "type": "observation",
       "label": "Shared trauma origins",
+      "description": "The loops have a source: the damage each of them carries from their families - Nadia's chaotic childhood with a mentally ill mother, Alan's crushing feelings of worthlessness - is what pins them in time.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "mid"
@@ -302,6 +318,7 @@
       "id": "e_other_loopers",
       "type": "contact",
       "label": "Other time issues / S2 multiverse hints",
+      "description": "Not everyone in Nadia's orbit is quite normal: hints gather that other people are slipping through time too, from a horse-riding rider glimpsed on the subway to characters in season two who move between eras.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "S2"
@@ -311,6 +328,7 @@
       "id": "e_krugers",
       "type": "ordinary",
       "label": "Family history entanglement",
+      "description": "Nadia's own history is entangled across the years: the family curse of the women in her line repeats through her mother Lenora and grandmother, until Nadia steps into the past to face it directly.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "S2"
@@ -320,6 +338,7 @@
       "id": "e_s2_travel",
       "type": "departure",
       "label": "S2 time/timeline travel stakes",
+      "description": "Season two makes the stakes about the past itself: if Nadia can walk through the years, she can try to fix her family's history - but changing it might erase herself, so the past resists her meddling.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "S2"
@@ -332,6 +351,7 @@
       "id": "e_pad_therapy",
       "type": "ordinary",
       "label": "Therapy and community as exit conditions",
+      "description": "The way out of the loops is not a trick or a machine but care: talking things through with the people around her, admitting the harm done to her, and accepting help - that is what sets her free.",
       "at": {
         "worldRef": "w_s1",
         "timeLabel": "growth"

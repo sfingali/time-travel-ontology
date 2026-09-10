@@ -95,6 +95,7 @@
       "id": "e_brooklyn",
       "type": "ordinary",
       "label": "Miles Morales bitten; becomes Spider-Man in Earth-1610",
+      "description": "Brooklyn teenager Miles Morales is bitten by a strange spider and starts developing the same amazing abilities as the city's famous hero - just as that hero is killed.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "origin"
@@ -107,6 +108,7 @@
       "id": "e_collider",
       "type": "ordinary",
       "label": "Kingpin's collider punches holes between universes",
+      "description": "The crime boss Kingpin builds an enormous underground machine to punch through to other worlds, hoping to find another version of his dead family - but each test tears dangerous holes between the universes.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "inciting"
@@ -119,6 +121,7 @@
       "id": "e_gwen",
       "type": "arrival",
       "label": "Gwen and other Spiders fall into Miles's world",
+      "description": "The machine goes off, and other people with spider powers from different worlds tumble into Miles's New York - including a masked girl called Gwen, who swings straight into his life.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "arrival"
@@ -138,6 +141,7 @@
       "id": "e_team",
       "type": "contact",
       "label": "Spider-gang meets Miles; dimension decay clocks",
+      "description": "The stranded spider-heroes find Miles and compare notes: every hour they stay in the wrong world, their bodies start coming apart. They must get home fast or die here.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "team-up"
@@ -152,6 +156,7 @@
       "id": "e_train",
       "type": "ordinary",
       "label": "Training montage; Miles not ready per Peter B",
+      "description": "Peter, a worn-out older Spider-Man from another world, tries to teach Miles to control his powers - wall-crawling, webs, the lot - but everything Miles tries comes out wrong.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "mid"
@@ -165,6 +170,7 @@
       "id": "e_uncle",
       "type": "death",
       "label": "Prowler/Uncle Aaron tragedy; Miles's leap of faith",
+      "description": "Miles discovers his beloved Uncle Aaron is really a masked criminal, and watches him die protecting Miles from his own employer. Grief finally unlocks Miles's true power.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "mid"
@@ -177,6 +183,7 @@
       "id": "e_betray",
       "type": "ordinary",
       "label": "Spiders try to leave Miles behind for his safety",
+      "description": "The other spider-heroes decide Miles is too untrained to survive the coming fight, so they leave him behind locked in his room while they go after Kingpin themselves.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "act2"
@@ -191,6 +198,7 @@
       "id": "e_collider_fight",
       "type": "intervention",
       "label": "Miles masters powers; collider battle with Kingpin",
+      "description": "Miles breaks free, and in the final battle inside the machine's chamber his powers finally come alive - he is strong enough to turn the machine against itself and face Kingpin.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "climax"
@@ -206,6 +214,7 @@
       "id": "e_send_home",
       "type": "departure",
       "label": "Spiders returned to home universes via go-home machine",
+      "description": "Once the danger is past, the spider-heroes step back through the machine one by one, each returning to their own world as the hole between the universes is closed.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "climax"
@@ -225,6 +234,7 @@
       "id": "e_miles_stands",
       "type": "ordinary",
       "label": "Miles claims his city's Spider-Man mantle",
+      "description": "With the visitors gone, Miles takes up the mask for real: he is Brooklyn's own Spider-Man now, protecting his friends and his city.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "end"
@@ -237,6 +247,7 @@
       "id": "e_glitch",
       "type": "observation",
       "label": "Glitching as cost of off-world presence",
+      "description": "Anyone from another world slowly comes apart in the wrong universe, flickering and glitching like a broken screen - a constant reminder that they don't belong here.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "mid"
@@ -252,6 +263,7 @@
       "id": "e_multiverse",
       "type": "reveal",
       "label": "Multiverse of Spider-people affirmed",
+      "description": "Miles learns the truth behind the comics: there are many worlds, and in each one someone wears the mask - he is simply this world's version.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "theme"
@@ -268,6 +280,7 @@
       "id": "e_x_collider",
       "type": "ordinary",
       "label": "Kingpin collider experiment",
+      "description": "Kingpin's giant machine is switched on beneath the city, punching holes in the walls between worlds in his desperate bid to reach a lost family.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "open"
@@ -277,6 +290,7 @@
       "id": "e_x_miles",
       "type": "ordinary",
       "label": "Miles bitten; spider powers",
+      "description": "A spider from another world bites Miles and changes him: he can cling to walls, and a hidden strength is waking up in him.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "early"
@@ -286,6 +300,7 @@
       "id": "e_x_variants",
       "type": "contact",
       "label": "Spider-people from other dimensions",
+      "description": "Strangers in other Spider-Man costumes arrive in Miles's world, each one a different person from a different universe who happens to have the same powers.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "mid"
@@ -295,6 +310,7 @@
       "id": "e_x_gw",
       "type": "ordinary",
       "label": "Peter B. mentors Miles",
+      "description": "Peter, an older and jaded Spider-Man stranded far from home, reluctantly takes Miles under his wing and shows him what being Spider-Man costs.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "mid"
@@ -304,6 +320,7 @@
       "id": "e_x_gwen",
       "type": "ordinary",
       "label": "Gwen band / alliance",
+      "description": "Gwen, the Spider-Woman of her own city, bonds with Miles and rallies the stranded heroes into a team willing to fight for a world that is not theirs.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "mid"
@@ -313,6 +330,7 @@
       "id": "e_x_stop",
       "type": "intervention",
       "label": "Stop collider destroying city",
+      "description": "The heroes storm Kingpin's machine before its next test destroys all of New York, fighting their way to the controls while the sky tears open above the city.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "climax"
@@ -322,6 +340,7 @@
       "id": "e_x_leap",
       "type": "ordinary",
       "label": "Miles leap of faith",
+      "description": "At the heart of the story, Miles stops hesitating: he leaps off a skyscraper, trusts his powers, and catches himself on a web of his own making.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "climax"
@@ -331,6 +350,7 @@
       "id": "e_x_home",
       "type": "ordinary",
       "label": "Variants return; Miles remains",
+      "description": "The machine sends every visitor home to their own world safely, and Miles stays behind - the one and only Spider-Man of this Brooklyn.",
       "at": {
         "worldRef": "w_1610",
         "timeLabel": "end"
