@@ -7,8 +7,7 @@
       "THE-WAIF.fountain (DRAFT (SF): 03-18-26)",
       "THE WAIF - 06-18-26 - FINGLETON.pdf (118 pp)",
       "the-waif/wiki/reference/primer-timeline/waif-event-ledger.json",
-      "the-waif/wiki/reference/primer-timeline/bens-story.universes.json (compiled from scene-allocations.txt)",
-      "the-waif/wiki/reference/primer-timeline/scene-allocations.txt (scene placement authority)"
+      "the-waif/wiki/reference/primer-timeline/bens-story.universes.json (compiled from scene-allocations.txt)"
     ]
   },
   "schemaVersion": "1.0",
@@ -27,7 +26,7 @@
       "id": "w_u1",
       "label": "The opening world",
       "description": "Where the film opens: Ben wakes in the house with the three locks on the door. The woman falls through the roof of the car here, and the woman of this world dies in that fall.",
-      "spanLabel": "his time here: scenes 1-77",
+      "spanLabel": "the day of the crash",
       "isOriginWorld": true,
       "attractorFieldId": "the_same_beats"
     },
@@ -35,7 +34,7 @@
       "kind": "branch",
       "id": "w_her",
       "label": "The world with her - already running",
-      "description": "A world that was already living before Ben arrives in it. The woman he finds at the door here is not the one who fell in his own world. His time here is scenes 78-114.",
+      "description": "A world that was already living before Ben arrives in it. The woman he finds at the door here is not the one who fell in his own world.",
       "branchSpecification": "INCOMPLETE",
       "attractorFieldId": "the_same_beats",
       "draft": true
@@ -44,7 +43,7 @@
       "kind": "branch",
       "id": "w_whered",
       "label": "The world where he died - already running",
-      "description": "A world in which the man we follow had already died. It was running before he got there, and it keeps running after he leaves it. He spends the middle of the film here: the room she was kept in, the dead man's laboratory. His time here is scenes 115-183.",
+      "description": "A world in which the man we follow had already died. It was running before he got there, and it keeps running after he leaves it.",
       "branchSpecification": "INCOMPLETE",
       "attractorFieldId": "the_same_beats",
       "draft": true
@@ -53,7 +52,7 @@
       "kind": "branch",
       "id": "w_fam",
       "label": "The family world - already running",
-      "description": "Already running before he arrives: the world the chart calls the family world, where the boy is alive and rides in the car. The whole of the third act is his time here - the attack on the house, the last shot, and the light that turns red. The man behind the wheel at the end is cruel, which the script implies and never shows. His time here is scenes 184-278.",
+      "description": "A world where the family is whole: the boy rides in the car. The man who comes back from the cabin is cruel there, which the script implies and never shows.",
       "branchSpecification": "INCOMPLETE",
       "attractorFieldId": "the_same_beats",
       "draft": true
@@ -161,7 +160,7 @@
     {
       "id": "the_others",
       "label": "The Others",
-      "homeWorldRef": "w_fam",
+      "homeWorldRef": "w_whered",
       "notes": "Pale-fire figures that have to be looked at to exist. They take the woman apart at the end of a pass and light her up again."
     },
     {
@@ -407,7 +406,7 @@
       "label": "What happened to her in the padded room",
       "description": "She remembers being kept in a padded room, and being given the book there. Where the book came from, she never says.",
       "at": {
-        "worldRef": "w_whered",
+        "worldRef": "w_her",
         "timeLabel": "scene 158-159"
       },
       "agents": [
@@ -460,7 +459,7 @@
       "label": "The siege: Marie and Jack are killed",
       "description": "The house is attacked. Marie runs with Jack. The roof of the pickup comes down on them, and Marie is killed and so is the boy - half his head gone, the way it was in the crash.",
       "at": {
-        "worldRef": "w_fam",
+        "worldRef": "w_whered",
         "timeLabel": "scene 240-253"
       },
       "agents": [
@@ -477,7 +476,7 @@
       "label": "The seventh chamber is cut away",
       "description": "The pale figures will not take Ben: they have to be looked at to exist, and he will not do it. The woman cuts the seventh chamber out of the revolver so it will fire every time.",
       "at": {
-        "worldRef": "w_fam",
+        "worldRef": "w_whered",
         "timeLabel": "scene 256"
       },
       "agents": [
@@ -495,7 +494,7 @@
       "label": "She was the one who fell",
       "description": "She tells him she did not shoot herself - she jumped. Her shoes are the red-striped ones. She was the woman who came through the car roof.",
       "at": {
-        "worldRef": "w_fam",
+        "worldRef": "w_whered",
         "timeLabel": "scene 257-266"
       },
       "agents": [
@@ -512,7 +511,7 @@
       "label": "She asks him to shoot her",
       "description": "She tells him to put the gun on her and fire, because she is where all of the pain comes from. He refuses her.",
       "at": {
-        "worldRef": "w_fam",
+        "worldRef": "w_whered",
         "timeLabel": "scene 266"
       },
       "agents": [
@@ -549,7 +548,7 @@
       "label": "The Others take her apart",
       "description": "The pale figures pull the woman to pieces. She comes back with dead eyes, clicks her fingers, and the pale light goes out.",
       "at": {
-        "worldRef": "w_fam",
+        "worldRef": "w_whered",
         "timeLabel": "scene 267-270"
       },
       "agents": [
@@ -564,7 +563,7 @@
       "id": "e_fam_entry",
       "type": "arrival",
       "label": "He comes round in the world where they are alive",
-      "description": "The last crossing lands him in the world the chart calls the family world: the boy is alive and the house is still standing. It had been running without him.",
+      "description": "The last split lands him in a world where Marie and Jack were never taken from him - a world that had been running without him.",
       "at": {
         "worldRef": "w_fam",
         "timeLabel": "scene 184"
@@ -657,56 +656,6 @@
       ],
       "payload": {
         "note": "chart stub 184B"
-      }
-    },
-    {
-      "id": "e_preston_lab",
-      "type": "ordinary",
-      "label": "The dead man's laboratory",
-      "description": "He finds the laboratory of the man who wrote the book, and in a flashback the man's own father is robbed at gunpoint by a boy who tells him to load it next time - and the gun fires. The same gun is the one under the cabin floor: put there by someone who knew him well.",
-      "at": {
-        "worldRef": "w_whered",
-        "timeLabel": "scene 160-166"
-      },
-      "agents": [
-        "ben_whered",
-        "preston"
-      ],
-      "payload": {
-        "note": "p71-72 #160-166; robbery p102-103 #239"
-      }
-    },
-    {
-      "id": "e_last_shot",
-      "type": "observation",
-      "label": "He looks at his own death",
-      "description": "Rather than turn the gun on her as she asks, he puts it in his own mouth and fires, and he does not look away from it. It is the one thing the pale figures cannot take from him.",
-      "at": {
-        "worldRef": "w_fam",
-        "timeLabel": "scene 266"
-      },
-      "agents": [
-        "ben_whered",
-        "waif"
-      ],
-      "payload": {
-        "note": "p113 #266; the chart places the shot at split 184"
-      }
-    },
-    {
-      "id": "e_wake",
-      "type": "ordinary",
-      "label": "He comes round in the master bedroom",
-      "description": "He comes round in the master bedroom with his eyes open, and the morning of the first day plays out exactly as it did the first time. Nothing has been wound back: this is a world whose morning is the same as the one we opened on.",
-      "at": {
-        "worldRef": "w_fam",
-        "timeLabel": "scene 271-274"
-      },
-      "agents": [
-        "ben_fam"
-      ],
-      "payload": {
-        "note": "p115 #271-274"
       }
     }
   ],
@@ -933,6 +882,14 @@
       "label": "the last split lands him with the family alive"
     },
     {
+      "id": "c_fam_red",
+      "kind": "causal",
+      "from": "e_fam_entry",
+      "to": "e_red_light",
+      "orderKind": "chronological",
+      "label": "the drive again, and this time he stops"
+    },
+    {
       "id": "c_crash_waifdies",
       "kind": "causal",
       "from": "e_crash",
@@ -963,46 +920,6 @@
       "to": "e_death184",
       "orderKind": "chronological",
       "label": "the other half of the split"
-    },
-    {
-      "id": "c_lab_pull",
-      "kind": "causal",
-      "from": "e_preston_lab",
-      "to": "e_pull_184",
-      "orderKind": "chronological",
-      "label": "the gun's provenance is understood before the last shot"
-    },
-    {
-      "id": "c_demand_shot",
-      "kind": "causal",
-      "from": "e_waif_demand",
-      "to": "e_last_shot",
-      "orderKind": "chronological",
-      "label": "he fires, but not at her"
-    },
-    {
-      "id": "c_shot_consumed",
-      "kind": "causal",
-      "from": "e_last_shot",
-      "to": "e_others_consumed",
-      "orderKind": "chronological",
-      "label": "she is taken apart after the shot"
-    },
-    {
-      "id": "c_shot_wake",
-      "kind": "causal",
-      "from": "e_last_shot",
-      "to": "e_wake",
-      "orderKind": "chronological",
-      "label": "he comes round in the bedroom"
-    },
-    {
-      "id": "c_fam_red",
-      "kind": "causal",
-      "from": "e_wake",
-      "to": "e_red_light",
-      "orderKind": "chronological",
-      "label": "the drive again, and this time he stops"
     }
   ],
   "interventions": [
@@ -1100,11 +1017,24 @@
         "kind": "story"
       },
       "dimension": "world_placement",
-      "status": "DRAFT",
-      "note": "Placement follows scene-allocations.txt, which is Stephen's own file and the authority for which scenes are his time in which world: the opening world 1-77, the world with her 78-114, the world where he died 115-183, the family world 184-278, with the pulls at 78, 114 and 184 and a split that is not a pull at 10. The whole third act therefore sits inside the family world's stretch of his time, including the attack in which Marie and Jack are killed - which sits oddly against a world the ledger calls the one where they survive. The ledger and the chart are both Stephen's and they read differently here; this needs his ruling.",
+      "status": "INCOMPLETE",
+      "note": "The compiled chart lists scenes 202, 220, 238 and 256 inside the family world's lane, while the ledger has Marie and Jack killed in the siege and surviving only in the final pass. The siege and the seventh-chamber scene are placed here in the world where he died, following the ledger and the loop-canon note that the siege is off his thread. This placement needs Stephen to settle it.",
       "evidence": [
-        "the-waif/wiki/reference/primer-timeline/scene-allocations.txt",
-        "ledger: 'Marie(N)/Jack(N) ... die in the siege of iterations 1..N-1; survive in the final iteration'"
+        "bens-story.universes.json lanes_content.FAM",
+        "ledger: characters Marie/Jack",
+        "waif-loop-canon references/bens-story-engine.md: 'ELSEWHEN in *3 (NOT his thread): padded room #158, siege #235-256'"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "world_placement",
+      "status": "INCOMPLETE",
+      "note": "The red-light pass at the end of the film is treated here as the family world, following the loop-canon note that the closing picture is the family world with a cruel man behind the wheel. The ledger reads the same scenes as a final pass that is calm from the opening out. Whether they are one world or two is not settled by either document.",
+      "evidence": [
+        "ledger iterations: 'N (FINAL)'",
+        "waif-loop-canon: 'the red-light ending (p117-118 #277-278) is *F: family safe, cruel Ben behind the wheel'"
       ]
     },
     {
@@ -1197,19 +1127,6 @@
       "evidence": [
         "ledger: 'SIEGE ... Mother + Woman in White attack'",
         "ledger: 'The Others: pale-fire entities that need to be observed to exist'"
-      ]
-    },
-    {
-      "target": {
-        "kind": "event",
-        "id": "e_wake"
-      },
-      "dimension": "event_identity",
-      "status": "INCOMPLETE",
-      "note": "The ledger reads the bedroom wake at the end as the loop starting over, and the film shows the opening morning replaying exactly. The loop canon is explicit that nothing is rewound, so this is encoded as an ordinary event in a world whose morning is the same - not as a loop_reset, and no reset event exists anywhere in this encoding.",
-      "evidence": [
-        "ledger rules: 'The reset: Ben's suicide by revolver rewinds reality'",
-        "waif-loop-canon: 'There is NO rewind'"
       ]
     }
   ]
