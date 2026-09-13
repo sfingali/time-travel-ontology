@@ -19,7 +19,7 @@ Root type: **StoryEncoding** (`src/schema/story.ts`).
 
 ## Event types
 
-`ordinary`, `departure`, `arrival`, `intervention`, `observation`, `death`, `birth`, `loop_reset`, `loop_exit`, `branch_fork`, `branch_prune`, `collapse`, `contact`, `bootstrap_origin`, `reveal`, `other`.
+`ordinary`, `departure`, `arrival`, `intervention`, `observation`, `death`, `birth`, `loop_reset`, `loop_exit`, `branch_fork`, `branch_prune`, `collapse`, `contact`, `bootstrap_origin`, `reveal`, `inversion`, `checkpoint`, `other`.
 
 ## Edge kinds
 
@@ -41,6 +41,15 @@ Root type: **StoryEncoding** (`src/schema/story.ts`).
 - `orderKind` on a temporal/causal edge distinguishes chronological / experienced /
   presentation / simultaneity.
 - A branch world may use `forkEventRef` and `draft` (full vs draft).
+- `preExisting: true` on a world says it was already running before any traveller
+  entered it — there is no fork, as distinct from a fork whose point is unknown.
+- `joinsInto` is a traveller crossing between two worlds that both keep running;
+  `mergesInto` is two histories becoming one. They are not interchangeable.
+- On an `arrival`, `payload.originWorldRef` names the world the traveller left;
+  on a `departure`, `payload.destinationWorldRef` names the world they are bound
+  for. These are the world counterparts of `originTimeLabel`/`destinationTimeLabel`.
+  A crossing belongs on the event, because a story may cross the same pair of
+  worlds more than once; the `joinsInto` edge states the structural fact once.
 
 ## Referential integrity
 

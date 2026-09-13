@@ -43,7 +43,7 @@ const TOPOLOGY_PATTERNS_RAW: TopologyPattern[] = [
     description:
       "Two or more coexisting parallel worlds without requiring an all-to-all correspondence. A general alternative to dual_parallel_pair for larger multiverses (EEAAO-style).",
     typicalWorldKinds: ["parallel_world"],
-    typicalRelations: ["correspondsTo", "mirrors"],
+    typicalRelations: ["correspondsTo", "mirrors", "joinsInto"],
     notes:
       "Conformance is advisory; a focal pair (where relevant) may be declared per world. Avoids stretching dual_parallel_pair beyond exactly two worlds.",
   },
@@ -52,8 +52,8 @@ const TOPOLOGY_PATTERNS_RAW: TopologyPattern[] = [
     label: "Worldline bundle with attractors",
     description:
       "Multiple worldlines (as Branches or Timelines) pulled toward attractor convergence; observer may jump between them.",
-    typicalWorldKinds: ["timeline", "branch"],
-    typicalRelations: ["attractsToward", "forksFrom", "supersedes"],
+    typicalWorldKinds: ["timeline", "branch", "parallel_world"],
+    typicalRelations: ["attractsToward", "forksFrom", "supersedes", "joinsInto"],
   },
   {
     id: "tangent_bubble",

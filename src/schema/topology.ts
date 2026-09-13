@@ -14,6 +14,10 @@ export const WorldRelationKindSchema = z.enum([
   "mirrors",
   "supersedes",
   "originatesFrom",
+  /** A traveller crosses from the source world into the target world.
+   *  Distinct from mergesInto: the two histories do NOT combine — both keep
+   *  running independently, and only the traveller transfers. */
+  "joinsInto",
 ]);
 
 /** Correspondence entry linking entities/keys across parallel worlds */
@@ -33,6 +37,17 @@ const WorldBase = {
   description: z.string().optional(),
   /** Optional attractor / convergence field this world participates in */
   attractorFieldId: z.string().min(1).optional(),
+  /**
+   * True when this world was already running independently before any
+   * traveller entered it — it is NOT the product of a split in this story.
+   *
+   * This is a positive claim about origin, and it is what separates
+   * "there is no fork" from "the fork point is unknown". A branch left
+   * without a forkEventRef says the latter; preExisting says the former.
+   * Renderers draw a pre-existing world as a full-length lane with an entry
+   * marker, not as a lane that begins where the traveller arrives.
+   */
+  preExisting: z.boolean().optional(),
 };
 
 export const TimelineSchema = z

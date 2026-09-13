@@ -127,6 +127,57 @@ export function validateStoryEncoding(data: unknown): ValidationResult {
     }
   }
 
+  // Pre-existence vs descent. A world is either a child of a split (branch,
+  // with a parent) or something that was already running when the traveller
+  // arrived (preExisting). Claiming both confuses "no fork exists" with
+  // "the fork point is unknown" — the distinction preExisting exists to draw.
+  const preExistingIds = new Set<string>();
+  for (const w of enc.worlds) {
+    if (w.preExisting !== true) continue;
+    preExistingIds.add(w.id);
+    if (w.kind === "branch") {
+      warnings.push(
+        `World ${w.id}: declared preExisting but typed as a branch (a branch is by definition the product of a fork; prefer parallel_world or timeline)`,
+      );
+      if (w.parentRef !== undefined || w.forkEventRef !== undefined) {
+        warnings.push(
+          `World ${w.id}: declared preExisting but names a fork origin (parentRef/forkEventRef)`,
+        );
+      }
+    }
+  }
+
+  // A join is a traveller crossing, not two histories combining. Its target
+  // should be a world that was already running; otherwise forksFrom is meant.
+  for (const edge of enc.edges) {
+    if (edge.kind !== "world_relation" || edge.relation !== "joinsInto") continue;
+    if (worldIds.has(edge.to) && !preExistingIds.has(edge.to)) {
+      warnings.push(
+        `Edge ${edge.id}: joinsInto target ${edge.to} is not declared preExisting (a join enters a world that was already running; a split uses forksFrom)`,
+      );
+    }
+    if (edge.from === edge.to) {
+      warnings.push(`Edge ${edge.id}: joinsInto source and target are the same world`);
+    }
+  }
+
+  // An arrival that names the world it came from is checked for coherence with
+  // the world it lands in; the reference itself is a hard error in the schema.
+  for (const e of enc.events) {
+    const origin = e.payload?.originWorldRef;
+    if (origin !== undefined && origin === e.at.worldRef) {
+      warnings.push(
+        `Event ${e.id}: payload.originWorldRef equals the world the event occurs in (no crossing described)`,
+      );
+    }
+    const dest = e.payload?.destinationWorldRef;
+    if (dest !== undefined && dest === e.at.worldRef) {
+      warnings.push(
+        `Event ${e.id}: payload.destinationWorldRef equals the world the event occurs in (no crossing described)`,
+      );
+    }
+  }
+
   // Rule-set evidence (decision #3): a few structural prerequisites a graph CAN
   // check. Absence is an incomplete-evidence notice, not a rejection.
   const RULE_EVIDENCE: Record<string, string[]> = {

@@ -119,7 +119,8 @@
               "collapsesInto",
               "mirrors",
               "supersedes",
-              "originatesFrom"
+              "originatesFrom",
+              "joinsInto"
             ]
           },
           "default": []
@@ -235,6 +236,9 @@
                     "type": "string",
                     "minLength": 1
                   },
+                  "preExisting": {
+                    "type": "boolean"
+                  },
                   "kind": {
                     "type": "string",
                     "const": "timeline"
@@ -276,6 +280,9 @@
                   "attractorFieldId": {
                     "type": "string",
                     "minLength": 1
+                  },
+                  "preExisting": {
+                    "type": "boolean"
                   },
                   "kind": {
                     "type": "string",
@@ -351,6 +358,9 @@
                   "attractorFieldId": {
                     "type": "string",
                     "minLength": 1
+                  },
+                  "preExisting": {
+                    "type": "boolean"
                   },
                   "kind": {
                     "type": "string",
@@ -568,6 +578,16 @@
                   "destinationTimeLabel": {
                     "type": "string"
                   },
+                  "originWorldRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
+                  "destinationWorldRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.\\-]*$"
+                  },
                   "entropy": {
                     "type": "string",
                     "enum": [
@@ -775,7 +795,8 @@
                   "collapsesInto",
                   "mirrors",
                   "supersedes",
-                  "originatesFrom"
+                  "originatesFrom",
+                  "joinsInto"
                 ]
               },
               "identityRelation": {

@@ -242,6 +242,17 @@ export const StoryEncodingSchema = z
           });
         }
       }
+      for (const key of ["originWorldRef", "destinationWorldRef"] as const) {
+        const ref = e.payload?.[key];
+        if (ref !== undefined && !worldIds.has(ref)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `Event ${e.id} payload.${key} unknown world: ${ref}`,
+            path: ["events", data.events.indexOf(e), "payload", key],
+          });
+        }
+      }
+
       const checkpointRef = e.payload?.checkpointEventId;
       if (checkpointRef !== undefined) {
         const target = eventsById.get(checkpointRef);

@@ -6,7 +6,7 @@ import {
   IdentityRelationKindSchema,
   OrderingKindSchema,
 } from "./common.js";
-import { WorldDescriptorSchema } from "./topology.js";
+import { WorldDescriptorSchema, WorldRelationKindSchema } from "./topology.js";
 
 export const MediumSchema = z.enum([
   "film",
@@ -103,6 +103,12 @@ export const EventPayloadSchema = z
     travelDelta: z.string().optional(),
     originTimeLabel: z.string().optional(),
     destinationTimeLabel: z.string().optional(),
+    /** World the traveller left, on an arrival event. The world counterpart
+     *  of originTimeLabel: a crossing happens at a moment, so the world it
+     *  came from belongs on the event, not only on a world-level relation. */
+    originWorldRef: IdSchema.optional(),
+    /** World the traveller is bound for, on a departure event. */
+    destinationWorldRef: IdSchema.optional(),
 
     // Entropy / inversion (Tenet)
     entropy: EntropyDirectionSchema.optional(),
@@ -256,21 +262,8 @@ export const EdgeSchema = z
     from: IdSchema,
     to: IdSchema,
     label: z.string().optional(),
-    /** World-relation kind (forksFrom, mirrors, …). */
-    relation: z
-      .enum([
-        "forksFrom",
-        "mergesInto",
-        "correspondsTo",
-        "prunes",
-        "nestsWithin",
-        "attractsToward",
-        "collapsesInto",
-        "mirrors",
-        "supersedes",
-        "originatesFrom",
-      ])
-      .optional(),
+    /** World-relation kind (forksFrom, joinsInto, mirrors, …). */
+    relation: WorldRelationKindSchema.optional(),
     /** Meaning of an identity link between two agents (design decision #1). */
     identityRelation: IdentityRelationKindSchema.optional(),
     /** Which sense of "before/after" a temporal/causal edge expresses (#5). */

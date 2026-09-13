@@ -328,6 +328,97 @@ describe("advisory semantic annotations (Astra review — never reject)", () => 
   });
 });
 
+describe("pre-existing worlds and traveller joins", () => {
+  it("accepts a pre-existing parallel world entered by a join", () => {
+    const s = schemaValidStory();
+    s.topologyPatternId = "parallel_world_network";
+    s.worlds.push({ kind: "parallel_world", id: "w2", label: "Already running", preExisting: true });
+    s.events.push({
+      id: "e_join", type: "arrival", label: "Comes round elsewhere",
+      at: { worldRef: "w2" }, payload: { originWorldRef: "w1" },
+    });
+    s.edges.push({ id: "wr_j", kind: "world_relation", from: "w1", to: "w2", relation: "joinsInto" });
+    const r = validateStoryEncoding(s);
+    assert.ok(r.success, JSON.stringify(r.errors));
+    assert.equal(
+      (r.warnings ?? []).filter((w) => w.includes("joinsInto") || w.includes("preExisting")).length,
+      0,
+    );
+  });
+
+  it("rejects an originWorldRef that names no declared world", () => {
+    const s = schemaValidStory();
+    s.events.push({
+      id: "e_join", type: "arrival", label: "A",
+      at: { worldRef: "w1" }, payload: { originWorldRef: "nowhere" },
+    });
+    const r = validateStoryEncoding(s);
+    assert.ok(!r.success);
+    assert.match(r.errors.join("\n"), /payload\.originWorldRef unknown world: nowhere/);
+  });
+
+  it("warns (not rejects) a branch that also claims to be pre-existing", () => {
+    const s = schemaValidStory();
+    s.worlds.push({ kind: "branch", id: "b1", label: "B", parentRef: "w1", preExisting: true });
+    const r = validateStoryEncoding(s);
+    assert.ok(r.success, JSON.stringify(r.errors));
+    assert.ok((r.warnings ?? []).some((w) => w.includes("preExisting but typed as a branch")));
+    assert.ok((r.warnings ?? []).some((w) => w.includes("names a fork origin")));
+  });
+
+  it("warns when a join enters a world that was not already running", () => {
+    const s = schemaValidStory();
+    s.worlds.push({ kind: "parallel_world", id: "w2", label: "Not declared pre-existing" });
+    s.edges.push({ id: "wr_j", kind: "world_relation", from: "w1", to: "w2", relation: "joinsInto" });
+    const r = validateStoryEncoding(s);
+    assert.ok(r.success, JSON.stringify(r.errors));
+    assert.ok((r.warnings ?? []).some((w) => w.includes("is not declared preExisting")));
+  });
+
+  it("warns when an arrival says it came from the world it happens in", () => {
+    const s = schemaValidStory();
+    s.events.push({
+      id: "e_join", type: "arrival", label: "A",
+      at: { worldRef: "w1" }, payload: { originWorldRef: "w1" },
+    });
+    const r = validateStoryEncoding(s);
+    assert.ok(r.success, JSON.stringify(r.errors));
+    assert.ok((r.warnings ?? []).some((w) => w.includes("no crossing described")));
+  });
+
+  it("keeps The Waif's joined worlds pre-existing rather than parentless branches", async () => {
+    const data = JSON.parse(
+      await readFile(path.join(root, "instances", "the-waif.json"), "utf8"),
+    );
+    const result = validateStoryEncoding(data);
+    assert.ok(result.success, JSON.stringify(result.errors));
+
+    const joined = ["w_her", "w_whered", "w_fam"];
+    for (const id of joined) {
+      const w = data.worlds.find((x: any) => x.id === id);
+      assert.equal(w.kind, "parallel_world", `${id} should not be a branch`);
+      assert.equal(w.preExisting, true, `${id} should be declared pre-existing`);
+      assert.equal(w.draft, undefined, `${id} should not carry a fork-completeness draft flag`);
+      assert.equal(w.branchSpecification, undefined, `${id} has no fork to specify`);
+    }
+
+    const joins = data.edges.filter((e: any) => e.relation === "joinsInto");
+    assert.equal(joins.length, 3, "each crossing should be recorded at world level");
+
+    // Every arrival into a joined world names the world it came from.
+    for (const id of joined) {
+      const arrival = data.events.find(
+        (e: any) => e.at.worldRef === id && e.type === "arrival" && e.payload?.originWorldRef,
+      );
+      assert.ok(arrival, `${id} should have an arrival naming its origin world`);
+    }
+
+    // The forks are still forks: he dies in the other half of each split.
+    const forks = data.edges.filter((e: any) => e.relation === "forksFrom");
+    assert.equal(forks.length, 4, "the four splits must survive the join rework");
+  });
+});
+
 describe("corpus regression (Astra review — every instance in instances/ must hold)", () => {
   it("every instance in instances/ validates", async () => {
     const dir = path.join(root, "instances");

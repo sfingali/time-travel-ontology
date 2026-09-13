@@ -40,8 +40,22 @@ Each world is a labeled container holding a local-history rail and events.
 
 The **double enclosure**, not two history rails, identifies a parallel world.
 
+#### Lane extent encodes where a world came from
+
+A world's band says, by how far it runs, whether it is a child of a split or something that was already going on.
+
+| World | Band extent |
+|---|---|
+| `kind: branch` | The band **begins at its fork junction** on the parent and runs to the end of its drawn history. Nothing of it exists to the left of the fork; drawing it earlier asserts a shared past it does not have. |
+| `preExisting: true` | The band runs the **full extent of the chart**, before the traveller arrives and after they leave, with an **entry marker** at the arrival. The world does not begin when it is entered. |
+
+This is the difference a reader must be able to see at a glance: a child universe *starts* at a dot on its parent, a pre-existing universe *was always there* and merely gets visited. A `preExisting` band that stops at the entry marker is a rendering error, not a style choice — it silently converts a join into a fork.
+
+Where the traveller leaves a world without ending it, the band continues past the exit at reduced emphasis: the world carries on without them.
+
 - A missing branch anchor produces a detached **B** band with a parent-reference leader and “fork event unspecified.” Never invent a junction.
-- `originWorldRef` draws a labeled **origin-reference connector**, not automatically a fork.
+- `originWorldRef` on a world draws a labeled **origin-reference connector**, not automatically a fork.
+- `payload.originWorldRef` on an arrival draws the **entry marker** at that event, with a crossing connector back to the named world's band. `payload.destinationWorldRef` on a departure draws the same connector forward.
 - `mirrorOf` draws a mirror-relation connector between world headers, not a branch junction.
 - `spanLabel` appears under the world label. It does not establish a numeric axis or constrain event placement by itself.
 - Layout frames are explicitly labeled **composition group**; only encoded containment relations may create **semantic containment**.
@@ -88,6 +102,8 @@ Route each `edges[].kind` through its own ports and routing channels.
 Direction follows the encoded relation. Symmetric relationships use nondirectional marks while preserving stored endpoint order in metadata.
 
 **An edge is not necessarily a trajectory.** A causal arrow from a departure to an arrival remains causal unless a schema-backed relation or payload explicitly establishes travel. Unknown relations retain their exact text.
+
+`forksFrom` and `joinsInto` must not share a mark. A **fork** is a junction dot on the parent band from which the child band originates. A **join** is a crossing connector between two bands that both continue — it carries no junction dot, because nothing was created and nothing was combined. `mergesInto` is the only relation that may draw two bands terminating into one.
 
 Crossings use small bridge gaps; only explicit junctions get dots.
 

@@ -31,31 +31,28 @@
       "attractorFieldId": "the_same_beats"
     },
     {
-      "kind": "branch",
+      "kind": "parallel_world",
       "id": "w_her",
       "label": "The world with her - already running",
       "description": "A world that was already living before Ben arrives in it. The woman he finds at the door here is not the one who fell in his own world.",
-      "branchSpecification": "INCOMPLETE",
       "attractorFieldId": "the_same_beats",
-      "draft": true
+      "preExisting": true
     },
     {
-      "kind": "branch",
+      "kind": "parallel_world",
       "id": "w_whered",
       "label": "The world where he died - already running",
       "description": "A world in which the man we follow had already died. It was running before he got there, and it keeps running after he leaves it.",
-      "branchSpecification": "INCOMPLETE",
       "attractorFieldId": "the_same_beats",
-      "draft": true
+      "preExisting": true
     },
     {
-      "kind": "branch",
+      "kind": "parallel_world",
       "id": "w_fam",
       "label": "The family world - already running",
       "description": "A world where the family is whole: the boy rides in the car. The man who comes back from the cabin is cruel there, which the script implies and never shows.",
-      "branchSpecification": "INCOMPLETE",
       "attractorFieldId": "the_same_beats",
-      "draft": true
+      "preExisting": true
     },
     {
       "kind": "branch",
@@ -364,7 +361,8 @@
       ],
       "payload": {
         "note": "chart join 78",
-        "observerContinuity": true
+        "observerContinuity": true,
+        "originWorldRef": "w_u1"
       }
     },
     {
@@ -450,7 +448,8 @@
       ],
       "payload": {
         "note": "chart join 114",
-        "observerContinuity": true
+        "observerContinuity": true,
+        "originWorldRef": "w_her"
       }
     },
     {
@@ -573,7 +572,8 @@
       ],
       "payload": {
         "note": "chart join 184",
-        "observerContinuity": true
+        "observerContinuity": true,
+        "originWorldRef": "w_whered"
       }
     },
     {
@@ -691,6 +691,30 @@
       "to": "w_whered",
       "relation": "forksFrom",
       "label": "the last shot forks the world"
+    },
+    {
+      "id": "wr_join_her",
+      "kind": "world_relation",
+      "from": "w_u1",
+      "to": "w_her",
+      "relation": "joinsInto",
+      "label": "he leaves the opening world and comes round in a world already running"
+    },
+    {
+      "id": "wr_join_whered",
+      "kind": "world_relation",
+      "from": "w_her",
+      "to": "w_whered",
+      "relation": "joinsInto",
+      "label": "he leaves her world and comes round in one where he is already dead"
+    },
+    {
+      "id": "wr_join_fam",
+      "kind": "world_relation",
+      "from": "w_whered",
+      "to": "w_fam",
+      "relation": "joinsInto",
+      "label": "the last crossing: he comes round where the family is alive"
     },
     {
       "id": "wr_corr_her",
@@ -815,7 +839,7 @@
       "from": "e_pull_78",
       "to": "e_her_entry",
       "orderKind": "chronological",
-      "label": "the shot forks the world; he carries on in one half"
+      "label": "the shot splits his world; he does not continue in either half, but comes round in a world that was already running"
     },
     {
       "id": "c_her_waif",
@@ -839,7 +863,7 @@
       "from": "e_pull_114",
       "to": "e_whered_entry",
       "orderKind": "chronological",
-      "label": "he carries on in the half where he is already dead"
+      "label": "he comes round in a world where he is already dead — it was running before he got there"
     },
     {
       "id": "c_siege_chamber",
@@ -879,7 +903,7 @@
       "from": "e_pull_184",
       "to": "e_fam_entry",
       "orderKind": "chronological",
-      "label": "the last split lands him with the family alive"
+      "label": "the last crossing lands him in the family world, already under way"
     },
     {
       "id": "c_fam_red",
@@ -1104,6 +1128,19 @@
       "note": "The crash splits the world in two, but only one half is ever shown. This world is declared because the split is declared; it has no events because the film has none for it.",
       "evidence": [
         "bens-story.universes.json splits.10: 'THE CRASH - THE WORLDS SPLIT'"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "branch_origin",
+      "status": "DRAFT",
+      "note": "The three worlds he crosses into are encoded as pre-existing parallel worlds joined by a traveller, not as branches of his own. Earlier they were branches with no parent and no fork event, marked draft — which asserted a fork whose point was merely unknown. The film asserts the opposite: these worlds were running before he arrived and keep running after he leaves. Each shot still forks his own world (b_78, b_114, b_184 carry the half where he dies); the surviving thread does not continue in either half but joins a world already under way. Fork and join are now separate claims: forksFrom for descent, joinsInto for entry, with preExisting on the world and originWorldRef on the arrival. What remains DRAFT is whether the joined worlds are drawn from a fixed set the passes cycle through, or a fresh world each time; the encoding commits to neither.",
+      "evidence": [
+        "waif-loop-canon: 'joined worlds backpropagate; they were running before he arrives'",
+        "world descriptions: 'already living before Ben arrives in it', 'it keeps running after he leaves it'",
+        "instances/the-waif.json: wr_join_her, wr_join_whered, wr_join_fam"
       ]
     },
     {
