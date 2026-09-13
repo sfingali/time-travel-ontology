@@ -7,94 +7,83 @@
       "THE-WAIF.fountain (DRAFT (SF): 03-18-26)",
       "THE WAIF - 06-18-26 - FINGLETON.pdf (118 pp)",
       "the-waif/wiki/reference/primer-timeline/waif-event-ledger.json",
-      "the-waif/wiki/reference/primer-timeline/bens-story.universes.json (compiled from scene-allocations.txt)"
+      "the-waif/wiki/reference/primer-timeline/bens-story.universes.json (compiled from scene-allocations.txt)",
+      "author-clarifications.md (author statement, 2026-09-13; governs world relationships)",
+      "the-waif-demonstration.json and the-waif-preston.json: repeated splitting events and terminal fatal outcomes"
     ]
   },
   "schemaVersion": "1.0",
   "ruleSetIds": [
-    "worldline_attractor",
     "branch_on_intervention"
   ],
-  "primaryRuleSetId": "worldline_attractor",
-  "mixinRuleSetIds": [
-    "branch_on_intervention"
-  ],
+  "primaryRuleSetId": "branch_on_intervention",
+  "mixinRuleSetIds": [],
   "topologyPatternId": "worldline_bundle",
   "worlds": [
     {
-      "kind": "timeline",
+      "kind": "branch",
       "id": "w_u1",
       "label": "The opening world",
-      "description": "Where the film opens: Ben wakes in the house with the three locks on the door. The woman falls through the roof of the car here, and the woman of this world dies in that fall.",
+      "description": "Opening timeline: the Waif dies when she falls onto the Forester; Jack dies and Marie and Ben survive. Ben leaves at the pre-arrival trigger pull.",
       "spanLabel": "the day of the crash",
       "isOriginWorld": true,
-      "attractorFieldId": "the_same_beats"
+      "parentRef": "w_history",
+      "forkEventRef": "e_earlier_split",
+      "forkLabel": "The opening falling-car accident",
+      "branchSpecification": "COMPLETE",
+      "draft": false
     },
     {
       "kind": "branch",
       "id": "w_her",
       "label": "The world with her - already running",
-      "description": "A world that was already living before Ben arrives in it. The woman he finds at the door here is not the one who fell in his own world.",
-      "branchSpecification": "INCOMPLETE",
-      "attractorFieldId": "the_same_beats",
-      "draft": true
+      "description": "The Waif’s surviving branch of the fall. It already exists when Ben crosses before scene 78. The exact Ben/Jack accident outcomes in this branch are not supplied.",
+      "branchSpecification": "COMPLETE",
+      "draft": false,
+      "parentRef": "w_history",
+      "forkEventRef": "e_earlier_split",
+      "forkLabel": "The opening falling-car accident"
     },
     {
       "kind": "branch",
       "id": "w_whered",
       "label": "The world where he died - already running",
-      "description": "A world in which the man we follow had already died. It was running before he got there, and it keeps running after he leaves it.",
-      "branchSpecification": "INCOMPLETE",
-      "attractorFieldId": "the_same_beats",
-      "draft": true
+      "description": "The accident outcome where Jack lives and Ben dies. The followed Ben enters this established history at his pull in scene 114.",
+      "branchSpecification": "COMPLETE",
+      "draft": false,
+      "parentRef": "w_history",
+      "forkEventRef": "e_earlier_split",
+      "forkLabel": "The opening falling-car accident"
     },
     {
       "kind": "branch",
       "id": "w_fam",
       "label": "The family world - already running",
-      "description": "A world where the family is whole: the boy rides in the car. The man who comes back from the cabin is cruel there, which the script implies and never shows.",
+      "description": "The reunion world reached at scenes 185–188, with an intact Forester and its own history. The house attack, cabin siege, family deaths, chamber removal and final shot follow here. This is not the independent red-light world.",
       "branchSpecification": "INCOMPLETE",
-      "attractorFieldId": "the_same_beats",
       "draft": true
-    },
-    {
-      "kind": "branch",
-      "id": "b_78",
-      "label": "He dies at the shot in the storm",
-      "description": "The other half of the split: in this world the shot kills him. It carries on without him.",
-      "parentRef": "w_u1",
-      "forkEventRef": "e_pull_78",
-      "forkLabel": "the shot before she arrives",
-      "branchSpecification": "COMPLETE"
-    },
-    {
-      "kind": "branch",
-      "id": "b_114",
-      "label": "He dies at the shot in the cabin",
-      "description": "The other half of the split: in this world the shot kills him. It carries on without him.",
-      "parentRef": "w_her",
-      "forkEventRef": "e_pull_114",
-      "forkLabel": "the shot at her encouragement",
-      "branchSpecification": "COMPLETE"
     },
     {
       "kind": "branch",
       "id": "b_184",
       "label": "He dies at the last shot",
-      "description": "The other half of the last split: in this world he dies of the shot he fires into his own mouth. It carries on without him.",
+      "description": "The fatal outcome of the side-of-head shot at scene 184. Separate from the final mouth shot at 266. Subsequent history is not followed.",
       "parentRef": "w_whered",
       "forkEventRef": "e_pull_184",
       "forkLabel": "the last shot",
       "branchSpecification": "COMPLETE"
     },
     {
-      "kind": "branch",
-      "id": "b_crash",
-      "label": "The other half of the crash",
-      "description": "The crash splits the world in two. The film follows one half - the one where the boy dies in the car; the other half is never shown.",
-      "parentRef": "w_u1",
-      "forkEventRef": "e_crash",
-      "branchSpecification": "INCOMPLETE"
+      "kind": "timeline",
+      "id": "w_history",
+      "label": "The falling-car accident before its outcomes",
+      "description": "Author-confirmed common splitting event behind the opening outcome, Jack’s surviving outcome and the Waif’s surviving branch."
+    },
+    {
+      "kind": "timeline",
+      "id": "w_parallel",
+      "label": "Independent parallel closing universe",
+      "description": "Runs parallel to the first scenes. The final red-light family has no causal connection to the main narrative. It is not the destination of Ben’s final shot."
     }
   ],
   "agents": [
@@ -104,7 +93,7 @@
       "identityGroup": "ben",
       "continuityRole": "primary",
       "homeWorldRef": "w_u1",
-      "notes": "Carries nothing from one world into the next: he does not remember the fall, the cabin or the shots."
+      "notes": "Ben carries memories between changes and later struggles with conflicting memories. The closing parallel Ben is not a declared continuation of this traveller."
     },
     {
       "id": "ben_her",
@@ -124,7 +113,7 @@
     },
     {
       "id": "ben_fam",
-      "label": "Ben (the family world)",
+      "label": "Ben (reunion world)",
       "identityGroup": "ben",
       "continuityRole": "counterpart",
       "homeWorldRef": "w_fam",
@@ -135,7 +124,7 @@
       "label": "The Waif",
       "identityGroup": "waif",
       "continuityRole": "observer_persistent",
-      "notes": "The same woman in every world, and the only one who remembers between them. She has many names - Alice, Mary, Junebug, Kit. She is the one who fell in the opening world, and she wears red-striped shoes."
+      "notes": "The living Waif in the alternate world Ben enters. The Waif in the opening world dies. She remembers Ben and their earlier lives; her complete personal itinerary is not specified."
     },
     {
       "id": "waif_jumper",
@@ -143,45 +132,69 @@
       "identityGroup": "waif",
       "continuityRole": "variant",
       "homeWorldRef": "w_u1",
-      "notes": "The woman of the opening world, who jumps from the office window and dies on the roof of the car. The woman Ben meets afterwards is not her."
+      "notes": "Author-confirmed death in the opening timeline. A living Waif already exists in the alternate world Ben enters."
     },
     {
       "id": "marie",
       "label": "Marie",
       "homeWorldRef": "w_u1",
-      "notes": "Ben's partner. Dies in the siege in the world where he died; alive in the family world."
+      "notes": "Ben’s wife or estranged partner. She and Jack die outside the cabin in the reunion-world siege. Their closing parallel versions are independent."
     },
     {
       "id": "jack",
       "label": "Jack",
       "homeWorldRef": "w_u1",
-      "notes": "Ben's son. Killed in the crash - his head is cut through, the way his mother is cut through by the bone in her thigh."
+      "notes": "Son of Ben and Marie. Dies in the opening crash; alive in the world where Ben died; later dies in the reunion-world siege. His closing parallel version is independent."
     },
     {
       "id": "the_others",
       "label": "The Others",
-      "homeWorldRef": "w_whered",
       "notes": "Pale-fire figures that have to be looked at to exist. They take the woman apart at the end of a pass and light her up again."
     },
     {
       "id": "preston",
       "label": "Q. R. Preston",
-      "homeWorldRef": "w_u1",
-      "notes": "Wrote the book about the rules that govern all of this. His revolver is the one in the crawlspace. His address is on the book."
+      "notes": "Author and armorer. Repeated self-directed attempts branch the universes; Ben takes the revolver and kills him in the followed outcome. See the separate Preston perspective."
     },
     {
       "id": "jamie",
       "label": "Jamie",
       "homeWorldRef": "w_u1",
-      "notes": "Wants the cabin, but will not buy it without the permit."
+      "notes": "Shopkeeper: the permit and resale conversation concerns a gun, not the cabin."
+    },
+    {
+      "id": "ben_historical",
+      "label": "Ben who died before the traveller arrived",
+      "homeWorldRef": "w_whered",
+      "identityGroup": "ben",
+      "continuityRole": "variant",
+      "notes": "Historical death in the earlier branch, distinct from the arriving traveller."
+    },
+    {
+      "id": "ben_parallel",
+      "label": "Ben (independent closing universe)",
+      "homeWorldRef": "w_parallel",
+      "identityGroup": "ben",
+      "continuityRole": "variant",
+      "notes": "No personal-continuity or causal connection to the main narrative is asserted."
+    },
+    {
+      "id": "marie_parallel",
+      "label": "Marie (independent closing universe)",
+      "homeWorldRef": "w_parallel"
+    },
+    {
+      "id": "jack_parallel",
+      "label": "Jack (independent closing universe)",
+      "homeWorldRef": "w_parallel"
     }
   ],
   "events": [
     {
       "id": "e_open",
       "type": "ordinary",
-      "label": "Ben wakes in the house",
-      "description": "Ben's eyes snap open. He walks the house with a bat, checks the mirror, and throws the three locks on the front door.",
+      "label": "A father watches for danger",
+      "description": "Ben checks the house and sits with Jack, who thinks his reflection moved on its own. The next day the family drives into the city. Marie, in the passenger seat, is working from her equations; Jack rides in the rear.",
       "at": {
         "worldRef": "w_u1",
         "timeLabel": "scene 1-3"
@@ -190,14 +203,14 @@
         "ben_1"
       ],
       "payload": {
-        "note": "p1 #1-3"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 1–8"
       }
     },
     {
       "id": "e_drive",
       "type": "ordinary",
-      "label": "The drive with the family",
-      "description": "Marie writes equations on paper in the passenger seat while Ben drives. Jack is in the car. Ben makes the green light and says he hates this intersection.",
+      "label": "A father watches for danger",
+      "description": "Marie works on her laptop while Ben drives and Jack sits in the rear. They make the light. Marie voices the opening complaint about the intersection.",
       "at": {
         "worldRef": "w_u1",
         "timeLabel": "scene 8"
@@ -208,14 +221,14 @@
         "jack"
       ],
       "payload": {
-        "note": "p3 #8"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 1–8"
       }
     },
     {
       "id": "e_crash",
-      "type": "branch_fork",
-      "label": "She comes through the roof",
-      "description": "A woman falls from a great height onto the roof of the moving car. The roof comes down on Marie and Jack. This is where the world splits in two.",
+      "type": "ordinary",
+      "label": "The fall kills the Waif and Jack",
+      "description": "The falling Waif strikes the Forester and dies in this first timeline. Jack is also fatally injured; Ben survives and Marie is injured. Her death here does not mean she is dead in every world: the world Ben will enter already contains a living Waif.",
       "at": {
         "worldRef": "w_u1",
         "timeLabel": "scene 10"
@@ -223,20 +236,18 @@
       "agents": [
         "ben_1",
         "marie",
-        "jack"
+        "jack",
+        "waif_jumper"
       ],
       "payload": {
-        "note": "p4 #10",
-        "tags": [
-          "the split"
-        ]
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scene 10"
       }
     },
     {
       "id": "e_waif_dies",
       "type": "death",
       "label": "The woman of this world dies",
-      "description": "The woman who fell does not survive the fall. She is the woman of this world, and this is the last of her.",
+      "description": "The Waif dies in the opening timeline, as confirmed by the author. This does not kill the living Waif in the pre-existing alternate world.",
       "at": {
         "worldRef": "w_u1",
         "timeLabel": "scene 10"
@@ -245,14 +256,14 @@
         "waif_jumper"
       ],
       "payload": {
-        "note": "p4 #10"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; scenes 10 and 257–266"
       }
     },
     {
       "id": "e_aftermath",
       "type": "ordinary",
-      "label": "The motel and the courthouse",
-      "description": "Ben lives in a motel. At the courthouse Marie keeps the house and Ben is given the cabin. He says he has accepted that Jack is gone.",
+      "label": "Grief separates the parents",
+      "description": "Ben is living in a motel. Marie proposes selling the cabin and letting him keep the proceeds until they settle the finances. She says she has accepted Jack is gone. Ben offers to do the repairs himself.",
       "at": {
         "worldRef": "w_u1",
         "timeLabel": "scene 11-18"
@@ -262,30 +273,30 @@
         "marie"
       ],
       "payload": {
-        "note": "p5-6 #11, #17-18"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 11–20"
       }
     },
     {
       "id": "e_cabin",
       "type": "ordinary",
-      "label": "The cabin",
-      "description": "The cabin: a bat hanging, maggots, a window smashed in.",
+      "label": "The cabin holds a book and a gun",
+      "description": "Ben arrives at the cabin; a bat flies out, the window is broken, and a dead rat attracts maggots.",
       "at": {
         "worldRef": "w_u1",
-        "timeLabel": "scene 37"
+        "timeLabel": "scenes 31–36"
       },
       "agents": [
         "ben_1"
       ],
       "payload": {
-        "note": "p11 #37"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 31–52"
       }
     },
     {
       "id": "e_book",
       "type": "reveal",
-      "label": "The book in the cabin",
-      "description": "A book is in the cabin: it is called The Rules of Quantum Immortality, and it was written by Q. R. Preston.",
+      "label": "The cabin holds a book and a gun",
+      "description": "Ben finds The Rules of Quantum Immortality by Q. R. Preston.",
       "at": {
         "worldRef": "w_u1",
         "timeLabel": "scene 37"
@@ -294,14 +305,14 @@
         "ben_1"
       ],
       "payload": {
-        "note": "p11 #37"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 31–52"
       }
     },
     {
       "id": "e_revolver",
       "type": "reveal",
-      "label": "The revolver in the crawlspace",
-      "description": "A rosewood box under the cabin holds a seven-sided revolver. Six of its chambers fire; the seventh is the one that goes on burning.",
+      "label": "The cabin holds a book and a gun",
+      "description": "Repairing the wiring reveals a rosewood box with a revolver: six open chambers and a sealed seventh. Radiation is detected later.",
       "at": {
         "worldRef": "w_u1",
         "timeLabel": "scene 41"
@@ -310,85 +321,80 @@
         "ben_1"
       ],
       "payload": {
-        "note": "p13 #41"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 31–52"
       }
     },
     {
       "id": "e_testfire",
       "type": "ordinary",
-      "label": "Six cans destroyed",
-      "description": "Ben tries the gun on six cans and destroys all of them. He says it is good enough to know he should not be this good.",
+      "label": "The cabin holds a book and a gun",
+      "description": "Ben destroys six cans with six shots. No claim about unexpected marksmanship is spoken.",
       "at": {
         "worldRef": "w_u1",
         "timeLabel": "scene 46-49"
       },
       "agents": [
-        "ben_1",
-        "jamie"
+        "ben_1"
       ],
       "payload": {
-        "note": "p16 #46, p18 #49"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 31–52"
       }
     },
     {
       "id": "e_pull_78",
-      "type": "branch_fork",
-      "label": "He shoots himself before she arrives",
-      "description": "Ben puts the revolver in his mouth and pulls the trigger, before anyone has arrived at the door. The world splits: one half carries him on, the other half kills him.",
+      "type": "departure",
+      "label": "Ben pulls the trigger before scene 78",
+      "description": "Before scene 78, Ben actually pulls the trigger and we follow him into an alternate world that already exists. The Waif is alive there. This completed act is the author’s intended rewrite even if the current screenplay does not show it. Scene 78 begins on the destination side of the crossing.",
       "at": {
         "worldRef": "w_u1",
-        "timeLabel": "scene 78"
+        "timeLabel": "before scene 78 · intended rewrite"
       },
       "agents": [
         "ben_1"
       ],
       "payload": {
-        "note": "chart split 78, #78",
-        "tags": [
-          "the pull"
-        ]
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Before scene 78 · author’s intended rewrite"
       }
     },
     {
       "id": "e_her_entry",
       "type": "arrival",
       "label": "He comes round in a world with her in it",
-      "description": "He comes round in a world that was already running without him - the same cabin, the same night, but in this one the woman is alive and looking for him.",
+      "description": "Ben enters a pre-existing world in which the Waif is alive. This crossing occurs at his pull before her arrival; it does not create the destination.",
       "at": {
         "worldRef": "w_her",
-        "timeLabel": "scene 78-79"
+        "timeLabel": "before scene 78 · intended rewrite"
       },
       "agents": [
         "ben_her",
         "waif"
       ],
       "payload": {
-        "note": "chart join 78",
-        "observerContinuity": true
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; completed pull before scene 78 is author’s intended rewrite, not a claim about the unchanged March text"
       }
     },
     {
       "id": "e_arrival_waif",
       "type": "arrival",
-      "label": "She arrives at the door",
-      "description": "A soaked young woman stands at the cabin door in the storm. There is broken glass in her foot. She says she was hoping he would remember.",
+      "label": "The living Waif arrives at the cabin",
+      "description": "Ben is now in the pre-existing world where the Waif is alive. A soaked stranger arrives at his door and persuades him to admit her. Inside, she cuts her foot on the glass he broke earlier. She hopes he will remember her; he does not recognise her.",
       "at": {
         "worldRef": "w_her",
-        "timeLabel": "scene 79-95"
+        "timeLabel": "scenes 79–104"
       },
       "agents": [
         "ben_her",
         "waif"
       ],
       "payload": {
-        "note": "p26-29 #78-79, p36-39 #95-101"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 79–104"
       }
     },
     {
       "id": "e_blue_ball",
       "type": "ordinary",
-      "label": "The blue ball",
-      "description": "She is carrying Jack's blue ball. It is not from this world.",
+      "label": "She describes surviving branches",
+      "description": "The Waif uses Jack’s blue ball in her explanation. Ben had found it in the cabin at scene 59; cross-world provenance is not established.",
       "at": {
         "worldRef": "w_her",
         "timeLabel": "scene 105"
@@ -397,30 +403,30 @@
         "waif"
       ],
       "payload": {
-        "note": "p41 #105"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scene 105"
       }
     },
     {
       "id": "e_padded_room",
       "type": "ordinary",
-      "label": "What happened to her in the padded room",
-      "description": "She remembers being kept in a padded room, and being given the book there. Where the book came from, she never says.",
+      "label": "Her account leaves things out",
+      "description": "The Waif recounts abandonment by a man, repeated apparent survivals and confinement. An unseen-faced psychiatrist gives her the book in a padded room. She says Preston killed himself. Later scenes revise the office incident and contradict her account of Preston’s death; this is not an unqualified history.",
       "at": {
-        "worldRef": "w_her",
-        "timeLabel": "scene 158-159"
+        "worldRef": "w_whered",
+        "timeLabel": "remembered earlier life, shown in scenes 156–159"
       },
       "agents": [
         "waif"
       ],
       "payload": {
-        "note": "p70 #158-159"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 132–159; placement here is where the account is told, not a confirmed address of the flashback"
       }
     },
     {
       "id": "e_pull_114",
-      "type": "branch_fork",
-      "label": "He shoots himself while she tells him to",
-      "description": "With her urging him on, Ben puts the revolver to himself and fires again. The world splits: in one half he lives, in the other he is dead.",
+      "type": "departure",
+      "label": "His next pull takes him to the world where he died",
+      "description": "With the Waif beside him, Ben pulls the trigger. His experienced outcome is a click, and he enters the world in which Jack is alive and Ben has already died. An earlier split produced that history. The arrival does not create it.",
       "at": {
         "worldRef": "w_her",
         "timeLabel": "scene 114"
@@ -430,17 +436,14 @@
         "waif"
       ],
       "payload": {
-        "note": "chart split 114",
-        "tags": [
-          "the pull"
-        ]
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; End of scene 114"
       }
     },
     {
       "id": "e_whered_entry",
       "type": "arrival",
-      "label": "He comes round in the world where he died",
-      "description": "He comes round in the world his own death already belongs to - a world that had been running without him and keeps its own history.",
+      "label": "The followed Ben enters that existing history",
+      "description": "The Ben we follow arrives in the already-branched world where Jack is alive and a Ben died earlier. The traveller and the historical death must not be collapsed into one event.",
       "at": {
         "worldRef": "w_whered",
         "timeLabel": "scene 114"
@@ -449,17 +452,16 @@
         "ben_whered"
       ],
       "payload": {
-        "note": "chart join 114",
-        "observerContinuity": true
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; At the trigger pull in scene 114"
       }
     },
     {
       "id": "e_siege",
       "type": "death",
-      "label": "The siege: Marie and Jack are killed",
-      "description": "The house is attacked. Marie runs with Jack. The roof of the pickup comes down on them, and Marie is killed and so is the boy - half his head gone, the way it was in the crash.",
+      "label": "The family dies in the pickup",
+      "description": "During the cabin siege, the Waif admits an Other through the back door. Marie takes Jack outside while Ben is pinned. They reach the F-250 pickup, which will not start. The Woman in White crushes its roof. Ben reaches Marie and Jack too late. This follows the reunion and escape in the same presented sequence.",
       "at": {
-        "worldRef": "w_whered",
+        "worldRef": "w_fam",
         "timeLabel": "scene 240-253"
       },
       "agents": [
@@ -467,66 +469,66 @@
         "jack"
       ],
       "payload": {
-        "note": "p107-110 #240-253"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 240–253"
       }
     },
     {
       "id": "e_chamber",
       "type": "intervention",
-      "label": "The seventh chamber is cut away",
-      "description": "The pale figures will not take Ben: they have to be looked at to exist, and he will not do it. The woman cuts the seventh chamber out of the revolver so it will fire every time.",
+      "label": "She disables the special chamber",
+      "description": "The Others approach Ben but do not take him. He briefly closes his eyes, then opens them and looks at the figures. Inside, the Waif removes the radioactive chamber and says the gun will now fire every time. She asks him to kill her, promising the erasure of his pain and memories.",
       "at": {
-        "worldRef": "w_whered",
+        "worldRef": "w_fam",
         "timeLabel": "scene 256"
       },
       "agents": [
-        "ben_whered",
+        "ben_fam",
         "waif",
         "the_others"
       ],
       "payload": {
-        "note": "p111 #256"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 255–256"
       }
     },
     {
       "id": "e_jump_reveal",
       "type": "reveal",
-      "label": "She was the one who fell",
-      "description": "She tells him she did not shoot herself - she jumped. Her shoes are the red-striped ones. She was the woman who came through the car roof.",
+      "label": "The jumper was the Waif",
+      "description": "The office incident is revisited: she fired through the window and jumped. Flashbacks connect her fall to the Forester, and Ben sees the same red-striped shoes. She says she was the jumper. Her continuity across these lives is part of the revelation; the screenplay does not supply a complete counterpart map.",
       "at": {
-        "worldRef": "w_whered",
+        "worldRef": "w_fam",
         "timeLabel": "scene 257-266"
       },
       "agents": [
-        "ben_whered",
+        "ben_fam",
         "waif"
       ],
       "payload": {
-        "note": "p112-113 #257-266"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 257–266"
       }
     },
     {
       "id": "e_waif_demand",
       "type": "ordinary",
-      "label": "She asks him to shoot her",
-      "description": "She tells him to put the gun on her and fire, because she is where all of the pain comes from. He refuses her.",
+      "label": "The Waif asks him to kill her",
+      "description": "She asks Ben to shoot her and promises that the pain and memories of his family will vanish. He ultimately turns the gun on himself at 266.",
       "at": {
-        "worldRef": "w_whered",
+        "worldRef": "w_fam",
         "timeLabel": "scene 266"
       },
       "agents": [
-        "ben_whered",
+        "ben_fam",
         "waif"
       ],
       "payload": {
-        "note": "p113 #266"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 255–256"
       }
     },
     {
       "id": "e_pull_184",
       "type": "branch_fork",
-      "label": "He goes back to the cabin and shoots himself again",
-      "description": "He returns to the cabin and fires into his own mouth rather than at her. He looks at his own death instead of turning away from it. The world splits one last time: he lives on in one half and dies in the other.",
+      "label": "Ben tries again after the failed reunion",
+      "description": "After the failed reunion, Ben holds the gun to the side of his head and pulls the trigger. The fatal outcome is followed at the end of 184 and the surviving perspective resumes in 185. This is not the final shot at 266.",
       "at": {
         "worldRef": "w_whered",
         "timeLabel": "scene 184"
@@ -535,20 +537,16 @@
         "ben_whered"
       ],
       "payload": {
-        "note": "chart split 184; the shot shown at p113 #266",
-        "tags": [
-          "the pull",
-          "the last pull"
-        ]
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scene 184, before the discharge"
       }
     },
     {
       "id": "e_others_consumed",
       "type": "death",
-      "label": "The Others take her apart",
-      "description": "The pale figures pull the woman to pieces. She comes back with dead eyes, clicks her fingers, and the pale light goes out.",
+      "label": "The Others take her",
+      "description": "The Others corner the Waif and tear her apart, merging into her flesh. She later emerges with their strange gait, pale skin and dead eyes. She extinguishes the fire with a snap of her fingers. This is a transformation, not a demonstrated restoration to her earlier state.",
       "at": {
-        "worldRef": "w_whered",
+        "worldRef": "w_fam",
         "timeLabel": "scene 267-270"
       },
       "agents": [
@@ -556,97 +554,66 @@
         "the_others"
       ],
       "payload": {
-        "note": "p113-115 #267-270"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 267–270"
       }
     },
     {
       "id": "e_fam_entry",
       "type": "arrival",
-      "label": "He comes round in the world where they are alive",
-      "description": "The last split lands him in a world where Marie and Jack were never taken from him - a world that had been running without him.",
+      "label": "The film resumes with a surviving Ben",
+      "description": "Ben wakes on the floor, alone, with a scorch mark described as a misfire. Five rounds remain. The cabin is intact and lived in, its books and possessions back in place. Outside sits the undamaged Forester. His experience now continues in a reality with a different history.",
       "at": {
         "worldRef": "w_fam",
-        "timeLabel": "scene 184"
+        "timeLabel": "scene 185"
       },
       "agents": [
         "ben_fam"
       ],
       "payload": {
-        "note": "chart join 184",
-        "observerContinuity": true
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 185–186"
       }
     },
     {
       "id": "e_red_light",
       "type": "ordinary",
-      "label": "The light stays red",
-      "description": "He is driving with Jack beside him. The light turns red and he stops, and nothing falls out of the sky. They wait.",
+      "label": "Meanwhile, an independent parallel family waits",
+      "description": "In a parallel universe running alongside the opening scenes, Ben, Marie and Jack repeat familiar morning routines. Ben steps on the toy car; later they stop at a red light. This universe has no causal connection to the main narrative. Its family is not the result of Ben’s final shot.",
       "at": {
-        "worldRef": "w_fam",
+        "worldRef": "w_parallel",
         "timeLabel": "scene 277"
       },
       "agents": [
-        "ben_fam",
-        "jack"
+        "ben_parallel",
+        "marie_parallel",
+        "jack_parallel"
       ],
       "payload": {
-        "note": "p117 #277"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 271–278"
       }
     },
     {
       "id": "e_close",
       "type": "ordinary",
-      "label": "Jack draws on the glass",
-      "description": "Jack runs his finger over the glass of the car window. The camera pulls back over the crossroads and the picture goes dark.",
+      "label": "Meanwhile, an independent parallel family waits",
+      "description": "In a parallel universe running alongside the opening scenes, Ben, Marie and Jack repeat familiar morning routines. Ben steps on the toy car; later they stop at a red light. This universe has no causal connection to the main narrative. Its family is not the result of Ben’s final shot.",
       "at": {
-        "worldRef": "w_fam",
+        "worldRef": "w_parallel",
         "timeLabel": "scene 277-278"
       },
       "agents": [
-        "ben_fam",
-        "jack"
+        "ben_parallel",
+        "marie_parallel",
+        "jack_parallel"
       ],
       "payload": {
-        "note": "p117-118 #277-278"
-      }
-    },
-    {
-      "id": "e_death78",
-      "type": "death",
-      "label": "He dies at the shot in the storm",
-      "description": "In this half of the split the shot kills him. The world goes on without him.",
-      "at": {
-        "worldRef": "b_78",
-        "timeLabel": "scene 78"
-      },
-      "agents": [
-        "ben_1"
-      ],
-      "payload": {
-        "note": "chart stub 78B"
-      }
-    },
-    {
-      "id": "e_death114",
-      "type": "death",
-      "label": "He dies at the shot in the cabin",
-      "description": "In this half of the split the shot kills him. The world goes on without him.",
-      "at": {
-        "worldRef": "b_114",
-        "timeLabel": "scene 114"
-      },
-      "agents": [
-        "ben_her"
-      ],
-      "payload": {
-        "note": "chart stub 114B"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; Scenes 271–278"
       }
     },
     {
       "id": "e_death184",
       "type": "death",
-      "label": "He dies at the last shot",
-      "description": "In this half of the split the shot into his own mouth kills him. The world goes on without him.",
+      "label": "A fatal outcome is shown",
+      "description": "The side-of-head shot in scene 184 fires; Ben falls and the Waif steps over him. This fatal outcome is distinct from the final shot into his mouth at 266.",
       "at": {
         "worldRef": "b_184",
         "timeLabel": "scene 184"
@@ -655,35 +622,77 @@
         "ben_whered"
       ],
       "payload": {
-        "note": "chart stub 184B"
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; End of scene 184"
+      }
+    },
+    {
+      "id": "e_earlier_split",
+      "type": "branch_fork",
+      "label": "The falling-car accident splits the outcomes",
+      "description": "The author identifies the accident as the fork: Ben lives and Jack dies in the opening outcome; Jack lives and Ben dies in the other. The Waif also has a fatal outcome and a surviving branch. Her surviving world exists before Ben’s first crossing.",
+      "at": {
+        "worldRef": "w_history",
+        "timeLabel": "the opening accident"
+      },
+      "agents": [],
+      "payload": {
+        "note": "author-clarifications.md, 2026-09-13"
+      }
+    },
+    {
+      "id": "e_historical_ben_death",
+      "type": "death",
+      "label": "This world already lost Ben",
+      "description": "The accident’s other family outcome kills Ben and leaves Jack alive. This is the historical death in the world the followed Ben later enters at 114. The arrival does not cause or replace that earlier death.",
+      "at": {
+        "worldRef": "w_whered",
+        "timeLabel": "the other accident outcome"
+      },
+      "agents": [
+        "ben_historical"
+      ],
+      "payload": {
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; revealed by the memorial in scene 176"
+      }
+    },
+    {
+      "id": "e_final_266",
+      "type": "death",
+      "label": "Ben’s final shot",
+      "description": "After the radioactive chamber has been removed, Ben aims at the Waif. A fallen photograph recalls his family. He then puts the gun in his own mouth and fires. His body falls and the Others turn on her. The independent red-light universe is not a surviving destination of this act.",
+      "at": {
+        "worldRef": "w_fam",
+        "timeLabel": "scene 266"
+      },
+      "agents": [
+        "ben_fam",
+        "waif"
+      ],
+      "payload": {
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay"
+      }
+    },
+    {
+      "id": "e_shared_past",
+      "type": "reveal",
+      "label": "The robbery and planted gun are revealed",
+      "description": "At the cabin, the Waif reveals a shared criminal past. Flashbacks show them robbing Preston, Ben taking the revolver and shooting him, and Ben hiding the box beside the cabin wiring. Ben partly recognises these memories while resisting them. The Waif says their many lives have become tangled; the exact placement of that earlier life remains unspecified.",
+      "at": {
+        "worldRef": "w_fam",
+        "timeLabel": "scene 239"
+      },
+      "agents": [
+        "ben_fam",
+        "waif",
+        "marie",
+        "jack"
+      ],
+      "payload": {
+        "note": "Author continuity clarification, 2026-09-13; March numbered screenplay; flashback world addresses are unspecified"
       }
     }
   ],
   "edges": [
-    {
-      "id": "wr_crash",
-      "kind": "world_relation",
-      "from": "b_crash",
-      "to": "w_u1",
-      "relation": "forksFrom",
-      "label": "the other half of the crash"
-    },
-    {
-      "id": "wr_78",
-      "kind": "world_relation",
-      "from": "b_78",
-      "to": "w_u1",
-      "relation": "forksFrom",
-      "label": "the shot forks the world"
-    },
-    {
-      "id": "wr_114",
-      "kind": "world_relation",
-      "from": "b_114",
-      "to": "w_her",
-      "relation": "forksFrom",
-      "label": "the shot forks the world"
-    },
     {
       "id": "wr_184",
       "kind": "world_relation",
@@ -715,14 +724,6 @@
       "to": "w_whered",
       "relation": "correspondsTo",
       "label": "the same family, in a world where they were never taken"
-    },
-    {
-      "id": "wr_attract",
-      "kind": "world_relation",
-      "from": "w_fam",
-      "to": "w_u1",
-      "relation": "attractsToward",
-      "label": "every world comes back to the same drive and the same intersection"
     },
     {
       "id": "id_ben_1_her",
@@ -786,14 +787,6 @@
       "label": "the crash takes the boy and the house"
     },
     {
-      "id": "c_book_gun",
-      "kind": "causal",
-      "from": "e_book",
-      "to": "e_revolver",
-      "orderKind": "chronological",
-      "label": "the book leads him to the box in the crawlspace"
-    },
-    {
       "id": "c_gun_test",
       "kind": "causal",
       "from": "e_revolver",
@@ -815,7 +808,7 @@
       "from": "e_pull_78",
       "to": "e_her_entry",
       "orderKind": "chronological",
-      "label": "the shot forks the world; he carries on in one half"
+      "label": "The first pull crosses into the pre-existing world with a living Waif"
     },
     {
       "id": "c_her_waif",
@@ -839,7 +832,7 @@
       "from": "e_pull_114",
       "to": "e_whered_entry",
       "orderKind": "chronological",
-      "label": "he carries on in the half where he is already dead"
+      "label": "The second pull enters an earlier branch; it does not create its past"
     },
     {
       "id": "c_siege_chamber",
@@ -866,12 +859,12 @@
       "label": "she is where the pain comes from"
     },
     {
-      "id": "c_demand_pull184",
+      "id": "c_demand_final266",
       "kind": "causal",
       "from": "e_waif_demand",
-      "to": "e_pull_184",
+      "to": "e_final_266",
       "orderKind": "chronological",
-      "label": "he fires, but not at her"
+      "label": "He turns the final shot on himself at 266"
     },
     {
       "id": "c_pull184_fam",
@@ -879,15 +872,7 @@
       "from": "e_pull_184",
       "to": "e_fam_entry",
       "orderKind": "chronological",
-      "label": "the last split lands him with the family alive"
-    },
-    {
-      "id": "c_fam_red",
-      "kind": "causal",
-      "from": "e_fam_entry",
-      "to": "e_red_light",
-      "orderKind": "chronological",
-      "label": "the drive again, and this time he stops"
+      "label": "The followed perspective resumes in the reunion world at 185"
     },
     {
       "id": "c_crash_waifdies",
@@ -898,93 +883,65 @@
       "label": "the fall kills the woman of this world"
     },
     {
-      "id": "c_pull78_death",
-      "kind": "causal",
-      "from": "e_pull_78",
-      "to": "e_death78",
-      "orderKind": "chronological",
-      "label": "the other half of the split"
-    },
-    {
-      "id": "c_pull114_death",
-      "kind": "causal",
-      "from": "e_pull_114",
-      "to": "e_death114",
-      "orderKind": "chronological",
-      "label": "the other half of the split"
-    },
-    {
       "id": "c_pull184_death",
       "kind": "causal",
       "from": "e_pull_184",
       "to": "e_death184",
       "orderKind": "chronological",
       "label": "the other half of the split"
+    },
+    {
+      "id": "wr_earlier",
+      "kind": "world_relation",
+      "from": "w_whered",
+      "to": "w_history",
+      "relation": "forksFrom",
+      "label": "The accident splits the family outcomes"
+    },
+    {
+      "id": "c_earlier_death",
+      "kind": "causal",
+      "from": "e_earlier_split",
+      "to": "e_historical_ben_death",
+      "orderKind": "chronological",
+      "label": "The accident outcome in which Ben dies and Jack lives"
+    },
+    {
+      "id": "wr_opening_accident",
+      "kind": "world_relation",
+      "from": "w_u1",
+      "to": "w_history",
+      "relation": "forksFrom",
+      "label": "An outcome of the author-confirmed accident split"
+    },
+    {
+      "id": "wr_waif_survives_accident",
+      "kind": "world_relation",
+      "from": "w_her",
+      "to": "w_history",
+      "relation": "forksFrom",
+      "label": "An outcome of the author-confirmed accident split"
     }
   ],
   "interventions": [
     {
-      "id": "iv_jump",
-      "eventId": "e_crash",
-      "ruleEffects": [
-        {
-          "ruleSetId": "branch_on_intervention",
-          "effect": "the fall onto the car is where the world splits; the same fall happens in every world"
-        },
-        {
-          "ruleSetId": "worldline_attractor",
-          "effect": "the woman who falls is the same woman in every world, and she is the only one who remembers between them"
-        }
-      ],
-      "notes": "The film's opening act of interference with itself: she is both the cause of the crash and the one who arrives afterwards at the door."
-    },
-    {
-      "id": "iv_pull78",
-      "eventId": "e_pull_78",
-      "ruleEffects": [
-        {
-          "ruleSetId": "branch_on_intervention",
-          "effect": "each shot forks the world: one half carries him on, the other half is finished with him"
-        },
-        {
-          "ruleSetId": "worldline_attractor",
-          "effect": "the man we follow continues in the half that survives, and does not remember the shot"
-        }
-      ],
-      "notes": "The gun does this by itself. He is not choosing a branch; both halves happen."
-    },
-    {
       "id": "iv_chamber",
       "eventId": "e_chamber",
-      "ruleEffects": [
-        {
-          "ruleSetId": "branch_on_intervention",
-          "effect": "with the seventh chamber gone the gun always fires, so the world is made to keep splitting"
-        }
-      ],
-      "notes": "Her act, in the world where he is already dead."
+      "ruleEffects": [],
+      "notes": "The Waif removes the radioactive chamber at 256 and says the gun will now fire every time."
     },
     {
       "id": "iv_demand",
       "eventId": "e_waif_demand",
-      "ruleEffects": [
-        {
-          "ruleSetId": "worldline_attractor",
-          "effect": "being looked at is what keeps the pale figures - and a death - in existence; a death he refuses to see does not hold"
-        },
-        {
-          "ruleSetId": "branch_on_intervention",
-          "effect": "he turns the shot on himself, so the split he makes is his own"
-        }
-      ],
-      "notes": "She asks for the shot and he refuses her. What he does instead is the film's last act."
+      "ruleEffects": [],
+      "notes": "The Waif asks him to shoot her, but he turns the gun on himself at 266. The closing universe is causally independent."
     }
   ],
   "outcome": {
-    "summary": "The man we follow is carried through one world after another by a gun that splits the world every time it fires, and by a woman who is in all of them and remembers all of them. He ends in a world where the boy is in the car and the light turns red and nothing falls. The film's last picture is that red light; the chart of his story stops one shot earlier, on the shot he fires into his own mouth, because that is where he chose to look at his own death.",
+    "summary": "Ben crosses before 78 into a pre-existing world with a living Waif, and at 114 into an earlier branch where Jack lives and Ben died. His reunion at 185 leads into the siege and final shot at 266. The closing red-light family belongs to an independent parallel universe running alongside the opening; no main-narrative event causes it.",
     "endWorldRefs": [
       "w_fam",
-      "b_184"
+      "w_parallel"
     ]
   },
   "semanticReview": [
@@ -992,49 +949,11 @@
       "target": {
         "kind": "story"
       },
-      "dimension": "mechanism_completeness",
-      "status": "INCOMPLETE",
-      "note": "No rule set in the catalogue states this work's physics: that a death is refused unless it is observed, and that the one who survives comes round in a world that was already running. The nearest catalogue laws (worldline_attractor for the recurring worlds and the observer who remembers, branch_on_intervention for the split on every shot) are used as primary and mixin. The mismatch is declared here rather than hidden.",
-      "evidence": [
-        "ledger rules: 'Quantum immortality: death is refused unless observed'",
-        "waif-loop-canon: joined worlds backpropagate; they were running before he arrives"
-      ]
-    },
-    {
-      "target": {
-        "kind": "story"
-      },
-      "dimension": "topology",
+      "dimension": "world_placement",
       "status": "DRAFT",
-      "note": "The retired letter index (J, T, M, C, with + and - tines) is mapped to the numbered splits of the compiled chart: J = split 10 (the crash), T = split 78 (the shot before she arrives), M = split 114 (the shot at her encouragement), C = split 184 (the last shot). Older charts and images may still carry the letter index.",
+      "note": "Authorial clarification 2026-09-13 governs the crossings before 78 and at 114, the Waif’s first-world death, and the causally independent closing world. DRAFT indicates pending editorial review, not uncertainty about that supplied canon.",
       "evidence": [
-        "waif-loop-canon, index system section",
-        "bens-story.universes.json splits"
-      ]
-    },
-    {
-      "target": {
-        "kind": "story"
-      },
-      "dimension": "world_placement",
-      "status": "INCOMPLETE",
-      "note": "The compiled chart lists scenes 202, 220, 238 and 256 inside the family world's lane, while the ledger has Marie and Jack killed in the siege and surviving only in the final pass. The siege and the seventh-chamber scene are placed here in the world where he died, following the ledger and the loop-canon note that the siege is off his thread. This placement needs Stephen to settle it.",
-      "evidence": [
-        "bens-story.universes.json lanes_content.FAM",
-        "ledger: characters Marie/Jack",
-        "waif-loop-canon references/bens-story-engine.md: 'ELSEWHEN in *3 (NOT his thread): padded room #158, siege #235-256'"
-      ]
-    },
-    {
-      "target": {
-        "kind": "story"
-      },
-      "dimension": "world_placement",
-      "status": "INCOMPLETE",
-      "note": "The red-light pass at the end of the film is treated here as the family world, following the loop-canon note that the closing picture is the family world with a cruel man behind the wheel. The ledger reads the same scenes as a final pass that is calm from the opening out. Whether they are one world or two is not settled by either document.",
-      "evidence": [
-        "ledger iterations: 'N (FINAL)'",
-        "waif-loop-canon: 'the red-light ending (p117-118 #277-278) is *F: family safe, cruel Ben behind the wheel'"
+        "author-clarifications.md"
       ]
     },
     {
@@ -1042,45 +961,10 @@
         "kind": "story"
       },
       "dimension": "event_identity",
-      "status": "INCOMPLETE",
-      "note": "The last shot is placed at scene 184 on the compiled chart but shown at page 113, scene 266 in the film's own order. Whether the chart's split 184 and the shot at #266 are the same act shown twice, or two separate shots, is not stated. Nothing here asserts they are duplicates.",
-      "evidence": [
-        "bens-story.universes.json splits.184",
-        "ledger: 'SUICIDE ... p113 #266'"
-      ]
-    },
-    {
-      "target": {
-        "kind": "story"
-      },
-      "dimension": "relation_semantics",
       "status": "DRAFT",
-      "note": "The correspondence and attractor links between worlds are our reading of a film that shows the same beats recurring, not rules the script states. They are declared so that a reader can disagree with them.",
+      "note": "184 and 266 are distinct acts in the governing screenplay. Earlier composite events and their review notes have been replaced. Narrative source references point to the March draft and the new author statement.",
       "evidence": [
-        "ledger rules: 'The carousel: Waif retains memory across iterations'"
-      ]
-    },
-    {
-      "target": {
-        "kind": "story"
-      },
-      "dimension": "event_identity",
-      "status": "INCOMPLETE",
-      "note": "Scenes the compiled chart places as beats without any note in the ledger (16, 31, 61, 85, 92, 99, 106, 128, 141, 154, 167, 202, 220, 238) are not encoded as events: there is no note to carry, and inventing one would be invention. What the chart says about them is their scene number and their world, and that is all.",
-      "evidence": [
-        "bens-story.universes.json lanes_content"
-      ]
-    },
-    {
-      "target": {
-        "kind": "story"
-      },
-      "dimension": "world_placement",
-      "status": "INCOMPLETE",
-      "note": "The unseen passes are encoded as worlds that keep running after his death, not as repeats of one world. The loop canon is explicit that there is no rewind: what reads as a start-over is the film following the half that survived. Nothing here uses the word reset, and no reset event is declared.",
-      "evidence": [
-        "waif-loop-canon: 'There is NO rewind'",
-        "ledger iterations: '2..N-1 (UNSEEN)'"
+        "March numbered screenplay: scenes 184–185, 239, 253–278"
       ]
     },
     {
@@ -1089,45 +973,24 @@
       },
       "dimension": "mechanism_completeness",
       "status": "INCOMPLETE",
-      "note": "The woman's own graph (the carousel: she dies, she dies, she dies, with one pass in which she lives) and the before-lives graph that belongs to the man who wrote the book are separate graphs. They are deferred, not dropped: they are not encoded as worlds or events here.",
+      "note": "This legacy format remains a secondary projection. The Waif’s complete earlier-lives map and exact personal crossings are not specified. Read the authored Ben, Waif and Preston documents for scoped explanations.",
       "evidence": [
-        "waif-loop-canon: 'Separate namespaces: Waif's graph W1, W2...; before-lives/Preston B1, B2... (separate graph, deferred not dropped)'"
+        "the-waif.json",
+        "the-waif-waif.json",
+        "the-waif-preston.json"
       ]
     },
     {
       "target": {
-        "kind": "world",
-        "id": "b_crash"
+        "kind": "story"
       },
       "dimension": "branch_origin",
-      "status": "INCOMPLETE",
-      "note": "The crash splits the world in two, but only one half is ever shown. This world is declared because the split is declared; it has no events because the film has none for it.",
+      "status": "DRAFT",
+      "note": "Author identifies the earlier split as the opening accident: Ben lives / Jack dies and Jack lives / Ben dies. The Waif also has a surviving branch. DRAFT retains pending reader review, not unidentified ancestry.",
       "evidence": [
-        "bens-story.universes.json splits.10: 'THE CRASH - THE WORLDS SPLIT'"
-      ]
-    },
-    {
-      "target": {
-        "kind": "story"
-      },
-      "dimension": "event_identity",
-      "status": "INCOMPLETE",
-      "note": "Four things the script leaves open are encoded as open, not answered: how many passes there have been; whether the man in the last pass remembers any of them; who the man in the corner office was when she jumped; and how she was taught to do what she does, which is only ever a padded room and a book with no explanation.",
-      "evidence": [
-        "ledger unknowns (all four)"
-      ]
-    },
-    {
-      "target": {
-        "kind": "story"
-      },
-      "dimension": "event_identity",
-      "status": "INCOMPLETE",
-      "note": "The figures who attack the house in the siege, described in the ledger as the Mother and the Woman in White, are not encoded as agents: the script does not say who they are. They appear inside the siege note and nowhere else. The pale figures are encoded because the script keeps them and names what they need.",
-      "evidence": [
-        "ledger: 'SIEGE ... Mother + Woman in White attack'",
-        "ledger: 'The Others: pale-fire entities that need to be observed to exist'"
+        "author-clarifications.md"
       ]
     }
   ]
 }
+
