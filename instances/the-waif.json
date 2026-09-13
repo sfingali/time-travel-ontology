@@ -25,8 +25,6 @@
       "id": "w_u1",
       "label": "The opening world",
       "description": "Opening timeline: the Waif dies when she falls onto the Forester; Jack dies and Marie and Ben survive. Ben leaves at the pre-arrival trigger pull.",
-      "spanLabel": "the day of the crash",
-      "isOriginWorld": true,
       "parentRef": "w_history",
       "forkEventRef": "e_earlier_split",
       "forkLabel": "The opening falling-car accident",
@@ -927,13 +925,23 @@
     {
       "id": "iv_chamber",
       "eventId": "e_chamber",
-      "ruleEffects": [],
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Removing the radioactive chamber makes every later pull fire, so each pull produces its own split outcomes."
+        }
+      ],
       "notes": "The Waif removes the radioactive chamber at 256 and says the gun will now fire every time."
     },
     {
       "id": "iv_demand",
       "eventId": "e_waif_demand",
-      "ruleEffects": [],
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "Ben turns the final pull on himself; any surviving continuation is left unspecified and is not the independent closing universe."
+        }
+      ],
       "notes": "The Waif asks him to shoot her, but he turns the gun on himself at 266. The closing universe is causally independent."
     }
   ],
