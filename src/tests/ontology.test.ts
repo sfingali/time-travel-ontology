@@ -328,7 +328,7 @@ describe("advisory semantic annotations (Astra review — never reject)", () => 
   });
 });
 
-describe("corpus regression (Astra review — 59/59 must hold)", () => {
+describe("corpus regression (Astra review — every instance in instances/ must hold)", () => {
   it("every instance in instances/ validates", async () => {
     const dir = path.join(root, "instances");
     const files = (await readdir(dir)).filter((f) => f.endsWith(".json")).sort();

@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml/badge.svg)](https://github.com/sfingali/time-travel-ontology/actions/workflows/ci.yml)
 
-**13** rule sets · **9** topology patterns · **59** validated instances · **461** archive works · **52** diagram images (13 works + 6 concept diagrams)
+**13** rule sets · **9** topology patterns · **60** validated instances · **461** archive works · **52** diagram images (13 works + 6 concept diagrams)
 
 Encode a plotline as typed JSON: which **laws** apply, how **worlds** relate, and a **narrative graph** (agents, events, edges). Comparable across the corpus; consumable by a later visual engine. Zod is the source of truth; `schema/ontology.schema.json` is exported for everyone else.
 

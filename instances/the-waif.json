@@ -1,0 +1,1133 @@
+{
+  "meta": {
+    "id": "the-waif",
+    "title": "The Waif",
+    "medium": "film",
+    "sources": [
+      "THE-WAIF.fountain (DRAFT (SF): 03-18-26)",
+      "THE WAIF - 06-18-26 - FINGLETON.pdf (118 pp)",
+      "the-waif/wiki/reference/primer-timeline/waif-event-ledger.json",
+      "the-waif/wiki/reference/primer-timeline/bens-story.universes.json (compiled from scene-allocations.txt)"
+    ]
+  },
+  "schemaVersion": "1.0",
+  "ruleSetIds": [
+    "worldline_attractor",
+    "branch_on_intervention"
+  ],
+  "primaryRuleSetId": "worldline_attractor",
+  "mixinRuleSetIds": [
+    "branch_on_intervention"
+  ],
+  "topologyPatternId": "worldline_bundle",
+  "worlds": [
+    {
+      "kind": "timeline",
+      "id": "w_u1",
+      "label": "The opening world",
+      "description": "Where the film opens: Ben wakes in the house with the three locks on the door. The woman falls through the roof of the car here, and the woman of this world dies in that fall.",
+      "spanLabel": "the day of the crash",
+      "isOriginWorld": true,
+      "attractorFieldId": "the_same_beats"
+    },
+    {
+      "kind": "branch",
+      "id": "w_her",
+      "label": "The world with her - already running",
+      "description": "A world that was already living before Ben arrives in it. The woman he finds at the door here is not the one who fell in his own world.",
+      "branchSpecification": "INCOMPLETE",
+      "attractorFieldId": "the_same_beats",
+      "draft": true
+    },
+    {
+      "kind": "branch",
+      "id": "w_whered",
+      "label": "The world where he died - already running",
+      "description": "A world in which the man we follow had already died. It was running before he got there, and it keeps running after he leaves it.",
+      "branchSpecification": "INCOMPLETE",
+      "attractorFieldId": "the_same_beats",
+      "draft": true
+    },
+    {
+      "kind": "branch",
+      "id": "w_fam",
+      "label": "The family world - already running",
+      "description": "A world where the family is whole: the boy rides in the car. The man who comes back from the cabin is cruel there, which the script implies and never shows.",
+      "branchSpecification": "INCOMPLETE",
+      "attractorFieldId": "the_same_beats",
+      "draft": true
+    },
+    {
+      "kind": "branch",
+      "id": "b_78",
+      "label": "He dies at the shot in the storm",
+      "description": "The other half of the split: in this world the shot kills him. It carries on without him.",
+      "parentRef": "w_u1",
+      "forkEventRef": "e_pull_78",
+      "forkLabel": "the shot before she arrives",
+      "branchSpecification": "COMPLETE"
+    },
+    {
+      "kind": "branch",
+      "id": "b_114",
+      "label": "He dies at the shot in the cabin",
+      "description": "The other half of the split: in this world the shot kills him. It carries on without him.",
+      "parentRef": "w_her",
+      "forkEventRef": "e_pull_114",
+      "forkLabel": "the shot at her encouragement",
+      "branchSpecification": "COMPLETE"
+    },
+    {
+      "kind": "branch",
+      "id": "b_184",
+      "label": "He dies at the last shot",
+      "description": "The other half of the last split: in this world he dies of the shot he fires into his own mouth. It carries on without him.",
+      "parentRef": "w_whered",
+      "forkEventRef": "e_pull_184",
+      "forkLabel": "the last shot",
+      "branchSpecification": "COMPLETE"
+    },
+    {
+      "kind": "branch",
+      "id": "b_crash",
+      "label": "The other half of the crash",
+      "description": "The crash splits the world in two. The film follows one half - the one where the boy dies in the car; the other half is never shown.",
+      "parentRef": "w_u1",
+      "forkEventRef": "e_crash",
+      "branchSpecification": "INCOMPLETE"
+    }
+  ],
+  "agents": [
+    {
+      "id": "ben_1",
+      "label": "Ben (opening world)",
+      "identityGroup": "ben",
+      "continuityRole": "primary",
+      "homeWorldRef": "w_u1",
+      "notes": "Carries nothing from one world into the next: he does not remember the fall, the cabin or the shots."
+    },
+    {
+      "id": "ben_her",
+      "label": "Ben (the world with her)",
+      "identityGroup": "ben",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_her",
+      "continuedFrom": "ben_1"
+    },
+    {
+      "id": "ben_whered",
+      "label": "Ben (the world where he died)",
+      "identityGroup": "ben",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_whered",
+      "continuedFrom": "ben_her"
+    },
+    {
+      "id": "ben_fam",
+      "label": "Ben (the family world)",
+      "identityGroup": "ben",
+      "continuityRole": "counterpart",
+      "homeWorldRef": "w_fam",
+      "continuedFrom": "ben_whered"
+    },
+    {
+      "id": "waif",
+      "label": "The Waif",
+      "identityGroup": "waif",
+      "continuityRole": "observer_persistent",
+      "notes": "The same woman in every world, and the only one who remembers between them. She has many names - Alice, Mary, Junebug, Kit. She is the one who fell in the opening world, and she wears red-striped shoes."
+    },
+    {
+      "id": "waif_jumper",
+      "label": "The woman who falls (opening world)",
+      "identityGroup": "waif",
+      "continuityRole": "variant",
+      "homeWorldRef": "w_u1",
+      "notes": "The woman of the opening world, who jumps from the office window and dies on the roof of the car. The woman Ben meets afterwards is not her."
+    },
+    {
+      "id": "marie",
+      "label": "Marie",
+      "homeWorldRef": "w_u1",
+      "notes": "Ben's partner. Dies in the siege in the world where he died; alive in the family world."
+    },
+    {
+      "id": "jack",
+      "label": "Jack",
+      "homeWorldRef": "w_u1",
+      "notes": "Ben's son. Killed in the crash - his head is cut through, the way his mother is cut through by the bone in her thigh."
+    },
+    {
+      "id": "the_others",
+      "label": "The Others",
+      "homeWorldRef": "w_whered",
+      "notes": "Pale-fire figures that have to be looked at to exist. They take the woman apart at the end of a pass and light her up again."
+    },
+    {
+      "id": "preston",
+      "label": "Q. R. Preston",
+      "homeWorldRef": "w_u1",
+      "notes": "Wrote the book about the rules that govern all of this. His revolver is the one in the crawlspace. His address is on the book."
+    },
+    {
+      "id": "jamie",
+      "label": "Jamie",
+      "homeWorldRef": "w_u1",
+      "notes": "Wants the cabin, but will not buy it without the permit."
+    }
+  ],
+  "events": [
+    {
+      "id": "e_open",
+      "type": "ordinary",
+      "label": "Ben wakes in the house",
+      "description": "Ben's eyes snap open. He walks the house with a bat, checks the mirror, and throws the three locks on the front door.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 1-3"
+      },
+      "agents": [
+        "ben_1"
+      ],
+      "payload": {
+        "note": "p1 #1-3"
+      }
+    },
+    {
+      "id": "e_drive",
+      "type": "ordinary",
+      "label": "The drive with the family",
+      "description": "Marie writes equations on paper in the passenger seat while Ben drives. Jack is in the car. Ben makes the green light and says he hates this intersection.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 8"
+      },
+      "agents": [
+        "ben_1",
+        "marie",
+        "jack"
+      ],
+      "payload": {
+        "note": "p3 #8"
+      }
+    },
+    {
+      "id": "e_crash",
+      "type": "branch_fork",
+      "label": "She comes through the roof",
+      "description": "A woman falls from a great height onto the roof of the moving car. The roof comes down on Marie and Jack. This is where the world splits in two.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 10"
+      },
+      "agents": [
+        "ben_1",
+        "marie",
+        "jack"
+      ],
+      "payload": {
+        "note": "p4 #10",
+        "tags": [
+          "the split"
+        ]
+      }
+    },
+    {
+      "id": "e_waif_dies",
+      "type": "death",
+      "label": "The woman of this world dies",
+      "description": "The woman who fell does not survive the fall. She is the woman of this world, and this is the last of her.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 10"
+      },
+      "agents": [
+        "waif_jumper"
+      ],
+      "payload": {
+        "note": "p4 #10"
+      }
+    },
+    {
+      "id": "e_aftermath",
+      "type": "ordinary",
+      "label": "The motel and the courthouse",
+      "description": "Ben lives in a motel. At the courthouse Marie keeps the house and Ben is given the cabin. He says he has accepted that Jack is gone.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 11-18"
+      },
+      "agents": [
+        "ben_1",
+        "marie"
+      ],
+      "payload": {
+        "note": "p5-6 #11, #17-18"
+      }
+    },
+    {
+      "id": "e_cabin",
+      "type": "ordinary",
+      "label": "The cabin",
+      "description": "The cabin: a bat hanging, maggots, a window smashed in.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 37"
+      },
+      "agents": [
+        "ben_1"
+      ],
+      "payload": {
+        "note": "p11 #37"
+      }
+    },
+    {
+      "id": "e_book",
+      "type": "reveal",
+      "label": "The book in the cabin",
+      "description": "A book is in the cabin: it is called The Rules of Quantum Immortality, and it was written by Q. R. Preston.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 37"
+      },
+      "agents": [
+        "ben_1"
+      ],
+      "payload": {
+        "note": "p11 #37"
+      }
+    },
+    {
+      "id": "e_revolver",
+      "type": "reveal",
+      "label": "The revolver in the crawlspace",
+      "description": "A rosewood box under the cabin holds a seven-sided revolver. Six of its chambers fire; the seventh is the one that goes on burning.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 41"
+      },
+      "agents": [
+        "ben_1"
+      ],
+      "payload": {
+        "note": "p13 #41"
+      }
+    },
+    {
+      "id": "e_testfire",
+      "type": "ordinary",
+      "label": "Six cans destroyed",
+      "description": "Ben tries the gun on six cans and destroys all of them. He says it is good enough to know he should not be this good.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 46-49"
+      },
+      "agents": [
+        "ben_1",
+        "jamie"
+      ],
+      "payload": {
+        "note": "p16 #46, p18 #49"
+      }
+    },
+    {
+      "id": "e_pull_78",
+      "type": "branch_fork",
+      "label": "He shoots himself before she arrives",
+      "description": "Ben puts the revolver in his mouth and pulls the trigger, before anyone has arrived at the door. The world splits: one half carries him on, the other half kills him.",
+      "at": {
+        "worldRef": "w_u1",
+        "timeLabel": "scene 78"
+      },
+      "agents": [
+        "ben_1"
+      ],
+      "payload": {
+        "note": "chart split 78, #78",
+        "tags": [
+          "the pull"
+        ]
+      }
+    },
+    {
+      "id": "e_her_entry",
+      "type": "arrival",
+      "label": "He comes round in a world with her in it",
+      "description": "He comes round in a world that was already running without him - the same cabin, the same night, but in this one the woman is alive and looking for him.",
+      "at": {
+        "worldRef": "w_her",
+        "timeLabel": "scene 78-79"
+      },
+      "agents": [
+        "ben_her",
+        "waif"
+      ],
+      "payload": {
+        "note": "chart join 78",
+        "observerContinuity": true
+      }
+    },
+    {
+      "id": "e_arrival_waif",
+      "type": "arrival",
+      "label": "She arrives at the door",
+      "description": "A soaked young woman stands at the cabin door in the storm. There is broken glass in her foot. She says she was hoping he would remember.",
+      "at": {
+        "worldRef": "w_her",
+        "timeLabel": "scene 79-95"
+      },
+      "agents": [
+        "ben_her",
+        "waif"
+      ],
+      "payload": {
+        "note": "p26-29 #78-79, p36-39 #95-101"
+      }
+    },
+    {
+      "id": "e_blue_ball",
+      "type": "ordinary",
+      "label": "The blue ball",
+      "description": "She is carrying Jack's blue ball. It is not from this world.",
+      "at": {
+        "worldRef": "w_her",
+        "timeLabel": "scene 105"
+      },
+      "agents": [
+        "waif"
+      ],
+      "payload": {
+        "note": "p41 #105"
+      }
+    },
+    {
+      "id": "e_padded_room",
+      "type": "ordinary",
+      "label": "What happened to her in the padded room",
+      "description": "She remembers being kept in a padded room, and being given the book there. Where the book came from, she never says.",
+      "at": {
+        "worldRef": "w_her",
+        "timeLabel": "scene 158-159"
+      },
+      "agents": [
+        "waif"
+      ],
+      "payload": {
+        "note": "p70 #158-159"
+      }
+    },
+    {
+      "id": "e_pull_114",
+      "type": "branch_fork",
+      "label": "He shoots himself while she tells him to",
+      "description": "With her urging him on, Ben puts the revolver to himself and fires again. The world splits: in one half he lives, in the other he is dead.",
+      "at": {
+        "worldRef": "w_her",
+        "timeLabel": "scene 114"
+      },
+      "agents": [
+        "ben_her",
+        "waif"
+      ],
+      "payload": {
+        "note": "chart split 114",
+        "tags": [
+          "the pull"
+        ]
+      }
+    },
+    {
+      "id": "e_whered_entry",
+      "type": "arrival",
+      "label": "He comes round in the world where he died",
+      "description": "He comes round in the world his own death already belongs to - a world that had been running without him and keeps its own history.",
+      "at": {
+        "worldRef": "w_whered",
+        "timeLabel": "scene 114"
+      },
+      "agents": [
+        "ben_whered"
+      ],
+      "payload": {
+        "note": "chart join 114",
+        "observerContinuity": true
+      }
+    },
+    {
+      "id": "e_siege",
+      "type": "death",
+      "label": "The siege: Marie and Jack are killed",
+      "description": "The house is attacked. Marie runs with Jack. The roof of the pickup comes down on them, and Marie is killed and so is the boy - half his head gone, the way it was in the crash.",
+      "at": {
+        "worldRef": "w_whered",
+        "timeLabel": "scene 240-253"
+      },
+      "agents": [
+        "marie",
+        "jack"
+      ],
+      "payload": {
+        "note": "p107-110 #240-253"
+      }
+    },
+    {
+      "id": "e_chamber",
+      "type": "intervention",
+      "label": "The seventh chamber is cut away",
+      "description": "The pale figures will not take Ben: they have to be looked at to exist, and he will not do it. The woman cuts the seventh chamber out of the revolver so it will fire every time.",
+      "at": {
+        "worldRef": "w_whered",
+        "timeLabel": "scene 256"
+      },
+      "agents": [
+        "ben_whered",
+        "waif",
+        "the_others"
+      ],
+      "payload": {
+        "note": "p111 #256"
+      }
+    },
+    {
+      "id": "e_jump_reveal",
+      "type": "reveal",
+      "label": "She was the one who fell",
+      "description": "She tells him she did not shoot herself - she jumped. Her shoes are the red-striped ones. She was the woman who came through the car roof.",
+      "at": {
+        "worldRef": "w_whered",
+        "timeLabel": "scene 257-266"
+      },
+      "agents": [
+        "ben_whered",
+        "waif"
+      ],
+      "payload": {
+        "note": "p112-113 #257-266"
+      }
+    },
+    {
+      "id": "e_waif_demand",
+      "type": "ordinary",
+      "label": "She asks him to shoot her",
+      "description": "She tells him to put the gun on her and fire, because she is where all of the pain comes from. He refuses her.",
+      "at": {
+        "worldRef": "w_whered",
+        "timeLabel": "scene 266"
+      },
+      "agents": [
+        "ben_whered",
+        "waif"
+      ],
+      "payload": {
+        "note": "p113 #266"
+      }
+    },
+    {
+      "id": "e_pull_184",
+      "type": "branch_fork",
+      "label": "He goes back to the cabin and shoots himself again",
+      "description": "He returns to the cabin and fires into his own mouth rather than at her. He looks at his own death instead of turning away from it. The world splits one last time: he lives on in one half and dies in the other.",
+      "at": {
+        "worldRef": "w_whered",
+        "timeLabel": "scene 184"
+      },
+      "agents": [
+        "ben_whered"
+      ],
+      "payload": {
+        "note": "chart split 184; the shot shown at p113 #266",
+        "tags": [
+          "the pull",
+          "the last pull"
+        ]
+      }
+    },
+    {
+      "id": "e_others_consumed",
+      "type": "death",
+      "label": "The Others take her apart",
+      "description": "The pale figures pull the woman to pieces. She comes back with dead eyes, clicks her fingers, and the pale light goes out.",
+      "at": {
+        "worldRef": "w_whered",
+        "timeLabel": "scene 267-270"
+      },
+      "agents": [
+        "waif",
+        "the_others"
+      ],
+      "payload": {
+        "note": "p113-115 #267-270"
+      }
+    },
+    {
+      "id": "e_fam_entry",
+      "type": "arrival",
+      "label": "He comes round in the world where they are alive",
+      "description": "The last split lands him in a world where Marie and Jack were never taken from him - a world that had been running without him.",
+      "at": {
+        "worldRef": "w_fam",
+        "timeLabel": "scene 184"
+      },
+      "agents": [
+        "ben_fam"
+      ],
+      "payload": {
+        "note": "chart join 184",
+        "observerContinuity": true
+      }
+    },
+    {
+      "id": "e_red_light",
+      "type": "ordinary",
+      "label": "The light stays red",
+      "description": "He is driving with Jack beside him. The light turns red and he stops, and nothing falls out of the sky. They wait.",
+      "at": {
+        "worldRef": "w_fam",
+        "timeLabel": "scene 277"
+      },
+      "agents": [
+        "ben_fam",
+        "jack"
+      ],
+      "payload": {
+        "note": "p117 #277"
+      }
+    },
+    {
+      "id": "e_close",
+      "type": "ordinary",
+      "label": "Jack draws on the glass",
+      "description": "Jack runs his finger over the glass of the car window. The camera pulls back over the crossroads and the picture goes dark.",
+      "at": {
+        "worldRef": "w_fam",
+        "timeLabel": "scene 277-278"
+      },
+      "agents": [
+        "ben_fam",
+        "jack"
+      ],
+      "payload": {
+        "note": "p117-118 #277-278"
+      }
+    },
+    {
+      "id": "e_death78",
+      "type": "death",
+      "label": "He dies at the shot in the storm",
+      "description": "In this half of the split the shot kills him. The world goes on without him.",
+      "at": {
+        "worldRef": "b_78",
+        "timeLabel": "scene 78"
+      },
+      "agents": [
+        "ben_1"
+      ],
+      "payload": {
+        "note": "chart stub 78B"
+      }
+    },
+    {
+      "id": "e_death114",
+      "type": "death",
+      "label": "He dies at the shot in the cabin",
+      "description": "In this half of the split the shot kills him. The world goes on without him.",
+      "at": {
+        "worldRef": "b_114",
+        "timeLabel": "scene 114"
+      },
+      "agents": [
+        "ben_her"
+      ],
+      "payload": {
+        "note": "chart stub 114B"
+      }
+    },
+    {
+      "id": "e_death184",
+      "type": "death",
+      "label": "He dies at the last shot",
+      "description": "In this half of the split the shot into his own mouth kills him. The world goes on without him.",
+      "at": {
+        "worldRef": "b_184",
+        "timeLabel": "scene 184"
+      },
+      "agents": [
+        "ben_whered"
+      ],
+      "payload": {
+        "note": "chart stub 184B"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "wr_crash",
+      "kind": "world_relation",
+      "from": "b_crash",
+      "to": "w_u1",
+      "relation": "forksFrom",
+      "label": "the other half of the crash"
+    },
+    {
+      "id": "wr_78",
+      "kind": "world_relation",
+      "from": "b_78",
+      "to": "w_u1",
+      "relation": "forksFrom",
+      "label": "the shot forks the world"
+    },
+    {
+      "id": "wr_114",
+      "kind": "world_relation",
+      "from": "b_114",
+      "to": "w_her",
+      "relation": "forksFrom",
+      "label": "the shot forks the world"
+    },
+    {
+      "id": "wr_184",
+      "kind": "world_relation",
+      "from": "b_184",
+      "to": "w_whered",
+      "relation": "forksFrom",
+      "label": "the last shot forks the world"
+    },
+    {
+      "id": "wr_corr_her",
+      "kind": "world_relation",
+      "from": "w_her",
+      "to": "w_u1",
+      "relation": "correspondsTo",
+      "label": "same cabin, same night, same woman - a world that was already running"
+    },
+    {
+      "id": "wr_corr_whered",
+      "kind": "world_relation",
+      "from": "w_whered",
+      "to": "w_her",
+      "relation": "correspondsTo",
+      "label": "the same people, in a world where he is dead"
+    },
+    {
+      "id": "wr_corr_fam",
+      "kind": "world_relation",
+      "from": "w_fam",
+      "to": "w_whered",
+      "relation": "correspondsTo",
+      "label": "the same family, in a world where they were never taken"
+    },
+    {
+      "id": "wr_attract",
+      "kind": "world_relation",
+      "from": "w_fam",
+      "to": "w_u1",
+      "relation": "attractsToward",
+      "label": "every world comes back to the same drive and the same intersection"
+    },
+    {
+      "id": "id_ben_1_her",
+      "kind": "identity",
+      "from": "ben_1",
+      "to": "ben_her",
+      "identityRelation": "personal_continuity",
+      "label": "the man we follow, coming round in the next world"
+    },
+    {
+      "id": "id_ben_her_whered",
+      "kind": "identity",
+      "from": "ben_her",
+      "to": "ben_whered",
+      "identityRelation": "personal_continuity",
+      "label": "the man we follow, coming round in the next world"
+    },
+    {
+      "id": "id_ben_whered_fam",
+      "kind": "identity",
+      "from": "ben_whered",
+      "to": "ben_fam",
+      "identityRelation": "personal_continuity",
+      "label": "the man we follow, coming round in the last world"
+    },
+    {
+      "id": "id_waif_variant",
+      "kind": "identity",
+      "from": "waif_jumper",
+      "to": "waif",
+      "identityRelation": "counterpart",
+      "label": "the woman of the opening world, and the woman who remembers"
+    },
+    {
+      "id": "fam_ben_jack",
+      "kind": "family",
+      "from": "ben_1",
+      "to": "jack",
+      "label": "father and son"
+    },
+    {
+      "id": "fam_ben_marie",
+      "kind": "family",
+      "from": "ben_1",
+      "to": "marie",
+      "label": "partners"
+    },
+    {
+      "id": "fam_marie_jack",
+      "kind": "family",
+      "from": "marie",
+      "to": "jack",
+      "label": "mother and son"
+    },
+    {
+      "id": "c_crash_after",
+      "kind": "causal",
+      "from": "e_crash",
+      "to": "e_aftermath",
+      "orderKind": "chronological",
+      "label": "the crash takes the boy and the house"
+    },
+    {
+      "id": "c_book_gun",
+      "kind": "causal",
+      "from": "e_book",
+      "to": "e_revolver",
+      "orderKind": "chronological",
+      "label": "the book leads him to the box in the crawlspace"
+    },
+    {
+      "id": "c_gun_test",
+      "kind": "causal",
+      "from": "e_revolver",
+      "to": "e_testfire",
+      "orderKind": "chronological",
+      "label": "he tries the gun"
+    },
+    {
+      "id": "c_test_pull",
+      "kind": "causal",
+      "from": "e_testfire",
+      "to": "e_pull_78",
+      "orderKind": "chronological",
+      "label": "a gun that fires every time"
+    },
+    {
+      "id": "c_pull_entry_her",
+      "kind": "causal",
+      "from": "e_pull_78",
+      "to": "e_her_entry",
+      "orderKind": "chronological",
+      "label": "the shot forks the world; he carries on in one half"
+    },
+    {
+      "id": "c_her_waif",
+      "kind": "causal",
+      "from": "e_her_entry",
+      "to": "e_arrival_waif",
+      "orderKind": "chronological",
+      "label": "she is looking for him"
+    },
+    {
+      "id": "c_waif_pull114",
+      "kind": "causal",
+      "from": "e_arrival_waif",
+      "to": "e_pull_114",
+      "orderKind": "chronological",
+      "label": "she urges him on"
+    },
+    {
+      "id": "c_pull114_entry",
+      "kind": "causal",
+      "from": "e_pull_114",
+      "to": "e_whered_entry",
+      "orderKind": "chronological",
+      "label": "he carries on in the half where he is already dead"
+    },
+    {
+      "id": "c_siege_chamber",
+      "kind": "causal",
+      "from": "e_siege",
+      "to": "e_chamber",
+      "orderKind": "chronological",
+      "label": "the last of the family is gone"
+    },
+    {
+      "id": "c_chamber_demand",
+      "kind": "causal",
+      "from": "e_chamber",
+      "to": "e_waif_demand",
+      "orderKind": "chronological",
+      "label": "a gun that will always fire"
+    },
+    {
+      "id": "c_reveal_demand",
+      "kind": "causal",
+      "from": "e_jump_reveal",
+      "to": "e_waif_demand",
+      "orderKind": "chronological",
+      "label": "she is where the pain comes from"
+    },
+    {
+      "id": "c_demand_pull184",
+      "kind": "causal",
+      "from": "e_waif_demand",
+      "to": "e_pull_184",
+      "orderKind": "chronological",
+      "label": "he fires, but not at her"
+    },
+    {
+      "id": "c_pull184_fam",
+      "kind": "causal",
+      "from": "e_pull_184",
+      "to": "e_fam_entry",
+      "orderKind": "chronological",
+      "label": "the last split lands him with the family alive"
+    },
+    {
+      "id": "c_fam_red",
+      "kind": "causal",
+      "from": "e_fam_entry",
+      "to": "e_red_light",
+      "orderKind": "chronological",
+      "label": "the drive again, and this time he stops"
+    },
+    {
+      "id": "c_crash_waifdies",
+      "kind": "causal",
+      "from": "e_crash",
+      "to": "e_waif_dies",
+      "orderKind": "chronological",
+      "label": "the fall kills the woman of this world"
+    },
+    {
+      "id": "c_pull78_death",
+      "kind": "causal",
+      "from": "e_pull_78",
+      "to": "e_death78",
+      "orderKind": "chronological",
+      "label": "the other half of the split"
+    },
+    {
+      "id": "c_pull114_death",
+      "kind": "causal",
+      "from": "e_pull_114",
+      "to": "e_death114",
+      "orderKind": "chronological",
+      "label": "the other half of the split"
+    },
+    {
+      "id": "c_pull184_death",
+      "kind": "causal",
+      "from": "e_pull_184",
+      "to": "e_death184",
+      "orderKind": "chronological",
+      "label": "the other half of the split"
+    }
+  ],
+  "interventions": [
+    {
+      "id": "iv_jump",
+      "eventId": "e_crash",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "the fall onto the car is where the world splits; the same fall happens in every world"
+        },
+        {
+          "ruleSetId": "worldline_attractor",
+          "effect": "the woman who falls is the same woman in every world, and she is the only one who remembers between them"
+        }
+      ],
+      "notes": "The film's opening act of interference with itself: she is both the cause of the crash and the one who arrives afterwards at the door."
+    },
+    {
+      "id": "iv_pull78",
+      "eventId": "e_pull_78",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "each shot forks the world: one half carries him on, the other half is finished with him"
+        },
+        {
+          "ruleSetId": "worldline_attractor",
+          "effect": "the man we follow continues in the half that survives, and does not remember the shot"
+        }
+      ],
+      "notes": "The gun does this by itself. He is not choosing a branch; both halves happen."
+    },
+    {
+      "id": "iv_chamber",
+      "eventId": "e_chamber",
+      "ruleEffects": [
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "with the seventh chamber gone the gun always fires, so the world is made to keep splitting"
+        }
+      ],
+      "notes": "Her act, in the world where he is already dead."
+    },
+    {
+      "id": "iv_demand",
+      "eventId": "e_waif_demand",
+      "ruleEffects": [
+        {
+          "ruleSetId": "worldline_attractor",
+          "effect": "being looked at is what keeps the pale figures - and a death - in existence; a death he refuses to see does not hold"
+        },
+        {
+          "ruleSetId": "branch_on_intervention",
+          "effect": "he turns the shot on himself, so the split he makes is his own"
+        }
+      ],
+      "notes": "She asks for the shot and he refuses her. What he does instead is the film's last act."
+    }
+  ],
+  "outcome": {
+    "summary": "The man we follow is carried through one world after another by a gun that splits the world every time it fires, and by a woman who is in all of them and remembers all of them. He ends in a world where the boy is in the car and the light turns red and nothing falls. The film's last picture is that red light; the chart of his story stops one shot earlier, on the shot he fires into his own mouth, because that is where he chose to look at his own death.",
+    "endWorldRefs": [
+      "w_fam",
+      "b_184"
+    ]
+  },
+  "semanticReview": [
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "mechanism_completeness",
+      "status": "INCOMPLETE",
+      "note": "No rule set in the catalogue states this work's physics: that a death is refused unless it is observed, and that the one who survives comes round in a world that was already running. The nearest catalogue laws (worldline_attractor for the recurring worlds and the observer who remembers, branch_on_intervention for the split on every shot) are used as primary and mixin. The mismatch is declared here rather than hidden.",
+      "evidence": [
+        "ledger rules: 'Quantum immortality: death is refused unless observed'",
+        "waif-loop-canon: joined worlds backpropagate; they were running before he arrives"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "topology",
+      "status": "DRAFT",
+      "note": "The retired letter index (J, T, M, C, with + and - tines) is mapped to the numbered splits of the compiled chart: J = split 10 (the crash), T = split 78 (the shot before she arrives), M = split 114 (the shot at her encouragement), C = split 184 (the last shot). Older charts and images may still carry the letter index.",
+      "evidence": [
+        "waif-loop-canon, index system section",
+        "bens-story.universes.json splits"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "world_placement",
+      "status": "INCOMPLETE",
+      "note": "The compiled chart lists scenes 202, 220, 238 and 256 inside the family world's lane, while the ledger has Marie and Jack killed in the siege and surviving only in the final pass. The siege and the seventh-chamber scene are placed here in the world where he died, following the ledger and the loop-canon note that the siege is off his thread. This placement needs Stephen to settle it.",
+      "evidence": [
+        "bens-story.universes.json lanes_content.FAM",
+        "ledger: characters Marie/Jack",
+        "waif-loop-canon references/bens-story-engine.md: 'ELSEWHEN in *3 (NOT his thread): padded room #158, siege #235-256'"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "world_placement",
+      "status": "INCOMPLETE",
+      "note": "The red-light pass at the end of the film is treated here as the family world, following the loop-canon note that the closing picture is the family world with a cruel man behind the wheel. The ledger reads the same scenes as a final pass that is calm from the opening out. Whether they are one world or two is not settled by either document.",
+      "evidence": [
+        "ledger iterations: 'N (FINAL)'",
+        "waif-loop-canon: 'the red-light ending (p117-118 #277-278) is *F: family safe, cruel Ben behind the wheel'"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "event_identity",
+      "status": "INCOMPLETE",
+      "note": "The last shot is placed at scene 184 on the compiled chart but shown at page 113, scene 266 in the film's own order. Whether the chart's split 184 and the shot at #266 are the same act shown twice, or two separate shots, is not stated. Nothing here asserts they are duplicates.",
+      "evidence": [
+        "bens-story.universes.json splits.184",
+        "ledger: 'SUICIDE ... p113 #266'"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "relation_semantics",
+      "status": "DRAFT",
+      "note": "The correspondence and attractor links between worlds are our reading of a film that shows the same beats recurring, not rules the script states. They are declared so that a reader can disagree with them.",
+      "evidence": [
+        "ledger rules: 'The carousel: Waif retains memory across iterations'"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "event_identity",
+      "status": "INCOMPLETE",
+      "note": "Scenes the compiled chart places as beats without any note in the ledger (16, 31, 61, 85, 92, 99, 106, 128, 141, 154, 167, 202, 220, 238) are not encoded as events: there is no note to carry, and inventing one would be invention. What the chart says about them is their scene number and their world, and that is all.",
+      "evidence": [
+        "bens-story.universes.json lanes_content"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "world_placement",
+      "status": "INCOMPLETE",
+      "note": "The unseen passes are encoded as worlds that keep running after his death, not as repeats of one world. The loop canon is explicit that there is no rewind: what reads as a start-over is the film following the half that survived. Nothing here uses the word reset, and no reset event is declared.",
+      "evidence": [
+        "waif-loop-canon: 'There is NO rewind'",
+        "ledger iterations: '2..N-1 (UNSEEN)'"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "mechanism_completeness",
+      "status": "INCOMPLETE",
+      "note": "The woman's own graph (the carousel: she dies, she dies, she dies, with one pass in which she lives) and the before-lives graph that belongs to the man who wrote the book are separate graphs. They are deferred, not dropped: they are not encoded as worlds or events here.",
+      "evidence": [
+        "waif-loop-canon: 'Separate namespaces: Waif's graph W1, W2...; before-lives/Preston B1, B2... (separate graph, deferred not dropped)'"
+      ]
+    },
+    {
+      "target": {
+        "kind": "world",
+        "id": "b_crash"
+      },
+      "dimension": "branch_origin",
+      "status": "INCOMPLETE",
+      "note": "The crash splits the world in two, but only one half is ever shown. This world is declared because the split is declared; it has no events because the film has none for it.",
+      "evidence": [
+        "bens-story.universes.json splits.10: 'THE CRASH - THE WORLDS SPLIT'"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "event_identity",
+      "status": "INCOMPLETE",
+      "note": "Four things the script leaves open are encoded as open, not answered: how many passes there have been; whether the man in the last pass remembers any of them; who the man in the corner office was when she jumped; and how she was taught to do what she does, which is only ever a padded room and a book with no explanation.",
+      "evidence": [
+        "ledger unknowns (all four)"
+      ]
+    },
+    {
+      "target": {
+        "kind": "story"
+      },
+      "dimension": "event_identity",
+      "status": "INCOMPLETE",
+      "note": "The figures who attack the house in the siege, described in the ledger as the Mother and the Woman in White, are not encoded as agents: the script does not say who they are. They appear inside the siege note and nowhere else. The pale figures are encoded because the script keeps them and names what they need.",
+      "evidence": [
+        "ledger: 'SIEGE ... Mother + Woman in White attack'",
+        "ledger: 'The Others: pale-fire entities that need to be observed to exist'"
+      ]
+    }
+  ]
+}
