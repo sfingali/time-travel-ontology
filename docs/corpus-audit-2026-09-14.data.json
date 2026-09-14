@@ -1,0 +1,3082 @@
+{
+ "11-22-63": {
+  "id": "11-22-63",
+  "title": "11/22/63",
+  "medium": "tv",
+  "year": 2016,
+  "primary": "branch_on_intervention",
+  "mixins": [
+   "mutable_ripple",
+   "worldline_attractor"
+  ],
+  "topology": "branching_tree",
+  "worlds": 4,
+  "agents": 6,
+  "events": 22,
+  "edges": 29,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 3
+  },
+  "edge_kinds": {
+   "causal": 24,
+   "temporal": 2,
+   "intervention": 2,
+   "world_relation": 1
+  },
+  "relations": {
+   "forksFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 152.0,
+  "empty_worlds": [
+   "w_accepted",
+   "w_jfk_saved"
+  ],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_1960s",
+   "w_jfk_saved",
+   "w_accepted"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [
+   "w_accepted",
+   "w_jfk_saved"
+  ],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 5,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 2,
+   "branch lacks forkEventRef": 3
+  }
+ },
+ "about-time": {
+  "id": "about-time",
+  "title": "About Time",
+  "medium": "film",
+  "year": 2013,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "fixed_novikov"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 1,
+  "agents": 8,
+  "events": 22,
+  "edges": 31,
+  "interventions": 3,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 24,
+   "intervention": 3,
+   "identity": 2,
+   "temporal": 2
+  },
+  "relations": {
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 142.1,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 2,
+  "warn_total": 6,
+  "warn_classes": {
+   "relation set on non-world edge": 1,
+   "identity edge lacks identityRelation": 2,
+   "temporal edge lacks orderKind": 2,
+   "topology conformance": 1
+  }
+ },
+ "arq": {
+  "id": "arq",
+  "title": "ARQ",
+  "medium": "film",
+  "year": 2016,
+  "primary": "temporal_loop_exit",
+  "mixins": [
+   "death_checkpoint_rewrite",
+   "mutable_ripple"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 2,
+  "agents": 6,
+  "events": 22,
+  "edges": 25,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 1
+  },
+  "edge_kinds": {
+   "causal": 22,
+   "world_relation": 1,
+   "intervention": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "forksFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 122.3,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_outside"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 3,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 1,
+   "topology conformance": 1
+  }
+ },
+ "arrival": {
+  "id": "arrival",
+  "title": "Arrival",
+  "medium": "film",
+  "year": 2016,
+  "primary": "perception_nonlinear",
+  "mixins": [
+   "bootstrap_ontological",
+   "fixed_novikov"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 5,
+  "events": 22,
+  "edges": 25,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 20,
+   "temporal": 2,
+   "identity": 3
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [
+   "e_weapon_fear"
+  ],
+  "desc_thin": [],
+  "desc_avg": 127.0,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [
+   "e_abbott_costello",
+   "e_ian_father"
+  ],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 2,
+  "warn_total": 5,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 2,
+   "identity edge lacks identityRelation": 3
+  }
+ },
+ "avengers-endgame": {
+  "id": "avengers-endgame",
+  "title": "Avengers: Endgame",
+  "medium": "film",
+  "year": 2019,
+  "primary": "branch_on_intervention",
+  "mixins": [
+   "branch_bureaucracy_prune",
+   "fixed_novikov"
+  ],
+  "topology": "branching_tree",
+  "worlds": 5,
+  "agents": 8,
+  "events": 23,
+  "edges": 28,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 4
+  },
+  "edge_kinds": {
+   "causal": 23,
+   "world_relation": 4,
+   "temporal": 1
+  },
+  "relations": {
+   "forksFrom": 4
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 155.1,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_2012",
+   "w_2014",
+   "w_loki_branch",
+   "w_cap_life"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 23,
+  "semantic_review": 0,
+  "warn_total": 5,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 4
+  }
+ },
+ "back-to-the-future": {
+  "id": "back-to-the-future",
+  "title": "Back to the Future",
+  "medium": "film",
+  "year": 1985,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "branch_on_intervention"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 4,
+  "agents": 6,
+  "events": 23,
+  "edges": 30,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 3
+  },
+  "edge_kinds": {
+   "world_relation": 4,
+   "causal": 21,
+   "identity": 1,
+   "intervention": 2,
+   "temporal": 2
+  },
+  "relations": {
+   "forksFrom": 3,
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [
+   "ev_1955",
+   "ev_lightning",
+   "e_1955"
+  ],
+  "desc_avg": 97.0,
+  "empty_worlds": [
+   "w_1985A"
+  ],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_1955",
+   "w_1985A",
+   "w_1985B"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 23,
+  "semantic_review": 2,
+  "warn_total": 6,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 1,
+   "temporal edge lacks orderKind": 2,
+   "branch lacks forkEventRef": 3
+  }
+ },
+ "before-the-coffee-gets-cold": {
+  "id": "before-the-coffee-gets-cold",
+  "title": "Before the Coffee Gets Cold",
+  "medium": "novel",
+  "year": 2015,
+  "primary": "fixed_novikov",
+  "mixins": [
+   "perception_nonlinear"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 5,
+  "events": 21,
+  "edges": 22,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 21,
+   "temporal": 1
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [
+   "e_ghost_risk"
+  ],
+  "desc_thin": [],
+  "desc_avg": 96.9,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 0,
+  "warn_total": 1,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1
+  }
+ },
+ "bill-and-ted": {
+  "id": "bill-and-ted",
+  "title": "Bill & Ted's Excellent Adventure",
+  "medium": "film",
+  "year": 1989,
+  "primary": "predestination_closed_loop",
+  "mixins": [
+   "bootstrap_ontological",
+   "fixed_novikov"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 11,
+  "events": 22,
+  "edges": 30,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 23,
+   "identity": 3,
+   "temporal": 2,
+   "intervention": 2
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 103.4,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 0,
+  "warn_total": 5,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 3,
+   "temporal edge lacks orderKind": 2
+  }
+ },
+ "boss-level": {
+  "id": "boss-level",
+  "title": "Boss Level",
+  "medium": "film",
+  "year": 2020,
+  "primary": "temporal_loop_exit",
+  "mixins": [
+   "death_checkpoint_rewrite",
+   "mutable_ripple"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 5,
+  "events": 22,
+  "edges": 24,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 22,
+   "temporal": 2
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 102.4,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 0,
+  "warn_total": 2,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 2
+  }
+ },
+ "coherence": {
+  "id": "coherence",
+  "title": "Coherence",
+  "medium": "film",
+  "year": 2013,
+  "primary": "multiverse_contact",
+  "mixins": [
+   "branch_on_intervention"
+  ],
+  "topology": "dual_parallel_pair",
+  "worlds": 3,
+  "agents": 6,
+  "events": 20,
+  "edges": 36,
+  "interventions": 2,
+  "world_kinds": {
+   "parallel_world": 3
+  },
+  "edge_kinds": {
+   "temporal": 10,
+   "causal": 14,
+   "world_relation": 3,
+   "intervention": 8,
+   "identity": 1
+  },
+  "relations": {
+   "correspondsTo": 2,
+   "mirrors": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 146.6,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 2,
+  "warn_total": 12,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 10,
+   "identity edge lacks identityRelation": 1,
+   "topology conformance": 1
+  }
+ },
+ "continuum": {
+  "id": "continuum",
+  "title": "Continuum",
+  "medium": "tv",
+  "year": 2012,
+  "primary": "branch_on_intervention",
+  "mixins": [
+   "mutable_ripple",
+   "bootstrap_ontological"
+  ],
+  "topology": "branching_tree",
+  "worlds": 4,
+  "agents": 4,
+  "events": 21,
+  "edges": 26,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 21,
+   "world_relation": 4,
+   "temporal": 1
+  },
+  "relations": {
+   "originatesFrom": 1,
+   "forksFrom": 2,
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 115.4,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_2012b",
+   "w_2077b"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 0,
+  "warn_total": 4,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 2,
+   "rule selected without structural evidence": 1
+  }
+ },
+ "counterpart": {
+  "id": "counterpart",
+  "title": "Counterpart",
+  "medium": "tv",
+  "year": 2017,
+  "primary": "multiverse_contact",
+  "mixins": [
+   "branch_on_intervention"
+  ],
+  "topology": "dual_parallel_pair",
+  "worlds": 2,
+  "agents": 11,
+  "events": 22,
+  "edges": 28,
+  "interventions": 1,
+  "world_kinds": {
+   "parallel_world": 2
+  },
+  "edge_kinds": {
+   "causal": 23,
+   "world_relation": 1,
+   "identity": 2,
+   "intervention": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "mirrors": 1,
+   "correspondsTo": 2
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 128.4,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 5,
+  "warn_classes": {
+   "relation set on non-world edge": 2,
+   "identity edge lacks identityRelation": 2,
+   "temporal edge lacks orderKind": 1
+  }
+ },
+ "dark": {
+  "id": "dark",
+  "title": "Dark",
+  "medium": "tv",
+  "year": 2017,
+  "primary": "bootstrap_ontological",
+  "mixins": [
+   "predestination_closed_loop",
+   "fixed_novikov"
+  ],
+  "topology": "origin_plus_twins",
+  "worlds": 3,
+  "agents": 11,
+  "events": 24,
+  "edges": 34,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 2,
+   "parallel_world": 1
+  },
+  "edge_kinds": {
+   "world_relation": 5,
+   "causal": 23,
+   "family": 1,
+   "identity": 3,
+   "intervention": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "correspondsTo": 1,
+   "mirrors": 1,
+   "originatesFrom": 2,
+   "nestsWithin": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 128.5,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 24,
+  "semantic_review": 2,
+  "warn_total": 2,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "identity edge lacks identityRelation": 1
+  }
+ },
+ "deja-vu": {
+  "id": "deja-vu",
+  "title": "D\u00e9j\u00e0 Vu",
+  "medium": "film",
+  "year": 2006,
+  "primary": "branch_on_intervention",
+  "mixins": [
+   "fixed_novikov",
+   "bootstrap_ontological"
+  ],
+  "topology": "branching_tree",
+  "worlds": 3,
+  "agents": 4,
+  "events": 21,
+  "edges": 25,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 1
+  },
+  "edge_kinds": {
+   "causal": 22,
+   "world_relation": 2,
+   "temporal": 1
+  },
+  "relations": {
+   "forksFrom": 1,
+   "originatesFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 109.9,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_saved"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 0,
+  "warn_total": 3,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 1,
+   "rule selected without structural evidence": 1
+  }
+ },
+ "donnie-darko": {
+  "id": "donnie-darko",
+  "title": "Donnie Darko",
+  "medium": "film",
+  "year": 2001,
+  "primary": "tangent_universe",
+  "mixins": [
+   "fixed_novikov",
+   "bootstrap_ontological"
+  ],
+  "topology": "tangent_bubble",
+  "worlds": 2,
+  "agents": 5,
+  "events": 21,
+  "edges": 26,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 1
+  },
+  "edge_kinds": {
+   "world_relation": 3,
+   "causal": 19,
+   "intervention": 2,
+   "temporal": 1,
+   "identity": 1
+  },
+  "relations": {
+   "forksFrom": 1,
+   "nestsWithin": 1,
+   "collapsesInto": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 120.4,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_tangent"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 2,
+  "warn_total": 4,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "identity edge lacks identityRelation": 1,
+   "branch lacks forkEventRef": 1,
+   "rule selected without structural evidence": 1
+  }
+ },
+ "edge-of-tomorrow": {
+  "id": "edge-of-tomorrow",
+  "title": "Edge of Tomorrow",
+  "medium": "film",
+  "year": 2014,
+  "primary": "temporal_loop_exit",
+  "mixins": [
+   "death_checkpoint_rewrite"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 4,
+  "events": 20,
+  "edges": 35,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 15,
+   "temporal": 13,
+   "intervention": 7
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 162.6,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 1,
+  "warn_total": 13,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 13
+  }
+ },
+ "eeaao": {
+  "id": "eeaao",
+  "title": "Everything Everywhere All at Once",
+  "medium": "film",
+  "year": 2022,
+  "primary": "multiverse_contact",
+  "mixins": [
+   "branch_on_intervention"
+  ],
+  "topology": "parallel_world_network",
+  "worlds": 6,
+  "agents": 7,
+  "events": 26,
+  "edges": 32,
+  "interventions": 1,
+  "world_kinds": {
+   "parallel_world": 6
+  },
+  "edge_kinds": {
+   "world_relation": 4,
+   "causal": 22,
+   "identity": 2,
+   "intervention": 3,
+   "temporal": 1
+  },
+  "relations": {
+   "correspondsTo": 3,
+   "attractsToward": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [
+   "ev_jobu"
+  ],
+  "desc_thin": [],
+  "desc_avg": 147.4,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [
+   "e_pad_irs"
+  ],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 26,
+  "semantic_review": 1,
+  "warn_total": 3,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 2,
+   "temporal edge lacks orderKind": 1
+  }
+ },
+ "erased": {
+  "id": "erased",
+  "title": "Erased (Boku dake ga Inai Machi)",
+  "medium": "tv",
+  "year": 2016,
+  "primary": "death_checkpoint_rewrite",
+  "mixins": [
+   "mutable_ripple",
+   "branch_on_intervention"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 5,
+  "agents": 4,
+  "events": 21,
+  "edges": 26,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 3
+  },
+  "edge_kinds": {
+   "causal": 21,
+   "world_relation": 4,
+   "temporal": 1
+  },
+  "relations": {
+   "originatesFrom": 1,
+   "supersedes": 1,
+   "forksFrom": 2
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 120.6,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_1988b",
+   "w_2003",
+   "w_2010"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 1,
+  "warn_total": 4,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 3
+  }
+ },
+ "frequency": {
+  "id": "frequency",
+  "title": "Frequency",
+  "medium": "film",
+  "year": 2000,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "fixed_novikov"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 3,
+  "agents": 4,
+  "events": 20,
+  "edges": 36,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 17,
+   "intervention": 7,
+   "world_relation": 1,
+   "temporal": 11
+  },
+  "relations": {
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 115.2,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_1969",
+   "w_saved"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 2,
+  "warn_total": 13,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 11,
+   "branch lacks forkEventRef": 2
+  }
+ },
+ "fringe": {
+  "id": "fringe",
+  "title": "Fringe",
+  "medium": "tv",
+  "year": 2008,
+  "primary": "multiverse_contact",
+  "mixins": [
+   "branch_on_intervention",
+   "mutable_ripple"
+  ],
+  "topology": "dual_parallel_pair",
+  "worlds": 4,
+  "agents": 9,
+  "events": 22,
+  "edges": 28,
+  "interventions": 2,
+  "world_kinds": {
+   "parallel_world": 2,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 23,
+   "world_relation": 1,
+   "identity": 2,
+   "intervention": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "mirrors": 1,
+   "correspondsTo": 2
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 152.7,
+  "empty_worlds": [
+   "w_observer",
+   "w_reset"
+  ],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_observer",
+   "w_reset"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [
+   "w_observer",
+   "w_reset"
+  ],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 7,
+  "warn_classes": {
+   "relation set on non-world edge": 2,
+   "identity edge lacks identityRelation": 2,
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 2
+  }
+ },
+ "groundhog-day": {
+  "id": "groundhog-day",
+  "title": "Groundhog Day",
+  "medium": "film",
+  "year": 1993,
+  "primary": "temporal_loop_exit",
+  "mixins": [],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 4,
+  "events": 21,
+  "edges": 23,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 18,
+   "temporal": 4,
+   "intervention": 1
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 143.9,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 1,
+  "warn_total": 4,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 4
+  }
+ },
+ "happy-death-day": {
+  "id": "happy-death-day",
+  "title": "Happy Death Day",
+  "medium": "film",
+  "year": 2017,
+  "primary": "temporal_loop_exit",
+  "mixins": [
+   "death_checkpoint_rewrite"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 6,
+  "events": 22,
+  "edges": 28,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 25,
+   "temporal": 2,
+   "intervention": 1
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 113.0,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 2,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 2
+  }
+ },
+ "harry-potter-prisoner-of-azkaban": {
+  "id": "harry-potter-prisoner-of-azkaban",
+  "title": "Harry Potter and the Prisoner of Azkaban",
+  "medium": "film",
+  "year": 2004,
+  "primary": "fixed_novikov",
+  "mixins": [
+   "predestination_closed_loop",
+   "bootstrap_ontological"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 7,
+  "events": 22,
+  "edges": 26,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 24,
+   "identity": 1,
+   "temporal": 1
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 158.7,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 0,
+  "warn_total": 3,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 1,
+   "temporal edge lacks orderKind": 1,
+   "rule selected without structural evidence": 1
+  }
+ },
+ "hot-tub-time-machine": {
+  "id": "hot-tub-time-machine",
+  "title": "Hot Tub Time Machine",
+  "medium": "film",
+  "year": 2010,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "branch_on_intervention"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 3,
+  "agents": 4,
+  "events": 20,
+  "edges": 23,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 1
+  },
+  "edge_kinds": {
+   "causal": 20,
+   "world_relation": 2,
+   "temporal": 1
+  },
+  "relations": {
+   "supersedes": 1,
+   "originatesFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 116.5,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_2010b"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 1,
+  "warn_total": 2,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 1
+  }
+ },
+ "interstellar": {
+  "id": "interstellar",
+  "title": "Interstellar",
+  "medium": "film",
+  "year": 2014,
+  "primary": "fixed_novikov",
+  "mixins": [
+   "bootstrap_ontological",
+   "predestination_closed_loop"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 8,
+  "events": 21,
+  "edges": 23,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 15,
+   "temporal": 5,
+   "identity": 3
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [
+   "e_blackhole"
+  ],
+  "desc_thin": [],
+  "desc_avg": 158.3,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [
+   "e_dust",
+   "e_edmunds"
+  ],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 1,
+  "warn_total": 8,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 5,
+   "identity edge lacks identityRelation": 3
+  }
+ },
+ "la-jetee": {
+  "id": "la-jetee",
+  "title": "La Jet\u00e9e",
+  "medium": "film",
+  "year": 1962,
+  "primary": "predestination_closed_loop",
+  "mixins": [
+   "bootstrap_ontological",
+   "fixed_novikov"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 3,
+  "agents": 3,
+  "events": 20,
+  "edges": 24,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 3
+  },
+  "edge_kinds": {
+   "causal": 22,
+   "world_relation": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "originatesFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 104.8,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 2,
+  "warn_total": 2,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "topology conformance": 1
+  }
+ },
+ "loki": {
+  "id": "loki",
+  "title": "Loki (Season 1)",
+  "medium": "tv",
+  "year": 2021,
+  "primary": "branch_bureaucracy_prune",
+  "mixins": [
+   "branch_on_intervention",
+   "multiverse_contact"
+  ],
+  "topology": "branching_tree",
+  "worlds": 5,
+  "agents": 6,
+  "events": 22,
+  "edges": 29,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 3
+  },
+  "edge_kinds": {
+   "world_relation": 4,
+   "causal": 21,
+   "identity": 2,
+   "intervention": 2
+  },
+  "relations": {
+   "forksFrom": 3,
+   "prunes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 154.2,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_variant_loki",
+   "w_lava",
+   "w_void"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 2,
+  "warn_total": 5,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 2,
+   "branch lacks forkEventRef": 3
+  }
+ },
+ "looper": {
+  "id": "looper",
+  "title": "Looper",
+  "medium": "film",
+  "year": 2012,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "predestination_closed_loop",
+   "branch_on_intervention"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 3,
+  "agents": 6,
+  "events": 20,
+  "edges": 25,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "world_relation": 3,
+   "causal": 17,
+   "identity": 2,
+   "intervention": 2,
+   "temporal": 1
+  },
+  "relations": {
+   "forksFrom": 2,
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 117.5,
+  "empty_worlds": [
+   "w_2074"
+  ],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_2074",
+   "w_farm"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 2,
+  "warn_total": 5,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 2,
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 2
+  }
+ },
+ "mr-nobody": {
+  "id": "mr-nobody",
+  "title": "Mr. Nobody",
+  "medium": "film",
+  "year": 2009,
+  "primary": "branch_on_intervention",
+  "mixins": [
+   "perception_nonlinear"
+  ],
+  "topology": "branching_tree",
+  "worlds": 6,
+  "agents": 7,
+  "events": 20,
+  "edges": 34,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 5
+  },
+  "edge_kinds": {
+   "temporal": 11,
+   "world_relation": 6,
+   "causal": 11,
+   "identity": 1,
+   "intervention": 5
+  },
+  "relations": {
+   "forksFrom": 6
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 111.5,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_mom",
+   "w_dad",
+   "w_anna",
+   "w_elise",
+   "w_jean"
+  ],
+  "orphan_events": [
+   "e_choice_thesis",
+   "e_mars"
+  ],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 2,
+  "warn_total": 17,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 11,
+   "identity edge lacks identityRelation": 1,
+   "branch lacks forkEventRef": 5
+  }
+ },
+ "night-watch-discworld": {
+  "id": "night-watch-discworld",
+  "title": "Night Watch (Discworld)",
+  "medium": "novel",
+  "year": 2002,
+  "primary": "predestination_closed_loop",
+  "mixins": [
+   "bootstrap_ontological",
+   "fixed_novikov"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 2,
+  "agents": 3,
+  "events": 20,
+  "edges": 24,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2
+  },
+  "edge_kinds": {
+   "causal": 21,
+   "identity": 1,
+   "world_relation": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "originatesFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 122.3,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 1,
+  "warn_total": 3,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 1,
+   "temporal edge lacks orderKind": 1,
+   "topology conformance": 1
+  }
+ },
+ "outlander": {
+  "id": "outlander",
+  "title": "Outlander",
+  "medium": "tv",
+  "year": 2014,
+  "primary": "fixed_novikov",
+  "mixins": [
+   "predestination_closed_loop"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 2,
+  "agents": 6,
+  "events": 22,
+  "edges": 28,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2
+  },
+  "edge_kinds": {
+   "causal": 23,
+   "temporal": 3,
+   "world_relation": 1,
+   "intervention": 1
+  },
+  "relations": {
+   "correspondsTo": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 126.5,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 2,
+  "warn_total": 4,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 3,
+   "topology conformance": 1
+  }
+ },
+ "palm-springs": {
+  "id": "palm-springs",
+  "title": "Palm Springs",
+  "medium": "film",
+  "year": 2020,
+  "primary": "temporal_loop_exit",
+  "mixins": [],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 4,
+  "events": 23,
+  "edges": 25,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 18,
+   "temporal": 5,
+   "intervention": 2
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 138.9,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 23,
+  "semantic_review": 2,
+  "warn_total": 5,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 5
+  }
+ },
+ "predestination": {
+  "id": "predestination",
+  "title": "Predestination",
+  "medium": "film",
+  "year": 2014,
+  "primary": "predestination_closed_loop",
+  "mixins": [
+   "bootstrap_ontological",
+   "fixed_novikov"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 5,
+  "events": 23,
+  "edges": 30,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 21,
+   "identity": 5,
+   "intervention": 1,
+   "temporal": 3
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 159.0,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 23,
+  "semantic_review": 1,
+  "warn_total": 8,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 5,
+   "temporal edge lacks orderKind": 3
+  }
+ },
+ "primer": {
+  "id": "primer",
+  "title": "Primer",
+  "medium": "film",
+  "year": 2004,
+  "primary": "branch_on_intervention",
+  "mixins": [
+   "bootstrap_ontological",
+   "fixed_novikov"
+  ],
+  "topology": "branching_tree",
+  "worlds": 6,
+  "agents": 7,
+  "events": 23,
+  "edges": 30,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 5
+  },
+  "edge_kinds": {
+   "world_relation": 5,
+   "causal": 21,
+   "intervention": 3,
+   "temporal": 1
+  },
+  "relations": {
+   "forksFrom": 5
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 131.0,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_ab1",
+   "w_overlap",
+   "w_failsafe",
+   "w_aaron_exit",
+   "w_abe_reset"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 23,
+  "semantic_review": 2,
+  "warn_total": 7,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 5,
+   "rule selected without structural evidence": 1
+  }
+ },
+ "project-almanac": {
+  "id": "project-almanac",
+  "title": "Project Almanac",
+  "medium": "film",
+  "year": 2015,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "bootstrap_ontological",
+   "branch_on_intervention"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 4,
+  "agents": 5,
+  "events": 21,
+  "edges": 26,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 22,
+   "world_relation": 3,
+   "temporal": 1
+  },
+  "relations": {
+   "supersedes": 2,
+   "originatesFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 145.4,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_alt",
+   "w_present2"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 1,
+  "warn_total": 3,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 2
+  }
+ },
+ "quantum-leap": {
+  "id": "quantum-leap",
+  "title": "Quantum Leap",
+  "medium": "tv",
+  "year": 1989,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "fixed_novikov",
+   "perception_nonlinear"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 3,
+  "agents": 2,
+  "events": 21,
+  "edges": 24,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 1
+  },
+  "edge_kinds": {
+   "causal": 21,
+   "world_relation": 1,
+   "temporal": 2
+  },
+  "relations": {
+   "originatesFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 144.4,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_liminal"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 1,
+  "warn_total": 3,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 2,
+   "branch lacks forkEventRef": 1
+  }
+ },
+ "re-zero": {
+  "id": "re-zero",
+  "title": "Re:Zero \u2212 Starting Life in Another World",
+  "medium": "tv",
+  "year": 2016,
+  "primary": "death_checkpoint_rewrite",
+  "mixins": [
+   "mutable_ripple"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 2,
+  "agents": 8,
+  "events": 22,
+  "edges": 28,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 1
+  },
+  "edge_kinds": {
+   "world_relation": 2,
+   "causal": 22,
+   "intervention": 2,
+   "identity": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "forksFrom": 1,
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 126.1,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_iter"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 3,
+  "warn_total": 3,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 1,
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 1
+  }
+ },
+ "replay": {
+  "id": "replay",
+  "title": "Replay",
+  "medium": "novel",
+  "year": 1986,
+  "primary": "temporal_loop_exit",
+  "mixins": [
+   "death_checkpoint_rewrite",
+   "multiverse_contact"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 3,
+  "agents": 2,
+  "events": 21,
+  "edges": 25,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 21,
+   "world_relation": 2,
+   "temporal": 2
+  },
+  "relations": {
+   "forksFrom": 1,
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 145.7,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_public",
+   "w_exit"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 1,
+  "warn_total": 5,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 2,
+   "branch lacks forkEventRef": 2,
+   "topology conformance": 1
+  }
+ },
+ "run-lola-run": {
+  "id": "run-lola-run",
+  "title": "Run Lola Run",
+  "medium": "film",
+  "year": 1998,
+  "primary": "branch_on_intervention",
+  "mixins": [
+   "temporal_loop_exit"
+  ],
+  "topology": "branching_tree",
+  "worlds": 4,
+  "agents": 6,
+  "events": 22,
+  "edges": 29,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 3
+  },
+  "edge_kinds": {
+   "causal": 23,
+   "temporal": 3,
+   "world_relation": 2,
+   "intervention": 1
+  },
+  "relations": {
+   "forksFrom": 2
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 123.2,
+  "empty_worlds": [
+   "w_run3"
+  ],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_run1",
+   "w_run2",
+   "w_run3"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [
+   "w_run3"
+  ],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 6,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 3,
+   "branch lacks forkEventRef": 3
+  }
+ },
+ "russian-doll": {
+  "id": "russian-doll",
+  "title": "Russian Doll",
+  "medium": "tv",
+  "year": 2019,
+  "primary": "temporal_loop_exit",
+  "mixins": [
+   "death_checkpoint_rewrite",
+   "multiverse_contact"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 2,
+  "agents": 5,
+  "events": 20,
+  "edges": 35,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1,
+   "parallel_world": 1
+  },
+  "edge_kinds": {
+   "causal": 15,
+   "temporal": 12,
+   "intervention": 6,
+   "world_relation": 1,
+   "identity": 1
+  },
+  "relations": {
+   "correspondsTo": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 178.8,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 2,
+  "warn_total": 14,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 12,
+   "identity edge lacks identityRelation": 1,
+   "topology conformance": 1
+  }
+ },
+ "sliding-doors": {
+  "id": "sliding-doors",
+  "title": "Sliding Doors",
+  "medium": "film",
+  "year": 1998,
+  "primary": "branch_on_intervention",
+  "mixins": [],
+  "topology": "branching_tree",
+  "worlds": 3,
+  "agents": 7,
+  "events": 22,
+  "edges": 29,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 23,
+   "world_relation": 1,
+   "identity": 1,
+   "temporal": 2,
+   "intervention": 2
+  },
+  "relations": {
+   "forksFrom": 1,
+   "mirrors": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 105.5,
+  "empty_worlds": [
+   "w_miss"
+  ],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_catch",
+   "w_miss"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [
+   "w_miss"
+  ],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 6,
+  "warn_classes": {
+   "relation set on non-world edge": 1,
+   "identity edge lacks identityRelation": 1,
+   "temporal edge lacks orderKind": 2,
+   "branch lacks forkEventRef": 2
+  }
+ },
+ "source-code": {
+  "id": "source-code",
+  "title": "Source Code",
+  "medium": "film",
+  "year": 2011,
+  "primary": "temporal_loop_exit",
+  "mixins": [
+   "branch_on_intervention",
+   "perception_nonlinear"
+  ],
+  "topology": "branching_tree",
+  "worlds": 3,
+  "agents": 4,
+  "events": 20,
+  "edges": 35,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 15,
+   "temporal": 11,
+   "intervention": 7,
+   "world_relation": 1,
+   "identity": 1
+  },
+  "relations": {
+   "forksFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 161.3,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_train_sim",
+   "w_alt_chicago"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 2,
+  "warn_total": 14,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 11,
+   "identity edge lacks identityRelation": 1,
+   "branch lacks forkEventRef": 2
+  }
+ },
+ "spider-man-into-the-spider-verse": {
+  "id": "spider-man-into-the-spider-verse",
+  "title": "Spider-Man: Into the Spider-Verse",
+  "medium": "film",
+  "year": 2018,
+  "primary": "multiverse_contact",
+  "mixins": [
+   "branch_on_intervention"
+  ],
+  "topology": "dual_parallel_pair",
+  "worlds": 3,
+  "agents": 7,
+  "events": 20,
+  "edges": 23,
+  "interventions": 1,
+  "world_kinds": {
+   "parallel_world": 3
+  },
+  "edge_kinds": {
+   "causal": 20,
+   "world_relation": 2,
+   "temporal": 1
+  },
+  "relations": {
+   "correspondsTo": 2
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 157.6,
+  "empty_worlds": [
+   "w_616b",
+   "w_65"
+  ],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [
+   "w_65",
+   "w_616b"
+  ],
+  "timelabelled": 20,
+  "semantic_review": 1,
+  "warn_total": 2,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "topology conformance": 1
+  }
+ },
+ "steins-gate": {
+  "id": "steins-gate",
+  "title": "Steins;Gate",
+  "medium": "tv",
+  "year": 2011,
+  "primary": "worldline_attractor",
+  "mixins": [
+   "branch_on_intervention",
+   "bootstrap_ontological"
+  ],
+  "topology": "worldline_bundle",
+  "worlds": 4,
+  "agents": 7,
+  "events": 23,
+  "edges": 31,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 3
+  },
+  "edge_kinds": {
+   "world_relation": 6,
+   "causal": 22,
+   "identity": 1,
+   "intervention": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "forksFrom": 3,
+   "attractsToward": 2,
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 127.3,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_alpha",
+   "w_beta",
+   "w_steins"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 23,
+  "semantic_review": 1,
+  "warn_total": 5,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 1,
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 3
+  }
+ },
+ "tenet": {
+  "id": "tenet",
+  "title": "Tenet",
+  "medium": "film",
+  "year": 2020,
+  "primary": "entropy_inversion",
+  "mixins": [
+   "fixed_novikov",
+   "predestination_closed_loop",
+   "bootstrap_ontological"
+  ],
+  "topology": "inverted_single_timeline",
+  "worlds": 1,
+  "agents": 13,
+  "events": 32,
+  "edges": 44,
+  "interventions": 4,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 24,
+   "temporal": 9,
+   "intervention": 5,
+   "identity": 6
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 156.9,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [
+   "e_spare_priya"
+  ],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 32,
+  "semantic_review": 1,
+  "warn_total": 13,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 7,
+   "identity edge lacks identityRelation": 6
+  }
+ },
+ "terminator-2": {
+  "id": "terminator-2",
+  "title": "Terminator 2: Judgment Day",
+  "medium": "film",
+  "year": 1991,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "predestination_closed_loop",
+   "branch_on_intervention"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 3,
+  "agents": 5,
+  "events": 22,
+  "edges": 25,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 19,
+   "intervention": 2,
+   "world_relation": 2,
+   "temporal": 1,
+   "identity": 1
+  },
+  "relations": {
+   "forksFrom": 1,
+   "originatesFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 113.6,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_2029_skynet",
+   "w_no_jd"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 4,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "identity edge lacks identityRelation": 1,
+   "branch lacks forkEventRef": 2
+  }
+ },
+ "terminator": {
+  "id": "terminator",
+  "title": "The Terminator",
+  "medium": "film",
+  "year": 1984,
+  "primary": "bootstrap_ontological",
+  "mixins": [
+   "predestination_closed_loop",
+   "fixed_novikov"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 5,
+  "events": 22,
+  "edges": 24,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 17,
+   "temporal": 3,
+   "identity": 4
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 148.2,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [
+   "e_loop_note"
+  ],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 7,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 3,
+   "identity edge lacks identityRelation": 4
+  }
+ },
+ "the-butterfly-effect": {
+  "id": "the-butterfly-effect",
+  "title": "The Butterfly Effect",
+  "medium": "film",
+  "year": 2004,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "branch_on_intervention"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 4,
+  "agents": 4,
+  "events": 20,
+  "edges": 35,
+  "interventions": 2,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 3
+  },
+  "edge_kinds": {
+   "causal": 15,
+   "world_relation": 3,
+   "intervention": 7,
+   "temporal": 10
+  },
+  "relations": {
+   "supersedes": 2,
+   "forksFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 105.2,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_prison",
+   "w_amputee",
+   "w_neverborn"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 2,
+  "warn_total": 13,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 10,
+   "branch lacks forkEventRef": 3
+  }
+ },
+ "the-end-of-eternity": {
+  "id": "the-end-of-eternity",
+  "title": "The End of Eternity",
+  "medium": "novel",
+  "year": 1955,
+  "primary": "branch_bureaucracy_prune",
+  "mixins": [
+   "bootstrap_ontological",
+   "mutable_ripple"
+  ],
+  "topology": "branching_tree",
+  "worlds": 4,
+  "agents": 4,
+  "events": 21,
+  "edges": 26,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 22,
+   "world_relation": 3,
+   "temporal": 1
+  },
+  "relations": {
+   "originatesFrom": 1,
+   "supersedes": 1,
+   "nestsWithin": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 168.4,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_hidden",
+   "w_infinity"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 1,
+  "warn_total": 3,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 2
+  }
+ },
+ "the-endless": {
+  "id": "the-endless",
+  "title": "The Endless",
+  "medium": "film",
+  "year": 2017,
+  "primary": "tangent_universe",
+  "mixins": [
+   "temporal_loop_exit",
+   "fixed_novikov"
+  ],
+  "topology": "tangent_bubble",
+  "worlds": 5,
+  "agents": 5,
+  "events": 22,
+  "edges": 27,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 4
+  },
+  "edge_kinds": {
+   "causal": 22,
+   "world_relation": 4,
+   "temporal": 1
+  },
+  "relations": {
+   "nestsWithin": 4
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 108.2,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_arcadia",
+   "w_scream",
+   "w_carl",
+   "w_week"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 0,
+  "warn_total": 5,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 4
+  }
+ },
+ "the-man-who-folded-himself": {
+  "id": "the-man-who-folded-himself",
+  "title": "The Man Who Folded Himself",
+  "medium": "novel",
+  "year": 1973,
+  "primary": "bootstrap_ontological",
+  "mixins": [
+   "branch_on_intervention",
+   "predestination_closed_loop"
+  ],
+  "topology": "branching_tree",
+  "worlds": 3,
+  "agents": 4,
+  "events": 21,
+  "edges": 27,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 2
+  },
+  "edge_kinds": {
+   "causal": 22,
+   "identity": 2,
+   "world_relation": 2,
+   "temporal": 1
+  },
+  "relations": {
+   "forksFrom": 2
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 145.6,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_swarm",
+   "w_diane"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 0,
+  "warn_total": 5,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 2,
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 2
+  }
+ },
+ "the-time-machine-1960": {
+  "id": "the-time-machine-1960",
+  "title": "The Time Machine (1960)",
+  "medium": "film",
+  "year": 1960,
+  "primary": "fixed_novikov",
+  "mixins": [],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 7,
+  "events": 22,
+  "edges": 27,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 24,
+   "temporal": 2,
+   "intervention": 1
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 161.2,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 1,
+  "warn_total": 2,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 2
+  }
+ },
+ "the-waif": {
+  "id": "the-waif",
+  "title": "The Waif",
+  "medium": "film",
+  "year": null,
+  "primary": "worldline_attractor",
+  "mixins": [
+   "branch_on_intervention"
+  ],
+  "topology": "worldline_bundle",
+  "worlds": 8,
+  "agents": 11,
+  "events": 28,
+  "edges": 33,
+  "interventions": 4,
+  "world_kinds": {
+   "timeline": 1,
+   "branch": 7
+  },
+  "edge_kinds": {
+   "world_relation": 8,
+   "identity": 4,
+   "family": 3,
+   "causal": 18
+  },
+  "relations": {
+   "forksFrom": 4,
+   "correspondsTo": 3,
+   "attractsToward": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 125.2,
+  "empty_worlds": [
+   "b_crash"
+  ],
+  "parentless_branch": [
+   "w_her",
+   "w_whered",
+   "w_fam"
+  ],
+  "branches_no_fork": [
+   "w_her",
+   "w_whered",
+   "w_fam"
+  ],
+  "orphan_events": [
+   "e_blue_ball",
+   "e_cabin",
+   "e_close",
+   "e_drive",
+   "e_open",
+   "e_others_consumed",
+   "e_padded_room"
+  ],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 28,
+  "semantic_review": 12,
+  "warn_total": 0,
+  "warn_classes": {}
+ },
+ "timecrimes": {
+  "id": "timecrimes",
+  "title": "Timecrimes (Los Cronocr\u00edmenes)",
+  "medium": "film",
+  "year": 2007,
+  "primary": "predestination_closed_loop",
+  "mixins": [
+   "fixed_novikov",
+   "bootstrap_ontological"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 6,
+  "events": 20,
+  "edges": 36,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 15,
+   "intervention": 7,
+   "identity": 4,
+   "temporal": 10
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 121.2,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 1,
+  "warn_total": 15,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 4,
+   "temporal edge lacks orderKind": 10,
+   "rule selected without structural evidence": 1
+  }
+ },
+ "travelers": {
+  "id": "travelers",
+  "title": "Travelers",
+  "medium": "tv",
+  "year": 2016,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "predestination_closed_loop",
+   "bootstrap_ontological"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 2,
+  "agents": 6,
+  "events": 21,
+  "edges": 23,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2
+  },
+  "edge_kinds": {
+   "causal": 21,
+   "world_relation": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "originatesFrom": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 162.3,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 21,
+  "semantic_review": 1,
+  "warn_total": 2,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "topology conformance": 1
+  }
+ },
+ "triangle": {
+  "id": "triangle",
+  "title": "Triangle",
+  "medium": "film",
+  "year": 2009,
+  "primary": "predestination_closed_loop",
+  "mixins": [
+   "temporal_loop_exit",
+   "bootstrap_ontological"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 4,
+  "events": 20,
+  "edges": 24,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 21,
+   "temporal": 2,
+   "identity": 1
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 124.2,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 0,
+  "warn_total": 4,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 2,
+   "identity edge lacks identityRelation": 1,
+   "rule selected without structural evidence": 1
+  }
+ },
+ "twelve-monkeys": {
+  "id": "twelve-monkeys",
+  "title": "12 Monkeys",
+  "medium": "film",
+  "year": 1995,
+  "primary": "predestination_closed_loop",
+  "mixins": [
+   "fixed_novikov",
+   "bootstrap_ontological"
+  ],
+  "topology": "single_fixed_timeline",
+  "worlds": 1,
+  "agents": 5,
+  "events": 23,
+  "edges": 38,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 1
+  },
+  "edge_kinds": {
+   "causal": 15,
+   "temporal": 15,
+   "identity": 3,
+   "intervention": 5
+  },
+  "relations": {},
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 112.9,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [],
+  "orphan_events": [
+   "e_pad_rail",
+   "e_pad_voice"
+  ],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 23,
+  "semantic_review": 1,
+  "warn_total": 18,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 15,
+   "identity edge lacks identityRelation": 3
+  }
+ },
+ "umbrella-academy": {
+  "id": "umbrella-academy",
+  "title": "The Umbrella Academy",
+  "medium": "tv",
+  "year": 2019,
+  "primary": "branch_bureaucracy_prune",
+  "mixins": [
+   "branch_on_intervention",
+   "bootstrap_ontological"
+  ],
+  "topology": "branching_tree",
+  "worlds": 6,
+  "agents": 3,
+  "events": 22,
+  "edges": 28,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 4
+  },
+  "edge_kinds": {
+   "causal": 22,
+   "world_relation": 4,
+   "identity": 1,
+   "temporal": 1
+  },
+  "relations": {
+   "supersedes": 2,
+   "forksFrom": 1,
+   "prunes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 158.9,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_1960s",
+   "w_sparrow",
+   "w_subway",
+   "w_clean"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 22,
+  "semantic_review": 0,
+  "warn_total": 7,
+  "warn_classes": {
+   "identity edge lacks identityRelation": 1,
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 4,
+   "rule selected without structural evidence": 1
+  }
+ },
+ "x-men-days-of-future-past": {
+  "id": "x-men-days-of-future-past",
+  "title": "X-Men: Days of Future Past",
+  "medium": "film",
+  "year": 2014,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "branch_on_intervention"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 3,
+  "agents": 6,
+  "events": 20,
+  "edges": 24,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 1
+  },
+  "edge_kinds": {
+   "causal": 20,
+   "world_relation": 3,
+   "temporal": 1
+  },
+  "relations": {
+   "originatesFrom": 1,
+   "forksFrom": 1,
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 127.0,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_future_good"
+  ],
+  "orphan_events": [],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 20,
+  "semantic_review": 1,
+  "warn_total": 2,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 1,
+   "branch lacks forkEventRef": 1
+  }
+ },
+ "your-name": {
+  "id": "your-name",
+  "title": "Your Name",
+  "medium": "film",
+  "year": 2016,
+  "primary": "mutable_ripple",
+  "mixins": [
+   "perception_nonlinear",
+   "bootstrap_ontological"
+  ],
+  "topology": "mutable_single_with_ripples",
+  "worlds": 3,
+  "agents": 5,
+  "events": 23,
+  "edges": 24,
+  "interventions": 1,
+  "world_kinds": {
+   "timeline": 2,
+   "branch": 1
+  },
+  "edge_kinds": {
+   "temporal": 4,
+   "causal": 16,
+   "intervention": 2,
+   "world_relation": 1,
+   "identity": 1
+  },
+  "relations": {
+   "supersedes": 1
+  },
+  "desc_missing": [],
+  "desc_echo": [],
+  "desc_jargon": [],
+  "desc_thin": [],
+  "desc_avg": 121.7,
+  "empty_worlds": [],
+  "parentless_branch": [],
+  "branches_no_fork": [
+   "w_evacuated"
+  ],
+  "orphan_events": [
+   "e_names"
+  ],
+  "isolated_worlds": [],
+  "broken_identity": [],
+  "unreached_outcome": [],
+  "timelabelled": 23,
+  "semantic_review": 3,
+  "warn_total": 7,
+  "warn_classes": {
+   "temporal edge lacks orderKind": 4,
+   "identity edge lacks identityRelation": 1,
+   "branch lacks forkEventRef": 1,
+   "rule selected without structural evidence": 1
+  }
+ }
+}
