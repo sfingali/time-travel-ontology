@@ -56,7 +56,10 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 2,
    "branch lacks forkEventRef": 3
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "about-time": {
   "id": "about-time",
@@ -105,7 +108,10 @@
    "identity edge lacks identityRelation": 2,
    "temporal edge lacks orderKind": 2,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "arq": {
   "id": "arq",
@@ -157,7 +163,19 @@
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 1,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_loop",
+   "e_x_wife",
+   "e_x_rent",
+   "e_x_escape",
+   "e_x_choice",
+   "e_x_rules",
+   "e_x_gas",
+   "e_x_end"
+  ],
+  "events_declared": 22,
+  "events_deduplicated": 14
  },
  "arrival": {
   "id": "arrival",
@@ -207,7 +225,14 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 2,
    "identity edge lacks identityRelation": 3
-  }
+  },
+  "duplicate_events": [
+   "ev_heptapod_b",
+   "ev_shang",
+   "ev_choose_hannah"
+  ],
+  "events_declared": 22,
+  "events_deduplicated": 19
  },
  "avengers-endgame": {
   "id": "avengers-endgame",
@@ -260,7 +285,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 4
-  }
+  },
+  "duplicate_events": [
+   "e_x_plan",
+   "e_x_quantum",
+   "e_x_2012",
+   "e_x_2013",
+   "e_x_2014",
+   "e_x_2019",
+   "e_x_cap",
+   "e_x_rules"
+  ],
+  "events_declared": 23,
+  "events_deduplicated": 15
  },
  "back-to-the-future": {
   "id": "back-to-the-future",
@@ -321,7 +358,15 @@
    "identity edge lacks identityRelation": 1,
    "temporal edge lacks orderKind": 2,
    "branch lacks forkEventRef": 3
-  }
+  },
+  "duplicate_events": [
+   "ev_1955",
+   "ev_enchantment",
+   "ev_lightning",
+   "ev_1985b"
+  ],
+  "events_declared": 23,
+  "events_deduplicated": 19
  },
  "before-the-coffee-gets-cold": {
   "id": "before-the-coffee-gets-cold",
@@ -365,7 +410,20 @@
   "warn_total": 1,
   "warn_classes": {
    "temporal edge lacks orderKind": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_cafe",
+   "e_x_seat",
+   "e_x_coffee",
+   "e_x_letter",
+   "e_x_nurse",
+   "e_x_couple",
+   "e_x_mother",
+   "e_x_limit",
+   "e_x_close"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 12
  },
  "bill-and-ted": {
   "id": "bill-and-ted",
@@ -411,7 +469,10 @@
   "warn_classes": {
    "identity edge lacks identityRelation": 3,
    "temporal edge lacks orderKind": 2
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "boss-level": {
   "id": "boss-level",
@@ -454,7 +515,19 @@
   "warn_total": 2,
   "warn_classes": {
    "temporal edge lacks orderKind": 2
-  }
+  },
+  "duplicate_events": [
+   "e_x_wake",
+   "e_x_wife",
+   "e_x_child",
+   "e_x_skills",
+   "e_x_final",
+   "e_x_rules",
+   "e_x_army",
+   "e_x_close"
+  ],
+  "events_declared": 22,
+  "events_deduplicated": 14
  },
  "coherence": {
   "id": "coherence",
@@ -504,7 +577,14 @@
    "temporal edge lacks orderKind": 10,
    "identity edge lacks identityRelation": 1,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [
+   "ev_comet",
+   "ev_split",
+   "ev_emily_replace"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 17
  },
  "continuum": {
   "id": "continuum",
@@ -558,7 +638,19 @@
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 2,
    "rule selected without structural evidence": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_future",
+   "e_x_jump",
+   "e_x_vancouver",
+   "e_x_alec",
+   "e_x_liber8",
+   "e_x_branch",
+   "e_x_tech",
+   "e_x_end"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 13
  },
  "counterpart": {
   "id": "counterpart",
@@ -608,7 +700,10 @@
    "relation set on non-world edge": 2,
    "identity edge lacks identityRelation": 2,
    "temporal edge lacks orderKind": 1
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "dark": {
   "id": "dark",
@@ -662,7 +757,16 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "identity edge lacks identityRelation": 1
-  }
+  },
+  "duplicate_events": [
+   "ev_mikkel",
+   "ev_apocalypse",
+   "ev_eva_world",
+   "ev_origin_fix",
+   "ev_unknot"
+  ],
+  "events_declared": 24,
+  "events_deduplicated": 19
  },
  "deja-vu": {
   "id": "deja-vu",
@@ -714,7 +818,19 @@
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 1,
    "rule selected without structural evidence": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_ferry",
+   "e_x_trail",
+   "e_x_send",
+   "e_x_claire",
+   "e_x_prevent",
+   "e_x_ambush",
+   "e_x_survive",
+   "e_x_rules"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 13
  },
  "donnie-darko": {
   "id": "donnie-darko",
@@ -770,7 +886,14 @@
    "identity edge lacks identityRelation": 1,
    "branch lacks forkEventRef": 1,
    "rule selected without structural evidence": 1
-  }
+  },
+  "duplicate_events": [
+   "ev_jet",
+   "ev_countdown",
+   "ev_artifact_return"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 18
  },
  "edge-of-tomorrow": {
   "id": "edge-of-tomorrow",
@@ -813,7 +936,14 @@
   "warn_total": 13,
   "warn_classes": {
    "temporal edge lacks orderKind": 13
-  }
+  },
+  "duplicate_events": [
+   "ev_first_death",
+   "ev_train_rita",
+   "ev_omega"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 17
  },
  "eeaao": {
   "id": "eeaao",
@@ -866,7 +996,14 @@
   "warn_classes": {
    "identity edge lacks identityRelation": 2,
    "temporal edge lacks orderKind": 1
-  }
+  },
+  "duplicate_events": [
+   "ev_alpha",
+   "ev_jobu",
+   "ev_kindness"
+  ],
+  "events_declared": 26,
+  "events_deduplicated": 23
  },
  "erased": {
   "id": "erased",
@@ -920,7 +1057,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 3
-  }
+  },
+  "duplicate_events": [
+   "e_x_jump",
+   "e_x_killer",
+   "e_x_friends",
+   "e_x_mother",
+   "e_x_adult",
+   "e_x_truth",
+   "e_x_save",
+   "e_x_rules"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 13
  },
  "frequency": {
   "id": "frequency",
@@ -971,7 +1120,15 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 11,
    "branch lacks forkEventRef": 2
-  }
+  },
+  "duplicate_events": [
+   "ev_radio",
+   "ev_save_frank",
+   "ev_killer",
+   "ev_stable"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 16
  },
  "fringe": {
   "id": "fringe",
@@ -1033,7 +1190,10 @@
    "identity edge lacks identityRelation": 2,
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 2
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "groundhog-day": {
   "id": "groundhog-day",
@@ -1074,7 +1234,15 @@
   "warn_total": 4,
   "warn_classes": {
    "temporal edge lacks orderKind": 4
-  }
+  },
+  "duplicate_events": [
+   "ev_loop_start",
+   "ev_despair",
+   "ev_virtue",
+   "ev_exit"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 17
  },
  "happy-death-day": {
   "id": "happy-death-day",
@@ -1117,7 +1285,10 @@
   "warn_total": 2,
   "warn_classes": {
    "temporal edge lacks orderKind": 2
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "harry-potter-prisoner-of-azkaban": {
   "id": "harry-potter-prisoner-of-azkaban",
@@ -1163,7 +1334,19 @@
    "identity edge lacks identityRelation": 1,
    "temporal edge lacks orderKind": 1,
    "rule selected without structural evidence": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_dementor",
+   "e_x_buckbeak",
+   "e_x_potter",
+   "e_x_hermione",
+   "e_x_save_buck",
+   "e_x_patronus",
+   "e_x_sirius",
+   "e_x_rules"
+  ],
+  "events_declared": 22,
+  "events_deduplicated": 14
  },
  "hot-tub-time-machine": {
   "id": "hot-tub-time-machine",
@@ -1213,7 +1396,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_tub",
+   "e_x_1986",
+   "e_x_fix",
+   "e_x_lou",
+   "e_x_present",
+   "e_x_sequel",
+   "e_x_rules",
+   "e_x_party"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 12
  },
  "interstellar": {
   "id": "interstellar",
@@ -1263,7 +1458,14 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 5,
    "identity edge lacks identityRelation": 3
-  }
+  },
+  "duplicate_events": [
+   "ev_miller",
+   "ev_tesseract",
+   "ev_plan_a"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 18
  },
  "la-jetee": {
   "id": "la-jetee",
@@ -1310,7 +1512,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_pier",
+   "e_x_war",
+   "e_x_send",
+   "e_x_woman",
+   "e_x_future",
+   "e_x_return",
+   "e_x_death",
+   "e_x_loop"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 12
  },
  "loki": {
   "id": "loki",
@@ -1364,7 +1578,14 @@
   "warn_classes": {
    "identity edge lacks identityRelation": 2,
    "branch lacks forkEventRef": 3
-  }
+  },
+  "duplicate_events": [
+   "ev_tva",
+   "ev_hwr",
+   "ev_ygg"
+  ],
+  "events_declared": 22,
+  "events_deduplicated": 19
  },
  "looper": {
   "id": "looper",
@@ -1421,7 +1642,14 @@
    "identity edge lacks identityRelation": 2,
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 2
-  }
+  },
+  "duplicate_events": [
+   "ev_old_joe",
+   "ev_cid",
+   "ev_suicide_cut"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 17
  },
  "mr-nobody": {
   "id": "mr-nobody",
@@ -1480,7 +1708,14 @@
    "temporal edge lacks orderKind": 11,
    "identity edge lacks identityRelation": 1,
    "branch lacks forkEventRef": 5
-  }
+  },
+  "duplicate_events": [
+   "ev_station",
+   "ev_lives",
+   "ev_2092"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 17
  },
  "night-watch-discworld": {
   "id": "night-watch-discworld",
@@ -1529,7 +1764,19 @@
    "identity edge lacks identityRelation": 1,
    "temporal edge lacks orderKind": 1,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_storm",
+   "e_x_young",
+   "e_x_history",
+   "e_x_keel",
+   "e_x_teach",
+   "e_x_close_loop",
+   "e_x_return",
+   "e_x_rules"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 12
  },
  "outlander": {
   "id": "outlander",
@@ -1576,7 +1823,10 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 3,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "palm-springs": {
   "id": "palm-springs",
@@ -1617,7 +1867,14 @@
   "warn_total": 5,
   "warn_classes": {
    "temporal edge lacks orderKind": 5
-  }
+  },
+  "duplicate_events": [
+   "ev_cave",
+   "ev_roy",
+   "ev_bomb_exit"
+  ],
+  "events_declared": 23,
+  "events_deduplicated": 20
  },
  "predestination": {
   "id": "predestination",
@@ -1663,7 +1920,16 @@
   "warn_classes": {
    "identity edge lacks identityRelation": 5,
    "temporal edge lacks orderKind": 3
-  }
+  },
+  "duplicate_events": [
+   "ev_orphanage",
+   "ev_romance",
+   "ev_bar",
+   "ev_burn",
+   "ev_bomber"
+  ],
+  "events_declared": 23,
+  "events_deduplicated": 18
  },
  "primer": {
   "id": "primer",
@@ -1719,7 +1985,14 @@
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 5,
    "rule selected without structural evidence": 1
-  }
+  },
+  "duplicate_events": [
+   "ev_granger",
+   "ev_party_iter",
+   "ev_stock_protocol"
+  ],
+  "events_declared": 23,
+  "events_deduplicated": 20
  },
  "project-almanac": {
   "id": "project-almanac",
@@ -1771,7 +2044,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 2
-  }
+  },
+  "duplicate_events": [
+   "e_x_find",
+   "e_x_party",
+   "e_x_ripple",
+   "e_x_fight",
+   "e_x_undo",
+   "e_x_end",
+   "e_x_rules",
+   "e_x_love"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 13
  },
  "quantum-leap": {
   "id": "quantum-leap",
@@ -1821,7 +2106,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 2,
    "branch lacks forkEventRef": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_leap",
+   "e_x_al",
+   "e_x_ziggy",
+   "e_x_put_right",
+   "e_x_leapout",
+   "e_x_home",
+   "e_x_evil",
+   "e_x_finale"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 13
  },
  "re-zero": {
   "id": "re-zero",
@@ -1874,7 +2171,14 @@
    "identity edge lacks identityRelation": 1,
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 1
-  }
+  },
+  "duplicate_events": [
+   "ev_rbd",
+   "ev_failed",
+   "ev_checkpoint"
+  ],
+  "events_declared": 22,
+  "events_deduplicated": 19
  },
  "replay": {
   "id": "replay",
@@ -1927,7 +2231,19 @@
    "temporal edge lacks orderKind": 2,
    "branch lacks forkEventRef": 2,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_die",
+   "e_x_replay",
+   "e_x_wealth",
+   "e_x_pamela",
+   "e_x_abuse",
+   "e_x_exit",
+   "e_x_choice",
+   "e_x_close"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 13
  },
  "run-lola-run": {
   "id": "run-lola-run",
@@ -1983,7 +2299,10 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 3,
    "branch lacks forkEventRef": 3
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "russian-doll": {
   "id": "russian-doll",
@@ -2034,7 +2353,15 @@
    "temporal edge lacks orderKind": 12,
    "identity edge lacks identityRelation": 1,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [
+   "ev_s1_loop",
+   "ev_s1_exit",
+   "ev_s2_subway",
+   "ev_s2_family"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 16
  },
  "sliding-doors": {
   "id": "sliding-doors",
@@ -2091,7 +2418,10 @@
    "identity edge lacks identityRelation": 1,
    "temporal edge lacks orderKind": 2,
    "branch lacks forkEventRef": 2
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "source-code": {
   "id": "source-code",
@@ -2145,7 +2475,14 @@
    "temporal edge lacks orderKind": 11,
    "identity edge lacks identityRelation": 1,
    "branch lacks forkEventRef": 2
-  }
+  },
+  "duplicate_events": [
+   "ev_eight",
+   "ev_bomber",
+   "ev_branch_email"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 17
  },
  "spider-man-into-the-spider-verse": {
   "id": "spider-man-into-the-spider-verse",
@@ -2197,7 +2534,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_collider",
+   "e_x_miles",
+   "e_x_variants",
+   "e_x_gw",
+   "e_x_gwen",
+   "e_x_stop",
+   "e_x_leap",
+   "e_x_home"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 12
  },
  "steins-gate": {
   "id": "steins-gate",
@@ -2254,7 +2603,14 @@
    "identity edge lacks identityRelation": 1,
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 3
-  }
+  },
+  "duplicate_events": [
+   "ev_dmail",
+   "ev_mayuri",
+   "ev_steins"
+  ],
+  "events_declared": 23,
+  "events_deduplicated": 20
  },
  "tenet": {
   "id": "tenet",
@@ -2303,7 +2659,16 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 7,
    "identity edge lacks identityRelation": 6
-  }
+  },
+  "duplicate_events": [
+   "ev_opera",
+   "ev_turnstile_oslo",
+   "ev_tallinn_pincer",
+   "ev_stalsk",
+   "ev_neil_reveal"
+  ],
+  "events_declared": 32,
+  "events_deduplicated": 27
  },
  "terminator-2": {
   "id": "terminator-2",
@@ -2358,7 +2723,10 @@
    "temporal edge lacks orderKind": 1,
    "identity edge lacks identityRelation": 1,
    "branch lacks forkEventRef": 2
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "terminator": {
   "id": "terminator",
@@ -2405,7 +2773,14 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 3,
    "identity edge lacks identityRelation": 4
-  }
+  },
+  "duplicate_events": [
+   "ev_arrive",
+   "ev_conceive",
+   "ev_factory"
+  ],
+  "events_declared": 22,
+  "events_deduplicated": 19
  },
  "the-butterfly-effect": {
   "id": "the-butterfly-effect",
@@ -2458,7 +2833,14 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 10,
    "branch lacks forkEventRef": 3
-  }
+  },
+  "duplicate_events": [
+   "ev_journal",
+   "ev_branches",
+   "ev_terminal"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 17
  },
  "the-end-of-eternity": {
   "id": "the-end-of-eternity",
@@ -2511,7 +2893,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 2
-  }
+  },
+  "duplicate_events": [
+   "e_x_eternity",
+   "e_x_tech",
+   "e_x_harlan",
+   "e_x_hidden",
+   "e_x_choice",
+   "e_x_end",
+   "e_x_rules",
+   "e_x_bootstrap"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 13
  },
  "the-endless": {
   "id": "the-endless",
@@ -2564,7 +2958,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 4
-  }
+  },
+  "duplicate_events": [
+   "e_x_return",
+   "e_x_time",
+   "e_x_entity",
+   "e_x_tape",
+   "e_x_stay",
+   "e_x_loop",
+   "e_x_ascend",
+   "e_x_close"
+  ],
+  "events_declared": 22,
+  "events_deduplicated": 14
  },
  "the-man-who-folded-himself": {
   "id": "the-man-who-folded-himself",
@@ -2617,7 +3023,19 @@
    "identity edge lacks identityRelation": 2,
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 2
-  }
+  },
+  "duplicate_events": [
+   "e_x_belt",
+   "e_x_meet",
+   "e_x_love",
+   "e_x_war",
+   "e_x_origin",
+   "e_x_old",
+   "e_x_identity",
+   "e_x_close"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 13
  },
  "the-time-machine-1960": {
   "id": "the-time-machine-1960",
@@ -2658,7 +3076,10 @@
   "warn_total": 2,
   "warn_classes": {
    "temporal edge lacks orderKind": 2
-  }
+  },
+  "duplicate_events": [],
+  "events_declared": 22,
+  "events_deduplicated": 22
  },
  "the-waif": {
   "id": "the-waif",
@@ -2723,7 +3144,10 @@
   "timelabelled": 28,
   "semantic_review": 12,
   "warn_total": 0,
-  "warn_classes": {}
+  "warn_classes": {},
+  "duplicate_events": [],
+  "events_declared": 28,
+  "events_deduplicated": 28
  },
  "timecrimes": {
   "id": "timecrimes",
@@ -2770,7 +3194,14 @@
    "identity edge lacks identityRelation": 4,
    "temporal edge lacks orderKind": 10,
    "rule selected without structural evidence": 1
-  }
+  },
+  "duplicate_events": [
+   "ev_h1",
+   "ev_h2",
+   "ev_h3"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 17
  },
  "travelers": {
   "id": "travelers",
@@ -2817,7 +3248,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "topology conformance": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_transfer",
+   "e_x_director",
+   "e_x_team",
+   "e_x_faction",
+   "e_x_host",
+   "e_x_hist",
+   "e_x_grand",
+   "e_x_end"
+  ],
+  "events_declared": 21,
+  "events_deduplicated": 13
  },
  "triangle": {
   "id": "triangle",
@@ -2863,7 +3306,19 @@
    "temporal edge lacks orderKind": 2,
    "identity edge lacks identityRelation": 1,
    "rule selected without structural evidence": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_boat",
+   "e_x_loop",
+   "e_x_jess",
+   "e_x_kill",
+   "e_x_shore",
+   "e_x_crash",
+   "e_x_rules",
+   "e_x_guilt"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 12
  },
  "twelve-monkeys": {
   "id": "twelve-monkeys",
@@ -2912,7 +3367,14 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 15,
    "identity edge lacks identityRelation": 3
-  }
+  },
+  "duplicate_events": [
+   "ev_misjump",
+   "ev_red_herring",
+   "ev_airport"
+  ],
+  "events_declared": 23,
+  "events_deduplicated": 20
  },
  "umbrella-academy": {
   "id": "umbrella-academy",
@@ -2970,7 +3432,19 @@
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 4,
    "rule selected without structural evidence": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_apocalypse",
+   "e_x_five",
+   "e_x_commission",
+   "e_x_1960s",
+   "e_x_kugel",
+   "e_x_sparrow",
+   "e_x_reset",
+   "e_x_family"
+  ],
+  "events_declared": 22,
+  "events_deduplicated": 14
  },
  "x-men-days-of-future-past": {
   "id": "x-men-days-of-future-past",
@@ -3021,7 +3495,19 @@
   "warn_classes": {
    "temporal edge lacks orderKind": 1,
    "branch lacks forkEventRef": 1
-  }
+  },
+  "duplicate_events": [
+   "e_x_future",
+   "e_x_send",
+   "e_x_1973",
+   "e_x_paris",
+   "e_x_xavier",
+   "e_x_stadium",
+   "e_x_future_fix",
+   "e_x_rules"
+  ],
+  "events_declared": 20,
+  "events_deduplicated": 12
  },
  "your-name": {
   "id": "your-name",
@@ -3077,6 +3563,14 @@
    "identity edge lacks identityRelation": 1,
    "branch lacks forkEventRef": 1,
    "rule selected without structural evidence": 1
-  }
+  },
+  "duplicate_events": [
+   "ev_swap",
+   "ev_offset",
+   "ev_evacuate",
+   "ev_reunion"
+  ],
+  "events_declared": 23,
+  "events_deduplicated": 19
  }
 }

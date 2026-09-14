@@ -7,37 +7,68 @@ produce it. Raw per-instance data accompanies this note.
 Headline: the corpus is **clean where the validator looks and uneven where it
 does not**. All 60 validate. Every one of 1307 events carries the plain-English
 `description` the README promises, and none merely restates its label — that
-claim holds exactly. What the validator cannot see is that the encodings are
-uniformly sized regardless of the work, and that most of the schema's semantic
-distinctions are declared but never populated.
+claim holds exactly. What the validator cannot see is that a fifth of those
+events are an undeclared second telling of the same story, and that most of the
+schema's semantic distinctions are declared but never populated.
 
 ---
 
-## 1. The corpus is sized to a quota, not to the works
+## 1. A fifth of the corpus is an undeclared duplicate track
 
-| | events |
+266 of 1307 events (20%), across 48 of 60 instances, carry an `e_x_` or `ev_`
+prefix and restate beats already encoded under their own ids.
+
+*La Jetée* is the clearest case. Twelve events tell the story; eight more repeat
+it:
+
+| Story event | Duplicate |
 |---|---|
-| minimum | 20 |
-| maximum | 32 |
-| median | 22 |
-| standard deviation | 2.0 |
-| within 20–24 | 57 of 60 (95%) |
+| `e_war` — post-apocalyptic underground | `e_x_war` — WWIII underground experiments |
+| `e_send_past` — sent to past via memory anchor | `e_x_send` — prisoner sent to past via memory |
+| `e_future_offer` — sent to far future, offered escape | `e_x_future` — visit future beings |
+| `e_death` — killed on the pier | `e_x_death` — he is the dying man he saw |
+| `e_loop_close` — the memory was the death | `e_x_loop` — memory was own death |
 
-No encoding has fewer than twenty events. *La Jetée*, a 28-minute short built
-from stills, has twenty. *Dark*, three seasons and a four-generation family
-tree, has twenty-four. *Primer* and *The Time Machine (1960)* have the same
-count. Only *Tenet* (32), *The Waif* (28) and *EEAAO* (26) sit outside the band.
+The `ev_` variant behaves the same way at coarser grain: `ev_opera` restates
+`e_opera` in *Tenet*, `ev_mikkel` restates `e_mikkel` in *Dark*, `ev_comet`
+summarises `e_dinner` and `e_blackout` in *Coherence*.
 
-A floor this hard is an authoring artefact, not a property of the stories. It
-matters most for anyone building reader guides from these encodings: the
-granularity is constant, so a three-season serial and a short film are
-represented at the same resolution, and the encoding cannot tell you which
-work actually has more going on. Worlds, agents and edges are similarly
-narrow: median 3 worlds, 5.5 agents, 27.5 edges.
+Three things make this a correctness problem rather than mere padding:
 
-**Suggested response.** Treat event count as unreliable signal. Where a guide
-needs more beats than the encoding carries, expect to return to the source
-rather than to `instances/`.
+- **The schema has fields for exactly this and they are unused.** `duplicateOf`
+  ("asserts the same semantic occurrence"), `summaryOf` ("summarises the listed
+  events") and `abstractionLevel` appear **zero times** in the corpus. The
+  duplicates are therefore indistinguishable from distinct occurrences.
+- **They are fully wired in.** 100% of the 266 are edge-connected, versus 98%
+  of ordinary events. The graph asserts causal and temporal relations for the
+  second telling as though it were separate.
+- **The distribution is mechanical.** Exactly eight `e_x_` events appear in 22
+  different instances. That is an authoring pass, not a property of 22 stories.
+
+**The effect on every count in this repository.** Twelve instances have no
+duplicates at all: `11-22-63`, `about-time`, `bill-and-ted`, `counterpart`,
+`fringe`, `happy-death-day`, `outlander`, `run-lola-run`, `sliding-doors`,
+`terminator-2`, `the-time-machine-1960`, `the-waif`.
+
+| | declared | de-duplicated |
+|---|---|---|
+| total events | 1307 | **1041** |
+| minimum | 20 | 12 |
+| median | 22 | 17 |
+| maximum | 32 | 28 |
+| standard deviation | 2.0 | **4.0** |
+| instances in the 20–24 band | 57 of 60 | **16 of 60** |
+
+The apparent uniformity of the corpus — every work encoded at 20–24 events
+regardless of scale — is **entirely an artefact of the duplicates**. Removed,
+the encodings vary as you would expect: *La Jetée* 12, *Dark* 19, *Tenet* 27.
+The underlying work is better than it looks; it has been inflated by a fifth.
+
+**Suggested response.** Either annotate the duplicates with `summaryOf` /
+`duplicateOf` — which is what those fields are for and would make the second
+track a legitimate abstraction layer — or remove them. Leaving them undeclared
+means every consumer over-counts, and comparison between a de-duplicated
+instance and an inflated one is meaningless.
 
 ## 2. Declared distinctions are almost never populated
 
@@ -206,3 +237,90 @@ Worth stating plainly, because the list above is all problems:
   `project-almanac`, `quantum-leap`, `re-zero`, `replay`, `steins-gate`,
   `the-end-of-eternity`, `the-time-machine-1960`, `travelers`,
   `x-men-days-of-future-past`.
+
+---
+
+# Decisions worksheet
+
+Everything below needs someone who knows the works. Each item names an existing
+event or world and the specific question. Nothing here is a proposed invention.
+
+## A. Where does each loop end?
+
+`loop_exit` appears in one instance of fourteen. But the absence is not always
+wrong — four encodings say plainly that their loop does not end, and are right
+to carry no exit. The other nine already contain the exit beat, typed as
+something else.
+
+### A1 — absence is correct, no change needed
+
+| Instance | Evidence in the encoding |
+|---|---|
+| `arq` | outcome: "No clean exit on screen"; `e_robot` carries `exitFailed: true`; `e_outer_reset` continues the nesting |
+| `triangle` | `e_no_exit` — "Loop continues; no external exit shown", `exitFailed: true` |
+| `re-zero` | Return by Death is ongoing; outcome describes progression, not exit |
+| `boss-level` | `e_enter` is a `departure` with `exitCondition: "reset spindle"`; outcome calls the endings "ambiguous continue" |
+
+### A2 — the exit beat exists but is typed as something else
+
+Confirm the event, and whether its `type` should become `loop_exit`.
+
+| Instance | Candidate | Current type | Why it looks like the exit |
+|---|---|---|---|
+| `edge-of-tomorrow` | `e_exit` | `arrival` | "General reset to pre-invasion briefing — victory"; carries `exitCondition: "Omega destroyed"` |
+| `happy-death-day` | `e_next_day` | `checkpoint` | label says "Next calendar morning **confirms exit**" |
+| `palm-springs` | `e_exit` *or* `e_nov10` | `arrival` / `checkpoint` | both read "Wake Nov 10 — loop broken". **These two duplicate each other** — pick one |
+| `russian-doll` | `e_exit_s1` | `ordinary` | "S1 exit: mutual help breaks the shared loop". `ev_s1_exit` duplicates it |
+| `replay` | `e_survive` | `ordinary` | "Jeff survives 1988 heart attack" — but `e_epilogue` shows others still looping, so scope the claim |
+| `run-lola-run` | `e_exit` | `checkpoint` | "Run 3 exits need for further resets" |
+| `erased` | `e_2003` | `arrival` | "2003 wake from 15-year coma" ends the revival cycle |
+| `source-code` | `e_freeze` | `checkpoint` | `exitCondition: "remain in SC world"`; the loop ends by forking, via `e_fork_alt` |
+| `the-endless` | `e_escape` | `arrival` | "Brothers reach outside" — but the same event notes a "larger unnoticed loop", so this may be an exit from one pod only |
+
+## B. Six declared worlds that hold no events
+
+In each case the empty world is the one that matters at the end.
+
+**`11-22-63` — `w_jfk_saved`, `w_accepted`.** The dystopian present created by
+saving Kennedy is the novel's central turn, and it holds no events and no
+world relations. `w_accepted` (the present Jake returns to after undoing the
+change) is likewise empty. `outcome.endWorldRefs` names only `w_2015`.
+*Decision: populate both, or drop them and let `w_2015` carry the ending.*
+
+**`run-lola-run` — `w_run3`.** Run three, the double win, is empty and
+unreferenced. More seriously, `outcome.endWorldRefs` is `['w_run2']` — the run
+in which **Manni is killed**. As encoded, the story ends in the failed run.
+*Decision: this looks like a straightforward error in the outcome. Confirm
+that run three is the ending and move the reference, populating `w_run3`.*
+
+**`sliding-doors` — `w_miss`.** One of the two timelines the film is named
+for. `w_catch` has seven events; `w_miss` has none, and no relations.
+`endWorldRefs` is `['w_root', 'w_catch']`.
+*Decision: populate `w_miss`, or state why only one fork is encoded.*
+
+**`spider-man-into-the-spider-verse` — `w_65`, `w_616b`.** Gwen's Earth-65 and
+Peter B.'s Earth are both named in `outcome.endWorldRefs` while holding no
+events, so the declared ending is unreachable from the graph. They do carry
+`correspondsTo` relations, so they are not orphans — just empty.
+*Decision: either give each the beat where its Spider returns home, or narrow
+`endWorldRefs` to `w_1610`.*
+
+**`fringe` — `w_observer`, `w_reset`.** The Observer-occupied 2036 dystopia and
+the final reset continuum: the show's entire endgame, declared as branches with
+no events and no relations. Note `w_over_there` holds only 2 events against
+`w_over_here`'s 20, so the parallel side is thin even where populated.
+*Decision: populate, or reduce the scope note to what the encoding covers.*
+
+## C. Bulk annotation, in priority order
+
+1. **266 duplicate events** (§1) — annotate with `summaryOf` / `duplicateOf`, or
+   remove. Affects every count in the repository.
+2. **`identityRelation` on 61 identity edges** — same person, counterpart, loop
+   iteration or participation. Six are already set, as a pattern to follow.
+3. **`orderKind` on 192 temporal edges** — chronological, experienced,
+   presentation or simultaneity. Largest and least urgent: a renderer can
+   decline to place what it cannot order.
+4. **`bootstrap_origin`** — 9 of 24 instances claiming bootstrap carry no such
+   event: `continuum`, `deja-vu`, `donnie-darko`,
+   `harry-potter-prisoner-of-azkaban`, `primer`, `timecrimes`, `triangle`,
+   `umbrella-academy`, `your-name`.
