@@ -315,8 +315,9 @@ no events and no relations. Note `w_over_there` holds only 2 events against
 
 1. **266 duplicate events** (§1) — annotate with `summaryOf` / `duplicateOf`, or
    remove. Affects every count in the repository.
-2. **`identityRelation` on 61 identity edges** — same person, counterpart, loop
-   iteration or participation. Six are already set, as a pattern to follow.
+2. **The 61 unset `identityRelation` edges** — worked individually in §D below.
+   Only 32 are genuinely missing an annotation; 25 are identity edges joining
+   events rather than agents and need re-kinding instead.
 3. **`orderKind` on 192 temporal edges** — chronological, experienced,
    presentation or simultaneity. Largest and least urgent: a renderer can
    decline to place what it cannot order.
@@ -324,3 +325,139 @@ no events and no relations. Note `w_over_there` holds only 2 events against
    event: `continuum`, `deja-vu`, `donnie-darko`,
    `harry-potter-prisoner-of-azkaban`, `primer`, `timecrimes`, `triangle`,
    `umbrella-academy`, `your-name`.
+
+---
+
+## D. The 61 unset `identityRelation` edges
+
+Working these individually found that **the missing annotation is not the main
+problem**. Of 67 identity edges corpus-wide, only 42 join two declared agents.
+**22 join two events and 3 are mixed** — 25 edges on which no value of
+`identityRelation` could ever be correct, because identity relates agent records
+and these relate occurrences.
+
+Their labels say what they actually are: `bootstrap_causes` (×6), "bootstrap
+knowledge", "bootstrap data", "John bootstrap", "future tip enables plan",
+"consciousness continuity". These are **causal provenance typed as identity** —
+which DESIGN_DECISIONS forbids in terms: *"parenthood and causal provenance are
+never identity."*
+
+A related pressure shows in the four agent-to-agent edges whose agents are in
+different identity groups. `terminator` `c10` links Reese to John labelled
+"father→son bootstrap", and `about-time` `x8` links Tim to his father as "shared
+traveler lineage". Both are kinship. The `family` edge kind exists for exactly
+this and is used in only two instances in the whole corpus — `dark` (1 edge) and
+`the-waif` (3) — so everywhere else kinship had nowhere to go but `identity`.
+
+### D1 — mis-typed: identity edges that join events, not agents (25)
+
+No `identityRelation` applies. These need re-kinding, almost certainly to
+`causal`, and the six labelled `bootstrap_causes` are a single decision.
+
+| Instance | Edge | From → To | Proposed | Basis |
+|---|---|---|---|---|
+| `arrival` | `id1` | `louise` → `e_book` | **NON-AGENT** | endpoint is not a declared agent · label: “perceiver continuum” |
+| `arrival` | `rep_3` | `ev_shang` → `ev_heptapod_b` | **NON-AGENT** | endpoint is not a declared agent · label: “bootstrap_causes” |
+| `arrival` | `ax2` | `e_shang_call` → `e_logograms` | **NON-AGENT** | endpoint is not a declared agent · label: “bootstrap knowledge” |
+| `bill-and-ted` | `x1` | `e_keys` → `e_circle` | **NON-AGENT** | endpoint is not a declared agent · label: “bootstrap self-help” |
+| `bill-and-ted` | `x6` | `e_keys` → `e_rescue_plan` | **NON-AGENT** | endpoint is not a declared agent · label: “future tip enables plan” |
+| `dark` | `dkx1` | `e_pad_adam` → `e_pad_martha` | **NON-AGENT** | endpoint is not a declared agent |
+| `donnie-darko` | `dx3` | `e_frank` → `e_choose_die` | **NON-AGENT** | endpoint is not a declared agent |
+| `interstellar` | `rep_3` | `ev_plan_a` → `ev_tesseract` | **NON-AGENT** | endpoint is not a declared agent · label: “bootstrap_causes” |
+| `interstellar` | `ix1` | `e_tesseract` → `e_murph_solve` | **NON-AGENT** | endpoint is not a declared agent · label: “bootstrap data” |
+| `loki` | `lx3` | `e_sylvie` → `e_tva` | **NON-AGENT** | endpoint is not a declared agent |
+| `looper` | `lox1` | `e_job` → `e_old_joe` | **NON-AGENT** | endpoint is not a declared agent |
+| `predestination` | `pdx1` | `e_pad_baby` → `e_pad_reveal` | **NON-AGENT** | endpoint is not a declared agent |
+| `predestination` | `pdx2` | `e_pad_reveal` → `e_pad_loop` | **NON-AGENT** | endpoint is not a declared agent |
+| `re-zero` | `id1` | `subaru` → `e_rbd1` | **NON-AGENT** | endpoint is not a declared agent · label: “memory-bearing continuum” |
+| `source-code` | `c8` | `e_shell` → `e_fork_alt` | **NON-AGENT** | endpoint is not a declared agent · label: “consciousness continuity” |
+| `steins-gate` | `id1` | `okabe` → `e_video` | **NON-AGENT** | endpoint is not a declared agent · label: “Reading Steiner continuity” |
+| `tenet` | `rep_5` | `ev_neil_reveal` → `ev_opera` | **NON-AGENT** | endpoint is not a declared agent · label: “bootstrap_causes” |
+| `terminator-2` | `t2x3` | `e_t800_arrive` → `e_t800_sacrifice` | **NON-AGENT** | endpoint is not a declared agent |
+| `terminator` | `rep_3` | `ev_factory` → `ev_arrive` | **NON-AGENT** | endpoint is not a declared agent · label: “bootstrap_causes” |
+| `terminator` | `tx1` | `e_conceive` → `e_kyle` | **NON-AGENT** | endpoint is not a declared agent · label: “John bootstrap” |
+| `terminator` | `tx2` | `e_photo` → `e_motel` | **NON-AGENT** | endpoint is not a declared agent |
+| `timecrimes` | `rep_3` | `ev_h3` → `ev_h1` | **NON-AGENT** | endpoint is not a declared agent · label: “bootstrap_causes” |
+| `timecrimes` | `tcx1` | `e_hector2` → `e_bandage` | **NON-AGENT** | endpoint is not a declared agent |
+| `twelve-monkeys` | `rep_3` | `ev_airport` → `ev_misjump` | **NON-AGENT** | endpoint is not a declared agent · label: “bootstrap_causes” |
+| `twelve-monkeys` | `twx1` | `e_dream` → `e_airport` | **NON-AGENT** | endpoint is not a declared agent |
+
+### D2 — not an identity claim: different identity groups (4)
+
+| Instance | Edge | From → To | Proposed | Basis |
+|---|---|---|---|---|
+| `about-time` | `x8` | `tim` → `dad` | **—** | identityGroups differ · label: “shared traveler lineage” |
+| `bill-and-ted` | `x5` | `bill` → `ted` | **—** | identityGroups differ |
+| `terminator` | `c10` | `reese` → `john` | **—** | identityGroups differ · label: “father→son bootstrap” |
+| `your-name` | `c11` | `taki` → `mitsuha` | **—** | identityGroups differ · label: “body-swap link” |
+
+`terminator` `c10` and `about-time` `x8` are kinship and should be `family`.
+`your-name` `c11` is a body swap between two distinct people; `bill-and-ted`
+`x5` joins two different characters entirely. None is an identity claim.
+
+### D3 — high confidence, derivable from the agent records (25)
+
+`personal_continuity` where the two agents are linked by `continuedFrom` /
+`continuesAs`; `counterpart` where they share an `identityGroup` but declare
+different `homeWorldRef`s. Note that `continuityRole` is **not** the
+discriminator: in `the-waif`, `ben_1 → ben_her` is already annotated
+`personal_continuity` even though `ben_her`'s role is `counterpart`, because the
+role describes his standing in that world while the edge describes the man
+continuing.
+
+| Instance | Edge | From → To | Proposed | Basis |
+|---|---|---|---|---|
+| `about-time` | `x3` | `posy` → `posy_alt` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “birth-slot alternate” |
+| `back-to-the-future` | `id1` | `doc` → `doc_1955` | **counterpart** | same identityGroup, different homeWorldRef |
+| `coherence` | `c9` | `emily` → `emily_b` | **counterpart** | same identityGroup, different homeWorldRef · label: “counterpart Emilys” |
+| `counterpart` | `x2` | `howard_alpha` → `howard_prime` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “counterparts” |
+| `counterpart` | `x3` | `emily_alpha` → `emily_prime` | **counterpart** | same identityGroup, different homeWorldRef |
+| `eeaao` | `id1` | `joy` → `jobu` | **personal_continuity** | linked by continuedFrom/continuesAs |
+| `eeaao` | `id2` | `waymond` → `alpha_waymond` | **counterpart** | same identityGroup, different homeWorldRef |
+| `fringe` | `x2` | `olivia` → `bolivia` | **counterpart** | same identityGroup, different homeWorldRef |
+| `fringe` | `x3` | `walter` → `walternate` | **counterpart** | same identityGroup, different homeWorldRef |
+| `loki` | `id1` | `loki` → `sylvie` | **counterpart** | same identityGroup, different homeWorldRef · label: “variant selves” |
+| `looper` | `id1` | `joe` → `old_joe` | **personal_continuity** | linked by continuedFrom/continuesAs |
+| `night-watch-discworld` | `id1` | `vimes` → `young_sam` | **counterpart** | same identityGroup, different homeWorldRef · label: “same man decades apart” |
+| `predestination` | `id1` | `jane` → `john` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “same person” |
+| `predestination` | `id2` | `john` → `bartender` | **personal_continuity** | linked by continuedFrom/continuesAs |
+| `predestination` | `id3` | `bartender` → `fizzle` | **personal_continuity** | linked by continuedFrom/continuesAs |
+| `russian-doll` | `c9` | `nadia` → `young_nadia` | **counterpart** | same identityGroup, different homeWorldRef |
+| `sliding-doors` | `x2` | `helen` → `helen_b` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “same woman split” |
+| `tenet` | `id_prot` | `protagonist` → `protagonist_inverted` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “entropy flip same person” |
+| `tenet` | `id_neil` | `neil` → `neil_inverted` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “inverted Neil at gate” |
+| `tenet` | `id_neil2` | `neil` → `neil_future` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “recruitment continuum” |
+| `tenet` | `id_founder` | `protagonist` → `future_tenet` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “will become founder” |
+| `tenet` | `id_sator` | `sator` → `sator_inverted` | **personal_continuity** | linked by continuedFrom/continuesAs |
+| `the-man-who-folded-himself` | `id1` | `danny` → `don` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “same continuum” |
+| `the-man-who-folded-himself` | `id2` | `danny` → `jim` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “Danny becomes Jim” |
+| `triangle` | `id1` | `jess` → `masked` | **personal_continuity** | linked by continuedFrom/continuesAs · label: “Jess becomes masked” |
+
+### D4 — medium confidence, needs a look (7)
+
+Same `identityGroup` with no recorded world split, or an `iterationIndex`
+present. `timecrimes` is the interesting pair: Héctor 1/2/3 are loop iterations
+by `iterationIndex`, but the film's own logic makes them one continuous man, so
+`personal_continuity` may be truer than `loop_iteration`.
+
+| Instance | Edge | From → To | Proposed | Basis |
+|---|---|---|---|---|
+| `harry-potter-prisoner-of-azkaban` | `id1` | `harry` → `harry` | **personal_continuity** | same identityGroup, no world split recorded · label: “same Harry both passes” |
+| `interstellar` | `c11` | `murph_young` → `murph_adult` | **personal_continuity** | same identityGroup, no world split recorded |
+| `mr-nobody` | `c9` | `nemo_child` → `nemo` | **personal_continuity** | same identityGroup, no world split recorded |
+| `timecrimes` | `c8` | `hector1` → `hector2` | **loop_iteration** | same identityGroup, an iterationIndex present |
+| `timecrimes` | `c9` | `hector2` → `hector3` | **loop_iteration** | same identityGroup, an iterationIndex present |
+| `twelve-monkeys` | `c6` | `boy_cole` → `cole` | **personal_continuity** | same identityGroup, no world split recorded · label: “same person” |
+| `umbrella-academy` | `id1` | `five` → `five` | **personal_continuity** | same identityGroup, no world split recorded · label: “Founder Five = bootstrap” |
+
+### Summary
+
+| Bucket | Count | Action |
+|---|---|---|
+| Mis-typed (event endpoints) | 25 | re-kind, probably `causal` |
+| Not an identity claim | 4 | 2 → `family`, 2 → reconsider |
+| Derivable with high confidence | 25 | confirm and apply |
+| Needs a look | 7 | decide individually |
+| **Total unset** | **61** | |
+
+Only 32 of the 61 are edges where the annotation was genuinely just missing.

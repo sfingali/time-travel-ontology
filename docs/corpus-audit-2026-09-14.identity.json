@@ -1,0 +1,612 @@
+[
+ [
+  "about-time",
+  "x3",
+  "posy",
+  "posy_alt",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "birth-slot alternate"
+ ],
+ [
+  "about-time",
+  "x8",
+  "tim",
+  "dad",
+  "",
+  "none",
+  "identityGroups differ",
+  "shared traveler lineage"
+ ],
+ [
+  "arrival",
+  "id1",
+  "louise",
+  "e_book",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "perceiver continuum"
+ ],
+ [
+  "arrival",
+  "rep_3",
+  "ev_shang",
+  "ev_heptapod_b",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "bootstrap_causes"
+ ],
+ [
+  "arrival",
+  "ax2",
+  "e_shang_call",
+  "e_logograms",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "bootstrap knowledge"
+ ],
+ [
+  "back-to-the-future",
+  "id1",
+  "doc",
+  "doc_1955",
+  "counterpart",
+  "high",
+  "same identityGroup, different homeWorldRef",
+  ""
+ ],
+ [
+  "bill-and-ted",
+  "x1",
+  "e_keys",
+  "e_circle",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "bootstrap self-help"
+ ],
+ [
+  "bill-and-ted",
+  "x5",
+  "bill",
+  "ted",
+  "",
+  "none",
+  "identityGroups differ",
+  ""
+ ],
+ [
+  "bill-and-ted",
+  "x6",
+  "e_keys",
+  "e_rescue_plan",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "future tip enables plan"
+ ],
+ [
+  "coherence",
+  "c9",
+  "emily",
+  "emily_b",
+  "counterpart",
+  "high",
+  "same identityGroup, different homeWorldRef",
+  "counterpart Emilys"
+ ],
+ [
+  "counterpart",
+  "x2",
+  "howard_alpha",
+  "howard_prime",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "counterparts"
+ ],
+ [
+  "counterpart",
+  "x3",
+  "emily_alpha",
+  "emily_prime",
+  "counterpart",
+  "high",
+  "same identityGroup, different homeWorldRef",
+  ""
+ ],
+ [
+  "dark",
+  "dkx1",
+  "e_pad_adam",
+  "e_pad_martha",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "donnie-darko",
+  "dx3",
+  "e_frank",
+  "e_choose_die",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "eeaao",
+  "id1",
+  "joy",
+  "jobu",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  ""
+ ],
+ [
+  "eeaao",
+  "id2",
+  "waymond",
+  "alpha_waymond",
+  "counterpart",
+  "high",
+  "same identityGroup, different homeWorldRef",
+  ""
+ ],
+ [
+  "fringe",
+  "x2",
+  "olivia",
+  "bolivia",
+  "counterpart",
+  "high",
+  "same identityGroup, different homeWorldRef",
+  ""
+ ],
+ [
+  "fringe",
+  "x3",
+  "walter",
+  "walternate",
+  "counterpart",
+  "high",
+  "same identityGroup, different homeWorldRef",
+  ""
+ ],
+ [
+  "harry-potter-prisoner-of-azkaban",
+  "id1",
+  "harry",
+  "harry",
+  "personal_continuity",
+  "medium",
+  "same identityGroup, no world split recorded",
+  "same Harry both passes"
+ ],
+ [
+  "interstellar",
+  "c11",
+  "murph_young",
+  "murph_adult",
+  "personal_continuity",
+  "medium",
+  "same identityGroup, no world split recorded",
+  ""
+ ],
+ [
+  "interstellar",
+  "rep_3",
+  "ev_plan_a",
+  "ev_tesseract",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "bootstrap_causes"
+ ],
+ [
+  "interstellar",
+  "ix1",
+  "e_tesseract",
+  "e_murph_solve",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "bootstrap data"
+ ],
+ [
+  "loki",
+  "id1",
+  "loki",
+  "sylvie",
+  "counterpart",
+  "high",
+  "same identityGroup, different homeWorldRef",
+  "variant selves"
+ ],
+ [
+  "loki",
+  "lx3",
+  "e_sylvie",
+  "e_tva",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "looper",
+  "id1",
+  "joe",
+  "old_joe",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  ""
+ ],
+ [
+  "looper",
+  "lox1",
+  "e_job",
+  "e_old_joe",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "mr-nobody",
+  "c9",
+  "nemo_child",
+  "nemo",
+  "personal_continuity",
+  "medium",
+  "same identityGroup, no world split recorded",
+  ""
+ ],
+ [
+  "night-watch-discworld",
+  "id1",
+  "vimes",
+  "young_sam",
+  "counterpart",
+  "high",
+  "same identityGroup, different homeWorldRef",
+  "same man decades apart"
+ ],
+ [
+  "predestination",
+  "id1",
+  "jane",
+  "john",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "same person"
+ ],
+ [
+  "predestination",
+  "id2",
+  "john",
+  "bartender",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  ""
+ ],
+ [
+  "predestination",
+  "id3",
+  "bartender",
+  "fizzle",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  ""
+ ],
+ [
+  "predestination",
+  "pdx1",
+  "e_pad_baby",
+  "e_pad_reveal",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "predestination",
+  "pdx2",
+  "e_pad_reveal",
+  "e_pad_loop",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "re-zero",
+  "id1",
+  "subaru",
+  "e_rbd1",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "memory-bearing continuum"
+ ],
+ [
+  "russian-doll",
+  "c9",
+  "nadia",
+  "young_nadia",
+  "counterpart",
+  "high",
+  "same identityGroup, different homeWorldRef",
+  ""
+ ],
+ [
+  "sliding-doors",
+  "x2",
+  "helen",
+  "helen_b",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "same woman split"
+ ],
+ [
+  "source-code",
+  "c8",
+  "e_shell",
+  "e_fork_alt",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "consciousness continuity"
+ ],
+ [
+  "steins-gate",
+  "id1",
+  "okabe",
+  "e_video",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "Reading Steiner continuity"
+ ],
+ [
+  "tenet",
+  "id_prot",
+  "protagonist",
+  "protagonist_inverted",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "entropy flip same person"
+ ],
+ [
+  "tenet",
+  "id_neil",
+  "neil",
+  "neil_inverted",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "inverted Neil at gate"
+ ],
+ [
+  "tenet",
+  "id_neil2",
+  "neil",
+  "neil_future",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "recruitment continuum"
+ ],
+ [
+  "tenet",
+  "id_founder",
+  "protagonist",
+  "future_tenet",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "will become founder"
+ ],
+ [
+  "tenet",
+  "id_sator",
+  "sator",
+  "sator_inverted",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  ""
+ ],
+ [
+  "tenet",
+  "rep_5",
+  "ev_neil_reveal",
+  "ev_opera",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "bootstrap_causes"
+ ],
+ [
+  "terminator-2",
+  "t2x3",
+  "e_t800_arrive",
+  "e_t800_sacrifice",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "terminator",
+  "c10",
+  "reese",
+  "john",
+  "",
+  "none",
+  "identityGroups differ",
+  "father\u2192son bootstrap"
+ ],
+ [
+  "terminator",
+  "rep_3",
+  "ev_factory",
+  "ev_arrive",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "bootstrap_causes"
+ ],
+ [
+  "terminator",
+  "tx1",
+  "e_conceive",
+  "e_kyle",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "John bootstrap"
+ ],
+ [
+  "terminator",
+  "tx2",
+  "e_photo",
+  "e_motel",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "the-man-who-folded-himself",
+  "id1",
+  "danny",
+  "don",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "same continuum"
+ ],
+ [
+  "the-man-who-folded-himself",
+  "id2",
+  "danny",
+  "jim",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "Danny becomes Jim"
+ ],
+ [
+  "timecrimes",
+  "c8",
+  "hector1",
+  "hector2",
+  "loop_iteration",
+  "medium",
+  "same identityGroup, an iterationIndex present",
+  ""
+ ],
+ [
+  "timecrimes",
+  "c9",
+  "hector2",
+  "hector3",
+  "loop_iteration",
+  "medium",
+  "same identityGroup, an iterationIndex present",
+  ""
+ ],
+ [
+  "timecrimes",
+  "rep_3",
+  "ev_h3",
+  "ev_h1",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "bootstrap_causes"
+ ],
+ [
+  "timecrimes",
+  "tcx1",
+  "e_hector2",
+  "e_bandage",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "triangle",
+  "id1",
+  "jess",
+  "masked",
+  "personal_continuity",
+  "high",
+  "linked by continuedFrom/continuesAs",
+  "Jess becomes masked"
+ ],
+ [
+  "twelve-monkeys",
+  "c6",
+  "boy_cole",
+  "cole",
+  "personal_continuity",
+  "medium",
+  "same identityGroup, no world split recorded",
+  "same person"
+ ],
+ [
+  "twelve-monkeys",
+  "rep_3",
+  "ev_airport",
+  "ev_misjump",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  "bootstrap_causes"
+ ],
+ [
+  "twelve-monkeys",
+  "twx1",
+  "e_dream",
+  "e_airport",
+  "NON-AGENT",
+  "low",
+  "endpoint is not a declared agent",
+  ""
+ ],
+ [
+  "umbrella-academy",
+  "id1",
+  "five",
+  "five",
+  "personal_continuity",
+  "medium",
+  "same identityGroup, no world split recorded",
+  "Founder Five = bootstrap"
+ ],
+ [
+  "your-name",
+  "c11",
+  "taki",
+  "mitsuha",
+  "",
+  "none",
+  "identityGroups differ",
+  "body-swap link"
+ ]
+]
